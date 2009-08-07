@@ -1,0 +1,9 @@
+* Added support for Mac OS X 10.4 projects. (Jul 7, 2009)
+
+* Fixed compiler errors when used with Objective-C++ (.mm files). (Jan 28, 2009)
+
+* Added means for matchers to describe mismatches. You can use either matches:describingMismatchTo: to do it one shot, or call describeMismatchOf:To: once you know a particular item does not match. (Jan 24, 2009)
+
+* Changed matchers whose description looks similar to a function call so that the description matches the name of the factory function. (Jul 18, 2008)
+
+* Initial release (Apr 13, 2008)
