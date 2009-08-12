@@ -1,7 +1,7 @@
 #import "AbstractMatcherTest.h"
 
-#import <hamcrest/HCMatcher.h>
-#import <hamcrest/HCStringDescription.h>
+#import <OCHamcrest/HCMatcher.h>
+#import <OCHamcrest/HCStringDescription.h>
 
 
 @implementation AbstractMatcherTest

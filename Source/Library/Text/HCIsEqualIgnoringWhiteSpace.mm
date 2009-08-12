@@ -1,11 +1,21 @@
+//
+//  OCHamcrest - HCIsEqualIgnoringWhiteSpace.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Self
 #import "HCIsEqualIgnoringWhiteSpace.h"
 
-#import <cctype>
+    // OCHamcrest
 #import "HCDescription.h"
 #import "HCIntegerTypes.h"
 #import "HCRequireNonNilString.h"
+using namespace hamcrest;
 
-using namespace hamstring;
+    // C++
+#import <cctype>
 using namespace std;
 
 

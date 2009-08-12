@@ -1,8 +1,8 @@
 #import "AbstractMatcherTest.h"
 
 #define HC_SHORTHAND
-#import <hamcrest/HCIsDictionaryContainingValue.h>
-#import <hamcrest/HCIsEqual.h>
+#import <OCHamcrest/HCIsDictionaryContainingValue.h>
+#import <OCHamcrest/HCIsEqual.h>
 
 
 @interface IsDictionaryContainingValueTest : AbstractMatcherTest

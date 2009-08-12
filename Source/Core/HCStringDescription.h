@@ -1,4 +1,12 @@
-#import <hamcrest/HCBaseDescription.h>
+//
+//  OCHamcrest - HCStringDescription.h
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Inherited
+#import <OCHamcrest/HCBaseDescription.h>
 
 @protocol HCSelfDescribing;
 

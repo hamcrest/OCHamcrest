@@ -1,4 +1,12 @@
-#import <hamcrest/HCSelfDescribing.h>
+//
+//  OCHamcrest - HCMatcher.h
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Inherited
+#import <OCHamcrest/HCSelfDescribing.h>
 
 
 /**

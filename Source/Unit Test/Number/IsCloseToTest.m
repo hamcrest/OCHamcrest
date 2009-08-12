@@ -1,7 +1,7 @@
 #import "AbstractMatcherTest.h"
 
 #define HC_SHORTHAND
-#import <hamcrest/HCIsCloseTo.h>
+#import <OCHamcrest/HCIsCloseTo.h>
 
 
 @interface IsCloseToTest : AbstractMatcherTest

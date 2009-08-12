@@ -1,8 +1,8 @@
 #import "AbstractMatcherTest.h"
 
 #define HC_SHORTHAND
-#import <hamcrest/HCIsNot.h>
-#import <hamcrest/HCIsEqual.h>
+#import <OCHamcrest/HCIsNot.h>
+#import <OCHamcrest/HCIsEqual.h>
 
 
 @interface IsNotTest : AbstractMatcherTest

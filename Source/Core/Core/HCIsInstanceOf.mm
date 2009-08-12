@@ -1,5 +1,14 @@
+//
+//  OCHamcrest - HCIsInstanceOf.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Self
 #import "HCIsInstanceOf.h"
 
+    // OCHamcrest
 #import "HCDescription.h"
 
 

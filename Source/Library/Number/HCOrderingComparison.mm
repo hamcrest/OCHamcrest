@@ -1,5 +1,14 @@
+//
+//  OCHamcrest - HCOrderingComparison.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Self
 #import "HCOrderingComparison.h"
 
+    // OCHamcrest
 #import "HCDescription.h"
 
 

@@ -1,9 +1,9 @@
 #import "AbstractMatcherTest.h"
 
 #define HC_SHORTHAND
-#import <hamcrest/HCIsEqualIgnoringWhiteSpace.h>
-#import <hamcrest/HCIsNot.h>
-#import <hamcrest/HCMatcherAssert.h>
+#import <OCHamcrest/HCIsEqualIgnoringWhiteSpace.h>
+#import <OCHamcrest/HCIsNot.h>
+#import <OCHamcrest/HCMatcherAssert.h>
 
 
 @interface IsEqualIgnoringWhiteSpaceTest : AbstractMatcherTest

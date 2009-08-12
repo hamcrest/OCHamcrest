@@ -1,9 +1,9 @@
 #import "AbstractMatcherTest.h"
 
 #define HC_SHORTHAND
-#import <hamcrest/HCOrderingComparison.h>
-#import <hamcrest/HCIsNot.h>
-#import <hamcrest/HCMatcherAssert.h>
+#import <OCHamcrest/HCOrderingComparison.h>
+#import <OCHamcrest/HCIsNot.h>
+#import <OCHamcrest/HCMatcherAssert.h>
 
 @interface OrderingComparisonTest : AbstractMatcherTest
 @end

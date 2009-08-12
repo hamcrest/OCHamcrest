@@ -1,8 +1,18 @@
+//
+//  OCHamcrest - HCIsCloseTo.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Self
 #import "HCIsCloseTo.h"
 
-#import <cmath>
+    // OCHamcrest
 #import "HCDescription.h"
 
+    // C++
+#import <cmath>
 using namespace std;
 
 

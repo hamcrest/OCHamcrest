@@ -1,7 +1,7 @@
 #import "AbstractMatcherTest.h"
 
-#import <hamcrest/HCBaseMatcher.h>
-#import <hamcrest/HCDescription.h>
+#import <OCHamcrest/HCBaseMatcher.h>
+#import <OCHamcrest/HCDescription.h>
 
 
 @interface TestingBaseMatcher : HCBaseMatcher

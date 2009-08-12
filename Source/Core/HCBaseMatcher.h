@@ -1,5 +1,13 @@
+//
+//  OCHamcrest - HCBaseMatcher.h
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Inherited
 #import <Foundation/Foundation.h>
-#import <hamcrest/HCMatcher.h>
+#import <OCHamcrest/HCMatcher.h>
 
 
 /**

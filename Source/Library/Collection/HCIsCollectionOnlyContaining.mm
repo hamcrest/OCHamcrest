@@ -1,5 +1,14 @@
+//
+//  OCHamcrest - HCIsCollectionOnlyContaining.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Self
 #import "HCIsCollectionOnlyContaining.h"
 
+    // OCHamcrest
 #import "HCAnyOf.h"
 #import "HCDescription.h"
 #import "HCWrapShortcut.h"

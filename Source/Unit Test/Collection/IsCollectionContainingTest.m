@@ -1,8 +1,8 @@
 #import "AbstractMatcherTest.h"
 
 #define HC_SHORTHAND
-#import <hamcrest/HCIsCollectionContaining.h>
-#import <hamcrest/HCIsEqual.h>
+#import <OCHamcrest/HCIsCollectionContaining.h>
+#import <OCHamcrest/HCIsEqual.h>
 
 
 @interface IsCollectionContainingTest : AbstractMatcherTest

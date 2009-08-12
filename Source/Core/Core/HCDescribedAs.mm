@@ -1,11 +1,21 @@
+//
+//  OCHamcrest - HCDescribedAs.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Inherited
 #import "HCDescribedAs.h"
 
-#import <cstdarg>
-#import <cctype>
-#import <utility>
+    // OCHamcrest
 #import "HCDescription.h"
 #import "HCIntegerTypes.h"
 
+    // C++
+#import <cstdarg>
+#import <cctype>
+#import <utility>
 using namespace std;
 
 

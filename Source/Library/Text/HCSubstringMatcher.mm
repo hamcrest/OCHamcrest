@@ -1,9 +1,17 @@
+//
+//  OCHamcrest - HCSubstringMatcher.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Self
 #import "HCSubstringMatcher.h"
 
+    // OCHamcrest
 #import "HCDescription.h"
 #import "HCRequireNonNilString.h"
-
-using namespace hamstring;
+using namespace hamcrest;
 
 
 @interface HCSubstringMatcher (SubclassResponsibility)

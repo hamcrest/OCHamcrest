@@ -54,7 +54,7 @@
 		0F2A4B500D8B6A1D00051BCF /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B360D8B69E100051BCF /* IsSameTest.m */; };
 		0F2A4B510D8B6A1E00051BCF /* IsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B370D8B69E100051BCF /* IsTest.m */; };
 		0F2A4B520D8B6A1F00051BCF /* AbstractMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B390D8B69E100051BCF /* AbstractMatcherTest.m */; };
-		0F2A4B580D8B6B2A00051BCF /* hamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* hamcrest.framework */; };
+		0F2A4B580D8B6B2A00051BCF /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* OCHamcrest.framework */; };
 		0F2A4B770D8C364000051BCF /* HCHasDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A4B750D8C364000051BCF /* HCHasDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F2A4B780D8C364000051BCF /* HCHasDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B760D8C364000051BCF /* HCHasDescription.mm */; };
 		0F2A4B7D0D8C382E00051BCF /* HasDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B7C0D8C382E00051BCF /* HasDescriptionTest.m */; };
@@ -100,13 +100,13 @@
 		0FA913080DA064CF000AC3AA /* HCIsEqualIgnoringWhiteSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA913060DA064CF000AC3AA /* HCIsEqualIgnoringWhiteSpace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0FA913090DA064CF000AC3AA /* HCIsEqualIgnoringWhiteSpace.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FA913070DA064CF000AC3AA /* HCIsEqualIgnoringWhiteSpace.mm */; };
 		0FA913850DA084DA000AC3AA /* HCRequireNonNilString.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA913830DA084DA000AC3AA /* HCRequireNonNilString.h */; settings = {ATTRIBUTES = (); }; };
-		0FA913DD0DA0999E000AC3AA /* hamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA913DC0DA0999E000AC3AA /* hamcrest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FA913DD0DA0999E000AC3AA /* OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA913DC0DA0999E000AC3AA /* OCHamcrest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FAD7674102BF4A0000F8C55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1667FE841158C02AAC07 /* InfoPlist.strings */; };
 		0FDC10A20F2A429B00DD41AA /* HCCollectMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FDC10A00F2A429B00DD41AA /* HCCollectMatchers.h */; };
 		0FDC10A30F2A429B00DD41AA /* HCCollectMatchers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC10A10F2A429B00DD41AA /* HCCollectMatchers.mm */; };
 		0FE5E3550D95D7470021A644 /* IsDictionaryContainingKeyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE5E3540D95D7470021A644 /* IsDictionaryContainingKeyTest.m */; };
 		0FE5E35A0D95D7A50021A644 /* HCIsDictionaryContainingKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FE5E3580D95D7A50021A644 /* HCIsDictionaryContainingKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0FE5E35B0D95D7A50021A644 /* HCIsDictionaryContainingKey.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FE5E3590D95D7A50021A644 /* HCIsDictionaryContainingKey.mm */; };
-		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,12 +115,12 @@
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = hamcrest;
+			remoteInfo = OCHamcrest;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C1667FE841158C02AAC07 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		0F0A12E40DA0A35F00AE4705 /* MatcherAssertTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatcherAssertTest.m; sourceTree = "<group>"; };
 		0F2A4AB80D8B493600051BCF /* HCAllOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAllOf.h; sourceTree = "<group>"; };
 		0F2A4AB90D8B493600051BCF /* HCAllOf.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCAllOf.mm; sourceTree = "<group>"; };
@@ -216,15 +216,15 @@
 		0FA913060DA064CF000AC3AA /* HCIsEqualIgnoringWhiteSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualIgnoringWhiteSpace.h; sourceTree = "<group>"; };
 		0FA913070DA064CF000AC3AA /* HCIsEqualIgnoringWhiteSpace.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsEqualIgnoringWhiteSpace.mm; sourceTree = "<group>"; };
 		0FA913830DA084DA000AC3AA /* HCRequireNonNilString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilString.h; sourceTree = "<group>"; };
-		0FA913DC0DA0999E000AC3AA /* hamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hamcrest.h; sourceTree = "<group>"; };
+		0FA913DC0DA0999E000AC3AA /* OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHamcrest.h; sourceTree = "<group>"; };
 		0FDC10A00F2A429B00DD41AA /* HCCollectMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCollectMatchers.h; sourceTree = "<group>"; };
 		0FDC10A10F2A429B00DD41AA /* HCCollectMatchers.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCCollectMatchers.mm; sourceTree = "<group>"; };
 		0FE5E3540D95D7470021A644 /* IsDictionaryContainingKeyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsDictionaryContainingKeyTest.m; sourceTree = "<group>"; };
 		0FE5E3580D95D7A50021A644 /* HCIsDictionaryContainingKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingKey.h; sourceTree = "<group>"; };
 		0FE5E3590D95D7A50021A644 /* HCIsDictionaryContainingKey.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsDictionaryContainingKey.mm; sourceTree = "<group>"; };
-		32DBCF5E0370ADEE00C91783 /* hamcrest_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hamcrest_Prefix.pch; sourceTree = "<group>"; };
+		32DBCF5E0370ADEE00C91783 /* OCHamcrest_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHamcrest_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DC2EF5B0486A6940098B216 /* hamcrest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = hamcrest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC2EF5B0486A6940098B216 /* OCHamcrest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCHamcrest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,7 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F2A4B580D8B6B2A00051BCF /* hamcrest.framework in Frameworks */,
+				0F2A4B580D8B6B2A00051BCF /* OCHamcrest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,13 +250,13 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DC2EF5B0486A6940098B216 /* hamcrest.framework */,
+				8DC2EF5B0486A6940098B216 /* OCHamcrest.framework */,
 				0F2A4B1F0D8B68B400051BCF /* Unit Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0867D691FE84028FC02AAC07 /* hamcrest */ = {
+		0867D691FE84028FC02AAC07 /* OCHamcrest */ = {
 			isa = PBXGroup;
 			children = (
 				08FB77AEFE84172EC02AAC07 /* Classes */,
@@ -265,7 +265,7 @@
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
-			name = hamcrest;
+			name = OCHamcrest;
 			sourceTree = "<group>";
 		};
 		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
@@ -280,7 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5A0486A6940098B216 /* Info.plist */,
-				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+				089C1667FE841158C02AAC07 /* InfoPlist.strings */,
 				0F2A4B200D8B68B400051BCF /* Unit Tests-Info.plist */,
 			);
 			name = Resources;
@@ -289,7 +289,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0FA913DC0DA0999E000AC3AA /* hamcrest.h */,
+				0FA913DC0DA0999E000AC3AA /* OCHamcrest.h */,
 				0F2A4AB60D8B493600051BCF /* Core */,
 				0F2A4B6A0D8C296300051BCF /* Library */,
 				0F2A4B2B0D8B69E100051BCF /* Unit Test */,
@@ -514,7 +514,7 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32DBCF5E0370ADEE00C91783 /* hamcrest_Prefix.pch */,
+				32DBCF5E0370ADEE00C91783 /* OCHamcrest_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -561,7 +561,7 @@
 				0FA912780DA052AD000AC3AA /* HCIsEqualIgnoringCase.h in Headers */,
 				0FA913080DA064CF000AC3AA /* HCIsEqualIgnoringWhiteSpace.h in Headers */,
 				0FA913850DA084DA000AC3AA /* HCRequireNonNilString.h in Headers */,
-				0FA913DD0DA0999E000AC3AA /* hamcrest.h in Headers */,
+				0FA913DD0DA0999E000AC3AA /* OCHamcrest.h in Headers */,
 				0FDC10A20F2A429B00DD41AA /* HCCollectMatchers.h in Headers */,
 				0F68C6201003101A00E3DCBE /* HCIntegerTypes.h in Headers */,
 			);
@@ -589,9 +589,9 @@
 			productReference = 0F2A4B1F0D8B68B400051BCF /* Unit Tests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		8DC2EF4F0486A6940098B216 /* hamcrest */ = {
+		8DC2EF4F0486A6940098B216 /* OCHamcrest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "hamcrest" */;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "OCHamcrest" */;
 			buildPhases = (
 				8DC2EF500486A6940098B216 /* Headers */,
 				8DC2EF520486A6940098B216 /* Resources */,
@@ -602,10 +602,10 @@
 			);
 			dependencies = (
 			);
-			name = hamcrest;
+			name = OCHamcrest;
 			productInstallPath = "$(HOME)/Library/Frameworks";
-			productName = hamcrest;
-			productReference = 8DC2EF5B0486A6940098B216 /* hamcrest.framework */;
+			productName = OCHamcrest;
+			productReference = 8DC2EF5B0486A6940098B216 /* OCHamcrest.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -613,15 +613,15 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "hamcrest" */;
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "OCHamcrest" */;
 			compatibilityVersion = "Xcode 3.0";
 			hasScannedForEncodings = 1;
-			mainGroup = 0867D691FE84028FC02AAC07 /* hamcrest */;
+			mainGroup = 0867D691FE84028FC02AAC07 /* OCHamcrest */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8DC2EF4F0486A6940098B216 /* hamcrest */,
+				8DC2EF4F0486A6940098B216 /* OCHamcrest */,
 				0F2A4B1E0D8B68B400051BCF /* Unit Tests */,
 			);
 		};
@@ -639,7 +639,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+				0FAD7674102BF4A0000F8C55 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,21 +740,10 @@
 /* Begin PBXTargetDependency section */
 		0F2A4B280D8B692100051BCF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8DC2EF4F0486A6940098B216 /* hamcrest */;
+			target = 8DC2EF4F0486A6940098B216 /* OCHamcrest */;
 			targetProxy = 0F2A4B270D8B692100051BCF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C1667FE841158C02AAC07 /* English */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0F2A4B210D8B68B400051BCF /* Debug */ = {
@@ -825,10 +814,10 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = hamcrest_Prefix.pch;
+				GCC_PREFIX_HEADER = OCHamcrest_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				PRODUCT_NAME = hamcrest;
+				PRODUCT_NAME = OCHamcrest;
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = NO;
 			};
@@ -847,10 +836,10 @@
 				FRAMEWORK_VERSION = A;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = hamcrest_Prefix.pch;
+				GCC_PREFIX_HEADER = OCHamcrest_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				PRODUCT_NAME = hamcrest;
+				PRODUCT_NAME = OCHamcrest;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -913,7 +902,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "hamcrest" */ = {
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "OCHamcrest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB91AE08733DA50010E9CD /* Debug */,
@@ -922,7 +911,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "hamcrest" */ = {
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "OCHamcrest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,

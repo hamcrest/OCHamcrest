@@ -1,5 +1,14 @@
+//
+//  OCHamcrest - HCIsNot.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Inherited
 #import "HCIsNot.h"
 
+    // OCHamcrest
 #import "HCDescription.h"
 #import "HCWrapShortcut.h"
 

@@ -1,7 +1,15 @@
+//
+//  OCHamcrest - HCRequireNonNilString.h
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Mac
 #import <Foundation/Foundation.h>
 
 
-namespace hamstring {
+namespace hamcrest {
 
 inline
 void requireNonNilString(NSString* string)
@@ -14,4 +22,4 @@ void requireNonNilString(NSString* string)
     }
 }
 
-}   // namespace hamstring
+}   // namespace hamcrest

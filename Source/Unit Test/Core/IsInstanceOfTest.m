@@ -1,9 +1,9 @@
 #import "AbstractMatcherTest.h"
 
 #define HC_SHORTHAND
-#import <hamcrest/HCIsInstanceOf.h>
-#import <hamcrest/HCIsNot.h>
-#import <hamcrest/HCMatcherAssert.h>
+#import <OCHamcrest/HCIsInstanceOf.h>
+#import <OCHamcrest/HCIsNot.h>
+#import <OCHamcrest/HCMatcherAssert.h>
 
 
 @interface IsInstanceOfTest : AbstractMatcherTest

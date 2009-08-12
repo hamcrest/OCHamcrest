@@ -1,7 +1,7 @@
 #import "AbstractMatcherTest.h"
 
 #define HC_SHORTHAND
-#import <hamcrest/HCStringStartsWith.h>
+#import <OCHamcrest/HCStringStartsWith.h>
 
 
 static NSString* EXCERPT = @"EXCERPT";

@@ -1,10 +1,10 @@
 #import "AbstractMatcherTest.h"
 
 #define HC_SHORTHAND
-#import <hamcrest/HCAllOf.h>
-#import <hamcrest/HCIsEqual.h>
-#import <hamcrest/HCIsNot.h>
-#import <hamcrest/HCMatcherAssert.h>
+#import <OCHamcrest/HCAllOf.h>
+#import <OCHamcrest/HCIsEqual.h>
+#import <OCHamcrest/HCIsNot.h>
+#import <OCHamcrest/HCMatcherAssert.h>
 
 
 @interface AllOfTest : AbstractMatcherTest

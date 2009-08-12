@@ -1,10 +1,10 @@
 #import "AbstractMatcherTest.h"
 
 #define HC_SHORTHAND
-#import <hamcrest/HCHasDescription.h>
-#import <hamcrest/HCIsEqual.h>
-#import <hamcrest/HCIsNot.h>
-#import <hamcrest/HCMatcherAssert.h>
+#import <OCHamcrest/HCHasDescription.h>
+#import <OCHamcrest/HCIsEqual.h>
+#import <OCHamcrest/HCIsNot.h>
+#import <OCHamcrest/HCMatcherAssert.h>
 
 
 static NSString* DESCRIPTION_RESULT = @"description result";

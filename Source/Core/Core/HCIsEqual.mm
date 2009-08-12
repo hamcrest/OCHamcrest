@@ -1,5 +1,14 @@
+//
+//  OCHamcrest - HCIsEqual.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Self
 #import "HCIsEqual.h"
 
+    // OCHamcrest
 #import "HCDescription.h"
 
 

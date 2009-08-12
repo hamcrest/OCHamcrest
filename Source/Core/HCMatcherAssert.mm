@@ -1,8 +1,19 @@
+//
+//  OCHamcrest - HCMatcherAssert.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Self
 #import "HCMatcherAssert.h"
 
-#import <objc/objc-class.h>
+    // OCHamcrest
 #import "HCStringDescription.h"
 #import "HCMatcher.h"
+
+    // Objective-C
+#import <objc/objc-class.h>
 
 
 namespace {

@@ -1,10 +1,10 @@
 #import "AbstractMatcherTest.h"
 
 #define HC_SHORTHAND
-#import <hamcrest/HCIsSame.h>
-#import <hamcrest/HCIsNot.h>
-#import <hamcrest/HCMatcherAssert.h>
-#import <hamcrest/HCStringDescription.h>
+#import <OCHamcrest/HCIsSame.h>
+#import <OCHamcrest/HCIsNot.h>
+#import <OCHamcrest/HCMatcherAssert.h>
+#import <OCHamcrest/HCStringDescription.h>
 
 
 @interface IsSameTest : AbstractMatcherTest

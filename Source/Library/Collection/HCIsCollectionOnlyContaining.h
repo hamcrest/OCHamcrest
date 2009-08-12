@@ -1,4 +1,12 @@
-#import <hamcrest/HCBaseMatcher.h>
+//
+//  OCHamcrest - HCIsCollectionOnlyContaining.h
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Inherited
+#import <OCHamcrest/HCBaseMatcher.h>
 
 
 /**

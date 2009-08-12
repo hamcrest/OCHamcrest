@@ -1,3 +1,13 @@
+//
+//  OCHamcrest - HCSelfDescribing.h
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Inherited
+#import <Foundation/Foundation.h>
+
 @protocol HCDescription;
 
 

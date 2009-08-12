@@ -1,5 +1,14 @@
+//
+//  OCHamcrest - HCStringDescription.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Self
 #import "HCStringDescription.h"
 
+    // OCHamcrest
 #import "HCSelfDescribing.h"
 
 

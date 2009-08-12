@@ -1,5 +1,14 @@
+//
+//  OCHamcrest - HCIs.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Self
 #import "HCIs.h"
 
+    // OCHamcrest
 #import "HCDescription.h"
 #import "HCWrapShortcut.h"
 

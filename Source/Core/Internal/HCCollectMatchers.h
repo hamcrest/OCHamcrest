@@ -1,5 +1,15 @@
-#import <stdarg.h>
+//
+//  OCHamcrest - HCCollectMatchers.h
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Mac
 #import <Foundation/Foundation.h>
+
+    // C
+#import <stdarg.h>
 
 @protocol HCMatcher;
 

@@ -1,8 +1,8 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 #define HC_SHORTHAND
-#import <hamcrest/HCMatcherAssert.h>
-#import <hamcrest/HCIsEqual.h>
+#import <OCHamcrest/HCMatcherAssert.h>
+#import <OCHamcrest/HCIsEqual.h>
 
 
 @interface MatcherAssertTest : SenTestCase

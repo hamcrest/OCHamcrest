@@ -1,5 +1,14 @@
+//
+//  OCHamcrest - HCBaseDescription.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Self
 #import "HCBaseDescription.h"
 
+    // OCHamcrest
 #import "HCIntegerTypes.h"
 #import "HCMatcher.h"
 #import "HCSelfDescribing.h"

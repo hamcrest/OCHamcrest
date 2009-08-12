@@ -1,5 +1,13 @@
+//
+//  OCHamcrest - HCBaseDescription.h
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Inherited
 #import <Foundation/Foundation.h>
-#import <hamcrest/HCDescription.h>
+#import <OCHamcrest/HCDescription.h>
 
 
 /**

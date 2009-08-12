@@ -1,5 +1,14 @@
+//
+//  OCHamcrest - HCBaseMatcher.mm
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Self
 #import "HCBaseMatcher.h"
 
+    // OCHamcrest
 #import "HCStringDescription.h"
 
 
