@@ -292,7 +292,7 @@
 				0FA913DC0DA0999E000AC3AA /* OCHamcrest.h */,
 				0F2A4AB60D8B493600051BCF /* Core */,
 				0F2A4B6A0D8C296300051BCF /* Library */,
-				0F2A4B2B0D8B69E100051BCF /* Unit Test */,
+				0F2A4B2B0D8B69E100051BCF /* Unit Tests */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -344,7 +344,7 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		0F2A4B2B0D8B69E100051BCF /* Unit Test */ = {
+		0F2A4B2B0D8B69E100051BCF /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
 				0F2A4B380D8B69E100051BCF /* AbstractMatcherTest.h */,
@@ -357,7 +357,7 @@
 				0F2A4B7B0D8C382E00051BCF /* Object */,
 				0F2EBB760D9EF8D500340F95 /* Text */,
 			);
-			path = "Unit Test";
+			path = "Unit Tests";
 			sourceTree = "<group>";
 		};
 		0F2A4B2D0D8B69E100051BCF /* Core */ = {
