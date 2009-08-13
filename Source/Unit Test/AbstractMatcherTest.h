@@ -1,3 +1,11 @@
+//
+//  UnitTests - AbstractMatcherTest.h
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Inherited
 #import <SenTestingKit/SenTestingKit.h>
 
 @protocol HCMatcher;

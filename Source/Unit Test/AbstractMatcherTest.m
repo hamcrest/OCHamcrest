@@ -1,5 +1,14 @@
+//
+//  UnitTests - AbstractMatcherTest.h
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Self
 #import "AbstractMatcherTest.h"
 
+    // OCHamcrest
 #import <OCHamcrest/HCMatcher.h>
 #import <OCHamcrest/HCStringDescription.h>
 

@@ -1,5 +1,14 @@
+//
+//  UnitTests - IsEqualIgnoringWhiteSpaceTest.m
+//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//
+//  Created by: Jon Reid
+//
+
+    // Inherited
 #import "AbstractMatcherTest.h"
 
+    // OCHamcrest
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsEqualIgnoringWhiteSpace.h>
 #import <OCHamcrest/HCIsNot.h>

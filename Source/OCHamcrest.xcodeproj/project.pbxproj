@@ -156,8 +156,8 @@
 		0F2A4AD90D8B493600051BCF /* HCWrapShortcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCWrapShortcut.h; sourceTree = "<group>"; };
 		0F2A4ADA0D8B493600051BCF /* HCWrapShortcut.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCWrapShortcut.mm; sourceTree = "<group>"; };
 		0F2A4B030D8B679900051BCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		0F2A4B1F0D8B68B400051BCF /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F2A4B200D8B68B400051BCF /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit Tests-Info.plist"; sourceTree = "<group>"; };
+		0F2A4B1F0D8B68B400051BCF /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F2A4B200D8B68B400051BCF /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		0F2A4B2C0D8B69E100051BCF /* BaseMatcherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMatcherTest.m; sourceTree = "<group>"; };
 		0F2A4B2E0D8B69E100051BCF /* AllOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOfTest.m; sourceTree = "<group>"; };
 		0F2A4B2F0D8B69E100051BCF /* AnyOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyOfTest.m; sourceTree = "<group>"; };
@@ -251,7 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* OCHamcrest.framework */,
-				0F2A4B1F0D8B68B400051BCF /* Unit Tests.octest */,
+				0F2A4B1F0D8B68B400051BCF /* UnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,7 +281,7 @@
 			children = (
 				8DC2EF5A0486A6940098B216 /* Info.plist */,
 				089C1667FE841158C02AAC07 /* InfoPlist.strings */,
-				0F2A4B200D8B68B400051BCF /* Unit Tests-Info.plist */,
+				0F2A4B200D8B68B400051BCF /* UnitTests-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -570,9 +570,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0F2A4B1E0D8B68B400051BCF /* Unit Tests */ = {
+		0F2A4B1E0D8B68B400051BCF /* UnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F2A4B230D8B68B400051BCF /* Build configuration list for PBXNativeTarget "Unit Tests" */;
+			buildConfigurationList = 0F2A4B230D8B68B400051BCF /* Build configuration list for PBXNativeTarget "UnitTests" */;
 			buildPhases = (
 				0F2A4B1A0D8B68B400051BCF /* Resources */,
 				0F2A4B1B0D8B68B400051BCF /* Sources */,
@@ -584,9 +584,9 @@
 			dependencies = (
 				0F2A4B280D8B692100051BCF /* PBXTargetDependency */,
 			);
-			name = "Unit Tests";
-			productName = "Unit Tests";
-			productReference = 0F2A4B1F0D8B68B400051BCF /* Unit Tests.octest */;
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = 0F2A4B1F0D8B68B400051BCF /* UnitTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 		8DC2EF4F0486A6940098B216 /* OCHamcrest */ = {
@@ -622,7 +622,7 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* OCHamcrest */,
-				0F2A4B1E0D8B68B400051BCF /* Unit Tests */,
+				0F2A4B1E0D8B68B400051BCF /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -758,7 +758,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
-				INFOPLIST_FILE = "Unit Tests-Info.plist";
+				INFOPLIST_FILE = "UnitTests-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -767,7 +767,7 @@
 					SenTestingKit,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = "Unit Tests";
+				PRODUCT_NAME = UnitTests;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -783,7 +783,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
-				INFOPLIST_FILE = "Unit Tests-Info.plist";
+				INFOPLIST_FILE = "UnitTests-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -792,7 +792,7 @@
 					SenTestingKit,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = "Unit Tests";
+				PRODUCT_NAME = UnitTests;
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
 			};
@@ -893,7 +893,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F2A4B230D8B68B400051BCF /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
+		0F2A4B230D8B68B400051BCF /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F2A4B210D8B68B400051BCF /* Debug */,

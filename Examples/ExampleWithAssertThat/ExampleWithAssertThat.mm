@@ -1,7 +1,7 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 #define HC_SHORTHAND
-#import <hamcrest/hamcrest.h>
+#import <OCHamcrest/OCHamcrest.h>
 
 @interface ExampleWithAssertThat : SenTestCase
 @end
