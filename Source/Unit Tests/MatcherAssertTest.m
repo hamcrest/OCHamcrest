@@ -1,5 +1,5 @@
 //
-//  UnitTests - MatcherAssertTest.m
+//  OCHamcrest - MatcherAssertTest.m
 //  Copyright 2009 www.hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid

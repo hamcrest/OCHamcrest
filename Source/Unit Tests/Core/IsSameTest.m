@@ -1,5 +1,5 @@
 //
-//  UnitTests - IsSameTest.m
+//  OCHamcrest - IsSameTest.m
 //  Copyright 2009 www.hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid

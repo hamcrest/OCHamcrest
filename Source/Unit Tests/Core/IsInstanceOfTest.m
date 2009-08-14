@@ -1,5 +1,5 @@
 //
-//  UnitTests - IsInstanceOfTest.m
+//  OCHamcrest - IsInstanceOfTest.m
 //  Copyright 2009 www.hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid

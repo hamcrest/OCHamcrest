@@ -1,5 +1,5 @@
 //
-//  UnitTests - DescribedAsTest.m
+//  OCHamcrest - DescribedAsTest.m
 //  Copyright 2009 www.hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
