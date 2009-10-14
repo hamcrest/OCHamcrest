@@ -15,7 +15,7 @@
 
 extern "C" {
 
-id<HCMatcher> HC_wrapShortcut(id item)
+id<HCMatcher> HC_wrapInMatcher(id item)
 {
     if ([item conformsToProtocol:@protocol(HCMatcher)])
         return item;

@@ -34,6 +34,7 @@
     return self;
 }
 
+
 - (id<HCDescription>) appendValue:(id)value
 {
     if (value == nil)

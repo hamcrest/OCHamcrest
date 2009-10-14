@@ -75,7 +75,7 @@ extern "C" {
 
 id<HCMatcher> HC_hasItem(id item)
 {
-    return [HCIsCollectionContaining isCollectionContaining:HC_wrapShortcut(item)];
+    return [HCIsCollectionContaining isCollectionContaining:HC_wrapInMatcher(item)];
 }
 
 

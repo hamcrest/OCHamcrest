@@ -27,8 +27,14 @@
 */
 + (NSString*) stringFrom:(id<HCSelfDescribing>)selfDescribing;
 
+/**
+    Returns an empty description.
+*/
 + (HCStringDescription*) stringDescription;
 
+/**
+    Returns an initialized HCStringDescription object that is empty.
+*/
 - (id) init;
 
 @end

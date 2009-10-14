@@ -11,6 +11,9 @@
 
 namespace hamcrest {
 
+/**
+    Throws an NSException if @a string is nil.
+*/
 inline
 void requireNonNilString(NSString* string)
 {

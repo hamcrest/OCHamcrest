@@ -80,8 +80,8 @@ extern "C" {
 
 id<HCMatcher> HC_hasEntry(id key, id value)
 {
-    return [HCIsDictionaryContaining isDictionaryContainingKey:HC_wrapShortcut(key)
-                                                         value:HC_wrapShortcut(value)];
+    return [HCIsDictionaryContaining isDictionaryContainingKey:HC_wrapInMatcher(key)
+                                                         value:HC_wrapInMatcher(value)];
 }
 
 }   // extern "C"

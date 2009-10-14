@@ -58,7 +58,7 @@ extern "C" {
 
 id<HCMatcher> HC_hasDescription(id item)
 {
-    return [HCHasDescription hasDescription:HC_wrapShortcut(item)];
+    return [HCHasDescription hasDescription:HC_wrapInMatcher(item)];
 }
 
 }   // extern "C"

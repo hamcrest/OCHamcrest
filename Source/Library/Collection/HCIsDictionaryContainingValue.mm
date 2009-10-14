@@ -71,7 +71,7 @@ extern "C" {
 
 id<HCMatcher> HC_hasValue(id item)
 {
-    return [HCIsDictionaryContainingValue isDictionaryContainingValue:HC_wrapShortcut(item)];
+    return [HCIsDictionaryContainingValue isDictionaryContainingValue:HC_wrapInMatcher(item)];
 }
 
 }   // extern "C"

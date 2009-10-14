@@ -17,6 +17,14 @@
 @end
 
 
+/**
+    Methods that must be provided by subclasses of HCBaseDescription.
+*/
 @interface HCBaseDescription (SubclassMustImplement)
-- (void) append:(NSString*)string;
+
+/**
+    Append the string @a str to the description.
+*/
+- (void) append:(NSString*)str;
+
 @end

@@ -51,9 +51,9 @@
 }
 
 
-- (void) append:(NSString*)string
+- (void) append:(NSString*)str
 {
-    [accumulator appendString:string];
+    [accumulator appendString:str];
 }
 
 @end

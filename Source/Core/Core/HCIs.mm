@@ -56,7 +56,7 @@ extern "C" {
 
 id<HCMatcher> HC_is(id item)
 {
-    return [HCIs is:HC_wrapShortcut(item)];
+    return [HCIs is:HC_wrapInMatcher(item)];
 }
 
 }   // extern "C"
