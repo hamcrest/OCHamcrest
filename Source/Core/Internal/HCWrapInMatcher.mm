@@ -1,12 +1,12 @@
 //
-//  OCHamcrest - HCWrapShortcut.mm
+//  OCHamcrest - HCWrapInMatcher.mm
 //  Copyright 2009 www.hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
 //
 
     // Self
-#import "HCWrapShortcut.h"
+#import "HCWrapInMatcher.h"
 
     // OCHamcrest
 #define HC_SHORTHAND

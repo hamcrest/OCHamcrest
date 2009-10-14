@@ -11,7 +11,7 @@
     // OCHamcrest
 #import "HCAnyOf.h"
 #import "HCDescription.h"
-#import "HCWrapShortcut.h"
+#import "HCWrapInMatcher.h"
 
 
 @implementation HCIsCollectionOnlyContaining

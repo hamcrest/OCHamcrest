@@ -10,7 +10,7 @@
 
     // OCHamcrest
 #import "HCDescription.h"
-#import "HCWrapShortcut.h"
+#import "HCWrapInMatcher.h"
 
 
 @implementation HCIs

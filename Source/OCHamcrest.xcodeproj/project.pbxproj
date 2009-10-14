@@ -39,8 +39,8 @@
 		0F2A4AF90D8B493600051BCF /* HCSelfDescribing.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A4AD60D8B493600051BCF /* HCSelfDescribing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F2A4AFA0D8B493600051BCF /* HCStringDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A4AD70D8B493600051BCF /* HCStringDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F2A4AFB0D8B493600051BCF /* HCStringDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AD80D8B493600051BCF /* HCStringDescription.mm */; };
-		0F2A4AFC0D8B493600051BCF /* HCWrapShortcut.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A4AD90D8B493600051BCF /* HCWrapShortcut.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0F2A4AFD0D8B493600051BCF /* HCWrapShortcut.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4ADA0D8B493600051BCF /* HCWrapShortcut.mm */; };
+		0F2A4AFC0D8B493600051BCF /* HCWrapInMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A4AD90D8B493600051BCF /* HCWrapInMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F2A4AFD0D8B493600051BCF /* HCWrapInMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4ADA0D8B493600051BCF /* HCWrapInMatcher.mm */; };
 		0F2A4B040D8B679900051BCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2A4B030D8B679900051BCF /* Foundation.framework */; };
 		0F2A4B470D8B6A1400051BCF /* AllOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B2E0D8B69E100051BCF /* AllOfTest.m */; };
 		0F2A4B480D8B6A1700051BCF /* AnyOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B2F0D8B69E100051BCF /* AnyOfTest.m */; };
@@ -153,8 +153,8 @@
 		0F2A4AD60D8B493600051BCF /* HCSelfDescribing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSelfDescribing.h; sourceTree = "<group>"; };
 		0F2A4AD70D8B493600051BCF /* HCStringDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringDescription.h; sourceTree = "<group>"; };
 		0F2A4AD80D8B493600051BCF /* HCStringDescription.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCStringDescription.mm; sourceTree = "<group>"; };
-		0F2A4AD90D8B493600051BCF /* HCWrapShortcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCWrapShortcut.h; sourceTree = "<group>"; };
-		0F2A4ADA0D8B493600051BCF /* HCWrapShortcut.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCWrapShortcut.mm; sourceTree = "<group>"; };
+		0F2A4AD90D8B493600051BCF /* HCWrapInMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCWrapInMatcher.h; sourceTree = "<group>"; };
+		0F2A4ADA0D8B493600051BCF /* HCWrapInMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCWrapInMatcher.mm; sourceTree = "<group>"; };
 		0F2A4B030D8B679900051BCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0F2A4B1F0D8B68B400051BCF /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2A4B200D8B68B400051BCF /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -494,8 +494,8 @@
 			children = (
 				0FDC10A00F2A429B00DD41AA /* HCCollectMatchers.h */,
 				0FDC10A10F2A429B00DD41AA /* HCCollectMatchers.mm */,
-				0F2A4AD90D8B493600051BCF /* HCWrapShortcut.h */,
-				0F2A4ADA0D8B493600051BCF /* HCWrapShortcut.mm */,
+				0F2A4AD90D8B493600051BCF /* HCWrapInMatcher.h */,
+				0F2A4ADA0D8B493600051BCF /* HCWrapInMatcher.mm */,
 				0F2FD0650D93428000443CD7 /* NSObject_HCSelfDescribingValue.h */,
 				0F2FD0660D93428000443CD7 /* NSObject_HCSelfDescribingValue.mm */,
 				0F68C61F1003101A00E3DCBE /* HCIntegerTypes.h */,
@@ -543,7 +543,7 @@
 				0F2A4AF70D8B493600051BCF /* HCMatcherAssert.h in Headers */,
 				0F2A4AF90D8B493600051BCF /* HCSelfDescribing.h in Headers */,
 				0F2A4AFA0D8B493600051BCF /* HCStringDescription.h in Headers */,
-				0F2A4AFC0D8B493600051BCF /* HCWrapShortcut.h in Headers */,
+				0F2A4AFC0D8B493600051BCF /* HCWrapInMatcher.h in Headers */,
 				0F2A4B770D8C364000051BCF /* HCHasDescription.h in Headers */,
 				0F2A4BBB0D8C468400051BCF /* HCIsCloseTo.h in Headers */,
 				0F2A4CB30D8C65B300051BCF /* HCOrderingComparison.h in Headers */,
@@ -714,7 +714,7 @@
 				0F2A4AF40D8B493600051BCF /* HCBaseMatcher.mm in Sources */,
 				0F2A4AF80D8B493600051BCF /* HCMatcherAssert.mm in Sources */,
 				0F2A4AFB0D8B493600051BCF /* HCStringDescription.mm in Sources */,
-				0F2A4AFD0D8B493600051BCF /* HCWrapShortcut.mm in Sources */,
+				0F2A4AFD0D8B493600051BCF /* HCWrapInMatcher.mm in Sources */,
 				0F2A4B780D8C364000051BCF /* HCHasDescription.mm in Sources */,
 				0F2A4BBC0D8C468400051BCF /* HCIsCloseTo.mm in Sources */,
 				0F2A4CB40D8C65B300051BCF /* HCOrderingComparison.mm in Sources */,
