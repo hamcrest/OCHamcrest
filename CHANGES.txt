@@ -1,3 +1,5 @@
+* Added helper class HCInvocationMatcher for building other matchers from NSInvocations. See HCHasDescription for an example. (Oct. 17, 2009)
+
 * Renamed framework to OCHamcrest. (Aug 11, 2009)
 
 * Added support for Mac OS X 10.4 projects. (Jul 7, 2009)

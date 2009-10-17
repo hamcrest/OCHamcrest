@@ -89,7 +89,7 @@
 }
 
 
-- (void) toCSyntax:(unichar)ch
+- (void) toCSyntax: (unichar)ch
 {
     switch (ch)
     {

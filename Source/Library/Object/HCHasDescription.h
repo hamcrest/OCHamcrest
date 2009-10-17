@@ -6,16 +6,16 @@
 //
 
     // Inherited
-#import <OCHamcrest/HCBaseMatcher.h>
+#import <OCHamcrest/HCInvocationMatcher.h>
 
 
-@interface HCHasDescription : HCBaseMatcher
-{
-    id<HCMatcher> descriptionMatcher;
-}
+/**
+    Does the object's description satisfy a given matcher?
+*/
+@interface HCHasDescription : HCInvocationMatcher
 
-+ (HCHasDescription*) hasDescription:(id<HCMatcher>)theDescriptionMatcher;
-- (id) initWithDescription:(id<HCMatcher>)theDescriptionMatcher;
++ (HCHasDescription*) hasDescription:(id<HCMatcher>)descriptionMatcher;
+- (id) initWithDescription:(id<HCMatcher>)descriptionMatcher;
 
 @end
 

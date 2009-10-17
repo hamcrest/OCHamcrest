@@ -15,40 +15,19 @@
 
 @implementation HCHasDescription
 
-+ (HCHasDescription*) hasDescription:(id<HCMatcher>)theDescriptionMatcher
++ (HCHasDescription*) hasDescription:(id<HCMatcher>)descriptionMatcher
 {
-    return [[[HCHasDescription alloc] initWithDescription:theDescriptionMatcher] autorelease];
+    return [[[HCHasDescription alloc] initWithDescription:descriptionMatcher] autorelease];
 }
 
 
-- (id) initWithDescription:(id<HCMatcher>)theDescriptionMatcher;
+- (id) initWithDescription:(id<HCMatcher>)descriptionMatcher;
 {
-    self = [super init];
-    if (self != nil)
-        descriptionMatcher = [theDescriptionMatcher retain];
+    NSInvocation* anInvocation = [HCInvocationMatcher
+                                        createInvocationForSelector:@selector(description)
+                                        onClass:[NSObject class]];
+    self = [super initWithInvocation:anInvocation matching:descriptionMatcher];
     return self;
-}
-
-
-- (void) dealloc
-{
-    [descriptionMatcher release];
-    
-    [super dealloc];
-}
-
-
-- (BOOL) matches:(id)item
-{
-    return [descriptionMatcher matches:[item description]];
-}
-
-
-- (void) describeTo:(id<HCDescription>)description
-{
-    [[[description appendText:@"description("]
-                    appendDescriptionOf:descriptionMatcher]
-                    appendText:@")"];
 }
 
 @end
