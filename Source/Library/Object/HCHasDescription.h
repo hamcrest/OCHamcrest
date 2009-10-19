@@ -13,6 +13,8 @@
     Does the object's description satisfy a given matcher?
 */
 @interface HCHasDescription : HCInvocationMatcher
+{
+}
 
 + (HCHasDescription*) hasDescription:(id<HCMatcher>)descriptionMatcher;
 - (id) initWithDescription:(id<HCMatcher>)descriptionMatcher;
