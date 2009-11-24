@@ -47,10 +47,8 @@ NSException* createOCUnitException(const char* fileName, int lineNumber, NSStrin
     [invocation setArgument:&lineNumber atIndex:3];
     [invocation setArgument:&description atIndex:4];
     
-    [invocation retainArguments];
     [invocation invoke];
     [invocation getReturnValue:&result];
-
     return result;
 }
 
@@ -71,7 +69,7 @@ NSException* createAssertThatFailure(const char* fileName, int lineNumber, NSStr
 
 extern "C" {
 
-void HC_assertThatWithLocation(id actual, id<HCMatcher> matcher,
+void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
                                const char* fileName, int lineNumber)
 {
     if (![matcher matches:actual])
@@ -81,7 +79,16 @@ void HC_assertThatWithLocation(id actual, id<HCMatcher> matcher,
                         appendDescriptionOf:matcher]
                         appendText:@", got "]
                         appendValue:actual];
-        @throw createAssertThatFailure(fileName, lineNumber, [description description]);
+        NSException* assertThatFailure = createAssertThatFailure(fileName, lineNumber, [description description]);
+
+        // Invoke [testCase failWithException:assertThatFailure] without linking OCUnit.
+        SEL selector = @selector(failWithException:);
+        NSMethodSignature* signature = [testCase methodSignatureForSelector:selector];
+        NSInvocation* invocation = [NSInvocation invocationWithMethodSignature:signature];
+        [invocation setTarget:testCase];
+        [invocation setSelector:selector];
+        [invocation setArgument:&assertThatFailure atIndex:2];        
+        [invocation invoke];
     }
 }
 

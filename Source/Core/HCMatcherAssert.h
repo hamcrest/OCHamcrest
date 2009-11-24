@@ -12,7 +12,7 @@
 extern "C" {
 #endif
 
-void HC_assertThatWithLocation(id actual, id<HCMatcher> matcher,
+void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
                                const char* fileName, int lineNumber);
 
 #ifdef __cplusplus
@@ -23,7 +23,7 @@ void HC_assertThatWithLocation(id actual, id<HCMatcher> matcher,
     OCUnit integration asserting that actual value satisfies matcher.
 */
 #define HC_assertThat(actual, matcher)  \
-    HC_assertThatWithLocation(actual, matcher, __FILE__, __LINE__)
+    HC_assertThatWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 
 #ifdef HC_SHORTHAND

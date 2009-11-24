@@ -1,3 +1,8 @@
+* Changed assertThat behavior to work more seamlessly with OCUnit: Instead of throwing an exception, it calls the same method as OCUnit's assertion macros to fail the test. As a result, a failing assertThat will not terminate the test, so that the test can record other failures. (Following normal OCUnit behavior, you can instruct the test case to terminate at the first failure by invoking raiseAfterFailure.)
+This change requires that assertThat be called only within subclasses of SenTestCase, which wasn't the case before. You will need to recompile your tests.
+If you need an original-style assertion that can be called outside of a SenTestCase, email your request to hamcrest-dev@googlegroups.com
+(24 Nov 2009)
+
 * Support Xcode 3.2's redesigned Build Results window by removing colons from assertThat description. (24 Nov 2009)
 
 * Added helper class HCInvocationMatcher for building other matchers from NSInvocations. See HCHasDescription for an example. (17 Oct 2009)
