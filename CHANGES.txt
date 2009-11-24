@@ -1,13 +1,15 @@
-* Added helper class HCInvocationMatcher for building other matchers from NSInvocations. See HCHasDescription for an example. (Oct. 17, 2009)
+* Support Xcode 3.2's redesigned Build Results window by removing colons from assertThat description. (24 Nov 2009)
 
-* Renamed framework to OCHamcrest. (Aug 11, 2009)
+* Added helper class HCInvocationMatcher for building other matchers from NSInvocations. See HCHasDescription for an example. (17 Oct 2009)
 
-* Added support for Mac OS X 10.4 projects. (Jul 7, 2009)
+* Renamed framework to OCHamcrest. (11 Aug 2009)
 
-* Fixed compiler errors when used with Objective-C++ (.mm files). (Jan 28, 2009)
+* Added support for Mac OS X 10.4 projects. (07 Jul 2009)
 
-* Added means for matchers to describe mismatches. You can use either matches:describingMismatchTo: to do it one shot, or call describeMismatchOf:To: once you know a particular item does not match. (Jan 24, 2009)
+* Fixed compiler errors when used with Objective-C++ (.mm files). (28 Jan 2009)
 
-* Changed matchers whose description looks similar to a function call so that the description matches the name of the factory function. (Jul 18, 2008)
+* Added means for matchers to describe mismatches. You can use either matches:describingMismatchTo: to do it one shot, or call describeMismatchOf:To: once you know a particular item does not match. (24 Jan 2009)
 
-* Initial release (Apr 13, 2008)
+* Changed matchers whose description looks similar to a function call so that the description matches the name of the factory function. (18 Jul 2008)
+
+* Initial release (13 Apr 2008)

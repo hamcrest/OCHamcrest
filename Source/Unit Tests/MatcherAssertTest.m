@@ -24,7 +24,7 @@
     NSString* expected = @"expected";
     NSString* actual = @"actual";
     
-    NSString* expectedMessage = @"Expected: \"expected\", got: \"actual\"";
+    NSString* expectedMessage = @"Expected \"expected\", got \"actual\"";
         
     @try
     {

@@ -77,9 +77,9 @@ void HC_assertThatWithLocation(id actual, id<HCMatcher> matcher,
     if (![matcher matches:actual])
     {
         HCStringDescription* description = [HCStringDescription stringDescription];
-        [[[[description appendText:@"Expected: "]
+        [[[[description appendText:@"Expected "]
                         appendDescriptionOf:matcher]
-                        appendText:@", got: "]
+                        appendText:@", got "]
                         appendValue:actual];
         @throw createAssertThatFailure(fileName, lineNumber, [description description]);
     }
