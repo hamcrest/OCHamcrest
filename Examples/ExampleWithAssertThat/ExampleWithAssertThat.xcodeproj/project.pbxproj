@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0FC264990DA88F1100B4CD6B /* ExampleWithAssertThat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FC264980DA88F1100B4CD6B /* ExampleWithAssertThat.mm */; };
-		0FC265550DA8972B00B4CD6B /* hamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC265540DA8972B00B4CD6B /* hamcrest.framework */; };
+		0FEEEDE910BC5AC100FA9178 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEEEDE810BC5AC100FA9178 /* OCHamcrest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0FC2648E0DA88ECB00B4CD6B /* Example.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Example.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC264900DA88ECB00B4CD6B /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
 		0FC264980DA88F1100B4CD6B /* ExampleWithAssertThat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleWithAssertThat.mm; sourceTree = "<group>"; };
-		0FC265540DA8972B00B4CD6B /* hamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = hamcrest.framework; path = /Library/Frameworks/hamcrest.framework; sourceTree = "<absolute>"; };
+		0FEEEDE810BC5AC100FA9178 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = /Library/Frameworks/OCHamcrest.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,7 +23,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FC265550DA8972B00B4CD6B /* hamcrest.framework in Frameworks */,
+				0FEEEDE910BC5AC100FA9178 /* OCHamcrest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +67,7 @@
 		0FC2659D0DA8985800B4CD6B /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0FC265540DA8972B00B4CD6B /* hamcrest.framework */,
+				0FEEEDE810BC5AC100FA9178 /* OCHamcrest.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
