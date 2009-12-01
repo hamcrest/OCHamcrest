@@ -9,8 +9,10 @@
 #import "HCAnyOf.h"
 
     // OCHamcrest
-#import "HCCollectMatchers.h"
 #import "HCDescription.h"
+
+    // OCHamcrest internal
+#import "HCCollectMatchers.h"
 
 
 @implementation HCAnyOf

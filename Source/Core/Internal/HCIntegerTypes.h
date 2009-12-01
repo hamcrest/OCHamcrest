@@ -12,7 +12,9 @@
 
 #if !defined(OBJC_API_VERSION) || OBJC_API_VERSION < 2
 
-typedef long NSInteger;
-typedef unsigned long NSUInteger;
+// Define 32-bit types only. I presume that anyone in 64-bit is not building for Tiger.
+
+typedef int NSInteger;
+typedef unsigned int NSUInteger;
 
 #endif

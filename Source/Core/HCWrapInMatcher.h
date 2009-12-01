@@ -17,7 +17,7 @@ extern "C" {
     
     @a item is returned as-is if it is already an HCMatcher.
 */
-id<HCMatcher> HC_wrapInMatcher  (id item);
+id<HCMatcher> HC_wrapInMatcher(id item);
 
 #ifdef __cplusplus
 }

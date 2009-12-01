@@ -10,6 +10,8 @@
 
     // OCHamcrest
 #import "HCDescription.h"
+
+    // OCHamcrest internal
 #import "HCIntegerTypes.h"
 
     // C++

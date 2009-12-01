@@ -15,4 +15,10 @@
     assertThat(@"i like cheese", containsString(@"cheese"));
 }
 
+- (void) testUsingNumbers
+{
+    assertThatInt(42, equalToInt(42));
+    assertThatUnsignedShort(6 * 9, isNot(equalToUnsignedShort(42)));
+}
+
 @end

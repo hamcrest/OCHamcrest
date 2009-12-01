@@ -10,9 +10,11 @@
 
     // OCHamcrest
 #import "HCDescription.h"
-#import "HCIntegerTypes.h"
 #import "HCRequireNonNilString.h"
 using namespace hamcrest;
+
+    // OCHamcrest internal
+#import "HCIntegerTypes.h"
 
     // C++
 #import <cctype>

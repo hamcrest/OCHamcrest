@@ -7,6 +7,7 @@
 
     // Unit test integration
 #import <OCHamcrest/HCMatcherAssert.h>
+#import <OCHamcrest/HCNumberAssert.h>
 
     // Core
 #import <OCHamcrest/HCAllOf.h>
@@ -30,6 +31,7 @@
 
     // Library: Number
 #import <OCHamcrest/HCIsCloseTo.h>
+#import <OCHamcrest/HCIsEqualToNumber.h>
 #import <OCHamcrest/HCOrderingComparison.h>
 
     // Library: Object

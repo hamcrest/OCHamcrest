@@ -1,20 +1,32 @@
+01 Dec 2009:
+* Added assertThat___ and equalTo___ for all types understood by NSNumber. For example: assertThatInt(42, equalToInt(42))
+
+24 Nov 2009:
 * Changed assertThat behavior to work more seamlessly with OCUnit: Instead of throwing an exception, it calls the same method as OCUnit's assertion macros to fail the test. As a result, a failing assertThat will not terminate the test, so that the test can record other failures. (Following normal OCUnit behavior, you can instruct the test case to terminate at the first failure by invoking raiseAfterFailure.)
 This change requires that assertThat be called only within subclasses of SenTestCase, which wasn't the case before. You will need to recompile your tests.
 If you need an original-style assertion that can be called outside of a SenTestCase, email your request to hamcrest-dev@googlegroups.com
-(24 Nov 2009)
 
-* Support Xcode 3.2's redesigned Build Results window by removing colons from assertThat description. (24 Nov 2009)
+24 Nov 2009:
+* Support Xcode 3.2's redesigned Build Results window by removing colons from assertThat description.
 
-* Added helper class HCInvocationMatcher for building other matchers from NSInvocations. See HCHasDescription for an example. (17 Oct 2009)
+17 Oct 2009:
+* Added helper class HCInvocationMatcher for building other matchers from NSInvocations. See HCHasDescription for an example.
 
-* Renamed framework to OCHamcrest. (11 Aug 2009)
+11 Aug 2009:
+* Renamed framework to OCHamcrest.
 
-* Added support for Mac OS X 10.4 projects. (07 Jul 2009)
+07 Jul 2009:
+* Added support for Mac OS X 10.4 projects.
 
-* Fixed compiler errors when used with Objective-C++ (.mm files). (28 Jan 2009)
+28 Jan 2009:
+* Fixed compiler errors when used with Objective-C++ (.mm files).
 
-* Added means for matchers to describe mismatches. You can use either matches:describingMismatchTo: to do it one shot, or call describeMismatchOf:To: once you know a particular item does not match. (24 Jan 2009)
+24 Jan 2009:
+* Added means for matchers to describe mismatches. You can use either matches:describingMismatchTo: to do it one shot, or call describeMismatchOf:To: once you know a particular item does not match.
 
-* Changed matchers whose description looks similar to a function call so that the description matches the name of the factory function. (18 Jul 2008)
+18 Jul 2008:
+* Changed matchers whose description looks similar to a function call so that the description matches the name of the factory function.
 
-* Initial release (13 Apr 2008)
+13 Apr 2008:
+* Initial release
+

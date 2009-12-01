@@ -9,9 +9,11 @@
 #import "HCBaseDescription.h"
 
     // OCHamcrest
-#import "HCIntegerTypes.h"
 #import "HCMatcher.h"
 #import "HCSelfDescribing.h"
+
+    // OCHamcrest internal
+#import "HCIntegerTypes.h"
 
 
 @interface HCBaseDescription(Private)
