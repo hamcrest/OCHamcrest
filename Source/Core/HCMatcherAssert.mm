@@ -13,7 +13,11 @@
 #import "HCMatcher.h"
 
     // Objective-C
+#if (TARGET_OS_IPHONE)
+#import <objc/runtime.h>
+#else
 #import <objc/objc-class.h>
+#endif
 
 
 namespace {

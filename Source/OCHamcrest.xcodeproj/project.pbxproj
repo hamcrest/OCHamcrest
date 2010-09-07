@@ -3,11 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 44;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0F00572A10C5AA9700A777F3 /* HCBoxNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F00572910C5AA9700A777F3 /* HCBoxNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F030C5B1235D23300C59F75 /* HCAllOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AB90D8B493600051BCF /* HCAllOf.mm */; };
+		0F030C5C1235D23300C59F75 /* HCAnyOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4ABB0D8B493600051BCF /* HCAnyOf.mm */; };
+		0F030C5D1235D23300C59F75 /* HCDescribedAs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4ABD0D8B493600051BCF /* HCDescribedAs.mm */; };
+		0F030C5E1235D23300C59F75 /* HCIs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4ABF0D8B493600051BCF /* HCIs.mm */; };
+		0F030C5F1235D23300C59F75 /* HCIsAnything.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AC10D8B493600051BCF /* HCIsAnything.mm */; };
+		0F030C601235D23300C59F75 /* HCIsEqual.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AC30D8B493600051BCF /* HCIsEqual.mm */; };
+		0F030C611235D23300C59F75 /* HCIsInstanceOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AC50D8B493600051BCF /* HCIsInstanceOf.mm */; };
+		0F030C621235D23300C59F75 /* HCIsNil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AC70D8B493600051BCF /* HCIsNil.mm */; };
+		0F030C631235D23300C59F75 /* HCIsNot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AC90D8B493600051BCF /* HCIsNot.mm */; };
+		0F030C641235D23300C59F75 /* HCIsSame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4ACB0D8B493600051BCF /* HCIsSame.mm */; };
+		0F030C651235D23300C59F75 /* HCBaseDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4ACF0D8B493600051BCF /* HCBaseDescription.mm */; };
+		0F030C661235D23300C59F75 /* HCBaseMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AD10D8B493600051BCF /* HCBaseMatcher.mm */; };
+		0F030C671235D23300C59F75 /* HCMatcherAssert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AD50D8B493600051BCF /* HCMatcherAssert.mm */; };
+		0F030C681235D23300C59F75 /* HCStringDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AD80D8B493600051BCF /* HCStringDescription.mm */; };
+		0F030C691235D23300C59F75 /* HCWrapInMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4ADA0D8B493600051BCF /* HCWrapInMatcher.mm */; };
+		0F030C6A1235D23300C59F75 /* HCHasDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B760D8C364000051BCF /* HCHasDescription.mm */; };
+		0F030C6B1235D23300C59F75 /* HCIsCloseTo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4BBA0D8C468400051BCF /* HCIsCloseTo.mm */; };
+		0F030C6C1235D23300C59F75 /* HCOrderingComparison.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4CB20D8C65B300051BCF /* HCOrderingComparison.mm */; };
+		0F030C6D1235D23300C59F75 /* HCIsCollectionContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4CDF0D8C80E300051BCF /* HCIsCollectionContaining.mm */; };
+		0F030C6E1235D23300C59F75 /* HCIsCollectionOnlyContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4DE80D8C9E8D00051BCF /* HCIsCollectionOnlyContaining.mm */; };
+		0F030C6F1235D23300C59F75 /* HCIsIn.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FCF770D9213A400443CD7 /* HCIsIn.mm */; };
+		0F030C701235D23300C59F75 /* NSObject_HCSelfDescribingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FD0660D93428000443CD7 /* NSObject_HCSelfDescribingValue.mm */; };
+		0F030C711235D23300C59F75 /* HCIsDictionaryContainingKey.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FE5E3590D95D7A50021A644 /* HCIsDictionaryContainingKey.mm */; };
+		0F030C721235D23300C59F75 /* HCIsDictionaryContainingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F3855980D98C4C4006235A6 /* HCIsDictionaryContainingValue.mm */; };
+		0F030C731235D23300C59F75 /* HCIsDictionaryContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2EBB270D9E0BD700340F95 /* HCIsDictionaryContaining.mm */; };
+		0F030C741235D23300C59F75 /* HCStringContains.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2EBB840D9EFD9C00340F95 /* HCStringContains.mm */; };
+		0F030C751235D23300C59F75 /* HCStringStartsWith.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2EBBF90D9F0B7500340F95 /* HCStringStartsWith.mm */; };
+		0F030C761235D23300C59F75 /* HCSubstringMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2EBC080D9F138000340F95 /* HCSubstringMatcher.mm */; };
+		0F030C771235D23300C59F75 /* HCStringEndsWith.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2EBC1A0D9F14E900340F95 /* HCStringEndsWith.mm */; };
+		0F030C781235D23300C59F75 /* HCIsEqualIgnoringCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FA912770DA052AD000AC3AA /* HCIsEqualIgnoringCase.mm */; };
+		0F030C791235D23300C59F75 /* HCIsEqualIgnoringWhiteSpace.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FA913070DA064CF000AC3AA /* HCIsEqualIgnoringWhiteSpace.mm */; };
+		0F030C7A1235D23300C59F75 /* HCCollectMatchers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC10A10F2A429B00DD41AA /* HCCollectMatchers.mm */; };
+		0F030C7B1235D23300C59F75 /* HCInvocationMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FF1B1E11086DFDA00E615AE /* HCInvocationMatcher.mm */; };
+		0F030C7C1235D23300C59F75 /* HCIsEqualToNumber.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A544B10C45F44009C870F /* HCIsEqualToNumber.mm */; };
+		0F030C7D1235D23300C59F75 /* HCNumberAssert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FA5A05110C57BAE005FB8BB /* HCNumberAssert.mm */; };
+		0F030C7E1235D25300C59F75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2A4B030D8B679900051BCF /* Foundation.framework */; };
 		0F0A12E50DA0A35F00AE4705 /* MatcherAssertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A12E40DA0A35F00AE4705 /* MatcherAssertTest.m */; };
 		0F1A544C10C45F44009C870F /* HCIsEqualToNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F1A544A10C45F44009C870F /* HCIsEqualToNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F1A544D10C45F44009C870F /* HCIsEqualToNumber.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A544B10C45F44009C870F /* HCIsEqualToNumber.mm */; };
@@ -58,7 +94,7 @@
 		0F2A4B500D8B6A1D00051BCF /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B360D8B69E100051BCF /* IsSameTest.m */; };
 		0F2A4B510D8B6A1E00051BCF /* IsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B370D8B69E100051BCF /* IsTest.m */; };
 		0F2A4B520D8B6A1F00051BCF /* AbstractMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B390D8B69E100051BCF /* AbstractMatcherTest.m */; };
-		0F2A4B580D8B6B2A00051BCF /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* OCHamcrest.framework */; };
+		0F2A4B580D8B6B2A00051BCF /* OCHamcrest in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* OCHamcrest */; };
 		0F2A4B770D8C364000051BCF /* HCHasDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A4B750D8C364000051BCF /* HCHasDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F2A4B780D8C364000051BCF /* HCHasDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B760D8C364000051BCF /* HCHasDescription.mm */; };
 		0F2A4B7D0D8C382E00051BCF /* HasDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B7C0D8C382E00051BCF /* HasDescriptionTest.m */; };
@@ -132,6 +168,7 @@
 /* Begin PBXFileReference section */
 		089C1667FE841158C02AAC07 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		0F00572910C5AA9700A777F3 /* HCBoxNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBoxNumber.h; sourceTree = "<group>"; };
+		0F030C561235D0BD00C59F75 /* libochamcrest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libochamcrest.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F0A12E40DA0A35F00AE4705 /* MatcherAssertTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatcherAssertTest.m; sourceTree = "<group>"; };
 		0F1A541F10C45C76009C870F /* IsEqualToNumberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEqualToNumberTest.m; sourceTree = "<group>"; };
 		0F1A544A10C45F44009C870F /* HCIsEqualToNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualToNumber.h; sourceTree = "<group>"; };
@@ -244,15 +281,23 @@
 		0FF1B2031086E55100E615AE /* InvocationMatcherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvocationMatcherTest.m; sourceTree = "<group>"; };
 		32DBCF5E0370ADEE00C91783 /* OCHamcrest_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHamcrest_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DC2EF5B0486A6940098B216 /* OCHamcrest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCHamcrest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC2EF5B0486A6940098B216 /* OCHamcrest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.framework; path = OCHamcrest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0F030C541235D0BD00C59F75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F030C7E1235D25300C59F75 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0F2A4B1C0D8B68B400051BCF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F2A4B580D8B6B2A00051BCF /* OCHamcrest.framework in Frameworks */,
+				0F2A4B580D8B6B2A00051BCF /* OCHamcrest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,8 +315,9 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DC2EF5B0486A6940098B216 /* OCHamcrest.framework */,
+				8DC2EF5B0486A6940098B216 /* OCHamcrest */,
 				0F2A4B1F0D8B68B400051BCF /* UnitTests.octest */,
+				0F030C561235D0BD00C59F75 /* libochamcrest.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -552,6 +598,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0F030C521235D0BD00C59F75 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF500486A6940098B216 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -604,6 +657,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0F030C551235D0BD00C59F75 /* OCHamcrest-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F030C591235D0ED00C59F75 /* Build configuration list for PBXNativeTarget "OCHamcrest-iOS" */;
+			buildPhases = (
+				0F030C521235D0BD00C59F75 /* Headers */,
+				0F030C531235D0BD00C59F75 /* Sources */,
+				0F030C541235D0BD00C59F75 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OCHamcrest-iOS";
+			productName = ochamcrest;
+			productReference = 0F030C561235D0BD00C59F75 /* libochamcrest.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		0F2A4B1E0D8B68B400051BCF /* UnitTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F2A4B230D8B68B400051BCF /* Build configuration list for PBXNativeTarget "UnitTests" */;
@@ -639,7 +709,7 @@
 			name = OCHamcrest;
 			productInstallPath = "$(HOME)/Library/Frameworks";
 			productName = OCHamcrest;
-			productReference = 8DC2EF5B0486A6940098B216 /* OCHamcrest.framework */;
+			productReference = 8DC2EF5B0486A6940098B216 /* OCHamcrest */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -657,6 +727,7 @@
 			targets = (
 				8DC2EF4F0486A6940098B216 /* OCHamcrest */,
 				0F2A4B1E0D8B68B400051BCF /* UnitTests */,
+				0F030C551235D0BD00C59F75 /* OCHamcrest-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -696,6 +767,48 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0F030C531235D0BD00C59F75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F030C5B1235D23300C59F75 /* HCAllOf.mm in Sources */,
+				0F030C5C1235D23300C59F75 /* HCAnyOf.mm in Sources */,
+				0F030C5D1235D23300C59F75 /* HCDescribedAs.mm in Sources */,
+				0F030C5E1235D23300C59F75 /* HCIs.mm in Sources */,
+				0F030C5F1235D23300C59F75 /* HCIsAnything.mm in Sources */,
+				0F030C601235D23300C59F75 /* HCIsEqual.mm in Sources */,
+				0F030C611235D23300C59F75 /* HCIsInstanceOf.mm in Sources */,
+				0F030C621235D23300C59F75 /* HCIsNil.mm in Sources */,
+				0F030C631235D23300C59F75 /* HCIsNot.mm in Sources */,
+				0F030C641235D23300C59F75 /* HCIsSame.mm in Sources */,
+				0F030C651235D23300C59F75 /* HCBaseDescription.mm in Sources */,
+				0F030C661235D23300C59F75 /* HCBaseMatcher.mm in Sources */,
+				0F030C671235D23300C59F75 /* HCMatcherAssert.mm in Sources */,
+				0F030C681235D23300C59F75 /* HCStringDescription.mm in Sources */,
+				0F030C691235D23300C59F75 /* HCWrapInMatcher.mm in Sources */,
+				0F030C6A1235D23300C59F75 /* HCHasDescription.mm in Sources */,
+				0F030C6B1235D23300C59F75 /* HCIsCloseTo.mm in Sources */,
+				0F030C6C1235D23300C59F75 /* HCOrderingComparison.mm in Sources */,
+				0F030C6D1235D23300C59F75 /* HCIsCollectionContaining.mm in Sources */,
+				0F030C6E1235D23300C59F75 /* HCIsCollectionOnlyContaining.mm in Sources */,
+				0F030C6F1235D23300C59F75 /* HCIsIn.mm in Sources */,
+				0F030C701235D23300C59F75 /* NSObject_HCSelfDescribingValue.mm in Sources */,
+				0F030C711235D23300C59F75 /* HCIsDictionaryContainingKey.mm in Sources */,
+				0F030C721235D23300C59F75 /* HCIsDictionaryContainingValue.mm in Sources */,
+				0F030C731235D23300C59F75 /* HCIsDictionaryContaining.mm in Sources */,
+				0F030C741235D23300C59F75 /* HCStringContains.mm in Sources */,
+				0F030C751235D23300C59F75 /* HCStringStartsWith.mm in Sources */,
+				0F030C761235D23300C59F75 /* HCSubstringMatcher.mm in Sources */,
+				0F030C771235D23300C59F75 /* HCStringEndsWith.mm in Sources */,
+				0F030C781235D23300C59F75 /* HCIsEqualIgnoringCase.mm in Sources */,
+				0F030C791235D23300C59F75 /* HCIsEqualIgnoringWhiteSpace.mm in Sources */,
+				0F030C7A1235D23300C59F75 /* HCCollectMatchers.mm in Sources */,
+				0F030C7B1235D23300C59F75 /* HCInvocationMatcher.mm in Sources */,
+				0F030C7C1235D23300C59F75 /* HCIsEqualToNumber.mm in Sources */,
+				0F030C7D1235D23300C59F75 /* HCNumberAssert.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0F2A4B1B0D8B68B400051BCF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -786,6 +899,35 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0F030C571235D0BD00C59F75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PREBINDING = NO;
+				PRODUCT_NAME = ochamcrest;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		0F030C581235D0BD00C59F75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				PREBINDING = NO;
+				PRODUCT_NAME = ochamcrest;
+				SDKROOT = iphoneos4.0;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		0F2A4B210D8B68B400051BCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -889,7 +1031,6 @@
 			buildSettings = {
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				"GCC_VERSION[sdk=macosx10.4][arch=*]" = 4.0;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -898,7 +1039,7 @@
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.4;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -910,10 +1051,10 @@
 		1DEB91B308733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				"GCC_VERSION[sdk=macosx10.4][arch=*]" = 4.0;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -922,7 +1063,7 @@
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.4;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -934,6 +1075,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0F030C591235D0ED00C59F75 /* Build configuration list for PBXNativeTarget "OCHamcrest-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F030C571235D0BD00C59F75 /* Debug */,
+				0F030C581235D0BD00C59F75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0F2A4B230D8B68B400051BCF /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
