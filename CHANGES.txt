@@ -1,3 +1,6 @@
+06 Sep 2010:
+* Added static library target and changes for iOS.
+
 01 Dec 2009:
 * Added assertThat___ and equalTo___ for all types understood by NSNumber. For example: assertThatInt(42, equalToInt(42))
 
@@ -18,7 +21,9 @@ If you need an original-style assertion that can be called outside of a SenTestC
 07 Jul 2009:
 * Added support for Mac OS X 10.4 projects.
 
+
 28 Jan 2009:
+
 * Fixed compiler errors when used with Objective-C++ (.mm files).
 
 24 Jan 2009:
@@ -29,4 +34,5 @@ If you need an original-style assertion that can be called outside of a SenTestC
 
 13 Apr 2008:
 * Initial release
+
 
