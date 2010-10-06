@@ -1,4 +1,5 @@
 06 Oct 2010:
+* Work around bug in iPhone simulator that causes a test failure to terminate the app. Fix provided by Aaron Jacobs.
 * Added Doxygen files. Open Doxygen/html/index.html to browse documentation.
 
 06 Sep 2010:

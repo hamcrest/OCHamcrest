@@ -168,7 +168,7 @@
 /* Begin PBXFileReference section */
 		089C1667FE841158C02AAC07 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		0F00572910C5AA9700A777F3 /* HCBoxNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBoxNumber.h; sourceTree = "<group>"; };
-		0F030C561235D0BD00C59F75 /* libochamcrest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libochamcrest.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F030C561235D0BD00C59F75 /* libOCHamcrest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOCHamcrest.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F0A12E40DA0A35F00AE4705 /* MatcherAssertTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatcherAssertTest.m; sourceTree = "<group>"; };
 		0F1A541F10C45C76009C870F /* IsEqualToNumberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEqualToNumberTest.m; sourceTree = "<group>"; };
 		0F1A544A10C45F44009C870F /* HCIsEqualToNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualToNumber.h; sourceTree = "<group>"; };
@@ -317,7 +317,7 @@
 			children = (
 				8DC2EF5B0486A6940098B216 /* OCHamcrest */,
 				0F2A4B1F0D8B68B400051BCF /* UnitTests.octest */,
-				0F030C561235D0BD00C59F75 /* libochamcrest.a */,
+				0F030C561235D0BD00C59F75 /* libOCHamcrest.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -657,9 +657,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0F030C551235D0BD00C59F75 /* OCHamcrest-iOS */ = {
+		0F030C551235D0BD00C59F75 /* Static library for iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F030C591235D0ED00C59F75 /* Build configuration list for PBXNativeTarget "OCHamcrest-iOS" */;
+			buildConfigurationList = 0F030C591235D0ED00C59F75 /* Build configuration list for PBXNativeTarget "Static library for iOS" */;
 			buildPhases = (
 				0F030C521235D0BD00C59F75 /* Headers */,
 				0F030C531235D0BD00C59F75 /* Sources */,
@@ -669,9 +669,9 @@
 			);
 			dependencies = (
 			);
-			name = "OCHamcrest-iOS";
+			name = "Static library for iOS";
 			productName = ochamcrest;
-			productReference = 0F030C561235D0BD00C59F75 /* libochamcrest.a */;
+			productReference = 0F030C561235D0BD00C59F75 /* libOCHamcrest.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		0F2A4B1E0D8B68B400051BCF /* UnitTests */ = {
@@ -719,7 +719,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "OCHamcrest" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* OCHamcrest */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -727,7 +734,7 @@
 			targets = (
 				8DC2EF4F0486A6940098B216 /* OCHamcrest */,
 				0F2A4B1E0D8B68B400051BCF /* UnitTests */,
-				0F030C551235D0BD00C59F75 /* OCHamcrest-iOS */,
+				0F030C551235D0BD00C59F75 /* Static library for iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -908,8 +915,8 @@
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PREBINDING = NO;
-				PRODUCT_NAME = ochamcrest;
-				SDKROOT = iphoneos4.0;
+				PRODUCT_NAME = OCHamcrest;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Debug;
 		};
@@ -922,8 +929,8 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_GC = unsupported;
 				PREBINDING = NO;
-				PRODUCT_NAME = ochamcrest;
-				SDKROOT = iphoneos4.0;
+				PRODUCT_NAME = OCHamcrest;
+				SDKROOT = iphoneos4.1;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -1039,7 +1046,7 @@
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1063,7 +1070,7 @@
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1075,7 +1082,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F030C591235D0ED00C59F75 /* Build configuration list for PBXNativeTarget "OCHamcrest-iOS" */ = {
+		0F030C591235D0ED00C59F75 /* Build configuration list for PBXNativeTarget "Static library for iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F030C571235D0BD00C59F75 /* Debug */,
