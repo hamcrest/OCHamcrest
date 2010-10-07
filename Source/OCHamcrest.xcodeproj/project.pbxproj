@@ -94,7 +94,7 @@
 		0F2A4B500D8B6A1D00051BCF /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B360D8B69E100051BCF /* IsSameTest.m */; };
 		0F2A4B510D8B6A1E00051BCF /* IsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B370D8B69E100051BCF /* IsTest.m */; };
 		0F2A4B520D8B6A1F00051BCF /* AbstractMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B390D8B69E100051BCF /* AbstractMatcherTest.m */; };
-		0F2A4B580D8B6B2A00051BCF /* OCHamcrest in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* OCHamcrest */; };
+		0F2A4B580D8B6B2A00051BCF /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* OCHamcrest.framework */; };
 		0F2A4B770D8C364000051BCF /* HCHasDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A4B750D8C364000051BCF /* HCHasDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F2A4B780D8C364000051BCF /* HCHasDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B760D8C364000051BCF /* HCHasDescription.mm */; };
 		0F2A4B7D0D8C382E00051BCF /* HasDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B7C0D8C382E00051BCF /* HasDescriptionTest.m */; };
@@ -157,6 +157,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		0F2A4B270D8B692100051BCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = OCHamcrest;
+		};
+		32604E941236022A0084AB0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
@@ -279,9 +286,10 @@
 		0FF1B1E01086DFDA00E615AE /* HCInvocationMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCInvocationMatcher.h; sourceTree = "<group>"; };
 		0FF1B1E11086DFDA00E615AE /* HCInvocationMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCInvocationMatcher.mm; sourceTree = "<group>"; };
 		0FF1B2031086E55100E615AE /* InvocationMatcherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvocationMatcherTest.m; sourceTree = "<group>"; };
+		32604E87123601CC0084AB0B /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCHamcrestIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32DBCF5E0370ADEE00C91783 /* OCHamcrest_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHamcrest_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DC2EF5B0486A6940098B216 /* OCHamcrest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.framework; path = OCHamcrest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC2EF5B0486A6940098B216 /* OCHamcrest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCHamcrest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,7 +305,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F2A4B580D8B6B2A00051BCF /* OCHamcrest in Frameworks */,
+				0F2A4B580D8B6B2A00051BCF /* OCHamcrest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,8 +323,9 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DC2EF5B0486A6940098B216 /* OCHamcrest */,
+				8DC2EF5B0486A6940098B216 /* OCHamcrest.framework */,
 				0F2A4B1F0D8B68B400051BCF /* UnitTests.octest */,
+				32604E87123601CC0084AB0B /* OCHamcrestIOS.framework */,
 				0F030C561235D0BD00C59F75 /* libOCHamcrest.a */,
 			);
 			name = Products;
@@ -693,6 +702,22 @@
 			productReference = 0F2A4B1F0D8B68B400051BCF /* UnitTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		32604E86123601CC0084AB0B /* OCHamcrestIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32604E8B123601CD0084AB0B /* Build configuration list for PBXNativeTarget "OCHamcrestIOS" */;
+			buildPhases = (
+				32604E97123602320084AB0B /* Modify OS X framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32604E951236022A0084AB0B /* PBXTargetDependency */,
+			);
+			name = OCHamcrestIOS;
+			productName = OCHamcrestIOS;
+			productReference = 32604E87123601CC0084AB0B /* OCHamcrestIOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		8DC2EF4F0486A6940098B216 /* OCHamcrest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "OCHamcrest" */;
@@ -709,7 +734,7 @@
 			name = OCHamcrest;
 			productInstallPath = "$(HOME)/Library/Frameworks";
 			productName = OCHamcrest;
-			productReference = 8DC2EF5B0486A6940098B216 /* OCHamcrest */;
+			productReference = 8DC2EF5B0486A6940098B216 /* OCHamcrest.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -733,6 +758,7 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* OCHamcrest */,
+				32604E86123601CC0084AB0B /* OCHamcrestIOS */,
 				0F2A4B1E0D8B68B400051BCF /* UnitTests */,
 				0F030C551235D0BD00C59F75 /* Static library for iOS */,
 			);
@@ -770,6 +796,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		32604E97123602320084AB0B /* Modify OS X framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Modify OS X framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# We'll copy the OS X framework to a new location, then modify it in place.\nOSX_FRAMEWORK=\"${BUILT_PRODUCTS_DIR}/OCHamcrest.framework/\"\nIOS_FRAMEWORK=\"${BUILT_PRODUCTS_DIR}/OCHamcrestIOS.framework/\"\n\n# Trigger builds of the static library for both the simulator and the device.\nxcodebuild -configuration Release -target \"Static library for iOS\" -sdk iphoneos4.1 > /dev/null\nxcodebuild -configuration Release -target \"Static library for iOS\" -sdk iphonesimulator4.1 > /dev/null\n\n# Copy the OS X framework to the new location.\nmkdir -p \"${IOS_FRAMEWORK}\"\nrsync -q -a --delete \"${OSX_FRAMEWORK}\" \"${IOS_FRAMEWORK}\"\n\n# Rename the main header.\nmv \"${IOS_FRAMEWORK}/Headers/OCHamcrest.h\" \"${IOS_FRAMEWORK}/Headers/OCHamcrestIOS.h\"\n\n# Update all imports to use the new framework name.\nIMPORT_EXPRESSION=\"s/#import <OCHamcrest/#import <OCHamcrestIOS/g;\"\nfind \"${IOS_FRAMEWORK}\" -name '*.h' -print0 | xargs -0 perl -pi -e \"${IMPORT_EXPRESSION}\"\n\n# Delete the existing (OS X) library and the link to it.\nrm \"${IOS_FRAMEWORK}/OCHamcrest\" \"${IOS_FRAMEWORK}/Versions/Current/OCHamcrest\"\n\n# Create a new library that is a fat library containing both static libraries.\nDEVICE_LIB=\"${PROJECT_DIR}/build/Release-iphoneos/libochamcrest.a\"\nSIMULATOR_LIB=\"${PROJECT_DIR}/build/Release-iphonesimulator/libochamcrest.a\"\nOUTPUT_LIB=\"${IOS_FRAMEWORK}/Versions/Current/OCHamcrestIOS\"\n\nlipo -create \"${DEVICE_LIB}\" -arch i386 \"${SIMULATOR_LIB}\" -o \"${OUTPUT_LIB}\"\n\n# Add a symlink, as required by the framework.\nln -s Versions/Current/OCHamcrestIOS \"${IOS_FRAMEWORK}/OCHamcrestIOS\"\n\n# Update the name in the plist file.\nNAME_EXPRESSION=\"s/OCHamcrest/OCHamcrestIOS/g;\"\nperl -pi -e \"${NAME_EXPRESSION}\" \"${IOS_FRAMEWORK}/Resources/Info.plist\"";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -902,6 +943,11 @@
 			isa = PBXTargetDependency;
 			target = 8DC2EF4F0486A6940098B216 /* OCHamcrest */;
 			targetProxy = 0F2A4B270D8B692100051BCF /* PBXContainerItemProxy */;
+		};
+		32604E951236022A0084AB0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* OCHamcrest */;
+			targetProxy = 32604E941236022A0084AB0B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1079,6 +1125,58 @@
 			};
 			name = Release;
 		};
+		32604E89123601CD0084AB0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = OCHamcrestIOS;
+			};
+			name = Debug;
+		};
+		32604E8A123601CD0084AB0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = OCHamcrestIOS;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1114,6 +1212,15 @@
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,
 				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32604E8B123601CD0084AB0B /* Build configuration list for PBXNativeTarget "OCHamcrestIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32604E89123601CD0084AB0B /* Debug */,
+				32604E8A123601CD0084AB0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
