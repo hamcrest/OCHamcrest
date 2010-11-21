@@ -17,7 +17,7 @@
 
 - (void) testUsingNumbers
 {
-    assertThatInt(42, equalToInt(42));
+    assertThatInt(42, is(equalToInt(42)));
     assertThatUnsignedShort(6 * 9, isNot(equalToUnsignedShort(42)));
 }
 

@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FC264990DA88F1100B4CD6B /* ExampleWithAssertThat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FC264980DA88F1100B4CD6B /* ExampleWithAssertThat.mm */; };
+		0FC264990DA88F1100B4CD6B /* ExampleWithAssertThat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC264980DA88F1100B4CD6B /* ExampleWithAssertThat.m */; };
 		0FEEEDE910BC5AC100FA9178 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEEEDE810BC5AC100FA9178 /* OCHamcrest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0FC2648E0DA88ECB00B4CD6B /* Example.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Example.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC264900DA88ECB00B4CD6B /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
-		0FC264980DA88F1100B4CD6B /* ExampleWithAssertThat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleWithAssertThat.mm; sourceTree = "<group>"; };
-		0FEEEDE810BC5AC100FA9178 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = /Library/Frameworks/OCHamcrest.framework; sourceTree = "<absolute>"; };
+		0FC264980DA88F1100B4CD6B /* ExampleWithAssertThat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleWithAssertThat.m; sourceTree = "<group>"; };
+		0FEEEDE810BC5AC100FA9178 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = Library/Frameworks/OCHamcrest.framework; sourceTree = SYSTEM_DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +33,7 @@
 		0FC264760DA88EAA00B4CD6B = {
 			isa = PBXGroup;
 			children = (
-				0FC264980DA88F1100B4CD6B /* ExampleWithAssertThat.mm */,
+				0FC264980DA88F1100B4CD6B /* ExampleWithAssertThat.m */,
 				0FC2658B0DA8981900B4CD6B /* Resources */,
 				0FC2658F0DA8983200B4CD6B /* External Frameworks and Libraries */,
 				0FC2648F0DA88ECB00B4CD6B /* Products */,
@@ -79,7 +79,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FC264940DA88ECB00B4CD6B /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
-				0FC264890DA88ECB00B4CD6B /* Resources */,
 				0FC2648A0DA88ECB00B4CD6B /* Sources */,
 				0FC2648B0DA88ECB00B4CD6B /* Frameworks */,
 				0FC2648C0DA88ECB00B4CD6B /* ShellScript */,
@@ -100,7 +99,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 0FC2647B0DA88EAA00B4CD6B /* Build configuration list for PBXProject "ExampleWithAssertThat" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0FC264760DA88EAA00B4CD6B;
 			productRefGroup = 0FC2648F0DA88ECB00B4CD6B /* Products */;
 			projectDirPath = "";
@@ -110,16 +116,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		0FC264890DA88ECB00B4CD6B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		0FC2648C0DA88ECB00B4CD6B /* ShellScript */ = {
@@ -142,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FC264990DA88F1100B4CD6B /* ExampleWithAssertThat.mm in Sources */,
+				0FC264990DA88F1100B4CD6B /* ExampleWithAssertThat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,13 +165,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../../../Library/Frameworks\"";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/../../hamcrest/build/Release\"";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -202,13 +192,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../../../Library/Frameworks\"";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/../../hamcrest/build/Release\"";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
