@@ -1,3 +1,6 @@
+07 Oct 2010:
+* For iOS: Added OCHamcrestIOS.framework target which provides release builds for both simulator and device into a single framework. Yes, a framework that can be used for iOS development without requiring users to mess with header search paths and link settings. Simply drop the framework into your project and #import <OCHamcrestIOS/OCHamcrestIOS.h> - Aaron Jacobs
+
 06 Oct 2010:
 * Work around bug in iPhone simulator that causes a test failure to terminate the app. Fix provided by Aaron Jacobs.
 * Added Doxygen files. Open Doxygen/html/index.html to browse documentation.
