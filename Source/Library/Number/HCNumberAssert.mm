@@ -37,10 +37,7 @@ defineNumberAssert(UnsignedInt, unsigned int)
 defineNumberAssert(UnsignedLong, unsigned long)
 defineNumberAssert(UnsignedLongLong, unsigned long long)
 defineNumberAssert(UnsignedShort, unsigned short)
-
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
 defineNumberAssert(Integer, NSInteger)
 defineNumberAssert(UnsignedInteger, NSUInteger)
-#endif  // Objective-C 2.0
 
 }   // extern "C"

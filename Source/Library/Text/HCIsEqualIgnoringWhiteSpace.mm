@@ -13,9 +13,6 @@
 #import "HCRequireNonNilString.h"
 using namespace hamcrest;
 
-    // OCHamcrest internal
-#import "HCIntegerTypes.h"
-
     // C++
 #import <cctype>
 using namespace std;

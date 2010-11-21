@@ -53,15 +53,11 @@ void HC_assertThatUnsignedLongLongWithLocation(id testCase, unsigned long long a
 void HC_assertThatUnsignedShortWithLocation(id testCase, unsigned short actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
 
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
-
 void HC_assertThatIntegerWithLocation(id testCase, NSInteger actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
 
 void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUInteger actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
-
-#endif  // Objective-C 2.0
 
 #ifdef __cplusplus
 }
@@ -145,9 +141,6 @@ void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUInteger actual,
 #define HC_assertThatUnsignedShort(actual, matcher)  \
     HC_assertThatUnsignedShortWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
-
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
-
 /**
     OCUnit integration asserting that actual value, when converted to an NSNumber satisfies matcher.
 */
@@ -159,8 +152,6 @@ void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUInteger actual,
 */
 #define HC_assertThatUnsignedInteger(actual, matcher)  \
     HC_assertThatUnsignedIntegerWithLocation(self, actual, matcher, __FILE__, __LINE__)
-
-#endif  // Objective-C 2.0
 
 
 #ifdef HC_SHORTHAND
@@ -226,23 +217,18 @@ void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUInteger actual,
 #define assertThatUnsignedLongLong HC_assertThatUnsignedLongLong
 
 /**
-    Shorthand for HC_assertThatInt, available if HC_SHORTHAND is defined.
+    Shorthand for HC_assertThatUnsignedShort, available if HC_SHORTHAND is defined.
 */
 #define assertThatUnsignedShort HC_assertThatUnsignedShort
 
-
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
-
 /**
-    Shorthand for HC_assertThatInt, available if HC_SHORTHAND is defined.
+    Shorthand for HC_assertThatInteger, available if HC_SHORTHAND is defined.
 */
 #define assertThatInteger HC_assertThatInteger
 
 /**
-    Shorthand for HC_assertThatInt, available if HC_SHORTHAND is defined.
+    Shorthand for HC_assertThatUnsignedInteger, available if HC_SHORTHAND is defined.
 */
 #define assertThatUnsignedInteger HC_assertThatUnsignedInteger
-
-#endif  // Objective-C 2.0
 
 #endif  // HC_SHORTHAND

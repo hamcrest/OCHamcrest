@@ -36,10 +36,7 @@ defineEqualToNumber(UnsignedInt, unsigned int)
 defineEqualToNumber(UnsignedLong, unsigned long)
 defineEqualToNumber(UnsignedLongLong, unsigned long long)
 defineEqualToNumber(UnsignedShort, unsigned short)
-
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
 defineEqualToNumber(Integer, NSInteger)
 defineEqualToNumber(UnsignedInteger, NSUInteger)
-#endif  // Objective-C 2.0
 
 }   // extern "C"

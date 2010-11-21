@@ -132,7 +132,6 @@
 		0F3855990D98C4C4006235A6 /* HCIsDictionaryContainingValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F3855970D98C4C4006235A6 /* HCIsDictionaryContainingValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F38559A0D98C4C4006235A6 /* HCIsDictionaryContainingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F3855980D98C4C4006235A6 /* HCIsDictionaryContainingValue.mm */; };
 		0F3855BB0D98CD29006235A6 /* IsDictionaryContainingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3855BA0D98CD29006235A6 /* IsDictionaryContainingTest.m */; };
-		0F68C6201003101A00E3DCBE /* HCIntegerTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F68C61F1003101A00E3DCBE /* HCIntegerTypes.h */; };
 		0FA5A04B10C57983005FB8BB /* NumberAssertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA5A04A10C57983005FB8BB /* NumberAssertTest.m */; };
 		0FA5A05210C57BAE005FB8BB /* HCNumberAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA5A05010C57BAE005FB8BB /* HCNumberAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0FA5A05310C57BAE005FB8BB /* HCNumberAssert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FA5A05110C57BAE005FB8BB /* HCNumberAssert.mm */; };
@@ -266,7 +265,6 @@
 		0F3855970D98C4C4006235A6 /* HCIsDictionaryContainingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingValue.h; sourceTree = "<group>"; };
 		0F3855980D98C4C4006235A6 /* HCIsDictionaryContainingValue.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsDictionaryContainingValue.mm; sourceTree = "<group>"; };
 		0F3855BA0D98CD29006235A6 /* IsDictionaryContainingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsDictionaryContainingTest.m; sourceTree = "<group>"; };
-		0F68C61F1003101A00E3DCBE /* HCIntegerTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIntegerTypes.h; sourceTree = "<group>"; };
 		0FA5A04A10C57983005FB8BB /* NumberAssertTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberAssertTest.m; sourceTree = "<group>"; };
 		0FA5A05010C57BAE005FB8BB /* HCNumberAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNumberAssert.h; sourceTree = "<group>"; };
 		0FA5A05110C57BAE005FB8BB /* HCNumberAssert.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCNumberAssert.mm; sourceTree = "<group>"; };
@@ -583,7 +581,6 @@
 				0FDC10A10F2A429B00DD41AA /* HCCollectMatchers.mm */,
 				0F2FD0650D93428000443CD7 /* NSObject_HCSelfDescribingValue.h */,
 				0F2FD0660D93428000443CD7 /* NSObject_HCSelfDescribingValue.mm */,
-				0F68C61F1003101A00E3DCBE /* HCIntegerTypes.h */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -648,7 +645,6 @@
 				0FA913850DA084DA000AC3AA /* HCRequireNonNilString.h in Headers */,
 				0FA913DD0DA0999E000AC3AA /* OCHamcrest.h in Headers */,
 				0FDC10A20F2A429B00DD41AA /* HCCollectMatchers.h in Headers */,
-				0F68C6201003101A00E3DCBE /* HCIntegerTypes.h in Headers */,
 				0FF1B1E21086DFDA00E615AE /* HCInvocationMatcher.h in Headers */,
 				0F1A544C10C45F44009C870F /* HCIsEqualToNumber.h in Headers */,
 				0FA5A05210C57BAE005FB8BB /* HCNumberAssert.h in Headers */,

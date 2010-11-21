@@ -12,9 +12,6 @@
 #import "HCMatcher.h"
 #import "HCSelfDescribing.h"
 
-    // OCHamcrest internal
-#import "HCIntegerTypes.h"
-
 
 @interface HCBaseDescription(Private)
 - (void) toCSyntaxString:(NSString*)unformatted;
@@ -59,13 +56,7 @@
     BOOL separate = NO;
     
     [self append:start];
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
     for (id item in values)
-#else
-    NSEnumerator* enumerator = [values objectEnumerator];
-    id item;
-    while ((item = [enumerator nextObject]) != nil)
-#endif
     {
         if (separate)
             [self append:separator];

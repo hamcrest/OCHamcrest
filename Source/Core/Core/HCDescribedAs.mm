@@ -11,9 +11,6 @@
     // OCHamcrest
 #import "HCDescription.h"
 
-    // OCHamcrest internal
-#import "HCIntegerTypes.h"
-
     // C++
 #import <cstdarg>
 #import <cctype>
@@ -98,13 +95,7 @@ pair<int, NSString*> separate(NSString* component)
 {
     NSArray* components = [descriptionTemplate componentsSeparatedByString:@"%"];
     bool firstTime = true;
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
     for (NSString* oneComponent in components)
-#else
-    NSEnumerator* enumerator = [components objectEnumerator];
-    NSString* oneComponent;
-    while ((oneComponent = [enumerator nextObject]) != nil)
-#endif
     {
         if (firstTime)
         {

@@ -48,13 +48,7 @@
 
 - (BOOL) matches:(id)item describingMismatchTo:(id<HCDescription>)mismatchDescription
 {
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
     for (id<HCMatcher> oneMatcher in matchers)
-#else
-    NSEnumerator* enumerator = [matchers objectEnumerator];
-    id<HCMatcher> oneMatcher;
-    while ((oneMatcher = [enumerator nextObject]) != nil)
-#endif
     {
         if (![oneMatcher matches:item])
         {

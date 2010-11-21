@@ -339,8 +339,6 @@
 @end
 
 
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
-
 @interface IsEqualToIntegerTest : AbstractMatcherTest
 @end
 
@@ -389,5 +387,3 @@
 }
 
 @end
-
-#endif  // Objective-C 2.0

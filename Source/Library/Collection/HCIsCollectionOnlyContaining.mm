@@ -41,24 +41,13 @@
 
 - (BOOL) matches:(id)collection
 {
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
     if (![collection conformsToProtocol:@protocol(NSFastEnumeration)])
         return NO;
-#else
-    if (![collection respondsToSelector:@selector(objectEnumerator)])
-        return NO;
-#endif
     
     if ([collection count] == 0)
         return NO;
     
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
     for (id item in collection)
-#else
-    NSEnumerator* enumerator = [collection objectEnumerator];
-    id item;
-    while ((item = [enumerator nextObject]) != nil)
-#endif
     {
         if (![matcher matches:item])
             return NO;

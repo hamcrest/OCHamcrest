@@ -79,8 +79,6 @@ id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
 id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
 
 
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
-
 /**
     Is the value, when converted to an NSNumber, equal to another object?
 */
@@ -90,9 +88,6 @@ id<HCMatcher> HC_equalToInteger(NSInteger value);
     Is the value, when converted to an NSNumber, equal to another object?
 */
 id<HCMatcher> HC_equalToUnsignedInteger(NSUInteger value);
-
-#endif  // Objective-C 2.0
-
 
 #ifdef __cplusplus
 }
@@ -166,9 +161,6 @@ id<HCMatcher> HC_equalToUnsignedInteger(NSUInteger value);
 */
 #define equalToUnsignedShort HC_equalToUnsignedShort
 
-
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
-
 /**
     Shorthand for HC_equalToInteger, available if HC_SHORTHAND is defined.
 */
@@ -178,8 +170,5 @@ id<HCMatcher> HC_equalToUnsignedInteger(NSUInteger value);
     Shorthand for HC_equalToUnsignedInteger, available if HC_SHORTHAND is defined.
 */
 #define equalToUnsignedInteger HC_equalToUnsignedInteger
-
-#endif  // Objective-C 2.0
-
 
 #endif  // HC_SHORTHAND

@@ -298,8 +298,6 @@
 }
 
 
-#if defined(OBJC_API_VERSION) && OBJC_API_VERSION >= 2
-
 - (void) testSuccess_withInteger
 {
     assertThatInteger(1, equalTo([NSNumber numberWithInteger:1]));
@@ -340,7 +338,5 @@
     }
     STFail(@"should have failed");
 }
-
-#endif  // Objective-C 2.0
 
 @end
