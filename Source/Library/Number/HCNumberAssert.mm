@@ -14,7 +14,7 @@
 using namespace hamcrest;
 
 
-#define defineNumberAssert(name, type)                                                          \
+#define DEFINE_NUMBER_ASSERT(name, type)                                                        \
     void HC_assertThat ## name ## WithLocation(id testCase, type actual, id<HCMatcher> matcher, \
                                                 const char* fileName, int lineNumber)           \
     {                                                                                           \
@@ -24,20 +24,20 @@ using namespace hamcrest;
 
 extern "C" {
 
-defineNumberAssert(Bool, BOOL)
-defineNumberAssert(Char, char)
-defineNumberAssert(Double, double)
-defineNumberAssert(Float, float)
-defineNumberAssert(Int, int)
-defineNumberAssert(Long, long)
-defineNumberAssert(LongLong, long long)
-defineNumberAssert(Short, short)
-defineNumberAssert(UnsignedChar, unsigned char)
-defineNumberAssert(UnsignedInt, unsigned int)
-defineNumberAssert(UnsignedLong, unsigned long)
-defineNumberAssert(UnsignedLongLong, unsigned long long)
-defineNumberAssert(UnsignedShort, unsigned short)
-defineNumberAssert(Integer, NSInteger)
-defineNumberAssert(UnsignedInteger, NSUInteger)
+DEFINE_NUMBER_ASSERT(Bool, BOOL)
+DEFINE_NUMBER_ASSERT(Char, char)
+DEFINE_NUMBER_ASSERT(Double, double)
+DEFINE_NUMBER_ASSERT(Float, float)
+DEFINE_NUMBER_ASSERT(Int, int)
+DEFINE_NUMBER_ASSERT(Long, long)
+DEFINE_NUMBER_ASSERT(LongLong, long long)
+DEFINE_NUMBER_ASSERT(Short, short)
+DEFINE_NUMBER_ASSERT(UnsignedChar, unsigned char)
+DEFINE_NUMBER_ASSERT(UnsignedInt, unsigned int)
+DEFINE_NUMBER_ASSERT(UnsignedLong, unsigned long)
+DEFINE_NUMBER_ASSERT(UnsignedLongLong, unsigned long long)
+DEFINE_NUMBER_ASSERT(UnsignedShort, unsigned short)
+DEFINE_NUMBER_ASSERT(Integer, NSInteger)
+DEFINE_NUMBER_ASSERT(UnsignedInteger, NSUInteger)
 
 }   // extern "C"

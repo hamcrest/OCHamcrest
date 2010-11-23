@@ -14,7 +14,7 @@
 using namespace hamcrest;
 
 
-#define defineEqualToNumber(name, type)                 \
+#define DEFINE_EQUAL_TO_NUMBER(name, type)              \
     id<HCMatcher> HC_equalTo ## name(type value)        \
     {                                                   \
         return [HCIsEqual isEqualTo:boxNumber(value)];  \
@@ -23,20 +23,20 @@ using namespace hamcrest;
 
 extern "C" {
 
-defineEqualToNumber(Bool, BOOL)
-defineEqualToNumber(Char, char)
-defineEqualToNumber(Double, double)
-defineEqualToNumber(Float, float)
-defineEqualToNumber(Int, int)
-defineEqualToNumber(Long, long)
-defineEqualToNumber(LongLong, long long)
-defineEqualToNumber(Short, short)
-defineEqualToNumber(UnsignedChar, unsigned char)
-defineEqualToNumber(UnsignedInt, unsigned int)
-defineEqualToNumber(UnsignedLong, unsigned long)
-defineEqualToNumber(UnsignedLongLong, unsigned long long)
-defineEqualToNumber(UnsignedShort, unsigned short)
-defineEqualToNumber(Integer, NSInteger)
-defineEqualToNumber(UnsignedInteger, NSUInteger)
+DEFINE_EQUAL_TO_NUMBER(Bool, BOOL)
+DEFINE_EQUAL_TO_NUMBER(Char, char)
+DEFINE_EQUAL_TO_NUMBER(Double, double)
+DEFINE_EQUAL_TO_NUMBER(Float, float)
+DEFINE_EQUAL_TO_NUMBER(Int, int)
+DEFINE_EQUAL_TO_NUMBER(Long, long)
+DEFINE_EQUAL_TO_NUMBER(LongLong, long long)
+DEFINE_EQUAL_TO_NUMBER(Short, short)
+DEFINE_EQUAL_TO_NUMBER(UnsignedChar, unsigned char)
+DEFINE_EQUAL_TO_NUMBER(UnsignedInt, unsigned int)
+DEFINE_EQUAL_TO_NUMBER(UnsignedLong, unsigned long)
+DEFINE_EQUAL_TO_NUMBER(UnsignedLongLong, unsigned long long)
+DEFINE_EQUAL_TO_NUMBER(UnsignedShort, unsigned short)
+DEFINE_EQUAL_TO_NUMBER(Integer, NSInteger)
+DEFINE_EQUAL_TO_NUMBER(UnsignedInteger, NSUInteger)
 
 }   // extern "C"
