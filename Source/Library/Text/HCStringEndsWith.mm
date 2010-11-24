@@ -41,11 +41,7 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_endsWith(NSString* aSubstring)
+OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString* aSubstring)
 {
     return [HCStringEndsWith stringEndsWith:aSubstring];
 }
-
-}   // extern "C"

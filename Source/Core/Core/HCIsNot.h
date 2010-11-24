@@ -23,10 +23,6 @@
 @end
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
     Inverts the rule, providing a shortcut to the frequently used isNot(equalTo(x)).
 
@@ -38,19 +34,12 @@ assertThat(cheese, isNot(equalTo(smelly)))
 @code
 assertThat(cheese, isNot(smelly))
 @endcode
-*/
-id<HCMatcher> HC_isNot(id item);
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+ */
+OBJC_EXPORT id<HCMatcher> HC_isNot(id item);
 
 /**
     Shorthand for HC_isNot, available if HC_SHORTHAND is defined.
-*/
-#define isNot HC_isNot
-
+ */
+#ifdef HC_SHORTHAND
+    #define isNot HC_isNot
 #endif

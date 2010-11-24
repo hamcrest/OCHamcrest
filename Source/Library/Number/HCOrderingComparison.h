@@ -11,70 +11,68 @@
 
 @interface HCOrderingComparison : HCBaseMatcher
 {
-    id value;
+    id expected;
     NSComparisonResult minCompare;
     NSComparisonResult maxCompare;
 }
 
-+ (HCOrderingComparison*) compare:(id)aValue
++ (HCOrderingComparison*) compare:(id)expectedValue
                        minCompare:(NSComparisonResult)min
                        maxCompare:(NSComparisonResult)max;
-- (id) initComparing:(id)aValue
+- (id) initComparing:(id)expectedValue
           minCompare:(NSComparisonResult)min
           maxCompare:(NSComparisonResult)max;
 
 @end
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
     Is value > expected?
-*/
-id<HCMatcher> HC_greaterThan(id aValue);
+ */
+OBJC_EXPORT id<HCMatcher> HC_greaterThan(id expected);
+
+/**
+    Shorthand for HC_greaterThan, available if HC_SHORTHAND is defined.
+ */
+#ifdef HC_SHORTHAND
+    #define greaterThan HC_greaterThan
+#endif
+
 
 /**
     Is value >= expected?
-*/
-id<HCMatcher> HC_greaterThanOrEqualTo(id aValue);
+ */
+OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id expected);
 
 /**
-    Is value < expected?
-*/
-id<HCMatcher> HC_lessThan(id aValue);
-
-/**
-    Is value <= expected?
-*/
-id<HCMatcher> HC_lessThanOrEqualTo(id aValue);
-
-#ifdef __cplusplus
-}
+    Shorthand for HC_greaterThan, available if HC_SHORTHAND is defined.
+ */
+#ifdef HC_SHORTHAND
+    #define greaterThanOrEqualTo HC_greaterThanOrEqualTo
 #endif
 
 
+/**
+    Is value < expected?
+ */
+OBJC_EXPORT id<HCMatcher> HC_lessThan(id expected);
+
+/**
+    Shorthand for HC_greaterThan, available if HC_SHORTHAND is defined.
+ */
 #ifdef HC_SHORTHAND
+    #define lessThan HC_lessThan
+#endif
+
 
 /**
-    Shorthand for HC_greaterThan, available if HC_SHORTHAND is defined.
-*/
-#define greaterThan HC_greaterThan
-
-/**
-    Shorthand for HC_greaterThan, available if HC_SHORTHAND is defined.
-*/
-#define greaterThanOrEqualTo HC_greaterThanOrEqualTo
-
-/**
-    Shorthand for HC_greaterThan, available if HC_SHORTHAND is defined.
-*/
-#define lessThan HC_lessThan
+    Is value <= expected?
+ */
+OBJC_EXPORT id<HCMatcher> HC_lessThanOrEqualTo(id expected);
 
 /**
     Shorthand for HC_lessThanOrEqualTo, available if HC_SHORTHAND is defined.
-*/
-#define lessThanOrEqualTo HC_lessThanOrEqualTo
-
+ */
+#ifdef HC_SHORTHAND
+    #define lessThanOrEqualTo HC_lessThanOrEqualTo
 #endif

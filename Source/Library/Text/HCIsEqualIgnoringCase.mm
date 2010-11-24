@@ -60,11 +60,7 @@ using namespace hamcrest;
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_equalToIgnoringCase(NSString* aString)
+OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString* aString)
 {
     return [HCIsEqualIgnoringCase isEqualIgnoringCase:aString];
 }
-
-}   // extern "C"

@@ -5,7 +5,6 @@
 //  Created by: Jon Reid
 //
 
-    // Mac
 #import <Foundation/Foundation.h>
 
 

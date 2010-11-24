@@ -9,6 +9,9 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+/**
+    Is the object contained in the collection?
+ */
 @interface HCIsIn : HCBaseMatcher
 {
     id collection;
@@ -20,22 +23,14 @@
 @end
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-id<HCMatcher> HC_isIn(id collection);
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+/**
+    Is the object contained in the given collection?
+ */
+OBJC_EXPORT id<HCMatcher> HC_isIn(id collection);
 
 /**
     Shorthand for HC_isIn, available if HC_SHORTHAND is defined.
-*/
-#define isIn HC_isIn
-
+ */
+#ifdef HC_SHORTHAND
+    #define isIn HC_isIn
 #endif

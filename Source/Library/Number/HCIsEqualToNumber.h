@@ -9,166 +9,195 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToBool(BOOL value);
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToChar(char value);
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToDouble(double value);
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToFloat(float value);
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToInt(int value);
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToLong(long value);
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToLongLong(long long value);
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToShort(short value);
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToUnsignedChar(unsigned char value);
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToUnsignedInt(unsigned int value);
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToUnsignedLong(unsigned long value);
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
-
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToInteger(NSInteger value);
-
-/**
-    Is the value, when converted to an NSNumber, equal to another object?
-*/
-id<HCMatcher> HC_equalToUnsignedInteger(NSUInteger value);
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+    Is the BOOL value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value);
 
 /**
     Shorthand for HC_equalToBool, available if HC_SHORTHAND is defined.
-*/
-#define equalToBool HC_equalToBool
+ */
+#ifdef HC_SHORTHAND
+    #define equalToBool HC_equalToBool
+#endif
+
+
+/**
+    Is the char value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToChar(char value);
 
 /**
     Shorthand for HC_equalToChar, available if HC_SHORTHAND is defined.
-*/
-#define equalToChar HC_equalToChar
+ */
+#ifdef HC_SHORTHAND
+    #define equalToChar HC_equalToChar
+#endif
+
+
+/**
+    Is the double value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToDouble(double value);
 
 /**
     Shorthand for HC_equalToDouble, available if HC_SHORTHAND is defined.
-*/
-#define equalToDouble HC_equalToDouble
+ */
+#ifdef HC_SHORTHAND
+    #define equalToDouble HC_equalToDouble
+#endif
+
+/**
+    Is the float value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToFloat(float value);
 
 /**
     Shorthand for HC_equalToFloat, available if HC_SHORTHAND is defined.
-*/
-#define equalToFloat HC_equalToFloat
+ */
+#ifdef HC_SHORTHAND
+    #define equalToFloat HC_equalToFloat
+#endif
+
+
+/**
+    Is the int value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToInt(int value);
 
 /**
     Shorthand for HC_equalToInt, available if HC_SHORTHAND is defined.
-*/
-#define equalToInt HC_equalToInt
+ */
+#ifdef HC_SHORTHAND
+    #define equalToInt HC_equalToInt
+#endif
+
+
+/**
+    Is the long value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToLong(long value);
 
 /**
     Shorthand for HC_equalToLong, available if HC_SHORTHAND is defined.
-*/
-#define equalToLong HC_equalToLong
+ */
+#ifdef HC_SHORTHAND
+    #define equalToLong HC_equalToLong
+#endif
+
+
+/**
+    Is the long long value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToLongLong(long long value);
 
 /**
     Shorthand for HC_equalToLongLong, available if HC_SHORTHAND is defined.
-*/
-#define equalToLongLong HC_equalToLongLong
+ */
+#ifdef HC_SHORTHAND
+    #define equalToLongLong HC_equalToLongLong
+#endif
+
+
+/**
+    Is the short value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToShort(short value);
 
 /**
     Shorthand for HC_equalToShort, available if HC_SHORTHAND is defined.
-*/
-#define equalToShort HC_equalToShort
+ */
+#ifdef HC_SHORTHAND
+    #define equalToShort HC_equalToShort
+#endif
+
+
+/**
+    Is the unsigned char value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedChar(unsigned char value);
 
 /**
     Shorthand for HC_equalToUnsignedChar, available if HC_SHORTHAND is defined.
-*/
-#define equalToUnsignedChar HC_equalToUnsignedChar
+ */
+#ifdef HC_SHORTHAND
+    #define equalToUnsignedChar HC_equalToUnsignedChar
+#endif
+
+
+/**
+    Is the unsigned int value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInt(unsigned int value);
 
 /**
     Shorthand for HC_equalToUnsignedInt, available if HC_SHORTHAND is defined.
-*/
-#define equalToUnsignedInt HC_equalToUnsignedInt
+ */
+#ifdef HC_SHORTHAND
+    #define equalToUnsignedInt HC_equalToUnsignedInt
+#endif
+
+
+/**
+    Is the unsigned long value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLong(unsigned long value);
 
 /**
     Shorthand for HC_equalToUnsignedLong, available if HC_SHORTHAND is defined.
-*/
-#define equalToUnsignedLong HC_equalToUnsignedLong
+ */
+#ifdef HC_SHORTHAND
+    #define equalToUnsignedLong HC_equalToUnsignedLong
+#endif
+
+
+/**
+    Is the unsigned long long value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
 
 /**
     Shorthand for HC_equalToUnsignedLongLong, available if HC_SHORTHAND is defined.
-*/
-#define equalToUnsignedLongLong HC_equalToUnsignedLongLong
+ */
+#ifdef HC_SHORTHAND
+    #define equalToUnsignedLongLong HC_equalToUnsignedLongLong
+#endif
+
+
+/**
+    Is the unsigned short value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
 
 /**
     Shorthand for HC_equalToUnsignedShort, available if HC_SHORTHAND is defined.
-*/
-#define equalToUnsignedShort HC_equalToUnsignedShort
+ */
+#ifdef HC_SHORTHAND
+    #define equalToUnsignedShort HC_equalToUnsignedShort
+#endif
+
+
+/**
+    Is the NSInteger value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToInteger(NSInteger value);
 
 /**
     Shorthand for HC_equalToInteger, available if HC_SHORTHAND is defined.
-*/
-#define equalToInteger HC_equalToInteger
+ */
+#ifdef HC_SHORTHAND
+    #define equalToInteger HC_equalToInteger
+#endif
+
+
+/**
+    Is the NSUInteger value, converted to an NSNumber, equal to another object?
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInteger(NSUInteger value);
 
 /**
     Shorthand for HC_equalToUnsignedInteger, available if HC_SHORTHAND is defined.
-*/
-#define equalToUnsignedInteger HC_equalToUnsignedInteger
-
-#endif  // HC_SHORTHAND
+ */
+#ifdef HC_SHORTHAND
+    #define equalToUnsignedInteger HC_equalToUnsignedInteger
+#endif

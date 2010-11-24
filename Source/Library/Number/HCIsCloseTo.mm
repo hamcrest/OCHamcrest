@@ -56,11 +56,7 @@ using namespace std;
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_closeTo(double aValue, double anError)
+OBJC_EXPORT id<HCMatcher> HC_closeTo(double aValue, double anError)
 {
     return [HCIsCloseTo isCloseTo:aValue within:anError];
 }
-
-}   // extern "C"

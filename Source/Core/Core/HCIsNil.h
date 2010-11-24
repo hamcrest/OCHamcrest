@@ -21,35 +21,27 @@
 @end
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
     Matches if the value is @c nil.
-*/
-id<HCMatcher> HC_nilValue();
-
-/**
-    Matches if the value is not @c nil.
-*/
-id<HCMatcher> HC_notNilValue();
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+ */
+OBJC_EXPORT id<HCMatcher> HC_nilValue();
 
 /**
     Shorthand for HC_nilValue, available if HC_SHORTHAND is defined.
-*/
-#define nilValue HC_nilValue
+ */
+#ifdef HC_SHORTHAND
+    #define nilValue HC_nilValue
+#endif
+
+
+/**
+    Matches if the value is not @c nil.
+ */
+OBJC_EXPORT id<HCMatcher> HC_notNilValue();
 
 /**
     Shorthand for HC_notNilValue, available if HC_SHORTHAND is defined.
-*/
-#define notNilValue HC_notNilValue
-
+ */
+#ifdef HC_SHORTHAND
+    #define notNilValue HC_notNilValue
 #endif

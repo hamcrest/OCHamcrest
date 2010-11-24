@@ -5,20 +5,14 @@
 //  Created by: Jon Reid
 //
 
+#import <objc/objc-api.h>
+
 @protocol HCMatcher;
 
-
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 /**
     Returns @a item wrapped (if necessary) in an HCIsEqual matcher.
     
     @a item is returned as-is if it is already an HCMatcher.
-*/
-id<HCMatcher> HC_wrapInMatcher(id item);
-
-#ifdef __cplusplus
-}
-#endif
+ */
+OBJC_EXPORT id<HCMatcher> HC_wrapInMatcher(id item);

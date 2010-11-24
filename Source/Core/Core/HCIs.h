@@ -21,7 +21,7 @@ assertThat(cheese, equalTo(smelly))
 @code
 assertThat(cheese, is(equalTo(smelly)))
 @endcode
-*/
+ */
 @interface HCIs : HCBaseMatcher
 {
     id<HCMatcher> matcher;
@@ -32,10 +32,6 @@ assertThat(cheese, is(equalTo(smelly)))
 
 @end
 
-
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 /**
     Decorates an item, providing shortcuts to the frequently used is(equalTo(x)).
@@ -48,19 +44,12 @@ assertThat(cheese, is(equalTo(smelly)))
 @code
 assertThat(cheese, is(smelly))
 @endcode
-*/
-id<HCMatcher> HC_is(id item);
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+ */
+OBJC_EXPORT id<HCMatcher> HC_is(id item);
 
 /**
     Shorthand for HC_is, available if HC_SHORTHAND is defined.
-*/
-#define is HC_is
-
+ */
+#ifdef HC_SHORTHAND
+    #define is HC_is
 #endif

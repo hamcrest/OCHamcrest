@@ -119,9 +119,7 @@ pair<int, NSString*> separate(NSString* component)
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_describedAs(NSString* description, id<HCMatcher> matcher, ...)
+OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString* description, id<HCMatcher> matcher, ...)
 {
     NSMutableArray* valueList = [NSMutableArray array];
     
@@ -137,5 +135,3 @@ id<HCMatcher> HC_describedAs(NSString* description, id<HCMatcher> matcher, ...)
     
     return [HCDescribedAs describedAs:description forMatcher:matcher overValues:valueList];
 }
-
-}   // extern "C"

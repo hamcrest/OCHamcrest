@@ -23,7 +23,8 @@
 }
 
 
-- (id) initWithKeyMatcher:(id<HCMatcher>)theKeyMatcher valueMatcher:(id<HCMatcher>)theValueMatcher;
+- (id) initWithKeyMatcher:(id<HCMatcher>)theKeyMatcher
+             valueMatcher:(id<HCMatcher>)theValueMatcher;
 {
     self = [super init];
     if (self != nil)
@@ -70,12 +71,8 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_hasEntry(id key, id value)
+OBJC_EXPORT id<HCMatcher> HC_hasEntry(id key, id value)
 {
     return [HCIsDictionaryContaining isDictionaryContainingKey:HC_wrapInMatcher(key)
                                                          value:HC_wrapInMatcher(value)];
 }
-
-}   // extern "C"

@@ -13,14 +13,10 @@
 #import "HCIsEqual.h"
 
 
-extern "C" {
-
-id<HCMatcher> HC_wrapInMatcher(id item)
+OBJC_EXPORT id<HCMatcher> HC_wrapInMatcher(id item)
 {
     if ([item conformsToProtocol:@protocol(HCMatcher)])
         return item;
     else
         return equalTo(item);
 }
-
-}   // extern "C"

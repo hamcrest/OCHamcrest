@@ -65,9 +65,7 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_onlyContains(id item, ...)
+OBJC_EXPORT id<HCMatcher> HC_onlyContains(id item, ...)
 {
     NSMutableArray* matcherList = [NSMutableArray arrayWithObject:HC_wrapInMatcher(item)];
     
@@ -83,5 +81,3 @@ id<HCMatcher> HC_onlyContains(id item, ...)
     
     return [HCIsCollectionOnlyContaining isCollectionOnlyContaining:[HCAnyOf anyOf:matcherList]];
 }
-
-}   // extern "C"

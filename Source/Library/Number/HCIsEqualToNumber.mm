@@ -14,14 +14,11 @@
 using namespace hamcrest;
 
 
-#define DEFINE_EQUAL_TO_NUMBER(name, type)              \
-    id<HCMatcher> HC_equalTo ## name(type value)        \
-    {                                                   \
-        return [HCIsEqual isEqualTo:boxNumber(value)];  \
+#define DEFINE_EQUAL_TO_NUMBER(name, type)                      \
+    OBJC_EXPORT id<HCMatcher> HC_equalTo ## name(type value)    \
+    {                                                           \
+        return [HCIsEqual isEqualTo:boxNumber(value)];          \
     }
-
-
-extern "C" {
 
 DEFINE_EQUAL_TO_NUMBER(Bool, BOOL)
 DEFINE_EQUAL_TO_NUMBER(Char, char)
@@ -38,5 +35,3 @@ DEFINE_EQUAL_TO_NUMBER(UnsignedLongLong, unsigned long long)
 DEFINE_EQUAL_TO_NUMBER(UnsignedShort, unsigned short)
 DEFINE_EQUAL_TO_NUMBER(Integer, NSInteger)
 DEFINE_EQUAL_TO_NUMBER(UnsignedInteger, NSUInteger)
-
-}   // extern "C"

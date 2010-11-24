@@ -393,6 +393,7 @@
 			);
 			path = Core;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		0F2A4AB70D8B493600051BCF /* Core */ = {
 			isa = PBXGroup;
@@ -437,6 +438,7 @@
 			);
 			path = "Unit Tests";
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		0F2A4B2D0D8B69E100051BCF /* Core */ = {
 			isa = PBXGroup;
@@ -465,6 +467,7 @@
 			);
 			path = Library;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		0F2A4B6C0D8C33C000051BCF /* Object */ = {
 			isa = PBXGroup;
@@ -600,6 +603,7 @@
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 /* End PBXGroup section */
 

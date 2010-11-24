@@ -54,11 +54,7 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_equalTo(id equalArg)
+OBJC_EXPORT id<HCMatcher> HC_equalTo(id equalArg)
 {
     return [HCIsEqual isEqualTo:equalArg];
 }
-
-}   // extern "C"

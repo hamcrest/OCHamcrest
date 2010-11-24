@@ -17,7 +17,7 @@
     HCMatcher implementations should @b not directly implement this protocol.
     Instead, @b extend the HCBaseMatcher class, which will ensure that the HCMatcher API can grow
     to support new features and remain compatible with all HCMatcher implementations.
-*/
+ */
 @protocol HCMatcher <HCSelfDescribing>
 
 /**
@@ -25,7 +25,7 @@
 
     @param item The object against which the matcher is evaluated.
     @return @c YES if @a item matches, otherwise @c NO.
-*/
+ */
 - (BOOL) matches:(id)item;
 
 /**
@@ -34,7 +34,7 @@
     @param item The object against which the matcher is evaluated.
     @param mismatchDescription The description to be built or appended to if @item does not match.
     @return @c YES if @a item matches, otherwise @c NO.
-*/
+ */
 - (BOOL) matches:(id)item describingMismatchTo:(id<HCDescription>)mismatchDescription;
 
 /**
@@ -46,7 +46,7 @@
     
     @param item The item that the HCMatcher has rejected.
     @param mismatchDescription The description to be built or appended to.
-*/
+ */
 - (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription;
 
 @end

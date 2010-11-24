@@ -11,7 +11,7 @@
 
 /**
     Tests if the argument is a string that ends with a substring.
-*/
+ */
 @interface HCStringEndsWith : HCSubstringMatcher
 {
 }
@@ -21,22 +21,14 @@
 @end
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-id<HCMatcher> HC_endsWith(NSString* aSubstring);
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+/**
+    Tests if the argument is a string that ends with a substring.
+ */
+OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString* aSubstring);
 
 /**
     Shorthand for HC_endsWith, available if HC_SHORTHAND is defined.
-*/
-#define endsWith HC_endsWith
-
+ */
+#ifdef HC_SHORTHAND
+    #define endsWith HC_endsWith
 #endif

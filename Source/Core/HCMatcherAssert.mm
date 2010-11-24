@@ -13,10 +13,10 @@
 #import "HCMatcher.h"
 
     // Objective-C
-#if (TARGET_OS_IPHONE)
-#import <objc/runtime.h>
+#if TARGET_OS_IPHONE
+    #import <objc/runtime.h>
 #else
-#import <objc/objc-class.h>
+    #import <objc/objc-class.h>
 #endif
 
 
@@ -32,7 +32,7 @@ namespace {
            withDescription: description]
 @endcode
     except we use an NSInvocation so that OCUnit (SenTestingKit) does not have to be linked.
-*/
+ */
 NSException* createOCUnitException(const char* fileName, int lineNumber, NSString* description)
 {
     NSException* result = nil;
@@ -81,10 +81,8 @@ NSException* createAssertThatFailure(const char* fileName, int lineNumber, NSStr
 @end
 
 
-extern "C" {
-
-void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
-                               const char* fileName, int lineNumber)
+OBJC_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
+                                           const char* fileName, int lineNumber)
 {
     if (![matcher matches:actual])
     {
@@ -97,5 +95,3 @@ void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
         [testCase failWithException:assertThatFailure];
     }
 }
-
-}   // extern "C"

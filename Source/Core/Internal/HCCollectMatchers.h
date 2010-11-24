@@ -5,8 +5,8 @@
 //  Created by: Jon Reid
 //
 
-    // Mac
 #import <Foundation/Foundation.h>
+#import <objc/objc-api.h>
 
     // C
 #import <stdarg.h>
@@ -14,15 +14,7 @@
 @protocol HCMatcher;
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
     Returns an array of matchers from a variable-length comma-separated list terminated by @c nil.
 */
-NSMutableArray* HC_collectMatchers(id<HCMatcher> matcher, va_list args);
-
-#ifdef __cplusplus
-}
-#endif
+OBJC_EXPORT NSMutableArray* HC_collectMatchers(id<HCMatcher> matcher, va_list args);

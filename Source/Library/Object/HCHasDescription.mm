@@ -33,11 +33,7 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_hasDescription(id item)
+OBJC_EXPORT id<HCMatcher> HC_hasDescription(id expectedDescription)
 {
-    return [HCHasDescription hasDescription:HC_wrapInMatcher(item)];
+    return [HCHasDescription hasDescription:HC_wrapInMatcher(expectedDescription)];
 }
-
-}   // extern "C"

@@ -11,7 +11,7 @@
 
 /**
     Is the object equal to another object, as tested by the isEqual: method?
-*/
+ */
 @interface HCIsEqual : HCBaseMatcher
 {
     id object;
@@ -23,25 +23,14 @@
 @end
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
     Is the object equal to another object, as tested by the isEqual: method?
-*/
-id<HCMatcher> HC_equalTo(id equalArg);
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalTo(id equalArg);
 
 /**
     Shorthand for HC_equalTo, available if HC_SHORTHAND is defined.
-*/
-#define equalTo HC_equalTo
-
+ */
+#ifdef HC_SHORTHAND
+    #define equalTo HC_equalTo
 #endif

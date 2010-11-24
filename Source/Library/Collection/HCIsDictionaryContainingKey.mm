@@ -61,11 +61,7 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_hasKey(id item)
+OBJC_EXPORT id<HCMatcher> HC_hasKey(id item)
 {
     return [HCIsDictionaryContainingKey isDictionaryContainingKey:HC_wrapInMatcher(item)];
 }
-
-}   // extern "C"

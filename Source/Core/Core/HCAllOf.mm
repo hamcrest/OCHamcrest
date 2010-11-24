@@ -75,9 +75,7 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_allOf(id<HCMatcher> matcher, ...)
+OBJC_EXPORT id<HCMatcher> HC_allOf(id<HCMatcher> matcher, ...)
 {
     va_list args;
     va_start(args, matcher);
@@ -86,5 +84,3 @@ id<HCMatcher> HC_allOf(id<HCMatcher> matcher, ...)
     
     return [HCAllOf allOf:matcherList];
 }
-
-}   // extern "C"

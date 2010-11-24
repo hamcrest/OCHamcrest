@@ -24,22 +24,14 @@
 @end
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString* aString);
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+/**
+    Tests if a string is equal to another string, ignoring any changes in whitespace.
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString* aString);
 
 /**
     Shorthand for HC_endsWith, available if HC_SHORTHAND is defined.
-*/
-#define equalToIgnoringWhiteSpace HC_equalToIgnoringWhiteSpace
-
+ */
+#ifdef HC_SHORTHAND
+    #define equalToIgnoringWhiteSpace HC_equalToIgnoringWhiteSpace
 #endif

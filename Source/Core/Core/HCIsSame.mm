@@ -60,11 +60,7 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_sameInstance(id anObject)
+OBJC_EXPORT id<HCMatcher> HC_sameInstance(id anObject)
 {
     return [HCIsSame isSameAs:anObject];
 }
-
-}   // extern "C"

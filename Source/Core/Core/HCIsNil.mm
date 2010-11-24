@@ -35,17 +35,13 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_nilValue()
+OBJC_EXPORT id<HCMatcher> HC_nilValue()
 {
     return [HCIsNil isNil];
 }
 
 
-id<HCMatcher> HC_notNilValue()
+OBJC_EXPORT id<HCMatcher> HC_notNilValue()
 {
     return HC_isNot([HCIsNil isNil]);
 }
-
-}   // extern "C"

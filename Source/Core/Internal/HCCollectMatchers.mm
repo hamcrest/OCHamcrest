@@ -9,9 +9,7 @@
 #import "HCCollectMatchers.h"
 
 
-extern "C" {
-
-NSMutableArray* HC_collectMatchers(id<HCMatcher> matcher, va_list args)
+OBJC_EXPORT NSMutableArray* HC_collectMatchers(id<HCMatcher> matcher, va_list args)
 {
     NSMutableArray* matcherList = [NSMutableArray arrayWithObject:matcher];
     
@@ -24,5 +22,3 @@ NSMutableArray* HC_collectMatchers(id<HCMatcher> matcher, va_list args)
     
     return matcherList;
 }
-
-}   // extern "C"

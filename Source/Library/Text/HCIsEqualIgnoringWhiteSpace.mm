@@ -110,11 +110,7 @@ NSMutableString* stripSpace(NSString* string)
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString* aString)
+OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString* aString)
 {
     return [HCIsEqualIgnoringWhiteSpace isEqualIgnoringWhiteSpace:aString];
 }
-
-}   // extern "C"

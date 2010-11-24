@@ -14,7 +14,7 @@
     
     Evaluation is shortcut, so the subsequent matchers are not called if an earlier matcher returns
     @c YES.
-*/
+ */
 @interface HCAnyOf : HCBaseMatcher
 {
     NSArray* matchers;
@@ -26,27 +26,16 @@
 @end
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
     Evaluates to @c YES if @b any of the passed in matchers evaluate to @c YES.
     
     @param matcher Comma-separated list of matchers ending with @c nil.
-*/
-id<HCMatcher> HC_anyOf(id<HCMatcher> matcher, ...);
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+ */
+OBJC_EXPORT id<HCMatcher> HC_anyOf(id<HCMatcher> matcher, ...);
 
 /**
     Shorthand for HC_anyOf, available if HC_SHORTHAND is defined.
-*/
-#define anyOf HC_anyOf
-
+ */
+#ifdef HC_SHORTHAND
+    #define anyOf HC_anyOf
 #endif

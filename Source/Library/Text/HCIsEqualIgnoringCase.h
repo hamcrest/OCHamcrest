@@ -11,7 +11,7 @@
 
 /**
     Tests if a string is equal to another string, regardless of the case.
-*/
+ */
 @interface HCIsEqualIgnoringCase : HCBaseMatcher
 {
     NSString* string;
@@ -23,22 +23,14 @@
 @end
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-id<HCMatcher> HC_equalToIgnoringCase(NSString* aString);
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+/**
+    Tests if a string is equal to another string, regardless of the case.
+ */
+OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString* aString);
 
 /**
     Shorthand for HC_endsWith, available if HC_SHORTHAND is defined.
-*/
-#define equalToIgnoringCase HC_equalToIgnoringCase
-
+ */
+#ifdef HC_SHORTHAND
+    #define equalToIgnoringCase HC_equalToIgnoringCase
 #endif

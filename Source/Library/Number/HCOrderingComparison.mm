@@ -29,20 +29,20 @@ NSString* comparison(NSComparisonResult compare)
 
 @implementation HCOrderingComparison
 
-+ (HCOrderingComparison*) compare:(id)aValue
++ (HCOrderingComparison*) compare:(id)expectedValue
                        minCompare:(NSComparisonResult)min
                        maxCompare:(NSComparisonResult)max
 {
-    return [[[HCOrderingComparison alloc] initComparing:aValue minCompare:min maxCompare:max]
+    return [[[HCOrderingComparison alloc] initComparing:expectedValue minCompare:min maxCompare:max]
             autorelease];
 }
 
 
-- (id) initComparing:(id)aValue
+- (id) initComparing:(id)expectedValue
           minCompare:(NSComparisonResult)min
           maxCompare:(NSComparisonResult)max
 {
-    if (![aValue respondsToSelector:@selector(compare:)])
+    if (![expectedValue respondsToSelector:@selector(compare:)])
     {
         @throw [NSException exceptionWithName: @"UncomparableObject"
                                        reason: @"Object must respond to compare:"
@@ -52,7 +52,7 @@ NSString* comparison(NSComparisonResult compare)
     self = [super init];
     if (self != nil)
     {
-        value = [aValue retain];
+        expected = [expectedValue retain];
         minCompare = min;
         maxCompare = max;
     }
@@ -62,7 +62,7 @@ NSString* comparison(NSComparisonResult compare)
 
 - (void) dealloc
 {
-    [value release];
+    [expected release];
     
     [super dealloc];
 }
@@ -73,7 +73,7 @@ NSString* comparison(NSComparisonResult compare)
     if (item == nil)
         return NO;
     
-    NSComparisonResult compare = [value compare:item];
+    NSComparisonResult compare = [expected compare:item];
     return minCompare <= compare && compare <= maxCompare;
 }
 
@@ -83,40 +83,36 @@ NSString* comparison(NSComparisonResult compare)
     [[description appendText:@"a value "] appendText:comparison(minCompare)];
     if (minCompare != maxCompare)
         [[description appendText:@" or "] appendText:comparison(maxCompare)];
-    [[description appendText:@" "] appendValue:value];
+    [[description appendText:@" "] appendValue:expected];
 }
 
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_greaterThan(id aValue)
+OBJC_EXPORT id<HCMatcher> HC_greaterThan(id aValue)
 {
     return [HCOrderingComparison compare: aValue
                               minCompare: NSOrderedAscending
                               maxCompare: NSOrderedAscending];
 }
 
-id<HCMatcher> HC_greaterThanOrEqualTo(id aValue)
+OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id aValue)
 {
     return [HCOrderingComparison compare: aValue
                               minCompare: NSOrderedAscending
                               maxCompare: NSOrderedSame];
 }
 
-id<HCMatcher> HC_lessThan(id aValue)
+OBJC_EXPORT id<HCMatcher> HC_lessThan(id aValue)
 {
     return [HCOrderingComparison compare: aValue
                               minCompare: NSOrderedDescending
                               maxCompare: NSOrderedDescending];
 }
 
-id<HCMatcher> HC_lessThanOrEqualTo(id aValue)
+OBJC_EXPORT id<HCMatcher> HC_lessThanOrEqualTo(id aValue)
 {
     return [HCOrderingComparison compare: aValue
                               minCompare: NSOrderedSame
                               maxCompare: NSOrderedDescending];
 }
-
-}   // extern "C"

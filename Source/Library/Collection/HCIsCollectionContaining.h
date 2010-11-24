@@ -9,6 +9,9 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+/**
+    Matches a collection if any element satisfies a given matcher.
+ */
 @interface HCIsCollectionContaining : HCBaseMatcher
 {
     id<HCMatcher> elementMatcher;
@@ -20,32 +23,31 @@
 @end
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-id<HCMatcher> HC_hasItem(id item);
-
 /**
-    @param item comma-separated list of items ending with nil.
-*/
-id<HCMatcher> HC_hasItems(id item, ...);
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+    Matches a collection if any element satifies a given matcher.
+ 
+    @a item is a matcher, or an implied HCIsEqual matcher will wrap the item.
+ */
+OBJC_EXPORT id<HCMatcher> HC_hasItem(id item);
 
 /**
     Shorthand for HC_hasItem, available if HC_SHORTHAND is defined.
-*/
-#define hasItem HC_hasItem
+ */
+#ifdef HC_SHORTHAND
+    #define hasItem HC_hasItem
+#endif
+
+
+/**
+    Matches a collection if all matchers are satisfied by any of the elements.
+ 
+    @param item comma-separated list of matchers (or implied HCIsEqual wrapping items) ending with nil.
+ */
+OBJC_EXPORT id<HCMatcher> HC_hasItems(id item, ...);
 
 /**
     Shorthand for HC_hasItems, available if HC_SHORTHAND is defined.
-*/
-#define hasItems HC_hasItems
-
+ */
+#ifdef HC_SHORTHAND
+    #define hasItems HC_hasItems
 #endif

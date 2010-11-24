@@ -11,7 +11,7 @@
 
 /**
     Tests if the argument is a string that starts with a substring.
-*/
+ */
 @interface HCStringStartsWith : HCSubstringMatcher
 {
 }
@@ -21,22 +21,14 @@
 @end
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-id<HCMatcher> HC_startsWith(NSString* aSubstring);
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+/**
+    Tests if the argument is a string that starts with a substring.
+ */
+OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString* aSubstring);
 
 /**
     Shorthand for HC_startsWith, available if HC_SHORTHAND is defined.
-*/
-#define startsWith HC_startsWith
-
+ */
+#ifdef HC_SHORTHAND
+    #define startsWith HC_startsWith
 #endif

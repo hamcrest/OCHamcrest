@@ -44,11 +44,7 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_instanceOf(Class type)
+OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class type)
 {
     return [HCIsInstanceOf isInstanceOf:type];
 }
-
-}   // extern "C"

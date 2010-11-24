@@ -41,11 +41,7 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_containsString(NSString* aSubstring)
+OBJC_EXPORT id<HCMatcher> HC_containsString(NSString* aSubstring)
 {
     return [HCStringContains stringContains:aSubstring];
 }
-
-}   // extern "C"

@@ -9,6 +9,9 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+/**
+    Matches dictionaries containing a key-value pair satisfying a pair of matchers.
+ */
 @interface HCIsDictionaryContaining : HCBaseMatcher
 {
     id<HCMatcher> keyMatcher;
@@ -17,27 +20,23 @@
 
 + (HCIsDictionaryContaining*) isDictionaryContainingKey:(id<HCMatcher>)theKeyMatcher
                                                   value:(id<HCMatcher>)theValueMatcher;
-- (id) initWithKeyMatcher:(id<HCMatcher>)theKeyMatcher valueMatcher:(id<HCMatcher>)theValueMatcher;
+- (id) initWithKeyMatcher:(id<HCMatcher>)theKeyMatcher
+             valueMatcher:(id<HCMatcher>)theValueMatcher;
 
 @end
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-id<HCMatcher> HC_hasEntry(id key, id value);
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+/**
+    Matches dictionaries containing a key-value pair satisfying a pair of matchers.
+ 
+    @a key is a matcher, or an implied HCIsEqual matcher will wrap the key.
+    @a value is a matcher, or an implied HCIsEqual matcher will wrap the key.
+ */
+OBJC_EXPORT id<HCMatcher> HC_hasEntry(id key, id value);
 
 /**
     Shorthand for HC_hasEntry, available if HC_SHORTHAND is defined.
-*/
-#define hasEntry HC_hasEntry
-
+ */
+#ifdef HC_SHORTHAND
+    #define hasEntry HC_hasEntry
 #endif

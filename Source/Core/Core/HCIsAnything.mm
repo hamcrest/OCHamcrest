@@ -64,17 +64,13 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_anything()
+OBJC_EXPORT id<HCMatcher> HC_anything()
 {
     return [HCIsAnything isAnything];
 }
 
 
-id<HCMatcher> HC_anythingWithDescription(NSString* description)
+OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString* description)
 {
     return [HCIsAnything isAnythingWithDescription:description];
 }
-
-}   // extern "C"

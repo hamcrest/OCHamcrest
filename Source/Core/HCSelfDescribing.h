@@ -13,7 +13,7 @@
 
 /**
     The ability of an object to describe itself.
-*/
+ */
 @protocol HCSelfDescribing <NSObject>
 
 /**
@@ -23,7 +23,7 @@
     component, so it should be worded appropriately.
     
     @param description The description to be built or appended to.
-*/
+ */
 - (void) describeTo:(id<HCDescription>)description;
 
 @end

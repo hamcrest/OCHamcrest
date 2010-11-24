@@ -11,7 +11,7 @@ namespace hamcrest {
 
 /**
     Boxes scalar value in NSNumber, specialized per type.
-*/
+ */
 template <typename T>
 inline
 NSNumber* boxNumber(T value)

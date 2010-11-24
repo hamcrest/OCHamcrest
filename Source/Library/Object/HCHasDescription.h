@@ -11,7 +11,7 @@
 
 /**
     Does the object's description satisfy a given matcher?
-*/
+ */
 @interface HCHasDescription : HCInvocationMatcher
 {
 }
@@ -22,27 +22,16 @@
 @end
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
     Evaluates whether [item description] satisfies a given matcher.
 
     Example: hasDescription(equalTo(result))
-*/
-id<HCMatcher> HC_hasDescription(id item);
-
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef HC_SHORTHAND
+ */
+OBJC_EXPORT id<HCMatcher> HC_hasDescription(id expectedDescription);
 
 /**
     Shorthand for HC_hasDescription, available if HC_SHORTHAND is defined.
-*/
-#define hasDescription HC_hasDescription
-
+ */
+#ifdef HC_SHORTHAND
+    #define hasDescription HC_hasDescription
 #endif
