@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - MainPage.h
-//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//  Copyright 2010 www.hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
 //
@@ -30,12 +30,21 @@
     OCHamcrest is supported for both Cocoa and iOS development.
 
     \b Cocoa:
-    \li Add OCHamcrest.framework to your project.
-    \li To use OCHamcrest in an Xcode unit test bundle, you may need to add a "Copy Files" build phase which copies OCHamcrest.framework to the Products directory.
+    \li Add \b OCHamcrest.framework to your project.
+    \li If your target is an Xcode unit test bundle, add a "Copy Files" build phase to copy
+        OCHamcrest.framework to your Products directory.
+    \li Add \code
+#define HC_SHORTHAND
+#import <OCHamcrest/OCHamcrest.h>
+    \endcode
     
     \b iOS:
-    \li Add OCHamcrestIOS.framework to your project.
-    \li Add "-lstdc++" to your "Other Linker Flags".
+    \li Add \b OCHamcrestIOS.framework to your project.
+    \li Add \e "-lstdc++" to your "Other Linker Flags".
+    \li Add \code
+#define HC_SHORTHAND
+#import <OCHamcrestIOS/OCHamcrestIOS.h>
+    \endcode
     
     
     \section firsttest My first OCHamcrest test
@@ -85,9 +94,9 @@
     <ul>
     <li>Core</li>
         <ul>
-        <li>\ref anything - always matches, useful if you don't care what the object under test is
-            describedAs - decorator to add custom failure description</li>
-        <li>\ref is - decorator to improve readability - see "Syntactic sugar", below</li>
+        <li>\ref anything - always matches, useful if you don't care what the object under test is</li>
+        <li>\ref describedAs - decorator to add custom failure description</li>
+        <li>\ref is - decorator to improve readability - see \ref sugar, below</li>
         </ul>
     <li>Logical</li>
         <ul>
@@ -124,7 +133,7 @@
     </ul>
 
 
-    \section syntax Syntactic sugar
+    \section sugar Syntactic sugar
     
     OCHamcrest strives to make your tests as readable as possible. For example, the \ref is matcher
     is a wrapper that doesn't add any extra behavior to the underlying matcher. The following
@@ -135,4 +144,11 @@ assertThat(theBiscuit, equalTo(myBiscuit));
 assertThat(theBiscuit, is(equalTo(myBiscuit)));
 assertThat(theBiscuit, is(myBiscuit));
     \endcode
+    
+    
+    \section custom Writing custom matchers
+    
+    A key feature of OCHamcrest is its extensibility. See \ref custom-matchers for an example of how
+    to write your own matchers.
+
  */
