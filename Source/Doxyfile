@@ -31,7 +31,7 @@ PROJECT_NAME           = OCHamcrest
 # This could be handy for archiving the generated documentation or 
 # if some version control system is used.
 
-PROJECT_NUMBER         = 
+PROJECT_NUMBER         = 1.0
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) 
 # base path where the generated documentation will be put. 
@@ -590,8 +590,8 @@ WARN_LOGFILE           =
 # directories like "/usr/src/myproject". Separate the files or directories 
 # with spaces.
 
-INPUT                  = ../Source/Core \
-                         ../Source/Library
+INPUT                  = Core \
+                         Library
 
 # This tag can be used to specify the character encoding of the source files 
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding, which is 
@@ -644,7 +644,7 @@ EXCLUDE_PATTERNS       =
 # wildcard * is used, a substring. Examples: ANamespace, AClass, 
 # AClass::ANamespace, ANamespace::*Test
 
-EXCLUDE_SYMBOLS        = 
+EXCLUDE_SYMBOLS        = NSObject
 
 # The EXAMPLE_PATH tag can be used to specify one or more files or 
 # directories that contain example code fragments that are included (see 
@@ -788,7 +788,7 @@ GENERATE_HTML          = YES
 # If a relative path is entered the value of OUTPUT_DIRECTORY will be 
 # put in front of it. If left blank `html' will be used as the default path.
 
-HTML_OUTPUT            = html
+HTML_OUTPUT            = Documentation
 
 # The HTML_FILE_EXTENSION tag can be used to specify the file extension for 
 # each generated HTML page (for example: .htm,.php,.asp). If it is left blank 
@@ -1032,7 +1032,7 @@ ENUM_VALUES_PER_LINE   = 4
 # JavaScript, DHTML, CSS and frames is required (i.e. any modern browser). 
 # Windows users are probably better off using the HTML help feature.
 
-GENERATE_TREEVIEW      = YES
+GENERATE_TREEVIEW      = NO
 
 # By enabling USE_INLINE_TREES, doxygen will generate the Groups, Directories, 
 # and Class Hierarchy pages using a tree view instead of an ordered list.

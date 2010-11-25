@@ -79,7 +79,7 @@ OBJC_EXPORT id<HCMatcher> HC_allOf(id<HCMatcher> matcher, ...)
 {
     va_list args;
     va_start(args, matcher);
-    NSArray* matcherList = HC_collectMatchers(matcher, args);
+    NSArray* matcherList = HCCollectMatchers(matcher, args);
     va_end(args);
     
     return [HCAllOf allOf:matcherList];

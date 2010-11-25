@@ -54,5 +54,5 @@
 
 OBJC_EXPORT id<HCMatcher> HC_isNot(id item)
 {
-    return [HCIsNot isNot:HC_wrapInMatcher(item)];
+    return [HCIsNot isNot:HCWrapInMatcher(item)];
 }

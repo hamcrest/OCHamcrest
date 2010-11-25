@@ -6,22 +6,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/objc-api.h>
 
-
-namespace hamcrest {
 
 /**
     Throws an NSException if @a string is nil.
 */
-inline
-void requireNonNilString(NSString* string)
-{
-    if (string == nil)
-    {
-        @throw [NSException exceptionWithName: @"NotAString"
-                                       reason: @"Must be non-nil string"
-                                     userInfo: nil];
-    }
-}
-
-}   // namespace hamcrest
+OBJC_EXPORT void HCRequireNonNilString(NSString* string);

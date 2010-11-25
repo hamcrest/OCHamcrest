@@ -63,5 +63,5 @@
 
 OBJC_EXPORT id<HCMatcher> HC_hasKey(id item)
 {
-    return [HCIsDictionaryContainingKey isDictionaryContainingKey:HC_wrapInMatcher(item)];
+    return [HCIsDictionaryContainingKey isDictionaryContainingKey:HCWrapInMatcher(item)];
 }

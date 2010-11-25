@@ -67,14 +67,14 @@
 
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id item, ...)
 {
-    NSMutableArray* matcherList = [NSMutableArray arrayWithObject:HC_wrapInMatcher(item)];
+    NSMutableArray* matcherList = [NSMutableArray arrayWithObject:HCWrapInMatcher(item)];
     
     va_list args;
     va_start(args, item);
     item = va_arg(args, id);
     while (item != nil)
     {
-        [matcherList addObject:HC_wrapInMatcher(item)];
+        [matcherList addObject:HCWrapInMatcher(item)];
         item = va_arg(args, id);
     }
     va_end(args);

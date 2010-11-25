@@ -15,4 +15,4 @@
     
     @a item is returned as-is if it is already an HCMatcher.
  */
-OBJC_EXPORT id<HCMatcher> HC_wrapInMatcher(id item);
+OBJC_EXPORT id<HCMatcher> HCWrapInMatcher(id item);

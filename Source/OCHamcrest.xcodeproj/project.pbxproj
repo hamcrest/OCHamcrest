@@ -6,8 +6,23 @@
 	objectVersion = 44;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		08EEF60F129E0B1B0076BFCC /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 08EEF613129E0B2B0076BFCC /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				08EEF60E129E0B1B0076BFCC /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		089B9C781298B73200D4F34F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2A4B030D8B679900051BCF /* Foundation.framework */; };
+		08EEF655129E14010076BFCC /* HCRequireNonNilString.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08EEF654129E14010076BFCC /* HCRequireNonNilString.mm */; };
 		0F00572A10C5AA9700A777F3 /* HCBoxNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F00572910C5AA9700A777F3 /* HCBoxNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F030C5B1235D23300C59F75 /* HCAllOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AB90D8B493600051BCF /* HCAllOf.mm */; };
 		0F030C5C1235D23300C59F75 /* HCAnyOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4ABB0D8B493600051BCF /* HCAnyOf.mm */; };
@@ -173,6 +188,7 @@
 
 /* Begin PBXFileReference section */
 		089C1667FE841158C02AAC07 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		08EEF654129E14010076BFCC /* HCRequireNonNilString.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCRequireNonNilString.mm; sourceTree = "<group>"; };
 		0F00572910C5AA9700A777F3 /* HCBoxNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBoxNumber.h; sourceTree = "<group>"; };
 		0F030C561235D0BD00C59F75 /* libochamcrest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libochamcrest.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F0A12E40DA0A35F00AE4705 /* MatcherAssertTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatcherAssertTest.m; sourceTree = "<group>"; };
@@ -565,6 +581,7 @@
 				0FA913060DA064CF000AC3AA /* HCIsEqualIgnoringWhiteSpace.h */,
 				0FA913070DA064CF000AC3AA /* HCIsEqualIgnoringWhiteSpace.mm */,
 				0FA913830DA084DA000AC3AA /* HCRequireNonNilString.h */,
+				08EEF654129E14010076BFCC /* HCRequireNonNilString.mm */,
 				0F2EBB830D9EFD9C00340F95 /* HCStringContains.h */,
 				0F2EBB840D9EFD9C00340F95 /* HCStringContains.mm */,
 				0F2EBC190D9F14E900340F95 /* HCStringEndsWith.h */,
@@ -752,6 +769,7 @@
 				32604E86123601CC0084AB0B /* OCHamcrestIOS */,
 				0F030C551235D0BD00C59F75 /* libochamcrest */,
 				0F2A4B1E0D8B68B400051BCF /* UnitTests */,
+				08EEF60F129E0B1B0076BFCC /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -768,6 +786,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		08EEF60E129E0B1B0076BFCC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "DOXYGEN=\"/Applications/Doxygen.app/Contents/Resources/doxygen\"\n\nif ! [ -f $DOXYGEN ]; then \n  echo :: error : Requires Doxygen in Applications folder\n  return 1\nfi\n\nrm -rf Documentation\n$DOXYGEN Doxyfile\nopen Documentation/index.html\n";
+		};
 		0F2A4B1D0D8B68B400051BCF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -917,6 +948,7 @@
 				0FF1B1E31086DFDA00E615AE /* HCInvocationMatcher.mm in Sources */,
 				0F1A544D10C45F44009C870F /* HCIsEqualToNumber.mm in Sources */,
 				0FA5A05310C57BAE005FB8BB /* HCNumberAssert.mm in Sources */,
+				08EEF655129E14010076BFCC /* HCRequireNonNilString.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -936,6 +968,27 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		08EEF610129E0B1C0076BFCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Documentation;
+			};
+			name = Debug;
+		};
+		08EEF611129E0B1C0076BFCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Documentation;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		0F030C571235D0BD00C59F75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1164,6 +1217,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		08EEF613129E0B2B0076BFCC /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08EEF610129E0B1C0076BFCC /* Debug */,
+				08EEF611129E0B1C0076BFCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0F030C591235D0ED00C59F75 /* Build configuration list for PBXNativeTarget "libochamcrest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

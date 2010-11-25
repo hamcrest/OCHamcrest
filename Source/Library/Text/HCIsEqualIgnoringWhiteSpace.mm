@@ -11,7 +11,6 @@
     // OCHamcrest
 #import "HCDescription.h"
 #import "HCRequireNonNilString.h"
-using namespace hamcrest;
 
     // C++
 #import <cctype>
@@ -70,7 +69,7 @@ NSMutableString* stripSpace(NSString* string)
 
 - (id) initWithString:(NSString*)aString
 {
-    requireNonNilString(aString);
+    HCRequireNonNilString(aString);
     
     self = [super init];
     if (self != nil)

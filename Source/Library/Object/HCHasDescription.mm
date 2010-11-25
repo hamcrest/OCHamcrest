@@ -35,5 +35,5 @@
 
 OBJC_EXPORT id<HCMatcher> HC_hasDescription(id expectedDescription)
 {
-    return [HCHasDescription hasDescription:HC_wrapInMatcher(expectedDescription)];
+    return [HCHasDescription hasDescription:HCWrapInMatcher(expectedDescription)];
 }

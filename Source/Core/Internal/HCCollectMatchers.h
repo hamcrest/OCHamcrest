@@ -17,4 +17,4 @@
 /**
     Returns an array of matchers from a variable-length comma-separated list terminated by @c nil.
 */
-OBJC_EXPORT NSMutableArray* HC_collectMatchers(id<HCMatcher> matcher, va_list args);
+OBJC_EXPORT NSMutableArray* HCCollectMatchers(id<HCMatcher> matcher, va_list args);
