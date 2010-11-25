@@ -29,13 +29,13 @@
 /**
     Matches dictionaries containing a key-value pair satisfying a pair of matchers.
  
-    @a key is a matcher, or an implied HCIsEqual matcher will wrap the key.
-    @a value is a matcher, or an implied HCIsEqual matcher will wrap the key.
+    \a key is a matcher, or an implied HCIsEqual matcher will wrap the key.
+    \a value is a matcher, or an implied HCIsEqual matcher will wrap the key.
  */
 OBJC_EXPORT id<HCMatcher> HC_hasEntry(id key, id value);
 
 /**
-    Shorthand for HC_hasEntry, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_hasEntry, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define hasEntry HC_hasEntry

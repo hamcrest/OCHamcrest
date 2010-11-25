@@ -10,7 +10,7 @@
 
 
 /**
-    Is the object equal to another object, as tested by the isEqual: method?
+    Is the object equal to another object, as tested by the -isEqual: method?
  */
 @interface HCIsEqual : HCBaseMatcher
 {
@@ -24,12 +24,12 @@
 
 
 /**
-    Is the object equal to another object, as tested by the isEqual: method?
+    Is the object equal to another object, as tested by the -isEqual: method?
  */
 OBJC_EXPORT id<HCMatcher> HC_equalTo(id equalArg);
 
 /**
-    Shorthand for HC_equalTo, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_equalTo, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define equalTo HC_equalTo

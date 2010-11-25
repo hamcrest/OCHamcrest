@@ -27,7 +27,7 @@
 OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString* aSubstring);
 
 /**
-    Shorthand for HC_startsWith, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_startsWith, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define startsWith HC_startsWith

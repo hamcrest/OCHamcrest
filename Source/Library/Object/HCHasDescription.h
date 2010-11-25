@@ -30,7 +30,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasDescription(id expectedDescription);
 
 /**
-    Shorthand for HC_hasDescription, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_hasDescription, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define hasDescription HC_hasDescription

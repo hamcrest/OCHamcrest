@@ -29,7 +29,7 @@
 OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString* aString);
 
 /**
-    Shorthand for HC_endsWith, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_endsWith, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define equalToIgnoringCase HC_equalToIgnoringCase

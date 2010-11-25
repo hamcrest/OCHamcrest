@@ -20,7 +20,7 @@ OBJC_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,
     HC_assertThatBoolWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatBool, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatBool, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatBool HC_assertThatBool
@@ -37,7 +37,7 @@ OBJC_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
     HC_assertThatCharWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatChar, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatChar, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatChar HC_assertThatChar
@@ -54,7 +54,7 @@ OBJC_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actual,
     HC_assertThatDoubleWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatDouble, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatDouble, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatDouble HC_assertThatDouble
@@ -71,7 +71,7 @@ OBJC_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
     HC_assertThatFloatWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatFloat, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatFloat, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatFloat HC_assertThatFloat
@@ -88,7 +88,7 @@ OBJC_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
     HC_assertThatIntWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatInt, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatInt, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatInt HC_assertThatInt
@@ -105,7 +105,7 @@ OBJC_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
     HC_assertThatLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatLong, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatLong, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatLong HC_assertThatLong
@@ -123,7 +123,7 @@ OBJC_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long actual
     HC_assertThatLongLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatLongLong, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatLongLong, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatLongLong HC_assertThatLongLong
@@ -140,7 +140,7 @@ OBJC_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
     HC_assertThatShortWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatShort, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatShort, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatShort HC_assertThatShort
@@ -158,7 +158,7 @@ OBJC_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsigned cha
     HC_assertThatUnsignedCharWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatUnsignedChar, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatUnsignedChar, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatUnsignedChar HC_assertThatUnsignedChar
@@ -176,7 +176,7 @@ OBJC_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigned int 
     HC_assertThatUnsignedIntWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatUnsignedInt, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatUnsignedInt, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatUnsignedInt HC_assertThatUnsignedInt
@@ -194,7 +194,7 @@ OBJC_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsigned lon
     HC_assertThatUnsignedLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatUnsignedLong, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatUnsignedLong, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatUnsignedLong HC_assertThatUnsignedLong
@@ -212,7 +212,7 @@ OBJC_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, unsigned
     HC_assertThatUnsignedLongLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatUnsignedLongLong, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatUnsignedLongLong, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatUnsignedLongLong HC_assertThatUnsignedLongLong
@@ -230,7 +230,7 @@ OBJC_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsigned sh
     HC_assertThatUnsignedShortWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatUnsignedShort, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatUnsignedShort, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatUnsignedShort HC_assertThatUnsignedShort
@@ -247,7 +247,7 @@ OBJC_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger actual,
     HC_assertThatIntegerWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatInteger, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatInteger, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatInteger HC_assertThatInteger
@@ -264,7 +264,7 @@ OBJC_EXPORT void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUIntege
     HC_assertThatUnsignedIntegerWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for HC_assertThatUnsignedInteger, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_assertThatUnsignedInteger, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define assertThatUnsignedInteger HC_assertThatUnsignedInteger

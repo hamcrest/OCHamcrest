@@ -24,12 +24,12 @@
 
 
 /**
-    Evaluates to @c YES only when the argument is this same object.
+    Evaluates to \c YES only when the argument is this same object.
  */
 OBJC_EXPORT id<HCMatcher> HC_sameInstance(id anObject);
 
 /**
-    Shorthand for HC_sameInstance, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_sameInstance, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define sameInstance HC_sameInstance

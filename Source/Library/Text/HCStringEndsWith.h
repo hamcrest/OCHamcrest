@@ -27,7 +27,7 @@
 OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString* aSubstring);
 
 /**
-    Shorthand for HC_endsWith, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_endsWith, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define endsWith HC_endsWith

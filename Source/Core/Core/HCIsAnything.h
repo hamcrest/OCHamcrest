@@ -10,7 +10,7 @@
 
 
 /**
-    A matcher that always returns @c YES.
+    A matcher that always returns \c YES.
  */
 @interface HCIsAnything : HCBaseMatcher
 {
@@ -26,12 +26,12 @@
 
 
 /**
-    This matcher always evaluates to @c YES.
+    This matcher always evaluates to \c YES.
  */
 OBJC_EXPORT id<HCMatcher> HC_anything();
 
 /**
-    Shorthand for HC_anything, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_anything, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define anything HC_anything
@@ -41,12 +41,12 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
 /**
     This matcher always evaluates to <code>YES</code>.
     
-    @param aDescription A meaningful string used when describing itself.
+    \param aDescription A meaningful string used when describing itself.
  */
 OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString* aDescription);
 
 /**
-    Shorthand for HC_anythingWithDescription, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_anythingWithDescription, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define anythingWithDescription HC_anythingWithDescription

@@ -10,7 +10,7 @@
 
 
 /**
-    Is the value @c nil?
+    Is the value \c nil?
 */
 @interface HCIsNil : HCBaseMatcher
 {
@@ -22,12 +22,12 @@
 
 
 /**
-    Matches if the value is @c nil.
+    Matches if the value is \c nil.
  */
 OBJC_EXPORT id<HCMatcher> HC_nilValue();
 
 /**
-    Shorthand for HC_nilValue, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_nilValue, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define nilValue HC_nilValue
@@ -35,12 +35,12 @@ OBJC_EXPORT id<HCMatcher> HC_nilValue();
 
 
 /**
-    Matches if the value is not @c nil.
+    Matches if the value is not \c nil.
  */
 OBJC_EXPORT id<HCMatcher> HC_notNilValue();
 
 /**
-    Shorthand for HC_notNilValue, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_notNilValue, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define notNilValue HC_notNilValue

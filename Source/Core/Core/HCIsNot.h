@@ -27,18 +27,18 @@
     Inverts the rule, providing a shortcut to the frequently used isNot(equalTo(x)).
 
     For example:
-@code
+\code
 assertThat(cheese, isNot(equalTo(smelly)))
-@endcode
+\endcode
     vs.
-@code
+\code
 assertThat(cheese, isNot(smelly))
-@endcode
+\endcode
  */
 OBJC_EXPORT id<HCMatcher> HC_isNot(id item);
 
 /**
-    Shorthand for HC_isNot, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_isNot, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define isNot HC_isNot

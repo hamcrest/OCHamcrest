@@ -26,12 +26,12 @@
 /**
     Matches dictionaries containing a value satisfying a matcher.
 
-    @a item is a matcher, or an implied HCIsEqual matcher will wrap the item.
+    \a item is a matcher, or an implied HCIsEqual matcher will wrap the item.
  */
 OBJC_EXPORT id<HCMatcher> HC_hasValue(id item);
 
 /**
-    Shorthand for HC_hasValue, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_hasValue, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define hasValue HC_hasValue

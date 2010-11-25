@@ -11,8 +11,8 @@
 
 
 /**
-    Returns @a item wrapped (if necessary) in an HCIsEqual matcher.
+    Returns \a item wrapped (if necessary) in an HCIsEqual matcher.
     
-    @a item is returned as-is if it is already an HCMatcher.
+    \a item is returned as-is if it is already an HCMatcher.
  */
 OBJC_EXPORT id<HCMatcher> HCWrapInMatcher(id item);

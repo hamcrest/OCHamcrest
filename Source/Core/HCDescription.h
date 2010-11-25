@@ -20,24 +20,28 @@
 /**
     Appends some plain text to the description.
     
-    @return self
+    \return self, for chaining
  */
 - (id<HCDescription>) appendText:(NSString*)text;
 
 /**
     Appends description of HCSelfDescribing value to self.
     
-    @return self
+    \return self, for chaining
  */
 - (id<HCDescription>) appendDescriptionOf:(id<HCSelfDescribing>)value;
 
 /**
     Appends an arbitary value to the description.
+    
+    \return self, for chaining
  */
 - (id<HCDescription>) appendValue:(id)value;
 
 /** 
     Appends a list of objects to the description.
+    
+    \return self, for chaining
  */
 - (id<HCDescription>) appendList:(NSArray*)values
                            start:(NSString*)start

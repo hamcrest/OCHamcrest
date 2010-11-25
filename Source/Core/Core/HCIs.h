@@ -14,13 +14,13 @@
     expressive.
 
     For example:
-@code
+\code
 assertThat(cheese, equalTo(smelly))
-@endcode
+\endcode
     vs.
-@code
+\code
 assertThat(cheese, is(equalTo(smelly)))
-@endcode
+\endcode
  */
 @interface HCIs : HCBaseMatcher
 {
@@ -34,21 +34,21 @@ assertThat(cheese, is(equalTo(smelly)))
 
 
 /**
-    Decorates an item, providing shortcuts to the frequently used is(equalTo(x)).
+    Decorates an item, providing shortcuts to the frequently used \ref is(equalTo(x)).
     
     For example:
-@code
+\code
 assertThat(cheese, is(equalTo(smelly)))
-@endcode
+\endcode
     vs.
-@code
+\code
 assertThat(cheese, is(smelly))
-@endcode
+\endcode
  */
 OBJC_EXPORT id<HCMatcher> HC_is(id item);
 
 /**
-    Shorthand for HC_is, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_is, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define is HC_is

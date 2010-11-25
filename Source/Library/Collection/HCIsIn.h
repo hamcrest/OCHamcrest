@@ -29,7 +29,7 @@
 OBJC_EXPORT id<HCMatcher> HC_isIn(id collection);
 
 /**
-    Shorthand for HC_isIn, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_isIn, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define isIn HC_isIn

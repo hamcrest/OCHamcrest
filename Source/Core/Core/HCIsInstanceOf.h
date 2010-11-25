@@ -29,7 +29,7 @@
 OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class type);
 
 /**
-    Shorthand for HC_instanceOf, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_instanceOf, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define instanceOf HC_instanceOf

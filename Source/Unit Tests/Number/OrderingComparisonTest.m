@@ -66,7 +66,7 @@
 {
     id object = [[[NSObject alloc] init] autorelease];
     
-    STAssertThrows(greaterThan(object), @"object does not have compare: method");
+    STAssertThrows(greaterThan(object), @"object does not have -compare: method");
 }
 
 

@@ -23,7 +23,7 @@
 @interface HCBaseDescription (SubclassMustImplement)
 
 /**
-    Append the string @a str to the description.
+    Append the string \a str to the description.
  */
 - (void) append:(NSString*)str;
 

@@ -26,12 +26,12 @@
 /**
     Matches a collection if any element satifies a given matcher.
  
-    @a item is a matcher, or an implied HCIsEqual matcher will wrap the item.
+    \a item is a matcher, or an implied HCIsEqual matcher will wrap the item.
  */
 OBJC_EXPORT id<HCMatcher> HC_hasItem(id item);
 
 /**
-    Shorthand for HC_hasItem, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_hasItem, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define hasItem HC_hasItem
@@ -41,12 +41,12 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id item);
 /**
     Matches a collection if all matchers are satisfied by any of the elements.
  
-    @param item comma-separated list of matchers (or implied HCIsEqual wrapping items) ending with nil.
+    \param item comma-separated list of matchers (or implied HCIsEqual wrapping items) ending with nil.
  */
 OBJC_EXPORT id<HCMatcher> HC_hasItems(id item, ...);
 
 /**
-    Shorthand for HC_hasItems, available if HC_SHORTHAND is defined.
+    Shorthand for \ref HC_hasItems, available if HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define hasItems HC_hasItems

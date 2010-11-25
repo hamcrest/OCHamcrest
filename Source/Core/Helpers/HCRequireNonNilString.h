@@ -10,6 +10,6 @@
 
 
 /**
-    Throws an NSException if @a aString is nil.
+    Throws an NSException if \a aString is nil.
 */
 OBJC_EXPORT void HCRequireNonNilString(NSString* aString);

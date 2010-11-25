@@ -41,7 +41,7 @@
 {
     id object = [[[NSObject alloc] init] autorelease];
     
-    STAssertThrows(isIn(object), @"object does not have containsObject: method");
+    STAssertThrows(isIn(object), @"object does not have -containsObject: method");
 }
 
 
