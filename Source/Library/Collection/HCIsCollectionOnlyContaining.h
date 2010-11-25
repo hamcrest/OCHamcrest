@@ -13,6 +13,8 @@
     Matches collections that only contain elements satisfying a given matcher.
 
     This matcher will never match an empty collection.
+
+    \ingroup collection
 */
 @interface HCIsCollectionOnlyContaining : HCBaseMatcher
 {
@@ -38,11 +40,15 @@
     <code>onlyContains(@"a", @"b", @"c", nil)</code>.
 
     @param item comma-separated list of items ending with nil.
+
+    \ingroup collection
  */
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id item, ...);
 
 /**
     Shorthand for \ref HC_onlyContains, available if HC_SHORTHAND is defined.
+
+    \ingroup collection
  */
 #ifdef HC_SHORTHAND
     #define onlyContains HC_onlyContains

@@ -14,6 +14,8 @@
     
     Evaluation is shortcut, so subsequent matchers are not called if an earlier matcher returns
     \c NO.
+    
+    \ingroup core
  */
 @interface HCAllOf : HCBaseMatcher
 {
@@ -29,12 +31,16 @@
 /**
     Evaluates to \c YES only if \b all of the passed in matchers evaluate to \c YES.
     
+    \ingroup core
+    
     \param matcher Comma-separated list of matchers ending with \c nil.
  */
 OBJC_EXPORT id<HCMatcher> HC_allOf(id<HCMatcher> matcher, ...);
 
 /**
     Shorthand for \ref HC_allOf, available if HC_SHORTHAND is defined.
+
+    \ingroup core
  */
 #ifdef HC_SHORTHAND
     #define allOf HC_allOf

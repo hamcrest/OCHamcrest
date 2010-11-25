@@ -11,6 +11,8 @@
 
 /**
      Matches dictionaries containing a key satisfying a matcher.
+
+    \ingroup collection
  */
 @interface HCIsDictionaryContainingKey : HCBaseMatcher
 {
@@ -27,11 +29,15 @@
     Matches dictionaries containing a key satisfying a matcher.
 
     \a item is a matcher, or an implied HCIsEqual matcher will wrap the item.
+
+    \ingroup collection
  */
 OBJC_EXPORT id<HCMatcher> HC_hasKey(id item);
 
 /**
     Shorthand for \ref HC_hasKey, available if HC_SHORTHAND is defined.
+
+    \ingroup collection
  */
 #ifdef HC_SHORTHAND
     #define hasKey HC_hasKey

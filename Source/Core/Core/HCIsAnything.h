@@ -11,6 +11,8 @@
 
 /**
     A matcher that always returns \c YES.
+
+    \ingroup core
  */
 @interface HCIsAnything : HCBaseMatcher
 {
@@ -27,6 +29,8 @@
 
 /**
     This matcher always evaluates to \c YES.
+
+    \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_anything();
 
@@ -42,11 +46,15 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
     This matcher always evaluates to <code>YES</code>.
     
     \param aDescription A meaningful string used when describing itself.
+    
+    \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString* aDescription);
 
 /**
     Shorthand for \ref HC_anythingWithDescription, available if HC_SHORTHAND is defined.
+
+    \ingroup core
  */
 #ifdef HC_SHORTHAND
     #define anythingWithDescription HC_anythingWithDescription

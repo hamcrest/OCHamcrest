@@ -11,6 +11,8 @@
 
 /**
     Provides a custom description to another matcher.
+
+    \ingroup core
  */
 @interface HCDescribedAs : HCBaseMatcher
 {
@@ -34,11 +36,15 @@
     
     Optional values following the matcher are substituted for \%0, \%1, etc.
     The last argument must be nil.
+
+    \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString* description, id<HCMatcher> matcher, ...);
 
 /**
     Shorthand for \ref HC_describedAs, available if HC_SHORTHAND is defined.
+
+    \ingroup core
  */
 #ifdef HC_SHORTHAND
     #define describedAs HC_describedAs

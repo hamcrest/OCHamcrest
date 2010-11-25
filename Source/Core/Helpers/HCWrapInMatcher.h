@@ -14,5 +14,7 @@
     Returns \a item wrapped (if necessary) in an HCIsEqual matcher.
     
     \a item is returned as-is if it is already an HCMatcher.
+
+    \ingroup helpers
  */
 OBJC_EXPORT id<HCMatcher> HCWrapInMatcher(id item);

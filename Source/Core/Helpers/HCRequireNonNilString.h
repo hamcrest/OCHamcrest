@@ -11,5 +11,7 @@
 
 /**
     Throws an NSException if \a aString is nil.
+
+    \ingroup helpers
 */
 OBJC_EXPORT void HCRequireNonNilString(NSString* aString);

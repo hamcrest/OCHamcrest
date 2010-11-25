@@ -21,6 +21,8 @@ assertThat(cheese, equalTo(smelly))
 \code
 assertThat(cheese, is(equalTo(smelly)))
 \endcode
+
+    \ingroup core
  */
 @interface HCIs : HCBaseMatcher
 {
@@ -44,11 +46,15 @@ assertThat(cheese, is(equalTo(smelly)))
 \code
 assertThat(cheese, is(smelly))
 \endcode
+
+    \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_is(id item);
 
 /**
     Shorthand for \ref HC_is, available if HC_SHORTHAND is defined.
+
+    \ingroup core
  */
 #ifdef HC_SHORTHAND
     #define is HC_is
