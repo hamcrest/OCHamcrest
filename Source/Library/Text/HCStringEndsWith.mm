@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCStringEndsWith.mm
-//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//  Copyright 2010 www.hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
 //

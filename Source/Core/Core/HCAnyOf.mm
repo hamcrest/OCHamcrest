@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCAnyOf.mm
-//  Copyright 2009 www.hamcrest.org. See LICENSE.txt
+//  Copyright 2010 www.hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
 //
@@ -9,10 +9,8 @@
 #import "HCAnyOf.h"
 
     // OCHamcrest
-#import "HCDescription.h"
-
-    // OCHamcrest internal
 #import "HCCollectMatchers.h"
+#import "HCDescription.h"
 
 
 @implementation HCAnyOf

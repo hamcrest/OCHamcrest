@@ -8,21 +8,31 @@
 
 /**
     @mainpage OCHamcrest
+    
+    \section contents Contents:
+    \li \ref intro
+    \li \ref platforms
+    \li \ref firsttest
+    \li \ref tour
+    \li \ref sugar
+    \li \ref custom
+    
 
     \section intro Introduction
 
-    OCHamcrest is an Objective-C framework for writing matcher objects allowing 'match' rules to be
-    defined declaratively. There are a number of situations where matchers are invaluble, such as UI
-    validation, or data filtering, but it is in the area of writing flexible tests that matchers are
-    most commonly used. This tutorial shows you how to use OCHamcrest for unit testing.
+    OCHamcrest is an Objective-C framework for writing matcher objects, allowing you to
+    declaratively define "match" rules. There are a number of situations where matchers are
+    invaluable, such as UI validation or data filtering, but it is in the area of writing flexible
+    tests that matchers are most commonly used. This tutorial shows you how to use OCHamcrest for
+    unit testing.
 
     When writing tests it is sometimes difficult to get the balance right between overspecifying the
     test (and making it brittle to changes), and not specifying enough (making the test less
     valuable since it continues to pass even when the thing being tested is broken). Having a tool
     that allows you to pick out precisely the aspect under test and describe the values it should
-    have, to a controlled level of precision, helps greatly in writing tests that are "just right".
+    have, to a controlled level of precision, helps greatly in writing tests that are "just right."
     Such tests fail when the behaviour of the aspect under test deviates from the expected behaviour,
-    yet continue to pass when minor, unrelated changes to the behaviour are made.
+    yet continue to pass when minor, unrelated changes to the behavior are made.
 
 
     \section platforms Cocoa and iOS
@@ -49,9 +59,9 @@
     
     \section firsttest My first OCHamcrest test
     
-    We'll start be writing a very simple Xcode unit test, but instead of using OCUnit's
-    \c STAssertEqualObjects function, we use OCHamcrest's \c assertThat construct and the standard
-    set of matchers.
+    We'll start by writing a very simple Xcode unit test, but instead of using OCUnit's
+    \c STAssertEqualObjects function, we'll use OCHamcrest's \c assertThat construct and the
+    standard set of matchers.
     
     \code
 #import <SenTestingKit/SenTestingKit.h>
@@ -80,11 +90,11 @@
     object is equal to another using the \c -isEqual: method. The test passes since the \c Biscuit
     class defines an \c -isEqual: method.
 
-    OCHamcrest's functions are actually declared with an \c HC_ package prefix (such as
+    OCHamcrest's functions are actually declared with an "HC" package prefix (such as
     \c HC_assertThat and \c HC_equalTo) to avoid name clashes. To make test writing faster and test
     code more legible, shorthand macros are provided if \c HC_SHORTHAND is defined before including
-    the OCHamcrest header. These macros omit the package prefix; for example, instead of writing
-    \c HC_assertThat one can simply write \c assertThat.
+    the OCHamcrest header. For example, instead of writing \ref HC_assertThat, simply write
+    \ref assertThat.
     
     
     \section tour A tour of common matchers
