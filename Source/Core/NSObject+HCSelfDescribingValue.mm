@@ -1,12 +1,12 @@
 //
-//  OCHamcrest - NSObject_HCSelfDescribingValue.mm
+//  OCHamcrest - NSObject+HCSelfDescribingValue.mm
 //  Copyright 2009 www.hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
 //
 
     // Self
-#import "NSObject_HCSelfDescribingValue.h"
+#import "NSObject+HCSelfDescribingValue.h"
 
     // OCHamcrest
 #import "HCDescription.h"
