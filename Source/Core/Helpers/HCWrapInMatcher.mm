@@ -9,7 +9,6 @@
 #import "HCWrapInMatcher.h"
 
     // OCHamcrest
-#define HC_SHORTHAND
 #import "HCIsEqual.h"
 
 
@@ -18,5 +17,5 @@ OBJC_EXPORT id<HCMatcher> HCWrapInMatcher(id item)
     if ([item conformsToProtocol:@protocol(HCMatcher)])
         return item;
     else
-        return equalTo(item);
+        return HC_equalTo(item);
 }

@@ -8,9 +8,9 @@
 #import "HCRequireNonNilString.h"
 
 
-OBJC_EXPORT void HCRequireNonNilString(NSString* string)
+OBJC_EXPORT void HCRequireNonNilString(NSString* aString)
 {
-    if (string == nil)
+    if (aString == nil)
     {
         @throw [NSException exceptionWithName: @"NotAString"
                                        reason: @"Must be non-nil string"
