@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		089BA20D1298F19A00D4F34F /* IsGivenDayOfWeek.m in Sources */ = {isa = PBXBuildFile; fileRef = 089BA20C1298F19A00D4F34F /* IsGivenDayOfWeek.m */; };
+		08B5196E12A0678400147210 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B5196D12A0678400147210 /* OCHamcrest.framework */; };
+		08B51A4D12A0688B00147210 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08B5196D12A0678400147210 /* OCHamcrest.framework */; };
 		0FC264990DA88F1100B4CD6B /* SampleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC264980DA88F1100B4CD6B /* SampleTest.m */; };
-		0FEEEDE910BC5AC100FA9178 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEEEDE810BC5AC100FA9178 /* OCHamcrest.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		08B5189B12A0642100147210 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				08B51A4D12A0688B00147210 /* OCHamcrest.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089BA20B1298F19A00D4F34F /* IsGivenDayOfWeek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsGivenDayOfWeek.h; sourceTree = "<group>"; };
 		089BA20C1298F19A00D4F34F /* IsGivenDayOfWeek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsGivenDayOfWeek.m; sourceTree = "<group>"; };
+		08B5196D12A0678400147210 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = ../../OCHamcrest.framework; sourceTree = SOURCE_ROOT; };
 		0FC2648E0DA88ECB00B4CD6B /* Example.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Example.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC264900DA88ECB00B4CD6B /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
 		0FC264980DA88F1100B4CD6B /* SampleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleTest.m; sourceTree = "<group>"; };
-		0FEEEDE810BC5AC100FA9178 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = Library/Frameworks/OCHamcrest.framework; sourceTree = SYSTEM_DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FEEEDE910BC5AC100FA9178 /* OCHamcrest.framework in Frameworks */,
+				08B5196E12A0678400147210 /* OCHamcrest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +86,7 @@
 		0FC2659D0DA8985800B4CD6B /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0FEEEDE810BC5AC100FA9178 /* OCHamcrest.framework */,
+				08B5196D12A0678400147210 /* OCHamcrest.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -86,6 +100,7 @@
 			buildPhases = (
 				0FC2648A0DA88ECB00B4CD6B /* Sources */,
 				0FC2648B0DA88ECB00B4CD6B /* Frameworks */,
+				08B5189B12A0642100147210 /* CopyFiles */,
 				0FC2648C0DA88ECB00B4CD6B /* ShellScript */,
 			);
 			buildRules = (
@@ -155,7 +170,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -163,7 +179,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = "";
 			};
 			name = Release;
 		};
@@ -171,19 +188,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				INFOPLIST_FILE = "Example-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
-					Cocoa,
+					Foundation,
 					"-framework",
 					SenTestingKit,
 				);
@@ -198,17 +217,19 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../..\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				INFOPLIST_FILE = "Example-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
-					Cocoa,
+					Foundation,
 					"-framework",
 					SenTestingKit,
 				);

@@ -41,8 +41,9 @@
 
     \b Cocoa:
     \li Add \b OCHamcrest.framework to your project.
-    \li If your target is an Xcode unit test bundle, add a "Copy Files" build phase to copy
-        OCHamcrest.framework to your Products directory.
+    \li Add a Copy Files build phase to copy OCHamcrest.framework to your Products Directory. For
+        unit test bundles, make sure this Copy Files phase comes before the Run Script phase that
+        executes tests.
     \li Add \code
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>

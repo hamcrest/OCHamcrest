@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		089B9DED1298DB1100D4F34F /* Example.m in Sources */ = {isa = PBXBuildFile; fileRef = 089B9DEC1298DB1100D4F34F /* Example.m */; };
-		089B9FAD1298E16100D4F34F /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089B9FAC1298E16100D4F34F /* OCHamcrestIOS.framework */; };
 		089BA05E1298E55F00D4F34F /* Xcode324iOS41TestSuiteWorkaround.m in Sources */ = {isa = PBXBuildFile; fileRef = 089BA05D1298E55F00D4F34F /* Xcode324iOS41TestSuiteWorkaround.m */; };
+		08B51A8712A068BC00147210 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B51A8612A068BC00147210 /* OCHamcrestIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		089B9DC71298DA0B00D4F34F /* Example.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Example.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		089B9DC81298DA0B00D4F34F /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
 		089B9DEC1298DB1100D4F34F /* Example.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example.m; sourceTree = "<group>"; };
-		089B9FAC1298E16100D4F34F /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		089BA05D1298E55F00D4F34F /* Xcode324iOS41TestSuiteWorkaround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Xcode324iOS41TestSuiteWorkaround.m; sourceTree = "<group>"; };
+		08B51A8612A068BC00147210 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = ../../OCHamcrestIOS.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,7 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				089B9FAD1298E16100D4F34F /* OCHamcrestIOS.framework in Frameworks */,
+				08B51A8712A068BC00147210 /* OCHamcrestIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +55,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				089B9FAC1298E16100D4F34F /* OCHamcrestIOS.framework */,
+				08B51A8612A068BC00147210 /* OCHamcrestIOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,7 +159,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../..\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -172,6 +172,7 @@
 					"-framework",
 					SenTestingKit,
 					"-lstdc++",
+					"-ObjC",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Example;
@@ -189,7 +190,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../..\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -200,6 +201,7 @@
 					"-framework",
 					SenTestingKit,
 					"-lstdc++",
+					"-ObjC",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Example;
@@ -216,9 +218,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphonesimulator4.1;
 			};
 			name = Debug;
 		};
@@ -229,9 +232,10 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphonesimulator4.1;
 			};
 			name = Release;
 		};
