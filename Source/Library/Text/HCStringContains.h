@@ -24,6 +24,7 @@
 
 /**
     Tests if the argument is a string that contains a substring.
+    \see HCStringContains
     \ingroup text
  */
 OBJC_EXPORT id<HCMatcher> HC_containsString(NSString* aSubstring);

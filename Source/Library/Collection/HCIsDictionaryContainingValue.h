@@ -27,6 +27,7 @@
 /**
     Matches dictionaries containing a value satisfying a matcher.
     \param matcherOrValue  A matcher, or an implied HCIsEqual matcher wrapping a value.
+    \see HCIsDictionaryContainingValue
     \ingroup collection
  */
 OBJC_EXPORT id<HCMatcher> HC_hasValue(id matcherOrValue);

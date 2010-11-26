@@ -31,6 +31,7 @@
 /**
     Evaluates to \c YES only if \b all of the passed in matchers evaluate to \c YES.
     \param matcher  Comma-separated list of matchers ending with \c nil.
+    \see HCAllOf
     \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_allOf(id<HCMatcher> matcher, ...);

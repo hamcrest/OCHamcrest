@@ -27,6 +27,7 @@
 
 /**
     Tests if a string is equal to another string, ignoring any changes in whitespace.
+    \see HCIsEqualIgnoringWhiteSpace
     \ingroup text
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString* aString);

@@ -26,6 +26,7 @@
 
 /**
     Tests if a string is equal to another string, regardless of the case.
+    \see HCIsEqualIgnoringCase
     \ingroup text
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString* aString);

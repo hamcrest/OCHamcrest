@@ -26,6 +26,7 @@
 
 /**
     Is the object contained in the given collection?
+    \see HCIsIn
     \ingroup collection
  */
 OBJC_EXPORT id<HCMatcher> HC_isIn(id aCollection);

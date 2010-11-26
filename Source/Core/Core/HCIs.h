@@ -50,6 +50,7 @@ assertThat(cheese, is(smelly))
 \endcode
     Choose the style that makes your expression most readable. This will vary depending on context.
 
+    \see HCIs
     \ingroup core
 
  */

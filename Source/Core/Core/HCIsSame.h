@@ -26,6 +26,7 @@
 
 /**
     Evaluates to \c YES only when the argument is this same object.
+    \see HCIsSame
     \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_sameInstance(id anObject);

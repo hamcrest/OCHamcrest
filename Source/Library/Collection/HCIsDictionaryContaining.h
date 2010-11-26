@@ -31,6 +31,7 @@
     Matches dictionaries containing a key-value pair satisfying a pair of matchers.
     \param keyMatcherOrValue    A matcher for the key, or an implied HCIsEqual matcher wrapping a value.
     \param valueMatcherOrValue  A matcher for the value, or an implied HCIsEqual matcher wrapping a value.
+    \see HCIsDictionaryContaining
     \ingroup collection
  */
 OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcherOrValue, id valueMatcherOrValue);

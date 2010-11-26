@@ -27,6 +27,7 @@
 
 /**
     Is the value a number equal to a value within some range of acceptable error?
+    \see HCIsCloseTo
     \ingroup number
 */
 OBJC_EXPORT id<HCMatcher> HC_closeTo(double aValue, double anError);

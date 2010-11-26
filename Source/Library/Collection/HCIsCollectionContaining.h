@@ -27,6 +27,7 @@
 /**
     Matches a collection if any element satifies a given matcher.
     \param matcherOrValue  A matcher, or an implied HCIsEqual matcher wrapping a value.
+    \see HCIsCollectionContaining
     \ingroup collection
  */
 OBJC_EXPORT id<HCMatcher> HC_hasItem(id matcherOrValue);
@@ -43,6 +44,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id matcherOrValue);
 /**
     Matches a collection if all matchers are satisfied by any of the elements.
     \param matcherOrValue  Comma-separated list of matchers - or values wrapped in implied HCIsEqual - ending with \c nil.
+    \see HCIsCollectionContaining
     \ingroup collection
  */
 OBJC_EXPORT id<HCMatcher> HC_hasItems(id matcherOrValue, ...);

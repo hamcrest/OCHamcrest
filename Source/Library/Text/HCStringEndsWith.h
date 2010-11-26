@@ -24,6 +24,7 @@
 
 /**
     Tests if the argument is a string that ends with a substring.
+    \see HCStringEndsWith
     \ingroup text
  */
 OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString* aSubstring);

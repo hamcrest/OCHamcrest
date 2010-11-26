@@ -36,6 +36,7 @@ assertThat(cheese, isNot(equalTo(smelly)))
 assertThat(cheese, isNot(smelly))
 \endcode
 
+    \see HCIsNot
     \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_isNot(id matcherOrValue);

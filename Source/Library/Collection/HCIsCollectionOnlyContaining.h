@@ -40,6 +40,7 @@
     <code>onlyContains(@"a", @"b", @"c", nil)</code>.
 
     \param matcherOrValue  Comma-separated list of matchers - or values wrapped in implied HCIsEqual - ending with \c nil.
+    \see HCIsCollectionOnlyContaining
     \ingroup collection
  */
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id matcherOrValue, ...);

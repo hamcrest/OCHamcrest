@@ -26,6 +26,7 @@
 
 /**
     Is the object equal to another object, as tested by the -isEqual: method?
+    \see HCIsEqual
     \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_equalTo(id anObject);

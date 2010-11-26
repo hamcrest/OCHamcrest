@@ -36,6 +36,7 @@
     Optional values following the matcher are substituted for \%0, \%1, etc.
     The last argument must be nil.
 
+    \see HCDescribedAs
     \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString* description, id<HCMatcher> matcher, ...);

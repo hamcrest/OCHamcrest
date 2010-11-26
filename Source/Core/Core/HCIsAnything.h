@@ -28,6 +28,7 @@
 
 /**
     This matcher always evaluates to \c YES.
+    \see HCIsAnything
     \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_anything();
@@ -43,6 +44,7 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
 /**
     This matcher always evaluates to <code>YES</code>.
     \param aDescription  A meaningful string used when describing itself.
+    \see HCIsAnything
     \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString* aDescription);

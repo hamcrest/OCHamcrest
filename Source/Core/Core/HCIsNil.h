@@ -24,6 +24,7 @@
 
 /**
     Matches if the value is \c nil.
+    \see HCIsNil
     \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_nilValue();
@@ -39,6 +40,8 @@ OBJC_EXPORT id<HCMatcher> HC_nilValue();
 
 /**
     Matches if the value is not \c nil.
+    \see HCIsNil
+    \see HCIsNot
     \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_notNilValue();

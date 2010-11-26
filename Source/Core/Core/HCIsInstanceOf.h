@@ -26,6 +26,7 @@
 
 /**
     Is the value an instance of a particular type?
+    \see HCIsInstanceOf
     \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class type);
