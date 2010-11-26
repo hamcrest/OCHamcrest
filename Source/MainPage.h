@@ -50,7 +50,7 @@
     
     \b iOS:
     \li Add \b OCHamcrestIOS.framework to your project.
-    \li Add \e "-lstdc++" to your "Other Linker Flags".
+    \li Add \e "-lstdc++" and \e "-ObjC" to your "Other Linker Flags".
     \li Add \code
 #define HC_SHORTHAND
 #import <OCHamcrestIOS/OCHamcrestIOS.h>
