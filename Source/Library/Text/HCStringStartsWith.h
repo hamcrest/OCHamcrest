@@ -11,7 +11,6 @@
 
 /**
     Tests if the argument is a string that starts with a substring.
-
     \ingroup text
  */
 @interface HCStringStartsWith : HCSubstringMatcher
@@ -25,14 +24,12 @@
 
 /**
     Tests if the argument is a string that starts with a substring.
-
     \ingroup text
  */
 OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString* aSubstring);
 
 /**
     Shorthand for \ref HC_startsWith, available if HC_SHORTHAND is defined.
-
     \ingroup text
  */
 #ifdef HC_SHORTHAND

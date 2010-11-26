@@ -12,10 +12,10 @@
 #import "HCIsEqual.h"
 
 
-OBJC_EXPORT id<HCMatcher> HCWrapInMatcher(id item)
+OBJC_EXPORT id<HCMatcher> HCWrapInMatcher(id matcherOrValue)
 {
-    if ([item conformsToProtocol:@protocol(HCMatcher)])
-        return item;
+    if ([matcherOrValue conformsToProtocol:@protocol(HCMatcher)])
+        return matcherOrValue;
     else
-        return HC_equalTo(item);
+        return HC_equalTo(matcherOrValue);
 }

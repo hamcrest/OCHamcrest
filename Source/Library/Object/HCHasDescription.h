@@ -10,8 +10,7 @@
 
 
 /**
-    Does the object's description satisfy a given matcher?
-
+    Does the object's \c -description satisfy a given matcher?
     \ingroup object
  */
 @interface HCHasDescription : HCInvocationMatcher
@@ -26,16 +25,18 @@
 
 /**
     Evaluates whether [item description] satisfies a given matcher.
+    
+    Examples:
+    \li \ref hasDescription(\ref startsWith(\@"foo"))
+    \li \ref hasDescription(\@"bar")
 
-    Example: hasDescription(equalTo(result))
-
+    \param matcherOrValue is a matcher, or an implied HCIsEqual matcher wrapping a value. 
     \ingroup object
- */
-OBJC_EXPORT id<HCMatcher> HC_hasDescription(id expectedDescription);
+*/
+OBJC_EXPORT id<HCMatcher> HC_hasDescription(id matcherOrValue);
 
 /**
     Shorthand for \ref HC_hasDescription, available if HC_SHORTHAND is defined.
-
     \ingroup object
  */
 #ifdef HC_SHORTHAND

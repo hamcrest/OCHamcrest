@@ -64,23 +64,23 @@
 
 extern "C" {
 
-id<HCMatcher> HC_hasItem(id item)
+id<HCMatcher> HC_hasItem(id matcherOrValue)
 {
-    return [HCIsCollectionContaining isCollectionContaining:HCWrapInMatcher(item)];
+    return [HCIsCollectionContaining isCollectionContaining:HCWrapInMatcher(matcherOrValue)];
 }
 
 
-id<HCMatcher> HC_hasItems(id item, ...)
+id<HCMatcher> HC_hasItems(id matcherOrValue, ...)
 {
-    NSMutableArray* matcherList = [NSMutableArray arrayWithObject:HC_hasItem(item)];
+    NSMutableArray* matcherList = [NSMutableArray arrayWithObject:HC_hasItem(matcherOrValue)];
     
     va_list args;
-    va_start(args, item);
-    item = va_arg(args, id);
-    while (item != nil)
+    va_start(args, matcherOrValue);
+    matcherOrValue = va_arg(args, id);
+    while (matcherOrValue != nil)
     {
-        [matcherList addObject:HC_hasItem(item)];
-        item = va_arg(args, id);
+        [matcherList addObject:HC_hasItem(matcherOrValue)];
+        matcherOrValue = va_arg(args, id);
     }
     va_end(args);
     

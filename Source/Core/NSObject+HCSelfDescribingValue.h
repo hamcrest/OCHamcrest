@@ -18,7 +18,7 @@
 /**
     Generates a description of the object.
 
-    \param description The description to be appended to.
+    \param description  The description to be appended to.
  */
 - (void) describeTo:(id<HCDescription>)description;
 

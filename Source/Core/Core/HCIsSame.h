@@ -10,8 +10,7 @@
 
 
 /**
-    Is the value the same object as another value?
-    
+    Is the item the same object as another?
     \ingroup core
 */
 @interface HCIsSame : HCBaseMatcher
@@ -27,14 +26,12 @@
 
 /**
     Evaluates to \c YES only when the argument is this same object.
-    
     \ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_sameInstance(id anObject);
 
 /**
     Shorthand for \ref HC_sameInstance, available if HC_SHORTHAND is defined.
-    
     \ingroup core
  */
 #ifdef HC_SHORTHAND

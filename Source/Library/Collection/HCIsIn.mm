@@ -25,7 +25,7 @@
     if (![aCollection respondsToSelector:@selector(containsObject:)])
     {
         @throw [NSException exceptionWithName: @"NotAContainer"
-                                       reason: @"Object must respond to containsObject:"
+                                       reason: @"Object must respond to -containsObject:"
                                      userInfo: nil];
     }
     
@@ -58,11 +58,7 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_isIn(id aCollection)
+OBJC_EXPORT id<HCMatcher> HC_isIn(id aCollection)
 {
     return [HCIsIn isInCollection:aCollection];
 }
-
-}   // extern "C"

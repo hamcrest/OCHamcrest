@@ -15,7 +15,6 @@ OBJC_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher>
 
 /**
     OCUnit integration asserting that actual value satisfies matcher.
-    
     \ingroup integration
  */
 #define HC_assertThat(actual, matcher)  \
@@ -23,7 +22,6 @@ OBJC_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher>
 
 /**
     Shorthand for \ref HC_assertThat, available if HC_SHORTHAND is defined.
-    
     \ingroup integration
  */
 #ifdef HC_SHORTHAND

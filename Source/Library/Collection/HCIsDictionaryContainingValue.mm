@@ -61,7 +61,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasValue(id item)
+OBJC_EXPORT id<HCMatcher> HC_hasValue(id matcherOrValue)
 {
-    return [HCIsDictionaryContainingValue isDictionaryContainingValue:HCWrapInMatcher(item)];
+    return [HCIsDictionaryContainingValue isDictionaryContainingValue:HCWrapInMatcher(matcherOrValue)];
 }

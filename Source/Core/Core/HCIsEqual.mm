@@ -14,17 +14,17 @@
 
 @implementation HCIsEqual
 
-+ (HCIsEqual*) isEqualTo:(id)equalArg;
++ (HCIsEqual*) isEqualTo:(id)anObject;
 {
-    return [[[HCIsEqual alloc] initEqualTo:equalArg] autorelease];
+    return [[[HCIsEqual alloc] initEqualTo:anObject] autorelease];
 }
 
 
-- (id) initEqualTo:(id)equalArg
+- (id) initEqualTo:(id)anObject
 {
     self = [super init];
     if (self != nil)
-        object = [equalArg retain];
+        object = [anObject retain];
     return self;
 }
 
@@ -54,7 +54,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalTo(id equalArg)
+OBJC_EXPORT id<HCMatcher> HC_equalTo(id anObject)
 {
-    return [HCIsEqual isEqualTo:equalArg];
+    return [HCIsEqual isEqualTo:anObject];
 }

@@ -15,7 +15,6 @@ OBJC_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,
 
 /**
     OCUnit integration asserting that BOOL actual value, converted to an NSNumber, satisfies matcher.
-
     \ingroup integration
  */
 #define HC_assertThatBool(actual, matcher)  \
@@ -23,7 +22,6 @@ OBJC_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,
 
 /**
     Shorthand for \ref HC_assertThatBool, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -36,7 +34,6 @@ OBJC_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
 
 /**
     OCUnit integration asserting that char actual value, converted to an NSNumber, satisfies matcher.
-
     \ingroup integration
  */
 #define HC_assertThatChar(actual, matcher)  \
@@ -44,7 +41,6 @@ OBJC_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
 
 /**
     Shorthand for \ref HC_assertThatChar, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -57,7 +53,6 @@ OBJC_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actual,
 
 /**
     OCUnit integration asserting that double actual value, converted to an NSNumber, satisfies matcher.
-
     \ingroup integration
  */
 #define HC_assertThatDouble(actual, matcher)  \
@@ -65,7 +60,6 @@ OBJC_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actual,
 
 /**
     Shorthand for \ref HC_assertThatDouble, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -78,7 +72,6 @@ OBJC_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
 
 /**
     OCUnit integration asserting that float actual value, converted to an NSNumber, satisfies matcher.
-
     \ingroup integration
  */
 #define HC_assertThatFloat(actual, matcher)  \
@@ -86,7 +79,6 @@ OBJC_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
 
 /**
     Shorthand for \ref HC_assertThatFloat, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -99,7 +91,6 @@ OBJC_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
 
 /**
     OCUnit integration asserting that int actual value, converted to an NSNumber, satisfies matcher.
-
     \ingroup integration
  */
 #define HC_assertThatInt(actual, matcher)  \
@@ -107,7 +98,6 @@ OBJC_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
 
 /**
     Shorthand for \ref HC_assertThatInt, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -120,7 +110,6 @@ OBJC_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
 
 /**
     OCUnit integration asserting that long actual value, converted to an NSNumber, satisfies matcher.
-
     \ingroup integration
 */
 #define HC_assertThatLong(actual, matcher)  \
@@ -128,7 +117,6 @@ OBJC_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
 
 /**
     Shorthand for \ref HC_assertThatLong, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -142,7 +130,6 @@ OBJC_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long actual
 /**
     OCUnit integration asserting that long long actual value, converted to an NSNumber, satisfies
     matcher.
-
     \ingroup integration
  */
 #define HC_assertThatLongLong(actual, matcher)  \
@@ -150,7 +137,6 @@ OBJC_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long actual
 
 /**
     Shorthand for \ref HC_assertThatLongLong, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -163,7 +149,6 @@ OBJC_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
 
 /**
     OCUnit integration asserting that short actual value, converted to an NSNumber, satisfies matcher.
-
     \ingroup integration
  */
 #define HC_assertThatShort(actual, matcher)  \
@@ -171,7 +156,6 @@ OBJC_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
 
 /**
     Shorthand for \ref HC_assertThatShort, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -185,7 +169,6 @@ OBJC_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsigned cha
 /**
     OCUnit integration asserting that unsigned char actual value, converted to an NSNumber,
     satisfies matcher.
-
     \ingroup integration
 */
 #define HC_assertThatUnsignedChar(actual, matcher)  \
@@ -193,7 +176,6 @@ OBJC_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsigned cha
 
 /**
     Shorthand for \ref HC_assertThatUnsignedChar, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -207,7 +189,6 @@ OBJC_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigned int 
 /**
     OCUnit integration asserting that unsigned int actual value, converted to an NSNumber,
     satisfies matcher.
-
     \ingroup integration
  */
 #define HC_assertThatUnsignedInt(actual, matcher)  \
@@ -215,7 +196,6 @@ OBJC_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigned int 
 
 /**
     Shorthand for \ref HC_assertThatUnsignedInt, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -229,7 +209,6 @@ OBJC_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsigned lon
 /**
     OCUnit integration asserting that unsigned long actual value, converted to an NSNumber,
     satisfies matcher.
-
     \ingroup integration
  */
 #define HC_assertThatUnsignedLong(actual, matcher)  \
@@ -237,7 +216,6 @@ OBJC_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsigned lon
 
 /**
     Shorthand for \ref HC_assertThatUnsignedLong, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -251,7 +229,6 @@ OBJC_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, unsigned
 /**
     OCUnit integration asserting that unsigned long long actual value, converted to an NSNumber,
     satisfies matcher.
-
     \ingroup integration
  */
 #define HC_assertThatUnsignedLongLong(actual, matcher)  \
@@ -259,7 +236,6 @@ OBJC_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, unsigned
 
 /**
     Shorthand for \ref HC_assertThatUnsignedLongLong, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -273,7 +249,6 @@ OBJC_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsigned sh
 /**
     OCUnit integration asserting that unsigned short actual value, converted to an NSNumber,
     satisfies matcher.
-
     \ingroup integration
  */
 #define HC_assertThatUnsignedShort(actual, matcher)  \
@@ -281,7 +256,6 @@ OBJC_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsigned sh
 
 /**
     Shorthand for \ref HC_assertThatUnsignedShort, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -294,7 +268,6 @@ OBJC_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger actual,
 
 /**
     OCUnit integration asserting that NSInteger actual value, converted to an NSNumber, satisfies matcher.
-
     \ingroup integration
  */
 #define HC_assertThatInteger(actual, matcher)  \
@@ -302,7 +275,6 @@ OBJC_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger actual,
 
 /**
     Shorthand for \ref HC_assertThatInteger, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -315,7 +287,6 @@ OBJC_EXPORT void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUIntege
 
 /**
     OCUnit integration asserting that NSUInteger actual value, converted to an NSNumber, satisfies matcher.
-
     \ingroup integration
  */
 #define HC_assertThatUnsignedInteger(actual, matcher)  \
@@ -323,7 +294,6 @@ OBJC_EXPORT void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUIntege
 
 /**
     Shorthand for \ref HC_assertThatUnsignedInteger, available if HC_SHORTHAND is defined.
-
     \ingroup integration
  */
 #ifdef HC_SHORTHAND

@@ -11,7 +11,6 @@
 
 /**
     Is the object contained in the collection?
-
     \ingroup collection
  */
 @interface HCIsIn : HCBaseMatcher
@@ -27,14 +26,12 @@
 
 /**
     Is the object contained in the given collection?
-
     \ingroup collection
  */
-OBJC_EXPORT id<HCMatcher> HC_isIn(id collection);
+OBJC_EXPORT id<HCMatcher> HC_isIn(id aCollection);
 
 /**
     Shorthand for \ref HC_isIn, available if HC_SHORTHAND is defined.
-
     \ingroup collection
  */
 #ifdef HC_SHORTHAND

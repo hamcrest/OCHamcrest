@@ -36,24 +36,27 @@ assertThat(cheese, is(equalTo(smelly)))
 
 
 /**
-    Decorates an item, providing shortcuts to the frequently used \ref is(equalTo(x)).
-    
-    For example:
+    Decorates another matcher, or provides a shortcut to the frequently used \ref is(equalTo(value)).
+
+    If \a matcherOrValue is a matcher, its behavior is retained, but the test may be more
+    expressive.
+
+    If \a matcherOrValue is not a matcher, a test for equality is assumed by wrapping the object in
+    HCIsEqual. This makes the following three statements the same:
 \code
+assertThat(cheese, equalTo(smelly))
 assertThat(cheese, is(equalTo(smelly)))
-\endcode
-    vs.
-\code
 assertThat(cheese, is(smelly))
 \endcode
+    Choose the style that makes your expression most readable. This will vary depending on context.
 
     \ingroup core
+
  */
-OBJC_EXPORT id<HCMatcher> HC_is(id item);
+OBJC_EXPORT id<HCMatcher> HC_is(id matcherOrValue);
 
 /**
     Shorthand for \ref HC_is, available if HC_SHORTHAND is defined.
-
     \ingroup core
  */
 #ifdef HC_SHORTHAND

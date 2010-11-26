@@ -11,10 +11,8 @@
 
 
 /**
-    Returns \a item wrapped (if necessary) in an HCIsEqual matcher.
-    
-    \a item is returned as-is if it is already an HCMatcher.
-
+    Wraps argument in a matcher, if necessary.
+    \return The argument as-if if it is already a matcher, otherwise wrapped an HCIsEqual matcher.
     \ingroup helpers
  */
-OBJC_EXPORT id<HCMatcher> HCWrapInMatcher(id item);
+OBJC_EXPORT id<HCMatcher> HCWrapInMatcher(id matcherOrValue);

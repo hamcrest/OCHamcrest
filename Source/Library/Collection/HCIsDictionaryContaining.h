@@ -11,7 +11,6 @@
 
 /**
     Matches dictionaries containing a key-value pair satisfying a pair of matchers.
-
     \ingroup collection
  */
 @interface HCIsDictionaryContaining : HCBaseMatcher
@@ -30,17 +29,14 @@
 
 /**
     Matches dictionaries containing a key-value pair satisfying a pair of matchers.
- 
-    \a key is a matcher, or an implied HCIsEqual matcher will wrap the key.
-    \a value is a matcher, or an implied HCIsEqual matcher will wrap the key.
-
+    \param keyMatcherOrValue    A matcher for the key, or an implied HCIsEqual matcher wrapping a value.
+    \param valueMatcherOrValue  A matcher for the value, or an implied HCIsEqual matcher wrapping a value.
     \ingroup collection
  */
-OBJC_EXPORT id<HCMatcher> HC_hasEntry(id key, id value);
+OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcherOrValue, id valueMatcherOrValue);
 
 /**
     Shorthand for \ref HC_hasEntry, available if HC_SHORTHAND is defined.
-
     \ingroup collection
  */
 #ifdef HC_SHORTHAND

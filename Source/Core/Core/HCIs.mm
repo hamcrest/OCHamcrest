@@ -52,7 +52,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_is(id item)
+OBJC_EXPORT id<HCMatcher> HC_is(id matcherOrValue)
 {
-    return [HCIs is:HCWrapInMatcher(item)];
+    return [HCIs is:HCWrapInMatcher(matcherOrValue)];
 }

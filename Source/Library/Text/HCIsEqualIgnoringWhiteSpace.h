@@ -11,7 +11,6 @@
 
 /**
     Tests if a string is equal to another string, ignoring any changes in whitespace.
-
     \ingroup text
 */
 @interface HCIsEqualIgnoringWhiteSpace : HCBaseMatcher
@@ -28,16 +27,17 @@
 
 /**
     Tests if a string is equal to another string, ignoring any changes in whitespace.
-
     \ingroup text
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString* aString);
 
 /**
     Shorthand for \ref HC_endsWith, available if HC_SHORTHAND is defined.
-
     \ingroup text
  */
 #ifdef HC_SHORTHAND
     #define equalToIgnoringWhiteSpace HC_equalToIgnoringWhiteSpace
 #endif
+
+
+/** @} */

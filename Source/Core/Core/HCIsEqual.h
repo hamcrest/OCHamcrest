@@ -11,7 +11,6 @@
 
 /**
     Is the object equal to another object, as tested by the -isEqual: method?
-
     \ingroup core
  */
 @interface HCIsEqual : HCBaseMatcher
@@ -19,22 +18,20 @@
     id object;
 }
 
-+ (HCIsEqual*) isEqualTo:(id)equalArg;
-- (id) initEqualTo:(id)equalArg;
++ (HCIsEqual*) isEqualTo:(id)anObject;
+- (id) initEqualTo:(id)anObject;
 
 @end
 
 
 /**
     Is the object equal to another object, as tested by the -isEqual: method?
-
     \ingroup core
  */
-OBJC_EXPORT id<HCMatcher> HC_equalTo(id equalArg);
+OBJC_EXPORT id<HCMatcher> HC_equalTo(id anObject);
 
 /**
     Shorthand for \ref HC_equalTo, available if HC_SHORTHAND is defined.
-
     \ingroup core
  */
 #ifdef HC_SHORTHAND

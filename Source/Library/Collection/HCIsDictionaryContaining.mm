@@ -71,8 +71,8 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasEntry(id key, id value)
+OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcherOrValue, id valueMatcherOrValue)
 {
-    return [HCIsDictionaryContaining isDictionaryContainingKey:HCWrapInMatcher(key)
-                                                         value:HCWrapInMatcher(value)];
+    return [HCIsDictionaryContaining isDictionaryContainingKey:HCWrapInMatcher(keyMatcherOrValue)
+                                                         value:HCWrapInMatcher(valueMatcherOrValue)];
 }

@@ -28,26 +28,24 @@
 
 
 /**
-    Matches collections that only contain elements satisfying any of a list of items.
+    Matches collections that only contain elements satisfying any of a list of matchers.
 
     For example,
-    <code>[NSArray arrayWithObjects:@"a", "b", @"c", nil]</code>
+    <code>[NSArray arrayWithObjects:@"c", "a", @"b", nil]</code>
     would satisfy
     <code>onlyContains(lessThan(@"d"), nil)</code>.
     
-    If an item is not a matcher, it is equivalent to equalTo(item), so the array in the example
-    above would also satisfy
+    If a \a matcherOrValue is not a matcher, it is equivalent to equalTo(value), so the array in the
+    example above would also satisfy
     <code>onlyContains(@"a", @"b", @"c", nil)</code>.
 
-    @param item comma-separated list of items ending with nil.
-
+    \param matcherOrValue  Comma-separated list of matchers - or values wrapped in implied HCIsEqual - ending with \c nil.
     \ingroup collection
  */
-OBJC_EXPORT id<HCMatcher> HC_onlyContains(id item, ...);
+OBJC_EXPORT id<HCMatcher> HC_onlyContains(id matcherOrValue, ...);
 
 /**
     Shorthand for \ref HC_onlyContains, available if HC_SHORTHAND is defined.
-
     \ingroup collection
  */
 #ifdef HC_SHORTHAND
