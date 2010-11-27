@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		08B51B4112A073DD00147210 /* Distribution */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 08B51B4412A073FB00147210 /* Build configuration list for PBXAggregateTarget "Distribution" */;
+			buildPhases = (
+				08B51B5412A074E200147210 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Distribution;
+			productName = Distribution;
+		};
 		08EEF60F129E0B1B0076BFCC /* Documentation */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 08EEF613129E0B2B0076BFCC /* Build configuration list for PBXAggregateTarget "Documentation" */;
@@ -771,6 +782,7 @@
 				0F030C551235D0BD00C59F75 /* libochamcrest */,
 				0F2A4B1E0D8B68B400051BCF /* UnitTests */,
 				08EEF60F129E0B1B0076BFCC /* Documentation */,
+				08B51B4112A073DD00147210 /* Distribution */,
 			);
 		};
 /* End PBXProject section */
@@ -787,6 +799,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		08B51B5412A074E200147210 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo Preparing clean build\nrm -R \"${SYMROOT}\"\n\necho Building OCHamcrest\nxcodebuild -configuration Release -target OCHamcrest > /dev/null\n\necho Building OCHamcrestIOS\nxcodebuild -configuration Release -target OCHamcrestIOS > /dev/null\n\necho Building Documentation\nrm -R \"${SRCROOT}/Documentation\"\n\"/Applications/Doxygen.app/Contents/Resources/doxygen\" ${SRCROOT}/Doxyfile > /dev/null\n\necho Assembling Distribution\nDISTRIBUTION=${SYMROOT}/OCHamcrest\nmkdir \"${DISTRIBUTION}\"\ncp -r \"${SYMROOT}/Release/OCHamcrest.framework\" \"${DISTRIBUTION}\"\ncp -r \"${SYMROOT}/Release/OCHamcrestIOS.framework\" \"${DISTRIBUTION}\"\ncp \"${SRCROOT}/../LICENSE.txt\" \"${DISTRIBUTION}\"\ncp -r \"${SRCROOT}/Documentation\" \"${DISTRIBUTION}\"\ncp -r \"${SRCROOT}/../Examples\" \"${DISTRIBUTION}\"\n\nfind \"${DISTRIBUTION}/Examples\" -type d \\( -name 'build' -or -name '.svn' \\) | while read DIR\ndo\n\trm -R \"${DIR}\";\ndone\n\nfind \"${DISTRIBUTION}/Examples\" -type f \\( -name '*.pbxuser' -or -name '*.perspectivev3' -or -name '.DS_Store' \\) | while read FILE\ndo\n\trm \"${FILE}\";\ndone\n\ncd ${SYMROOT}\nzip -r OCHamcrest.zip OCHamcrest > /dev/null\nopen .\n";
+		};
 		08EEF60E129E0B1B0076BFCC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -970,6 +995,27 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		08B51B4212A073DD00147210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Distribution;
+			};
+			name = Debug;
+		};
+		08B51B4312A073DD00147210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Distribution;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		08EEF610129E0B1C0076BFCC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1208,6 +1254,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		08B51B4412A073FB00147210 /* Build configuration list for PBXAggregateTarget "Distribution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08B51B4212A073DD00147210 /* Debug */,
+				08B51B4312A073DD00147210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		08EEF613129E0B2B0076BFCC /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
