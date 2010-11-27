@@ -14,7 +14,7 @@
 /**
 	\defgroup core Core Matchers
  
-	Foundation set of matcher implementations for common operations
+	Fundamental matchers of objects and values, and composite matchers.
  */
 #import <OCHamcrest/HCAllOf.h>
 #import <OCHamcrest/HCAnyOf.h>
@@ -35,6 +35,8 @@
 
 /**
 	\defgroup collection Collection Matchers
+    
+    Matchers of collections.
  
 	\ingroup library
  */
@@ -47,6 +49,8 @@
 
 /**
 	\defgroup number Number Matchers
+    
+    Matchers that perform numeric comparisons.
  
 	\ingroup library
  */
@@ -56,6 +60,8 @@
 
 /**
 	\defgroup object Object Matchers
+    
+    Matchers that inspect objects.
  
 	\ingroup library
  */
@@ -63,6 +69,8 @@
 
 /**
 	\defgroup text Text Matchers
+    
+    Matchers that perform text comparisons.
  
 	\ingroup library
  */
@@ -75,5 +83,5 @@
 /**
 	\defgroup helpers Helpers
  
-	Utilities for writing matchers
+	Utilities for writing Matchers
  */
