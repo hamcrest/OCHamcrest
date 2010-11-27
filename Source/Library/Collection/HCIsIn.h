@@ -10,7 +10,7 @@
 
 
 /**
-    Is the object contained in the collection?
+    Is the object present in the given collection?
     \ingroup collection
  */
 @interface HCIsIn : HCBaseMatcher
@@ -25,7 +25,7 @@
 
 
 /**
-    Is the object contained in the given collection?
+    Is the object present in the given collection?
     \see HCIsIn
     \ingroup collection
  */

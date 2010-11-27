@@ -30,7 +30,7 @@
     \see HCIsEqualIgnoringWhiteSpace
     \ingroup text
  */
-OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString* aString);
+OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString* string);
 
 /**
     Shorthand for \ref HC_endsWith, available if HC_SHORTHAND is defined.

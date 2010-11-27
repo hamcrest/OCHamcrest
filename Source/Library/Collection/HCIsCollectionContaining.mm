@@ -62,29 +62,25 @@
 @end
 
 
-extern "C" {
-
-id<HCMatcher> HC_hasItem(id matcherOrValue)
+OBJC_EXPORT id<HCMatcher> HC_hasItem(id item)
 {
-    return [HCIsCollectionContaining isCollectionContaining:HCWrapInMatcher(matcherOrValue)];
+    return [HCIsCollectionContaining isCollectionContaining:HCWrapInMatcher(item)];
 }
 
 
-id<HCMatcher> HC_hasItems(id matcherOrValue, ...)
+OBJC_EXPORT id<HCMatcher> HC_hasItems(id items, ...)
 {
-    NSMutableArray* matcherList = [NSMutableArray arrayWithObject:HC_hasItem(matcherOrValue)];
+    NSMutableArray* matchers = [NSMutableArray arrayWithObject:HC_hasItem(items)];
     
     va_list args;
-    va_start(args, matcherOrValue);
-    matcherOrValue = va_arg(args, id);
-    while (matcherOrValue != nil)
+    va_start(args, items);
+    items = va_arg(args, id);
+    while (items != nil)
     {
-        [matcherList addObject:HC_hasItem(matcherOrValue)];
-        matcherOrValue = va_arg(args, id);
+        [matchers addObject:HC_hasItem(items)];
+        items = va_arg(args, id);
     }
     va_end(args);
     
-    return [HCAllOf allOf:matcherList];
+    return [HCAllOf allOf:matchers];
 }
-
-}   // extern "C"

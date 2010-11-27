@@ -59,7 +59,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString* aString)
+OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString* string)
 {
-    return [HCIsEqualIgnoringCase isEqualIgnoringCase:aString];
+    return [HCIsEqualIgnoringCase isEqualIgnoringCase:string];
 }

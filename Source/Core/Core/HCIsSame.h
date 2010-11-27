@@ -29,7 +29,7 @@
     \see HCIsSame
     \ingroup core
  */
-OBJC_EXPORT id<HCMatcher> HC_sameInstance(id anObject);
+OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object);
 
 /**
     Shorthand for \ref HC_sameInstance, available if HC_SHORTHAND is defined.

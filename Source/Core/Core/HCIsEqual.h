@@ -29,7 +29,7 @@
     \see HCIsEqual
     \ingroup core
  */
-OBJC_EXPORT id<HCMatcher> HC_equalTo(id anObject);
+OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
 
 /**
     Shorthand for \ref HC_equalTo, available if HC_SHORTHAND is defined.

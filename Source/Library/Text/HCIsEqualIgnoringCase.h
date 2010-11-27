@@ -29,7 +29,7 @@
     \see HCIsEqualIgnoringCase
     \ingroup text
  */
-OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString* aString);
+OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString* string);
 
 /**
     Shorthand for \ref HC_equalToIgnoringCase, available if HC_SHORTHAND is defined.

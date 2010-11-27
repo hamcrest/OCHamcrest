@@ -15,22 +15,22 @@
 
 @implementation HCIsDictionaryContaining
 
-+ (HCIsDictionaryContaining*) isDictionaryContainingKey:(id<HCMatcher>)theKeyMatcher
-                                                  value:(id<HCMatcher>)theValueMatcher;
++ (HCIsDictionaryContaining*) isDictionaryContainingKey:(id<HCMatcher>)aKeyMatcher
+                                                  value:(id<HCMatcher>)aValueMatcher;
 {
     return [[[HCIsDictionaryContaining alloc]
-                    initWithKeyMatcher:theKeyMatcher valueMatcher:theValueMatcher] autorelease];
+                    initWithKeyMatcher:aKeyMatcher valueMatcher:aValueMatcher] autorelease];
 }
 
 
-- (id) initWithKeyMatcher:(id<HCMatcher>)theKeyMatcher
-             valueMatcher:(id<HCMatcher>)theValueMatcher;
+- (id) initWithKeyMatcher:(id<HCMatcher>)aKeyMatcher
+             valueMatcher:(id<HCMatcher>)aValueMatcher;
 {
     self = [super init];
     if (self != nil)
     {
-        keyMatcher = [theKeyMatcher retain];
-        valueMatcher = [theValueMatcher retain];
+        keyMatcher = [aKeyMatcher retain];
+        valueMatcher = [aValueMatcher retain];
     }
     return self;
 }
@@ -71,8 +71,8 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcherOrValue, id valueMatcherOrValue)
+OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcher, id valueMatcher)
 {
-    return [HCIsDictionaryContaining isDictionaryContainingKey:HCWrapInMatcher(keyMatcherOrValue)
-                                                         value:HCWrapInMatcher(valueMatcherOrValue)];
+    return [HCIsDictionaryContaining isDictionaryContainingKey:HCWrapInMatcher(keyMatcher)
+                                                         value:HCWrapInMatcher(valueMatcher)];
 }

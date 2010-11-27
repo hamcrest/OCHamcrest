@@ -10,7 +10,7 @@
 
 
 /**
-     Matches dictionaries containing a key satisfying a matcher.
+     Matches dictionaries containing a key satisfying a given matcher.
     \ingroup collection
  */
 @interface HCIsDictionaryContainingKey : HCBaseMatcher
@@ -25,8 +25,8 @@
 
 
 /**
-    Matches dictionaries containing a key satisfying a matcher.
-    \param matcherOrValue  A matcher, or an implied HCIsEqual matcher wrapping a value.
+    Matches dictionaries containing a key satisfying a given matcher.
+    \param matcherOrValue  A matcher, or a value for \ref equalTo matching.
     \see HCIsDictionaryContainingKey
     \ingroup collection
  */

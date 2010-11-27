@@ -36,13 +36,12 @@ assertThat(cheese, is(equalTo(smelly)))
 
 
 /**
-    Decorates another matcher, or provides a shortcut to the frequently used \ref is(equalTo(value)).
+    Decorates another matcher, or provides a shortcut to the frequently used \ref is(equalTo(x)).
 
-    If \a matcherOrValue is a matcher, its behavior is retained, but the test may be more
-    expressive.
+    If \a matcherOrValue is a matcher, its behavior is retained, but the test may be more expressive.
 
-    If \a matcherOrValue is not a matcher, a test for equality is assumed by wrapping the object in
-    HCIsEqual. This makes the following three statements the same:
+    If \a matcherOrValue is not a matcher, it is wrapped in an \ref equalTo matcher. This makes the
+    following three statements the same:
 \code
 assertThat(cheese, equalTo(smelly))
 assertThat(cheese, is(equalTo(smelly)))

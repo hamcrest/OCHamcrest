@@ -35,15 +35,15 @@
     would satisfy
     <code>onlyContains(lessThan(@"d"), nil)</code>.
     
-    If a \a matcherOrValue is not a matcher, it is equivalent to equalTo(value), so the array in the
-    example above would also satisfy
+    If a \a items is not a matcher, it is equivalent to equalTo(x), so the array in the example
+    above would also satisfy
     <code>onlyContains(@"a", @"b", @"c", nil)</code>.
 
-    \param matcherOrValue  Comma-separated list of matchers - or values wrapped in implied HCIsEqual - ending with \c nil.
+    \param items  Comma-separated list of matchers - or values for \ref equalTo matching - ending with \c nil.
     \see HCIsCollectionOnlyContaining
     \ingroup collection
  */
-OBJC_EXPORT id<HCMatcher> HC_onlyContains(id matcherOrValue, ...);
+OBJC_EXPORT id<HCMatcher> HC_onlyContains(id items, ...);
 
 /**
     Shorthand for \ref HC_onlyContains, available if HC_SHORTHAND is defined.

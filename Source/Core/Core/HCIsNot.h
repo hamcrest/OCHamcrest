@@ -25,7 +25,7 @@
 
 
 /**
-    Inverts the rule, or provides a shortcut to the frequently used isNot(equalTo(value)).
+    Inverts the rule, or provides a shortcut to the frequently used isNot(equalTo(x)).
 
     For example:
 \code

@@ -54,7 +54,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalTo(id anObject)
+OBJC_EXPORT id<HCMatcher> HC_equalTo(id object)
 {
-    return [HCIsEqual isEqualTo:anObject];
+    return [HCIsEqual isEqualTo:object];
 }

@@ -10,7 +10,7 @@
 
 
 /**
-    Matches dictionaries containing a key-value pair satisfying a pair of matchers.
+    Matches dictionaries containing a key-value pair satisfying a given pair of matchers.
     \ingroup collection
  */
 @interface HCIsDictionaryContaining : HCBaseMatcher
@@ -19,22 +19,22 @@
     id<HCMatcher> valueMatcher;
 }
 
-+ (HCIsDictionaryContaining*) isDictionaryContainingKey:(id<HCMatcher>)theKeyMatcher
-                                                  value:(id<HCMatcher>)theValueMatcher;
-- (id) initWithKeyMatcher:(id<HCMatcher>)theKeyMatcher
-             valueMatcher:(id<HCMatcher>)theValueMatcher;
++ (HCIsDictionaryContaining*) isDictionaryContainingKey:(id<HCMatcher>)aKeyMatcher
+                                                  value:(id<HCMatcher>)aValueMatcher;
+- (id) initWithKeyMatcher:(id<HCMatcher>)aKeyMatcher
+             valueMatcher:(id<HCMatcher>)aValueMatcher;
 
 @end
 
 
 /**
-    Matches dictionaries containing a key-value pair satisfying a pair of matchers.
-    \param keyMatcherOrValue    A matcher for the key, or an implied HCIsEqual matcher wrapping a value.
-    \param valueMatcherOrValue  A matcher for the value, or an implied HCIsEqual matcher wrapping a value.
+    Matches dictionaries containing a key-value pair satisfying a given pair of matchers.
+    \param keyMatcher    A matcher - or a value for \ref equalTo matching - for the key.
+    \param valueMatcher  A matcher - or a value for \ref equalTo matching - for the value.
     \see HCIsDictionaryContaining
     \ingroup collection
  */
-OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcherOrValue, id valueMatcherOrValue);
+OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcher, id valueMatcher);
 
 /**
     Shorthand for \ref HC_hasEntry, available if HC_SHORTHAND is defined.

@@ -42,6 +42,7 @@
     
     The description will be part of a larger description of why a matching failed, so it should be
     concise.
+    
     This method assumes that \c matches:item is false, but will not check this.
     
     \param item                 The item that the HCMatcher has rejected.

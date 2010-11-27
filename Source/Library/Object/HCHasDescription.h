@@ -30,7 +30,7 @@
     \li \ref hasDescription(\ref startsWith(\@"foo"))
     \li \ref hasDescription(\@"bar")
 
-    \param matcherOrValue is a matcher, or an implied HCIsEqual matcher wrapping a value.
+    \param matcherOrValue  A matcher, or a value for \ref equalTo matching.
     \see HCHasDescription
     \ingroup object
 */

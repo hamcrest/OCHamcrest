@@ -60,7 +60,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_sameInstance(id anObject)
+OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object)
 {
-    return [HCIsSame isSameAs:anObject];
+    return [HCIsSame isSameAs:object];
 }

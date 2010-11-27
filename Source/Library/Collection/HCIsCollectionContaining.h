@@ -26,11 +26,11 @@
 
 /**
     Matches a collection if any element satifies a given matcher.
-    \param matcherOrValue  A matcher, or an implied HCIsEqual matcher wrapping a value.
+    \param item  A matcher, or a value for \ref equalTo matching.
     \see HCIsCollectionContaining
     \ingroup collection
  */
-OBJC_EXPORT id<HCMatcher> HC_hasItem(id matcherOrValue);
+OBJC_EXPORT id<HCMatcher> HC_hasItem(id item);
 
 /**
     Shorthand for \ref HC_hasItem, available if HC_SHORTHAND is defined.
@@ -42,12 +42,12 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id matcherOrValue);
 
 
 /**
-    Matches a collection if all matchers are satisfied by any of the elements.
-    \param matcherOrValue  Comma-separated list of matchers - or values wrapped in implied HCIsEqual - ending with \c nil.
+    Matches a collection if all matchers are satisfied by any of the collection's elements.
+    \param items  Comma-separated list of matchers - or values for \ref equalTo matching - ending with \c nil.
     \see HCIsCollectionContaining
     \ingroup collection
  */
-OBJC_EXPORT id<HCMatcher> HC_hasItems(id matcherOrValue, ...);
+OBJC_EXPORT id<HCMatcher> HC_hasItems(id items, ...);
 
 /**
     Shorthand for \ref HC_hasItems, available if HC_SHORTHAND is defined.
