@@ -32,7 +32,7 @@
 OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object);
 
 /**
-    Shorthand for @ref HC_sameInstance, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_sameInstance, available if @c HC_SHORTHAND is defined.
     @ingroup core
  */
 #ifdef HC_SHORTHAND

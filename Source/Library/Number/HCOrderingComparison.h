@@ -33,7 +33,7 @@
 OBJC_EXPORT id<HCMatcher> HC_greaterThan(id expected);
 
 /**
-    Shorthand for @ref HC_greaterThan, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_greaterThan, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -48,7 +48,7 @@ OBJC_EXPORT id<HCMatcher> HC_greaterThan(id expected);
 OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id expected);
 
 /**
-    Shorthand for @ref HC_greaterThan, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_greaterThan, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -63,7 +63,7 @@ OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id expected);
 OBJC_EXPORT id<HCMatcher> HC_lessThan(id expected);
 
 /**
-    Shorthand for @ref HC_greaterThan, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_greaterThan, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -78,7 +78,7 @@ OBJC_EXPORT id<HCMatcher> HC_lessThan(id expected);
 OBJC_EXPORT id<HCMatcher> HC_lessThanOrEqualTo(id expected);
 
 /**
-    Shorthand for @ref HC_lessThanOrEqualTo, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_lessThanOrEqualTo, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND

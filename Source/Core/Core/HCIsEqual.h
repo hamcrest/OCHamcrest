@@ -32,7 +32,7 @@
 OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
 
 /**
-    Shorthand for @ref HC_equalTo, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalTo, available if @c HC_SHORTHAND is defined.
     @ingroup core
  */
 #ifdef HC_SHORTHAND

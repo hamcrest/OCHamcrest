@@ -16,7 +16,7 @@
 OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value);
 
 /**
-    Shorthand for @ref HC_equalToBool, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToBool, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -31,7 +31,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value);
 OBJC_EXPORT id<HCMatcher> HC_equalToChar(char value);
 
 /**
-    Shorthand for @ref HC_equalToChar, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToChar, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -46,7 +46,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToChar(char value);
 OBJC_EXPORT id<HCMatcher> HC_equalToDouble(double value);
 
 /**
-    Shorthand for @ref HC_equalToDouble, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToDouble, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -60,7 +60,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToDouble(double value);
 OBJC_EXPORT id<HCMatcher> HC_equalToFloat(float value);
 
 /**
-    Shorthand for @ref HC_equalToFloat, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToFloat, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -75,7 +75,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToFloat(float value);
 OBJC_EXPORT id<HCMatcher> HC_equalToInt(int value);
 
 /**
-    Shorthand for @ref HC_equalToInt, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToInt, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -90,7 +90,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToInt(int value);
 OBJC_EXPORT id<HCMatcher> HC_equalToLong(long value);
 
 /**
-    Shorthand for @ref HC_equalToLong, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToLong, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -105,7 +105,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToLong(long value);
 OBJC_EXPORT id<HCMatcher> HC_equalToLongLong(long long value);
 
 /**
-    Shorthand for @ref HC_equalToLongLong, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToLongLong, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -120,7 +120,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToLongLong(long long value);
 OBJC_EXPORT id<HCMatcher> HC_equalToShort(short value);
 
 /**
-    Shorthand for @ref HC_equalToShort, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToShort, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -135,7 +135,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToShort(short value);
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedChar(unsigned char value);
 
 /**
-    Shorthand for @ref HC_equalToUnsignedChar, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToUnsignedChar, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -150,7 +150,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedChar(unsigned char value);
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInt(unsigned int value);
 
 /**
-    Shorthand for @ref HC_equalToUnsignedInt, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToUnsignedInt, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -165,7 +165,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInt(unsigned int value);
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLong(unsigned long value);
 
 /**
-    Shorthand for @ref HC_equalToUnsignedLong, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToUnsignedLong, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -180,7 +180,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLong(unsigned long value);
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
 
 /**
-    Shorthand for @ref HC_equalToUnsignedLongLong, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToUnsignedLongLong, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -195,7 +195,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
 
 /**
-    Shorthand for @ref HC_equalToUnsignedShort, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToUnsignedShort, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -210,7 +210,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
 OBJC_EXPORT id<HCMatcher> HC_equalToInteger(NSInteger value);
 
 /**
-    Shorthand for @ref HC_equalToInteger, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToInteger, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -225,7 +225,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToInteger(NSInteger value);
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInteger(NSUInteger value);
 
 /**
-    Shorthand for @ref HC_equalToUnsignedInteger, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_equalToUnsignedInteger, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND

@@ -33,7 +33,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasItem(id item);
 
 /**
-    Shorthand for @ref HC_hasItem, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_hasItem, available if @c HC_SHORTHAND is defined.
     @ingroup collection
  */
 #ifdef HC_SHORTHAND
@@ -50,7 +50,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id item);
 OBJC_EXPORT id<HCMatcher> HC_hasItems(id items, ...);
 
 /**
-    Shorthand for @ref HC_hasItems, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_hasItems, available if @c HC_SHORTHAND is defined.
     @ingroup collection
  */
 #ifdef HC_SHORTHAND

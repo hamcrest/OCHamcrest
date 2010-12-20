@@ -33,7 +33,7 @@
 OBJC_EXPORT id<HCMatcher> HC_closeTo(double aValue, double anError);
 
 /**
-    Shorthand for @ref HC_closeTo, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_closeTo, available if @c HC_SHORTHAND is defined.
     @ingroup number
 */
 #ifdef HC_SHORTHAND

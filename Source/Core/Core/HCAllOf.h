@@ -37,7 +37,7 @@
 OBJC_EXPORT id<HCMatcher> HC_allOf(id<HCMatcher> matcher, ...);
 
 /**
-    Shorthand for @ref HC_allOf, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_allOf, available if @c HC_SHORTHAND is defined.
     @ingroup core
  */
 #ifdef HC_SHORTHAND

@@ -30,7 +30,7 @@
 OBJC_EXPORT id<HCMatcher> HC_containsString(NSString* aSubstring);
 
 /**
-    Shorthand for @ref HC_containsString, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_containsString, available if @c HC_SHORTHAND is defined.
     @ingroup text
  */
 #ifdef HC_SHORTHAND

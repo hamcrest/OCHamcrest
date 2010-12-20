@@ -37,7 +37,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcher, id valueMatcher);
 
 /**
-    Shorthand for @ref HC_hasEntry, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_hasEntry, available if @c HC_SHORTHAND is defined.
     @ingroup collection
  */
 #ifdef HC_SHORTHAND
