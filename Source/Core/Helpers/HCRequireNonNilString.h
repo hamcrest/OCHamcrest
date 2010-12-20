@@ -10,7 +10,7 @@
 
 
 /**
-    Throws an NSException if \a string is nil.
-    \ingroup helpers
+    Throws an NSException if @a string is nil.
+    @ingroup helpers
 */
 OBJC_EXPORT void HCRequireNonNilString(NSString* string);

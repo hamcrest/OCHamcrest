@@ -14,7 +14,7 @@
 
     This matcher will never match an empty collection.
 
-    \ingroup collection
+    @ingroup collection
 */
 @interface HCIsCollectionOnlyContaining : HCBaseMatcher
 {
@@ -35,19 +35,19 @@
     would satisfy
     <code>onlyContains(lessThan(@"d"), nil)</code>.
     
-    If a \a items is not a matcher, it is equivalent to equalTo(x), so the array in the example
+    If a @a items is not a matcher, it is equivalent to equalTo(x), so the array in the example
     above would also satisfy
     <code>onlyContains(@"a", @"b", @"c", nil)</code>.
 
-    \param items  Comma-separated list of matchers - or values for \ref equalTo matching - ending with \c nil.
-    \see HCIsCollectionOnlyContaining
-    \ingroup collection
+    @param items  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
+    @see HCIsCollectionOnlyContaining
+    @ingroup collection
  */
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id items, ...);
 
 /**
-    Shorthand for \ref HC_onlyContains, available if HC_SHORTHAND is defined.
-    \ingroup collection
+    Shorthand for @ref HC_onlyContains, available if HC_SHORTHAND is defined.
+    @ingroup collection
  */
 #ifdef HC_SHORTHAND
     #define onlyContains HC_onlyContains

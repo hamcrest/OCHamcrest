@@ -14,15 +14,15 @@
     expressive.
 
     For example:
-\code
+@code
 assertThat(cheese, equalTo(smelly))
-\endcode
+@endcode
     vs.
-\code
+@code
 assertThat(cheese, is(equalTo(smelly)))
-\endcode
+@endcode
 
-    \ingroup core
+    @ingroup core
  */
 @interface HCIs : HCBaseMatcher
 {
@@ -36,28 +36,28 @@ assertThat(cheese, is(equalTo(smelly)))
 
 
 /**
-    Decorates another matcher, or provides a shortcut to the frequently used \ref is(equalTo(x)).
+    Decorates another matcher, or provides a shortcut to the frequently used @ref is(equalTo(x)).
 
-    If \a matcherOrValue is a matcher, its behavior is retained, but the test may be more expressive.
+    If @a matcherOrValue is a matcher, its behavior is retained, but the test may be more expressive.
 
-    If \a matcherOrValue is not a matcher, it is wrapped in an \ref equalTo matcher. This makes the
+    If @a matcherOrValue is not a matcher, it is wrapped in an @ref equalTo matcher. This makes the
     following three statements the same:
-\code
+@code
 assertThat(cheese, equalTo(smelly))
 assertThat(cheese, is(equalTo(smelly)))
 assertThat(cheese, is(smelly))
-\endcode
+@endcode
     Choose the style that makes your expression most readable. This will vary depending on context.
 
-    \see HCIs
-    \ingroup core
+    @see HCIs
+    @ingroup core
 
  */
 OBJC_EXPORT id<HCMatcher> HC_is(id matcherOrValue);
 
 /**
-    Shorthand for \ref HC_is, available if HC_SHORTHAND is defined.
-    \ingroup core
+    Shorthand for @ref HC_is, available if HC_SHORTHAND is defined.
+    @ingroup core
  */
 #ifdef HC_SHORTHAND
     #define is HC_is

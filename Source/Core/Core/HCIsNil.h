@@ -10,8 +10,8 @@
 
 
 /**
-    Is the value \c nil?
-    \ingroup core
+    Is the value @c nil?
+    @ingroup core
 */
 @interface HCIsNil : HCBaseMatcher
 {
@@ -23,15 +23,15 @@
 
 
 /**
-    Matches if the value is \c nil.
-    \see HCIsNil
-    \ingroup core
+    Matches if the value is @c nil.
+    @see HCIsNil
+    @ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_nilValue();
 
 /**
-    Shorthand for \ref HC_nilValue, available if HC_SHORTHAND is defined.
-    \ingroup core
+    Shorthand for @ref HC_nilValue, available if HC_SHORTHAND is defined.
+    @ingroup core
  */
 #ifdef HC_SHORTHAND
     #define nilValue HC_nilValue
@@ -39,16 +39,16 @@ OBJC_EXPORT id<HCMatcher> HC_nilValue();
 
 
 /**
-    Matches if the value is not \c nil.
-    \see HCIsNil
-    \see HCIsNot
-    \ingroup core
+    Matches if the value is not @c nil.
+    @see HCIsNil
+    @see HCIsNot
+    @ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_notNilValue();
 
 /**
-    Shorthand for \ref HC_notNilValue, available if HC_SHORTHAND is defined.
-    \ingroup core
+    Shorthand for @ref HC_notNilValue, available if HC_SHORTHAND is defined.
+    @ingroup core
  */
 #ifdef HC_SHORTHAND
     #define notNilValue HC_notNilValue

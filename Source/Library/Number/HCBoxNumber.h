@@ -11,7 +11,7 @@ namespace hamcrest {
 
 /**
     Boxes scalar value in NSNumber, specialized per type.
-    \ingroup number
+    @ingroup number
  */
 template <typename T>
 inline

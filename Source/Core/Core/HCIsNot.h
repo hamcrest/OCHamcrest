@@ -11,7 +11,7 @@
 
 /**
     Calculates the logical negation of a matcher.
-    \ingroup core
+    @ingroup core
 */
 @interface HCIsNot : HCBaseMatcher
 {
@@ -28,22 +28,22 @@
     Inverts the rule, or provides a shortcut to the frequently used isNot(equalTo(x)).
 
     For example:
-\code
+@code
 assertThat(cheese, isNot(equalTo(smelly)))
-\endcode
+@endcode
     vs.
-\code
+@code
 assertThat(cheese, isNot(smelly))
-\endcode
+@endcode
 
-    \see HCIsNot
-    \ingroup core
+    @see HCIsNot
+    @ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_isNot(id matcherOrValue);
 
 /**
-    Shorthand for \ref HC_isNot, available if HC_SHORTHAND is defined.
-    \ingroup core
+    Shorthand for @ref HC_isNot, available if HC_SHORTHAND is defined.
+    @ingroup core
  */
 #ifdef HC_SHORTHAND
     #define isNot HC_isNot

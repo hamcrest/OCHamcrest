@@ -14,7 +14,7 @@
     
     Tests whether the result of passing a given invocation to the value satisfies a given matcher.
 
-    \ingroup helpers
+    @ingroup helpers
  */
 @interface HCInvocationMatcher : HCBaseMatcher
 {
