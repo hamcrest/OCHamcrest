@@ -10,13 +10,14 @@
 
 
 /**
-    Is the BOOL value, converted to an NSNumber, equal to another object?
+    Is the @c BOOL value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToBool
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value);
 
 /**
-    Shorthand for @ref HC_equalToBool, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToBool, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -25,13 +26,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value);
 
 
 /**
-    Is the char value, converted to an NSNumber, equal to another object?
+    Is the @c char value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToChar
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToChar(char value);
 
 /**
-    Shorthand for @ref HC_equalToChar, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToChar, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -40,13 +42,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToChar(char value);
 
 
 /**
-    Is the double value, converted to an NSNumber, equal to another object?
+    Is the @c double value, converted to an @c NSNumber, equal to another object? 
+    @b Synonym: @ref equalToDouble
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToDouble(double value);
 
 /**
-    Shorthand for @ref HC_equalToDouble, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToDouble, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -54,13 +57,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToDouble(double value);
 #endif
 
 /**
-    Is the float value, converted to an NSNumber, equal to another object?
+    Is the @c float value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToFloat
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToFloat(float value);
 
 /**
-    Shorthand for @ref HC_equalToFloat, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToFloat, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -69,13 +73,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToFloat(float value);
 
 
 /**
-    Is the int value, converted to an NSNumber, equal to another object?
+    Is the @c int value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToInt
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToInt(int value);
 
 /**
-    Shorthand for @ref HC_equalToInt, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToInt, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -84,13 +89,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToInt(int value);
 
 
 /**
-    Is the long value, converted to an NSNumber, equal to another object?
+    Is the @c long value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToLong
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToLong(long value);
 
 /**
-    Shorthand for @ref HC_equalToLong, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToLong, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -99,13 +105,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToLong(long value);
 
 
 /**
-    Is the long long value, converted to an NSNumber, equal to another object?
+    Is the <code>long long</code> value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToLongLong
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToLongLong(long long value);
 
 /**
-    Shorthand for @ref HC_equalToLongLong, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToLongLong, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -114,13 +121,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToLongLong(long long value);
 
 
 /**
-    Is the short value, converted to an NSNumber, equal to another object?
+    Is the @c short value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToShort
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToShort(short value);
 
 /**
-    Shorthand for @ref HC_equalToShort, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToShort, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -129,13 +137,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToShort(short value);
 
 
 /**
-    Is the unsigned char value, converted to an NSNumber, equal to another object?
+    Is the <code>unsigned char</code> value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToUnsignedChar
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedChar(unsigned char value);
 
 /**
-    Shorthand for @ref HC_equalToUnsignedChar, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToUnsignedChar, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -144,13 +153,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedChar(unsigned char value);
 
 
 /**
-    Is the unsigned int value, converted to an NSNumber, equal to another object?
+    Is the <code>unsigned int</code> value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToUnsignedInt
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInt(unsigned int value);
 
 /**
-    Shorthand for @ref HC_equalToUnsignedInt, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToUnsignedInt, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -159,13 +169,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInt(unsigned int value);
 
 
 /**
-    Is the unsigned long value, converted to an NSNumber, equal to another object?
+    Is the <code>unsigned long</code> value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToUnsignedLong
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLong(unsigned long value);
 
 /**
-    Shorthand for @ref HC_equalToUnsignedLong, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToUnsignedLong, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -174,13 +185,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLong(unsigned long value);
 
 
 /**
-    Is the unsigned long long value, converted to an NSNumber, equal to another object?
+    Is the <code>unsigned long long</code> value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToUnsignedLongLong
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
 
 /**
-    Shorthand for @ref HC_equalToUnsignedLongLong, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToUnsignedLongLong, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -189,13 +201,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
 
 
 /**
-    Is the unsigned short value, converted to an NSNumber, equal to another object?
+    Is the <code>unsigned short</code> value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToUnsignedShort
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
 
 /**
-    Shorthand for @ref HC_equalToUnsignedShort, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToUnsignedShort, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -204,13 +217,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
 
 
 /**
-    Is the NSInteger value, converted to an NSNumber, equal to another object?
+    Is the @c NSInteger value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToInteger
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToInteger(NSInteger value);
 
 /**
-    Shorthand for @ref HC_equalToInteger, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToInteger, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -219,13 +233,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToInteger(NSInteger value);
 
 
 /**
-    Is the NSUInteger value, converted to an NSNumber, equal to another object?
+    Is the @c NSUInteger value, converted to an @c NSNumber, equal to another object?
+    @b Synonym: @ref equalToUnsignedInteger
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInteger(NSUInteger value);
 
 /**
-    Shorthand for @ref HC_equalToUnsignedInteger, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalToUnsignedInteger, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND

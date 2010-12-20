@@ -29,6 +29,8 @@
 
 /**
     Matches dictionaries containing a key-value pair satisfying a given pair of matchers.
+ 
+    @b Synonym: @ref hasEntry
     @param keyMatcher    A matcher - or a value for @ref equalTo matching - for the key.
     @param valueMatcher  A matcher - or a value for @ref equalTo matching - for the value.
     @see HCIsDictionaryContaining
@@ -37,7 +39,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcher, id valueMatcher);
 
 /**
-    Shorthand for @ref HC_hasEntry, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_hasEntry, available if @c HC_SHORTHAND is defined.
     @ingroup collection
  */
 #ifdef HC_SHORTHAND

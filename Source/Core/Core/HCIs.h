@@ -49,6 +49,8 @@ assertThat(cheese, is(smelly))
 @endcode
     Choose the style that makes your expression most readable. This will vary depending on context.
 
+ 
+    @b Synonym: @ref is
     @see HCIs
     @ingroup core
 
@@ -56,7 +58,7 @@ assertThat(cheese, is(smelly))
 OBJC_EXPORT id<HCMatcher> HC_is(id matcherOrValue);
 
 /**
-    Shorthand for @ref HC_is, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_is, available if @c HC_SHORTHAND is defined.
     @ingroup core
  */
 #ifdef HC_SHORTHAND

@@ -36,13 +36,14 @@ assertThat(cheese, isNot(equalTo(smelly)))
 assertThat(cheese, isNot(smelly))
 @endcode
 
+    @b Synonym: @ref isNot
     @see HCIsNot
     @ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_isNot(id matcherOrValue);
 
 /**
-    Shorthand for @ref HC_isNot, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_isNot, available if @c HC_SHORTHAND is defined.
     @ingroup core
  */
 #ifdef HC_SHORTHAND

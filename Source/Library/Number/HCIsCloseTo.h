@@ -27,13 +27,15 @@
 
 /**
     Is the value a number equal to a value within some range of acceptable error?
+ 
+    @b Synonym: @ref closeTo
     @see HCIsCloseTo
     @ingroup number
 */
 OBJC_EXPORT id<HCMatcher> HC_closeTo(double aValue, double anError);
 
 /**
-    Shorthand for @ref HC_closeTo, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_closeTo, available if @c HC_SHORTHAND is defined.
     @ingroup number
 */
 #ifdef HC_SHORTHAND

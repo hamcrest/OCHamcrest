@@ -30,6 +30,7 @@
     @li @ref hasDescription(@ref startsWith(\@"foo"))
     @li @ref hasDescription(\@"bar")
 
+    @b Synonym: @ref hasDescription
     @param matcherOrValue  A matcher, or a value for @ref equalTo matching.
     @see HCHasDescription
     @ingroup object
@@ -37,7 +38,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasDescription(id matcherOrValue);
 
 /**
-    Shorthand for @ref HC_hasDescription, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_hasDescription, available if @c HC_SHORTHAND is defined.
     @ingroup object
  */
 #ifdef HC_SHORTHAND

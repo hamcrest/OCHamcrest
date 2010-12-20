@@ -36,13 +36,15 @@
     Optional values following the matcher are substituted for \%0, \%1, etc.
     The last argument must be nil.
 
+ 
+    @b Synonym: @ref describedAs
     @see HCDescribedAs
     @ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString* description, id<HCMatcher> matcher, ...);
 
 /**
-    Shorthand for @ref HC_describedAs, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_describedAs, available if @c HC_SHORTHAND is defined.
     @ingroup core
  */
 #ifdef HC_SHORTHAND

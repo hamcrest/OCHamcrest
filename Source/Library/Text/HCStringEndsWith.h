@@ -24,13 +24,15 @@
 
 /**
     Tests if the argument is a string that ends with a substring.
+    
+    @b Synonym: @ref endsWith
     @see HCStringEndsWith
     @ingroup text
  */
 OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString* aSubstring);
 
 /**
-    Shorthand for @ref HC_endsWith, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_endsWith, available if @c HC_SHORTHAND is defined.
     @ingroup text
  */
 #ifdef HC_SHORTHAND

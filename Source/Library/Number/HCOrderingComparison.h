@@ -28,12 +28,13 @@
 
 /**
     Is value > expected?
+    @b Synonym: @ref greaterThan
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_greaterThan(id expected);
 
 /**
-    Shorthand for @ref HC_greaterThan, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_greaterThan, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -43,12 +44,13 @@ OBJC_EXPORT id<HCMatcher> HC_greaterThan(id expected);
 
 /**
     Is value >= expected?
+    @b Synonym: @ref greaterThanOrEqualTo
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id expected);
 
 /**
-    Shorthand for @ref HC_greaterThan, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_greaterThan, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -58,12 +60,13 @@ OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id expected);
 
 /**
     Is value < expected?
+    @b Synonym: @ref lessThan
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_lessThan(id expected);
 
 /**
-    Shorthand for @ref HC_greaterThan, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_greaterThan, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND
@@ -73,12 +76,13 @@ OBJC_EXPORT id<HCMatcher> HC_lessThan(id expected);
 
 /**
     Is value <= expected?
+    @b Synonym: @ref lessThanOrEqualTo
     @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_lessThanOrEqualTo(id expected);
 
 /**
-    Shorthand for @ref HC_lessThanOrEqualTo, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_lessThanOrEqualTo, available if @c HC_SHORTHAND is defined.
     @ingroup number
  */
 #ifdef HC_SHORTHAND

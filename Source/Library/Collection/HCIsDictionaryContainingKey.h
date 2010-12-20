@@ -33,7 +33,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasKey(id matcherOrValue);
 
 /**
-    Shorthand for @ref HC_hasKey, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_hasKey, available if @c HC_SHORTHAND is defined.
     @ingroup collection
  */
 #ifdef HC_SHORTHAND
