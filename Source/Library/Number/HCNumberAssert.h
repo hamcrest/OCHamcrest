@@ -21,7 +21,7 @@ OBJC_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,
     HC_assertThatBoolWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatBool, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatBool, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -40,7 +40,7 @@ OBJC_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
     HC_assertThatCharWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatChar, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatChar, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -59,7 +59,7 @@ OBJC_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actual,
     HC_assertThatDoubleWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatDouble, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatDouble, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -78,7 +78,7 @@ OBJC_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
     HC_assertThatFloatWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatFloat, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatFloat, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -97,7 +97,7 @@ OBJC_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
     HC_assertThatIntWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatInt, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatInt, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -116,7 +116,7 @@ OBJC_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
     HC_assertThatLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatLong, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatLong, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -136,7 +136,7 @@ OBJC_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long actual
     HC_assertThatLongLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatLongLong, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatLongLong, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -155,7 +155,7 @@ OBJC_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
     HC_assertThatShortWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatShort, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatShort, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -175,7 +175,7 @@ OBJC_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsigned cha
     HC_assertThatUnsignedCharWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatUnsignedChar, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatUnsignedChar, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -195,7 +195,7 @@ OBJC_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigned int 
     HC_assertThatUnsignedIntWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatUnsignedInt, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatUnsignedInt, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -215,7 +215,7 @@ OBJC_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsigned lon
     HC_assertThatUnsignedLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatUnsignedLong, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatUnsignedLong, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -235,7 +235,7 @@ OBJC_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, unsigned
     HC_assertThatUnsignedLongLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatUnsignedLongLong, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatUnsignedLongLong, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -255,7 +255,7 @@ OBJC_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsigned sh
     HC_assertThatUnsignedShortWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatUnsignedShort, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatUnsignedShort, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -274,7 +274,7 @@ OBJC_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger actual,
     HC_assertThatIntegerWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatInteger, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatInteger, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND
@@ -293,7 +293,7 @@ OBJC_EXPORT void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUIntege
     HC_assertThatUnsignedIntegerWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThatUnsignedInteger, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThatUnsignedInteger, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND

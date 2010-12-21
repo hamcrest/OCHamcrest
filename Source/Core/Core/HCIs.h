@@ -56,7 +56,7 @@ assertThat(cheese, is(smelly))
 OBJC_EXPORT id<HCMatcher> HC_is(id matcherOrValue);
 
 /**
-    Shorthand for @ref HC_is, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_is, available if @c HC_SHORTHAND is defined.
     @ingroup core
  */
 #ifdef HC_SHORTHAND

@@ -21,7 +21,7 @@ OBJC_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher>
     HC_assertThatWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    Shorthand for @ref HC_assertThat, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_assertThat, available if @c HC_SHORTHAND is defined.
     @ingroup integration
  */
 #ifdef HC_SHORTHAND

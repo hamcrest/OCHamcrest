@@ -30,7 +30,7 @@
 OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString* aSubstring);
 
 /**
-    Shorthand for @ref HC_startsWith, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_startsWith, available if @c HC_SHORTHAND is defined.
     @ingroup text
  */
 #ifdef HC_SHORTHAND

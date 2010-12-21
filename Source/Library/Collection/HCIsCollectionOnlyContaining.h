@@ -46,7 +46,7 @@
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id items, ...);
 
 /**
-    Shorthand for @ref HC_onlyContains, available if HC_SHORTHAND is defined.
+    Shorthand for @ref HC_onlyContains, available if @c HC_SHORTHAND is defined.
     @ingroup collection
  */
 #ifdef HC_SHORTHAND
