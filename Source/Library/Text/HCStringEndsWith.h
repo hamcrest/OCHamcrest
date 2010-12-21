@@ -11,7 +11,7 @@
 
 /**
     Tests if the argument is a string that ends with a substring.
-    \ingroup text
+    @ingroup text
  */
 @interface HCStringEndsWith : HCSubstringMatcher
 {
@@ -24,14 +24,14 @@
 
 /**
     Tests if the argument is a string that ends with a substring.
-    \see HCStringEndsWith
-    \ingroup text
+    @see HCStringEndsWith
+    @ingroup text
  */
 OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString* aSubstring);
 
 /**
-    Shorthand for \ref HC_endsWith, available if HC_SHORTHAND is defined.
-    \ingroup text
+    Shorthand for @ref HC_endsWith, available if HC_SHORTHAND is defined.
+    @ingroup text
  */
 #ifdef HC_SHORTHAND
     #define endsWith HC_endsWith

@@ -11,7 +11,7 @@
 
 /**
     Tests if a string is equal to another string, regardless of the case.
-    \ingroup text
+    @ingroup text
  */
 @interface HCIsEqualIgnoringCase : HCBaseMatcher
 {
@@ -26,14 +26,14 @@
 
 /**
     Tests if a string is equal to another string, regardless of the case.
-    \see HCIsEqualIgnoringCase
-    \ingroup text
+    @see HCIsEqualIgnoringCase
+    @ingroup text
  */
 OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString* string);
 
 /**
-    Shorthand for \ref HC_equalToIgnoringCase, available if HC_SHORTHAND is defined.
-    \ingroup text
+    Shorthand for @ref HC_equalToIgnoringCase, available if HC_SHORTHAND is defined.
+    @ingroup text
  */
 #ifdef HC_SHORTHAND
     #define equalToIgnoringCase HC_equalToIgnoringCase

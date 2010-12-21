@@ -308,6 +308,8 @@
 		0FA913060DA064CF000AC3AA /* HCIsEqualIgnoringWhiteSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualIgnoringWhiteSpace.h; sourceTree = "<group>"; };
 		0FA913070DA064CF000AC3AA /* HCIsEqualIgnoringWhiteSpace.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsEqualIgnoringWhiteSpace.mm; sourceTree = "<group>"; };
 		0FA913DC0DA0999E000AC3AA /* OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHamcrest.h; sourceTree = "<group>"; };
+		0FE4349712BF15DA000F27AE /* MainPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPage.h; sourceTree = "<group>"; };
+		0FE4349812BF15E0000F27AE /* CustomMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMatchers.h; sourceTree = "<group>"; };
 		0FE5E3540D95D7470021A644 /* IsDictionaryContainingKeyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsDictionaryContainingKeyTest.m; sourceTree = "<group>"; };
 		0FE5E3580D95D7A50021A644 /* HCIsDictionaryContainingKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingKey.h; sourceTree = "<group>"; };
 		0FE5E3590D95D7A50021A644 /* HCIsDictionaryContainingKey.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsDictionaryContainingKey.mm; sourceTree = "<group>"; };
@@ -629,6 +631,8 @@
 			isa = PBXGroup;
 			children = (
 				32DBCF5E0370ADEE00C91783 /* OCHamcrest_Prefix.pch */,
+				0FE4349712BF15DA000F27AE /* MainPage.h */,
+				0FE4349812BF15E0000F27AE /* CustomMatchers.h */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";

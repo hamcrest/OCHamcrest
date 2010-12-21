@@ -28,13 +28,13 @@
 
 /**
     Is value > expected?
-    \ingroup number
+    @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_greaterThan(id expected);
 
 /**
-    Shorthand for \ref HC_greaterThan, available if HC_SHORTHAND is defined.
-    \ingroup number
+    Shorthand for @ref HC_greaterThan, available if HC_SHORTHAND is defined.
+    @ingroup number
  */
 #ifdef HC_SHORTHAND
     #define greaterThan HC_greaterThan
@@ -43,13 +43,13 @@ OBJC_EXPORT id<HCMatcher> HC_greaterThan(id expected);
 
 /**
     Is value >= expected?
-    \ingroup number
+    @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id expected);
 
 /**
-    Shorthand for \ref HC_greaterThan, available if HC_SHORTHAND is defined.
-    \ingroup number
+    Shorthand for @ref HC_greaterThan, available if HC_SHORTHAND is defined.
+    @ingroup number
  */
 #ifdef HC_SHORTHAND
     #define greaterThanOrEqualTo HC_greaterThanOrEqualTo
@@ -58,13 +58,13 @@ OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id expected);
 
 /**
     Is value < expected?
-    \ingroup number
+    @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_lessThan(id expected);
 
 /**
-    Shorthand for \ref HC_greaterThan, available if HC_SHORTHAND is defined.
-    \ingroup number
+    Shorthand for @ref HC_greaterThan, available if HC_SHORTHAND is defined.
+    @ingroup number
  */
 #ifdef HC_SHORTHAND
     #define lessThan HC_lessThan
@@ -73,13 +73,13 @@ OBJC_EXPORT id<HCMatcher> HC_lessThan(id expected);
 
 /**
     Is value <= expected?
-    \ingroup number
+    @ingroup number
  */
 OBJC_EXPORT id<HCMatcher> HC_lessThanOrEqualTo(id expected);
 
 /**
-    Shorthand for \ref HC_lessThanOrEqualTo, available if HC_SHORTHAND is defined.
-    \ingroup number
+    Shorthand for @ref HC_lessThanOrEqualTo, available if HC_SHORTHAND is defined.
+    @ingroup number
  */
 #ifdef HC_SHORTHAND
     #define lessThanOrEqualTo HC_lessThanOrEqualTo
