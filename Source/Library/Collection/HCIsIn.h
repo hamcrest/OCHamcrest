@@ -26,13 +26,15 @@
 
 /**
     Is the object present in the given collection?
+ 
+    @b Synonym: @ref isIn
     @see HCIsIn
     @ingroup collection
  */
 OBJC_EXPORT id<HCMatcher> HC_isIn(id aCollection);
 
 /**
-    Shorthand for @ref HC_isIn, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_isIn, available if @c HC_SHORTHAND is defined.
     @ingroup collection
  */
 #ifdef HC_SHORTHAND

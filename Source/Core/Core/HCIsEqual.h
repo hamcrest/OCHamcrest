@@ -26,13 +26,15 @@
 
 /**
     Is the object equal to another object, as tested by the -isEqual: method?
+ 
+    @b Synonym: @ref equalTo
     @see HCIsEqual
     @ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
 
 /**
-    Shorthand for @ref HC_equalTo, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_equalTo, available if @c HC_SHORTHAND is defined.
     @ingroup core
  */
 #ifdef HC_SHORTHAND

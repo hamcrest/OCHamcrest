@@ -38,7 +38,8 @@
     If a @a items is not a matcher, it is equivalent to equalTo(x), so the array in the example
     above would also satisfy
     <code>onlyContains(@"a", @"b", @"c", nil)</code>.
-
+ 
+    @b Synonym: @ref onlyContains
     @param items  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCIsCollectionOnlyContaining
     @ingroup collection
@@ -46,7 +47,7 @@
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id items, ...);
 
 /**
-    Shorthand for @ref HC_onlyContains, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_onlyContains, available if @c HC_SHORTHAND is defined.
     @ingroup collection
  */
 #ifdef HC_SHORTHAND

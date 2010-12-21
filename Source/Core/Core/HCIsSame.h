@@ -26,13 +26,15 @@
 
 /**
     Evaluates to @c YES only when the argument is this same object.
+ 
+    @b Synonym: @ref sameInstance
     @see HCIsSame
     @ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object);
 
 /**
-    Shorthand for @ref HC_sameInstance, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_sameInstance, available if @c HC_SHORTHAND is defined.
     @ingroup core
  */
 #ifdef HC_SHORTHAND

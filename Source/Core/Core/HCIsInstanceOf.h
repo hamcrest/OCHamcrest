@@ -26,13 +26,15 @@
 
 /**
     Is the value an instance of a particular type?
+ 
+    @b Synonym: @ref instanceOf
     @see HCIsInstanceOf
     @ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class type);
 
 /**
-    Shorthand for @ref HC_instanceOf, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_instanceOf, available if @c HC_SHORTHAND is defined.
     @ingroup core
  */
 #ifdef HC_SHORTHAND

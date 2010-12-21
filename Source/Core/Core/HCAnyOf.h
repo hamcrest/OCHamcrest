@@ -30,6 +30,8 @@
 
 /**
     Evaluates to @c YES if @b any of the passed in matchers evaluate to @c YES.
+ 
+    @b Synonym: @ref anyOf
     @param matcher  Comma-separated list of matchers ending with @c nil.
     @see HCAnyOf
     @ingroup core
@@ -37,7 +39,7 @@
 OBJC_EXPORT id<HCMatcher> HC_anyOf(id<HCMatcher> matcher, ...);
 
 /**
-    Shorthand for @ref HC_anyOf, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_anyOf, available if @c HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define anyOf HC_anyOf

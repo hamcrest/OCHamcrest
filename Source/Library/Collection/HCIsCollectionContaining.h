@@ -26,6 +26,8 @@
 
 /**
     Matches a collection if any element satifies a given matcher.
+ 
+    @b Synonym: @ref hasItem
     @param item  A matcher, or a value for @ref equalTo matching.
     @see HCIsCollectionContaining
     @ingroup collection
@@ -33,7 +35,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasItem(id item);
 
 /**
-    Shorthand for @ref HC_hasItem, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_hasItem, available if @c HC_SHORTHAND is defined.
     @ingroup collection
  */
 #ifdef HC_SHORTHAND
@@ -43,6 +45,8 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id item);
 
 /**
     Matches a collection if all matchers are satisfied by any of the collection's elements.
+ 
+    @b Synonym: @ref hasItems
     @param items  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCIsCollectionContaining
     @ingroup collection
@@ -50,7 +54,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id item);
 OBJC_EXPORT id<HCMatcher> HC_hasItems(id items, ...);
 
 /**
-    Shorthand for @ref HC_hasItems, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_hasItems, available if @c HC_SHORTHAND is defined.
     @ingroup collection
  */
 #ifdef HC_SHORTHAND

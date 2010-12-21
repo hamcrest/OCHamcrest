@@ -28,13 +28,15 @@
 
 /**
     This matcher always evaluates to @c YES.
+ 
+    @b Synonym: @ref anything
     @see HCIsAnything
     @ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_anything();
 
 /**
-    Shorthand for @ref HC_anything, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_anything, available if @c HC_SHORTHAND is defined.
  */
 #ifdef HC_SHORTHAND
     #define anything HC_anything
@@ -42,7 +44,9 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
 
 
 /**
-    This matcher always evaluates to <code>YES</code>.
+    This matcher always evaluates to @c YES.
+
+    @b Synonym: @ref anythingWithDescription
     @param aDescription  A meaningful string used when describing itself.
     @see HCIsAnything
     @ingroup core
@@ -50,7 +54,7 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
 OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString* aDescription);
 
 /**
-    Shorthand for @ref HC_anythingWithDescription, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_anythingWithDescription, available if @c HC_SHORTHAND is defined.
     @ingroup core
  */
 #ifdef HC_SHORTHAND

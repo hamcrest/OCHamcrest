@@ -24,13 +24,15 @@
 
 /**
     Matches if the value is @c nil.
+ 
+    @b Synonym: @ref nilValue
     @see HCIsNil
     @ingroup core
  */
 OBJC_EXPORT id<HCMatcher> HC_nilValue();
 
 /**
-    Shorthand for @ref HC_nilValue, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_nilValue, available if @c HC_SHORTHAND is defined.
     @ingroup core
  */
 #ifdef HC_SHORTHAND
@@ -40,6 +42,8 @@ OBJC_EXPORT id<HCMatcher> HC_nilValue();
 
 /**
     Matches if the value is not @c nil.
+ 
+    @b Synonym: @ref notNilValue
     @see HCIsNil
     @see HCIsNot
     @ingroup core
@@ -47,7 +51,7 @@ OBJC_EXPORT id<HCMatcher> HC_nilValue();
 OBJC_EXPORT id<HCMatcher> HC_notNilValue();
 
 /**
-    Shorthand for @ref HC_notNilValue, available if @c HC_SHORTHAND is defined.
+    Synonym for @ref HC_notNilValue, available if @c HC_SHORTHAND is defined.
     @ingroup core
  */
 #ifdef HC_SHORTHAND
