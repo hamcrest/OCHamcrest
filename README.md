@@ -25,11 +25,13 @@ OCHamcrest is supported for both Cocoa and iOS development.
 
 __Cocoa:__
 
-• Add OCHamcrest.framework to your project.
-• Add a Copy Files build phase to copy OCHamcrest.framework to your Products
+Add OCHamcrest.framework to your project.
+
+Add a Copy Files build phase to copy OCHamcrest.framework to your Products
 Directory. For unit test bundles, make sure this Copy Files phase comes before
 the Run Script phase that executes tests.
-• Add:
+
+Add:
 
       #define HC_SHORTHAND
       #import <OCHamcrest/OCHamcrest.h>
@@ -37,9 +39,11 @@ the Run Script phase that executes tests.
 
 __iOS:__
 
-• Add OCHamcrestIOS.framework to your project.
-• Add "-lstdc++" and "-ObjC" to your "Other Linker Flags".
-• Add:
+Add OCHamcrestIOS.framework to your project.
+
+Add "-lstdc++" and "-ObjC" to your "Other Linker Flags".
+
+Add:
 
     #define HC_SHORTHAND
     #import <OCHamcrestIOS/OCHamcrestIOS.h>
@@ -239,8 +243,7 @@ calls the ``-dayOfWeek`` method after confirming that the argument has such a
 method -- and the ``-describe_to:`` method -- which is used to produce a failure
 message when a test fails. Here's an example of how the failure message looks:
 
-    NSCalendarDate* date = [NSCalendarDate dateWithString: @"6 April 2008"
-                                           calendarFormat: @"%d %B %Y"];
+    NSCalendarDate* date = [NSCalendarDate dateWithString: @"6 April 2008" calendarFormat: @"%d %B %Y"];
     assertThat(date, is(onASaturday()));
 
 fails with the message
