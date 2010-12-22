@@ -16,9 +16,10 @@
     NSComparisonResult maxCompare;
 }
 
-+ (HCOrderingComparison*) compare:(id)expectedValue
-                       minCompare:(NSComparisonResult)min
-                       maxCompare:(NSComparisonResult)max;
++ (id) compare:(id)expectedValue
+    minCompare:(NSComparisonResult)min
+    maxCompare:(NSComparisonResult)max;
+
 - (id) initComparing:(id)expectedValue
           minCompare:(NSComparisonResult)min
           maxCompare:(NSComparisonResult)max;

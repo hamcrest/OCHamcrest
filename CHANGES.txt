@@ -1,6 +1,7 @@
 == Version 1.1 == CHANGES IN PROGRESS
 
 * Changed documentation from HTML to Xcode documentation set. Run "make install" from the Documentation folder to install.
+* Changed convenience methods to invoke superclass and return id, to support possibility of subclassing matchers.
 
 
 == Version 1.0 ==

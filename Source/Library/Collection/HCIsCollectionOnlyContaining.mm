@@ -16,9 +16,9 @@
 
 @implementation HCIsCollectionOnlyContaining
 
-+ (HCIsCollectionOnlyContaining*) isCollectionOnlyContaining:(id<HCMatcher>)aMatcher
++ (id) isCollectionOnlyContaining:(id<HCMatcher>)aMatcher
 {
-    return [[[HCIsCollectionOnlyContaining alloc] initWithMatcher:aMatcher] autorelease];
+    return [[[self alloc] initWithMatcher:aMatcher] autorelease];
 }
 
 

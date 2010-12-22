@@ -18,7 +18,7 @@
     id object;
 }
 
-+ (HCIsSame*) isSameAs:(id)anObject;
++ (id) isSameAs:(id)anObject;
 - (id) initSameAs:(id)anObject;
 
 @end

@@ -17,7 +17,7 @@
 {
 }
 
-+ (HCStringStartsWith*) stringStartsWith:(NSString*)aSubstring;
++ (id) stringStartsWith:(NSString*)aSubstring;
 
 @end
 

@@ -15,9 +15,9 @@
 
 @implementation HCIsNot
 
-+ (HCIsNot*) isNot:(id<HCMatcher>)aMatcher
++ (id) isNot:(id<HCMatcher>)aMatcher
 {
-    return [[[HCIsNot alloc] initNot:aMatcher] autorelease];
+    return [[[self alloc] initNot:aMatcher] autorelease];
 }
 
 

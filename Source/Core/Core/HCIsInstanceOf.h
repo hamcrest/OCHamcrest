@@ -18,7 +18,7 @@
     Class theClass;
 }
 
-+ (HCIsInstanceOf*) isInstanceOf:(Class)type;
++ (id) isInstanceOf:(Class)type;
 - (id) initWithType:(Class)type;
 
 @end

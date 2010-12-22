@@ -20,9 +20,10 @@
     NSArray* values;
 }
 
-+ (HCDescribedAs*) describedAs:(NSString*)description
-                    forMatcher:(id<HCMatcher>)aMatcher
-                    overValues:(NSArray*)templateValues;
++ (id) describedAs:(NSString*)description
+        forMatcher:(id<HCMatcher>)aMatcher
+        overValues:(NSArray*)templateValues;
+
 - (id) initWithDescription:(NSString*)description
                     forMatcher:(id<HCMatcher>)aMatcher
                     overValues:(NSArray*)templateValues;

@@ -14,9 +14,9 @@
 
 @implementation HCStringStartsWith
 
-+ (HCStringStartsWith*) stringStartsWith:(NSString*)aSubstring
++ (id) stringStartsWith:(NSString*)aSubstring
 {
-    return [[[HCStringStartsWith alloc] initWithSubstring:aSubstring] autorelease];
+    return [[[self alloc] initWithSubstring:aSubstring] autorelease];
 }
 
 

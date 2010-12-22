@@ -19,7 +19,7 @@
     NSString* strippedString;
 }
 
-+ (HCIsEqualIgnoringWhiteSpace*) isEqualIgnoringWhiteSpace:(NSString*)aString;
++ (id) isEqualIgnoringWhiteSpace:(NSString*)aString;
 - (id) initWithString:(NSString*)aString;
 
 @end

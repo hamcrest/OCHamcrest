@@ -17,7 +17,7 @@
 {
 }
 
-+ (HCIsNil*) isNil;
++ (id) isNil;
 
 @end
 

@@ -61,9 +61,9 @@ NSMutableString* stripSpace(NSString* string)
 
 @implementation HCIsEqualIgnoringWhiteSpace
 
-+ (HCIsEqualIgnoringWhiteSpace*) isEqualIgnoringWhiteSpace:(NSString*)aString
++ (id) isEqualIgnoringWhiteSpace:(NSString*)aString
 {
-    return [[[HCIsEqualIgnoringWhiteSpace alloc] initWithString:aString] autorelease];
+    return [[[self alloc] initWithString:aString] autorelease];
 }
 
 

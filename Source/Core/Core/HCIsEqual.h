@@ -18,7 +18,7 @@
     id object;
 }
 
-+ (HCIsEqual*) isEqualTo:(id)anObject;
++ (id) isEqualTo:(id)anObject;
 - (id) initEqualTo:(id)anObject;
 
 @end

@@ -15,9 +15,9 @@
 
 @implementation HCIsEqualIgnoringCase
 
-+ (HCIsEqualIgnoringCase*) isEqualIgnoringCase:(NSString*)aString
++ (id) isEqualIgnoringCase:(NSString*)aString
 {
-    return [[[HCIsEqualIgnoringCase alloc] initWithString:aString] autorelease];
+    return [[[self alloc] initWithString:aString] autorelease];
 }
 
 

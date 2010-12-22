@@ -15,9 +15,9 @@
 
 @implementation HCAllOf
 
-+ (HCAllOf*) allOf:(NSArray*)theMatchers
++ (id) allOf:(NSArray*)theMatchers
 {
-    return [[[HCAllOf alloc] initWithMatchers:theMatchers] autorelease];
+    return [[[self alloc] initWithMatchers:theMatchers] autorelease];
 }
 
 

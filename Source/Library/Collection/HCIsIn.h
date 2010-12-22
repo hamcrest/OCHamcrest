@@ -18,7 +18,7 @@
     id collection;
 }
 
-+ (HCIsIn*) isInCollection:(id)aCollection;
++ (id) isInCollection:(id)aCollection;
 - (id) initWithCollection:(id)aCollection;
 
 @end

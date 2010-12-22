@@ -15,10 +15,10 @@
 
 @implementation HCIsDictionaryContaining
 
-+ (HCIsDictionaryContaining*) isDictionaryContainingKey:(id<HCMatcher>)aKeyMatcher
-                                                  value:(id<HCMatcher>)aValueMatcher;
++ (id) isDictionaryContainingKey:(id<HCMatcher>)aKeyMatcher
+                           value:(id<HCMatcher>)aValueMatcher;
 {
-    return [[[HCIsDictionaryContaining alloc]
+    return [[[self alloc]
                     initWithKeyMatcher:aKeyMatcher valueMatcher:aValueMatcher] autorelease];
 }
 

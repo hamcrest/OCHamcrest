@@ -19,7 +19,7 @@
     double error;
 }
 
-+ (HCIsCloseTo*) isCloseTo:(double)aValue within:(double)anError;
++ (id) isCloseTo:(double)aValue within:(double)anError;
 - (id) initWithValue:(double)aValue error:(double)anError;
 
 @end

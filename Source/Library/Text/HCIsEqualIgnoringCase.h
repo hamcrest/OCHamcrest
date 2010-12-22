@@ -18,7 +18,7 @@
     NSString* string;
 }
 
-+ (HCIsEqualIgnoringCase*) isEqualIgnoringCase:(NSString*)aString;
++ (id) isEqualIgnoringCase:(NSString*)aString;
 - (id) initWithString:(NSString*)aString;
 
 @end

@@ -15,9 +15,9 @@
 
 @implementation HCIs
 
-+ (HCIs*) is:(id<HCMatcher>)aMatcher
++ (id) is:(id<HCMatcher>)aMatcher
 {
-    return [[[HCIs alloc] initWithMatcher:aMatcher] autorelease];
+    return [[[self alloc] initWithMatcher:aMatcher] autorelease];
 }
 
 
