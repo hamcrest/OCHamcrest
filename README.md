@@ -183,7 +183,7 @@ Here's the interface:
         NSInteger day;      // 0 indicates Sunday
     }
 
-    + (IsGivenDayOfWeek*) isGivenDayOfWeek:(NSInteger)dayOfWeek;
+    + (id) isGivenDayOfWeek:(NSInteger)dayOfWeek;
     - (id) initWithDay:(NSInteger)dayOfWeek;
 
     @end
@@ -198,9 +198,9 @@ The interface consists of two parts: a class definition, and a factory function
 
     @implementation IsGivenDayOfWeek
 
-    + (IsGivenDayOfWeek*) isGivenDayOfWeek:(NSInteger)dayOfWeek
+    + (id) isGivenDayOfWeek:(NSInteger)dayOfWeek
     {
-        return [[[IsGivenDayOfWeek alloc] initWithDay:dayOfWeek] autorelease];
+        return [[[self alloc] initWithDay:dayOfWeek] autorelease];
     }
 
     - (id) initWithDay:(NSInteger)dayOfWeek

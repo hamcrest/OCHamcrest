@@ -3,9 +3,9 @@
 
 @implementation IsGivenDayOfWeek
 
-+ (IsGivenDayOfWeek*) isGivenDayOfWeek:(NSInteger)dayOfWeek
++ (id) isGivenDayOfWeek:(NSInteger)dayOfWeek
 {
-    return [[[IsGivenDayOfWeek alloc] initWithDay:dayOfWeek] autorelease];
+    return [[[self alloc] initWithDay:dayOfWeek] autorelease];
 }
 
 - (id) initWithDay:(NSInteger)dayOfWeek
