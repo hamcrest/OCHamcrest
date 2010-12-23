@@ -14,9 +14,9 @@
 
 @implementation HCStringEndsWith
 
-+ (HCStringEndsWith*) stringEndsWith:(NSString*)aSubstring
++ (id) stringEndsWith:(NSString*)aSubstring
 {
-    return [[[HCStringEndsWith alloc] initWithSubstring:aSubstring] autorelease];
+    return [[[self alloc] initWithSubstring:aSubstring] autorelease];
 }
 
 

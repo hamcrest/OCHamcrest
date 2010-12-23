@@ -18,8 +18,9 @@
     NSString* description;
 }
 
-+ (HCIsAnything*) isAnything;
-+ (HCIsAnything*) isAnythingWithDescription:(NSString*)aDescription;
++ (id) isAnything;
++ (id) isAnythingWithDescription:(NSString*)aDescription;
+
 - (id) init;
 - (id) initWithDescription:(NSString*)aDescription;
 

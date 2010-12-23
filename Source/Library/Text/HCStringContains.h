@@ -17,7 +17,7 @@
 {
 }
 
-+ (HCStringContains*) stringContains:(NSString*)aSubstring;
++ (id) stringContains:(NSString*)aSubstring;
 
 @end
 

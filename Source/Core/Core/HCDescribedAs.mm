@@ -50,13 +50,13 @@ pair<int, NSString*> separate(NSString* component)
 
 @implementation HCDescribedAs
 
-+ (HCDescribedAs*) describedAs:(NSString*)description
++ (id) describedAs:(NSString*)description
                     forMatcher:(id<HCMatcher>)aMatcher
                     overValues:(NSArray*)templateValues
 {
-    return [[[HCDescribedAs alloc] initWithDescription: description
-                                            forMatcher: aMatcher
-                                            overValues: templateValues] autorelease];
+    return [[[self alloc] initWithDescription: description
+                                   forMatcher: aMatcher
+                                   overValues: templateValues] autorelease];
 }
 
 

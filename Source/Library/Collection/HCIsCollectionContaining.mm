@@ -16,9 +16,9 @@
 
 @implementation HCIsCollectionContaining
 
-+ (HCIsCollectionContaining*) isCollectionContaining:(id<HCMatcher>)anElementMatcher
++ (id) isCollectionContaining:(id<HCMatcher>)anElementMatcher
 {
-    return [[[HCIsCollectionContaining alloc] initWithMatcher:anElementMatcher] autorelease];
+    return [[[self alloc] initWithMatcher:anElementMatcher] autorelease];
 }
 
 

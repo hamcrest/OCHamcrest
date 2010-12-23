@@ -15,9 +15,9 @@
 
 @implementation HCIsDictionaryContainingKey
 
-+ (HCIsDictionaryContainingKey*) isDictionaryContainingKey:(id<HCMatcher>)theKeyMatcher
++ (id) isDictionaryContainingKey:(id<HCMatcher>)theKeyMatcher
 {
-    return [[[HCIsDictionaryContainingKey alloc] initWithKeyMatcher:theKeyMatcher] autorelease];
+    return [[[self alloc] initWithKeyMatcher:theKeyMatcher] autorelease];
 }
 
 

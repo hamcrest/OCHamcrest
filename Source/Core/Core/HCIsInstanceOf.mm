@@ -14,9 +14,9 @@
 
 @implementation HCIsInstanceOf
 
-+ (HCIsInstanceOf*) isInstanceOf:(Class)type
++ (id) isInstanceOf:(Class)type
 {
-    return [[[HCIsInstanceOf alloc] initWithType:type] autorelease];
+    return [[[self alloc] initWithType:type] autorelease];
 }
 
 

@@ -21,7 +21,7 @@
     id<HCMatcher> matcher;
 }
 
-+ (HCIsCollectionOnlyContaining*) isCollectionOnlyContaining:(id<HCMatcher>)aMatcher;
++ (id) isCollectionOnlyContaining:(id<HCMatcher>)aMatcher;
 - (id) initWithMatcher:(id<HCMatcher>)aMatcher;
 
 @end

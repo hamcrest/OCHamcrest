@@ -14,15 +14,15 @@
 
 @implementation HCIsAnything
 
-+ (HCIsAnything*) isAnything
++ (id) isAnything
 {
-    return [[[HCIsAnything alloc] init] autorelease];
+    return [[[self alloc] init] autorelease];
 }
 
 
-+ (HCIsAnything*) isAnythingWithDescription:(NSString*)aDescription
++ (id) isAnythingWithDescription:(NSString*)aDescription
 {
-    return [[[HCIsAnything alloc] initWithDescription:aDescription] autorelease];
+    return [[[self alloc] initWithDescription:aDescription] autorelease];
 }
 
 

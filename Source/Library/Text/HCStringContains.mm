@@ -14,9 +14,9 @@
 
 @implementation HCStringContains
 
-+ (HCStringContains*) stringContains:(NSString*)aSubstring
++ (id) stringContains:(NSString*)aSubstring
 {
-    return [[[HCStringContains alloc] initWithSubstring:aSubstring] autorelease];
+    return [[[self alloc] initWithSubstring:aSubstring] autorelease];
 }
 
 

@@ -15,9 +15,9 @@
 
 @implementation HCIsNil
 
-+ (HCIsNil*) isNil
++ (id) isNil
 {
-    return [[[HCIsNil alloc] init] autorelease];
+    return [[[self alloc] init] autorelease];
 }
 
 

@@ -29,7 +29,7 @@ assertThat(cheese, is(equalTo(smelly)))
     id<HCMatcher> matcher;
 }
 
-+ (HCIs*) is:(id<HCMatcher>)aMatcher;
++ (id) is:(id<HCMatcher>)aMatcher;
 - (id) initWithMatcher:(id<HCMatcher>)aMatcher;
 
 @end

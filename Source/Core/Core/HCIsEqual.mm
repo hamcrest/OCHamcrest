@@ -16,7 +16,7 @@
 
 + (HCIsEqual*) isEqualTo:(id)anObject;
 {
-    return [[[HCIsEqual alloc] initEqualTo:anObject] autorelease];
+    return [[[self alloc] initEqualTo:anObject] autorelease];
 }
 
 

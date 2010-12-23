@@ -15,9 +15,9 @@
 
 @implementation HCAnyOf
 
-+ (HCAnyOf*) anyOf:(NSArray*)theMatchers
++ (id) anyOf:(NSArray*)theMatchers
 {
-    return [[[HCAnyOf alloc] initWithMatchers:theMatchers] autorelease];
+    return [[[self alloc] initWithMatchers:theMatchers] autorelease];
 }
 
 

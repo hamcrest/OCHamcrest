@@ -15,9 +15,9 @@
 
 @implementation HCHasDescription
 
-+ (HCHasDescription*) hasDescription:(id<HCMatcher>)descriptionMatcher
++ (id) hasDescription:(id<HCMatcher>)descriptionMatcher
 {
-    return [[[HCHasDescription alloc] initWithDescription:descriptionMatcher] autorelease];
+    return [[[self alloc] initWithDescription:descriptionMatcher] autorelease];
 }
 
 

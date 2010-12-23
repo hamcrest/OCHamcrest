@@ -14,9 +14,9 @@
 
 @implementation HCIsIn
 
-+ (HCIsIn*) isInCollection:(id)aCollection
++ (id) isInCollection:(id)aCollection
 {
-    return [[[HCIsIn alloc] initWithCollection:aCollection] autorelease];
+    return [[[self alloc] initWithCollection:aCollection] autorelease];
 }
 
 

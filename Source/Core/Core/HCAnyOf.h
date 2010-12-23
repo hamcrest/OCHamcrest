@@ -22,7 +22,7 @@
     NSArray* matchers;
 }
 
-+ (HCAnyOf*) anyOf:(NSArray*)theMatchers;
++ (id) anyOf:(NSArray*)theMatchers;
 - (id) initWithMatchers:(NSArray*)theMatchers;
 
 @end

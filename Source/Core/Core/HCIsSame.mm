@@ -14,9 +14,9 @@
 
 @implementation HCIsSame
 
-+ (HCIsSame*) isSameAs:(id)anObject;
++ (id) isSameAs:(id)anObject;
 {
-    return [[[HCIsSame alloc] initSameAs:anObject] autorelease];
+    return [[[self alloc] initSameAs:anObject] autorelease];
 }
 
 

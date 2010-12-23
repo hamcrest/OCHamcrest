@@ -18,9 +18,9 @@ using namespace std;
 
 @implementation HCIsCloseTo
 
-+ (HCIsCloseTo*) isCloseTo:(double)aValue within:(double)anError
++ (id) isCloseTo:(double)aValue within:(double)anError
 {
-    return [[[HCIsCloseTo alloc] initWithValue:aValue error:anError] autorelease];
+    return [[[self alloc] initWithValue:aValue error:anError] autorelease];
 }
 
 

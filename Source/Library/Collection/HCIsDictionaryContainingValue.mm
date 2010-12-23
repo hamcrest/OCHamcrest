@@ -15,9 +15,9 @@
 
 @implementation HCIsDictionaryContainingValue
 
-+ (HCIsDictionaryContainingValue*) isDictionaryContainingValue:(id<HCMatcher>)theValueMatcher
++ (id) isDictionaryContainingValue:(id<HCMatcher>)theValueMatcher
 {
-    return [[[HCIsDictionaryContainingValue alloc] initWithValueMatcher:theValueMatcher] autorelease];
+    return [[[self alloc] initWithValueMatcher:theValueMatcher] autorelease];
 }
 
 

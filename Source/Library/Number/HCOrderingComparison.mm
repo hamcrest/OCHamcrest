@@ -29,12 +29,11 @@ NSString* comparison(NSComparisonResult compare)
 
 @implementation HCOrderingComparison
 
-+ (HCOrderingComparison*) compare:(id)expectedValue
-                       minCompare:(NSComparisonResult)min
-                       maxCompare:(NSComparisonResult)max
++ (id) compare:(id)expectedValue
+    minCompare:(NSComparisonResult)min
+    maxCompare:(NSComparisonResult)max
 {
-    return [[[HCOrderingComparison alloc] initComparing:expectedValue minCompare:min maxCompare:max]
-            autorelease];
+    return [[[self alloc] initComparing:expectedValue minCompare:min maxCompare:max] autorelease];
 }
 
 
