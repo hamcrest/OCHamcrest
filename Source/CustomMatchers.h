@@ -34,7 +34,7 @@
 
 @interface IsGivenDayOfWeek : HCBaseMatcher
 {
-    NSInteger day;      // 0 indicates Sunday
+    NSInteger day;      // Sunday is 0, Saturday is 6
 }
 
 + (IsGivenDayOfWeek*) isGivenDayOfWeek:(NSInteger)dayOfWeek;
@@ -54,32 +54,30 @@ OBJC_EXPORT id<HCMatcher> onASaturday();
 
 @implementation IsGivenDayOfWeek
 
-+ (IsGivenDayOfWeek*) isGivenDayOfWeek:(NSInteger)dayOfWeek;
++ (IsGivenDayOfWeek*) isGivenDayOfWeek:(NSInteger)dayOfWeek
 {
     return [[[IsGivenDayOfWeek alloc] initWithDay:dayOfWeek] autorelease];
 }
 
-- (id) initWithDay:(NSInteger)dayOfWeek;
+- (id) initWithDay:(NSInteger)dayOfWeek
 {
     self = [super init];
     if (self != nil)
-    {
         day = dayOfWeek;
-    }
     return self;
 }
 
+// Test whether item matches.
 - (BOOL) matches:(id)item
 {
     if (![item respondsToSelector:@selector(dayOfWeek)])
-    {
         return NO;
-    }
-    
+
     return [item dayOfWeek] == day;
 }
 
-- (void) describeTo:(id<HCDescription>)description;
+// Describe the matcher.
+- (void) describeTo:(id<HCDescription>)description
 {
     NSString* dayAsString[] =
         {@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"};
