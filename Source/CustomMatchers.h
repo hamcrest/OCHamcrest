@@ -37,7 +37,7 @@
     NSInteger day;      // Sunday is 0, Saturday is 6
 }
 
-+ (IsGivenDayOfWeek*) isGivenDayOfWeek:(NSInteger)dayOfWeek;
++ (id) isGivenDayOfWeek:(NSInteger)dayOfWeek;
 - (id) initWithDay:(NSInteger)dayOfWeek;
 
 @end
@@ -54,9 +54,9 @@ OBJC_EXPORT id<HCMatcher> onASaturday();
 
 @implementation IsGivenDayOfWeek
 
-+ (IsGivenDayOfWeek*) isGivenDayOfWeek:(NSInteger)dayOfWeek
++ (id) isGivenDayOfWeek:(NSInteger)dayOfWeek
 {
-    return [[[IsGivenDayOfWeek alloc] initWithDay:dayOfWeek] autorelease];
+    return [[[self alloc] initWithDay:dayOfWeek] autorelease];
 }
 
 - (id) initWithDay:(NSInteger)dayOfWeek

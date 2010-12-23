@@ -7,7 +7,7 @@
     NSInteger day;      // Sunday is 0, Saturday is 6
 }
 
-+ (IsGivenDayOfWeek*) isGivenDayOfWeek:(NSInteger)dayOfWeek;
++ (id) isGivenDayOfWeek:(NSInteger)dayOfWeek;
 - (id) initWithDay:(NSInteger)dayOfWeek;
 
 @end
