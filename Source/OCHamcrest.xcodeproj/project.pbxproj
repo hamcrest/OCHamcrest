@@ -32,6 +32,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		087F5B1712C53484008B6B72 /* IsCollectionContainingInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 087F5B1612C53484008B6B72 /* IsCollectionContainingInOrderTest.m */; };
+		087F5B1D12C53618008B6B72 /* HCIsCollectionContainingInOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 087F5B1B12C53618008B6B72 /* HCIsCollectionContainingInOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		087F5B1E12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087F5B1C12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm */; };
 		089B9C781298B73200D4F34F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2A4B030D8B679900051BCF /* Foundation.framework */; };
 		08B5181912A058FA00147210 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08B5181812A058FA00147210 /* LICENSE.txt */; };
 		08EEF681129E1A540076BFCC /* HCCollectMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EEF67B129E1A540076BFCC /* HCCollectMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -199,6 +202,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		087F5B1612C53484008B6B72 /* IsCollectionContainingInOrderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsCollectionContainingInOrderTest.m; sourceTree = "<group>"; };
+		087F5B1B12C53618008B6B72 /* HCIsCollectionContainingInOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContainingInOrder.h; sourceTree = "<group>"; };
+		087F5B1C12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsCollectionContainingInOrder.mm; sourceTree = "<group>"; };
 		08B5181812A058FA00147210 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = SOURCE_ROOT; };
 		08EEF67B129E1A540076BFCC /* HCCollectMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCollectMatchers.h; sourceTree = "<group>"; };
 		08EEF67C129E1A540076BFCC /* HCCollectMatchers.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCCollectMatchers.mm; sourceTree = "<group>"; };
@@ -560,6 +566,7 @@
 			isa = PBXGroup;
 			children = (
 				0F2A4CDA0D8C808700051BCF /* IsCollectionContainingTest.m */,
+				087F5B1612C53484008B6B72 /* IsCollectionContainingInOrderTest.m */,
 				0F2A4DE00D8C9DE100051BCF /* IsCollectionOnlyContainingTest.m */,
 				0FE5E3540D95D7470021A644 /* IsDictionaryContainingKeyTest.m */,
 				0F3855BA0D98CD29006235A6 /* IsDictionaryContainingTest.m */,
@@ -574,6 +581,8 @@
 			children = (
 				0F2A4CDE0D8C80E300051BCF /* HCIsCollectionContaining.h */,
 				0F2A4CDF0D8C80E300051BCF /* HCIsCollectionContaining.mm */,
+				087F5B1B12C53618008B6B72 /* HCIsCollectionContainingInOrder.h */,
+				087F5B1C12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm */,
 				0F2A4DE70D8C9E8D00051BCF /* HCIsCollectionOnlyContaining.h */,
 				0F2A4DE80D8C9E8D00051BCF /* HCIsCollectionOnlyContaining.mm */,
 				0F2EBB260D9E0BD700340F95 /* HCIsDictionaryContaining.h */,
@@ -686,6 +695,7 @@
 				08EEF685129E1A540076BFCC /* HCWrapInMatcher.h in Headers */,
 				08EEF690129E1E190076BFCC /* NSObject+HCSelfDescribingValue.h in Headers */,
 				08EEF6A3129E1F5C0076BFCC /* HCInvocationMatcher.h in Headers */,
+				087F5B1D12C53618008B6B72 /* HCIsCollectionContainingInOrder.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,6 +947,7 @@
 				0FF1B2041086E55100E615AE /* InvocationMatcherTest.m in Sources */,
 				0F1A545C10C46194009C870F /* IsEqualToNumberTest.m in Sources */,
 				0FA5A04B10C57983005FB8BB /* NumberAssertTest.m in Sources */,
+				087F5B1712C53484008B6B72 /* IsCollectionContainingInOrderTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,6 +991,7 @@
 				08EEF686129E1A540076BFCC /* HCWrapInMatcher.mm in Sources */,
 				08EEF6A4129E1F5C0076BFCC /* HCInvocationMatcher.mm in Sources */,
 				08EEFB8012A039320076BFCC /* NSObject+HCSelfDescribingValue.mm in Sources */,
+				087F5B1E12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
