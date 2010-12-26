@@ -11,7 +11,7 @@
 
 /**
     Is the item the same object as another?
-    @ingroup core
+    @ingroup core_matchers
 */
 @interface HCIsSame : HCBaseMatcher
 {
@@ -29,13 +29,13 @@
  
     @b Synonym: @ref sameInstance
     @see HCIsSame
-    @ingroup core
+    @ingroup core_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object);
 
 /**
     Synonym for @ref HC_sameInstance, available if @c HC_SHORTHAND is defined.
-    @ingroup core
+    @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
     #define sameInstance HC_sameInstance

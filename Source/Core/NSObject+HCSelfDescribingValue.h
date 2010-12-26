@@ -9,9 +9,10 @@
 
 @protocol HCDescription;
 
-
 /**
     This category allows any object to satisfy the HCSelfDescribing protocol.
+
+    @ingroup core
  */
 @interface NSObject (HCSelfDescribingValue)
 

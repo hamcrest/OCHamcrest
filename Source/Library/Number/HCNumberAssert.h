@@ -18,14 +18,14 @@ OBJC_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,
     matcher.
     
     @b Synonym: @ref assertThatBool
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #define HC_assertThatBool(actual, matcher)  \
     HC_assertThatBoolWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatBool, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatBool HC_assertThatBool
@@ -40,14 +40,14 @@ OBJC_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
     matcher.
     
     @b Synonym: @ref assertThatChar
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #define HC_assertThatChar(actual, matcher)  \
     HC_assertThatCharWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatChar, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatChar HC_assertThatChar
@@ -62,14 +62,14 @@ OBJC_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actual,
     matcher.
     
     @b Synonym: @ref assertThatDouble
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #define HC_assertThatDouble(actual, matcher)  \
     HC_assertThatDoubleWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatDouble, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatDouble HC_assertThatDouble
@@ -84,14 +84,14 @@ OBJC_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
     matcher.
     
     @b Synonym: @ref assertThatFloat
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #define HC_assertThatFloat(actual, matcher)  \
     HC_assertThatFloatWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatFloat, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatFloat HC_assertThatFloat
@@ -106,14 +106,14 @@ OBJC_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
     matcher.
     
     @b Synonym: @ref assertThatInt
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #define HC_assertThatInt(actual, matcher)  \
     HC_assertThatIntWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatInt, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatInt HC_assertThatInt
@@ -128,14 +128,14 @@ OBJC_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
     matcher.
     
     @b Synonym: @ref assertThatLong
-    @ingroup integration
+    @ingroup integration_numeric
 */
 #define HC_assertThatLong(actual, matcher)  \
     HC_assertThatLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatLong, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatLong HC_assertThatLong
@@ -150,14 +150,14 @@ OBJC_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long actual
     @c NSNumber, satisfies matcher.
     
     @b Synonym: @ref assertThatLongLong
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #define HC_assertThatLongLong(actual, matcher)  \
     HC_assertThatLongLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatLongLong, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatLongLong HC_assertThatLongLong
@@ -172,14 +172,14 @@ OBJC_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
     matcher.
     
     @b Synonym: @ref assertThatShort
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #define HC_assertThatShort(actual, matcher)  \
     HC_assertThatShortWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatShort, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatShort HC_assertThatShort
@@ -194,14 +194,14 @@ OBJC_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsigned cha
     @c NSNumber, satisfies matcher.
     
     @b Synonym: @ref assertThatUnsignedChar
-    @ingroup integration
+    @ingroup integration_numeric
 */
 #define HC_assertThatUnsignedChar(actual, matcher)  \
     HC_assertThatUnsignedCharWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatUnsignedChar, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatUnsignedChar HC_assertThatUnsignedChar
@@ -216,14 +216,14 @@ OBJC_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigned int 
     @c NSNumber, satisfies matcher.
     
     @b Synonym: @ref assertThatInt
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #define HC_assertThatUnsignedInt(actual, matcher)  \
     HC_assertThatUnsignedIntWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatUnsignedInt, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatUnsignedInt HC_assertThatUnsignedInt
@@ -238,14 +238,14 @@ OBJC_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsigned lon
     @c NSNumber, satisfies matcher.
     
     @b Synonym: @ref assertThatUnsignedLong
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #define HC_assertThatUnsignedLong(actual, matcher)  \
     HC_assertThatUnsignedLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatUnsignedLong, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatUnsignedLong HC_assertThatUnsignedLong
@@ -260,14 +260,14 @@ OBJC_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, unsigned
     @c NSNumber, satisfies matcher.
     
     @b Synonym: @ref assertThatUnsignedLongLong
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #define HC_assertThatUnsignedLongLong(actual, matcher)  \
     HC_assertThatUnsignedLongLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatUnsignedLongLong, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatUnsignedLongLong HC_assertThatUnsignedLongLong
@@ -282,14 +282,14 @@ OBJC_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsigned sh
     @c NSNumber, satisfies matcher.
     
     @b Synonym: @ref assertThatUnsignedShort
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #define HC_assertThatUnsignedShort(actual, matcher)  \
     HC_assertThatUnsignedShortWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatUnsignedShort, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatUnsignedShort HC_assertThatUnsignedShort
@@ -304,14 +304,14 @@ OBJC_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger actual,
     satisfies matcher.
     
     @b Synonym: @ref assertThatInteger
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #define HC_assertThatInteger(actual, matcher)  \
     HC_assertThatIntegerWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatInteger, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatInteger HC_assertThatInteger
@@ -326,14 +326,14 @@ OBJC_EXPORT void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUIntege
     satisfies matcher.
     
     @b Synonym: @ref assertThatUnsignedInteger
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #define HC_assertThatUnsignedInteger(actual, matcher)  \
     HC_assertThatUnsignedIntegerWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
     Synonym for @ref HC_assertThatUnsignedInteger, available if @c HC_SHORTHAND is defined.
-    @ingroup integration
+    @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
     #define assertThatUnsignedInteger HC_assertThatUnsignedInteger

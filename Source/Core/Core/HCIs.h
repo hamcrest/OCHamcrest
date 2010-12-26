@@ -22,7 +22,7 @@ assertThat(cheese, equalTo(smelly))
 assertThat(cheese, is(equalTo(smelly)))
 @endcode
 
-    @ingroup core
+    @ingroup core_matchers
  */
 @interface HCIs : HCBaseMatcher
 {
@@ -52,14 +52,14 @@ assertThat(cheese, is(smelly))
  
     @b Synonym: @ref is
     @see HCIs
-    @ingroup core
+    @ingroup core_matchers
 
  */
 OBJC_EXPORT id<HCMatcher> HC_is(id matcherOrValue);
 
 /**
     Synonym for @ref HC_is, available if @c HC_SHORTHAND is defined.
-    @ingroup core
+    @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
     #define is HC_is

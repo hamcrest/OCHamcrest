@@ -15,7 +15,7 @@
     Evaluation is shortcut, so the subsequent matchers are not called if an earlier matcher returns
     @c YES.
 
-    @ingroup core
+    @ingroup core_matchers
  */
 @interface HCAnyOf : HCBaseMatcher
 {
@@ -29,12 +29,12 @@
 
 
 /**
-    Evaluates to @c YES if @b any of the passed in matchers evaluate to @c YES.
+    Evaluates to @c YES if @em any of the passed in matchers evaluate to @c YES.
  
     @b Synonym: @ref anyOf
     @param matcher  Comma-separated list of matchers ending with @c nil.
     @see HCAnyOf
-    @ingroup core
+    @ingroup core_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_anyOf(id<HCMatcher> matcher, ...);
 

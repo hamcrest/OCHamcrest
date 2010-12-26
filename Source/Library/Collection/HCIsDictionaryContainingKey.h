@@ -11,7 +11,7 @@
 
 /**
      Matches dictionaries containing a key satisfying a given matcher.
-    @ingroup collection
+    @ingroup collection_matchers
  */
 @interface HCIsDictionaryContainingKey : HCBaseMatcher
 {
@@ -28,13 +28,13 @@
     Matches dictionaries containing a key satisfying a given matcher.
     @param matcherOrValue  A matcher, or a value for @ref equalTo matching.
     @see HCIsDictionaryContainingKey
-    @ingroup collection
+    @ingroup collection_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_hasKey(id matcherOrValue);
 
 /**
     Synonym for @ref HC_hasKey, available if @c HC_SHORTHAND is defined.
-    @ingroup collection
+    @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
     #define hasKey HC_hasKey

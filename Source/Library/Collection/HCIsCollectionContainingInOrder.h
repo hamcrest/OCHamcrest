@@ -11,7 +11,7 @@
 
 /**
     Matches a collection if its elements, in order, satisfy a list of matchers.
-    @ingroup collection
+    @ingroup collection_matchers
  */
 @interface HCIsCollectionContainingInOrder : HCBaseMatcher
 {
@@ -30,13 +30,13 @@
     @b Synonym: @ref contains
     @param items  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCIsCollectionContainingInOrder
-    @ingroup collection
+    @ingroup collection_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_contains(id items, ...);
 
 /**
     Synonym for @ref HC_contains, available if @c HC_SHORTHAND is defined.
-    @ingroup collection
+    @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
     #define contains HC_contains

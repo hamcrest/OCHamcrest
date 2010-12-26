@@ -11,7 +11,7 @@
 
 /**
     Matches dictionaries containing a key-value pair satisfying a given pair of matchers.
-    @ingroup collection
+    @ingroup collection_matchers
  */
 @interface HCIsDictionaryContaining : HCBaseMatcher
 {
@@ -35,13 +35,13 @@
     @param keyMatcher    A matcher - or a value for @ref equalTo matching - for the key.
     @param valueMatcher  A matcher - or a value for @ref equalTo matching - for the value.
     @see HCIsDictionaryContaining
-    @ingroup collection
+    @ingroup collection_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcher, id valueMatcher);
 
 /**
     Synonym for @ref HC_hasEntry, available if @c HC_SHORTHAND is defined.
-    @ingroup collection
+    @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
     #define hasEntry HC_hasEntry

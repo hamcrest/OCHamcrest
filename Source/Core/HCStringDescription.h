@@ -13,6 +13,8 @@
 
 /**
     An HCDescription that is stored as a string.
+
+    @ingroup core
  */
 @interface HCStringDescription : HCBaseDescription
 {

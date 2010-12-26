@@ -14,7 +14,7 @@
 
     This matcher will never match an empty collection.
 
-    @ingroup collection
+    @ingroup collection_matchers
 */
 @interface HCIsCollectionOnlyContaining : HCBaseMatcher
 {
@@ -42,13 +42,13 @@
     @b Synonym: @ref onlyContains
     @param items  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCIsCollectionOnlyContaining
-    @ingroup collection
+    @ingroup collection_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id items, ...);
 
 /**
     Synonym for @ref HC_onlyContains, available if @c HC_SHORTHAND is defined.
-    @ingroup collection
+    @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
     #define onlyContains HC_onlyContains

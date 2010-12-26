@@ -11,7 +11,7 @@
 
 /**
     Is the object equal to another object, as tested by the -isEqual: method?
-    @ingroup core
+    @ingroup core_matchers
  */
 @interface HCIsEqual : HCBaseMatcher
 {
@@ -29,13 +29,13 @@
  
     @b Synonym: @ref equalTo
     @see HCIsEqual
-    @ingroup core
+    @ingroup core_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
 
 /**
     Synonym for @ref HC_equalTo, available if @c HC_SHORTHAND is defined.
-    @ingroup core
+    @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
     #define equalTo HC_equalTo

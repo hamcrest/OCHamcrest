@@ -11,7 +11,7 @@
 
 /**
     Is the value a number equal to a value within some range of acceptable error?
-    @ingroup number
+    @ingroup number_matchers
  */
 @interface HCIsCloseTo : HCBaseMatcher
 {
@@ -30,13 +30,13 @@
  
     @b Synonym: @ref closeTo
     @see HCIsCloseTo
-    @ingroup number
+    @ingroup number_matchers
 */
 OBJC_EXPORT id<HCMatcher> HC_closeTo(double aValue, double anError);
 
 /**
     Synonym for @ref HC_closeTo, available if @c HC_SHORTHAND is defined.
-    @ingroup number
+    @ingroup number_matchers
 */
 #ifdef HC_SHORTHAND
     #define closeTo HC_closeTo

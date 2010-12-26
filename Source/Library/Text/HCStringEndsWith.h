@@ -11,7 +11,7 @@
 
 /**
     Tests if the argument is a string that ends with a substring.
-    @ingroup text
+    @ingroup text_matchers
  */
 @interface HCStringEndsWith : HCSubstringMatcher
 {
@@ -27,13 +27,13 @@
     
     @b Synonym: @ref endsWith
     @see HCStringEndsWith
-    @ingroup text
+    @ingroup text_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString* aSubstring);
 
 /**
     Synonym for @ref HC_endsWith, available if @c HC_SHORTHAND is defined.
-    @ingroup text
+    @ingroup text_matchers
  */
 #ifdef HC_SHORTHAND
     #define endsWith HC_endsWith

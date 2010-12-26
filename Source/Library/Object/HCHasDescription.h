@@ -11,7 +11,7 @@
 
 /**
     Does the object's @c -description satisfy a given matcher?
-    @ingroup object
+    @ingroup object_matchers
  */
 @interface HCHasDescription : HCInvocationMatcher
 {
@@ -33,13 +33,13 @@
     @b Synonym: @ref hasDescription
     @param matcherOrValue  A matcher, or a value for @ref equalTo matching.
     @see HCHasDescription
-    @ingroup object
+    @ingroup object_matchers
 */
 OBJC_EXPORT id<HCMatcher> HC_hasDescription(id matcherOrValue);
 
 /**
     Synonym for @ref HC_hasDescription, available if @c HC_SHORTHAND is defined.
-    @ingroup object
+    @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
     #define hasDescription HC_hasDescription

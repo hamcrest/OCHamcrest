@@ -13,6 +13,8 @@
 
 /**
     The ability of an object to describe itself.
+
+    @ingroup core
  */
 @protocol HCSelfDescribing <NSObject>
 

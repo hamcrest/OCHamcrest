@@ -11,7 +11,7 @@
 
 /**
     Matches a collection if its elements, in any order, satisfy a list of matchers.
-    @ingroup collection
+    @ingroup collection_matchers
  */
 @interface HCIsCollectionContainingInAnyOrder : HCBaseMatcher
 {
@@ -30,13 +30,13 @@
     @b Synonym: @ref containsInAnyOrder
     @param items  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCIsCollectionContainingInAnyOrder
-    @ingroup collection
+    @ingroup collection_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_containsInAnyOrder(id items, ...);
 
 /**
     Synonym for @ref HC_containsInAnyOrder, available if @c HC_SHORTHAND is defined.
-    @ingroup collection
+    @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
     #define containsInAnyOrder HC_containsInAnyOrder

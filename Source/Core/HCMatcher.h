@@ -17,6 +17,8 @@
     HCMatcher implementations should @b not directly implement this protocol.
     Instead, @b extend the HCBaseMatcher class, which will ensure that the HCMatcher API can grow
     to support new features and remain compatible with all HCMatcher implementations.
+
+    @ingroup core
  */
 @protocol HCMatcher <HCSelfDescribing>
 

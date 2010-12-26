@@ -11,7 +11,7 @@
 
 /**
     Provides a custom description to another matcher.
-    @ingroup core
+    @ingroup core_matchers
  */
 @interface HCDescribedAs : HCBaseMatcher
 {
@@ -40,13 +40,13 @@
  
     @b Synonym: @ref describedAs
     @see HCDescribedAs
-    @ingroup core
+    @ingroup core_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString* description, id<HCMatcher> matcher, ...);
 
 /**
     Synonym for @ref HC_describedAs, available if @c HC_SHORTHAND is defined.
-    @ingroup core
+    @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
     #define describedAs HC_describedAs

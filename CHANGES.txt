@@ -2,8 +2,9 @@
 
 * New matcher "contains" matches collection containing matching items in order.
 * New matcher "containsInAnyorder" matches sequence containing matching items in any order.
-* iOS: Fixed crash that occurred when trying to describe the matchers allOf, anyOf and isIn. Related to -ObjC linker flag.
+* Fixed crash that occurred when trying to describe the matchers allOf, anyOf and isIn on iOS. Related to -ObjC linker flag.
 * Changed documentation from HTML to Xcode documentation set. Run "make install" from the Documentation folder to install.
+* Rearranged documentation modules to make things easier to find.
 * Changed convenience methods to invoke superclass and return id, to support possibility of subclassing matchers.
 
 
