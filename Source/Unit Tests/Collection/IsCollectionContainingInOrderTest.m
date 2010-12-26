@@ -78,6 +78,7 @@
                               ([NSArray arrayWithObjects:@"a", @"b", @"d", nil]));
 }
 
+
 - (void) testDoesNotMatchEmptyCollection
 {
     assertMismatchDescription(@"No item matched: \"d\"", (contains(@"d", nil)), [NSArray array]);
