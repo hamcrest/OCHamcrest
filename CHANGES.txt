@@ -2,7 +2,7 @@
 
 * New matchers:
   - "contains" matches collection containing matching items in order.
-  - "containsInAnyorder" matches collection containing matching items in any order.
+  - "containsInAnyOrder" matches collection containing matching items in any order.
 
 * Fixed crash that occurred when trying to describe the matchers allOf, anyOf and isIn on iOS. Related to -ObjC linker flag.
 

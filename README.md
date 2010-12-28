@@ -95,47 +95,47 @@ A tour of common matchers
 Hamcrest comes with a library of useful matchers. Here are some of the most
 important ones.
 
-  * Core
+* Core
 
-    * ``anything`` - always matches, useful if you don't care what the object
-        under test is
-    * ``describedAs`` - decorator to adding custom failure description
-    * ``is`` - decorator to improve readability - see "Syntactic sugar", below
+  * ``anything`` - always matches, useful if you don't care what the object
+    under test is
+  * ``describedAs`` - decorator to adding custom failure description
+  * ``is`` - decorator to improve readability - see `Syntactic sugar`, below
 
-  * Logical
+* Logical
 
-    * ``allOf`` - matches if all matchers match, short circuits (like C's &&)
-    * ``anyOf`` - matches if any matchers match, short circuits (like C's ||)
-    * ``isNot`` - matches if the wrapped matcher doesn't match and vice versa
+  * ``allOf`` - matches if all matchers match, short circuits (like C's ``&&``)
+  * ``anyOf`` - matches if any matchers match, short circuits (like C's ``||``)
+  * ``isNot`` - matches if the wrapped matcher doesn't match and vice versa
 
-  * Object
+* Object
 
-    * ``equalTo`` - tests object equality using ``-isEqual:``
-    * ``hasDescription`` - tests whether ``-description`` satisfies another
-        matcher
-    * ``instanceOf`` - tests type
-    * ``nilValue``, ``notNilValue`` - tests for nil
-    * ``sameInstance`` - tests object identity
+  * ``equalTo`` - tests object equality using ``-isEqual:``
+  * ``hasDescription`` - tests whether ``-description`` satisfies another
+    matcher
+  * ``instanceOf`` - tests type
+  * ``nilValue``, ``notNilValue`` - tests for nil
+  * ``sameInstance`` - tests object identity
 
-  * Sequences
+* Collections
 
-    * ``hasEntry``, ``hasKey``, ``hasValue`` - tests that an NSDictionary
-        contains an entry, key or value
-    * ``hasItem``, ``hasItems`` - tests that a sequence contains elements
+  * ``hasEntry``, ``hasKey``, ``hasValue`` - tests that an NSDictionary
+    contains an entry, key or value
+  * ``hasItem``, ``hasItems`` - tests that a collection contains elements
 
-  * Number
+* Number
 
-    * ``closeTo`` - tests that numeric values are close to a given value
-    * ``greaterThan``, ``greaterThanOrEqualTo``, ``lessThan``,
-        ``lessThanOrEqualTo`` - tests ordering
+  * ``closeTo`` - tests that numeric values are close to a given value
+  * ``greaterThan``, ``greaterThanOrEqualTo``, ``lessThan``,
+    ``lessThanOrEqualTo`` - tests ordering
 
-  * Text
+* Text
 
-    * ``equalToIgnoringCase`` - tests string equality ignoring case
-    * ``equalToIgnoringWhitespace`` - test strings equality ignoring
-        differences in runs of whitespace
-    * ``containsString``, ``endsWith``, ``startsWith`` - tests string
-        matching
+  * ``equalToIgnoringCase`` - tests string equality ignoring case
+  * ``equalToIgnoringWhitespace`` - test strings equality ignoring
+    differences in runs of whitespace
+  * ``containsString``, ``endsWith``, ``startsWith`` - tests string
+    matching
 
 
 Syntactic sugar
