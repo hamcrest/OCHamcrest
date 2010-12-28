@@ -111,8 +111,8 @@
         </ul>
     <li>Logical</li>
         <ul>
-        <li>@ref allOf - matches if all matchers match, short circuits (like C's &&)</li>
-        <li>@ref anyOf - matches if any matchers match, short circuits (like C's ||)</li>
+        <li>@ref allOf - matches if all matchers match, short circuits (like C's @c &&)</li>
+        <li>@ref anyOf - matches if any matchers match, short circuits (like C's @c ||)</li>
         <li>@ref isNot - matches if the wrapped matcher doesn't match and vice versa</li>
         </ul>
     <li>Object</li>
