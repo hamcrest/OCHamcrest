@@ -1,4 +1,10 @@
+Latest sources: https://github.com/jonreid/OCHamcrest
+For more information: http://code.google.com/p/hamcrest/
+
+
 == Version 1.1 ==
+
+Version 1.1.1 fix: Added the new matchers to the master header.
 
 * New matchers:
   - "contains" matches collection containing matching items in order.
@@ -62,5 +68,3 @@ If you need an original-style assertion that can be called outside of a SenTestC
 
 13 Apr 2008:
 * Initial release
-
-
