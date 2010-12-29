@@ -37,6 +37,8 @@
 	@ingroup library
  */
 #import <OCHamcrest/HCIsCollectionContaining.h>
+#import <OCHamcrest/HCIsCollectionContainingInAnyOrder.h>
+#import <OCHamcrest/HCIsCollectionContainingInOrder.h>
 #import <OCHamcrest/HCIsCollectionOnlyContaining.h>
 #import <OCHamcrest/HCIsDictionaryContaining.h>
 #import <OCHamcrest/HCIsDictionaryContainingKey.h>
