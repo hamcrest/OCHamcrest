@@ -40,6 +40,8 @@
 		087F5C6212C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087F5C6012C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.mm */; };
 		089B9C781298B73200D4F34F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2A4B030D8B679900051BCF /* Foundation.framework */; };
 		08B5181912A058FA00147210 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08B5181812A058FA00147210 /* LICENSE.txt */; };
+		08C131E312CC201A0068FC9D /* HCIsCollectionContainingInAnyOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087F5C6012C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.mm */; };
+		08C131E412CC201C0068FC9D /* HCIsCollectionContainingInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087F5B1C12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm */; };
 		08EEF681129E1A540076BFCC /* HCCollectMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EEF67B129E1A540076BFCC /* HCCollectMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08EEF682129E1A540076BFCC /* HCCollectMatchers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08EEF67C129E1A540076BFCC /* HCCollectMatchers.mm */; };
 		08EEF683129E1A540076BFCC /* HCRequireNonNilString.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EEF67D129E1A540076BFCC /* HCRequireNonNilString.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -920,6 +922,8 @@
 				08EEFA80129F94C20076BFCC /* HCWrapInMatcher.mm in Sources */,
 				08EEFAB012A026010076BFCC /* HCInvocationMatcher.mm in Sources */,
 				08EEFB8312A0393C0076BFCC /* NSObject+HCSelfDescribingValue.mm in Sources */,
+				08C131E312CC201A0068FC9D /* HCIsCollectionContainingInAnyOrder.mm in Sources */,
+				08C131E412CC201C0068FC9D /* HCIsCollectionContainingInOrder.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
