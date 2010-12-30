@@ -2,9 +2,7 @@ Latest sources: https://github.com/jonreid/OCHamcrest
 For more information: http://code.google.com/p/hamcrest/
 
 
-== Version 1.1 ==
-
-Version 1.1.1 fix: Added the new matchers to the master header.
+== Version 1.1.2 ==
 
 * New matchers:
   - "contains" matches collection containing matching items in order.
@@ -17,6 +15,10 @@ Version 1.1.1 fix: Added the new matchers to the master header.
 * Rearranged documentation modules to make things easier to find.
 
 * Changed convenience methods to invoke superclass and return id, to support possibility of subclassing matchers.
+
+1.1.2:
+- Added the new matchers to the master header.
+- Fixed distribution zip file to preserve symlinks in frameworks.
 
 
 == Version 1.0 ==
