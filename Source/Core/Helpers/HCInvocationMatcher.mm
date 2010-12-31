@@ -14,12 +14,18 @@
 
 @implementation HCInvocationMatcher
 
-+ (NSInvocation*) createInvocationForSelector:(SEL)selector onClass:(Class)aClass
++ (NSInvocation*) invocationForSelector:(SEL)selector onClass:(Class)aClass
 {
     NSMethodSignature* signature = [aClass instanceMethodSignatureForSelector:selector];
     NSInvocation* invocation = [NSInvocation invocationWithMethodSignature:signature];
     [invocation setSelector:selector];
     return invocation;
+}
+
+
++ (NSInvocation*) createInvocationForSelector:(SEL)selector onClass:(Class)aClass
+{
+    return [self invocationForSelector:selector onClass:aClass];
 }
 
 

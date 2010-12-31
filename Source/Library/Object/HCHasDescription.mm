@@ -23,9 +23,8 @@
 
 - (id) initWithDescription:(id<HCMatcher>)descriptionMatcher;
 {
-    NSInvocation* anInvocation = [HCInvocationMatcher
-                                        createInvocationForSelector:@selector(description)
-                                                            onClass:[NSObject class]];
+    NSInvocation* anInvocation = [HCInvocationMatcher invocationForSelector:@selector(description)
+                                                                    onClass:[NSObject class]];
     self = [super initWithInvocation:anInvocation matching:descriptionMatcher];
     return self;
 }

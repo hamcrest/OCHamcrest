@@ -96,8 +96,8 @@
 
 - (void) setUp
 {
-    NSInvocation* invocation = [HCInvocationMatcher createInvocationForSelector:@selector(result)
-                                                                        onClass:[Thingy class]];
+    NSInvocation* invocation = [HCInvocationMatcher invocationForSelector:@selector(result)
+                                                                  onClass:[Thingy class]];
     
     resultMatcher = [[HCInvocationMatcher alloc] initWithInvocation:invocation
                                                            matching:[Match matches:@"bar"]];

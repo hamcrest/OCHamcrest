@@ -24,8 +24,15 @@
 
 /**
     Helper method for creating an invocation.
-    
+
     A class is specified only so we can determine the method signature.
+ */
++ (NSInvocation*) invocationForSelector:(SEL)selector onClass:(Class)aClass;
+
+/**
+    Helper method for creating an invocation.
+ 
+    @b Deprecated: Use new name +invocationForSelector:onClass:
  */
 + (NSInvocation*) createInvocationForSelector:(SEL)selector onClass:(Class)aClass;
 
