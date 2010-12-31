@@ -97,10 +97,10 @@
 - (void) setUp
 {
     NSInvocation* invocation = [HCInvocationMatcher createInvocationForSelector:@selector(result)
-                                                    onClass:[Thingy class]];
+                                                                        onClass:[Thingy class]];
     
     resultMatcher = [[HCInvocationMatcher alloc] initWithInvocation:invocation
-                                                matching:[Match matches:@"bar"]];
+                                                           matching:[Match matches:@"bar"]];
 }
 
 
@@ -120,7 +120,7 @@
 - (void) testMismatchesPartOfAnObject
 {
     assertMismatchDescription(@"result mismatch-description", resultMatcher,
-                                [Thingy thingyWithResult:@"foo"]);
+                              [Thingy thingyWithResult:@"foo"]);
 }
 
 
@@ -133,7 +133,7 @@
 - (void) testDoesNotMatchObjectWithoutMethod
 {
     assertDoesNotMatch(@"was <ShouldNotMatch>", resultMatcher,
-                        [[[ShouldNotMatch alloc] init] autorelease]);
+                       [[[ShouldNotMatch alloc] init] autorelease]);
 }
 
 @end

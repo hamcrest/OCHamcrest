@@ -20,9 +20,9 @@
 {
     if (!condition)
     {
-        [self failWithException:[NSException failureInFile: [NSString stringWithUTF8String:fileName]
-                                                    atLine: lineNumber
-                                           withDescription: message]];
+        [self failWithException:[NSException failureInFile:[NSString stringWithUTF8String:fileName]
+                                                    atLine:lineNumber
+                                           withDescription:message]];
     }
 }
 
@@ -32,9 +32,9 @@
 {
     if (condition)
     {
-        [self failWithException:[NSException failureInFile: [NSString stringWithUTF8String:fileName]
-                                                    atLine: lineNumber
-                                           withDescription: message]];
+        [self failWithException:[NSException failureInFile:[NSString stringWithUTF8String:fileName]
+                                                    atLine:lineNumber
+                                           withDescription:message]];
     }
 }
 
@@ -48,11 +48,11 @@
     if (![actual isEqualToString:expected])
     {
         [self failWithException:
-                [NSException failureInEqualityBetweenObject: actual
-                                                  andObject: expected
-                                                     inFile: [NSString stringWithUTF8String:fileName]
-                                                     atLine: lineNumber
-                                            withDescription: @"Expected description"]];
+                [NSException failureInEqualityBetweenObject:actual
+                                                  andObject:expected
+                                                     inFile:[NSString stringWithUTF8String:fileName]
+                                                     atLine:lineNumber
+                                            withDescription:@"Expected description"]];
     }
 }
 
@@ -64,15 +64,15 @@
     BOOL result = [matcher matches:arg];
     if (!result)
     {
-        [self failWithException:[NSException failureInFile: [NSString stringWithUTF8String:fileName]
-                                                    atLine: lineNumber
-                                           withDescription: @"Precondition: Matcher should match item"]];
+        [self failWithException:[NSException failureInFile:[NSString stringWithUTF8String:fileName]
+                                                    atLine:lineNumber
+                                           withDescription:@"Precondition: Matcher should match item"]];
     }
     if ([[description description] length] != 0)
     {
-        [self failWithException:[NSException failureInFile: [NSString stringWithUTF8String:fileName]
-                                                    atLine: lineNumber
-                                           withDescription: @"Expected no mismatch description"]];
+        [self failWithException:[NSException failureInFile:[NSString stringWithUTF8String:fileName]
+                                                    atLine:lineNumber
+                                           withDescription:@"Expected no mismatch description"]];
     }
 }
 
@@ -84,19 +84,19 @@
     BOOL result = [matcher matches:arg describingMismatchTo:description];
     if (result)
     {
-        [self failWithException:[NSException failureInFile: [NSString stringWithUTF8String:fileName]
-                                                    atLine: lineNumber
-                                           withDescription: @"Precondition: Matcher should not match item"]];
+        [self failWithException:[NSException failureInFile:[NSString stringWithUTF8String:fileName]
+                                                    atLine:lineNumber
+                                           withDescription:@"Precondition: Matcher should not match item"]];
     }
     NSString* actual = [description description];
     if (![actual isEqualToString:expected])
     {
         [self failWithException:
-                [NSException failureInEqualityBetweenObject: actual
-                                                  andObject: expected
-                                                     inFile: [NSString stringWithUTF8String:fileName]
-                                                     atLine: lineNumber
-                                            withDescription: @"Expected mismatch description"]];
+                [NSException failureInEqualityBetweenObject:actual
+                                                  andObject:expected
+                                                     inFile:[NSString stringWithUTF8String:fileName]
+                                                     atLine:lineNumber
+                                            withDescription:@"Expected mismatch description"]];
     }
 }
 
@@ -110,11 +110,11 @@
     if (![actual isEqualToString:expected])
     {
         [self failWithException:
-                [NSException failureInEqualityBetweenObject: actual
-                                                  andObject: expected
-                                                     inFile: [NSString stringWithUTF8String:fileName]
-                                                     atLine: lineNumber
-                                            withDescription: @"Expected mismatch description"]];
+                [NSException failureInEqualityBetweenObject:actual
+                                                  andObject:expected
+                                                     inFile:[NSString stringWithUTF8String:fileName]
+                                                     atLine:lineNumber
+                                            withDescription:@"Expected mismatch description"]];
     }
 }
 

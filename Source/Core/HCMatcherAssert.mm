@@ -91,7 +91,8 @@ OBJC_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher>
                         appendDescriptionOf:matcher]
                         appendText:@", got "]
                         appendValue:actual];
-        NSException* assertThatFailure = createAssertThatFailure(fileName, lineNumber, [description description]);
+        NSException* assertThatFailure = createAssertThatFailure(fileName, lineNumber,
+                                                                 [description description]);
         [testCase failWithException:assertThatFailure];
     }
 }

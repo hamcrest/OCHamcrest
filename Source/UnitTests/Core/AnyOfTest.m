@@ -39,27 +39,25 @@
 
 - (void) testEvaluatesToTheTheLogicalDisjunctionOfManyOtherMatchers
 {
-    assertThat(@"good", anyOf(
-                            equalTo(@"bad"),
-                            equalTo(@"good"),
-                            equalTo(@"bad"),
-                            equalTo(@"bad"),
-                            equalTo(@"bad"),
-                            nil));
-    assertThat(@"good", isNot(anyOf(
-                            equalTo(@"bad"),
-                            equalTo(@"bad"),
-                            equalTo(@"bad"),
-                            equalTo(@"bad"),
-                            equalTo(@"bad"),
-                            nil)));
+    assertThat(@"good", anyOf(equalTo(@"bad"),
+                              equalTo(@"good"),
+                              equalTo(@"bad"),
+                              equalTo(@"bad"),
+                              equalTo(@"bad"),
+                              nil));
+    assertThat(@"good", isNot(anyOf(equalTo(@"bad"),
+                                    equalTo(@"bad"),
+                                    equalTo(@"bad"),
+                                    equalTo(@"bad"),
+                                    equalTo(@"bad"),
+                                    nil)));
 }
 
 
 - (void) testHasAReadableDescription
 {
     assertDescription(@"(\"good\" or \"bad\" or \"ugly\")",
-            anyOf(equalTo(@"good"), equalTo(@"bad"), equalTo(@"ugly"), nil));
+                      anyOf(equalTo(@"good"), equalTo(@"bad"), equalTo(@"ugly"), nil));
 }
 
 

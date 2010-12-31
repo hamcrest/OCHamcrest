@@ -62,7 +62,7 @@
 - (void) testHasReadableDescription
 {
     assertDescription(@"dictionary containing [\"a\"-><2>]",
-            hasEntry(equalTo(@"a"), equalTo([NSNumber numberWithInt:2])));
+                      hasEntry(equalTo(@"a"), equalTo([NSNumber numberWithInt:2])));
 }
 
 @end

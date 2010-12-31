@@ -39,10 +39,10 @@
 - (void) testAppendsValuesToDescription
 {
     id<HCMatcher> m = describedAs(@"value 1 = %0, value 2 = %1",
-                                anything(),
-                                [NSNumber numberWithInt:33],
-                                [NSNumber numberWithInt:97],
-                                nil);
+                                  anything(),
+                                  [NSNumber numberWithInt:33],
+                                  [NSNumber numberWithInt:97],
+                                  nil);
     
     assertDescription(@"value 1 = <33>, value 2 = <97>", m);
 }
@@ -51,9 +51,9 @@
 - (void) testHandlesSubstitutionAtBeginning
 {
     id<HCMatcher> m = describedAs(@"%0ok",
-                                anything(),
-                                [NSNumber numberWithInt:33],
-                                nil);
+                                  anything(),
+                                  [NSNumber numberWithInt:33],
+                                  nil);
     
     assertDescription(@"<33>ok", m);
 }
@@ -62,9 +62,9 @@
 - (void) testHandlesSubstitutionAtEnd
 {
     id<HCMatcher> m = describedAs(@"ok%0",
-                                anything(),
-                                [NSNumber numberWithInt:33],
-                                nil);
+                                  anything(),
+                                  [NSNumber numberWithInt:33],
+                                  nil);
     
     assertDescription(@"ok<33>", m);
 }

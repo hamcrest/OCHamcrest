@@ -56,7 +56,7 @@
 - (void) describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"a collection containing "]
-                    appendDescriptionOf:elementMatcher];
+                  appendDescriptionOf:elementMatcher];
 }
 
 @end

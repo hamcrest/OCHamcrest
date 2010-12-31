@@ -32,19 +32,19 @@ static NSString* EXCERPT = @"EXCERPT";
     id<HCMatcher> stringStartsWith = startsWith(EXCERPT);
     
     STAssertTrue([stringStartsWith matches:[EXCERPT stringByAppendingString:@"END"]],
-                @"should be true if excerpt at beginning");
+                 @"should be true if excerpt at beginning");
     STAssertFalse([stringStartsWith matches:[@"START" stringByAppendingString:EXCERPT]],
-                @"should be false if excerpt at end");
+                  @"should be false if excerpt at end");
     STAssertFalse([stringStartsWith matches:
                     [[@"START" stringByAppendingString:EXCERPT] stringByAppendingString:@"END"]],
-                @"should be false if excerpt in middle");
+                  @"should be false if excerpt in middle");
     STAssertTrue([stringStartsWith matches:[EXCERPT stringByAppendingString:EXCERPT]],
-                @"should be true if excerpt is at beginning and repeated");
+                 @"should be true if excerpt is at beginning and repeated");
     
     STAssertFalse([stringStartsWith matches:@"Something else"],
-                @"should not be true if excerpt is not in string");
+                  @"should not be true if excerpt is not in string");
     STAssertFalse([stringStartsWith matches:[EXCERPT substringFromIndex:1]],
-                @"should not be true if part of excerpt is at start of string");
+                  @"should not be true if part of excerpt is at start of string");
 }
 
 
@@ -53,7 +53,7 @@ static NSString* EXCERPT = @"EXCERPT";
     id<HCMatcher> stringStartsWith = startsWith(EXCERPT);
     
     STAssertTrue([stringStartsWith matches:EXCERPT],
-                @"should be true if excerpt is entire string");
+                 @"should be true if excerpt is entire string");
 }
 
 

@@ -90,28 +90,28 @@ NSString* comparison(NSComparisonResult compare)
 
 OBJC_EXPORT id<HCMatcher> HC_greaterThan(id aValue)
 {
-    return [HCOrderingComparison compare: aValue
-                              minCompare: NSOrderedAscending
-                              maxCompare: NSOrderedAscending];
+    return [HCOrderingComparison compare:aValue
+                              minCompare:NSOrderedAscending
+                              maxCompare:NSOrderedAscending];
 }
 
 OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id aValue)
 {
-    return [HCOrderingComparison compare: aValue
-                              minCompare: NSOrderedAscending
-                              maxCompare: NSOrderedSame];
+    return [HCOrderingComparison compare:aValue
+                              minCompare:NSOrderedAscending
+                              maxCompare:NSOrderedSame];
 }
 
 OBJC_EXPORT id<HCMatcher> HC_lessThan(id aValue)
 {
-    return [HCOrderingComparison compare: aValue
-                              minCompare: NSOrderedDescending
-                              maxCompare: NSOrderedDescending];
+    return [HCOrderingComparison compare:aValue
+                              minCompare:NSOrderedDescending
+                              maxCompare:NSOrderedDescending];
 }
 
 OBJC_EXPORT id<HCMatcher> HC_lessThanOrEqualTo(id aValue)
 {
-    return [HCOrderingComparison compare: aValue
-                              minCompare: NSOrderedSame
-                              maxCompare: NSOrderedDescending];
+    return [HCOrderingComparison compare:aValue
+                              minCompare:NSOrderedSame
+                              maxCompare:NSOrderedDescending];
 }

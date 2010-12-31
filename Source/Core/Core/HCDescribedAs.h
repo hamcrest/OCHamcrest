@@ -25,8 +25,8 @@
         overValues:(NSArray*)templateValues;
 
 - (id) initWithDescription:(NSString*)description
-                    forMatcher:(id<HCMatcher>)aMatcher
-                    overValues:(NSArray*)templateValues;
+                forMatcher:(id<HCMatcher>)aMatcher
+                overValues:(NSArray*)templateValues;
 
 @end
 

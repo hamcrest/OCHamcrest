@@ -83,8 +83,8 @@
 {
     id innerMatcher = equalTo(@"NestedMatcher");
     assertDescription(([[NSArray arrayWithObjects:@"<", [innerMatcher description], @">", nil]
-                                    componentsJoinedByString:@""]),
-                        equalTo(innerMatcher));
+                            componentsJoinedByString:@""]),
+                      equalTo(innerMatcher));
 }
 
 

@@ -134,8 +134,9 @@
     if (![collection conformsToProtocol:@protocol(NSFastEnumeration)])
         return NO;
     
-    HCMatchingInAnyOrder *matchSequence = [[[HCMatchingInAnyOrder alloc] initWithMatchers:matchers
-                                                                      mismatchDescription:mismatchDescription] autorelease];
+    HCMatchingInAnyOrder *matchSequence =
+        [[[HCMatchingInAnyOrder alloc] initWithMatchers:matchers 
+                                    mismatchDescription:mismatchDescription] autorelease];
     for (id item in collection)
     {
         if (![matchSequence matches:item])

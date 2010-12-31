@@ -55,7 +55,7 @@
 - (void) describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"dictionary with key "]
-                    appendDescriptionOf:keyMatcher];
+                  appendDescriptionOf:keyMatcher];
 }
 
 @end

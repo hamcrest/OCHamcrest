@@ -58,7 +58,7 @@
 - (void) testHasAReadableDescription
 {
     assertDescription(@"equalToIgnoringCase(\"heLLo\")",
-                        equalToIgnoringCase(@"heLLo"));
+                      equalToIgnoringCase(@"heLLo"));
 }
 
 

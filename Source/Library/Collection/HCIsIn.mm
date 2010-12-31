@@ -24,9 +24,9 @@
 {
     if (![aCollection respondsToSelector:@selector(containsObject:)])
     {
-        @throw [NSException exceptionWithName: @"NotAContainer"
-                                       reason: @"Object must respond to -containsObject:"
-                                     userInfo: nil];
+        @throw [NSException exceptionWithName:@"NotAContainer"
+                                       reason:@"Object must respond to -containsObject:"
+                                     userInfo:nil];
     }
     
     self = [super init];

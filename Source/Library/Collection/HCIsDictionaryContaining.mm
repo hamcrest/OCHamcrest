@@ -62,10 +62,10 @@
 - (void) describeTo:(id<HCDescription>)description
 {
     [[[[[description appendText:@"dictionary containing ["]
-                    appendDescriptionOf:keyMatcher]
-                    appendText:@"->"]
-                    appendDescriptionOf:valueMatcher]
-                    appendText:@"]"];
+                     appendDescriptionOf:keyMatcher]
+                     appendText:@"->"]
+                     appendDescriptionOf:valueMatcher]
+                     appendText:@"]"];
 }
 
 @end

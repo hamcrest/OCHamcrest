@@ -51,7 +51,9 @@
 
 
 - (id<HCDescription>) appendList:(NSArray*)values
-                        start:(NSString*)start separator:(NSString*)separator end:(NSString*)end
+                           start:(NSString*)start
+                       separator:(NSString*)separator
+                             end:(NSString*)end
 {
     BOOL separate = NO;
     

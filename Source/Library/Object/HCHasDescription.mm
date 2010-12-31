@@ -25,7 +25,7 @@
 {
     NSInvocation* anInvocation = [HCInvocationMatcher
                                         createInvocationForSelector:@selector(description)
-                                        onClass:[NSObject class]];
+                                                            onClass:[NSObject class]];
     self = [super initWithInvocation:anInvocation matching:descriptionMatcher];
     return self;
 }
