@@ -1,3 +1,8 @@
+* [Full documentation][http://jonreid.github.com/OCHamcrest/]
+* [Latest sources][https://github.com/jonreid/OCHamcrest]
+* [Hamcrest information][http://code.google.com/p/hamcrest/]
+
+
 Introduction
 ============
 
