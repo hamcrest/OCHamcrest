@@ -32,6 +32,12 @@
 }
 
 
+- (void) testDoesNotMatchNil
+{
+    assertDoesNotMatch(@"Should not match nil", containsInAnyOrder(@"a", nil), nil);
+}
+
+
 - (void) testDoesNotMatchEmptyCollection
 {
     assertMismatchDescription(@"No item matches: \"a\", \"b\" in []",

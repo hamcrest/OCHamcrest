@@ -79,6 +79,12 @@
 }
 
 
+- (void) testDoesNotMatchNil
+{
+    assertDoesNotMatch(@"Should not match nil", contains(@"a", nil), nil);
+}
+
+
 - (void) testDoesNotMatchEmptyCollection
 {
     assertMismatchDescription(@"No item matched: \"d\"", (contains(@"d", nil)), [NSArray array]);
