@@ -54,9 +54,9 @@ pair<int, NSString*> separate(NSString* component)
         forMatcher:(id<HCMatcher>)aMatcher
         overValues:(NSArray*)templateValues
 {
-    return [[[self alloc] initWithDescription: description
-                                   forMatcher: aMatcher
-                                   overValues: templateValues] autorelease];
+    return [[[self alloc] initWithDescription:description
+                                   forMatcher:aMatcher
+                                   overValues:templateValues] autorelease];
 }
 
 

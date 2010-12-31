@@ -10,7 +10,9 @@
 
 
 /**
-    Throws an NSException if @a string is nil.
+    Throws an NSException if @a string is @c nil.
     @ingroup helpers
+
+    @deprecated Use HCRequireNonNilObject instead.
 */
 OBJC_EXPORT void HCRequireNonNilString(NSString* string);

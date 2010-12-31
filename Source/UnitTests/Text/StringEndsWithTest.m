@@ -57,7 +57,7 @@ static NSString* EXCERPT = @"EXCERPT";
 }
 
 
-- (void) testConstructorRequiresNonNilArgument
+- (void) testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(endsWith(nil), @"should require non-nil argument");
 }

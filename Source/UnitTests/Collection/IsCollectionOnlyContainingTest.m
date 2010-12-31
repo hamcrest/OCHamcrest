@@ -72,4 +72,10 @@
 
 }
 
+
+- (void) testMatcherCreationRequiresNonNilArgument
+{    
+    STAssertThrows(onlyContains(nil), @"Should require non-nil list");
+}
+
 @end

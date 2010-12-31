@@ -49,7 +49,7 @@
 }
 
 
-- (void) testConstructorRequiresNonNilArgument
+- (void) testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(equalToIgnoringCase(nil), @"should require non-nil argument");
 }

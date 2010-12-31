@@ -10,6 +10,7 @@
 
     // OCHamcrest
 #import "HCDescription.h"
+#import "HCRequireNonNilObject.h"
 #import "HCWrapInMatcher.h"
 
 
@@ -63,5 +64,6 @@
 
 OBJC_EXPORT id<HCMatcher> HC_hasValue(id matcherOrValue)
 {
+    HCRequireNonNilObject(matcherOrValue);
     return [HCIsDictionaryContainingValue isDictionaryContainingValue:HCWrapInMatcher(matcherOrValue)];
 }

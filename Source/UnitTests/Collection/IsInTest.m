@@ -37,7 +37,7 @@
 }
 
 
-- (void) testConstructorRequiresObjectWithContainsObjectMethod
+- (void) testMatcherCreationRequiresObjectWithContainsObjectMethod
 {
     id object = [[[NSObject alloc] init] autorelease];
     
@@ -50,6 +50,12 @@
     id<HCMatcher> matcher = isIn([NSArray arrayWithObjects:@"a", @"b", @"c", nil]);
     
     assertDescription(@"one of {\"a\", \"b\", \"c\"}", matcher);
+}
+
+
+- (void) testMatcherCreationRequiresNonNilArgument
+{    
+    STAssertThrows(isIn(nil), @"Should require non-nil argument");
 }
 
 @end

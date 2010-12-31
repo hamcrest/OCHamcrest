@@ -82,4 +82,9 @@
 }
 
 
+- (void) testMatcherCreationRequiresNonNilArgument
+{    
+    STAssertThrows(hasKey(nil), @"Should require non-nil argument");
+}
+
 @end

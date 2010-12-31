@@ -83,4 +83,10 @@
                            @"bad");
 }
 
+
+- (void) testMatcherCreationRequiresNonNilArgument
+{    
+    STAssertThrows(allOf(nil), @"Should require non-nil list");
+}
+
 @end

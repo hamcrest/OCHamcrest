@@ -68,7 +68,7 @@
 }
 
 
-- (void) testConstructorRequiresNonNilArgument
+- (void) testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(equalToIgnoringWhiteSpace(nil), @"should require non-nil argument");
 }

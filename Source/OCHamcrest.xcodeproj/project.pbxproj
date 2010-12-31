@@ -42,6 +42,9 @@
 		08B5181912A058FA00147210 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08B5181812A058FA00147210 /* LICENSE.txt */; };
 		08C131E312CC201A0068FC9D /* HCIsCollectionContainingInAnyOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087F5C6012C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.mm */; };
 		08C131E412CC201C0068FC9D /* HCIsCollectionContainingInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087F5B1C12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm */; };
+		08DB90DB12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08DB90DA12CE8B0900EFB75C /* HCRequireNonNilObject.mm */; };
+		08DB90DC12CE8B0900EFB75C /* HCRequireNonNilObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 08DB90D912CE8B0900EFB75C /* HCRequireNonNilObject.h */; };
+		08DB90DD12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08DB90DA12CE8B0900EFB75C /* HCRequireNonNilObject.mm */; };
 		08EEF681129E1A540076BFCC /* HCCollectMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EEF67B129E1A540076BFCC /* HCCollectMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08EEF682129E1A540076BFCC /* HCCollectMatchers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08EEF67C129E1A540076BFCC /* HCCollectMatchers.mm */; };
 		08EEF683129E1A540076BFCC /* HCRequireNonNilString.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EEF67D129E1A540076BFCC /* HCRequireNonNilString.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -214,6 +217,8 @@
 		087F5C5F12C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContainingInAnyOrder.h; sourceTree = "<group>"; };
 		087F5C6012C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsCollectionContainingInAnyOrder.mm; sourceTree = "<group>"; };
 		08B5181812A058FA00147210 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = SOURCE_ROOT; };
+		08DB90D912CE8B0900EFB75C /* HCRequireNonNilObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilObject.h; sourceTree = "<group>"; };
+		08DB90DA12CE8B0900EFB75C /* HCRequireNonNilObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCRequireNonNilObject.mm; sourceTree = "<group>"; };
 		08EEF67B129E1A540076BFCC /* HCCollectMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCollectMatchers.h; sourceTree = "<group>"; };
 		08EEF67C129E1A540076BFCC /* HCCollectMatchers.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCCollectMatchers.mm; sourceTree = "<group>"; };
 		08EEF67D129E1A540076BFCC /* HCRequireNonNilString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilString.h; sourceTree = "<group>"; };
@@ -410,6 +415,8 @@
 				08EEF67C129E1A540076BFCC /* HCCollectMatchers.mm */,
 				08EEF6A1129E1F5C0076BFCC /* HCInvocationMatcher.h */,
 				08EEF6A2129E1F5C0076BFCC /* HCInvocationMatcher.mm */,
+				08DB90D912CE8B0900EFB75C /* HCRequireNonNilObject.h */,
+				08DB90DA12CE8B0900EFB75C /* HCRequireNonNilObject.mm */,
 				08EEF67D129E1A540076BFCC /* HCRequireNonNilString.h */,
 				08EEF67E129E1A540076BFCC /* HCRequireNonNilString.mm */,
 				08EEF67F129E1A540076BFCC /* HCWrapInMatcher.h */,
@@ -708,6 +715,7 @@
 				08EEF6A3129E1F5C0076BFCC /* HCInvocationMatcher.h in Headers */,
 				087F5B1D12C53618008B6B72 /* HCIsCollectionContainingInOrder.h in Headers */,
 				087F5C6112C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.h in Headers */,
+				08DB90DC12CE8B0900EFB75C /* HCRequireNonNilObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,6 +932,7 @@
 				08EEFB8312A0393C0076BFCC /* NSObject+HCSelfDescribingValue.mm in Sources */,
 				08C131E312CC201A0068FC9D /* HCIsCollectionContainingInAnyOrder.mm in Sources */,
 				08C131E412CC201C0068FC9D /* HCIsCollectionContainingInOrder.mm in Sources */,
+				08DB90DB12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,6 +1017,7 @@
 				08EEFB8012A039320076BFCC /* NSObject+HCSelfDescribingValue.mm in Sources */,
 				087F5B1E12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm in Sources */,
 				087F5C6212C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.mm in Sources */,
+				08DB90DD12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

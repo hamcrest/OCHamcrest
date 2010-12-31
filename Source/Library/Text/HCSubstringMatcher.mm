@@ -10,7 +10,7 @@
 
     // OCHamcrest
 #import "HCDescription.h"
-#import "HCRequireNonNilString.h"
+#import "HCRequireNonNilObject.h"
 
 
 @interface HCSubstringMatcher (SubclassResponsibility)
@@ -22,7 +22,7 @@
 
 - (id) initWithSubstring:(NSString*)aSubstring
 {
-    HCRequireNonNilString(aSubstring);
+    HCRequireNonNilObject(aSubstring);
     
     self = [super init];
     if (self != nil)

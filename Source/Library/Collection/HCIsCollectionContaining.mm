@@ -11,6 +11,7 @@
     // OCHamcrest
 #import "HCAllOf.h"
 #import "HCDescription.h"
+#import "HCRequireNonNilObject.h"
 #import "HCWrapInMatcher.h"
 
 
@@ -64,6 +65,7 @@
 
 OBJC_EXPORT id<HCMatcher> HC_hasItem(id item)
 {
+    HCRequireNonNilObject(item);
     return [HCIsCollectionContaining isCollectionContaining:HCWrapInMatcher(item)];
 }
 

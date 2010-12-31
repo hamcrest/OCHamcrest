@@ -11,6 +11,7 @@
     // OCHamcrest
 #import "HCAnyOf.h"
 #import "HCDescription.h"
+#import "HCRequireNonNilObject.h"
 #import "HCWrapInMatcher.h"
 
 
@@ -67,6 +68,7 @@
 
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id items, ...)
 {
+    HCRequireNonNilObject(items);
     NSMutableArray* matchers = [NSMutableArray arrayWithObject:HCWrapInMatcher(items)];
     
     va_list args;

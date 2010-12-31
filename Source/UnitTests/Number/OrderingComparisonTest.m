@@ -62,7 +62,7 @@
 }
 
 
-- (void) testConstructorRequiresObjectWithCompareMethod
+- (void) testMatcherCreationRequiresObjectWithCompareMethod
 {
     id object = [[[NSObject alloc] init] autorelease];
     

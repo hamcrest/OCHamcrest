@@ -10,7 +10,7 @@
 
     // OCHamcrest
 #import "HCDescription.h"
-#import "HCRequireNonNilString.h"
+#import "HCRequireNonNilObject.h"
 
 
 @implementation HCIsEqualIgnoringCase
@@ -23,7 +23,7 @@
 
 - (id) initWithString:(NSString*)aString
 {
-    HCRequireNonNilString(aString);
+    HCRequireNonNilObject(aString);
     
     self = [super init];
     if (self != nil)

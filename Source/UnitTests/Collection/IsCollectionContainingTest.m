@@ -92,4 +92,11 @@
                        hasItem(@"a"), [[[NSObject alloc] init] autorelease]);
 }
 
+
+- (void) testMatcherCreationRequiresNonNilArgument
+{    
+    STAssertThrows(hasItem(nil), @"Should require non-nil argument");
+    STAssertThrows(hasItems(nil), @"Should require non-nil list");
+}
+
 @end

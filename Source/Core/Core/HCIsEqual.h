@@ -11,6 +11,9 @@
 
 /**
     Is the object equal to another object, as tested by the -isEqual: method?
+ 
+    If the given object is @c nil, the matcher will match @c nil.
+ 
     @ingroup core_matchers
  */
 @interface HCIsEqual : HCBaseMatcher
@@ -26,6 +29,8 @@
 
 /**
     Is the object equal to another object, as tested by the -isEqual: method?
+ 
+    If the given object is @c nil, the matcher will match @c nil.
  
     @b Synonym: @ref equalTo
     @see HCIsEqual
