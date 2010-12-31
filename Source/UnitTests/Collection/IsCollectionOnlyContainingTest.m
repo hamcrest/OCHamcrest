@@ -27,36 +27,41 @@
 
 - (void) testDoesNotMatchEmptyCollection
 {
-    id collection = [NSArray array];
-    assertDoesNotMatch(@"empty collection", onlyContains(equalTo(@"foo"), nil), collection);
+    assertDoesNotMatch(@"empty collection",
+                       onlyContains(equalTo(@"foo"), nil),
+                       ([NSArray array]));
 }
 
 
 - (void) testMatchesSingletonCollection
 {
-    id collection = [NSSet setWithObject:@"a"];
-    assertMatches(@"singleton collection", onlyContains(equalTo(@"a"), nil), collection);
+    assertMatches(@"singleton collection",
+                  onlyContains(equalTo(@"a"), nil),
+                  ([NSSet setWithObject:@"a"]));
 }
 
 
 - (void) testMatchesCollection
 {
-    id collection = [NSSet setWithObjects:@"a", @"b", nil];
-    assertMatches(@"collection", onlyContains(equalTo(@"a"), equalTo(@"b"), nil), collection);
+    assertMatches(@"collection",
+                  onlyContains(equalTo(@"a"), equalTo(@"b"), nil),
+                  ([NSSet setWithObjects:@"a", @"b", nil]));
 }
 
 
 - (void) testProvidesConvenientShortcutForMatchingWithIsEqualTo
 {
-    id collection = [NSSet setWithObjects:@"a", @"b", nil];
-    assertMatches(@"collection", onlyContains(@"a", equalTo(@"b"), nil), collection);
+    assertMatches(@"collection",
+                  onlyContains(@"a", equalTo(@"b"), nil),
+                  ([NSSet setWithObjects:@"a", @"b", nil]));
 }
 
 
 - (void) testDoesNotMatchCollectionWithMismatchingItem
 {
-    id collection = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
-    assertDoesNotMatch(@"collection", onlyContains(@"a", @"b", nil), collection);
+    assertDoesNotMatch(@"collection",
+                       onlyContains(@"a", @"b", nil),
+                       ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
 }
 
 

@@ -27,21 +27,17 @@
 
 - (void) testMatchesACollectionThatContainsAnElementMatchingTheGivenMatcher
 {
-    id<HCMatcher> itemMatcher = hasItem(equalTo(@"a"));
-    
     assertMatches(@"should match list that contains 'a'",
-                itemMatcher, ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
+                hasItem(equalTo(@"a")), ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
 }
 
 
 - (void) testDoesNotMatchCollectionThatDoesntContainAnElementMatchingTheGivenMatcher
 {
-    id <HCMatcher> itemMatcher = hasItem(equalTo(@"a"));
-    
     assertDoesNotMatch(@"should not match list that doesn't contain 'a'",
-                itemMatcher, ([NSArray arrayWithObjects:@"b", @"c", nil]));    
+                hasItem(equalTo(@"a")), ([NSArray arrayWithObjects:@"b", @"c", nil]));    
     assertDoesNotMatch(@"should not match the empty list",
-                itemMatcher, [NSArray array]);
+                hasItem(equalTo(@"a")), [NSArray array]);
 }
 
 
@@ -68,29 +64,24 @@
 
 - (void) testMatchesAllItemsInCollection
 {
-    id<HCMatcher> matcher1 = hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil);
     assertMatches(@"should match list containing all items",
-                matcher1,
+                (hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil)),
                 ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
     
-    id<HCMatcher> matcher2 = hasItems(@"a", @"b", @"c", nil);
     assertMatches(@"should match list containing all items (without matchers)",
-                matcher2,
+                (hasItems(@"a", @"b", @"c", nil)),
                 ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
     
-    id<HCMatcher> matcher3 = hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil);
     assertMatches(@"should match list containing all items in any order",
-                matcher3,
+                (hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil)),
                 ([NSArray arrayWithObjects:@"c", @"b", @"a", nil]));
     
-    id<HCMatcher> matcher4 = hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil);
     assertMatches(@"should match list containing all items plus others",
-                matcher4,
+                (hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil)),
                 ([NSArray arrayWithObjects:@"e", @"c", @"b", @"a", @"d", nil]));
     
-    id<HCMatcher> matcher5 = hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil);
     assertDoesNotMatch(@"should not match list unless it contains all items",
-                matcher5,
+                (hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil)),
                 ([NSArray arrayWithObjects:@"e", @"c", @"b", @"d", nil]));  // "a" missing
 }
 
