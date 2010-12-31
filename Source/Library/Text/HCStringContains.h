@@ -14,8 +14,6 @@
     @ingroup text_matchers
  */
 @interface HCStringContains : HCSubstringMatcher
-{
-}
 
 + (id) stringContains:(NSString*)aSubstring;
 

@@ -14,8 +14,6 @@
     @ingroup object_matchers
  */
 @interface HCHasDescription : HCInvocationMatcher
-{
-}
 
 + (id) hasDescription:(id<HCMatcher>)descriptionMatcher;
 - (id) initWithDescription:(id<HCMatcher>)descriptionMatcher;

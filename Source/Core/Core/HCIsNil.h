@@ -14,8 +14,6 @@
     @ingroup core_matchers
 */
 @interface HCIsNil : HCBaseMatcher
-{
-}
 
 + (id) isNil;
 

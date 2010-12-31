@@ -14,8 +14,6 @@
     @ingroup text_matchers
  */
 @interface HCStringStartsWith : HCSubstringMatcher
-{
-}
 
 + (id) stringStartsWith:(NSString*)aSubstring;
 
