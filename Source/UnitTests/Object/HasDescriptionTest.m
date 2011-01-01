@@ -60,9 +60,9 @@ static NSString* DESCRIPTION_RESULT = @"description result";
     id<HCMatcher> matcher = hasDescription(descriptionMatcher);
 
     STAssertEqualObjects([matcher description],
-                            ([NSString stringWithFormat:@"with description %@",
-                                            [descriptionMatcher description]]),
-                            nil);
+                         ([NSString stringWithFormat:@"with description %@",
+                                        [descriptionMatcher description]]),
+                         nil);
 }
 
 @end

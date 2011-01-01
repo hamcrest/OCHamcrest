@@ -10,7 +10,7 @@
 
 
 /**
-    Is the object equal to another object, as tested by the -isEqual: method?
+    Is the object equal to another object, as tested by the @c -isEqual: method?
  
     If the given object is @c nil, the matcher will match @c nil.
  
@@ -28,7 +28,7 @@
 
 
 /**
-    Is the object equal to another object, as tested by the -isEqual: method?
+    Is the object equal to another object, as tested by the @c -isEqual: method?
  
     If the given object is @c nil, the matcher will match @c nil.
  

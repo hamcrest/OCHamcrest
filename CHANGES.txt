@@ -4,8 +4,16 @@ Hamcrest information: http://code.google.com/p/hamcrest/
 
 == Version 1.2 == *IN PROGRESS*
 
-* Deprecated HCInvocation's helper class method +createInvocationForSelector:onClass:, renaming it to +invocationForSelector:onClass:.
-* Deprecated helper function HCRequireNonNilString. Use HCRequireNonNilObject instead.
+* New matchers:
+  - "hasCount" matches collections for which -count satisfies a given matcher.
+  - "hasCountOf" matches collections for which -count equals a given count.
+
+* Deprecated: (Affects you if you write your own matchers)
+  - Renamed HCInvocation's helper class method +createInvocationForSelector:onClass: to +invocationForSelector:onClass:
+  - New helper function HCRequireNonNilObject should be used in place of HCRequireNonNilString.
+
+* Fixed assertThat mismatch description to ask matcher to describe the mismatch value, instead of just reporting the value by itself. If you have unit tests for your own custom matchers that test the message given by assertThat, they will now fail. As a short-term fix, call HCUseDeprecatedDescription(YES) to change mismatch descriptions to their old output. For a more complete fix, update your tests match the new description format.
+
 * Since nil cannot be directly stored in collections, collection matchers now guard against nil.
 
 

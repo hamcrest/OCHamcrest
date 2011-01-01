@@ -39,7 +39,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <0>, got <1>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <0>, but was <1>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -60,7 +60,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <65>, got <66>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <65>, but was <66>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -81,7 +81,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <1.5>, got <2.5>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <1.5>, but was <2.5>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -102,7 +102,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <1.5>, got <2.5>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <1.5>, but was <2.5>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -123,7 +123,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <1>, got <2>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <1>, but was <2>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -144,7 +144,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <1>, got <2>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <1>, but was <2>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -165,7 +165,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <1>, got <2>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <1>, but was <2>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -186,7 +186,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <1>, got <2>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <1>, but was <2>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -207,7 +207,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <65>, got <66>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <65>, but was <66>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -228,7 +228,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <1>, got <2>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <1>, but was <2>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -249,7 +249,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <1>, got <2>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <1>, but was <2>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -270,7 +270,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <1>, got <2>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <1>, but was <2>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -291,7 +291,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <1>, got <2>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <1>, but was <2>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -312,7 +312,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <1>, got <2>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <1>, but was <2>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");
@@ -333,7 +333,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects(@"Expected <1>, got <2>", [exception reason], nil);
+        STAssertEqualObjects(@"Expected <1>, but was <2>", [exception reason], nil);
         return;
     }
     STFail(@"should have failed");

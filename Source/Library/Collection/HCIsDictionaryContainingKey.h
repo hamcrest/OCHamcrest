@@ -10,7 +10,7 @@
 
 
 /**
-     Matches dictionaries containing a key satisfying a given matcher.
+    Matches dictionaries containing a key satisfying a given matcher.
     @ingroup collection_matchers
  */
 @interface HCIsDictionaryContainingKey : HCBaseMatcher

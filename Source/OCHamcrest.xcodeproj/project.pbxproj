@@ -32,6 +32,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		086CB26B12CFBE9100DCCB68 /* HCHasCount.h in Headers */ = {isa = PBXBuildFile; fileRef = 086CB26912CFBE9100DCCB68 /* HCHasCount.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		086CB26C12CFBE9100DCCB68 /* HCHasCount.mm in Sources */ = {isa = PBXBuildFile; fileRef = 086CB26A12CFBE9100DCCB68 /* HCHasCount.mm */; };
+		086CB26D12CFBE9100DCCB68 /* HCHasCount.mm in Sources */ = {isa = PBXBuildFile; fileRef = 086CB26A12CFBE9100DCCB68 /* HCHasCount.mm */; };
+		086CB26F12CFBEC700DCCB68 /* HasCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 086CB26E12CFBEC700DCCB68 /* HasCountTest.m */; };
 		087F5B1712C53484008B6B72 /* IsCollectionContainingInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 087F5B1612C53484008B6B72 /* IsCollectionContainingInOrderTest.m */; };
 		087F5B1D12C53618008B6B72 /* HCIsCollectionContainingInOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 087F5B1B12C53618008B6B72 /* HCIsCollectionContainingInOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		087F5B1E12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087F5B1C12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm */; };
@@ -43,7 +47,7 @@
 		08C131E312CC201A0068FC9D /* HCIsCollectionContainingInAnyOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087F5C6012C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.mm */; };
 		08C131E412CC201C0068FC9D /* HCIsCollectionContainingInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087F5B1C12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm */; };
 		08DB90DB12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08DB90DA12CE8B0900EFB75C /* HCRequireNonNilObject.mm */; };
-		08DB90DC12CE8B0900EFB75C /* HCRequireNonNilObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 08DB90D912CE8B0900EFB75C /* HCRequireNonNilObject.h */; };
+		08DB90DC12CE8B0900EFB75C /* HCRequireNonNilObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 08DB90D912CE8B0900EFB75C /* HCRequireNonNilObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08DB90DD12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08DB90DA12CE8B0900EFB75C /* HCRequireNonNilObject.mm */; };
 		08EEF681129E1A540076BFCC /* HCCollectMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EEF67B129E1A540076BFCC /* HCCollectMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08EEF682129E1A540076BFCC /* HCCollectMatchers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08EEF67C129E1A540076BFCC /* HCCollectMatchers.mm */; };
@@ -210,6 +214,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		086CB26912CFBE9100DCCB68 /* HCHasCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHasCount.h; sourceTree = "<group>"; };
+		086CB26A12CFBE9100DCCB68 /* HCHasCount.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCHasCount.mm; sourceTree = "<group>"; };
+		086CB26E12CFBEC700DCCB68 /* HasCountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasCountTest.m; sourceTree = "<group>"; };
 		087F5B1612C53484008B6B72 /* IsCollectionContainingInOrderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsCollectionContainingInOrderTest.m; sourceTree = "<group>"; };
 		087F5B1B12C53618008B6B72 /* HCIsCollectionContainingInOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContainingInOrder.h; sourceTree = "<group>"; };
 		087F5B1C12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsCollectionContainingInOrder.mm; sourceTree = "<group>"; };
@@ -580,6 +587,7 @@
 		0F2A4CD80D8C7FC800051BCF /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				086CB26E12CFBEC700DCCB68 /* HasCountTest.m */,
 				0F2A4CDA0D8C808700051BCF /* IsCollectionContainingTest.m */,
 				087F5C5412C6C2E0008B6B72 /* IsCollectionContainingInAnyOrderTest.m */,
 				087F5B1612C53484008B6B72 /* IsCollectionContainingInOrderTest.m */,
@@ -595,6 +603,8 @@
 		0F2A4CD90D8C7FE200051BCF /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				086CB26912CFBE9100DCCB68 /* HCHasCount.h */,
+				086CB26A12CFBE9100DCCB68 /* HCHasCount.mm */,
 				0F2A4CDE0D8C80E300051BCF /* HCIsCollectionContaining.h */,
 				0F2A4CDF0D8C80E300051BCF /* HCIsCollectionContaining.mm */,
 				087F5C5F12C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.h */,
@@ -716,6 +726,7 @@
 				087F5B1D12C53618008B6B72 /* HCIsCollectionContainingInOrder.h in Headers */,
 				087F5C6112C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.h in Headers */,
 				08DB90DC12CE8B0900EFB75C /* HCRequireNonNilObject.h in Headers */,
+				086CB26B12CFBE9100DCCB68 /* HCHasCount.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -933,6 +944,7 @@
 				08C131E312CC201A0068FC9D /* HCIsCollectionContainingInAnyOrder.mm in Sources */,
 				08C131E412CC201C0068FC9D /* HCIsCollectionContainingInOrder.mm in Sources */,
 				08DB90DB12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */,
+				086CB26D12CFBE9100DCCB68 /* HCHasCount.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -972,6 +984,7 @@
 				0FA5A04B10C57983005FB8BB /* NumberAssertTest.m in Sources */,
 				087F5B1712C53484008B6B72 /* IsCollectionContainingInOrderTest.m in Sources */,
 				087F5C5512C6C2E0008B6B72 /* IsCollectionContainingInAnyOrderTest.m in Sources */,
+				086CB26F12CFBEC700DCCB68 /* HasCountTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,6 +1031,7 @@
 				087F5B1E12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm in Sources */,
 				087F5C6212C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.mm in Sources */,
 				08DB90DD12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */,
+				086CB26C12CFBE9100DCCB68 /* HCHasCount.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

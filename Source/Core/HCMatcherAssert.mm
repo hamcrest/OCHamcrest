@@ -22,6 +22,8 @@
 
 namespace {
 
+BOOL useDeprecatedDescription = NO;
+
 /**
     Create OCUnit failure
     
@@ -71,6 +73,12 @@ NSException* createAssertThatFailure(const char* fileName, int lineNumber, NSStr
 }   // namespace
 
 
+OBJC_EXPORT void HCUseDeprecatedDescription(BOOL useDeprecated)
+{
+    useDeprecatedDescription = useDeprecated;
+}
+
+
 // As of 2010-09-09, the iPhone simulator has a bug where you can't catch
 // exceptions when they are thrown across NSInvocation boundaries. (See
 // dmaclach's comment at http://openradar.appspot.com/8081169 ) So instead of
@@ -80,17 +88,26 @@ NSException* createAssertThatFailure(const char* fileName, int lineNumber, NSStr
 - (void)failWithException:(NSException *)exception;
 @end
 
-
 OBJC_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
                                            const char* fileName, int lineNumber)
 {
     if (![matcher matches:actual])
     {
         HCStringDescription* description = [HCStringDescription stringDescription];
-        [[[[description appendText:@"Expected "]
-                        appendDescriptionOf:matcher]
-                        appendText:@", got "]
-                        appendValue:actual];
+        [[description appendText:@"Expected "]
+                      appendDescriptionOf:matcher];
+        
+        if (useDeprecatedDescription)
+        {
+            [description appendText:@", got "];
+            [description appendValue:actual];
+        }
+        else
+        {
+            [description appendText:@", but "];
+            [matcher describeMismatchOf:actual to:description];
+        }
+        
         NSException* assertThatFailure = createAssertThatFailure(fileName, lineNumber,
                                                                  [description description]);
         [testCase failWithException:assertThatFailure];

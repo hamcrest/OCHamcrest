@@ -36,6 +36,7 @@
  
 	@ingroup library
  */
+#import <OCHamcrest/HCHasCount.h>
 #import <OCHamcrest/HCIsCollectionContaining.h>
 #import <OCHamcrest/HCIsCollectionContainingInAnyOrder.h>
 #import <OCHamcrest/HCIsCollectionContainingInOrder.h>
