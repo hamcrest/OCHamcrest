@@ -44,6 +44,7 @@
 #import <OCHamcrest/HCIsDictionaryContaining.h>
 #import <OCHamcrest/HCIsDictionaryContainingKey.h>
 #import <OCHamcrest/HCIsDictionaryContainingValue.h>
+#import <OCHamcrest/HCIsEmptyCollection.h>
 #import <OCHamcrest/HCIsIn.h>
 
 /**

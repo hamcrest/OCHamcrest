@@ -15,7 +15,7 @@
 
 @implementation HCHasCount
 
-+ (id) hasCount:(id<HCMatcher>)matcher;
++ (id) hasCount:(id<HCMatcher>)matcher
 {
     return [[[self alloc] initWithCount:matcher] autorelease];
 }

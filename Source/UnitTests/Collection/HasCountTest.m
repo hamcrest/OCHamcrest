@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCHasCountTest.m
+//  OCHamcrest - HasCountTest.m
 //  Copyright 2011 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -16,30 +16,9 @@
 #import <OCHamcrest/HCIsNot.h>
 #import <OCHamcrest/HCMatcherAssert.h>
 
-
-static NSUInteger fakeCount = 42;
-
-@interface FakeCountObject : NSObject
-@end
-
-@implementation FakeCountObject
-
-+ (id) fakeCountObject { return [[[self alloc] init] autorelease]; }
-- (NSUInteger) count { return fakeCount; }
-- (NSString *) description { return @"counting"; }
-
-@end
-
-
-@interface FakeNonCountingObject : NSObject
-@end
-
-@implementation FakeNonCountingObject
-
-+ (id) fakeNonCountingObject { return [[[self alloc] init] autorelease]; }
-- (NSString *) description { return @"non-counting"; }
-
-@end
+    // Test support
+#import "FakeCountingObject.h"
+#import "FakeNonCountingObject.h"
 
 
 @interface HasCountTest : AbstractMatcherTest
@@ -56,23 +35,25 @@ static NSUInteger fakeCount = 42;
 
 - (void) testConvertCountToNSNumberAndPassToNestedMatcher
 {
-    FakeCountObject* fakeCountObject = [FakeCountObject fakeCountObject];
-    assertThat(fakeCountObject, hasCount(equalToUnsignedInteger(fakeCount)));
-    assertThat(fakeCountObject, isNot(hasCount(equalTo(equalToUnsignedInteger(fakeCount + 1)))));
+    NSUInteger fakeCount = 5;
+    FakeCountingObject* fakeCountingObject = [FakeCountingObject fakeWithCount:fakeCount];
+    assertThat(fakeCountingObject, hasCount(equalToUnsignedInteger(fakeCount)));
+    assertThat(fakeCountingObject, isNot(hasCount(equalTo(equalToUnsignedInteger(fakeCount + 1)))));
 }
 
 
 - (void) testHasCountOfIsShortcutForEqualToUnsignedInteger
 {
-    FakeCountObject* fakeCountObject = [FakeCountObject fakeCountObject];
-    assertThat(fakeCountObject, hasCountOf(fakeCount));
-    assertThat(fakeCountObject, isNot(hasCountOf(fakeCount + 1)));
+    NSUInteger fakeCount = 6;
+    FakeCountingObject* fakeCountingObject = [FakeCountingObject fakeWithCount:fakeCount];
+    assertThat(fakeCountingObject, hasCountOf(fakeCount));
+    assertThat(fakeCountingObject, isNot(hasCountOf(fakeCount + 1)));
 }
 
 
 - (void) testHasReadableDescription
 {
-    id<HCMatcher> countMatcher = equalToUnsignedInteger(fakeCount);
+    id<HCMatcher> countMatcher = equalToUnsignedInteger(7);
     id<HCMatcher> matcher = hasCount(countMatcher);
     
     STAssertEqualObjects([matcher description],
@@ -86,7 +67,7 @@ static NSUInteger fakeCount = 42;
 {
     assertDescribeMismatch(@"was <counting> with count of <42>",
                            hasCount(equalToUnsignedInteger(1)),
-                           [FakeCountObject fakeCountObject]);
+                           [FakeCountingObject fakeWithCount:42]);
 }
 
 
@@ -94,7 +75,7 @@ static NSUInteger fakeCount = 42;
 {
     assertDescribeMismatch(@"was <non-counting>",
                            hasCount(equalToUnsignedInteger(1)),
-                           [FakeNonCountingObject fakeNonCountingObject]);
+                           [FakeNonCountingObject fake]);
 }
 
 @end
