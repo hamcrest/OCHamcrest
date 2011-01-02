@@ -9,7 +9,7 @@ Hamcrest information: http://code.google.com/p/hamcrest/
   - "hasCountOf" matches collections for which -count equals a given count.
   - "empty" matches empty collection.
 
-* Fixed assertThat to have the matcher give a full description of a mismatch, not just the mismatched value. Could affect unit tests of custom matchers.
+* Fixed assertThat to have the matcher give a full description of a mismatch, not just the mismatched value. This means OCHamcrest will give even more useful information!
 
 * Since nil cannot be directly stored in collections, collection matchers now guard against nil.
 

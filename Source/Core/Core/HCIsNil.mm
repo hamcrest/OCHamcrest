@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCIsNil.mm
-//  Copyright 2010 www.hamcrest.org. See LICENSE.txt
+//  Copyright 2011 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
 //
