@@ -9,13 +9,13 @@ Hamcrest information: http://code.google.com/p/hamcrest/
   - "hasCountOf" matches collections for which -count equals a given count.
   - "empty" matches empty collection.
 
-* Deprecated: (Affects you if you write your own matchers)
-  - Renamed HCInvocation's helper class method +createInvocationForSelector:onClass: to +invocationForSelector:onClass:
-  - New helper function HCRequireNonNilObject should be used in place of HCRequireNonNilString.
-
-* Fixed assertThat mismatch description to ask matcher to describe the mismatch value, instead of just reporting the value by itself. If you have unit tests for your own custom matchers that test the message given by assertThat, they will now fail. As a short-term fix, call HCUseDeprecatedDescription(YES) to change mismatch descriptions to their old output. For a more complete fix, update your tests match the new description format.
+* Fixed assertThat to have the matcher give a full description of a mismatch, not just the mismatched value. This means OCHamcrest will give even more useful information!
 
 * Since nil cannot be directly stored in collections, collection matchers now guard against nil.
+
+* Deprecated:
+  - Renamed HCInvocation's helper class method +createInvocationForSelector:onClass: to +invocationForSelector:onClass:
+  - New helper function HCRequireNonNilObject should be used in place of HCRequireNonNilString.
 
 
 == Version 1.1 ==
