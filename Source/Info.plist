@@ -19,11 +19,11 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.1.2</string>
+	<string>1.2a</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1.2</string>
+	<string>1.2a</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2010 www.hamcrest.org</string>
+	<string>Copyright © 2011 hamcrest.org</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
 </dict>
