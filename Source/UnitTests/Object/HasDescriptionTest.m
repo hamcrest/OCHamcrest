@@ -16,14 +16,14 @@
 #import <OCHamcrest/HCMatcherAssert.h>
 
 
-static NSString* DESCRIPTION_RESULT = @"description result";
+static NSString* fakeDescription = @"fake description";
 
-
-@interface FakeObject : NSObject
+@interface FakeDescriptionObject : NSObject
 @end
 
-@implementation FakeObject
-- (NSString*) description  { return DESCRIPTION_RESULT; }
+@implementation FakeDescriptionObject
++ (id) fake  { return [[[self alloc] init] autorelease]; }
+- (NSString*) description  { return fakeDescription; }
 @end
 
 
@@ -40,27 +40,34 @@ static NSString* DESCRIPTION_RESULT = @"description result";
 
 - (void) testPassesResultOfDescriptionToNestedMatcher
 {
-    FakeObject* ARG = [[[FakeObject alloc] init] autorelease];
-    assertThat(ARG, hasDescription(equalTo(DESCRIPTION_RESULT)));
-    assertThat(ARG, isNot(hasDescription(equalTo(@"OTHER STRING"))));
+    FakeDescriptionObject* obj = [FakeDescriptionObject fake];
+    assertThat(obj, hasDescription(equalTo(fakeDescription)));
+    assertThat(obj, isNot(hasDescription(equalTo(@"other"))));
 }
 
 
 - (void) testProvidesConvenientShortcutForDescriptionEqualTo
 {
-    FakeObject* ARG = [[[FakeObject alloc] init] autorelease];
-    assertThat(ARG, hasDescription(DESCRIPTION_RESULT));
-    assertThat(ARG, isNot(hasDescription(@"OTHER STRING")));
+    FakeDescriptionObject* obj = [FakeDescriptionObject fake];
+    assertThat(obj, hasDescription(fakeDescription));
+    assertThat(obj, isNot(hasDescription(@"other")));
+}
+
+
+- (void) testMismatchDoesNotRepeatTheDescription
+{
+    FakeDescriptionObject* obj = [FakeDescriptionObject fake];
+    assertMismatchDescription(@"was \"fake description\"", hasDescription(@"other"), obj);
 }
 
 
 - (void) testHasReadableDescription
 {
-    id<HCMatcher> descriptionMatcher = equalTo(DESCRIPTION_RESULT);
+    id<HCMatcher> descriptionMatcher = equalTo(fakeDescription);
     id<HCMatcher> matcher = hasDescription(descriptionMatcher);
 
     STAssertEqualObjects([matcher description],
-                         ([NSString stringWithFormat:@"with description %@",
+                         ([NSString stringWithFormat:@"object with description %@",
                                         [descriptionMatcher description]]),
                          nil);
 }

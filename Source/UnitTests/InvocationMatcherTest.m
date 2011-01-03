@@ -27,7 +27,7 @@
 
 - (void) describeMismatchOf:(id)item to:(id<HCDescription>)description
 {
-    [description appendText:@"mismatch-description"];
+    [description appendText:@"was mismatch"];
 }
 
 @end
@@ -55,6 +55,11 @@
 {
     [result release];
     [super dealloc];
+}
+
+- (NSString*) description
+{
+    return @"Thingy";
 }
 
 - (NSString*) result
@@ -110,16 +115,24 @@
 }
 
 
-- (void) testMatchesPartOfAnObject
+- (void) testMatchesFeature
 {
     assertMatches(@"invoke on Thingy", resultMatcher, [Thingy thingyWithResult:@"bar"]);
-    assertDescription(@"with result \"bar\"", resultMatcher);
+    assertDescription(@"object with result \"bar\"", resultMatcher);
 }
 
 
-- (void) testMismatchesPartOfAnObject
+- (void) testMismatchWithDefaultLongDescription
 {
-    assertMismatchDescription(@"result mismatch-description", resultMatcher,
+    assertMismatchDescription(@"<Thingy> result was mismatch", resultMatcher,
+                              [Thingy thingyWithResult:@"foo"]);
+}
+
+
+- (void) testMismatchWithShortDescription
+{
+    [resultMatcher setShortMismatchDescription:YES];
+    assertMismatchDescription(@"was mismatch", resultMatcher,
                               [Thingy thingyWithResult:@"foo"]);
 }
 
@@ -132,6 +145,14 @@
 
 - (void) testDoesNotMatchObjectWithoutMethod
 {
+    assertDoesNotMatch(@"was <ShouldNotMatch>", resultMatcher,
+                       [[[ShouldNotMatch alloc] init] autorelease]);
+}
+
+
+- (void) testObjectWithoutMethodShortDescriptionIsSameAsLongForm
+{
+    [resultMatcher setShortMismatchDescription:YES];
     assertDoesNotMatch(@"was <ShouldNotMatch>", resultMatcher,
                        [[[ShouldNotMatch alloc] init] autorelease]);
 }

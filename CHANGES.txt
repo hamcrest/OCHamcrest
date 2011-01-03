@@ -12,6 +12,10 @@ Hamcrest information: http://code.google.com/p/hamcrest/
 
 * Fixed assertThat to describe the diagnosis of the mismatch, not just the mismatched value. OCHamcrest will now give even more useful information.
 
+* Expanded helper class HCInvocationMatcher:
+  - New property "shortMismatchDescription" determines whether mismatch description is short or long. Default is long description.
+  - New method -invokeOn: invokes stored invocation on given item.
+
 * Since nil cannot be directly stored in collections, collection matchers now guard against nil.
 
 * Expanded BaseDescription's -appendDescriptionOf: to handle all types of values, not just self-describing values.
