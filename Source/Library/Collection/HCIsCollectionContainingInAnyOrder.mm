@@ -72,7 +72,7 @@
 {
     if ([matchers count] == 0)
     {
-        [[mismatchDescription appendText:@"Not matched: "] appendValue:item];
+        [[mismatchDescription appendText:@"Not matched: "] appendDescriptionOf:item];
         return NO;
     }
     return YES;
@@ -91,7 +91,7 @@
         }
         ++index;
     }
-    [[mismatchDescription appendText:@"Not matched: "] appendValue:item];
+    [[mismatchDescription appendText:@"Not matched: "] appendDescriptionOf:item];
     return NO;
 }
 

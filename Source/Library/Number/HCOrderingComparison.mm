@@ -82,7 +82,7 @@ NSString* comparison(NSComparisonResult compare)
     [[description appendText:@"a value "] appendText:comparison(minCompare)];
     if (minCompare != maxCompare)
         [[description appendText:@" or "] appendText:comparison(maxCompare)];
-    [[description appendText:@" "] appendValue:expected];
+    [[description appendText:@" "] appendDescriptionOf:expected];
 }
 
 @end

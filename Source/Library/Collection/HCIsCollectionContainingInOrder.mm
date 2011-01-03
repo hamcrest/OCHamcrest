@@ -85,7 +85,7 @@
 {
     if ([matchers count] <= nextMatchIndex)
     {
-        [[mismatchDescription appendText:@"Not matched: "] appendValue:item];
+        [[mismatchDescription appendText:@"Not matched: "] appendDescriptionOf:item];
         return NO;
     }
     return YES;

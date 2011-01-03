@@ -48,9 +48,9 @@ using namespace std;
 - (void) describeTo:(id<HCDescription>)description
 {
     [[[[description appendText:@"a numeric value within "]
-                    appendValue:[NSNumber numberWithDouble:error]]
+                    appendDescriptionOf:[NSNumber numberWithDouble:error]]
                     appendText:@" of "]
-                    appendValue:[NSNumber numberWithDouble:value]];
+                    appendDescriptionOf:[NSNumber numberWithDouble:value]];
 }
 
 @end

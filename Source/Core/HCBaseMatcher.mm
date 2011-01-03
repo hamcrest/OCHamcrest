@@ -56,7 +56,7 @@
 
 - (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
-    [[mismatchDescription appendText:@"was "] appendValue:item];
+    [[mismatchDescription appendText:@"was "] appendDescriptionOf:item];
 }
 
 

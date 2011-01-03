@@ -109,7 +109,7 @@ pair<int, NSString*> separate(NSString* component)
                 [[description appendText:@"%"] appendText:oneComponent];
             else
             {
-                [description appendValue:[values objectAtIndex:parseIndex.first]];
+                [description appendDescriptionOf:[values objectAtIndex:parseIndex.first]];
                 [description appendText:parseIndex.second];
             }
         }

@@ -48,7 +48,12 @@
 
 - (void) describeTo:(id<HCDescription>)description
 {
-    [description appendValue:object];
+    BOOL nestedMatcher = [object conformsToProtocol:@protocol(HCMatcher)];
+    if (nestedMatcher)
+        [description appendText:@"<"];
+    [description appendDescriptionOf:object];
+    if (nestedMatcher)
+        [description appendText:@">"];
 }
 
 @end

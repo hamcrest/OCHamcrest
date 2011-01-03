@@ -49,11 +49,11 @@
 
 - (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
-    [[mismatchDescription appendText:@"was "] appendValue:item];
+    [[mismatchDescription appendText:@"was "] appendDescriptionOf:item];
     if ([item respondsToSelector:@selector(count)])
     {
         NSNumber* count = [NSNumber numberWithUnsignedInteger:[item count]];
-        [[mismatchDescription appendText:@" with count of "] appendValue:count];
+        [[mismatchDescription appendText:@" with count of "] appendDescriptionOf:count];
     }
 }
 

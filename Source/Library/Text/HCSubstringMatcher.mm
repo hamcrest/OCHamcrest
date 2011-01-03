@@ -44,7 +44,7 @@
     [[[[description appendText:@"a string "]
                     appendText:[self relationship]]
                     appendText:@" "]
-                    appendValue:substring];
+                    appendDescriptionOf:substring];
 }
 
 @end

@@ -52,7 +52,7 @@
 - (void) describeTo:(id<HCDescription>)description
 {
     [[[description appendText:@"equalToIgnoringCase("]
-                   appendValue:string]
+                   appendDescriptionOf:string]
                    appendText:@")"];
 }
 
