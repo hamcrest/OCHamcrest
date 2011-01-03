@@ -25,7 +25,9 @@
 - (id<HCDescription>) appendText:(NSString*)text;
 
 /**
-    Appends description of HCSelfDescribing value to @c self.
+    Appends description of given value to @c self.
+ 
+    If the value implements the @ref HCSelfDescribing protocol, then it will be used.
     
     @return @c self, for chaining.
  */
@@ -34,9 +36,11 @@
 /**
     Appends an arbitary value to the description.
     
+    @b Deprecated: Call @ref appendDescriptionOf: instead.
+
     @return @c self, for chaining.
  */
-- (id<HCDescription>) appendValue:(id)value;
+- (id<HCDescription>) appendValue:(id)value __attribute__((deprecated));
 
 /** 
     Appends a list of objects to the description.
