@@ -3,14 +3,15 @@ Latest sources: https://github.com/jonreid/OCHamcrest
 Hamcrest information: http://code.google.com/p/hamcrest/
 
 
-== Version 1.2 == *IN PROGRESS*
+== Version 1.2 ==
 
+03 Jan 2011
 * New matchers:
   - "hasCount" matches collections for which -count satisfies a given matcher.
   - "hasCountOf" matches collections for which -count equals a given count.
   - "empty" matches empty collection.
 
-* Fixed assertThat to describe the diagnosis of the mismatch, not just the mismatched value. OCHamcrest will now give even more useful information.
+* Fixed assertThat to describe the diagnosis of the mismatch, not just the mismatched value.
 
 * Expanded helper class HCInvocationMatcher:
   - New property "shortMismatchDescription" determines whether mismatch description is short or long. Default is long description.
@@ -21,13 +22,14 @@ Hamcrest information: http://code.google.com/p/hamcrest/
 * Expanded BaseDescription's -appendDescriptionOf: to handle all types of values, not just self-describing values.
 
 * Deprecated:
-  - Description's -appendValue: no longer needed; call -appendDescriptionOf: instead.
+  - Description's -appendValue: no longer needed; call -appendDescriptionOf: instead. This also means NSObject+SelfDescribingValue is no longer needed.
   - Renamed HCInvocation's helper class method +createInvocationForSelector:onClass: to +invocationForSelector:onClass:
   - New helper function HCRequireNonNilObject should be used in place of HCRequireNonNilString.
 
 
-== Version 1.1 ==
+== Version 1.1.2 ==
 
+28 Dec 2010
 * New matchers:
   - "contains" matches collection containing matching items in order.
   - "containsInAnyOrder" matches collection containing matching items in any order.
@@ -40,57 +42,58 @@ Hamcrest information: http://code.google.com/p/hamcrest/
 
 * Changed convenience methods to invoke superclass and return id, to support possibility of subclassing matchers.
 
-1.1.2:
+1.1.2 fixes to 1.1:
 - Added the new matchers to the master header and to the iOS target.
 - Fixed distribution zip file to preserve symlinks in frameworks.
 
 
 == Version 1.0 ==
 
-26 Oct 2010: First official release, including:
+26 Oct 2010
+First official release, including:
 * Documentation
 * Examples for
   - Cocoa
   - iOS
   - Creating a custom matcher
 
-07 Oct 2010:
+07 Oct 2010
 * For iOS: Added OCHamcrestIOS.framework target which provides release builds for both simulator and device into a single framework. Yes, a framework that can be used for iOS development without requiring users to mess with header search paths and link settings. Simply drop the framework into your project and #import <OCHamcrestIOS/OCHamcrestIOS.h> - Aaron Jacobs
 
-06 Oct 2010:
+06 Oct 2010
 * Work around bug in iPhone simulator that causes a test failure to terminate the app. Fix provided by Aaron Jacobs.
 
-06 Sep 2010:
+06 Sep 2010
 * Added static library target and changes for iOS.
 
-01 Dec 2009:
+01 Dec 2009
 * Added assertThat___ and equalTo___ for all types understood by NSNumber. For example: assertThatInt(42, equalToInt(42))
 
-24 Nov 2009:
+24 Nov 2009
 * Changed assertThat behavior to work more seamlessly with OCUnit: Instead of throwing an exception, it calls the same method as OCUnit's assertion macros to fail the test. As a result, a failing assertThat will not terminate the test, so that the test can record other failures. (Following normal OCUnit behavior, you can instruct the test case to terminate at the first failure by invoking raiseAfterFailure.)
 This change requires that assertThat be called only within subclasses of SenTestCase, which wasn't the case before. You will need to recompile your tests.
 If you need an original-style assertion that can be called outside of a SenTestCase, email your request to hamcrest-dev@googlegroups.com
 
-24 Nov 2009:
+24 Nov 2009
 * Support Xcode 3.2's redesigned Build Results window by removing colons from assertThat description.
 
-17 Oct 2009:
+17 Oct 2009
 * Added helper class HCInvocationMatcher for building other matchers from NSInvocations. See HCHasDescription for an example.
 
-11 Aug 2009:
+11 Aug 2009
 * Renamed framework to OCHamcrest.
 
-07 Jul 2009:
+07 Jul 2009
 * Added support for Mac OS X 10.4 projects.
 
-28 Jan 2009:
+28 Jan 2009
 * Fixed compiler errors when used with Objective-C++ (.mm files).
 
-24 Jan 2009:
+24 Jan 2009
 * Added means for matchers to describe mismatches. You can use either matches:describingMismatchTo: to do it one shot, or call describeMismatchOf:To: once you know a particular item does not match.
 
-18 Jul 2008:
+18 Jul 2008
 * Changed matchers whose description looks similar to a function call so that the description matches the name of the factory function.
 
-13 Apr 2008:
+13 Apr 2008
 * Initial release
