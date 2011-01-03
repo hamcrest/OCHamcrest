@@ -34,7 +34,7 @@
  
     @b Deprecated: Use new name +invocationForSelector:onClass:
  */
-+ (NSInvocation*) createInvocationForSelector:(SEL)selector onClass:(Class)aClass;
++ (NSInvocation*) createInvocationForSelector:(SEL)selector onClass:(Class)aClass  __attribute__((deprecated));
 
 - (id) initWithInvocation:(NSInvocation*)anInvocation matching:(id<HCMatcher>)aMatcher;
 

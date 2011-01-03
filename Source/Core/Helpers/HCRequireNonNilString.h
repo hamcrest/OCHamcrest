@@ -14,4 +14,4 @@
     @b Deprecated: Use @ref HCRequireNonNilObject instead.
     @ingroup helpers
 */
-OBJC_EXPORT void HCRequireNonNilString(NSString* string);
+OBJC_EXPORT void HCRequireNonNilString(NSString* string) __attribute__((deprecated));
