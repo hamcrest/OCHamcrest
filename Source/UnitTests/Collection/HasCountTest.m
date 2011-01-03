@@ -57,7 +57,7 @@
     id<HCMatcher> matcher = hasCount(countMatcher);
     
     STAssertEqualObjects([matcher description],
-                         ([NSString stringWithFormat:@"collection with count of %@",
+                         ([NSString stringWithFormat:@"collection with count %@",
                                                     [countMatcher description]]),
                          nil);
 }
@@ -65,7 +65,7 @@
 
 - (void) testDescribesMismatchForItemWithWrongCount
 {
-    assertDescribeMismatch(@"was <counting> with count of <42>",
+    assertDescribeMismatch(@"was <counting> with count <42>",
                            hasCount(equalToUnsignedInteger(1)),
                            [FakeCountingObject fakeWithCount:42]);
 }
