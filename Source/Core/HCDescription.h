@@ -7,8 +7,6 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol HCSelfDescribing;
-
 
 /**
     A description of an HCMatcher.
@@ -31,7 +29,7 @@
     
     @return @c self, for chaining.
  */
-- (id<HCDescription>) appendDescriptionOf:(id<HCSelfDescribing>)value;
+- (id<HCDescription>) appendDescriptionOf:(id)value;
 
 /**
     Appends an arbitary value to the description.

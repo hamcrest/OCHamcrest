@@ -27,9 +27,20 @@
 }
 
 
-- (id<HCDescription>) appendDescriptionOf:(id<HCSelfDescribing>)value;
+- (id<HCDescription>) appendDescriptionOf:(id)value;
 {
-    [value describeTo:self];
+    if (value == nil)
+        [self append:@"nil"];
+    else if ([value conformsToProtocol:@protocol(HCSelfDescribing)])
+        [value describeTo:self];
+    else if ([value isKindOfClass:[NSString class]])
+        [self toCSyntaxString:value];
+    else
+    {
+        [self append:@"<"];
+        [self append:[value description]];
+        [self append:@">"];
+    }
     return self;
 }
 
