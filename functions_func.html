@@ -31,6 +31,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_prop.html"><span>Properties</span></a></li>
     </ul>
   </div>
   <div class="tabs3">
@@ -56,7 +57,7 @@
 : <a class="el" href="interface_h_c_any_of.html#af150d29b61ea174f2adc7c4a4e63a9a4">HCAnyOf</a>
 </li>
 <li>appendDescriptionOf:
-: <a class="el" href="protocol_h_c_description-p.html#afee69696f58506e5f3c5717dd0843db8">&lt;HCDescription&gt;</a>
+: <a class="el" href="protocol_h_c_description-p.html#a0cc336136e25dd55953b37331fcf45e7">&lt;HCDescription&gt;</a>
 </li>
 <li>appendList:start:separator:end:
 : <a class="el" href="protocol_h_c_description-p.html#a00da5d2b7fffb9726d0d544900d907e9">&lt;HCDescription&gt;</a>
@@ -65,7 +66,7 @@
 : <a class="el" href="protocol_h_c_description-p.html#ac10b708f1dbcf7537df8fea173916741">&lt;HCDescription&gt;</a>
 </li>
 <li>appendValue:
-: <a class="el" href="protocol_h_c_description-p.html#aba59f080d974ddebae91b666135f5eb0">&lt;HCDescription&gt;</a>
+: <a class="el" href="protocol_h_c_description-p.html#a82f77a7ca106d9add0181855b5cfdbc0">&lt;HCDescription&gt;</a>
 </li>
 </ul>
 
@@ -75,7 +76,7 @@
 : <a class="el" href="interface_h_c_ordering_comparison.html#a29b97121088dfa55cc9d870ad39640ab">HCOrderingComparison</a>
 </li>
 <li>createInvocationForSelector:onClass:
-: <a class="el" href="interface_h_c_invocation_matcher.html#af58722d20ccee2f8924d9489785637a9">HCInvocationMatcher</a>
+: <a class="el" href="interface_h_c_invocation_matcher.html#a3987d723e96411a5a0600a44234cf814">HCInvocationMatcher</a>
 </li>
 </ul>
 
@@ -94,6 +95,9 @@
 
 
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>hasCount:
+: <a class="el" href="interface_h_c_has_count.html#a36b9f784c5e1f561e8264d960240672b">HCHasCount</a>
+</li>
 <li>hasDescription:
 : <a class="el" href="interface_h_c_has_description.html#a7f8860f5ae46915d745c0c7efef4de3a">HCHasDescription</a>
 </li>
@@ -104,6 +108,7 @@
 <li>init
 : <a class="el" href="interface_h_c_is_anything.html#a580c362f0fbd5136ce53087980450a2c">HCIsAnything</a>
 , <a class="el" href="interface_h_c_string_description.html#a486b590537152d53ccb78275dffa5517">HCStringDescription</a>
+, <a class="el" href="interface_h_c_is_empty_collection.html#a4318aca0e5c2c30217143f2e8705b94e">HCIsEmptyCollection</a>
 </li>
 <li>initComparing:minCompare:maxCompare:
 : <a class="el" href="interface_h_c_ordering_comparison.html#a6961264097eb5cfbd491a5360aaf1c83">HCOrderingComparison</a>
@@ -119,6 +124,9 @@
 </li>
 <li>initWithCollection:
 : <a class="el" href="interface_h_c_is_in.html#aa88dc35617e76f26dea8c941e777b6ba">HCIsIn</a>
+</li>
+<li>initWithCount:
+: <a class="el" href="interface_h_c_has_count.html#a8b9d351f676272af6fbfcec355f0568e">HCHasCount</a>
 </li>
 <li>initWithDescription:
 : <a class="el" href="interface_h_c_is_anything.html#aefeec902cd56caf684952cd21f4de984">HCIsAnything</a>
@@ -137,9 +145,9 @@
 : <a class="el" href="interface_h_c_is_dictionary_containing.html#ad1a6593deeb059f3bdda45b558317f98">HCIsDictionaryContaining</a>
 </li>
 <li>initWithMatcher:
-: <a class="el" href="interface_h_c_is_collection_only_containing.html#a49f482c0a309565bbcf283c75706ca37">HCIsCollectionOnlyContaining</a>
-, <a class="el" href="interface_h_c_is.html#a6931e440684b2d1fe18ee5379e031a98">HCIs</a>
+: <a class="el" href="interface_h_c_is.html#a6931e440684b2d1fe18ee5379e031a98">HCIs</a>
 , <a class="el" href="interface_h_c_is_collection_containing.html#a65cdaa9d7fde00f8d901a36a0344119f">HCIsCollectionContaining</a>
+, <a class="el" href="interface_h_c_is_collection_only_containing.html#a49f482c0a309565bbcf283c75706ca37">HCIsCollectionOnlyContaining</a>
 </li>
 <li>initWithMatchers:
 : <a class="el" href="interface_h_c_all_of.html#aebd9d0f2a387cff0b7e3517e79ae7078">HCAllOf</a>
@@ -162,6 +170,12 @@
 </li>
 <li>initWithValueMatcher:
 : <a class="el" href="interface_h_c_is_dictionary_containing_value.html#ad9310d9f44e1524b8b3d61fbe000852a">HCIsDictionaryContainingValue</a>
+</li>
+<li>invocationForSelector:onClass:
+: <a class="el" href="interface_h_c_invocation_matcher.html#a79a392817b42cad7c6da698f0c1a634f">HCInvocationMatcher</a>
+</li>
+<li>invokeOn:
+: <a class="el" href="interface_h_c_invocation_matcher.html#af19fe5c96d91b0ee600dae2dd05f4efb">HCInvocationMatcher</a>
 </li>
 <li>is:
 : <a class="el" href="interface_h_c_is.html#ab4949cc5596eef64f71efe2305369e22">HCIs</a>
@@ -195,6 +209,9 @@
 </li>
 <li>isDictionaryContainingValue:
 : <a class="el" href="interface_h_c_is_dictionary_containing_value.html#ae8fde5a760539b53adf9352d1580ed53">HCIsDictionaryContainingValue</a>
+</li>
+<li>isEmptyCollection
+: <a class="el" href="interface_h_c_is_empty_collection.html#a35d938369d424157e7a7fcc418192cb0">HCIsEmptyCollection</a>
 </li>
 <li>isEqualIgnoringCase:
 : <a class="el" href="interface_h_c_is_equal_ignoring_case.html#a47cadbb6dab1d55f90a5fc968c53fa75">HCIsEqualIgnoringCase</a>
@@ -254,7 +271,7 @@
 </li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Wed Dec 29 2010 18:12:44 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jan 3 2011 20:40:15 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

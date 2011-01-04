@@ -38,6 +38,8 @@
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_has_count.html">HCHasCount</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches collections for which <code>-count</code> satisfies a given matcher.  <a href="interface_h_c_has_count.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_collection_containing.html">HCIsCollectionContaining</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches a collection if any element satisfies a given matcher.  <a href="interface_h_c_is_collection_containing.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_collection_containing_in_any_order.html">HCIsCollectionContainingInAnyOrder</a></td></tr>
@@ -52,10 +54,16 @@ Classes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches dictionaries containing a key satisfying a given matcher.  <a href="interface_h_c_is_dictionary_containing_key.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_dictionary_containing_value.html">HCIsDictionaryContainingValue</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches dictionaries containing a value satisfying a given matcher.  <a href="interface_h_c_is_dictionary_containing_value.html#_details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_empty_collection.html">HCIsEmptyCollection</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches empty collection.  <a href="interface_h_c_is_empty_collection.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_in.html">HCIsIn</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the object present in the given collection?  <a href="interface_h_c_is_in.html#_details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga01dedc08a716dd8e54e36a6e491a9933">hasCount</a>&nbsp;&nbsp;&nbsp;HC_hasCount</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#ga1e18fd3a4735fd757678a203e2c244bb">HC_hasCount</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga01dedc08a716dd8e54e36a6e491a9933"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga176c4d73e4cc76b79aba4e6c4df73d4c">hasCountOf</a>&nbsp;&nbsp;&nbsp;HC_hasCountOf</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#ga8d51d038913eb65b2160d9b7d1a76727">HC_hasCountOf</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga176c4d73e4cc76b79aba4e6c4df73d4c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gab282df09dd90f5ed84d5f2a3974d6c32">hasItem</a>&nbsp;&nbsp;&nbsp;HC_hasItem</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#ga49a962831306520ab68afa4e311c6c9f">HC_hasItem</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#gab282df09dd90f5ed84d5f2a3974d6c32"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga3b027a5554b1072e61823e82635e7827">hasItems</a>&nbsp;&nbsp;&nbsp;HC_hasItems</td></tr>
@@ -72,10 +80,16 @@ Defines</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#gaaa1513c0e20a59df43384f4b59c9a4fc">HC_hasKey</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga58754aa8b36ae52c05a03c140488a85f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gaf141b74c5177da00f45c49b50f867e52">hasValue</a>&nbsp;&nbsp;&nbsp;HC_hasValue</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#gae65254dcc20e9dca3f0acb7b8e120cc7">HC_hasValue</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#gaf141b74c5177da00f45c49b50f867e52"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga00b5ed499d524a920815b9d8f24ef3a2">empty</a>&nbsp;&nbsp;&nbsp;HC_empty</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#ga3a1d4fabbd118ff5a20c691c20febd49">HC_empty</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga00b5ed499d524a920815b9d8f24ef3a2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga461b9aa2f6e1983ae9039cf5ca8e90c2">isIn</a>&nbsp;&nbsp;&nbsp;HC_isIn</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#gafb758a625006309b7edb5bb303a09ed4">HC_isIn</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga461b9aa2f6e1983ae9039cf5ca8e90c2"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga1e18fd3a4735fd757678a203e2c244bb">HC_hasCount</a> (id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt; matcher)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches collections for which <code>-count</code> satisfies a given matcher.  <a href="#ga1e18fd3a4735fd757678a203e2c244bb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga8d51d038913eb65b2160d9b7d1a76727">HC_hasCountOf</a> (NSUInteger count)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches collections for which <code>-count</code> equals a given count.  <a href="#ga8d51d038913eb65b2160d9b7d1a76727"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga49a962831306520ab68afa4e311c6c9f">HC_hasItem</a> (id item)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches a collection if any element satifies a given matcher.  <a href="#ga49a962831306520ab68afa4e311c6c9f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga0f3e65a2d579b9e73b670e814b742e0a">HC_hasItems</a> (id items,...)</td></tr>
@@ -92,6 +106,8 @@ Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches dictionaries containing a key satisfying a given matcher.  <a href="#gaaa1513c0e20a59df43384f4b59c9a4fc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gae65254dcc20e9dca3f0acb7b8e120cc7">HC_hasValue</a> (id matcherOrValue)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches dictionaries containing a value satisfying a given matcher.  <a href="#gae65254dcc20e9dca3f0acb7b8e120cc7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga3a1d4fabbd118ff5a20c691c20febd49">HC_empty</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches empty collection.  <a href="#ga3a1d4fabbd118ff5a20c691c20febd49"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gafb758a625006309b7edb5bb303a09ed4">HC_isIn</a> (id aCollection)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the object present in the given collection?  <a href="#gafb758a625006309b7edb5bb303a09ed4"></a><br/></td></tr>
 </table>
@@ -125,6 +141,51 @@ Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Synonym for <a class="el" href="group__collection__matchers.html#gae24cc1faaeedcdf068fa1cae7db9bdc4">HC_containsInAnyOrder</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga00b5ed499d524a920815b9d8f24ef3a2"></a><!-- doxytag: member="HCIsEmptyCollection.h::empty" ref="ga00b5ed499d524a920815b9d8f24ef3a2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define empty&nbsp;&nbsp;&nbsp;HC_empty</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Synonym for <a class="el" href="group__collection__matchers.html#ga3a1d4fabbd118ff5a20c691c20febd49">HC_empty</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga01dedc08a716dd8e54e36a6e491a9933"></a><!-- doxytag: member="HCHasCount.h::hasCount" ref="ga01dedc08a716dd8e54e36a6e491a9933" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define hasCount&nbsp;&nbsp;&nbsp;HC_hasCount</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Synonym for <a class="el" href="group__collection__matchers.html#ga1e18fd3a4735fd757678a203e2c244bb">HC_hasCount</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga176c4d73e4cc76b79aba4e6c4df73d4c"></a><!-- doxytag: member="HCHasCount.h::hasCountOf" ref="ga176c4d73e4cc76b79aba4e6c4df73d4c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define hasCountOf&nbsp;&nbsp;&nbsp;HC_hasCountOf</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Synonym for <a class="el" href="group__collection__matchers.html#ga8d51d038913eb65b2160d9b7d1a76727">HC_hasCountOf</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
 
 </div>
 </div>
@@ -305,6 +366,71 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_collection_containing_in_any_order.html" title="Matches a collection if its elements, in any order, satisfy a list of matchers.">HCIsCollectionContainingInAnyOrder</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3a1d4fabbd118ff5a20c691c20febd49"></a><!-- doxytag: member="HCIsEmptyCollection.h::HC_empty" ref="ga3a1d4fabbd118ff5a20c691c20febd49" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_empty </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Matches empty collection. </p>
+<p><b>Synonym:</b> <a class="el" href="group__collection__matchers.html#ga00b5ed499d524a920815b9d8f24ef3a2">empty</a> </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_empty_collection.html" title="Matches empty collection.">HCIsEmptyCollection</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1e18fd3a4735fd757678a203e2c244bb"></a><!-- doxytag: member="HCHasCount.h::HC_hasCount" ref="ga1e18fd3a4735fd757678a203e2c244bb" args="(id&lt; HCMatcher &gt; matcher)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_hasCount </td>
+          <td>(</td>
+          <td class="paramtype">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td>
+          <td class="paramname"> <em>matcher</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Matches collections for which <code>-count</code> satisfies a given matcher. </p>
+<p><b>Synonym:</b> <a class="el" href="group__collection__matchers.html#ga01dedc08a716dd8e54e36a6e491a9933">hasCount</a> </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_has_count.html" title="Matches collections for which -count satisfies a given matcher.">HCHasCount</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8d51d038913eb65b2160d9b7d1a76727"></a><!-- doxytag: member="HCHasCount.h::HC_hasCountOf" ref="ga8d51d038913eb65b2160d9b7d1a76727" args="(NSUInteger count)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_hasCountOf </td>
+          <td>(</td>
+          <td class="paramtype">NSUInteger&nbsp;</td>
+          <td class="paramname"> <em>count</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Matches collections for which <code>-count</code> equals a given count. </p>
+<p><b>Synonym:</b> <a class="el" href="group__collection__matchers.html#ga176c4d73e4cc76b79aba4e6c4df73d4c">hasCountOf</a> </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_has_count.html" title="Matches collections for which -count satisfies a given matcher.">HCHasCount</a> </dd></dl>
 
 </div>
 </div>
@@ -528,7 +654,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Wed Dec 29 2010 18:12:44 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jan 3 2011 20:40:15 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -49,7 +49,7 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_anything.html">HCIsAnything</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">A matcher that always returns <code>YES</code>.  <a href="interface_h_c_is_anything.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_equal.html">HCIsEqual</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the object equal to another object, as tested by the -isEqual: method?  <a href="interface_h_c_is_equal.html#_details">More...</a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the object equal to another object, as tested by the <code>-isEqual</code>: method?  <a href="interface_h_c_is_equal.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_instance_of.html">HCIsInstanceOf</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tests whether the value is an instance of a class (including subclasses).  <a href="interface_h_c_is_instance_of.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_nil.html">HCIsNil</a></td></tr>
@@ -95,7 +95,7 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga6d521143f3c02c4e4352a9a00148adfc">HC_anythingWithDescription</a> (NSString *aDescription)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This matcher always evaluates to <code>YES</code>.  <a href="#ga6d521143f3c02c4e4352a9a00148adfc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gae581d9388fa7485b616876b0b4d0cb99">HC_equalTo</a> (id object)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the object equal to another object, as tested by the -isEqual: method?  <a href="#gae581d9388fa7485b616876b0b4d0cb99"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the object equal to another object, as tested by the <code>-isEqual</code>: method?  <a href="#gae581d9388fa7485b616876b0b4d0cb99"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga4fa80c6d464fc4ae6c028c9af2029c41">HC_instanceOf</a> (Class type)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the value an instance of a particular type?  <a href="#ga4fa80c6d464fc4ae6c028c9af2029c41"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga6228653e2adb57814043e181dc10ab6d">HC_nilValue</a> ()</td></tr>
@@ -438,7 +438,8 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Is the object equal to another object, as tested by the -isEqual: method? </p>
+<p>Is the object equal to another object, as tested by the <code>-isEqual</code>: method? </p>
+<p>If the given object is <code>nil</code>, the matcher will match <code>nil</code>.</p>
 <p><b>Synonym:</b> <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_equal.html" title="Is the object equal to another object, as tested by the -isEqual: method?">HCIsEqual</a> </dd></dl>
 
@@ -587,7 +588,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Wed Dec 29 2010 18:12:44 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jan 3 2011 20:40:15 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
