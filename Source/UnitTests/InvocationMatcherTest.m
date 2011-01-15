@@ -27,12 +27,12 @@
 
 - (void) describeMismatchOf:(id)item to:(id<HCDescription>)description
 {
-    [description appendText:@"was mismatch"];
+    [description appendText:@"MISMATCH"];
 }
 
 @end
 
-//==================================================================================================
+//--------------------------------------------------------------------------------------------------
 
 @interface Thingy : NSObject
 {
@@ -74,7 +74,7 @@
 
 @end
 
-//==================================================================================================
+//--------------------------------------------------------------------------------------------------
 
 @interface ShouldNotMatch : NSObject
 @end
@@ -124,7 +124,7 @@
 
 - (void) testMismatchWithDefaultLongDescription
 {
-    assertMismatchDescription(@"<Thingy> result was mismatch", resultMatcher,
+    assertMismatchDescription(@"<Thingy> result MISMATCH", resultMatcher,
                               [Thingy thingyWithResult:@"foo"]);
 }
 
@@ -132,7 +132,7 @@
 - (void) testMismatchWithShortDescription
 {
     [resultMatcher setShortMismatchDescription:YES];
-    assertMismatchDescription(@"was mismatch", resultMatcher,
+    assertMismatchDescription(@"MISMATCH", resultMatcher,
                               [Thingy thingyWithResult:@"foo"]);
 }
 

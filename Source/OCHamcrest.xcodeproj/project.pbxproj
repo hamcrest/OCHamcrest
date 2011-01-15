@@ -55,6 +55,7 @@
 		08DB90DB12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08DB90DA12CE8B0900EFB75C /* HCRequireNonNilObject.mm */; };
 		08DB90DC12CE8B0900EFB75C /* HCRequireNonNilObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 08DB90D912CE8B0900EFB75C /* HCRequireNonNilObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08DB90DD12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08DB90DA12CE8B0900EFB75C /* HCRequireNonNilObject.mm */; };
+		08EDD34512E24C0800785BD5 /* StringDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EDD34412E24C0800785BD5 /* StringDescriptionTest.m */; };
 		08EEF681129E1A540076BFCC /* HCCollectMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EEF67B129E1A540076BFCC /* HCCollectMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08EEF682129E1A540076BFCC /* HCCollectMatchers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08EEF67C129E1A540076BFCC /* HCCollectMatchers.mm */; };
 		08EEF683129E1A540076BFCC /* HCRequireNonNilString.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EEF67D129E1A540076BFCC /* HCRequireNonNilString.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -239,6 +240,7 @@
 		08B5181812A058FA00147210 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = SOURCE_ROOT; };
 		08DB90D912CE8B0900EFB75C /* HCRequireNonNilObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilObject.h; sourceTree = "<group>"; };
 		08DB90DA12CE8B0900EFB75C /* HCRequireNonNilObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCRequireNonNilObject.mm; sourceTree = "<group>"; };
+		08EDD34412E24C0800785BD5 /* StringDescriptionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringDescriptionTest.m; sourceTree = "<group>"; };
 		08EEF67B129E1A540076BFCC /* HCCollectMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCollectMatchers.h; sourceTree = "<group>"; };
 		08EEF67C129E1A540076BFCC /* HCCollectMatchers.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCCollectMatchers.mm; sourceTree = "<group>"; };
 		08EEF67D129E1A540076BFCC /* HCRequireNonNilString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilString.h; sourceTree = "<group>"; };
@@ -514,6 +516,7 @@
 				0F0A12E40DA0A35F00AE4705 /* AssertThatTest.m */,
 				0F2A4B2C0D8B69E100051BCF /* BaseMatcherTest.m */,
 				0FF1B2031086E55100E615AE /* InvocationMatcherTest.m */,
+				08EDD34412E24C0800785BD5 /* StringDescriptionTest.m */,
 				0F2A4CD80D8C7FC800051BCF /* Collection */,
 				0F2A4B2D0D8B69E100051BCF /* Core */,
 				0F2A4BB30D8C430000051BCF /* Number */,
@@ -1010,6 +1013,7 @@
 				086CB35312CFDF2000DCCB68 /* IsEmptyCollectionTest.m in Sources */,
 				086CB36712CFE10A00DCCB68 /* FakeNonCountingObject.m in Sources */,
 				086CB37412CFE22500DCCB68 /* FakeCountingObject.m in Sources */,
+				08EDD34512E24C0800785BD5 /* StringDescriptionTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
