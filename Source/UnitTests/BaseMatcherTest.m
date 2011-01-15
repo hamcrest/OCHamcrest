@@ -31,10 +31,10 @@
 
 @implementation BaseMatcherTest
 
-- (void) testDescribesItselfWithDescriptionMethod
+- (void) testDescriptionShouldDescribeMatcher
 {
     TestingBaseMatcher* matcher = [[[TestingBaseMatcher alloc] init] autorelease];
-    assertDescription(@"SOME DESCRIPTION", matcher);
+    STAssertEqualObjects(@"SOME DESCRIPTION", [matcher description], nil);
 }
 
 @end
