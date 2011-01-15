@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - MatcherAssertTest.m
+//  OCHamcrest - AssertThatTest.m
 //  Copyright 2011 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -10,8 +10,9 @@
 
     // OCHamcrest
 #define HC_SHORTHAND
-#import <OCHamcrest/HCMatcherAssert.h>
+#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCIsEqual.h>
+
 
 @interface QuietTestRun : SenTestCaseRun
 {
@@ -43,6 +44,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 @interface QuietTest : SenTestCase
 @end
@@ -62,17 +64,24 @@
 
 @end
 
+//==================================================================================================
 
-@interface MatcherAssertTest : SenTestCase
+@interface AssertThatTest : SenTestCase
 @end
 
-@implementation MatcherAssertTest
+@implementation AssertThatTest
 
-- (void) testErrorMessage
+- (void) testShouldBeSilentOnSuccessfulMatch
 {
-    NSString* expected = @"expected";
-    NSString* actual = @"actual";
-    NSString* expectedMessage = @"Expected \"expected\", but was \"actual\"";
+    assertThat(@"foo", equalTo(@"foo"));
+}
+
+
+- (void) testAssertionErrorShouldDescribeExpectedAndActual
+{
+    NSString* expected = @"EXPECTED";
+    NSString* actual = @"ACTUAL";
+    NSString* expectedMessage = @"Expected \"EXPECTED\", but was \"ACTUAL\"";
     
     @try
     {
@@ -84,7 +93,6 @@
         STAssertTrue([[exception reason] rangeOfString:expectedMessage].location != NSNotFound, nil);
         return;
     }
-    
     STFail(@"should have failed");
 }
 
@@ -92,8 +100,8 @@
 - (void) testAssertion_recordingAllErrors
 {
     QuietTest* testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
-
-    [testCase continueAfterFailure];    // Default behavior of SetTestCase
+    [testCase continueAfterFailure];    // Default behavior of OCUnit
+    
     QuietTestRun* testRun = (QuietTestRun*)[testCase run];
 
     STAssertEquals([testRun failureCount], 2U, nil);
@@ -104,8 +112,8 @@
 - (void) testAssertion_stoppingAtFirstError
 {
     QuietTest* testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
-
     [testCase raiseAfterFailure];
+    
     QuietTestRun* testRun = (QuietTestRun*)[testCase run];
 
     STAssertEquals([testRun failureCount], 1U, nil);

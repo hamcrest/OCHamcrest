@@ -91,7 +91,7 @@
 /**
 	@defgroup integration Unit Test Integration
  */
-#import <OCHamcrest/HCMatcherAssert.h>
+#import <OCHamcrest/HCAssertThat.h>
 
 /**
 	@defgroup integration_numeric Unit Tests of Primitive Numbers

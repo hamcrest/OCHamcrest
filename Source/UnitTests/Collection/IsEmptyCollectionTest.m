@@ -10,8 +10,8 @@
 
     // OCHamcrest
 #define HC_SHORTHAND
+#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCIsEmptyCollection.h>
-#import <OCHamcrest/HCMatcherAssert.h>
 
     // Test support
 #import "FakeCountingObject.h"

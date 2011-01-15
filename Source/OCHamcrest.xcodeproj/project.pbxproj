@@ -83,7 +83,7 @@
 		0F030C641235D23300C59F75 /* HCIsSame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4ACB0D8B493600051BCF /* HCIsSame.mm */; };
 		0F030C651235D23300C59F75 /* HCBaseDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4ACF0D8B493600051BCF /* HCBaseDescription.mm */; };
 		0F030C661235D23300C59F75 /* HCBaseMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AD10D8B493600051BCF /* HCBaseMatcher.mm */; };
-		0F030C671235D23300C59F75 /* HCMatcherAssert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AD50D8B493600051BCF /* HCMatcherAssert.mm */; };
+		0F030C671235D23300C59F75 /* HCAssertThat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AD50D8B493600051BCF /* HCAssertThat.mm */; };
 		0F030C681235D23300C59F75 /* HCStringDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AD80D8B493600051BCF /* HCStringDescription.mm */; };
 		0F030C6A1235D23300C59F75 /* HCHasDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4B760D8C364000051BCF /* HCHasDescription.mm */; };
 		0F030C6B1235D23300C59F75 /* HCIsCloseTo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4BBA0D8C468400051BCF /* HCIsCloseTo.mm */; };
@@ -102,7 +102,7 @@
 		0F030C791235D23300C59F75 /* HCIsEqualIgnoringWhiteSpace.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FA913070DA064CF000AC3AA /* HCIsEqualIgnoringWhiteSpace.mm */; };
 		0F030C7C1235D23300C59F75 /* HCIsEqualToNumber.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A544B10C45F44009C870F /* HCIsEqualToNumber.mm */; };
 		0F030C7D1235D23300C59F75 /* HCNumberAssert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FA5A05110C57BAE005FB8BB /* HCNumberAssert.mm */; };
-		0F0A12E50DA0A35F00AE4705 /* MatcherAssertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A12E40DA0A35F00AE4705 /* MatcherAssertTest.m */; };
+		0F0A12E50DA0A35F00AE4705 /* AssertThatTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A12E40DA0A35F00AE4705 /* AssertThatTest.m */; };
 		0F1A544C10C45F44009C870F /* HCIsEqualToNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F1A544A10C45F44009C870F /* HCIsEqualToNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F1A544D10C45F44009C870F /* HCIsEqualToNumber.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A544B10C45F44009C870F /* HCIsEqualToNumber.mm */; };
 		0F1A545C10C46194009C870F /* IsEqualToNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A541F10C45C76009C870F /* IsEqualToNumberTest.m */; };
@@ -132,8 +132,8 @@
 		0F2A4AF40D8B493600051BCF /* HCBaseMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AD10D8B493600051BCF /* HCBaseMatcher.mm */; };
 		0F2A4AF50D8B493600051BCF /* HCDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A4AD20D8B493600051BCF /* HCDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F2A4AF60D8B493600051BCF /* HCMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A4AD30D8B493600051BCF /* HCMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0F2A4AF70D8B493600051BCF /* HCMatcherAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A4AD40D8B493600051BCF /* HCMatcherAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0F2A4AF80D8B493600051BCF /* HCMatcherAssert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AD50D8B493600051BCF /* HCMatcherAssert.mm */; };
+		0F2A4AF70D8B493600051BCF /* HCAssertThat.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A4AD40D8B493600051BCF /* HCAssertThat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F2A4AF80D8B493600051BCF /* HCAssertThat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AD50D8B493600051BCF /* HCAssertThat.mm */; };
 		0F2A4AF90D8B493600051BCF /* HCSelfDescribing.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A4AD60D8B493600051BCF /* HCSelfDescribing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F2A4AFA0D8B493600051BCF /* HCStringDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A4AD70D8B493600051BCF /* HCStringDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F2A4AFB0D8B493600051BCF /* HCStringDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A4AD80D8B493600051BCF /* HCStringDescription.mm */; };
@@ -251,7 +251,7 @@
 		08EEF6A2129E1F5C0076BFCC /* HCInvocationMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCInvocationMatcher.mm; sourceTree = "<group>"; };
 		0F00572910C5AA9700A777F3 /* HCBoxNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBoxNumber.h; sourceTree = "<group>"; };
 		0F030C561235D0BD00C59F75 /* libochamcrest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libochamcrest.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F0A12E40DA0A35F00AE4705 /* MatcherAssertTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatcherAssertTest.m; sourceTree = "<group>"; };
+		0F0A12E40DA0A35F00AE4705 /* AssertThatTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssertThatTest.m; sourceTree = "<group>"; };
 		0F1A541F10C45C76009C870F /* IsEqualToNumberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEqualToNumberTest.m; sourceTree = "<group>"; };
 		0F1A544A10C45F44009C870F /* HCIsEqualToNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualToNumber.h; sourceTree = "<group>"; };
 		0F1A544B10C45F44009C870F /* HCIsEqualToNumber.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsEqualToNumber.mm; sourceTree = "<group>"; };
@@ -281,8 +281,8 @@
 		0F2A4AD10D8B493600051BCF /* HCBaseMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCBaseMatcher.mm; sourceTree = "<group>"; };
 		0F2A4AD20D8B493600051BCF /* HCDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDescription.h; sourceTree = "<group>"; };
 		0F2A4AD30D8B493600051BCF /* HCMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMatcher.h; sourceTree = "<group>"; };
-		0F2A4AD40D8B493600051BCF /* HCMatcherAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMatcherAssert.h; sourceTree = "<group>"; };
-		0F2A4AD50D8B493600051BCF /* HCMatcherAssert.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCMatcherAssert.mm; sourceTree = "<group>"; };
+		0F2A4AD40D8B493600051BCF /* HCAssertThat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAssertThat.h; sourceTree = "<group>"; };
+		0F2A4AD50D8B493600051BCF /* HCAssertThat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCAssertThat.mm; sourceTree = "<group>"; };
 		0F2A4AD60D8B493600051BCF /* HCSelfDescribing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSelfDescribing.h; sourceTree = "<group>"; };
 		0F2A4AD70D8B493600051BCF /* HCStringDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringDescription.h; sourceTree = "<group>"; };
 		0F2A4AD80D8B493600051BCF /* HCStringDescription.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCStringDescription.mm; sourceTree = "<group>"; };
@@ -461,14 +461,14 @@
 			children = (
 				0F2A4AB70D8B493600051BCF /* Core */,
 				08EEF67A129E1A540076BFCC /* Helpers */,
+				0F2A4AD40D8B493600051BCF /* HCAssertThat.h */,
+				0F2A4AD50D8B493600051BCF /* HCAssertThat.mm */,
 				0F2A4ACE0D8B493600051BCF /* HCBaseDescription.h */,
 				0F2A4ACF0D8B493600051BCF /* HCBaseDescription.mm */,
 				0F2A4AD00D8B493600051BCF /* HCBaseMatcher.h */,
 				0F2A4AD10D8B493600051BCF /* HCBaseMatcher.mm */,
 				0F2A4AD20D8B493600051BCF /* HCDescription.h */,
 				0F2A4AD30D8B493600051BCF /* HCMatcher.h */,
-				0F2A4AD40D8B493600051BCF /* HCMatcherAssert.h */,
-				0F2A4AD50D8B493600051BCF /* HCMatcherAssert.mm */,
 				0F2A4AD60D8B493600051BCF /* HCSelfDescribing.h */,
 				0F2A4AD70D8B493600051BCF /* HCStringDescription.h */,
 				0F2A4AD80D8B493600051BCF /* HCStringDescription.mm */,
@@ -511,9 +511,9 @@
 			children = (
 				0F2A4B380D8B69E100051BCF /* AbstractMatcherTest.h */,
 				0F2A4B390D8B69E100051BCF /* AbstractMatcherTest.m */,
+				0F0A12E40DA0A35F00AE4705 /* AssertThatTest.m */,
 				0F2A4B2C0D8B69E100051BCF /* BaseMatcherTest.m */,
 				0FF1B2031086E55100E615AE /* InvocationMatcherTest.m */,
-				0F0A12E40DA0A35F00AE4705 /* MatcherAssertTest.m */,
 				0F2A4CD80D8C7FC800051BCF /* Collection */,
 				0F2A4B2D0D8B69E100051BCF /* Core */,
 				0F2A4BB30D8C430000051BCF /* Number */,
@@ -716,7 +716,7 @@
 				0F2A4AF30D8B493600051BCF /* HCBaseMatcher.h in Headers */,
 				0F2A4AF50D8B493600051BCF /* HCDescription.h in Headers */,
 				0F2A4AF60D8B493600051BCF /* HCMatcher.h in Headers */,
-				0F2A4AF70D8B493600051BCF /* HCMatcherAssert.h in Headers */,
+				0F2A4AF70D8B493600051BCF /* HCAssertThat.h in Headers */,
 				0F2A4AF90D8B493600051BCF /* HCSelfDescribing.h in Headers */,
 				0F2A4AFA0D8B493600051BCF /* HCStringDescription.h in Headers */,
 				0F2A4B770D8C364000051BCF /* HCHasDescription.h in Headers */,
@@ -938,7 +938,7 @@
 				0F030C641235D23300C59F75 /* HCIsSame.mm in Sources */,
 				0F030C651235D23300C59F75 /* HCBaseDescription.mm in Sources */,
 				0F030C661235D23300C59F75 /* HCBaseMatcher.mm in Sources */,
-				0F030C671235D23300C59F75 /* HCMatcherAssert.mm in Sources */,
+				0F030C671235D23300C59F75 /* HCAssertThat.mm in Sources */,
 				0F030C681235D23300C59F75 /* HCStringDescription.mm in Sources */,
 				0F030C6A1235D23300C59F75 /* HCHasDescription.mm in Sources */,
 				0F030C6B1235D23300C59F75 /* HCIsCloseTo.mm in Sources */,
@@ -1000,7 +1000,7 @@
 				0F2EBC160D9F148000340F95 /* StringEndsWithTest.m in Sources */,
 				0FA912720DA05238000AC3AA /* IsEqualIgnoringCaseTest.m in Sources */,
 				0FA913000DA06477000AC3AA /* IsEqualIgnoringWhiteSpaceTest.m in Sources */,
-				0F0A12E50DA0A35F00AE4705 /* MatcherAssertTest.m in Sources */,
+				0F0A12E50DA0A35F00AE4705 /* AssertThatTest.m in Sources */,
 				0FF1B2041086E55100E615AE /* InvocationMatcherTest.m in Sources */,
 				0F1A545C10C46194009C870F /* IsEqualToNumberTest.m in Sources */,
 				0FA5A04B10C57983005FB8BB /* NumberAssertTest.m in Sources */,
@@ -1029,7 +1029,7 @@
 				0F2A4AEE0D8B493600051BCF /* HCIsSame.mm in Sources */,
 				0F2A4AF20D8B493600051BCF /* HCBaseDescription.mm in Sources */,
 				0F2A4AF40D8B493600051BCF /* HCBaseMatcher.mm in Sources */,
-				0F2A4AF80D8B493600051BCF /* HCMatcherAssert.mm in Sources */,
+				0F2A4AF80D8B493600051BCF /* HCAssertThat.mm in Sources */,
 				0F2A4AFB0D8B493600051BCF /* HCStringDescription.mm in Sources */,
 				0F2A4B780D8C364000051BCF /* HCHasDescription.mm in Sources */,
 				0F2A4BBC0D8C468400051BCF /* HCIsCloseTo.mm in Sources */,

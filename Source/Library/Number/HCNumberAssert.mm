@@ -9,8 +9,8 @@
 #import "HCNumberAssert.h"
 
     // OCHamcrest
+#import "HCAssertThat.h"
 #import "HCBoxNumber.h"
-#import "HCMatcherAssert.h"
 using namespace hamcrest;
 
 

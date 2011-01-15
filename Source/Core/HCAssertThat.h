@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCMatcherAssert.h
+//  OCHamcrest - HCAssertThat.h
 //  Copyright 2011 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid

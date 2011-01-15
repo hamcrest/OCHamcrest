@@ -10,11 +10,11 @@
 
     // OCHamcrest
 #define HC_SHORTHAND
+#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCHasCount.h>
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCIsEqualToNumber.h>
 #import <OCHamcrest/HCIsNot.h>
-#import <OCHamcrest/HCMatcherAssert.h>
 
     // Test support
 #import "FakeCountingObject.h"

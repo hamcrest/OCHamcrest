@@ -1,12 +1,12 @@
 //
-//  OCHamcrest - HCMatcherAssert.mm
+//  OCHamcrest - HCAssertThat.mm
 //  Copyright 2011 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
 //
 
     // Self
-#import "HCMatcherAssert.h"
+#import "HCAssertThat.h"
 
     // OCHamcrest
 #import "HCStringDescription.h"
@@ -70,6 +70,7 @@ NSException* createAssertThatFailure(const char* fileName, int lineNumber, NSStr
 
 }   // namespace
 
+//--------------------------------------------------------------------------------------------------
 
 // As of 2010-09-09, the iPhone simulator has a bug where you can't catch
 // exceptions when they are thrown across NSInvocation boundaries. (See

@@ -10,10 +10,10 @@
 
     // OCHamcrest
 #define HC_SHORTHAND
+#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCHasDescription.h>
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCIsNot.h>
-#import <OCHamcrest/HCMatcherAssert.h>
 
 
 static NSString* fakeDescription = @"fake description";
