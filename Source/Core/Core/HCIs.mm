@@ -44,6 +44,12 @@
 }
 
 
+- (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+{
+    [matcher describeMismatchOf:item to:mismatchDescription];
+}
+
+
 - (void) describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"is "] appendDescriptionOf:matcher];
