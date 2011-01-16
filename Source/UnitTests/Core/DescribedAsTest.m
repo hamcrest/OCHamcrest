@@ -93,8 +93,7 @@
 
 - (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    assertNoMismatchDescription(describedAs(@"irrelevant", anything(), nil),
-                                @"hi");
+    assertNoMismatchDescription(describedAs(@"irrelevant", anything(), nil), @"hi");
 }
 
 

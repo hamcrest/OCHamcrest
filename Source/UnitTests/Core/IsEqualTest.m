@@ -105,17 +105,13 @@
 
 - (void) testMismatchDescriptionShowsActualArgument
 {
-    assertMismatchDescription(@"was \"bad\"",
-                              equalTo(@"good"),
-                              @"bad");
+    assertMismatchDescription(@"was \"bad\"", equalTo(@"good"), @"bad");
 }
 
 
 - (void) testDescribeMismatch
 {
-    assertDescribeMismatch(@"was \"bad\"",
-                           equalTo(@"good"),
-                           @"bad");
+    assertDescribeMismatch(@"was \"bad\"", equalTo(@"good"), @"bad");
 }
 
 @end

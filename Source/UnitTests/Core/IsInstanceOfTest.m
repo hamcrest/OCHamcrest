@@ -41,4 +41,22 @@
     assertDescription(@"an instance of NSNumber", instanceOf([NSNumber class]));
 }
 
+
+- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+{
+    assertNoMismatchDescription(instanceOf([NSString class]), @"hi");
+}
+
+
+- (void) testMismatchDescriptionShowsActualArgument
+{
+    assertMismatchDescription(@"was \"bad\"", instanceOf([NSNumber class]), @"bad");
+}
+
+
+- (void) testDescribeMismatch
+{
+    assertDescribeMismatch(@"was \"bad\"", instanceOf([NSNumber class]), @"bad");
+}
+
 @end

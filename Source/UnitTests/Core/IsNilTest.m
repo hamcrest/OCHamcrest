@@ -28,20 +28,92 @@
 
 - (void) testEvaluatesToTrueIfArgumentIsNil
 {
-    id ANY_NON_NULL_ARGUMENT = [[[NSObject alloc] init] autorelease];
-    
-    assertThat(nil, nilValue());
-    assertThat(ANY_NON_NULL_ARGUMENT, isNot(nilValue()));
+    assertMatches(@"nil", nilValue(), nil);
+}
 
-    assertThat(ANY_NON_NULL_ARGUMENT, notNilValue());
-    assertThat(nil, isNot(notNilValue()));
+
+- (void) testEvaluatesToFalseIfArgumentIsNotNil
+{
+    id ANY_NON_NULL_ARGUMENT = [[[NSObject alloc] init] autorelease];
+
+    assertDoesNotMatch(@"not nil", nilValue(), ANY_NON_NULL_ARGUMENT);
 }
 
 
 - (void) testHasAReadableDescription
 {
     assertDescription(@"nil", nilValue());
-    assertDescription(@"not nil", notNilValue());
+}
+
+
+- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+{
+    assertNoMismatchDescription(nilValue(), nil);
+}
+
+
+- (void) testMismatchDescriptionShowsActualArgument
+{
+    assertMismatchDescription(@"was \"bad\"", nilValue(), @"bad");
+}
+
+
+- (void) testDescribeMismatch
+{
+    assertDescribeMismatch(@"was \"bad\"", nilValue(), @"bad");
 }
 
 @end
+
+//==================================================================================================
+
+@interface NotNilTest : AbstractMatcherTest
+@end
+
+@implementation NotNilTest
+
+- (id<HCMatcher>) createMatcher
+{
+    return notNilValue();
+}
+
+
+- (void) testEvaluatesToTrueIfArgumentIsNotNil
+{
+    id ANY_NON_NULL_ARGUMENT = [[[NSObject alloc] init] autorelease];
+    
+    assertMatches(@"not nil", notNilValue(), ANY_NON_NULL_ARGUMENT);
+}
+
+
+- (void) testEvaluatesToFalseIfArgumentIsNil
+{
+    assertDoesNotMatch(@"nil", notNilValue(), nil);
+}
+
+
+- (void) testHasAReadableDescription
+{
+    assertDescription(@"not nil", notNilValue());
+}
+
+
+- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+{
+    assertNoMismatchDescription(notNilValue(), @"hi");
+}
+
+
+- (void) testMismatchDescriptionShowsActualArgument
+{
+    assertMismatchDescription(@"was nil", notNilValue(), nil);
+}
+
+
+- (void) testDescribeMismatch
+{
+    assertDescribeMismatch(@"was nil", notNilValue(), nil);
+}
+
+@end
+
