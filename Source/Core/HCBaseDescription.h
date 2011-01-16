@@ -15,7 +15,7 @@
  
     @ingroup core
  */
-@interface HCBaseDescription : NSObject<HCDescription>
+@interface HCBaseDescription : NSObject <HCDescription>
 @end
 
 

@@ -61,6 +61,29 @@
 }
 
 
+- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+{
+    assertNoMismatchDescription(anyOf(equalTo(@"good"), equalTo(@"good"), nil),
+                                @"good");
+}
+
+
+- (void) testMismatchDescriptionDescribesFirstFailingMatch
+{
+    assertMismatchDescription(@"was \"ugly\"",
+                              anyOf(equalTo(@"bad"), equalTo(@"good"), nil),
+                              @"ugly");
+}
+
+
+- (void) testDescribeMismatch
+{
+    assertDescribeMismatch(@"was \"ugly\"",
+                           anyOf(equalTo(@"bad"), equalTo(@"good"), nil),
+                           @"ugly");
+}
+
+
 - (void) testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(anyOf(nil), @"Should require non-nil list");

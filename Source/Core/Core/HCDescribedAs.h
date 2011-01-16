@@ -30,6 +30,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 /**
     Wraps an existing matcher and overrides the description when it fails.

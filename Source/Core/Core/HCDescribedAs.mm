@@ -20,9 +20,9 @@ using namespace std;
 
 namespace {
 
-/*
+/**
     Splits string into decimal number (-1 if not found) and remaining string.
-*/
+ */
 pair<int, NSString*> separate(NSString* component)
 {
     unsigned int index = 0;
@@ -47,6 +47,7 @@ pair<int, NSString*> separate(NSString* component)
 
 }   // namespace
 
+//--------------------------------------------------------------------------------------------------
 
 @implementation HCDescribedAs
 
@@ -91,6 +92,12 @@ pair<int, NSString*> separate(NSString* component)
 }
 
 
+- (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+{
+    [matcher describeMismatchOf:item to:mismatchDescription];
+}
+
+
 - (void) describeTo:(id<HCDescription>)description
 {
     NSArray* components = [descriptionTemplate componentsSeparatedByString:@"%"];
@@ -118,6 +125,7 @@ pair<int, NSString*> separate(NSString* component)
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString* description, id<HCMatcher> matcher, ...)
 {

@@ -14,6 +14,9 @@
 #import <OCHamcrest/HCIsAnything.h>
 #import <OCHamcrest/HCIsNot.h>
 
+    // Test support
+#import "NeverMatch.h"
+
 
 @interface DescribedAsTest : AbstractMatcherTest
 @end
@@ -26,7 +29,7 @@
 }
 
 
-- (void) testOverridesDescriptionOfOtherMatcherWithThatPassedToConstructor
+- (void) testOverridesDescriptionOfNestedMatcherInitializerArgument
 {
     id<HCMatcher> m1 = describedAs(@"m1 description", anything(), nil);
     id<HCMatcher> m2 = describedAs(@"m2 description", isNot(anything()), nil);
@@ -78,13 +81,36 @@
 }
 
 
-- (void) testDelegatesMatchingToAnotherMatcher
+- (void) testDelegatesMatchingToNestedMatcher
 {
     id<HCMatcher> m1 = describedAs(@"m1 description", anything(), nil);
-    id<HCMatcher> m2 = describedAs(@"m2 description", isNot(anything()), nil);
+    id<HCMatcher> m2 = describedAs(@"m2 description", [NeverMatch neverMatch], nil);
 
     STAssertTrue([m1 matches:@"hi"], @"");
     STAssertFalse([m2 matches:@"hi"], @"");
+}
+
+
+- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+{
+    assertNoMismatchDescription(describedAs(@"irrelevant", anything(), nil),
+                                @"hi");
+}
+
+
+- (void) testDelegatesMismatchDescriptionToNestedMatcher
+{
+    assertMismatchDescription([NeverMatch mismatchDescription],
+                              describedAs(@"irrelevant", [NeverMatch neverMatch], nil),
+                              @"hi");
+}
+
+
+- (void) testDelegatesDescribeMismatchToNestedMatcher
+{
+    assertDescribeMismatch([NeverMatch mismatchDescription],
+                           describedAs(@"irrelevant", [NeverMatch neverMatch], nil),
+                           @"hi");
 }
 
 @end

@@ -56,6 +56,7 @@
 		08DB90DC12CE8B0900EFB75C /* HCRequireNonNilObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 08DB90D912CE8B0900EFB75C /* HCRequireNonNilObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08DB90DD12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08DB90DA12CE8B0900EFB75C /* HCRequireNonNilObject.mm */; };
 		08EDD34512E24C0800785BD5 /* StringDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EDD34412E24C0800785BD5 /* StringDescriptionTest.m */; };
+		08EDD38A12E2B90300785BD5 /* NeverMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EDD38912E2B90300785BD5 /* NeverMatch.m */; };
 		08EEF681129E1A540076BFCC /* HCCollectMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EEF67B129E1A540076BFCC /* HCCollectMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08EEF682129E1A540076BFCC /* HCCollectMatchers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08EEF67C129E1A540076BFCC /* HCCollectMatchers.mm */; };
 		08EEF683129E1A540076BFCC /* HCRequireNonNilString.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EEF67D129E1A540076BFCC /* HCRequireNonNilString.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -241,6 +242,8 @@
 		08DB90D912CE8B0900EFB75C /* HCRequireNonNilObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilObject.h; sourceTree = "<group>"; };
 		08DB90DA12CE8B0900EFB75C /* HCRequireNonNilObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCRequireNonNilObject.mm; sourceTree = "<group>"; };
 		08EDD34412E24C0800785BD5 /* StringDescriptionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringDescriptionTest.m; sourceTree = "<group>"; };
+		08EDD38812E2B90300785BD5 /* NeverMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeverMatch.h; sourceTree = "<group>"; };
+		08EDD38912E2B90300785BD5 /* NeverMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeverMatch.m; sourceTree = "<group>"; };
 		08EEF67B129E1A540076BFCC /* HCCollectMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCollectMatchers.h; sourceTree = "<group>"; };
 		08EEF67C129E1A540076BFCC /* HCCollectMatchers.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCCollectMatchers.mm; sourceTree = "<group>"; };
 		08EEF67D129E1A540076BFCC /* HCRequireNonNilString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilString.h; sourceTree = "<group>"; };
@@ -540,6 +543,8 @@
 				0F2A4B350D8B69E100051BCF /* IsNotTest.m */,
 				0F2A4B360D8B69E100051BCF /* IsSameTest.m */,
 				0F2A4B370D8B69E100051BCF /* IsTest.m */,
+				08EDD38812E2B90300785BD5 /* NeverMatch.h */,
+				08EDD38912E2B90300785BD5 /* NeverMatch.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1014,6 +1019,7 @@
 				086CB36712CFE10A00DCCB68 /* FakeNonCountingObject.m in Sources */,
 				086CB37412CFE22500DCCB68 /* FakeCountingObject.m in Sources */,
 				08EDD34512E24C0800785BD5 /* StringDescriptionTest.m in Sources */,
+				08EDD38A12E2B90300785BD5 /* NeverMatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
