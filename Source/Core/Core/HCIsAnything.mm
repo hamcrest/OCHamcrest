@@ -45,7 +45,6 @@
 - (void) dealloc
 {
     [description release];
-    
     [super dealloc];
 }
 
@@ -63,6 +62,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_anything()
 {

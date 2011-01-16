@@ -33,7 +33,6 @@
 - (void) dealloc
 {
     [matcher release];
-    
     [super dealloc];
 }
 

@@ -32,7 +32,6 @@
 - (void) dealloc
 {
     [object release];
-    
     [super dealloc];
 }
 
@@ -58,6 +57,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_equalTo(id object)
 {

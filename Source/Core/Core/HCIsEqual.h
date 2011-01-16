@@ -26,6 +26,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 /**
     Is the object equal to another object, as tested by the @c -isEqual: method?

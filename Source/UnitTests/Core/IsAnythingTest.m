@@ -41,8 +41,14 @@
 
 - (void) testCanOverrideDescription
 {
-    NSString* description = @"description";
+    NSString* description = @"DESCRIPTION";
     assertDescription(description, anythingWithDescription(description));
+}
+
+
+- (void) testMatchAlwaysSucceedsSoShouldNotGenerateMismatchDescription
+{
+    assertNoMismatchDescription(anything(), @"hi");
 }
 
 @end

@@ -22,6 +22,7 @@
 - (NSString*) description  { return @"ARGUMENT DESCRIPTION"; }
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 @interface AlwaysEqual : NSObject
 @end
@@ -30,6 +31,7 @@
 - (BOOL) isEqual:(id)anObject  { return YES; }
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 @interface NeverEqual : NSObject
 @end
@@ -38,6 +40,7 @@
 - (BOOL) isEqual:(id)anObject  { return NO; }
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 @interface IsEqualTest : AbstractMatcherTest
 @end
@@ -66,7 +69,7 @@
 }
 
 
-- (void) testHonoursIsEqualImplementationEvenWithNilValues
+- (void) testHonorsIsEqualImplementationEvenWithNilValues
 {
     assertThat([[[AlwaysEqual alloc] init] autorelease], equalTo(nil));
     assertThat([[[NeverEqual alloc] init] autorelease], isNot(equalTo(nil)));
@@ -91,6 +94,28 @@
 - (void) testReturnsGoodDescriptionIfCreatedWithNilReference
 {
     assertDescription(@"nil", equalTo(nil));
+}
+
+
+- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+{
+    assertNoMismatchDescription(equalTo(@"hi"), @"hi");
+}
+
+
+- (void) testMismatchDescriptionShowsActualArgument
+{
+    assertMismatchDescription(@"was \"bad\"",
+                              equalTo(@"good"),
+                              @"bad");
+}
+
+
+- (void) testDescribeMismatch
+{
+    assertDescribeMismatch(@"was \"bad\"",
+                           equalTo(@"good"),
+                           @"bad");
 }
 
 @end
