@@ -5,14 +5,16 @@
 //  Created by: Jon Reid
 //
 
-    // Self
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsDictionaryContaining.h>
+
+    // Other OCHamcrest
 #import <OCHamcrest/HCIsAnything.h>
 #import <OCHamcrest/HCIsEqual.h>
+
+    // Test support
+#import "AbstractMatcherTest.h"
 
 
 @interface IsDictionaryContainingTest : AbstractMatcherTest
@@ -26,16 +28,16 @@
 }
 
 
-- (void) testMatchesMapContainingMatchingKeyAndValue
+- (void) testMatchesDictionaryContainingMatchingKeyAndValue
 {
     NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
                                             @"1", @"a",
                                             @"2", @"b",
                                             nil];
 
-    assertMatches(@"matcherA", hasEntry(equalTo(@"a"), equalTo(@"1")), dict);
-    assertMatches(@"matcherB", hasEntry(equalTo(@"b"), equalTo(@"2")), dict);
-    assertDoesNotMatch(@"matcherC", hasEntry(equalTo(@"c"), equalTo(@"3")), dict);
+    assertMatches(@"has a:1", hasEntry(equalTo(@"a"), equalTo(@"1")), dict);
+    assertMatches(@"has b:2", hasEntry(equalTo(@"b"), equalTo(@"2")), dict);
+    assertDoesNotMatch(@"no c:3", hasEntry(equalTo(@"c"), equalTo(@"3")), dict);
 }
 
 
@@ -46,23 +48,15 @@
                                             @"2", @"b",
                                             nil];
 
-    assertMatches(@"matcherA", hasEntry(@"a", equalTo(@"1")), dict);
-    assertMatches(@"matcherB", hasEntry(equalTo(@"b"), @"2"), dict);
-    assertDoesNotMatch(@"matcherC", hasEntry(@"c", @"3"), dict);
+    assertMatches(@"has a:1", hasEntry(@"a", equalTo(@"1")), dict);
+    assertMatches(@"has b:2", hasEntry(equalTo(@"b"), @"2"), dict);
+    assertDoesNotMatch(@"no c:3", hasEntry(@"c", @"3"), dict);
 }
 
 
-- (void) testDoesNotMatchNil
+- (void) testShouldNotMatchNil
 {
-    assertDoesNotMatch(@"should not match nil",
-            hasEntry(anything(), anything()), nil);
-}
-
-
-- (void) testHasReadableDescription
-{
-    assertDescription(@"dictionary containing [\"a\"-><2>]",
-                      hasEntry(equalTo(@"a"), equalTo([NSNumber numberWithInt:2])));
+    assertDoesNotMatch(@"nil", hasEntry(anything(), anything()), nil);
 }
 
 
@@ -70,6 +64,31 @@
 {    
     STAssertThrows(hasEntry(nil, @"value"), @"Should require non-nil argument");
     STAssertThrows(hasEntry(@"key", nil), @"Should require non-nil argument");
+}
+
+
+- (void) testHasReadableDescription
+{
+    assertDescription(@"dictionary containing [\"a\": \"1\"]", hasEntry(@"a", @"1"));
+}
+
+
+- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+{
+    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:@"1", @"a", nil];
+    assertNoMismatchDescription(hasEntry(@"a", @"1"), dict);
+}
+
+
+- (void) testMismatchDescriptionShowsActualArgument
+{
+    assertMismatchDescription(@"was \"bad\"", hasEntry(@"a", @"1"), @"bad");
+}
+
+
+- (void) testDescribeMismatch
+{
+    assertDescribeMismatch(@"was \"bad\"", hasEntry(@"a", @"1"), @"bad");
 }
 
 @end

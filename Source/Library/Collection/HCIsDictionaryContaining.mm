@@ -64,13 +64,14 @@
 {
     [[[[[description appendText:@"dictionary containing ["]
                      appendDescriptionOf:keyMatcher]
-                     appendText:@"->"]
+                     appendText:@": "]
                      appendDescriptionOf:valueMatcher]
                      appendText:@"]"];
 }
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcher, id valueMatcher)
 {

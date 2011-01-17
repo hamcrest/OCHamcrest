@@ -13,6 +13,8 @@ Hamcrest information: http://code.google.com/p/hamcrest/
 
 * "instanceOf" now guards against nil being passed as the expected type.
 
+* Improved "hasEntry" description.
+
 
 == Version 1.2 ==
 
