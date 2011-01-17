@@ -23,6 +23,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 /**
     Inverts the rule, or provides a shortcut to the frequently used isNot(equalTo(x)).
