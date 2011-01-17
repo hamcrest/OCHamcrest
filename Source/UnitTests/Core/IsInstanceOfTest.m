@@ -36,6 +36,12 @@
 }
 
 
+- (void) testMatcherCreationRequiresNonNilArgument
+{
+    STAssertThrows(instanceOf(nil), @"Should require non-nil argument");
+}
+
+
 - (void) testHasAReadableDescription
 {
     assertDescription(@"an instance of NSNumber", instanceOf([NSNumber class]));

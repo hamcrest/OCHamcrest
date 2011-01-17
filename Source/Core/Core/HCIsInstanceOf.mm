@@ -10,6 +10,7 @@
 
     // OCHamcrest
 #import "HCDescription.h"
+#import "HCRequireNonNilObject.h"
 
 
 @implementation HCIsInstanceOf
@@ -22,6 +23,8 @@
 
 - (id) initWithType:(Class)type
 {
+    HCRequireNonNilObject(type);
+
     self = [super init];
     if (self != nil)
         theClass = type;
