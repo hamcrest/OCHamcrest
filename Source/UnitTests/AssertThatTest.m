@@ -5,13 +5,15 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import <SenTestingKit/SenTestingKit.h>
-
-    // OCHamcrest
+    // Module under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCAssertThat.h>
+
+    // Other OCHamcrest
 #import <OCHamcrest/HCIsEqual.h>
+
+    // Test support
+#import <SenTestingKit/SenTestingKit.h>
 
 
 @interface QuietTestRun : SenTestCaseRun

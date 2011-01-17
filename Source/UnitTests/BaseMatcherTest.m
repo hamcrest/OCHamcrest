@@ -5,12 +5,14 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #import <OCHamcrest/HCBaseMatcher.h>
+
+    // Other OCHamcrest
 #import <OCHamcrest/HCDescription.h>
+
+    // Test support
+#import "AbstractMatcherTest.h"
 
 
 @interface TestingBaseMatcher : HCBaseMatcher

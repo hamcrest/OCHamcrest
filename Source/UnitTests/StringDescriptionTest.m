@@ -5,12 +5,14 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import <SenTestingKit/SenTestingKit.h>
-
-    // OCHamcrest
-#import <OCHamcrest/HCSelfDescribing.h>
+    // Class under test
 #import <OCHamcrest/HCStringDescription.h>
+
+    // Other OCHamcrest
+#import <OCHamcrest/HCSelfDescribing.h>
+
+    // Test support
+#import <SenTestingKit/SenTestingKit.h>
 
 
 @interface FakeSelfDescribing : NSObject <HCSelfDescribing>
@@ -25,7 +27,7 @@
 
 @end
 
-//==================================================================================================
+//--------------------------------------------------------------------------------------------------
 
 @interface StringDescriptionTest : SenTestCase
 {

@@ -5,16 +5,15 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCDescribedAs.h>
+
+    // Other OCHamcrest
 #import <OCHamcrest/HCIsAnything.h>
-#import <OCHamcrest/HCIsNot.h>
 
     // Test support
+#import "AbstractMatcherTest.h"
 #import "NeverMatch.h"
 
 
@@ -32,7 +31,7 @@
 - (void) testOverridesDescriptionOfNestedMatcherInitializerArgument
 {
     id<HCMatcher> m1 = describedAs(@"m1 description", anything(), nil);
-    id<HCMatcher> m2 = describedAs(@"m2 description", isNot(anything()), nil);
+    id<HCMatcher> m2 = describedAs(@"m2 description", [NeverMatch neverMatch], nil);
 
     assertDescription(@"m1 description", m1);
     assertDescription(@"m2 description", m2);

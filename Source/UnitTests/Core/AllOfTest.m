@@ -5,15 +5,15 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCAllOf.h>
-#import <OCHamcrest/HCAssertThat.h>
+
+    // Other OCHamcrest
 #import <OCHamcrest/HCIsEqual.h>
-#import <OCHamcrest/HCIsNot.h>
+
+    // Test support
+#import "AbstractMatcherTest.h"
 
 
 @interface AllOfTest : AbstractMatcherTest
@@ -27,30 +27,42 @@
 }
 
 
-- (void) testEvaluatesToTheTheLogicalConjunctionOfTwoOtherMatchers
+- (void) testMatchesIfArgumentSatisfiesBothOfTwoOtherMatchers
 {
-    assertThat(@"good", allOf(equalTo(@"good"), equalTo(@"good"), nil));
-
-    assertThat(@"good", isNot(allOf(equalTo(@"bad"), equalTo(@"good"), nil)));
-    assertThat(@"good", isNot(allOf(equalTo(@"good"), equalTo(@"bad"), nil)));
-    assertThat(@"good", isNot(allOf(equalTo(@"bad"), equalTo(@"bad"), nil)));
+    assertMatches(@"both matchers", allOf(equalTo(@"good"), equalTo(@"good"), nil), @"good");
 }
 
 
-- (void) testEvaluatesToTheTheLogicalConjunctionOfManyOtherMatchers
+- (void) testNoMatchIfArgumentFailsToSatisfyEitherOfTwoOtherMatchers
 {
-    assertThat(@"good", allOf(equalTo(@"good"),
-                              equalTo(@"good"),
-                              equalTo(@"good"),
-                              equalTo(@"good"),
-                              equalTo(@"good"),
-                              nil));
-    assertThat(@"good", isNot(allOf(equalTo(@"good"),
-                                    equalTo(@"good"),
-                                    equalTo(@"bad"),
-                                    equalTo(@"good"),
-                                    equalTo(@"good"),
-                                    nil)));
+    assertDoesNotMatch(@"first matcher", allOf(equalTo(@"bad"), equalTo(@"good"), nil), @"good");
+    assertDoesNotMatch(@"second matcher", allOf(equalTo(@"good"), equalTo(@"bad"), nil), @"good");
+    assertDoesNotMatch(@"either matcher", allOf(equalTo(@"bad"), equalTo(@"bad"), nil), @"good");
+}
+
+- (void) testMatchesIfArgumentSatisfiesAllOfManyOtherMatchers
+{
+    assertMatches(@"all matchers",
+                  allOf(equalTo(@"good"),
+                        equalTo(@"good"),
+                        equalTo(@"good"),
+                        equalTo(@"good"),
+                        equalTo(@"good"),
+                        nil),
+                  @"good");
+}
+
+
+- (void) testNoMatchIfArgumentFailsToSatisfyAllOfManyOtherMatchers
+{
+    assertDoesNotMatch(@"matcher in the middle",
+                  allOf(equalTo(@"good"),
+                        equalTo(@"good"),
+                        equalTo(@"bad"),
+                        equalTo(@"good"),
+                        equalTo(@"good"),
+                        nil),
+                  @"good");
 }
 
 

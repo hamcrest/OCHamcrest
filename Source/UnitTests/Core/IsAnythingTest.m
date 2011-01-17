@@ -5,13 +5,12 @@
 //  Created by: Jon Reid
 //
 
-    // Self
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #define HC_SHORTHAND
-#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCIsAnything.h>
+
+    // Test support
+#import "AbstractMatcherTest.h"
 
 
 @interface IsAnythingTest : AbstractMatcherTest
@@ -27,9 +26,9 @@
 
 - (void) testAlwaysEvaluatesToTrue
 {
-    assertThat(nil, anything());
-    assertThat([[[NSObject alloc] init] autorelease], anything());
-    assertThat(@"hi", anything());
+    assertMatches(@"nil", anything(), nil);
+    assertMatches(@"object", anything(), [[[NSObject alloc] init] autorelease]);
+    assertMatches(@"string", anything(), @"hi");
 }
 
 

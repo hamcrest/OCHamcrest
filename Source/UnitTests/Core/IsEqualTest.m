@@ -5,14 +5,12 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #define HC_SHORTHAND
-#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCIsEqual.h>
-#import <OCHamcrest/HCIsNot.h>
+
+    // Test support
+#import "AbstractMatcherTest.h"
 
 
 @interface FakeArgument : NSObject
@@ -55,24 +53,24 @@
 
 - (void) testComparesObjectsUsingIsEqualMethod
 {
-    assertThat(@"hi", equalTo(@"hi"));
-    assertThat(@"bye", isNot(equalTo(@"hi")));
+    assertMatches(@"equal strings", equalTo(@"hi"), @"hi");
+    assertDoesNotMatch(@"unequal strings", equalTo(@"hi"), @"bye");
 }
 
 
 - (void) testCanCompareNilValues
 {
-    assertThat(nil, equalTo(nil));
+    assertMatches(@"nil equals nil", equalTo(nil), nil);
 
-    assertThat(nil, isNot(equalTo(@"hi")));
-    assertThat(@"hi", isNot(equalTo(nil)));
+    assertDoesNotMatch(@"nil as argument", equalTo(@"hi"), nil);
+    assertDoesNotMatch(@"nil in equalTo", equalTo(nil), @"hi");
 }
 
 
 - (void) testHonorsIsEqualImplementationEvenWithNilValues
 {
-    assertThat([[[AlwaysEqual alloc] init] autorelease], equalTo(nil));
-    assertThat([[[NeverEqual alloc] init] autorelease], isNot(equalTo(nil)));
+    assertMatches(@"always equal", equalTo(nil), [[[AlwaysEqual alloc] init] autorelease]);
+    assertDoesNotMatch(@"never equal", equalTo(nil), [[[NeverEqual alloc] init] autorelease]);
 }
 
 

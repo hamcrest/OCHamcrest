@@ -5,14 +5,12 @@
 //  Created by: Jon Reid
 //
 
-    // Self
+    // Inherited
 #import "AbstractMatcherTest.h"
 
     // OCHamcrest
 #define HC_SHORTHAND
-#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCIsInstanceOf.h>
-#import <OCHamcrest/HCIsNot.h>
 
 
 @interface IsInstanceOfTest : AbstractMatcherTest
@@ -29,10 +27,12 @@
 - (void) testEvaluatesToTrueIfArgumentIsInstanceOfASpecificClass
 {
     NSNumber* number = [NSNumber numberWithInt:1];
-    assertThat(number, instanceOf([NSNumber class]));
-    assertThat(number, instanceOf([NSValue class]));
-    assertThat(nil, isNot(instanceOf([NSNumber class])));
-    assertThat(@"hello", isNot(instanceOf([NSNumber class])));
+    
+    assertMatches(@"same class", instanceOf([NSNumber class]), number);
+    assertMatches(@"subclass", instanceOf([NSValue class]), number);
+
+    assertDoesNotMatch(@"different class", instanceOf([NSNumber class]), @"hi");
+    assertDoesNotMatch(@"nil", instanceOf([NSNumber class]), nil);
 }
 
 
