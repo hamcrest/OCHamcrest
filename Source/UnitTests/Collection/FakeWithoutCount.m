@@ -19,7 +19,7 @@
 
 - (NSString *) description
 {
-    return @"non-counting";
+    return @"FakeWithoutCount";
 }
 
 @end

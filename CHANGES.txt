@@ -9,6 +9,8 @@ Hamcrest information: http://code.google.com/p/hamcrest/
 
 * Changed "sameInstance" description and mismatch description to be more readable and show the respective memory addresses.
 
+* Improved "hasCount" description.
+
 
 == Version 1.2 ==
 

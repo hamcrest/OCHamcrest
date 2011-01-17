@@ -32,7 +32,7 @@
 
 - (NSString *) description
 {
-    return @"counting";
+    return @"FakeWithCount";
 }
 
 @end

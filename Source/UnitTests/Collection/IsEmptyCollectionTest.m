@@ -56,7 +56,7 @@
 
 - (void) testDescribesMismatch
 {
-    assertDescribeMismatch(@"was <counting>", empty(), [FakeWithCount fakeWithCount:1]);
+    assertDescribeMismatch(@"was <FakeWithCount>", empty(), [FakeWithCount fakeWithCount:1]);
 }
 
 @end

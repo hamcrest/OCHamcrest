@@ -53,14 +53,14 @@
     if ([item respondsToSelector:@selector(count)])
     {
         NSNumber* count = [NSNumber numberWithUnsignedInteger:[item count]];
-        [[mismatchDescription appendText:@" with count "] appendDescriptionOf:count];
+        [[mismatchDescription appendText:@" with count of "] appendDescriptionOf:count];
     }
 }
 
 
 - (void) describeTo:(id<HCDescription>)description
 {
-    [[description appendText:@"collection with count "] appendDescriptionOf:countMatcher];
+    [[description appendText:@"collection with count of "] appendDescriptionOf:countMatcher];
 }
 
 @end
