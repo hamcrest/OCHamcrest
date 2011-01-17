@@ -14,8 +14,8 @@
 #import <OCHamcrest/HCIsEmptyCollection.h>
 
     // Test support
-#import "FakeCountingObject.h"
-#import "FakeNonCountingObject.h"
+#import "FakeWithCount.h"
+#import "FakeWithoutCount.h"
 
 
 @interface IsEmptyCollectionTest : AbstractMatcherTest
@@ -32,19 +32,19 @@
 
 - (void) testMatchesEmptyCollection
 {
-    assertMatches(@"empty", empty(), [FakeCountingObject fakeWithCount:0]);
+    assertMatches(@"empty", empty(), [FakeWithCount fakeWithCount:0]);
 }
 
 
 - (void) testDoesNotMatchesNonEmptyCollection
 {
-    assertDoesNotMatch(@"non-empty", empty(), [FakeCountingObject fakeWithCount:1]);
+    assertDoesNotMatch(@"non-empty", empty(), [FakeWithCount fakeWithCount:1]);
 }
 
 
 - (void) testDoesNotMatchItemWithoutCount
 {
-    assertDoesNotMatch(@"no count", empty(), [FakeNonCountingObject fake]);
+    assertDoesNotMatch(@"no count", empty(), [FakeWithoutCount fake]);
 }
 
 
@@ -56,7 +56,7 @@
 
 - (void) testDescribesMismatch
 {
-    assertDescribeMismatch(@"was <counting>", empty(), [FakeCountingObject fakeWithCount:1]);
+    assertDescribeMismatch(@"was <counting>", empty(), [FakeWithCount fakeWithCount:1]);
 }
 
 @end

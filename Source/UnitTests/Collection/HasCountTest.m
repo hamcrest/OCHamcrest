@@ -5,20 +5,20 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #define HC_SHORTHAND
-#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCHasCount.h>
+
+    // Other OCHamcrest
+#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCIsEqualToNumber.h>
 #import <OCHamcrest/HCIsNot.h>
 
     // Test support
-#import "FakeCountingObject.h"
-#import "FakeNonCountingObject.h"
+#import "AbstractMatcherTest.h"
+#import "FakeWithCount.h"
+#import "FakeWithoutCount.h"
 
 
 @interface HasCountTest : AbstractMatcherTest
@@ -36,18 +36,18 @@
 - (void) testConvertCountToNSNumberAndPassToNestedMatcher
 {
     NSUInteger fakeCount = 5;
-    FakeCountingObject* fakeCountingObject = [FakeCountingObject fakeWithCount:fakeCount];
-    assertThat(fakeCountingObject, hasCount(equalToUnsignedInteger(fakeCount)));
-    assertThat(fakeCountingObject, isNot(hasCount(equalTo(equalToUnsignedInteger(fakeCount + 1)))));
+    FakeWithCount* fakeWithCount = [FakeWithCount fakeWithCount:fakeCount];
+    assertThat(fakeWithCount, hasCount(equalToUnsignedInteger(fakeCount)));
+    assertThat(fakeWithCount, isNot(hasCount(equalTo(equalToUnsignedInteger(fakeCount + 1)))));
 }
 
 
 - (void) testHasCountOfIsShortcutForEqualToUnsignedInteger
 {
     NSUInteger fakeCount = 6;
-    FakeCountingObject* fakeCountingObject = [FakeCountingObject fakeWithCount:fakeCount];
-    assertThat(fakeCountingObject, hasCountOf(fakeCount));
-    assertThat(fakeCountingObject, isNot(hasCountOf(fakeCount + 1)));
+    FakeWithCount* fakeWithCount = [FakeWithCount fakeWithCount:fakeCount];
+    assertThat(fakeWithCount, hasCountOf(fakeCount));
+    assertThat(fakeWithCount, isNot(hasCountOf(fakeCount + 1)));
 }
 
 
@@ -67,7 +67,7 @@
 {
     assertDescribeMismatch(@"was <counting> with count <42>",
                            hasCount(equalToUnsignedInteger(1)),
-                           [FakeCountingObject fakeWithCount:42]);
+                           [FakeWithCount fakeWithCount:42]);
 }
 
 
@@ -75,7 +75,7 @@
 {
     assertDescribeMismatch(@"was <non-counting>",
                            hasCount(equalToUnsignedInteger(1)),
-                           [FakeNonCountingObject fake]);
+                           [FakeWithoutCount fake]);
 }
 
 @end

@@ -37,8 +37,8 @@
 		086CB26D12CFBE9100DCCB68 /* HCHasCount.mm in Sources */ = {isa = PBXBuildFile; fileRef = 086CB26A12CFBE9100DCCB68 /* HCHasCount.mm */; };
 		086CB26F12CFBEC700DCCB68 /* HasCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 086CB26E12CFBEC700DCCB68 /* HasCountTest.m */; };
 		086CB35312CFDF2000DCCB68 /* IsEmptyCollectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 086CB35212CFDF2000DCCB68 /* IsEmptyCollectionTest.m */; };
-		086CB36712CFE10A00DCCB68 /* FakeNonCountingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 086CB36612CFE10A00DCCB68 /* FakeNonCountingObject.m */; };
-		086CB37412CFE22500DCCB68 /* FakeCountingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 086CB37312CFE22500DCCB68 /* FakeCountingObject.m */; };
+		086CB36712CFE10A00DCCB68 /* FakeWithoutCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 086CB36612CFE10A00DCCB68 /* FakeWithoutCount.m */; };
+		086CB37412CFE22500DCCB68 /* FakeWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 086CB37312CFE22500DCCB68 /* FakeWithCount.m */; };
 		086CB3A012CFE5D700DCCB68 /* HCIsEmptyCollection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 086CB39F12CFE5D700DCCB68 /* HCIsEmptyCollection.mm */; };
 		086CB3A112CFE5D700DCCB68 /* HCIsEmptyCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 086CB39E12CFE5D700DCCB68 /* HCIsEmptyCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		086CB3A212CFE5D700DCCB68 /* HCIsEmptyCollection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 086CB39F12CFE5D700DCCB68 /* HCIsEmptyCollection.mm */; };
@@ -226,10 +226,10 @@
 		086CB26A12CFBE9100DCCB68 /* HCHasCount.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCHasCount.mm; sourceTree = "<group>"; };
 		086CB26E12CFBEC700DCCB68 /* HasCountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasCountTest.m; sourceTree = "<group>"; };
 		086CB35212CFDF2000DCCB68 /* IsEmptyCollectionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEmptyCollectionTest.m; sourceTree = "<group>"; };
-		086CB36512CFE10A00DCCB68 /* FakeNonCountingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeNonCountingObject.h; sourceTree = "<group>"; };
-		086CB36612CFE10A00DCCB68 /* FakeNonCountingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeNonCountingObject.m; sourceTree = "<group>"; };
-		086CB37212CFE22500DCCB68 /* FakeCountingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeCountingObject.h; sourceTree = "<group>"; };
-		086CB37312CFE22500DCCB68 /* FakeCountingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeCountingObject.m; sourceTree = "<group>"; };
+		086CB36512CFE10A00DCCB68 /* FakeWithoutCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeWithoutCount.h; sourceTree = "<group>"; };
+		086CB36612CFE10A00DCCB68 /* FakeWithoutCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeWithoutCount.m; sourceTree = "<group>"; };
+		086CB37212CFE22500DCCB68 /* FakeWithCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeWithCount.h; sourceTree = "<group>"; };
+		086CB37312CFE22500DCCB68 /* FakeWithCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeWithCount.m; sourceTree = "<group>"; };
 		086CB39E12CFE5D700DCCB68 /* HCIsEmptyCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEmptyCollection.h; sourceTree = "<group>"; };
 		086CB39F12CFE5D700DCCB68 /* HCIsEmptyCollection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsEmptyCollection.mm; sourceTree = "<group>"; };
 		087F5B1612C53484008B6B72 /* IsCollectionContainingInOrderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsCollectionContainingInOrderTest.m; sourceTree = "<group>"; };
@@ -608,10 +608,10 @@
 		0F2A4CD80D8C7FC800051BCF /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				086CB37212CFE22500DCCB68 /* FakeCountingObject.h */,
-				086CB37312CFE22500DCCB68 /* FakeCountingObject.m */,
-				086CB36512CFE10A00DCCB68 /* FakeNonCountingObject.h */,
-				086CB36612CFE10A00DCCB68 /* FakeNonCountingObject.m */,
+				086CB37212CFE22500DCCB68 /* FakeWithCount.h */,
+				086CB37312CFE22500DCCB68 /* FakeWithCount.m */,
+				086CB36512CFE10A00DCCB68 /* FakeWithoutCount.h */,
+				086CB36612CFE10A00DCCB68 /* FakeWithoutCount.m */,
 				086CB26E12CFBEC700DCCB68 /* HasCountTest.m */,
 				0F2A4CDA0D8C808700051BCF /* IsCollectionContainingTest.m */,
 				087F5C5412C6C2E0008B6B72 /* IsCollectionContainingInAnyOrderTest.m */,
@@ -1016,8 +1016,8 @@
 				087F5C5512C6C2E0008B6B72 /* IsCollectionContainingInAnyOrderTest.m in Sources */,
 				086CB26F12CFBEC700DCCB68 /* HasCountTest.m in Sources */,
 				086CB35312CFDF2000DCCB68 /* IsEmptyCollectionTest.m in Sources */,
-				086CB36712CFE10A00DCCB68 /* FakeNonCountingObject.m in Sources */,
-				086CB37412CFE22500DCCB68 /* FakeCountingObject.m in Sources */,
+				086CB36712CFE10A00DCCB68 /* FakeWithoutCount.m in Sources */,
+				086CB37412CFE22500DCCB68 /* FakeWithCount.m in Sources */,
 				08EDD34512E24C0800785BD5 /* StringDescriptionTest.m in Sources */,
 				08EDD38A12E2B90300785BD5 /* NeverMatch.m in Sources */,
 			);

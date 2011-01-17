@@ -23,6 +23,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 /**
     Matches collections for which @c -count satisfies a given matcher.

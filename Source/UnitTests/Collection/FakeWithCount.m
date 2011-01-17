@@ -1,15 +1,15 @@
 //
-//  OCHamcrest - FakeCountingObject.m
+//  OCHamcrest - FakeWithCount.m
 //  Copyright 2011 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
 //
 
     // Self
-#import "FakeCountingObject.h"
+#import "FakeWithCount.h"
 
 
-@implementation FakeCountingObject
+@implementation FakeWithCount
 
 @synthesize count;
 

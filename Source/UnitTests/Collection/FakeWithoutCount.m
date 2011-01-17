@@ -1,15 +1,15 @@
 //
-//  OCHamcrest - FakeNonCountingObject.m
+//  OCHamcrest - FakeWithoutCount.m
 //  Copyright 2011 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
 //
 
     // Self
-#import "FakeNonCountingObject.h"
+#import "FakeWithoutCount.h"
 
 
-@implementation FakeNonCountingObject
+@implementation FakeWithoutCount
 
 + (id) fake
 {
