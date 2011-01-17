@@ -34,7 +34,6 @@
 - (void) dealloc
 {
     [keyMatcher release];
-    
     [super dealloc];
 }
 
@@ -55,12 +54,13 @@
 
 - (void) describeTo:(id<HCDescription>)description
 {
-    [[description appendText:@"dictionary with key "]
+    [[description appendText:@"dictionary containing key "]
                   appendDescriptionOf:keyMatcher];
 }
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_hasKey(id matcherOrValue)
 {

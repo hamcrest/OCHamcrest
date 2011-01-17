@@ -5,13 +5,15 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsDictionaryContainingValue.h>
+
+    // Other OCHamcrest
 #import <OCHamcrest/HCIsEqual.h>
+
+    // Test support
+#import "AbstractMatcherTest.h"
 
 
 @interface IsDictionaryContainingValueTest : AbstractMatcherTest
@@ -25,23 +27,11 @@
 }
 
 
-- (void) testHasReadableDescription
-{
-    assertDescription(@"dictionary with value \"a\"", hasValue(@"a"));
-}
-
-
-- (void) testDoesNotMatchEmptyDictionary
-{
-    assertDoesNotMatch(@"Empty dictionary", hasValue(@"Foo"), [NSDictionary dictionary]);
-}
-
-
 - (void) testMatchesSingletonDictionaryContainingValue
 {
     NSDictionary* dict = [NSDictionary dictionaryWithObject:@"1" forKey:@"a"];
     
-    assertMatches(@"Matches single key", hasValue(equalTo(@"1")), dict);
+    assertMatches(@"same single key", hasValue(equalTo(@"1")), dict);
 }
 
 
@@ -70,6 +60,12 @@
 }
 
 
+- (void) testDoesNotMatchEmptyDictionary
+{
+    assertDoesNotMatch(@"Empty dictionary", hasValue(@"Foo"), [NSDictionary dictionary]);
+}
+
+
 - (void) testDoesNotMatchDictionaryMissingValue
 {
     NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -78,13 +74,37 @@
                                             @"3", @"c",
                                             nil];
     
-    assertDoesNotMatch(@"Dictionary without matching value", hasValue(@"4"), dict);
+    assertDoesNotMatch(@"no matching value", hasValue(@"4"), dict);
 }
 
 
 - (void) testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(hasValue(nil), @"Should require non-nil argument");
+}
+
+
+- (void) testHasReadableDescription
+{
+    assertDescription(@"dictionary containing value \"a\"", hasValue(@"a"));
+}
+
+- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+{
+    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:@"1", @"a", nil];
+    assertNoMismatchDescription(hasValue(@"1"), dict);
+}
+
+
+- (void) testMismatchDescriptionShowsActualArgument
+{
+    assertMismatchDescription(@"was \"bad\"", hasValue(@"1"), @"bad");
+}
+
+
+- (void) testDescribeMismatch
+{
+    assertDescribeMismatch(@"was \"bad\"", hasValue(@"1"), @"bad");
 }
 
 @end

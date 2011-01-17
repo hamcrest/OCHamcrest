@@ -5,13 +5,15 @@
 //  Created by: Jon Reid
 //
 
-    // Self
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsDictionaryContainingKey.h>
+
+    // Other OCHamcrest
 #import <OCHamcrest/HCIsEqual.h>
+
+    // Test support
+#import "AbstractMatcherTest.h"
 
 
 @interface IsDictionaryContainingKeyTest : AbstractMatcherTest
@@ -58,15 +60,9 @@
 }
 
 
-- (void) testHasReadableDescription
-{
-    assertDescription(@"dictionary with key \"a\"", hasKey(@"a"));
-}
-
-
 - (void) testDoesNotMatchEmptyDictionary
 {
-    assertDoesNotMatch(@"Empty dictionary", hasKey(@"Foo"), [NSDictionary dictionary]);
+    assertDoesNotMatch(@"empty", hasKey(@"Foo"), [NSDictionary dictionary]);
 }
 
 
@@ -78,13 +74,38 @@
                                             @"3", @"c",
                                             nil];
     
-    assertDoesNotMatch(@"Dictionary without matching key", hasKey(@"d"), dict);
+    assertDoesNotMatch(@"no matching key", hasKey(@"d"), dict);
 }
 
 
 - (void) testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(hasKey(nil), @"Should require non-nil argument");
+}
+
+
+- (void) testHasReadableDescription
+{
+    assertDescription(@"dictionary containing key \"a\"", hasKey(@"a"));
+}
+
+
+- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+{
+    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:@"1", @"a", nil];
+    assertNoMismatchDescription(hasKey(@"a"), dict);
+}
+
+
+- (void) testMismatchDescriptionShowsActualArgument
+{
+    assertMismatchDescription(@"was \"bad\"", hasKey(@"a"), @"bad");
+}
+
+
+- (void) testDescribeMismatch
+{
+    assertDescribeMismatch(@"was \"bad\"", hasKey(@"a"), @"bad");
 }
 
 @end
