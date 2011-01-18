@@ -35,7 +35,6 @@
 - (void) dealloc
 {
     [matcher release];
-    
     [super dealloc];
 }
 
@@ -65,6 +64,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id items, ...)
 {

@@ -5,15 +5,12 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #define HC_SHORTHAND
-#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCIsEmptyCollection.h>
 
     // Test support
+#import "AbstractMatcherTest.h"
 #import "FakeWithCount.h"
 #import "FakeWithoutCount.h"
 
@@ -51,6 +48,12 @@
 - (void) testHasReadableDescription
 {
     assertDescription(@"empty collection", empty());
+}
+
+
+- (void) testMismatchDescriptionShowsActualArgument
+{
+    assertMismatchDescription(@"was \"bad\"", empty(), @"bad");
 }
 
 

@@ -5,13 +5,15 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsCollectionContainingInAnyOrder.h>
+
+    // Other OCHamcrest
 #import <OCHamcrest/HCIsEqual.h>
+
+    // Test support
+#import "AbstractMatcherTest.h"
 
 
 @interface IsCollectionContainingInAnyOrderTest : AbstractMatcherTest
@@ -32,20 +34,15 @@
 }
 
 
-- (void) testDoesNotMatchNil
+- (void) testMatchesCollectionInOfOrder
 {
-    assertDoesNotMatch(@"Should not match nil", containsInAnyOrder(@"a", nil), nil);
+    assertMatches(@"In order",
+                  (containsInAnyOrder(equalTo(@"a"), equalTo(@"b"), nil)),
+                  ([NSArray arrayWithObjects:@"a", @"b", nil]));
 }
 
 
-- (void) testDoesNotMatchEmptyCollection
-{
-    assertMismatchDescription(@"No item matches: \"a\", \"b\" in []",
-                              (containsInAnyOrder(@"a", @"b", nil)), [NSArray array]);
-}
-
-
-- (void) testMatchesSequenceOutOfOrder
+- (void) testMatchesCollectionOutOfOrder
 {
     assertMatches(@"Out of order",
                   (containsInAnyOrder(equalTo(@"a"), equalTo(@"b"), nil)),
@@ -61,17 +58,22 @@
 }
 
 
-- (void) testMatchesSequenceInOfOrder
+- (void) testDoesNotMatchEmptyCollection
 {
-    assertMatches(@"In order",
-                  (containsInAnyOrder(equalTo(@"a"), equalTo(@"b"), nil)),
-                  ([NSArray arrayWithObjects:@"a", @"b", nil]));
+    assertMismatchDescription(@"no item matches: \"a\", \"b\" in []",
+                              (containsInAnyOrder(@"a", @"b", nil)), [NSArray array]);
+}
+
+
+- (void) testDoesNotMatchNil
+{
+    assertDoesNotMatch(@"Should not match nil", containsInAnyOrder(@"a", nil), nil);
 }
 
 
 - (void) testDoesNotMatchIfOneOfMultipleItemsMismatch
 {
-    assertMismatchDescription(@"Not matched: \"d\"",
+    assertMismatchDescription(@"not matched: \"d\"",
                               (containsInAnyOrder(@"a", @"b", @"c", nil)),
                               ([NSArray arrayWithObjects:@"a", @"b", @"d", nil]));
 }
@@ -79,7 +81,7 @@
 
 - (void) testDoesNotMatchWithMoreElementsThanExpected
 {
-    assertMismatchDescription(@"Not matched: \"b\"",
+    assertMismatchDescription(@"not matched: \"b\"",
                               (containsInAnyOrder(@"a", @"c", nil)),
                               ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
 }
@@ -87,30 +89,31 @@
 
 - (void) testDoesNotMatchWithFewerElementsThanExpected
 {
-    assertMismatchDescription(@"No item matches: \"d\" in [\"a\", \"b\", \"c\"]",
+    assertMismatchDescription(@"no item matches: \"d\" in [\"a\", \"b\", \"c\"]",
                               (containsInAnyOrder(@"a", @"b", @"c", @"d", nil)),
                               ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
 }
 
 
-- (void) testDescribeMismatch
+- (void) testDoesNotMatchObjectWithoutEnumerator
 {
-    assertDescribeMismatch(@"Not matched: \"c\"",
-                           (containsInAnyOrder(@"a", @"b", nil)),
-                           ([NSArray arrayWithObjects:@"a", @"c", nil]));
+    assertDoesNotMatch(@"no enumerator",
+                       containsInAnyOrder(@"a", nil), [[[NSObject alloc] init] autorelease]);
 }
+
 
 - (void) testHasAReadableDescription
 {
-    assertDescription(@"collection over [\"a\", \"b\"] in any order",
+    assertDescription(@"a collection over [\"a\", \"b\"] in any order",
                       containsInAnyOrder(@"a", @"b", nil));
 }
 
 
-- (void) testDoesNotMatchObjectWithoutEnumerator
+- (void) testDescribeMismatch
 {
-    assertDoesNotMatch(@"should not match object without enumerator",
-                       containsInAnyOrder(@"a", nil), [[[NSObject alloc] init] autorelease]);
+    assertDescribeMismatch(@"not matched: \"c\"",
+                           (containsInAnyOrder(@"a", @"b", nil)),
+                           ([NSArray arrayWithObjects:@"a", @"c", nil]));
 }
 
 @end

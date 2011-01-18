@@ -23,6 +23,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 /**
     Matches a collection if its elements, in any order, satisfy a list of matchers.

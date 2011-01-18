@@ -60,7 +60,7 @@
     if ([matchers count] == 0)
         return YES;
     
-    [[[[mismatchDescription appendText:@"No item matches: "]
+    [[[[mismatchDescription appendText:@"no item matches: "]
                             appendList:matchers start:@"" separator:@", " end:@""]
                             appendText:@" in "]
                             appendList:collection start:@"[" separator:@", " end:@"]"];
@@ -72,7 +72,7 @@
 {
     if ([matchers count] == 0)
     {
-        [[mismatchDescription appendText:@"Not matched: "] appendDescriptionOf:item];
+        [[mismatchDescription appendText:@"not matched: "] appendDescriptionOf:item];
         return NO;
     }
     return YES;
@@ -91,12 +91,13 @@
         }
         ++index;
     }
-    [[mismatchDescription appendText:@"Not matched: "] appendDescriptionOf:item];
+    [[mismatchDescription appendText:@"not matched: "] appendDescriptionOf:item];
     return NO;
 }
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 @implementation HCIsCollectionContainingInAnyOrder
 
@@ -118,7 +119,6 @@
 - (void) dealloc
 {
     [matchers release];
-    
     [super dealloc];
 }
 
@@ -154,13 +154,14 @@
 
 - (void) describeTo:(id<HCDescription>)description
 {
-    [[[description appendText:@"collection over "]
+    [[[description appendText:@"a collection over "]
                    appendList:matchers start:@"[" separator:@", " end:@"]"]
                    appendText:@" in any order"];
 }
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_containsInAnyOrder(id items, ...)
 {

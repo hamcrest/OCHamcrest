@@ -60,7 +60,7 @@
 {
     if (nextMatchIndex < [matchers count])
     {
-        [[mismatchDescription appendText:@"No item matched: "]
+        [[mismatchDescription appendText:@"no item matched: "]
                               appendDescriptionOf:[matchers objectAtIndex:nextMatchIndex]];
         return NO;
     }
@@ -85,7 +85,7 @@
 {
     if ([matchers count] <= nextMatchIndex)
     {
-        [[mismatchDescription appendText:@"Not matched: "] appendDescriptionOf:item];
+        [[mismatchDescription appendText:@"not matched: "] appendDescriptionOf:item];
         return NO;
     }
     return YES;
@@ -101,6 +101,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 @implementation HCIsCollectionContainingInOrder
 
@@ -122,7 +123,6 @@
 - (void) dealloc
 {
     [matchers release];
-    
     [super dealloc];
 }
 
@@ -158,12 +158,13 @@
 
 - (void) describeTo:(id<HCDescription>)description
 {
-    [[description appendText:@"collection containing "]
+    [[description appendText:@"a collection containing "]
                     appendList:matchers start:@"[" separator:@", " end:@"]"];
 }
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_contains(id items, ...)
 {

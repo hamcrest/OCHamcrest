@@ -26,6 +26,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 /**
     Matches collections that only contain elements satisfying any of a list of matchers.

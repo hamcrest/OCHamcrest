@@ -5,13 +5,16 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsCollectionContainingInOrder.h>
+
+    // Other OCHamcrest
 #import <OCHamcrest/HCIsEqual.h>
+
+    // Test support
+#import "AbstractMatcherTest.h"
+
 
 
 @interface IsCollectionContainingInOrderTest : AbstractMatcherTest
@@ -50,7 +53,7 @@
 
 - (void) testDoesNotMatchWithMoreElementsThanExpected
 {
-    assertMismatchDescription(@"Not matched: \"d\"",
+    assertMismatchDescription(@"not matched: \"d\"",
                               (contains(@"a", @"b", @"c", nil)),
                               ([NSArray arrayWithObjects:@"a", @"b", @"c", @"d", nil]));
 }
@@ -58,7 +61,7 @@
 
 - (void) testDoesNotMatchWithFewerElementsThanExpected
 {
-    assertMismatchDescription(@"No item matched: \"c\"",
+    assertMismatchDescription(@"no item matched: \"c\"",
                               (contains(@"a", @"b", @"c", nil)),
                               ([NSArray arrayWithObjects:@"a", @"b", nil]));
 }
@@ -87,7 +90,20 @@
 
 - (void) testDoesNotMatchEmptyCollection
 {
-    assertMismatchDescription(@"No item matched: \"d\"", (contains(@"d", nil)), [NSArray array]);
+    assertMismatchDescription(@"no item matched: \"d\"", (contains(@"d", nil)), [NSArray array]);
+}
+
+
+- (void) testDoesNotMatchObjectWithoutEnumerator
+{
+    assertDoesNotMatch(@"should not match object without enumerator",
+                       contains(@"a", nil), [[[NSObject alloc] init] autorelease]);
+}
+
+
+- (void) testHasAReadableDescription
+{
+    assertDescription(@"a collection containing [\"a\", \"b\"]", contains(@"a", @"b", nil));
 }
 
 
@@ -96,18 +112,6 @@
     assertDescribeMismatch(@"item 1: was \"c\"",
                            (contains(@"a", @"b", nil)),
                            ([NSArray arrayWithObjects:@"a", @"c", nil]));
-}
-
-- (void) testHasAReadableDescription
-{
-    assertDescription(@"collection containing [\"a\", \"b\"]", contains(@"a", @"b", nil));
-}
-
-
-- (void) testDoesNotMatchObjectWithoutEnumerator
-{
-    assertDoesNotMatch(@"should not match object without enumerator",
-                       contains(@"a", nil), [[[NSObject alloc] init] autorelease]);
 }
 
 @end

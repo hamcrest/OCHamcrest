@@ -35,7 +35,6 @@
 - (void) dealloc
 {
     [elementMatcher release];
-    
     [super dealloc];
 }
 
@@ -62,6 +61,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_hasItem(id item)
 {
