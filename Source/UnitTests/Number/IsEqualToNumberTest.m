@@ -5,13 +5,15 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Module under test
 #define HC_SHORTHAND
-#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCIsEqualToNumber.h>
+
+    // Other OCHamcrest
+#import <OCHamcrest/HCAssertThat.h>
+
+    // Test Support
+#import "AbstractMatcherTest.h"
 
 
 @interface IsEqualToBoolTest : AbstractMatcherTest

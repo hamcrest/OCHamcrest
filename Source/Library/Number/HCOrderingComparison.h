@@ -14,15 +14,18 @@
     id expected;
     NSComparisonResult minCompare;
     NSComparisonResult maxCompare;
+    NSString* comparisonDescription;
 }
 
 + (id) compare:(id)expectedValue
     minCompare:(NSComparisonResult)min
-    maxCompare:(NSComparisonResult)max;
+    maxCompare:(NSComparisonResult)max
+    comparisonDescription:(NSString*)comparisonDescription;
 
 - (id) initComparing:(id)expectedValue
           minCompare:(NSComparisonResult)min
-          maxCompare:(NSComparisonResult)max;
+          maxCompare:(NSComparisonResult)max
+          comparisonDescription:(NSString*)comparisonDescription;
 
 @end
 
