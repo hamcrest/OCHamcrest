@@ -10,29 +10,29 @@
 
 
 /**
-    Is the value a number equal to a value within some range of acceptable error?
+    Is the argument a number close to a value, within some delta?
     @ingroup number_matchers
  */
 @interface HCIsCloseTo : HCBaseMatcher
 {
     double value;
-    double error;
+    double delta;
 }
 
-+ (id) isCloseTo:(double)aValue within:(double)anError;
-- (id) initWithValue:(double)aValue error:(double)anError;
++ (id) isCloseTo:(double)aValue within:(double)aDelta;
+- (id) initWithValue:(double)aValue delta:(double)aDelta;
 
 @end
 
 
 /**
-    Is the value a number equal to a value within some range of acceptable error?
+    Is the argument a number close to a value, within some delta?
  
     @b Synonym: @ref closeTo
     @see HCIsCloseTo
     @ingroup number_matchers
 */
-OBJC_EXPORT id<HCMatcher> HC_closeTo(double aValue, double anError);
+OBJC_EXPORT id<HCMatcher> HC_closeTo(double aValue, double aDelta);
 
 /**
     Synonym for @ref HC_closeTo, available if @c HC_SHORTHAND is defined.

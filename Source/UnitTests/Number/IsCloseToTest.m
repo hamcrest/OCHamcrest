@@ -29,13 +29,21 @@
 {
     id<HCMatcher> p = closeTo(1.0, 0.5);
     
-    STAssertTrue([p matches:[NSNumber numberWithDouble:1.0]], nil);
-    STAssertTrue([p matches:[NSNumber numberWithDouble:0.5]], nil);
-    STAssertTrue([p matches:[NSNumber numberWithDouble:1.5]], nil);
+    assertMatches(@"equal", p, [NSNumber numberWithDouble:1.0]);
+    assertMatches(@"less but within delta", p, [NSNumber numberWithDouble:0.5]);
+    assertMatches(@"greater but within delta", p, [NSNumber numberWithDouble:1.5]);
+    
+    assertDoesNotMatch(@"too small", p, [NSNumber numberWithDouble:0.4]);
+    assertDoesNotMatch(@"too big", p, [NSNumber numberWithDouble:1.6]);
+}
 
-    STAssertFalse([p matches:[NSNumber numberWithDouble:2.0]], @"number too large");
-    STAssertFalse([p matches:[NSNumber numberWithDouble:2.0]], @"number too large");
-    STAssertFalse([p matches:@"a"], @"not a number");
+
+- (void) testFailsIfMatchingAgainstNonNumber
+{
+    id<HCMatcher> p = closeTo(1.0, 0.5);
+    
+    assertDoesNotMatch(@"not a number", p, @"a");
+    assertDoesNotMatch(@"not a number", p, nil);
 }
 
 
@@ -45,12 +53,35 @@
 }
 
 
-- (void) testFailsIfMatchingAgainstNonNumber
+- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    id<HCMatcher> p = closeTo(1.0, 0.5);
-    
-    STAssertFalse([p matches:@"a"], @"not a number");
-    STAssertFalse([p matches:nil], @"not a number");
+    assertNoMismatchDescription(closeTo(1.0, 0.5), ([NSNumber numberWithDouble:1.0]));
+}
+
+
+- (void) testMismatchDescriptionShowsActualDeltaIfArgumentIsNumeric
+{
+    assertMismatchDescription(@"<1.7> differed by <0.7>",
+                              (closeTo(1.0, 0.5)), [NSNumber numberWithDouble:1.7]);
+}
+
+
+- (void) testMismatchDescriptionShowsActualArgumentIfNotNumeric
+{
+    assertMismatchDescription(@"was \"bad\"", (closeTo(1.0, 0.5)), @"bad");
+}
+
+
+- (void) testDescribeMismatchShowsActualDeltaIfArgumentIsNumeric
+{
+    assertDescribeMismatch(@"<1.7> differed by <0.7>",
+                           (closeTo(1.0, 0.5)), [NSNumber numberWithDouble:1.7]);
+}
+
+
+- (void) testDescribeMismatchShowsActualArgumentIfNotNumeric
+{
+    assertDescribeMismatch(@"was \"bad\"", (closeTo(1.0, 0.5)), @"bad");
 }
 
 @end
