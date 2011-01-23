@@ -23,6 +23,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 /**
     Tests if a string is equal to another string, regardless of the case.

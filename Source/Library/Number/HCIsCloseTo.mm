@@ -69,6 +69,7 @@ using namespace std;
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_closeTo(double aValue, double anError)
 {

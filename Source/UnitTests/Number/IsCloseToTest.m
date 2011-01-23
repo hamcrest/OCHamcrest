@@ -27,23 +27,23 @@
 
 - (void) testEvaluatesToTrueIfArgumentIsEqualToADoubleValueWithinSomeError
 {
-    id<HCMatcher> p = closeTo(1.0, 0.5);
+    id<HCMatcher> matcher = closeTo(1.0, 0.5);
     
-    assertMatches(@"equal", p, [NSNumber numberWithDouble:1.0]);
-    assertMatches(@"less but within delta", p, [NSNumber numberWithDouble:0.5]);
-    assertMatches(@"greater but within delta", p, [NSNumber numberWithDouble:1.5]);
+    assertMatches(@"equal", matcher, [NSNumber numberWithDouble:1.0]);
+    assertMatches(@"less but within delta", matcher, [NSNumber numberWithDouble:0.5]);
+    assertMatches(@"greater but within delta", matcher, [NSNumber numberWithDouble:1.5]);
     
-    assertDoesNotMatch(@"too small", p, [NSNumber numberWithDouble:0.4]);
-    assertDoesNotMatch(@"too big", p, [NSNumber numberWithDouble:1.6]);
+    assertDoesNotMatch(@"too small", matcher, [NSNumber numberWithDouble:0.4]);
+    assertDoesNotMatch(@"too big", matcher, [NSNumber numberWithDouble:1.6]);
 }
 
 
 - (void) testFailsIfMatchingAgainstNonNumber
 {
-    id<HCMatcher> p = closeTo(1.0, 0.5);
+    id<HCMatcher> matcher = closeTo(1.0, 0.5);
     
-    assertDoesNotMatch(@"not a number", p, @"a");
-    assertDoesNotMatch(@"not a number", p, nil);
+    assertDoesNotMatch(@"not a number", matcher, @"a");
+    assertDoesNotMatch(@"not a number", matcher, nil);
 }
 
 

@@ -5,14 +5,12 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #define HC_SHORTHAND
-#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCIsEqualIgnoringWhiteSpace.h>
-#import <OCHamcrest/HCIsNot.h>
+
+    // Test support
+#import "AbstractMatcherTest.h"
 
 
 @interface IsEqualIgnoringWhiteSpaceTest : AbstractMatcherTest
@@ -43,41 +41,60 @@
 
 - (void) testPassesIfWordsAreSameButWhitespaceDiffers
 {
-    assertThat(@"Hello World how are we?", matcher);
-    assertThat(@"   Hello World   how are \n\n\twe?", matcher);
+    assertMatches(@"less whitespace", matcher, @"Hello World how are we?");
+    assertMatches(@"more whitespace", matcher, @"   Hello World   how are \n\n\twe?");
 }
 
 
 - (void) testFailsIfTextOtherThanWhitespaceDiffers
 {
-    assertThat(@"Hello PLANET how are we?", isNot(matcher));
-    assertThat(@"Hello World how are we", isNot(matcher));
+    assertDoesNotMatch(@"wrong word", matcher, @"Hello PLANET how are we?");
+    assertDoesNotMatch(@"incomplete", matcher, @"Hello World how are we");
 }
 
 
 - (void) testFailsIfWhitespaceIsAddedOrRemovedInMidWord
 {
-    assertThat(@"HelloWorld how are we?", isNot(matcher));
-    assertThat(@"Hello Wo rld how are we?", isNot(matcher));
-}
-
-
-- (void) testFailsIfMatchingAgainstNil
-{
-    assertThat(nil, isNot(matcher));
+    assertDoesNotMatch(@"need whitespace between Hello and World",
+                       matcher, @"HelloWorld how are we?");
+    assertDoesNotMatch(@"wrong whitespace within World",
+                       matcher, @"Hello Wo rld how are we?");
 }
 
 
 - (void) testMatcherCreationRequiresNonNilArgument
 {    
-    STAssertThrows(equalToIgnoringWhiteSpace(nil), @"should require non-nil argument");
+    STAssertThrows(equalToIgnoringWhiteSpace(nil), @"must not be nil");
+}
+
+
+- (void) testFailsIfMatchingAgainstNonString
+{
+    assertDoesNotMatch(@"non-string", matcher, [NSNumber numberWithInt:3]);
 }
 
 
 - (void) testHasAReadableDescription
 {
-    assertDescription(@"equalToIgnoringWhiteSpace(\"Hello World   how\\n are we? \")",
-                        matcher);
+    assertDescription(@"\"Hello World   how\\n are we? \" ignoring whitespace", matcher);
+}
+
+
+- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+{
+    assertNoMismatchDescription(equalToIgnoringWhiteSpace(@"foo\nbar"), @"foo bar");
+}
+
+
+- (void) testMismatchDescriptionShowsActualArgument
+{
+    assertMismatchDescription(@"was \"bad\"", matcher, @"bad");
+}
+
+
+- (void) testDescribeMismatch
+{
+    assertDescribeMismatch(@"was \"bad\"", matcher, @"bad");
 }
 
 @end

@@ -35,7 +35,6 @@
 - (void) dealloc
 {
     [string release];
-    
     [super dealloc];
 }
 
@@ -51,13 +50,13 @@
 
 - (void) describeTo:(id<HCDescription>)description
 {
-    [[[description appendText:@"equalToIgnoringCase("]
-                   appendDescriptionOf:string]
-                   appendText:@")"];
+    [[description appendDescriptionOf:string]
+                  appendText:@" ignoring case"];
 }
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString* string)
 {

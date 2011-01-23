@@ -58,6 +58,7 @@ NSMutableString* stripSpace(NSString* string)
 
 }   // namespace
 
+//--------------------------------------------------------------------------------------------------
 
 @implementation HCIsEqualIgnoringWhiteSpace
 
@@ -101,13 +102,13 @@ NSMutableString* stripSpace(NSString* string)
 
 - (void) describeTo:(id<HCDescription>)description
 {
-    [[[description appendText:@"equalToIgnoringWhiteSpace("]
-                    appendDescriptionOf:originalString]
-                    appendText:@")"];
+    [[description appendDescriptionOf:originalString]
+                  appendText:@" ignoring whitespace"];
 }
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString* string)
 {
