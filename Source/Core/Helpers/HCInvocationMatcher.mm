@@ -80,7 +80,7 @@
 - (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     if (![item respondsToSelector:[invocation selector]])
-        [[mismatchDescription appendText:@"was "] appendDescriptionOf:item];
+        [super describeMismatchOf:item to:mismatchDescription];
     else
     {
         if (!shortMismatchDescription)

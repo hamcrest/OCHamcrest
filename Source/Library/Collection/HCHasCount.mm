@@ -49,7 +49,8 @@
 
 - (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
-    [[mismatchDescription appendText:@"was "] appendDescriptionOf:item];
+    [super describeMismatchOf:item to:mismatchDescription];
+    
     if ([item respondsToSelector:@selector(count)])
     {
         NSNumber* count = [NSNumber numberWithUnsignedInteger:[item count]];
