@@ -93,4 +93,10 @@
     assertDescribeMismatch(@"was \"bad\"", (onlyContains(@"a", @"b", nil)), @"bad");
 }
 
+
+- (void) testDescribeMismatchOfNonCollection
+{
+    assertDescribeMismatch(@"was nil", (onlyContains(@"a", @"b", nil)), nil);
+}
+
 @end

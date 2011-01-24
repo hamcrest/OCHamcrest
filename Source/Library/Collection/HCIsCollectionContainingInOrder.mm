@@ -136,7 +136,10 @@
 - (BOOL) matches:(id)collection describingMismatchTo:(id<HCDescription, NSObject>)mismatchDescription
 {
     if (![collection conformsToProtocol:@protocol(NSFastEnumeration)])
+    {
+        [super describeMismatchOf:collection to:mismatchDescription];
         return NO;
+    }
     
     HCMatchSequence *matchSequence =
         [[[HCMatchSequence alloc] initWithMatchers:matchers

@@ -116,4 +116,10 @@
                            ([NSArray arrayWithObjects:@"a", @"c", nil]));
 }
 
+
+- (void) testDescribeMismatchOfNonCollection
+{
+    assertDescribeMismatch(@"was nil", (containsInAnyOrder(@"a", @"b", nil)), nil);
+}
+
 @end

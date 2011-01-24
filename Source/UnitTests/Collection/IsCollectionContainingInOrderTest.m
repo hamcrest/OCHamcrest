@@ -114,4 +114,10 @@
                            ([NSArray arrayWithObjects:@"a", @"c", nil]));
 }
 
+
+- (void) testDescribeMismatchOfNonCollection
+{
+    assertDescribeMismatch(@"was nil", (contains(@"a", @"b", nil)), nil);
+}
+
 @end
