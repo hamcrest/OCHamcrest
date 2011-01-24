@@ -19,6 +19,7 @@
 }
 @end
 
+
 @implementation IsEqualIgnoringCaseTest
 
 - (void) setUp
@@ -58,7 +59,7 @@
 
 - (void) testMatcherCreationRequiresNonNilArgument
 {
-    STAssertThrows(equalToIgnoringCase(nil), @"must not be nil");
+    STAssertThrows(equalToIgnoringCase(nil), @"Should require non-nil argument");
 }
 
 

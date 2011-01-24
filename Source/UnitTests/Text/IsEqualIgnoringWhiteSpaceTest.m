@@ -19,6 +19,7 @@
 }
 @end
 
+
 @implementation IsEqualIgnoringWhiteSpaceTest
 
 - (void) setUp
@@ -64,7 +65,7 @@
 
 - (void) testMatcherCreationRequiresNonNilArgument
 {    
-    STAssertThrows(equalToIgnoringWhiteSpace(nil), @"must not be nil");
+    STAssertThrows(equalToIgnoringWhiteSpace(nil), @"Should require non-nil argument");
 }
 
 

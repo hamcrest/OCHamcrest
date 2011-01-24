@@ -19,6 +19,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 /**
     Tests if the argument is a string that contains a substring.

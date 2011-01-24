@@ -28,10 +28,6 @@
     return [item rangeOfString:substring].location != NSNotFound;
 }
 
-@end
-
-
-@implementation HCStringContains (SubclassResponsibility)
 
 - (NSString*) relationship
 {
@@ -40,6 +36,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_containsString(NSString* aSubstring)
 {

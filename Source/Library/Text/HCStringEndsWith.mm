@@ -28,10 +28,6 @@
     return [item hasSuffix:substring];
 }
 
-@end
-
-
-@implementation HCStringEndsWith (SubclassResponsibility)
 
 - (NSString*) relationship
 {
@@ -40,6 +36,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString* aSubstring)
 {

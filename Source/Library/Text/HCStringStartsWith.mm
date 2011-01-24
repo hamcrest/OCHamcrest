@@ -28,10 +28,6 @@
     return [item hasPrefix:substring];
 }
 
-@end
-
-
-@implementation HCStringStartsWith (SubclassResponsibility)
 
 - (NSString*) relationship
 {
@@ -40,6 +36,7 @@
 
 @end
 
+//--------------------------------------------------------------------------------------------------
 
 OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString* aSubstring)
 {
