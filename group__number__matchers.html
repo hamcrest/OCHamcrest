@@ -40,7 +40,7 @@
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_close_to.html">HCIsCloseTo</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the value a number equal to a value within some range of acceptable error?  <a href="interface_h_c_is_close_to.html#_details">More...</a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the argument a number close to a value, within some delta?  <a href="interface_h_c_is_close_to.html#_details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="groups"></a>
 Modules</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__primitive__number__matchers.html">Primitive Number Matchers</a></td></tr>
@@ -51,7 +51,7 @@ Modules</h2></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__number__matchers.html#ga9adbce4e7c9b6cd16eac1a1e2d77450d">closeTo</a>&nbsp;&nbsp;&nbsp;HC_closeTo</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__number__matchers.html#gabe3cad0d0a54b374a3f45f130637dbe8">HC_closeTo</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga9adbce4e7c9b6cd16eac1a1e2d77450d"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__number__matchers.html#ga8719606cd3aa101875e21cbb4b6d5606">HC_closeTo</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga9adbce4e7c9b6cd16eac1a1e2d77450d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__number__matchers.html#ga7c5f431d6a8a2519701dfbdb61234b34">greaterThan</a>&nbsp;&nbsp;&nbsp;HC_greaterThan</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__number__matchers.html#gad6508dc056619dc1a3fe70372e13ac0e">HC_greaterThan</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga7c5f431d6a8a2519701dfbdb61234b34"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__number__matchers.html#ga301c155b9c48f70c31ed11e660bb5b43">greaterThanOrEqualTo</a>&nbsp;&nbsp;&nbsp;HC_greaterThanOrEqualTo</td></tr>
@@ -65,8 +65,8 @@ Functions</h2></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">NSNumber *&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__number__matchers.html#gae219bd0d3aa655b278f5efc3d2c70c33">hamcrest::boxNumber</a> (T value)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Boxes scalar value in NSNumber, specialized per type.  <a href="#gae219bd0d3aa655b278f5efc3d2c70c33"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__number__matchers.html#gabe3cad0d0a54b374a3f45f130637dbe8">HC_closeTo</a> (double aValue, double anError)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the value a number equal to a value within some range of acceptable error?  <a href="#gabe3cad0d0a54b374a3f45f130637dbe8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__number__matchers.html#ga8719606cd3aa101875e21cbb4b6d5606">HC_closeTo</a> (double aValue, double aDelta)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the argument a number close to a value, within some delta?  <a href="#ga8719606cd3aa101875e21cbb4b6d5606"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__number__matchers.html#gad6508dc056619dc1a3fe70372e13ac0e">HC_greaterThan</a> (id expected)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is value &gt; expected? <b>Synonym:</b> <a class="el" href="group__number__matchers.html#ga7c5f431d6a8a2519701dfbdb61234b34">greaterThan</a>.  <a href="#gad6508dc056619dc1a3fe70372e13ac0e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__number__matchers.html#ga1bfefec519f2fdc66a587a33e04e9e53">HC_greaterThanOrEqualTo</a> (id expected)</td></tr>
@@ -90,7 +90,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Synonym for <a class="el" href="group__number__matchers.html#gabe3cad0d0a54b374a3f45f130637dbe8">HC_closeTo</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<p>Synonym for <a class="el" href="group__number__matchers.html#ga8719606cd3aa101875e21cbb4b6d5606">HC_closeTo</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
 
 </div>
 </div>
@@ -177,7 +177,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="gabe3cad0d0a54b374a3f45f130637dbe8"></a><!-- doxytag: member="HCIsCloseTo.h::HC_closeTo" ref="gabe3cad0d0a54b374a3f45f130637dbe8" args="(double aValue, double anError)" -->
+<a class="anchor" id="ga8719606cd3aa101875e21cbb4b6d5606"></a><!-- doxytag: member="HCIsCloseTo.h::HC_closeTo" ref="ga8719606cd3aa101875e21cbb4b6d5606" args="(double aValue, double aDelta)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -191,7 +191,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&nbsp;</td>
-          <td class="paramname"> <em>anError</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>aDelta</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -202,9 +202,9 @@ template&lt;typename T &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Is the value a number equal to a value within some range of acceptable error? </p>
+<p>Is the argument a number close to a value, within some delta? </p>
 <p><b>Synonym:</b> <a class="el" href="group__number__matchers.html#ga9adbce4e7c9b6cd16eac1a1e2d77450d">closeTo</a> </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_close_to.html" title="Is the value a number equal to a value within some range of acceptable error?">HCIsCloseTo</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_close_to.html" title="Is the argument a number close to a value, within some delta?">HCIsCloseTo</a> </dd></dl>
 
 </div>
 </div>
@@ -289,7 +289,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Jan 3 2011 20:40:15 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 15:08:58 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

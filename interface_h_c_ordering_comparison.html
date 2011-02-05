@@ -43,18 +43,19 @@
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">(id)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_h_c_ordering_comparison.html#a6961264097eb5cfbd491a5360aaf1c83">initComparing:minCompare:maxCompare:</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(id)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_h_c_ordering_comparison.html#ab83526c686c70c5d003bf1eed42737c5">initComparing:minCompare:maxCompare:comparisonDescription:</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">(id)&nbsp;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_h_c_ordering_comparison.html#a29b97121088dfa55cc9d870ad39640ab">compare:minCompare:maxCompare:</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(id)&nbsp;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_h_c_ordering_comparison.html#a0de48a388952154adcbd68b54604badd">compare:minCompare:maxCompare:comparisonDescription:</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_ordering_comparison.html#afef94ae75bf58ba2310902044ecc6657">expected</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NSComparisonResult&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_ordering_comparison.html#a8c3f81ed111f1517b8d68acd031e5884">minCompare</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NSComparisonResult&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_ordering_comparison.html#a9b2395669b9f6141c72323bd5b85a926">maxCompare</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">NSString *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_ordering_comparison.html#a38fd32a64f13a88f0e055d0028f73adf">comparisonDescription</a></td></tr>
 </table>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a29b97121088dfa55cc9d870ad39640ab"></a><!-- doxytag: member="HCOrderingComparison::compare:minCompare:maxCompare:" ref="a29b97121088dfa55cc9d870ad39640ab" args="(id expectedValue,[minCompare] NSComparisonResult min,[maxCompare] NSComparisonResult max)" -->
+<a class="anchor" id="a0de48a388952154adcbd68b54604badd"></a><!-- doxytag: member="HCOrderingComparison::compare:minCompare:maxCompare:comparisonDescription:" ref="a0de48a388952154adcbd68b54604badd" args="(id expectedValue,[minCompare] NSComparisonResult min,[maxCompare] NSComparisonResult max,[comparisonDescription] NSString *comparisonDescription)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -74,7 +75,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey">maxCompare:</td>
           <td></td>
           <td class="paramtype">(NSComparisonResult)&nbsp;</td>
-          <td class="paramname"> <em>max</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>max</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">comparisonDescription:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&nbsp;</td>
+          <td class="paramname"> <em>comparisonDescription</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -87,7 +94,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6961264097eb5cfbd491a5360aaf1c83"></a><!-- doxytag: member="HCOrderingComparison::initComparing:minCompare:maxCompare:" ref="a6961264097eb5cfbd491a5360aaf1c83" args="(id expectedValue,[minCompare] NSComparisonResult min,[maxCompare] NSComparisonResult max)" -->
+<a class="anchor" id="ab83526c686c70c5d003bf1eed42737c5"></a><!-- doxytag: member="HCOrderingComparison::initComparing:minCompare:maxCompare:comparisonDescription:" ref="ab83526c686c70c5d003bf1eed42737c5" args="(id expectedValue,[minCompare] NSComparisonResult min,[maxCompare] NSComparisonResult max,[comparisonDescription] NSString *comparisonDescription)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -107,7 +114,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey">maxCompare:</td>
           <td></td>
           <td class="paramtype">(NSComparisonResult)&nbsp;</td>
-          <td class="paramname"> <em>max</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>max</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">comparisonDescription:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&nbsp;</td>
+          <td class="paramname"> <em>comparisonDescription</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -121,6 +134,19 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a38fd32a64f13a88f0e055d0028f73adf"></a><!-- doxytag: member="HCOrderingComparison::comparisonDescription" ref="a38fd32a64f13a88f0e055d0028f73adf" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString*) <a class="el" href="interface_h_c_ordering_comparison.html#a38fd32a64f13a88f0e055d0028f73adf">comparisonDescription</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="afef94ae75bf58ba2310902044ecc6657"></a><!-- doxytag: member="HCOrderingComparison::expected" ref="afef94ae75bf58ba2310902044ecc6657" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -161,7 +187,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Jan 3 2011 20:40:15 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 15:08:59 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

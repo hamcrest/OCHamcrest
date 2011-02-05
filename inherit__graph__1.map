@@ -9,7 +9,7 @@
 <area shape="rect" href="$interface_h_c_invocation_matcher.html" title="Supporting class for matching a feature of an object." alt="" coords="540,208,681,235" />
 <area shape="rect" href="$interface_h_c_is.html" title="Decorates another HCMatcher, retaining the behavior but allowing tests to be slightly more expressive..." alt="" coords="587,259,635,285" />
 <area shape="rect" href="$interface_h_c_is_anything.html" title="A matcher that always returns YES." alt="" coords="561,309,660,336" />
-<area shape="rect" href="$interface_h_c_is_close_to.html" title="Is the value a number equal to a value within some range of acceptable error?" alt="" coords="564,360,657,387" />
+<area shape="rect" href="$interface_h_c_is_close_to.html" title="Is the argument a number close to a value, within some delta?" alt="" coords="564,360,657,387" />
 <area shape="rect" href="$interface_h_c_is_collection_containing.html" title="Matches a collection if any element satisfies a given matcher." alt="" coords="529,411,692,437" />
 <area shape="rect" href="$interface_h_c_is_collection_containing_in_any_order.html" title="Matches a collection if its elements, in any order, satisfy a list of matchers." alt="" coords="496,461,725,488" />
 <area shape="rect" href="$interface_h_c_is_collection_containing_in_order.html" title="Matches a collection if its elements, in order, satisfy a list of matchers." alt="" coords="508,512,713,539" />
