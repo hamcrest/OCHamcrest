@@ -18,13 +18,13 @@ using namespace std;
 
 @implementation HCIsCloseTo
 
-+ (id) isCloseTo:(double)aValue within:(double)aDelta
++ (id)isCloseTo:(double)aValue within:(double)aDelta
 {
     return [[[self alloc] initWithValue:aValue delta:aDelta] autorelease];
 }
 
 
-- (id) initWithValue:(double)aValue delta:(double)aDelta
+- (id)initWithValue:(double)aValue delta:(double)aDelta
 {
     self = [super init];
     if (self != nil)
@@ -36,7 +36,7 @@ using namespace std;
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     if (![item isKindOfClass:[NSNumber class]])
         return NO;
@@ -45,7 +45,7 @@ using namespace std;
 }
 
 
-- (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     if (![item isKindOfClass:[NSNumber class]])
         [super describeMismatchOf:item to:mismatchDescription];
@@ -59,7 +59,7 @@ using namespace std;
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[[[description appendText:@"a numeric value within "]
                     appendDescriptionOf:[NSNumber numberWithDouble:delta]]

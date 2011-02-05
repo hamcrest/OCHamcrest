@@ -18,8 +18,8 @@
     Class theClass;
 }
 
-+ (id) isInstanceOf:(Class)type;
-- (id) initWithType:(Class)type;
++ (id)isInstanceOf:(Class)type;
+- (id)initWithType:(Class)type;
 
 @end
 

@@ -15,13 +15,13 @@
 
 @implementation HCIsInstanceOf
 
-+ (id) isInstanceOf:(Class)type
++ (id)isInstanceOf:(Class)type
 {
     return [[[self alloc] initWithType:type] autorelease];
 }
 
 
-- (id) initWithType:(Class)type
+- (id)initWithType:(Class)type
 {
     HCRequireNonNilObject(type);
 
@@ -32,16 +32,16 @@
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     return [item isKindOfClass:theClass];
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"an instance of "]
-                    appendText:NSStringFromClass(theClass)];
+                  appendText:NSStringFromClass(theClass)];
 }
 
 @end

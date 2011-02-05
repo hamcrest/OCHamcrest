@@ -18,15 +18,15 @@
 
 @implementation IsInstanceOfTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return instanceOf([NSNumber class]);
 }
 
 
-- (void) testEvaluatesToTrueIfArgumentIsInstanceOfASpecificClass
+- (void)testEvaluatesToTrueIfArgumentIsInstanceOfASpecificClass
 {
-    NSNumber* number = [NSNumber numberWithInt:1];
+    NSNumber *number = [NSNumber numberWithInt:1];
     
     assertMatches(@"same class", instanceOf([NSNumber class]), number);
     assertMatches(@"subclass", instanceOf([NSValue class]), number);
@@ -36,31 +36,31 @@
 }
 
 
-- (void) testMatcherCreationRequiresNonNilArgument
+- (void)testMatcherCreationRequiresNonNilArgument
 {
     STAssertThrows(instanceOf(nil), @"Should require non-nil argument");
 }
 
 
-- (void) testHasAReadableDescription
+- (void)testHasAReadableDescription
 {
     assertDescription(@"an instance of NSNumber", instanceOf([NSNumber class]));
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(instanceOf([NSString class]), @"hi");
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", instanceOf([NSNumber class]), @"bad");
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", instanceOf([NSNumber class]), @"bad");
 }

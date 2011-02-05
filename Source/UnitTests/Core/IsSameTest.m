@@ -21,13 +21,13 @@
 
 @implementation IsSameTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return sameInstance(@"irrelevant");
 }
 
 
-- (void) testEvaluatesToTrueIfArgumentIsReferenceToASpecifiedObject
+- (void)testEvaluatesToTrueIfArgumentIsReferenceToASpecifiedObject
 {
     id o1 = [[[NSObject alloc] init] autorelease];
     id o2 = [[[NSObject alloc] init] autorelease];
@@ -37,7 +37,7 @@
 }
 
 
-- (void) testDoesNotMatchEqualObjects
+- (void)testDoesNotMatchEqualObjects
 {
     NSString *string1 = @"foobar";
     NSString *string2 = [@"foo" stringByAppendingString:@"bar"];
@@ -46,9 +46,9 @@
 }
 
 
-- (void) testDescriptionIncludesMemoryAddress
+- (void)testDescriptionIncludesMemoryAddress
 {
-    HCStringDescription* description = [HCStringDescription stringDescription];
+    HCStringDescription *description = [HCStringDescription stringDescription];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES 'same instance as 0x[0-9a-fA-F]+ \"abc\"'"];
     
@@ -57,17 +57,17 @@
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     id o1 = [[[NSObject alloc] init] autorelease];
     assertNoMismatchDescription(sameInstance(o1), o1);
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgumentAddress
+- (void)testMismatchDescriptionShowsActualArgumentAddress
 {
     id<HCMatcher> matcher = sameInstance(@"foo");
-    HCStringDescription* description = [HCStringDescription stringDescription];
+    HCStringDescription *description = [HCStringDescription stringDescription];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES 'was 0x[0-9a-fA-F]+ \"hi\"'"];
     
@@ -77,10 +77,10 @@
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     id<HCMatcher> matcher = sameInstance(@"foo");
-    HCStringDescription* description = [HCStringDescription stringDescription];
+    HCStringDescription *description = [HCStringDescription stringDescription];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES 'was 0x[0-9a-fA-F]+ \"hi\"'"];
     

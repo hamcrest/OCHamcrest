@@ -22,12 +22,12 @@
 
 @implementation Match
 
-+ (Match*) matches:(id)arg
++ (Match *)matches:(id)arg
 {
     return [[[Match alloc] initEqualTo:arg] autorelease];
 }
 
-- (void) describeMismatchOf:(id)item to:(id<HCDescription>)description
+- (void)describeMismatchOf:(id)item to:(id<HCDescription>)description
 {
     [description appendText:@"MISMATCH"];
 }
@@ -38,14 +38,14 @@
 
 @interface Thingy : NSObject
 {
-    NSString* result;
+    NSString *result;
 }
 @end
 
 
 @implementation Thingy
 
-- (id) initWithResult:(NSString*)aResult
+- (id)initWithResult:(NSString *)aResult
 {
     self = [super init];
     if (self != nil)
@@ -53,23 +53,23 @@
     return self;
 }
 
-- (void) dealloc
+- (void)dealloc
 {
     [result release];
     [super dealloc];
 }
 
-- (NSString*) description
+- (NSString *)description
 {
     return @"Thingy";
 }
 
-- (NSString*) result
+- (NSString *)result
 {
     return result;
 }
 
-+ (Thingy*) thingyWithResult:(NSString*)result
++ (Thingy*) thingyWithResult:(NSString *)result
 {
     return [[[Thingy alloc] initWithResult:result] autorelease];
 }
@@ -83,7 +83,7 @@
 
 @implementation ShouldNotMatch
 
-- (NSString*) description
+- (NSString *)description
 {
     return @"ShouldNotMatch";
 }
@@ -94,16 +94,16 @@
 
 @interface InvocationMatcherTest : AbstractMatcherTest
 {
-    HCInvocationMatcher* resultMatcher;
+    HCInvocationMatcher *resultMatcher;
 }
 @end
 
 
 @implementation InvocationMatcherTest
 
-- (void) setUp
+- (void)setUp
 {
-    NSInvocation* invocation = [HCInvocationMatcher invocationForSelector:@selector(result)
+    NSInvocation *invocation = [HCInvocationMatcher invocationForSelector:@selector(result)
                                                                   onClass:[Thingy class]];
     
     resultMatcher = [[HCInvocationMatcher alloc] initWithInvocation:invocation
@@ -111,27 +111,27 @@
 }
 
 
-- (void) tearDown
+- (void)tearDown
 {
     [resultMatcher release];
 }
 
 
-- (void) testMatchesFeature
+- (void)testMatchesFeature
 {
     assertMatches(@"invoke on Thingy", resultMatcher, [Thingy thingyWithResult:@"bar"]);
     assertDescription(@"object with result \"bar\"", resultMatcher);
 }
 
 
-- (void) testMismatchWithDefaultLongDescription
+- (void)testMismatchWithDefaultLongDescription
 {
     assertMismatchDescription(@"<Thingy> result MISMATCH", resultMatcher,
                               [Thingy thingyWithResult:@"foo"]);
 }
 
 
-- (void) testMismatchWithShortDescription
+- (void)testMismatchWithShortDescription
 {
     [resultMatcher setShortMismatchDescription:YES];
     assertMismatchDescription(@"MISMATCH", resultMatcher,
@@ -139,20 +139,20 @@
 }
 
 
-- (void) testDoesNotMatchNil
+- (void)testDoesNotMatchNil
 {
     assertMismatchDescription(@"was nil", resultMatcher, nil);
 }
 
 
-- (void) testDoesNotMatchObjectWithoutMethod
+- (void)testDoesNotMatchObjectWithoutMethod
 {
     assertDoesNotMatch(@"was <ShouldNotMatch>", resultMatcher,
                        [[[ShouldNotMatch alloc] init] autorelease]);
 }
 
 
-- (void) testObjectWithoutMethodShortDescriptionIsSameAsLongForm
+- (void)testObjectWithoutMethodShortDescriptionIsSameAsLongForm
 {
     [resultMatcher setShortMismatchDescription:YES];
     assertDoesNotMatch(@"was <ShouldNotMatch>", resultMatcher,

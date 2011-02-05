@@ -16,19 +16,20 @@
 
 @interface HCMatchingInAnyOrder : NSObject
 {
-    NSMutableArray* matchers;
+    NSMutableArray *matchers;
     id<HCDescription, NSObject> mismatchDescription;
 }
 
-- (BOOL) isMatched:(id)item;
-- (BOOL) isNotSurplus:(id)item;
+- (BOOL)isMatched:(id)item;
+- (BOOL)isNotSurplus:(id)item;
 
 @end
 
+
 @implementation HCMatchingInAnyOrder
 
-- (id) initWithMatchers:(NSMutableArray *)itemMatchers
-    mismatchDescription:(id<HCDescription, NSObject>)description
+- (id)initWithMatchers:(NSMutableArray *)itemMatchers
+   mismatchDescription:(id<HCDescription, NSObject>)description
 {
     self = [super init];
     if (self != nil)
@@ -40,7 +41,7 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [matchers release];
     [mismatchDescription release];
@@ -49,13 +50,13 @@
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     return [self isNotSurplus:item] && [self isMatched:item];
 }
 
 
-- (BOOL) isFinishedWith:(NSArray*)collection
+- (BOOL)isFinishedWith:(NSArray *)collection
 {
     if ([matchers count] == 0)
         return YES;
@@ -68,7 +69,7 @@
 }
 
 
-- (BOOL) isNotSurplus:(id)item
+- (BOOL)isNotSurplus:(id)item
 {
     if ([matchers count] == 0)
     {
@@ -79,7 +80,7 @@
 }
 
 
-- (BOOL) isMatched:(id)item
+- (BOOL)isMatched:(id)item
 {
     NSUInteger index = 0;
     for (id<HCMatcher> matcher in matchers)
@@ -101,13 +102,13 @@
 
 @implementation HCIsCollectionContainingInAnyOrder
 
-+ (id) isCollectionContainingInAnyOrder:(NSMutableArray*)itemMatchers;
++ (id)isCollectionContainingInAnyOrder:(NSMutableArray *)itemMatchers;
 {
     return [[[self alloc] initWithMatchers:itemMatchers] autorelease];
 }
 
 
-- (id) initWithMatchers:(NSMutableArray*)itemMatchers;
+- (id)initWithMatchers:(NSMutableArray *)itemMatchers;
 {
     self = [super init];
     if (self != nil)
@@ -116,20 +117,20 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [matchers release];
     [super dealloc];
 }
 
 
-- (BOOL) matches:(id)collection
+- (BOOL)matches:(id)collection
 {
     return [self matches:collection describingMismatchTo:nil];
 }
 
 
-- (BOOL) matches:(id)collection describingMismatchTo:(id<HCDescription, NSObject>)mismatchDescription
+- (BOOL)matches:(id)collection describingMismatchTo:(id<HCDescription, NSObject>)mismatchDescription
 {
     if (![collection conformsToProtocol:@protocol(NSFastEnumeration)])
     {
@@ -149,13 +150,13 @@
 }
 
 
-- (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     (void) [self matches:item describingMismatchTo:mismatchDescription];
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[[description appendText:@"a collection over "]
                    appendList:matchers start:@"[" separator:@", " end:@"]"]
@@ -168,7 +169,7 @@
 
 OBJC_EXPORT id<HCMatcher> HC_containsInAnyOrder(id items, ...)
 {
-    NSMutableArray* matchers = [NSMutableArray arrayWithObject:HCWrapInMatcher(items)];
+    NSMutableArray *matchers = [NSMutableArray arrayWithObject:HCWrapInMatcher(items)];
     
     va_list args;
     va_start(args, items);

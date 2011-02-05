@@ -21,19 +21,19 @@
 
 @implementation NumberAssertTest
 
-- (void) setUp
+- (void)setUp
 {
     [self raiseAfterFailure];
 }
 
 
-- (void) testSuccess_withBool
+- (void)testSuccess_withBool
 {
     assertThatBool(YES, equalTo([NSNumber numberWithBool:YES]));
 }
 
 
-- (void) testFailure_withBool
+- (void)testFailure_withBool
 {
     @try
     {
@@ -48,13 +48,13 @@
 }
 
 
-- (void) testSuccess_withChar
+- (void)testSuccess_withChar
 {
     assertThatChar('A', equalTo([NSNumber numberWithChar:'A']));
 }
 
 
-- (void) testFailure_withChar
+- (void)testFailure_withChar
 {
     @try
     {
@@ -69,13 +69,13 @@
 }
 
 
-- (void) testSuccess_withDouble
+- (void)testSuccess_withDouble
 {
     assertThatDouble(1.5, equalTo([NSNumber numberWithDouble:1.5]));
 }
 
 
-- (void) testFailure_withDouble
+- (void)testFailure_withDouble
 {
     @try
     {
@@ -90,13 +90,13 @@
 }
 
 
-- (void) testSuccess_withFloat
+- (void)testSuccess_withFloat
 {
     assertThatFloat(1.5f, equalTo([NSNumber numberWithFloat:1.5f]));
 }
 
 
-- (void) testFailure_withFloat
+- (void)testFailure_withFloat
 {
     @try
     {
@@ -111,13 +111,13 @@
 }
 
 
-- (void) testSuccess_withInt
+- (void)testSuccess_withInt
 {
     assertThatInt(1, equalTo([NSNumber numberWithInt:1]));
 }
 
 
-- (void) testFailure_withInt
+- (void)testFailure_withInt
 {
     @try
     {
@@ -132,13 +132,13 @@
 }
 
 
-- (void) testSuccess_withLong
+- (void)testSuccess_withLong
 {
     assertThatLong(1L, equalTo([NSNumber numberWithLong:1L]));
 }
 
 
-- (void) testFailure_withLong
+- (void)testFailure_withLong
 {
     @try
     {
@@ -153,13 +153,13 @@
 }
 
 
-- (void) testSuccess_withLongLong
+- (void)testSuccess_withLongLong
 {
     assertThatLongLong(1LL, equalTo([NSNumber numberWithLongLong:1LL]));
 }
 
 
-- (void) testFailure_withLongLong
+- (void)testFailure_withLongLong
 {
     @try
     {
@@ -174,13 +174,13 @@
 }
 
 
-- (void) testSuccess_withShort
+- (void)testSuccess_withShort
 {
     assertThatShort(1, equalTo([NSNumber numberWithShort:1]));
 }
 
 
-- (void) testFailure_withShort
+- (void)testFailure_withShort
 {
     @try
     {
@@ -195,13 +195,13 @@
 }
 
 
-- (void) testSuccess_withUnsignedChar
+- (void)testSuccess_withUnsignedChar
 {
     assertThatUnsignedChar('A', equalTo([NSNumber numberWithUnsignedChar:'A']));
 }
 
 
-- (void) testFailure_withUnsignedChar
+- (void)testFailure_withUnsignedChar
 {
     @try
     {
@@ -216,13 +216,13 @@
 }
 
 
-- (void) testSuccess_withUnsignedInt
+- (void)testSuccess_withUnsignedInt
 {
     assertThatUnsignedInt(1U, equalTo([NSNumber numberWithUnsignedInt:1U]));
 }
 
 
-- (void) testFailure_withUnsignedInt
+- (void)testFailure_withUnsignedInt
 {
     @try
     {
@@ -237,13 +237,13 @@
 }
 
 
-- (void) testSuccess_withUnsignedLong
+- (void)testSuccess_withUnsignedLong
 {
     assertThatUnsignedLong(1UL, equalTo([NSNumber numberWithUnsignedLong:1UL]));
 }
 
 
-- (void) testFailure_withUnsignedLong
+- (void)testFailure_withUnsignedLong
 {
     @try
     {
@@ -258,13 +258,13 @@
 }
 
 
-- (void) testSuccess_withUnsignedLongLong
+- (void)testSuccess_withUnsignedLongLong
 {
     assertThatUnsignedLongLong(1ULL, equalTo([NSNumber numberWithUnsignedLongLong:1ULL]));
 }
 
 
-- (void) testFailure_withUnsignedLongLong
+- (void)testFailure_withUnsignedLongLong
 {
     @try
     {
@@ -279,13 +279,13 @@
 }
 
 
-- (void) testSuccess_withUnsignedShort
+- (void)testSuccess_withUnsignedShort
 {
     assertThatUnsignedShort(1U, equalTo([NSNumber numberWithUnsignedShort:1U]));
 }
 
 
-- (void) testFailure_withUnsignedShort
+- (void)testFailure_withUnsignedShort
 {
     @try
     {
@@ -300,13 +300,13 @@
 }
 
 
-- (void) testSuccess_withInteger
+- (void)testSuccess_withInteger
 {
     assertThatInteger(1, equalTo([NSNumber numberWithInteger:1]));
 }
 
 
-- (void) testFailure_withInteger
+- (void)testFailure_withInteger
 {
     @try
     {
@@ -321,13 +321,13 @@
 }
 
 
-- (void) testSuccess_withUnsignedInteger
+- (void)testSuccess_withUnsignedInteger
 {
     assertThatUnsignedInteger(1, equalTo([NSNumber numberWithUnsignedInteger:1]));
 }
 
 
-- (void) testFailure_withUnsignedInteger
+- (void)testFailure_withUnsignedInteger
 {
     @try
     {

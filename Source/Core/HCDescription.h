@@ -22,7 +22,7 @@
     
     @return @c self, for chaining.
  */
-- (id<HCDescription>) appendText:(NSString*)text;
+- (id<HCDescription>)appendText:(NSString *)text;
 
 /**
     Appends description of given value to @c self.
@@ -31,7 +31,7 @@
     
     @return @c self, for chaining.
  */
-- (id<HCDescription>) appendDescriptionOf:(id)value;
+- (id<HCDescription>)appendDescriptionOf:(id)value;
 
 /**
     Appends an arbitary value to the description.
@@ -40,16 +40,16 @@
 
     @return @c self, for chaining.
  */
-- (id<HCDescription>) appendValue:(id)value __attribute__((deprecated));
+- (id<HCDescription>)appendValue:(id)value     __attribute__((deprecated));
 
 /** 
     Appends a list of objects to the description.
     
     @return @c self, for chaining.
  */
-- (id<HCDescription>) appendList:(NSArray*)values
-                           start:(NSString*)start
-                       separator:(NSString*)separator
-                             end:(NSString*)end;
+- (id<HCDescription>)appendList:(NSArray *)values
+                           start:(NSString *)start
+                       separator:(NSString *)separator
+                             end:(NSString *)end;
 
 @end

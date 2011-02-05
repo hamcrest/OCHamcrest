@@ -18,16 +18,16 @@
 
 @implementation IsInTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
-    NSArray* collection = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
+    NSArray *collection = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
     return isIn(collection);
 }
 
 
-- (void) testReturnsTrueIfArgumentIsInCollection
+- (void)testReturnsTrueIfArgumentIsInCollection
 {
-    NSArray* collection = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
+    NSArray *collection = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
     id<HCMatcher> matcher = isIn(collection);
     
     assertMatches(@"has a", matcher, @"a");
@@ -37,7 +37,7 @@
 }
 
 
-- (void) testMatcherCreationRequiresObjectWithContainsObjectMethod
+- (void)testMatcherCreationRequiresObjectWithContainsObjectMethod
 {
     id object = [[[NSObject alloc] init] autorelease];
     
@@ -45,13 +45,13 @@
 }
 
 
-- (void) testMatcherCreationRequiresNonNilArgument
+- (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(isIn(nil), @"Should require non-nil argument");
 }
 
 
-- (void) testHasReadableDescription
+- (void)testHasReadableDescription
 {
     id<HCMatcher> matcher = isIn([NSArray arrayWithObjects:@"a", @"b", @"c", nil]);
     
@@ -59,13 +59,13 @@
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", isIn([NSArray arrayWithObject:@"a"]), @"bad");
 }
 
 
-- (void) testDescribesMismatch
+- (void)testDescribesMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", isIn([NSArray arrayWithObject:@"a"]), @"bad");
 }

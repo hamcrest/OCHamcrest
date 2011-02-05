@@ -15,7 +15,7 @@
 */
 @interface HCIsNil : HCBaseMatcher
 
-+ (id) isNil;
++ (id)isNil;
 
 @end
 

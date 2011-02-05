@@ -18,13 +18,13 @@
 
 @implementation IsAnythingTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return anything();
 }
 
 
-- (void) testAlwaysEvaluatesToTrue
+- (void)testAlwaysEvaluatesToTrue
 {
     assertMatches(@"nil", anything(), nil);
     assertMatches(@"object", anything(), [[[NSObject alloc] init] autorelease]);
@@ -32,20 +32,20 @@
 }
 
 
-- (void) testHasUsefulDefaultDescription
+- (void)testHasUsefulDefaultDescription
 {
     assertDescription(@"ANYTHING", anything());
 }
 
 
-- (void) testCanOverrideDescription
+- (void)testCanOverrideDescription
 {
-    NSString* description = @"DESCRIPTION";
+    NSString *description = @"DESCRIPTION";
     assertDescription(description, anythingWithDescription(description));
 }
 
 
-- (void) testMatchAlwaysSucceedsSoShouldNotGenerateMismatchDescription
+- (void)testMatchAlwaysSucceedsSoShouldNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(anything(), @"hi");
 }

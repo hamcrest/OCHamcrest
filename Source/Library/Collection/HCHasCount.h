@@ -18,8 +18,8 @@
     id<HCMatcher> countMatcher;
 }
 
-+ (id) hasCount:(id<HCMatcher>)matcher;
-- (id) initWithCount:(id<HCMatcher>)matcher;
++ (id)hasCount:(id<HCMatcher>)matcher;
+- (id)initWithCount:(id<HCMatcher>)matcher;
 
 @end
 

@@ -11,6 +11,6 @@
 
 @interface FakeWithoutCount : NSObject
 
-+ (id) fake;
++ (id)fake;
 
 @end

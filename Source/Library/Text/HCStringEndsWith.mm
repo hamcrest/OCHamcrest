@@ -14,13 +14,13 @@
 
 @implementation HCStringEndsWith
 
-+ (id) stringEndsWith:(NSString*)aSubstring
++ (id)stringEndsWith:(NSString *)aSubstring
 {
     return [[[self alloc] initWithSubstring:aSubstring] autorelease];
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     if (![item respondsToSelector:@selector(hasSuffix:)])
         return NO;
@@ -29,7 +29,7 @@
 }
 
 
-- (NSString*) relationship
+- (NSString *)relationship
 {
     return @"ending with";
 }
@@ -38,7 +38,7 @@
 
 //--------------------------------------------------------------------------------------------------
 
-OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString* aSubstring)
+OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString *aSubstring)
 {
     return [HCStringEndsWith stringEndsWith:aSubstring];
 }

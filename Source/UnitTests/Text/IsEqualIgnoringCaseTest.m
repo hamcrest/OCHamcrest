@@ -22,25 +22,25 @@
 
 @implementation IsEqualIgnoringCaseTest
 
-- (void) setUp
+- (void)setUp
 {
     matcher = [equalToIgnoringCase(@"heLLo") retain];
 }
 
 
-- (void) tearDown
+- (void)tearDown
 {
     [matcher release];
 }
 
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return matcher;
 }
 
 
-- (void) testIgnoresCaseOfCharsInString
+- (void)testIgnoresCaseOfCharsInString
 {
     assertMatches(@"all upper", matcher, @"HELLO");
     assertMatches(@"all lower", matcher, @"hello");
@@ -50,44 +50,44 @@
 }
 
 
-- (void) testFailsIfAdditionalWhitespaceIsPresent
+- (void)testFailsIfAdditionalWhitespaceIsPresent
 {
     assertDoesNotMatch(@"whitespace suffix", matcher, @"heLLo ");
     assertDoesNotMatch(@"whitespace prefix", matcher, @" heLLo");
 }
 
 
-- (void) testMatcherCreationRequiresNonNilArgument
+- (void)testMatcherCreationRequiresNonNilArgument
 {
     STAssertThrows(equalToIgnoringCase(nil), @"Should require non-nil argument");
 }
 
 
-- (void) testFailsIfMatchingAgainstNonString
+- (void)testFailsIfMatchingAgainstNonString
 {
     assertDoesNotMatch(@"non-string", matcher, [NSNumber numberWithInt:3]);
 }
 
 
-- (void) testHasAReadableDescription
+- (void)testHasAReadableDescription
 {
     assertDescription(@"\"heLLo\" ignoring case", matcher);
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(matcher, @"hello");
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", matcher, @"bad");
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", matcher, @"bad");
 }

@@ -15,8 +15,8 @@
  */
 @interface HCHasDescription : HCInvocationMatcher
 
-+ (id) hasDescription:(id<HCMatcher>)descriptionMatcher;
-- (id) initWithDescription:(id<HCMatcher>)descriptionMatcher;
++ (id)hasDescription:(id<HCMatcher>)descriptionMatcher;
+- (id)initWithDescription:(id<HCMatcher>)descriptionMatcher;
 
 @end
 

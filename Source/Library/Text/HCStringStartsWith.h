@@ -15,7 +15,7 @@
  */
 @interface HCStringStartsWith : HCSubstringMatcher
 
-+ (id) stringStartsWith:(NSString*)aSubstring;
++ (id)stringStartsWith:(NSString *)aSubstring;
 
 @end
 
@@ -28,7 +28,7 @@
     @see HCStringStartsWith
     @ingroup text_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString* aSubstring);
+OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString *aSubstring);
 
 /**
     Synonym for @ref HC_startsWith, available if @c HC_SHORTHAND is defined.

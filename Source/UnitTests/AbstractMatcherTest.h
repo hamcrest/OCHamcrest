@@ -13,20 +13,20 @@
 
 @interface AbstractMatcherTest : SenTestCase
 
-- (void) assertTrue:(BOOL)condition message:(NSString*)message
-                inFile:(const char*)fileName atLine:(int)lineNumber;
-- (void) assertFalse:(BOOL)condition message:(NSString*)message
-                inFile:(const char*)fileName atLine:(int)lineNumber;
-- (void) assertMatcher:(id<HCMatcher>)matcher hasTheDescription:(NSString*)expected
-                inFile:(const char*)fileName atLine:(int)lineNumber;
-- (void) assertMatcher:(id<HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
-                inFile:(const char*)fileName atLine:(int)lineNumber;
-- (void) assertMatcher:(id<HCMatcher>)matcher matching:(id)arg yieldsMismatchDescription:(NSString*)expected
-                inFile:(const char*)fileName atLine:(int)lineNumber;
-- (void) assertMatcher:(id<HCMatcher>)matcher matching:(id)arg describesMismatch:(NSString*)expected
-                inFile:(const char*)fileName atLine:(int)lineNumber;
+- (void)assertTrue:(BOOL)condition message:(NSString *)message
+                inFile:(const char *)fileName atLine:(int)lineNumber;
+- (void)assertFalse:(BOOL)condition message:(NSString *)message
+                inFile:(const char *)fileName atLine:(int)lineNumber;
+- (void)assertMatcher:(id<HCMatcher>)matcher hasTheDescription:(NSString *)expected
+                inFile:(const char *)fileName atLine:(int)lineNumber;
+- (void)assertMatcher:(id<HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
+                inFile:(const char *)fileName atLine:(int)lineNumber;
+- (void)assertMatcher:(id<HCMatcher>)matcher matching:(id)arg yieldsMismatchDescription:(NSString *)expected
+                inFile:(const char *)fileName atLine:(int)lineNumber;
+- (void)assertMatcher:(id<HCMatcher>)matcher matching:(id)arg describesMismatch:(NSString *)expected
+                inFile:(const char *)fileName atLine:(int)lineNumber;
 
-- (id<HCMatcher>) createMatcher;
+- (id<HCMatcher>)createMatcher;
 
 @end
 

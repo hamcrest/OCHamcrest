@@ -13,13 +13,14 @@
 
 @synthesize count;
 
-+ (id) fakeWithCount:(NSUInteger)fakeCount
+
++ (id)fakeWithCount:(NSUInteger)fakeCount
 {
     return [[[self alloc] initWithCount:fakeCount] autorelease];
 }
 
 
-- (id) initWithCount:(NSUInteger)fakeCount
+- (id)initWithCount:(NSUInteger)fakeCount
 {
     self = [super init];
     if (self != nil)
@@ -30,7 +31,7 @@
 }
 
 
-- (NSString *) description
+- (NSString *)description
 {
     return @"FakeWithCount";
 }

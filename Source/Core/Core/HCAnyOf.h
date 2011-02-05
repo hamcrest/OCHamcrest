@@ -19,11 +19,11 @@
  */
 @interface HCAnyOf : HCBaseMatcher
 {
-    NSArray* matchers;
+    NSArray *matchers;
 }
 
-+ (id) anyOf:(NSArray*)theMatchers;
-- (id) initWithMatchers:(NSArray*)theMatchers;
++ (id)anyOf:(NSArray *)theMatchers;
+- (id)initWithMatchers:(NSArray *)theMatchers;
 
 @end
 

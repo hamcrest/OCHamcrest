@@ -15,12 +15,12 @@
 */
 @interface HCIsEqualIgnoringWhiteSpace : HCBaseMatcher
 {
-    NSString* originalString;
-    NSString* strippedString;
+    NSString *originalString;
+    NSString *strippedString;
 }
 
-+ (id) isEqualIgnoringWhiteSpace:(NSString*)aString;
-- (id) initWithString:(NSString*)aString;
++ (id)isEqualIgnoringWhiteSpace:(NSString *)aString;
+- (id)initWithString:(NSString *)aString;
 
 @end
 
@@ -33,7 +33,7 @@
     @see HCIsEqualIgnoringWhiteSpace
     @ingroup text_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString* string);
+OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString *string);
 
 /**
     Synonym for @ref HC_equalToIgnoringWhiteSpace, available if @c HC_SHORTHAND is defined.

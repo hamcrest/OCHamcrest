@@ -15,19 +15,19 @@
 
 @implementation HCIsNil
 
-+ (id) isNil
++ (id)isNil
 {
     return [[[self alloc] init] autorelease];
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     return item == nil;
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [description appendText:@"nil"];
 }

@@ -15,11 +15,11 @@
  */
 @interface HCIsCollectionContainingInAnyOrder : HCBaseMatcher
 {
-    NSMutableArray* matchers;
+    NSMutableArray *matchers;
 }
 
-+ (id) isCollectionContainingInAnyOrder:(NSMutableArray*)itemMatchers;
-- (id) initWithMatchers:(NSMutableArray*)itemMatchers;
++ (id)isCollectionContainingInAnyOrder:(NSMutableArray *)itemMatchers;
+- (id)initWithMatchers:(NSMutableArray *)itemMatchers;
 
 @end
 

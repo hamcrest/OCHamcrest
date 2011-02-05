@@ -21,20 +21,20 @@
 
 @implementation IsCollectionContainingTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return hasItem(equalTo(@"irrelevant"));
 }
 
 
-- (void) testMatchesACollectionThatContainsAnElementMatchingTheGivenMatcher
+- (void)testMatchesACollectionThatContainsAnElementMatchingTheGivenMatcher
 {
     assertMatches(@"list contains 'a'",
                   hasItem(equalTo(@"a")), ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
 }
 
 
-- (void) testNoMatchIfCollectionDoesntContainAnElementMatchingTheGivenMatcher
+- (void)testNoMatchIfCollectionDoesntContainAnElementMatchingTheGivenMatcher
 {
     assertDoesNotMatch(@"list without 'a'",
                        hasItem(equalTo(@"a")), ([NSArray arrayWithObjects:@"b", @"c", nil]));    
@@ -42,13 +42,13 @@
 }
 
 
-- (void) testDoesNotMatchNil
+- (void)testDoesNotMatchNil
 {
     assertDoesNotMatch(@"should not match nil", hasItem(equalTo(@"a")), nil);
 }
 
 
-- (void) testProvidesConvenientShortcutForMatchingWithIsEqualTo
+- (void)testProvidesConvenientShortcutForMatchingWithIsEqualTo
 {
     assertMatches(@"list contains 'a'",
                   hasItem(@"a"), ([NSSet setWithObjects:@"a", @"b", @"c", nil]));
@@ -57,38 +57,38 @@
 }
 
 
-- (void) testDoesNotMatchObjectWithoutEnumerator
+- (void)testDoesNotMatchObjectWithoutEnumerator
 {
     assertDoesNotMatch(@"should not match object without enumerator",
                        hasItem(@"a"), [[[NSObject alloc] init] autorelease]);
 }
 
 
-- (void) testMatcherCreationRequiresNonNilArgument
+- (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(hasItem(nil), @"Should require non-nil argument");
 }
 
 
-- (void) testHasAReadableDescription
+- (void)testHasAReadableDescription
 {
     assertDescription(@"a collection containing \"a\"", hasItem(@"a"));
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(hasItem(@"a"), ([NSSet setWithObjects:@"a", @"b", nil]));
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", hasItem(@"a"), @"bad");
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", hasItem(@"a"), @"bad");
 }
@@ -102,7 +102,7 @@
 
 @implementation IsCollectionContainingItemsTest
 
-- (void) testShouldMatchCollectionContainingAllItems
+- (void)testShouldMatchCollectionContainingAllItems
 {
     assertMatches(@"contains all items",
                   (hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil)),
@@ -110,7 +110,7 @@
 }
 
 
-- (void) testProvidesConvenientShortcutForMatchingWithIsEqualTo
+- (void)testProvidesConvenientShortcutForMatchingWithIsEqualTo
 {
     assertMatches(@"contains all items",
                   (hasItems(@"a", @"b", @"c", nil)),
@@ -118,7 +118,7 @@
 }
 
 
-- (void) testShouldMatchCollectionContainingAllItemsInDifferentOrder
+- (void)testShouldMatchCollectionContainingAllItemsInDifferentOrder
 {
     assertMatches(@"all items in different order",
                   (hasItems(@"a", @"b", @"c", nil)),
@@ -126,7 +126,7 @@
 }
 
 
-- (void) testShouldMatchCollectionContainingAllItemsPlusExtras
+- (void)testShouldMatchCollectionContainingAllItemsPlusExtras
 {
     assertMatches(@"all items plus extras",
                   (hasItems(@"a", @"b", @"c", nil)),
@@ -134,41 +134,41 @@
 }
 
 
-- (void) testNoMatchIfCollectionDoesntSatisfyAllMatchers
+- (void)testNoMatchIfCollectionDoesntSatisfyAllMatchers
 {
     assertDoesNotMatch(@"missing 'a'",
                        (hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil)),
                        ([NSArray arrayWithObjects:@"e", @"c", @"b", @"d", nil]));
 }
 
-- (void) testMatcherCreationRequiresNonNilArgument
+- (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(hasItems(nil), @"Should require non-nil list");
 }
 
 
-- (void) testHasAReadableDescription
+- (void)testHasAReadableDescription
 {
     assertDescription(@"(a collection containing \"a\" and a collection containing \"b\")",
                       hasItems(@"a", @"b", nil));
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(hasItems(@"a", @"b", nil),
                                 ([NSSet setWithObjects:@"a", @"b", nil]));
 }
 
 
-- (void) testMismatchDescriptionShowsFirstUnmetMatcherAndActualArgument
+- (void)testMismatchDescriptionShowsFirstUnmetMatcherAndActualArgument
 {
     assertMismatchDescription(@"a collection containing \"a\" was \"bad\"",
                               hasItems(@"a", @"b", nil), @"bad");
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"a collection containing \"a\" was \"bad\"",
                            hasItems(@"a", @"b", nil), @"bad");

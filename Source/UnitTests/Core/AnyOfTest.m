@@ -21,13 +21,13 @@
 
 @implementation AnyOfTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return anyOf(equalTo(@"irrelevant"), nil);
 }
 
 
-- (void) testMatchesIfArgumentSatisfiesEitherOrBothOfTwoOtherMatchers
+- (void)testMatchesIfArgumentSatisfiesEitherOrBothOfTwoOtherMatchers
 {
     assertMatches(@"first matcher", anyOf(equalTo(@"good"), equalTo(@"bad"), nil), @"good");
     assertMatches(@"second matcher", anyOf(equalTo(@"bad"), equalTo(@"good"), nil), @"good");
@@ -35,13 +35,13 @@
 }
 
 
-- (void) testNoMatchIfArgumentFailsToSatisfyEitherOfTwoOtherMatchers
+- (void)testNoMatchIfArgumentFailsToSatisfyEitherOfTwoOtherMatchers
 {
     assertDoesNotMatch(@"first matcher", anyOf(equalTo(@"bad"), equalTo(@"bad"), nil), @"good");
 }
 
 
-- (void) testMatchesIfArgumentSatisfiesAnyOfManyOtherMatchers
+- (void)testMatchesIfArgumentSatisfiesAnyOfManyOtherMatchers
 {
     assertMatches(@"matcher in the middle",
                   anyOf(equalTo(@"bad"),
@@ -54,7 +54,7 @@
 }
 
 
-- (void) testNoMatchIfArgumentFailsToSatisfyAnyOfManyOtherMatchers
+- (void)testNoMatchIfArgumentFailsToSatisfyAnyOfManyOtherMatchers
 {
     assertDoesNotMatch(@"all matchers",
                        anyOf(equalTo(@"bad"),
@@ -67,21 +67,21 @@
 }
 
 
-- (void) testHasAReadableDescription
+- (void)testHasAReadableDescription
 {
     assertDescription(@"(\"good\" or \"bad\" or \"ugly\")",
                       anyOf(equalTo(@"good"), equalTo(@"bad"), equalTo(@"ugly"), nil));
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(anyOf(equalTo(@"good"), equalTo(@"good"), nil),
                                 @"good");
 }
 
 
-- (void) testMismatchDescriptionDescribesFirstFailingMatch
+- (void)testMismatchDescriptionDescribesFirstFailingMatch
 {
     assertMismatchDescription(@"was \"ugly\"",
                               anyOf(equalTo(@"bad"), equalTo(@"good"), nil),
@@ -89,7 +89,7 @@
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was \"ugly\"",
                            anyOf(equalTo(@"bad"), equalTo(@"good"), nil),
@@ -97,7 +97,7 @@
 }
 
 
-- (void) testMatcherCreationRequiresNonNilArgument
+- (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(anyOf(nil), @"Should require non-nil list");
 }

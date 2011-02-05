@@ -11,9 +11,9 @@
 
 @interface NeverMatch : HCBaseMatcher
 
-+ (id) neverMatch;
-+ (NSString *) mismatchDescription;
-- (BOOL) matches:(id)item;
-- (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription;
++ (id)neverMatch;
++ (NSString *)mismatchDescription;
+- (BOOL)matches:(id)item;
+- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription;
 
 @end

@@ -14,26 +14,26 @@
 
 @implementation HCIsAnything
 
-+ (id) isAnything
++ (id)isAnything
 {
     return [[[self alloc] init] autorelease];
 }
 
 
-+ (id) isAnythingWithDescription:(NSString*)aDescription
++ (id)isAnythingWithDescription:(NSString *)aDescription
 {
     return [[[self alloc] initWithDescription:aDescription] autorelease];
 }
 
 
-- (id) init
+- (id)init
 {
     [self initWithDescription:@"ANYTHING"];
     return self;
 }
 
 
-- (id) initWithDescription:(NSString*)aDescription
+- (id)initWithDescription:(NSString *)aDescription
 {
     self = [super init];
     if (self != nil)
@@ -42,20 +42,20 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [description release];
     [super dealloc];
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     return YES;
 }
 
 
-- (void) describeTo:(id<HCDescription>)aDescription
+- (void)describeTo:(id<HCDescription>)aDescription
 {
     [aDescription appendText:description];
 }
@@ -70,7 +70,7 @@ OBJC_EXPORT id<HCMatcher> HC_anything()
 }
 
 
-OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString* description)
+OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *description)
 {
     return [HCIsAnything isAnythingWithDescription:description];
 }

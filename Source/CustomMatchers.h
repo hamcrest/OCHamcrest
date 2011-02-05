@@ -19,7 +19,7 @@
     we want to write:
     
     @code
-- (void) testDateIsOnASaturday
+- (void)testDateIsOnASaturday
 {
     NSCalendarDate* date = [NSCalendarDate dateWithString:@"26 Apr 2008" calendarFormat:@"%d %b %Y"];
     assertThat(date, is(onASaturday()))
@@ -37,8 +37,8 @@
     NSInteger day;      // Sunday is 0, Saturday is 6
 }
 
-+ (id) isGivenDayOfWeek:(NSInteger)dayOfWeek;
-- (id) initWithDay:(NSInteger)dayOfWeek;
++ (id)isGivenDayOfWeek:(NSInteger)dayOfWeek;
+- (id)initWithDay:(NSInteger)dayOfWeek;
 
 @end
 
@@ -54,12 +54,12 @@ OBJC_EXPORT id<HCMatcher> onASaturday();
 
 @implementation IsGivenDayOfWeek
 
-+ (id) isGivenDayOfWeek:(NSInteger)dayOfWeek
++ (id)isGivenDayOfWeek:(NSInteger)dayOfWeek
 {
     return [[[self alloc] initWithDay:dayOfWeek] autorelease];
 }
 
-- (id) initWithDay:(NSInteger)dayOfWeek
+- (id)initWithDay:(NSInteger)dayOfWeek
 {
     self = [super init];
     if (self != nil)
@@ -68,7 +68,7 @@ OBJC_EXPORT id<HCMatcher> onASaturday();
 }
 
 // Test whether item matches.
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     if (![item respondsToSelector:@selector(dayOfWeek)])
         return NO;
@@ -77,9 +77,9 @@ OBJC_EXPORT id<HCMatcher> onASaturday();
 }
 
 // Describe the matcher.
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
-    NSString* dayAsString[] =
+    NSString *dayAsString[] =
         {@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"};
     [[description appendText:@"calendar date falling on "] appendText:dayAsString[day]];
 }

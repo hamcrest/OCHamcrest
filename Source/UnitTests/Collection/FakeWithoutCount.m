@@ -11,13 +11,13 @@
 
 @implementation FakeWithoutCount
 
-+ (id) fake
++ (id)fake
 {
     return [[[self alloc] init] autorelease];
 }
 
 
-- (NSString *) description
+- (NSString *)description
 {
     return @"FakeWithoutCount";
 }

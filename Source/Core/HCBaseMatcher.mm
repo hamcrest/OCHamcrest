@@ -13,14 +13,14 @@
 
 
 @interface HCBaseMatcher (Private)
-- (void) subclassResponsibility:(SEL)command;
+- (void)subclassResponsibility:(SEL)command;
 @end
 
 @implementation HCBaseMatcher (Private)
 
-- (void) subclassResponsibility:(SEL)command
+- (void)subclassResponsibility:(SEL)command
 {
-	NSString* className = NSStringFromClass([self class]);
+	NSString *className = NSStringFromClass([self class]);
     [NSException raise:NSGenericException
                 format:@"-[%@  %s] not implemented", className, command];
 }
@@ -32,20 +32,20 @@
 
 @implementation HCBaseMatcher
 
-- (NSString*) description
+- (NSString *)description
 {
     return [HCStringDescription stringFrom:self];
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     ABSTRACT_METHOD;
     return NO;
 }
 
 
-- (BOOL) matches:(id)item describingMismatchTo:(id<HCDescription>)mismatchDescription
+- (BOOL)matches:(id)item describingMismatchTo:(id<HCDescription>)mismatchDescription
 {
     BOOL matchResult = [self matches:item];
     if (!matchResult)
@@ -54,13 +54,13 @@
 }
 
 
-- (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     [[mismatchDescription appendText:@"was "] appendDescriptionOf:item];
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     ABSTRACT_METHOD;
 }

@@ -15,7 +15,7 @@
  */
 @interface HCStringEndsWith : HCSubstringMatcher
 
-+ (id) stringEndsWith:(NSString*)aSubstring;
++ (id)stringEndsWith:(NSString *)aSubstring;
 
 @end
 
@@ -28,7 +28,7 @@
     @see HCStringEndsWith
     @ingroup text_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString* aSubstring);
+OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString *aSubstring);
 
 /**
     Synonym for @ref HC_endsWith, available if @c HC_SHORTHAND is defined.

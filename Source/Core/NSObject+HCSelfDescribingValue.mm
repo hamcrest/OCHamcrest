@@ -14,7 +14,7 @@
 
 @implementation NSObject (HCSelfDescribingValue)
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [description appendValue:self];
 }

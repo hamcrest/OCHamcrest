@@ -21,8 +21,8 @@
     id object;
 }
 
-+ (id) isEqualTo:(id)anObject;
-- (id) initEqualTo:(id)anObject;
++ (id)isEqualTo:(id)anObject;
+- (id)initEqualTo:(id)anObject;
 
 @end
 

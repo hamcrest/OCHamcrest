@@ -21,45 +21,45 @@
 
 @implementation IsNotTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return isNot(@"something");
 }
 
 
-- (void) testEvaluatesToTheTheLogicalNegationOfAnotherMatcher
+- (void)testEvaluatesToTheTheLogicalNegationOfAnotherMatcher
 {
     assertMatches(@"invert mismatch", isNot(equalTo(@"A")), @"B");
     assertDoesNotMatch(@"invert match", isNot(equalTo(@"A")), @"A");
 }
 
 
-- (void) testProvidesConvenientShortcutForNotEqualTo
+- (void)testProvidesConvenientShortcutForNotEqualTo
 {
     assertMatches(@"invert mismatch", isNot(@"A"), @"B");
     assertDoesNotMatch(@"invert match", isNot(@"A"), @"A");
 }
 
 
-- (void) testHasAReadableDescription
+- (void)testHasAReadableDescription
 {
     assertDescription(@"not \"A\"", isNot(@"A"));
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(isNot(@"A"), @"B");
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"A\"", isNot(@"A"), @"A");
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was \"A\"", isNot(@"A"), @"A");
 }

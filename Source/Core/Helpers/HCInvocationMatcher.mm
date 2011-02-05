@@ -17,22 +17,22 @@
 @synthesize shortMismatchDescription;
 
 
-+ (NSInvocation*) invocationForSelector:(SEL)selector onClass:(Class)aClass
++ (NSInvocation *)invocationForSelector:(SEL)selector onClass:(Class)aClass
 {
     NSMethodSignature* signature = [aClass instanceMethodSignatureForSelector:selector];
-    NSInvocation* invocation = [NSInvocation invocationWithMethodSignature:signature];
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
     [invocation setSelector:selector];
     return invocation;
 }
 
 
-+ (NSInvocation*) createInvocationForSelector:(SEL)selector onClass:(Class)aClass
++ (NSInvocation *)createInvocationForSelector:(SEL)selector onClass:(Class)aClass
 {
     return [self invocationForSelector:selector onClass:aClass];
 }
 
 
-- (id) initWithInvocation:(NSInvocation*)anInvocation matching:(id<HCMatcher>)aMatcher
+- (id)initWithInvocation:(NSInvocation *)anInvocation matching:(id<HCMatcher>)aMatcher
 {
     self = [super init];
     if (self != nil)
@@ -44,7 +44,7 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [subMatcher release];
     [invocation release];
@@ -53,13 +53,13 @@
 }
 
 
-- (NSString*) stringFromSelector
+- (NSString *)stringFromSelector
 {
     return NSStringFromSelector([invocation selector]);
 }
 
 
-- (id) invokeOn:(id)item
+- (id)invokeOn:(id)item
 {
     id result = nil;
     [invocation invokeWithTarget:item];
@@ -68,7 +68,7 @@
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     if (![item respondsToSelector:[invocation selector]])
         return NO;
@@ -77,7 +77,7 @@
 }
 
 
-- (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     if (![item respondsToSelector:[invocation selector]])
         [super describeMismatchOf:item to:mismatchDescription];
@@ -95,7 +95,7 @@
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[[[description appendText:@"object with "]
                     appendText:[self stringFromSelector]]

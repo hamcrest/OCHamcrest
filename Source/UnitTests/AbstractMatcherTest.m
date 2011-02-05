@@ -15,8 +15,8 @@
 
 @implementation AbstractMatcherTest
 
-- (void) assertTrue:(BOOL)condition message:(NSString*)message
-                inFile:(const char*)fileName atLine:(int)lineNumber;
+- (void)assertTrue:(BOOL)condition message:(NSString *)message
+                inFile:(const char *)fileName atLine:(int)lineNumber;
 {
     if (!condition)
     {
@@ -27,8 +27,8 @@
 }
 
 
-- (void) assertFalse:(BOOL)condition message:(NSString*)message
-                inFile:(const char*)fileName atLine:(int)lineNumber;
+- (void)assertFalse:(BOOL)condition message:(NSString *)message
+                inFile:(const char *)fileName atLine:(int)lineNumber;
 {
     if (condition)
     {
@@ -39,12 +39,12 @@
 }
 
 
-- (void) assertMatcher:(id<HCMatcher>)matcher hasTheDescription:(NSString*)expected
-                inFile:(const char*)fileName atLine:(int)lineNumber
+- (void)assertMatcher:(id<HCMatcher>)matcher hasTheDescription:(NSString *)expected
+                inFile:(const char *)fileName atLine:(int)lineNumber
 {
-    HCStringDescription* description = [HCStringDescription stringDescription];
+    HCStringDescription *description = [HCStringDescription stringDescription];
     [description appendDescriptionOf:matcher];
-    NSString* actual = [description description];
+    NSString *actual = [description description];
     if (![actual isEqualToString:expected])
     {
         [self failWithException:
@@ -57,10 +57,10 @@
 }
 
 
-- (void) assertMatcher:(id<HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
-                inFile:(const char*)fileName atLine:(int)lineNumber
+- (void)assertMatcher:(id<HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
+                inFile:(const char *)fileName atLine:(int)lineNumber
 {
-    HCStringDescription* description = [HCStringDescription stringDescription];
+    HCStringDescription *description = [HCStringDescription stringDescription];
     BOOL result = [matcher matches:arg];
     if (!result)
     {
@@ -77,10 +77,10 @@
 }
 
 
-- (void) assertMatcher:(id<HCMatcher>)matcher matching:(id)arg yieldsMismatchDescription:(NSString*)expected
-                inFile:(const char*)fileName atLine:(int)lineNumber;
+- (void)assertMatcher:(id<HCMatcher>)matcher matching:(id)arg yieldsMismatchDescription:(NSString *)expected
+                inFile:(const char *)fileName atLine:(int)lineNumber;
 {
-    HCStringDescription* description = [HCStringDescription stringDescription];
+    HCStringDescription *description = [HCStringDescription stringDescription];
     BOOL result = [matcher matches:arg describingMismatchTo:description];
     if (result)
     {
@@ -88,7 +88,7 @@
                                                     atLine:lineNumber
                                            withDescription:@"Precondition: Matcher should not match item"]];
     }
-    NSString* actual = [description description];
+    NSString *actual = [description description];
     if (![actual isEqualToString:expected])
     {
         [self failWithException:
@@ -101,12 +101,12 @@
 }
 
 
-- (void) assertMatcher:(id<HCMatcher>)matcher matching:(id)arg describesMismatch:(NSString*)expected
-                inFile:(const char*)fileName atLine:(int)lineNumber
+- (void)assertMatcher:(id<HCMatcher>)matcher matching:(id)arg describesMismatch:(NSString *)expected
+                inFile:(const char *)fileName atLine:(int)lineNumber
 {
-    HCStringDescription* description = [HCStringDescription stringDescription];
+    HCStringDescription *description = [HCStringDescription stringDescription];
     [matcher describeMismatchOf:arg to:description];
-    NSString* actual = [description description];
+    NSString *actual = [description description];
     if (![actual isEqualToString:expected])
     {
         [self failWithException:
@@ -119,20 +119,20 @@
 }
 
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return nil;     // Override in subclass
 }
 
 
-- (void) testIsNilSafe
+- (void)testIsNilSafe
 {
     // Should not crash or throw exception.
     [[self createMatcher] matches:nil];
 }
 
 
-- (void) testCopesWithUnknownTypes
+- (void)testCopesWithUnknownTypes
 {
     // Should not crash or throw exception.
     [[self createMatcher] matches:[[[NSObject alloc] init] autorelease]];

@@ -20,19 +20,19 @@
 
 @implementation IsNilTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return nilValue();
 }
 
 
-- (void) testEvaluatesToTrueIfArgumentIsNil
+- (void)testEvaluatesToTrueIfArgumentIsNil
 {
     assertMatches(@"nil", nilValue(), nil);
 }
 
 
-- (void) testEvaluatesToFalseIfArgumentIsNotNil
+- (void)testEvaluatesToFalseIfArgumentIsNotNil
 {
     id ANY_NON_NULL_ARGUMENT = [[[NSObject alloc] init] autorelease];
 
@@ -40,25 +40,25 @@
 }
 
 
-- (void) testHasAReadableDescription
+- (void)testHasAReadableDescription
 {
     assertDescription(@"nil", nilValue());
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(nilValue(), nil);
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", nilValue(), @"bad");
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", nilValue(), @"bad");
 }
@@ -72,13 +72,13 @@
 
 @implementation NotNilTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return notNilValue();
 }
 
 
-- (void) testEvaluatesToTrueIfArgumentIsNotNil
+- (void)testEvaluatesToTrueIfArgumentIsNotNil
 {
     id ANY_NON_NULL_ARGUMENT = [[[NSObject alloc] init] autorelease];
     
@@ -86,31 +86,31 @@
 }
 
 
-- (void) testEvaluatesToFalseIfArgumentIsNil
+- (void)testEvaluatesToFalseIfArgumentIsNil
 {
     assertDoesNotMatch(@"nil", notNilValue(), nil);
 }
 
 
-- (void) testHasAReadableDescription
+- (void)testHasAReadableDescription
 {
     assertDescription(@"not nil", notNilValue());
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(notNilValue(), @"hi");
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was nil", notNilValue(), nil);
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was nil", notNilValue(), nil);
 }

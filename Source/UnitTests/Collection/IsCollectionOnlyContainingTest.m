@@ -22,13 +22,13 @@
 
 @implementation IsCollectionOnlyContainingTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return onlyContains(equalTo(@"irrelevant"), nil);
 }
 
 
-- (void) testMatchesSingletonCollection
+- (void)testMatchesSingletonCollection
 {
     assertMatches(@"singleton collection",
                   onlyContains(equalTo(@"a"), nil),
@@ -36,7 +36,7 @@
 }
 
 
-- (void) testMatchesAllItemsWithOneMatcher
+- (void)testMatchesAllItemsWithOneMatcher
 {
     assertMatches(@"one matcher",
                   onlyContains(lessThan(@"d"), nil),
@@ -44,7 +44,7 @@
 }
 
 
-- (void) testMatchesAllItemsWithMultipleMatchers
+- (void)testMatchesAllItemsWithMultipleMatchers
 {
     assertMatches(@"multiple matcher",
                   onlyContains(lessThan(@"d"), equalTo(@"hi"), nil),
@@ -52,7 +52,7 @@
 }
 
 
-- (void) testProvidesConvenientShortcutForMatchingWithIsEqualTo
+- (void)testProvidesConvenientShortcutForMatchingWithIsEqualTo
 {
     assertMatches(@"Values automatically wrapped with equal_to",
                   onlyContains(lessThan(@"d"), @"hi", nil),
@@ -60,7 +60,7 @@
 }
 
 
-- (void) testDoesNotMatchCollectionWithMismatchingItem
+- (void)testDoesNotMatchCollectionWithMismatchingItem
 {
     assertDoesNotMatch(@"d is not less than d",
                        onlyContains(lessThan(@"d"), nil),
@@ -68,19 +68,19 @@
 }
 
 
-- (void) testDoesNotMatchEmptyCollection
+- (void)testDoesNotMatchEmptyCollection
 {
     assertDoesNotMatch(@"empty collection", onlyContains(equalTo(@"foo"), nil), ([NSArray array]));
 }
 
 
-- (void) testMatcherCreationRequiresNonNilArgument
+- (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(onlyContains(nil), @"Should require non-nil list");
 }
 
 
-- (void) testHasAReadableDescription
+- (void)testHasAReadableDescription
 {
     assertDescription(@"a collection containing items matching (\"a\" or \"b\")",
                         onlyContains(@"a", @"b", nil));
@@ -88,13 +88,13 @@
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", (onlyContains(@"a", @"b", nil)), @"bad");
 }
 
 
-- (void) testDescribeMismatchOfNonCollection
+- (void)testDescribeMismatchOfNonCollection
 {
     assertDescribeMismatch(@"was nil", (onlyContains(@"a", @"b", nil)), nil);
 }

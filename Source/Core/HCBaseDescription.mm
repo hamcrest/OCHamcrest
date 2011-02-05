@@ -14,20 +14,20 @@
 
 
 @interface HCBaseDescription(Private)
-- (void) toCSyntaxString:(NSString*)unformatted;
-- (void) toCSyntax:(unichar)ch;
+- (void)toCSyntaxString:(NSString *)unformatted;
+- (void)toCSyntax:(unichar)ch;
 @end
 
 @implementation HCBaseDescription
 
-- (id<HCDescription>) appendText:(NSString*)text
+- (id<HCDescription>)appendText:(NSString *)text
 {
     [self append:text];
     return self;
 }
 
 
-- (id<HCDescription>) appendDescriptionOf:(id)value;
+- (id<HCDescription>)appendDescriptionOf:(id)value;
 {
     if (value == nil)
         [self append:@"nil"];
@@ -56,7 +56,7 @@
 }
 
 
-- (id<HCDescription>) appendValue:(id)value
+- (id<HCDescription>)appendValue:(id)value
 {
     if (value == nil)
         [self append:@"nil"];
@@ -72,10 +72,10 @@
 }
 
 
-- (id<HCDescription>) appendList:(NSArray*)values
-                           start:(NSString*)start
-                       separator:(NSString*)separator
-                             end:(NSString*)end
+- (id<HCDescription>)appendList:(NSArray *)values
+                           start:(NSString *)start
+                       separator:(NSString *)separator
+                             end:(NSString *)end
 {
     BOOL separate = NO;
     
@@ -96,7 +96,7 @@
 
 @implementation HCBaseDescription (Private)
 
-- (void) toCSyntaxString:(NSString*)unformatted
+- (void)toCSyntaxString:(NSString *)unformatted
 {
     [self append:@"\""];
     NSUInteger length = [unformatted length];
@@ -106,7 +106,7 @@
 }
 
 
-- (void) toCSyntax: (unichar)ch
+- (void)toCSyntax:(unichar)ch
 {
     switch (ch)
     {

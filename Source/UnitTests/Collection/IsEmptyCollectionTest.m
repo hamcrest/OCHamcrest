@@ -21,43 +21,43 @@
 
 @implementation IsEmptyCollectionTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return empty();
 }
 
 
-- (void) testMatchesEmptyCollection
+- (void)testMatchesEmptyCollection
 {
     assertMatches(@"empty", empty(), [FakeWithCount fakeWithCount:0]);
 }
 
 
-- (void) testDoesNotMatchesNonEmptyCollection
+- (void)testDoesNotMatchesNonEmptyCollection
 {
     assertDoesNotMatch(@"non-empty", empty(), [FakeWithCount fakeWithCount:1]);
 }
 
 
-- (void) testDoesNotMatchItemWithoutCount
+- (void)testDoesNotMatchItemWithoutCount
 {
     assertDoesNotMatch(@"no count", empty(), [FakeWithoutCount fake]);
 }
 
 
-- (void) testHasReadableDescription
+- (void)testHasReadableDescription
 {
     assertDescription(@"empty collection", empty());
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", empty(), @"bad");
 }
 
 
-- (void) testDescribesMismatch
+- (void)testDescribesMismatch
 {
     assertDescribeMismatch(@"was <FakeWithCount>", empty(), [FakeWithCount fakeWithCount:1]);
 }

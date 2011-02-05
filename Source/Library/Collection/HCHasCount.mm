@@ -15,13 +15,13 @@
 
 @implementation HCHasCount
 
-+ (id) hasCount:(id<HCMatcher>)matcher
++ (id)hasCount:(id<HCMatcher>)matcher
 {
     return [[[self alloc] initWithCount:matcher] autorelease];
 }
 
 
-- (id) initWithCount:(id<HCMatcher>)matcher
+- (id)initWithCount:(id<HCMatcher>)matcher
 {
     self = [super init];
     if (self != nil)
@@ -30,36 +30,36 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [countMatcher release];
     [super dealloc];
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     if (![item respondsToSelector:@selector(count)])
         return NO;
     
-    NSNumber* count = [NSNumber numberWithUnsignedInteger:[item count]];
+    NSNumber *count = [NSNumber numberWithUnsignedInteger:[item count]];
     return [countMatcher matches:count];
 }
 
 
-- (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     [super describeMismatchOf:item to:mismatchDescription];
     
     if ([item respondsToSelector:@selector(count)])
     {
-        NSNumber* count = [NSNumber numberWithUnsignedInteger:[item count]];
+        NSNumber *count = [NSNumber numberWithUnsignedInteger:[item count]];
         [[mismatchDescription appendText:@" with count of "] appendDescriptionOf:count];
     }
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"collection with count of "] appendDescriptionOf:countMatcher];
 }

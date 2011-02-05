@@ -20,7 +20,7 @@
 
 @implementation TestingBaseMatcher
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [description appendText:@"SOME DESCRIPTION"];
 }
@@ -33,9 +33,9 @@
 
 @implementation BaseMatcherTest
 
-- (void) testDescriptionShouldDescribeMatcher
+- (void)testDescriptionShouldDescribeMatcher
 {
-    TestingBaseMatcher* matcher = [[[TestingBaseMatcher alloc] init] autorelease];
+    TestingBaseMatcher *matcher = [[[TestingBaseMatcher alloc] init] autorelease];
     STAssertEqualObjects(@"SOME DESCRIPTION", [matcher description], nil);
 }
 

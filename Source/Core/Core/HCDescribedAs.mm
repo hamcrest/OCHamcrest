@@ -23,7 +23,7 @@ namespace {
 /**
     Splits string into decimal number (-1 if not found) and remaining string.
  */
-pair<int, NSString*> separate(NSString* component)
+pair<int, NSString*> separate(NSString *component)
 {
     unsigned int index = 0;
     bool gotIndex = false;
@@ -51,9 +51,9 @@ pair<int, NSString*> separate(NSString* component)
 
 @implementation HCDescribedAs
 
-+ (id) describedAs:(NSString*)description
-        forMatcher:(id<HCMatcher>)aMatcher
-        overValues:(NSArray*)templateValues
++ (id)describedAs:(NSString *)description
+       forMatcher:(id<HCMatcher>)aMatcher
+       overValues:(NSArray *)templateValues
 {
     return [[[self alloc] initWithDescription:description
                                    forMatcher:aMatcher
@@ -61,9 +61,9 @@ pair<int, NSString*> separate(NSString* component)
 }
 
 
-- (id) initWithDescription:(NSString*)description
+- (id)initWithDescription:(NSString *)description
                 forMatcher:(id<HCMatcher>)aMatcher
-                overValues:(NSArray*)templateValues
+                overValues:(NSArray *)templateValues
 {
     self = [super init];
     if (self != nil)
@@ -76,7 +76,7 @@ pair<int, NSString*> separate(NSString* component)
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [values release];
     [matcher release];
@@ -86,23 +86,23 @@ pair<int, NSString*> separate(NSString* component)
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     return [matcher matches:item];
 }
 
 
-- (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     [matcher describeMismatchOf:item to:mismatchDescription];
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
-    NSArray* components = [descriptionTemplate componentsSeparatedByString:@"%"];
+    NSArray *components = [descriptionTemplate componentsSeparatedByString:@"%"];
     bool firstTime = true;
-    for (NSString* oneComponent in components)
+    for (NSString *oneComponent in components)
     {
         if (firstTime)
         {
@@ -127,9 +127,9 @@ pair<int, NSString*> separate(NSString* component)
 
 //--------------------------------------------------------------------------------------------------
 
-OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString* description, id<HCMatcher> matcher, ...)
+OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString *description, id<HCMatcher> matcher, ...)
 {
-    NSMutableArray* valueList = [NSMutableArray array];
+    NSMutableArray *valueList = [NSMutableArray array];
     
     va_list args;
     va_start(args, matcher);

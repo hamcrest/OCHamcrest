@@ -11,9 +11,9 @@
 
 @interface HCSubstringMatcher : HCBaseMatcher
 {
-    NSString* substring;
+    NSString *substring;
 }
 
-- (id) initWithSubstring:(NSString*)aSubstring;
+- (id)initWithSubstring:(NSString *)aSubstring;
 
 @end

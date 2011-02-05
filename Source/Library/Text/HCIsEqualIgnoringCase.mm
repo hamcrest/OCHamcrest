@@ -15,13 +15,13 @@
 
 @implementation HCIsEqualIgnoringCase
 
-+ (id) isEqualIgnoringCase:(NSString*)aString
++ (id)isEqualIgnoringCase:(NSString *)aString
 {
     return [[[self alloc] initWithString:aString] autorelease];
 }
 
 
-- (id) initWithString:(NSString*)aString
+- (id)initWithString:(NSString *)aString
 {
     HCRequireNonNilObject(aString);
     
@@ -32,14 +32,14 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [string release];
     [super dealloc];
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     if (![item isKindOfClass:[NSString class]])
         return NO;
@@ -48,7 +48,7 @@
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[description appendDescriptionOf:string]
                   appendText:@" ignoring case"];
@@ -58,7 +58,7 @@
 
 //--------------------------------------------------------------------------------------------------
 
-OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString* string)
+OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString *string)
 {
     return [HCIsEqualIgnoringCase isEqualIgnoringCase:string];
 }

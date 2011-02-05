@@ -18,8 +18,8 @@
     id<HCMatcher> elementMatcher;
 }
 
-+ (id) isCollectionContaining:(id<HCMatcher>)anElementMatcher;
-- (id) initWithMatcher:(id<HCMatcher>)anElementMatcher;
++ (id)isCollectionContaining:(id<HCMatcher>)anElementMatcher;
+- (id)initWithMatcher:(id<HCMatcher>)anElementMatcher;
 
 @end
 

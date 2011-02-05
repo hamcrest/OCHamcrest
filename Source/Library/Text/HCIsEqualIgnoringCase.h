@@ -15,11 +15,11 @@
  */
 @interface HCIsEqualIgnoringCase : HCBaseMatcher
 {
-    NSString* string;
+    NSString *string;
 }
 
-+ (id) isEqualIgnoringCase:(NSString*)aString;
-- (id) initWithString:(NSString*)aString;
++ (id)isEqualIgnoringCase:(NSString *)aString;
+- (id)initWithString:(NSString *)aString;
 
 @end
 
@@ -32,7 +32,7 @@
     @see HCIsEqualIgnoringCase
     @ingroup text_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString* string);
+OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString *string);
 
 /**
     Synonym for @ref HC_equalToIgnoringCase, available if @c HC_SHORTHAND is defined.

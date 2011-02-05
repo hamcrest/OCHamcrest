@@ -18,14 +18,14 @@
 
 @implementation IsCloseToTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     double irrelevant = 0.1;
     return closeTo(irrelevant, irrelevant);
 }
 
 
-- (void) testEvaluatesToTrueIfArgumentIsEqualToADoubleValueWithinSomeError
+- (void)testEvaluatesToTrueIfArgumentIsEqualToADoubleValueWithinSomeError
 {
     id<HCMatcher> matcher = closeTo(1.0, 0.5);
     
@@ -38,7 +38,7 @@
 }
 
 
-- (void) testFailsIfMatchingAgainstNonNumber
+- (void)testFailsIfMatchingAgainstNonNumber
 {
     id<HCMatcher> matcher = closeTo(1.0, 0.5);
     
@@ -47,39 +47,39 @@
 }
 
 
-- (void) testHasAReadableDescription
+- (void)testHasAReadableDescription
 {
     assertDescription(@"a numeric value within <0.5> of <1>", closeTo(1.0, 0.5));
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(closeTo(1.0, 0.5), ([NSNumber numberWithDouble:1.0]));
 }
 
 
-- (void) testMismatchDescriptionShowsActualDeltaIfArgumentIsNumeric
+- (void)testMismatchDescriptionShowsActualDeltaIfArgumentIsNumeric
 {
     assertMismatchDescription(@"<1.7> differed by <0.7>",
                               (closeTo(1.0, 0.5)), [NSNumber numberWithDouble:1.7]);
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgumentIfNotNumeric
+- (void)testMismatchDescriptionShowsActualArgumentIfNotNumeric
 {
     assertMismatchDescription(@"was \"bad\"", (closeTo(1.0, 0.5)), @"bad");
 }
 
 
-- (void) testDescribeMismatchShowsActualDeltaIfArgumentIsNumeric
+- (void)testDescribeMismatchShowsActualDeltaIfArgumentIsNumeric
 {
     assertDescribeMismatch(@"<1.7> differed by <0.7>",
                            (closeTo(1.0, 0.5)), [NSNumber numberWithDouble:1.7]);
 }
 
 
-- (void) testDescribeMismatchShowsActualArgumentIfNotNumeric
+- (void)testDescribeMismatchShowsActualArgumentIfNotNumeric
 {
     assertDescribeMismatch(@"was \"bad\"", (closeTo(1.0, 0.5)), @"bad");
 }

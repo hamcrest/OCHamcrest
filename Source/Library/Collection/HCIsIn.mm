@@ -14,13 +14,13 @@
 
 @implementation HCIsIn
 
-+ (id) isInCollection:(id)aCollection
++ (id)isInCollection:(id)aCollection
 {
     return [[[self alloc] initWithCollection:aCollection] autorelease];
 }
 
 
-- (id) initWithCollection:(id)aCollection
+- (id)initWithCollection:(id)aCollection
 {
     if (![aCollection respondsToSelector:@selector(containsObject:)])
     {
@@ -35,7 +35,7 @@
     return self;
 }
 
-- (void) dealloc
+- (void)dealloc
 {
     [collection release];
     
@@ -43,13 +43,13 @@
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     return [collection containsObject:item];
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [description appendText:@"one of "];
     [description appendList:collection start:@"{" separator:@", " end:@"}"];

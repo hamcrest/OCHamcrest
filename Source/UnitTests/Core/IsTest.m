@@ -22,13 +22,13 @@
 
 @implementation IsTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return is(@"something");
 }
 
 
-- (void) testDelegatesMatchingToNestedMatcher
+- (void)testDelegatesMatchingToNestedMatcher
 {
     assertMatches(@"should match", is(equalTo(@"A")), @"A");
     assertMatches(@"should match", is(equalTo(@"B")), @"B");
@@ -37,13 +37,13 @@
 }
 
 
-- (void) testGeneratesIsPrefixInDescription
+- (void)testGeneratesIsPrefixInDescription
 {
     assertDescription(@"is \"A\"", is(equalTo(@"A")));
 }
 
 
-- (void) testProvidesConvenientShortcutForIsEqualTo
+- (void)testProvidesConvenientShortcutForIsEqualTo
 {
     assertMatches(@"should match", is(@"A"), @"A");
     assertMatches(@"should match", is(@"B"), @"B");
@@ -53,13 +53,13 @@
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(is(@"A"), @"A");
 }
 
 
-- (void) testDelegatesMismatchDescriptionToNestedMatcher
+- (void)testDelegatesMismatchDescriptionToNestedMatcher
 {
     assertMismatchDescription([NeverMatch mismatchDescription],
                               is([NeverMatch neverMatch]),
@@ -67,7 +67,7 @@
 }
 
 
-- (void) testDelegatesDescribeMismatchToNestedMatcher
+- (void)testDelegatesDescribeMismatchToNestedMatcher
 {
     assertDescribeMismatch([NeverMatch mismatchDescription],
                            is([NeverMatch neverMatch]),

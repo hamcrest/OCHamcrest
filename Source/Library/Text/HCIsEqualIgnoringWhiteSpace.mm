@@ -19,7 +19,7 @@ using namespace std;
 
 namespace {
 
-void removeTrailingSpace(NSMutableString* string)
+void removeTrailingSpace(NSMutableString *string)
 {
     NSUInteger length = [string length];
     if (length > 0)
@@ -31,10 +31,10 @@ void removeTrailingSpace(NSMutableString* string)
 }
 
 
-NSMutableString* stripSpace(NSString* string)
+NSMutableString *stripSpace(NSString *string)
 {
     NSUInteger length = [string length];
-    NSMutableString* result = [NSMutableString stringWithCapacity:length];
+    NSMutableString *result = [NSMutableString stringWithCapacity:length];
     bool lastWasSpace = true;
     for (NSUInteger charIndex = 0; charIndex < length; ++charIndex)
     {
@@ -62,13 +62,13 @@ NSMutableString* stripSpace(NSString* string)
 
 @implementation HCIsEqualIgnoringWhiteSpace
 
-+ (id) isEqualIgnoringWhiteSpace:(NSString*)aString
++ (id)isEqualIgnoringWhiteSpace:(NSString *)aString
 {
     return [[[self alloc] initWithString:aString] autorelease];
 }
 
 
-- (id) initWithString:(NSString*)aString
+- (id)initWithString:(NSString *)aString
 {
     HCRequireNonNilObject(aString);
     
@@ -82,7 +82,7 @@ NSMutableString* stripSpace(NSString* string)
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [strippedString release];
     [originalString release];
@@ -91,7 +91,7 @@ NSMutableString* stripSpace(NSString* string)
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     if (![item isKindOfClass:[NSString class]])
         return NO;
@@ -100,7 +100,7 @@ NSMutableString* stripSpace(NSString* string)
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[description appendDescriptionOf:originalString]
                   appendText:@" ignoring whitespace"];
@@ -110,7 +110,7 @@ NSMutableString* stripSpace(NSString* string)
 
 //--------------------------------------------------------------------------------------------------
 
-OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString* string)
+OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString *string)
 {
     return [HCIsEqualIgnoringWhiteSpace isEqualIgnoringWhiteSpace:string];
 }

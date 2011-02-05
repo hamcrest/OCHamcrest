@@ -14,13 +14,13 @@
 
 @implementation HCIsSame
 
-+ (id) isSameAs:(id)anObject;
++ (id)isSameAs:(id)anObject;
 {
     return [[[self alloc] initSameAs:anObject] autorelease];
 }
 
 
-- (id) initSameAs:(id)anObject
+- (id)initSameAs:(id)anObject
 {
     self = [super init];
     if (self != nil)
@@ -29,7 +29,7 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [object release];
     
@@ -37,20 +37,20 @@
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     return item == object;
 }
 
 
-- (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     [[mismatchDescription appendText:[NSString stringWithFormat:@"was 0x%0x ", item]]
                  appendDescriptionOf:item];
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:[NSString stringWithFormat:@"same instance as 0x%0x ", object]]
          appendDescriptionOf:object];

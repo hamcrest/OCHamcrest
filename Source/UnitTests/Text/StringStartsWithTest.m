@@ -13,7 +13,7 @@
 #import "AbstractMatcherTest.h"
 
 
-static NSString* EXCERPT = @"EXCERPT";
+static NSString *EXCERPT = @"EXCERPT";
 
 
 @interface StringStartsWithTest : AbstractMatcherTest
@@ -24,25 +24,25 @@ static NSString* EXCERPT = @"EXCERPT";
 
 @implementation StringStartsWithTest
 
-- (void) setUp
+- (void)setUp
 {
     matcher = [startsWith(EXCERPT) retain];
 }
 
 
-- (void) tearDown
+- (void)tearDown
 {
     [matcher release];
 }
 
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return matcher;
 }
 
 
-- (void) testEvaluatesToTrueIfArgumentContainsSpecifiedSubstring
+- (void)testEvaluatesToTrueIfArgumentContainsSpecifiedSubstring
 {
     assertMatches(@"excerpt at beginning", matcher, [EXCERPT stringByAppendingString:@"END"]);
     assertDoesNotMatch(@"excerpt at end", matcher, [@"START" stringByAppendingString:EXCERPT]);
@@ -55,37 +55,37 @@ static NSString* EXCERPT = @"EXCERPT";
 }
 
 
-- (void) testEvaluatesToTrueIfArgumentIsEqualToSubstring
+- (void)testEvaluatesToTrueIfArgumentIsEqualToSubstring
 {
     assertMatches(@"excerpt is entire string", matcher, EXCERPT);
 }
 
 
-- (void) testMatcherCreationRequiresNonNilArgument
+- (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(startsWith(nil), @"Should require non-nil argument");
 }
 
 
-- (void) testHasAReadableDescription
+- (void)testHasAReadableDescription
 {
     assertDescription(@"a string starting with \"EXCERPT\"", matcher);
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(matcher, EXCERPT);
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", matcher, @"bad");
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", matcher, @"bad");
 }

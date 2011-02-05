@@ -26,6 +26,6 @@
     
     @param description  The description to be built or appended to.
  */
-- (void) describeTo:(id<HCDescription>)description;
+- (void)describeTo:(id<HCDescription>)description;
 
 @end

@@ -21,23 +21,23 @@
 
 @implementation IsDictionaryContainingValueTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return hasValue(@"irrelevant");
 }
 
 
-- (void) testMatchesSingletonDictionaryContainingValue
+- (void)testMatchesSingletonDictionaryContainingValue
 {
-    NSDictionary* dict = [NSDictionary dictionaryWithObject:@"1" forKey:@"a"];
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:@"1" forKey:@"a"];
     
     assertMatches(@"same single key", hasValue(equalTo(@"1")), dict);
 }
 
 
-- (void) testMatchesDictionaryContainingValue
+- (void)testMatchesDictionaryContainingValue
 {
-    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
                                             @"1", @"a",
                                             @"2", @"b",
                                             @"3", @"c",
@@ -48,9 +48,9 @@
 }
 
 
-- (void) testProvidesConvenientShortcutForMatchingWithIsEqualTo
+- (void)testProvidesConvenientShortcutForMatchingWithIsEqualTo
 {
-    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
                                             @"1", @"a",
                                             @"2", @"b",
                                             @"3", @"c",
@@ -60,15 +60,15 @@
 }
 
 
-- (void) testDoesNotMatchEmptyDictionary
+- (void)testDoesNotMatchEmptyDictionary
 {
     assertDoesNotMatch(@"Empty dictionary", hasValue(@"Foo"), [NSDictionary dictionary]);
 }
 
 
-- (void) testDoesNotMatchDictionaryMissingValue
+- (void)testDoesNotMatchDictionaryMissingValue
 {
-    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
                                             @"1", @"a",
                                             @"2", @"b",
                                             @"3", @"c",
@@ -78,31 +78,31 @@
 }
 
 
-- (void) testMatcherCreationRequiresNonNilArgument
+- (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(hasValue(nil), @"Should require non-nil argument");
 }
 
 
-- (void) testHasReadableDescription
+- (void)testHasReadableDescription
 {
     assertDescription(@"dictionary containing value \"a\"", hasValue(@"a"));
 }
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:@"1", @"a", nil];
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"1", @"a", nil];
     assertNoMismatchDescription(hasValue(@"1"), dict);
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", hasValue(@"1"), @"bad");
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", hasValue(@"1"), @"bad");
 }

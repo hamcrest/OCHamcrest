@@ -17,13 +17,13 @@
 
 @implementation HCIsCollectionContaining
 
-+ (id) isCollectionContaining:(id<HCMatcher>)anElementMatcher
++ (id)isCollectionContaining:(id<HCMatcher>)anElementMatcher
 {
     return [[[self alloc] initWithMatcher:anElementMatcher] autorelease];
 }
 
 
-- (id) initWithMatcher:(id<HCMatcher>)anElementMatcher
+- (id)initWithMatcher:(id<HCMatcher>)anElementMatcher
 {
     self = [super init];
     if (self != nil)
@@ -32,14 +32,14 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [elementMatcher release];
     [super dealloc];
 }
 
 
-- (BOOL) matches:(id)collection
+- (BOOL)matches:(id)collection
 {
     if (![collection conformsToProtocol:@protocol(NSFastEnumeration)])
         return NO;
@@ -53,7 +53,7 @@
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"a collection containing "]
                   appendDescriptionOf:elementMatcher];
@@ -72,7 +72,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id item)
 
 OBJC_EXPORT id<HCMatcher> HC_hasItems(id items, ...)
 {
-    NSMutableArray* matchers = [NSMutableArray arrayWithObject:HC_hasItem(items)];
+    NSMutableArray *matchers = [NSMutableArray arrayWithObject:HC_hasItem(items)];
     
     va_list args;
     va_start(args, items);

@@ -15,13 +15,13 @@
 
 @implementation HCIs
 
-+ (id) is:(id<HCMatcher>)aMatcher
++ (id)is:(id<HCMatcher>)aMatcher
 {
     return [[[self alloc] initWithMatcher:aMatcher] autorelease];
 }
 
 
-- (id) initWithMatcher:(id<HCMatcher>)aMatcher
+- (id)initWithMatcher:(id<HCMatcher>)aMatcher
 {
     self = [super init];
     if (self != nil)
@@ -30,26 +30,26 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [matcher release];
     [super dealloc];
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     return [matcher matches:item];
 }
 
 
-- (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     [matcher describeMismatchOf:item to:mismatchDescription];
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"is "] appendDescriptionOf:matcher];
 }

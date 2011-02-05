@@ -23,6 +23,6 @@
 
     @param description  The description to be appended to.
  */
-- (void) describeTo:(id<HCDescription>)description __attribute__((deprecated));
+- (void)describeTo:(id<HCDescription>)description      __attribute__((deprecated));
 
 @end

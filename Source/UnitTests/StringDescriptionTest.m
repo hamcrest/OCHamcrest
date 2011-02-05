@@ -20,7 +20,7 @@
 
 @implementation FakeSelfDescribing
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [description appendText:@"DESCRIPTION"];
 }
@@ -38,19 +38,19 @@
 
 @implementation StringDescriptionTest
 
-- (void) setUp
+- (void)setUp
 {
     description = [[HCStringDescription alloc] init];
 }
 
 
-- (void) tearDown
+- (void)tearDown
 {
     [description release];
 }
 
 
-- (void) testDescribesNil
+- (void)testDescribesNil
 {
     [description appendDescriptionOf:nil];
     
@@ -58,7 +58,7 @@
 }
 
 
-- (void) testLetsSelfDescribingObjectDescribeItself
+- (void)testLetsSelfDescribingObjectDescribeItself
 {
     [description appendDescriptionOf:[[[FakeSelfDescribing alloc] init] autorelease]];
     
@@ -66,7 +66,7 @@
 }
 
 
-- (void) testDescribesStringInQuotes
+- (void)testDescribesStringInQuotes
 {    
     [description appendDescriptionOf:@"FOO"];
     
@@ -74,7 +74,7 @@
 }
 
 
-- (void) testWrapsNonSelfDescribingObjectInAngleBrackets
+- (void)testWrapsNonSelfDescribingObjectInAngleBrackets
 {    
     [description appendDescriptionOf:[NSNumber numberWithInt:42]];
     
@@ -82,7 +82,7 @@
 }
 
 
-- (void) testShouldNotAddAngleBracketsIfObjectDescriptionAlreadyHasThem
+- (void)testShouldNotAddAngleBracketsIfObjectDescriptionAlreadyHasThem
 {
     [description appendDescriptionOf:[[[NSObject alloc] init] autorelease]];
     NSPredicate *expected = [NSPredicate predicateWithFormat:

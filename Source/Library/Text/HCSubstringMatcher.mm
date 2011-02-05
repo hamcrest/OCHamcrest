@@ -14,13 +14,13 @@
 
 
 @interface HCSubstringMatcher (SubclassResponsibility)
-- (NSString*) relationship;
+- (NSString *)relationship;
 @end
 
 
 @implementation HCSubstringMatcher
 
-- (id) initWithSubstring:(NSString*)aSubstring
+- (id)initWithSubstring:(NSString *)aSubstring
 {
     HCRequireNonNilObject(aSubstring);
     
@@ -31,7 +31,7 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [substring release];
     
@@ -39,7 +39,7 @@
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[[[description appendText:@"a string "]
                     appendText:[self relationship]]

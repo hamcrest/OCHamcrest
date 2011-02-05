@@ -26,7 +26,7 @@
 
 @implementation QuietTestRun
 
-- (void) addException:(NSException *) anException
+- (void)addException:(NSException *) anException
 {	
     if ([[anException name] isEqualToString:SenTestFailureException])
 		++myFailureCount;
@@ -34,12 +34,12 @@
 		++myUnexpectedExceptionCount;
 }
 
-- (unsigned int) failureCount
+- (unsigned int)failureCount
 {
     return myFailureCount;
 }
 
-- (unsigned int) unexpectedExceptionCount
+- (unsigned int)unexpectedExceptionCount
 {
     return myUnexpectedExceptionCount;
 }
@@ -53,12 +53,12 @@
 
 @implementation QuietTest
 
-- (Class) testRunClass
+- (Class)testRunClass
 {
     return [QuietTestRun class];
 }
 
-- (void) twoFailingAssertions
+- (void)twoFailingAssertions
 {
     assertThat(@"1", equalTo(@"2"));
     assertThat(@"3", equalTo(@"4"));
@@ -73,17 +73,17 @@
 
 @implementation AssertThatTest
 
-- (void) testShouldBeSilentOnSuccessfulMatch
+- (void)testShouldBeSilentOnSuccessfulMatch
 {
     assertThat(@"foo", equalTo(@"foo"));
 }
 
 
-- (void) testAssertionErrorShouldDescribeExpectedAndActual
+- (void)testAssertionErrorShouldDescribeExpectedAndActual
 {
-    NSString* expected = @"EXPECTED";
-    NSString* actual = @"ACTUAL";
-    NSString* expectedMessage = @"Expected \"EXPECTED\", but was \"ACTUAL\"";
+    NSString *expected = @"EXPECTED";
+    NSString *actual = @"ACTUAL";
+    NSString *expectedMessage = @"Expected \"EXPECTED\", but was \"ACTUAL\"";
     
     @try
     {
@@ -99,24 +99,24 @@
 }
 
 
-- (void) testAssertion_recordingAllErrors
+- (void)testAssertion_recordingAllErrors
 {
-    QuietTest* testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
+    QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
     [testCase continueAfterFailure];    // Default behavior of OCUnit
     
-    QuietTestRun* testRun = (QuietTestRun*)[testCase run];
+    QuietTestRun *testRun = (QuietTestRun *)[testCase run];
 
     STAssertEquals([testRun failureCount], 2U, nil);
     STAssertEquals([testRun unexpectedExceptionCount], 0U, nil);
 }
 
 
-- (void) testAssertion_stoppingAtFirstError
+- (void)testAssertion_stoppingAtFirstError
 {
-    QuietTest* testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
+    QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
     [testCase raiseAfterFailure];
     
-    QuietTestRun* testRun = (QuietTestRun*)[testCase run];
+    QuietTestRun *testRun = (QuietTestRun *)[testCase run];
 
     STAssertEquals([testRun failureCount], 1U, nil);
     STAssertEquals([testRun unexpectedExceptionCount], 0U, nil);

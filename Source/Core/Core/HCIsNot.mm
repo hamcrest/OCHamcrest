@@ -15,13 +15,13 @@
 
 @implementation HCIsNot
 
-+ (id) isNot:(id<HCMatcher>)aMatcher
++ (id)isNot:(id<HCMatcher>)aMatcher
 {
     return [[[self alloc] initNot:aMatcher] autorelease];
 }
 
 
-- (id) initNot:(id<HCMatcher>)aMatcher
+- (id)initNot:(id<HCMatcher>)aMatcher
 {
     self = [super init];
     if (self != nil)
@@ -30,7 +30,7 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [matcher release];
     
@@ -38,13 +38,13 @@
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     return ![matcher matches:item];
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"not "] appendDescriptionOf:matcher];
 }

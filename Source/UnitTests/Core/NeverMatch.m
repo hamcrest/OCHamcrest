@@ -13,25 +13,25 @@
 
 @implementation NeverMatch
 
-+ (id) neverMatch
++ (id)neverMatch
 {
     return [[[self alloc] init] autorelease];
 }
 
 
-+ (NSString *) mismatchDescription
++ (NSString *)mismatchDescription
 {
     return @"NEVERMATCH";
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     return NO;
 }
 
 
-- (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     [mismatchDescription appendText:[NeverMatch mismatchDescription]];
 }

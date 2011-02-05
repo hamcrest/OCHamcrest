@@ -22,13 +22,13 @@
 
 @implementation DescribedAsTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return describedAs(@"irrelevant", anything(), nil);
 }
 
 
-- (void) testOverridesDescriptionOfNestedMatcherInitializerArgument
+- (void)testOverridesDescriptionOfNestedMatcherInitializerArgument
 {
     id<HCMatcher> m1 = describedAs(@"m1 description", anything(), nil);
     id<HCMatcher> m2 = describedAs(@"m2 description", [NeverMatch neverMatch], nil);
@@ -38,7 +38,7 @@
 }
 
 
-- (void) testAppendsValuesToDescription
+- (void)testAppendsValuesToDescription
 {
     id<HCMatcher> m = describedAs(@"value 1 = %0, value 2 = %1",
                                   anything(),
@@ -50,7 +50,7 @@
 }
 
 
-- (void) testHandlesSubstitutionAtBeginning
+- (void)testHandlesSubstitutionAtBeginning
 {
     id<HCMatcher> m = describedAs(@"%0ok",
                                   anything(),
@@ -61,7 +61,7 @@
 }
 
 
-- (void) testHandlesSubstitutionAtEnd
+- (void)testHandlesSubstitutionAtEnd
 {
     id<HCMatcher> m = describedAs(@"ok%0",
                                   anything(),
@@ -72,7 +72,7 @@
 }
 
 
-- (void) testDoesNotProcessPercentFollowedByNonDigit
+- (void)testDoesNotProcessPercentFollowedByNonDigit
 {
     id<HCMatcher> m = describedAs(@"With 33% remaining", anything(), nil);
     
@@ -80,7 +80,7 @@
 }
 
 
-- (void) testDelegatesMatchingToNestedMatcher
+- (void)testDelegatesMatchingToNestedMatcher
 {
     id<HCMatcher> m1 = describedAs(@"m1 description", anything(), nil);
     id<HCMatcher> m2 = describedAs(@"m2 description", [NeverMatch neverMatch], nil);
@@ -90,13 +90,13 @@
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(describedAs(@"irrelevant", anything(), nil), @"hi");
 }
 
 
-- (void) testDelegatesMismatchDescriptionToNestedMatcher
+- (void)testDelegatesMismatchDescriptionToNestedMatcher
 {
     assertMismatchDescription([NeverMatch mismatchDescription],
                               describedAs(@"irrelevant", [NeverMatch neverMatch], nil),
@@ -104,7 +104,7 @@
 }
 
 
-- (void) testDelegatesDescribeMismatchToNestedMatcher
+- (void)testDelegatesDescribeMismatchToNestedMatcher
 {
     assertDescribeMismatch([NeverMatch mismatchDescription],
                            describedAs(@"irrelevant", [NeverMatch neverMatch], nil),

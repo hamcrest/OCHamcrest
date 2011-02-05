@@ -14,21 +14,21 @@
 
 @implementation HCStringDescription
 
-+ (NSString*) stringFrom:(id<HCSelfDescribing>)selfDescribing
++ (NSString *)stringFrom:(id<HCSelfDescribing>)selfDescribing
 {
-    HCStringDescription* description = [HCStringDescription stringDescription];
+    HCStringDescription *description = [HCStringDescription stringDescription];
     [description appendDescriptionOf:selfDescribing];
     return [description description];
 }
 
 
-+ (HCStringDescription*) stringDescription
++ (HCStringDescription *)stringDescription
 {
     return [[[HCStringDescription alloc] init] autorelease];
 }
 
 
-- (id) init
+- (id)init
 {
     self = [super init];
     if (self != nil)
@@ -37,7 +37,7 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [accumulator release];
     
@@ -45,13 +45,13 @@
 }
 
 
-- (NSString*) description
+- (NSString *)description
 {
     return accumulator;
 }
 
 
-- (void) append:(NSString*)str
+- (void)append:(NSString *)str
 {
     [accumulator appendString:str];
 }

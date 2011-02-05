@@ -17,13 +17,13 @@
 
 @implementation HCIsCollectionOnlyContaining
 
-+ (id) isCollectionOnlyContaining:(id<HCMatcher>)aMatcher
++ (id)isCollectionOnlyContaining:(id<HCMatcher>)aMatcher
 {
     return [[[self alloc] initWithMatcher:aMatcher] autorelease];
 }
 
 
-- (id) initWithMatcher:(id<HCMatcher>)aMatcher
+- (id)initWithMatcher:(id<HCMatcher>)aMatcher
 {
     self = [super init];
     if (self != nil)
@@ -32,14 +32,14 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [matcher release];
     [super dealloc];
 }
 
 
-- (BOOL) matches:(id)collection
+- (BOOL)matches:(id)collection
 {
     if (![collection conformsToProtocol:@protocol(NSFastEnumeration)])
         return NO;
@@ -56,7 +56,7 @@
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"a collection containing items matching "]
                   appendDescriptionOf:matcher];
@@ -69,7 +69,7 @@
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id items, ...)
 {
     HCRequireNonNilObject(items);
-    NSMutableArray* matchers = [NSMutableArray arrayWithObject:HCWrapInMatcher(items)];
+    NSMutableArray *matchers = [NSMutableArray arrayWithObject:HCWrapInMatcher(items)];
     
     va_list args;
     va_start(args, items);

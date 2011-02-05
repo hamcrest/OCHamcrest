@@ -16,16 +16,16 @@
 
 @implementation HCIsDictionaryContaining
 
-+ (id) isDictionaryContainingKey:(id<HCMatcher>)aKeyMatcher
-                           value:(id<HCMatcher>)aValueMatcher;
++ (id)isDictionaryContainingKey:(id<HCMatcher>)aKeyMatcher
+                          value:(id<HCMatcher>)aValueMatcher;
 {
     return [[[self alloc]
                     initWithKeyMatcher:aKeyMatcher valueMatcher:aValueMatcher] autorelease];
 }
 
 
-- (id) initWithKeyMatcher:(id<HCMatcher>)aKeyMatcher
-             valueMatcher:(id<HCMatcher>)aValueMatcher;
+- (id)initWithKeyMatcher:(id<HCMatcher>)aKeyMatcher
+            valueMatcher:(id<HCMatcher>)aValueMatcher;
 {
     self = [super init];
     if (self != nil)
@@ -37,7 +37,7 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [valueMatcher release];
     [keyMatcher release];
@@ -46,7 +46,7 @@
 }
 
 
-- (BOOL) matches:(id)dict
+- (BOOL)matches:(id)dict
 {
     if ([dict isKindOfClass:[NSDictionary class]])
     {
@@ -60,7 +60,7 @@
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[[[[description appendText:@"dictionary containing ["]
                      appendDescriptionOf:keyMatcher]

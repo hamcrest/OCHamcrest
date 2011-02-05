@@ -22,15 +22,15 @@
 
 @implementation IsDictionaryContainingTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return hasEntry(@"irrelevant", @"irrelevant");
 }
 
 
-- (void) testMatchesDictionaryContainingMatchingKeyAndValue
+- (void)testMatchesDictionaryContainingMatchingKeyAndValue
 {
-    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
                                             @"1", @"a",
                                             @"2", @"b",
                                             nil];
@@ -41,9 +41,9 @@
 }
 
 
-- (void) testProvidesConvenientShortcutForMatchingWithIsEqualTo
+- (void)testProvidesConvenientShortcutForMatchingWithIsEqualTo
 {
-    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
                                             @"1", @"a",
                                             @"2", @"b",
                                             nil];
@@ -54,39 +54,39 @@
 }
 
 
-- (void) testShouldNotMatchNil
+- (void)testShouldNotMatchNil
 {
     assertDoesNotMatch(@"nil", hasEntry(anything(), anything()), nil);
 }
 
 
-- (void) testMatcherCreationRequiresNonNilArguments
+- (void)testMatcherCreationRequiresNonNilArguments
 {    
     STAssertThrows(hasEntry(nil, @"value"), @"Should require non-nil argument");
     STAssertThrows(hasEntry(@"key", nil), @"Should require non-nil argument");
 }
 
 
-- (void) testHasReadableDescription
+- (void)testHasReadableDescription
 {
     assertDescription(@"dictionary containing [\"a\": \"1\"]", hasEntry(@"a", @"1"));
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:@"1", @"a", nil];
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"1", @"a", nil];
     assertNoMismatchDescription(hasEntry(@"a", @"1"), dict);
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", hasEntry(@"a", @"1"), @"bad");
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", hasEntry(@"a", @"1"), @"bad");
 }

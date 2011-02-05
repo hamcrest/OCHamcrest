@@ -22,39 +22,39 @@
 
 @implementation IsEqualIgnoringWhiteSpaceTest
 
-- (void) setUp
+- (void)setUp
 {
     matcher = [equalToIgnoringWhiteSpace(@"Hello World   how\n are we? ") retain];
 }
 
 
-- (void) tearDown
+- (void)tearDown
 {
     [matcher release];
 }
 
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return matcher;
 }
 
 
-- (void) testPassesIfWordsAreSameButWhitespaceDiffers
+- (void)testPassesIfWordsAreSameButWhitespaceDiffers
 {
     assertMatches(@"less whitespace", matcher, @"Hello World how are we?");
     assertMatches(@"more whitespace", matcher, @"   Hello World   how are \n\n\twe?");
 }
 
 
-- (void) testFailsIfTextOtherThanWhitespaceDiffers
+- (void)testFailsIfTextOtherThanWhitespaceDiffers
 {
     assertDoesNotMatch(@"wrong word", matcher, @"Hello PLANET how are we?");
     assertDoesNotMatch(@"incomplete", matcher, @"Hello World how are we");
 }
 
 
-- (void) testFailsIfWhitespaceIsAddedOrRemovedInMidWord
+- (void)testFailsIfWhitespaceIsAddedOrRemovedInMidWord
 {
     assertDoesNotMatch(@"need whitespace between Hello and World",
                        matcher, @"HelloWorld how are we?");
@@ -63,37 +63,37 @@
 }
 
 
-- (void) testMatcherCreationRequiresNonNilArgument
+- (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(equalToIgnoringWhiteSpace(nil), @"Should require non-nil argument");
 }
 
 
-- (void) testFailsIfMatchingAgainstNonString
+- (void)testFailsIfMatchingAgainstNonString
 {
     assertDoesNotMatch(@"non-string", matcher, [NSNumber numberWithInt:3]);
 }
 
 
-- (void) testHasAReadableDescription
+- (void)testHasAReadableDescription
 {
     assertDescription(@"\"Hello World   how\\n are we? \" ignoring whitespace", matcher);
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(equalToIgnoringWhiteSpace(@"foo\nbar"), @"foo bar");
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", matcher, @"bad");
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", matcher, @"bad");
 }

@@ -75,7 +75,7 @@
 
 @implementation BiscuitTest
 
-- (void) testEquals
+- (void)testEquals
 {
     Biscuit* theBiscuit = [Biscuit biscuitNamed:@"Ginger"];
     Biscuit* myBiscuit = [Biscuit biscuitNamed:@"Ginger"];

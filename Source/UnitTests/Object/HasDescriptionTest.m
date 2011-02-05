@@ -16,14 +16,14 @@
 #import "AbstractMatcherTest.h"
 
 
-static NSString* fakeDescription = @"DESCRIPTION";
+static NSString *fakeDescription = @"DESCRIPTION";
 
 @interface FakeWithDescription : NSObject
 @end
 
 @implementation FakeWithDescription
-+ (id) fake  { return [[[self alloc] init] autorelease]; }
-- (NSString*) description  { return fakeDescription; }
++ (id)fake  { return [[[self alloc] init] autorelease]; }
+- (NSString *)description  { return fakeDescription; }
 @end
 
 //--------------------------------------------------------------------------------------------------
@@ -33,13 +33,13 @@ static NSString* fakeDescription = @"DESCRIPTION";
 
 @implementation HasDescriptionTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return hasDescription(equalTo(@"irrelevant"));
 }
 
 
-- (void) testPassesResultOfDescriptionToNestedMatcher
+- (void)testPassesResultOfDescriptionToNestedMatcher
 {
     FakeWithDescription* fake = [FakeWithDescription fake];
     assertMatches(@"equal", hasDescription(equalTo(fakeDescription)), fake);
@@ -47,7 +47,7 @@ static NSString* fakeDescription = @"DESCRIPTION";
 }
 
 
-- (void) testProvidesConvenientShortcutForDescriptionEqualTo
+- (void)testProvidesConvenientShortcutForDescriptionEqualTo
 {
     FakeWithDescription* fake = [FakeWithDescription fake];
     assertMatches(@"equal", hasDescription(fakeDescription), fake);
@@ -55,32 +55,32 @@ static NSString* fakeDescription = @"DESCRIPTION";
 }
 
 
-- (void) testMismatchDoesNotRepeatTheDescription
+- (void)testMismatchDoesNotRepeatTheDescription
 {
     FakeWithDescription* fake = [FakeWithDescription fake];
     assertMismatchDescription(@"was \"DESCRIPTION\"", hasDescription(@"foo"), fake);
 }
 
 
-- (void) testHasReadableDescription
+- (void)testHasReadableDescription
 {
     assertDescription(@"object with description \"foo\"", hasDescription(@"foo"));
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(hasDescription(@"DESCRIPTION"), [FakeWithDescription fake]);
 }
 
 
-- (void) testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", hasDescription(@"foo"), @"bad");
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", hasDescription(@"foo"), @"bad");
 }

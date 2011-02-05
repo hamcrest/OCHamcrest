@@ -18,13 +18,13 @@
 
 @implementation OrderingComparisonTest
 
-- (id<HCMatcher>) createMatcher
+- (id<HCMatcher>)createMatcher
 {
     return nil;     // Ignore the inherited tests; they don't work well for this class.
 }
 
 
-- (void) testComparesObjectsForGreaterThan
+- (void)testComparesObjectsForGreaterThan
 {
     assertMatches(@"match", greaterThan([NSNumber numberWithInt:1]), [NSNumber numberWithInt:2]);
     assertDoesNotMatch(@"no match", greaterThan([NSNumber numberWithInt:1]),
@@ -32,7 +32,7 @@
 }
 
 
-- (void) testComparesObjectsForLessThan
+- (void)testComparesObjectsForLessThan
 {
     assertMatches(@"match", lessThan([NSNumber numberWithInt:1]), [NSNumber numberWithInt:0]);
     assertDoesNotMatch(@"no match", lessThan([NSNumber numberWithInt:1]),
@@ -40,7 +40,7 @@
 }
 
 
-- (void) testComparesObjectsForGreaterThanOrEqualTo
+- (void)testComparesObjectsForGreaterThanOrEqualTo
 {
     assertMatches(@"match", greaterThanOrEqualTo([NSNumber numberWithInt:1]),
                   [NSNumber numberWithInt:2]);
@@ -51,7 +51,7 @@
 }
 
 
-- (void) testComparesObjectsForLessThanOrEqualTo
+- (void)testComparesObjectsForLessThanOrEqualTo
 {
     assertMatches(@"match", lessThanOrEqualTo([NSNumber numberWithInt:1]),
                   [NSNumber numberWithInt:0]);
@@ -62,27 +62,27 @@
 }
 
 
-- (void) testDoesNotMatchNil
+- (void)testDoesNotMatchNil
 {
     assertDoesNotMatch(@"nil argument", greaterThan([NSNumber numberWithInt:1]), nil);
 }
 
 
-- (void) testSupportsDifferentTypesOfComparableObjects
+- (void)testSupportsDifferentTypesOfComparableObjects
 {
     assertMatches(@"strings", greaterThan(@"bb"), @"cc");
     assertMatches(@"dates", lessThan([NSDate date]), [NSDate distantPast]);
 }
 
 
-- (void) testMatcherCreationRequiresObjectWithCompareMethod
+- (void)testMatcherCreationRequiresObjectWithCompareMethod
 {
     id object = [[[NSObject alloc] init] autorelease];
     STAssertThrows(greaterThan(object), @"object does not have -compare: method");
 }
 
 
-- (void) testHasAReadableDescription
+- (void)testHasAReadableDescription
 {
     id one = [NSNumber numberWithInt:1];
     
@@ -93,7 +93,7 @@
 }
 
 
-- (void) testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     id one = [NSNumber numberWithInt:1];
 
@@ -104,7 +104,7 @@
 }
 
 
-- (void) testMismatchDescription
+- (void)testMismatchDescription
 {
     id one = [NSNumber numberWithInt:1];
     
@@ -115,7 +115,7 @@
 }
 
 
-- (void) testDescribeMismatch
+- (void)testDescribeMismatch
 {
     id one = [NSNumber numberWithInt:1];
     

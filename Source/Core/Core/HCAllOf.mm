@@ -15,13 +15,13 @@
 
 @implementation HCAllOf
 
-+ (id) allOf:(NSArray*)theMatchers
++ (id)allOf:(NSArray *)theMatchers
 {
     return [[[self alloc] initWithMatchers:theMatchers] autorelease];
 }
 
 
-- (id) initWithMatchers:(NSArray*)theMatchers
+- (id)initWithMatchers:(NSArray *)theMatchers
 {
     self = [super init];
     if (self != nil)
@@ -30,20 +30,20 @@
 }
 
 
-- (void) dealloc
+- (void)dealloc
 {
     [matchers release];
     [super dealloc];
 }
 
 
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     return [self matches:item describingMismatchTo:nil];
 }
 
 
-- (BOOL) matches:(id)item describingMismatchTo:(id<HCDescription>)mismatchDescription
+- (BOOL)matches:(id)item describingMismatchTo:(id<HCDescription>)mismatchDescription
 {
     for (id<HCMatcher> oneMatcher in matchers)
     {
@@ -58,13 +58,13 @@
 }
 
 
-- (void) describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     (void) [self matches:item describingMismatchTo:mismatchDescription];
 }
 
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [description appendList:matchers start:@"(" separator:@" and " end:@")"];
 }
@@ -77,7 +77,7 @@ OBJC_EXPORT id<HCMatcher> HC_allOf(id<HCMatcher> matcher, ...)
 {
     va_list args;
     va_start(args, matcher);
-    NSArray* matcherList = HCCollectMatchers(matcher, args);
+    NSArray *matcherList = HCCollectMatchers(matcher, args);
     va_end(args);
     
     return [HCAllOf allOf:matcherList];
