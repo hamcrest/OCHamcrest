@@ -37,9 +37,20 @@
         [self toCSyntaxString:value];
     else
     {
-        [self append:@"<"];
-        [self append:[value description]];
-        [self append:@">"];
+        NSString *description = [value description];
+        NSUInteger descriptionLen = [description length];
+        if (descriptionLen > 0
+            && [description characterAtIndex:0] == '<'
+            && [description characterAtIndex:descriptionLen - 1] == '>')
+        {
+            [self append:description];
+        }
+        else
+        {
+            [self append:@"<"];
+            [self append:[value description]];
+            [self append:@">"];
+        }
     }
     return self;
 }

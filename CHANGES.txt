@@ -10,6 +10,7 @@ Hamcrest information: http://code.google.com/p/hamcrest/
   - Fixed "describedAs" and "is" to use their nested matchers to generate mismatch descriptions.
   - "sameInstance" is more readable, and includes object memory addresses.
   - If object has a count, "hasCount" mismatch describes actual count.
+  - Don't wrap angle brackets around a description that already has them.
   - Improved readability of several matchers.
 
 * "instanceOf" now guards against nil being passed as the expected type.

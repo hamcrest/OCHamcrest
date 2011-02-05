@@ -81,4 +81,13 @@
     STAssertEqualObjects(@"<42>", [description description], nil);
 }
 
+
+- (void) testShouldNotAddAngleBracketsIfObjectDescriptionAlreadyHasThem
+{
+    [description appendDescriptionOf:[[[NSObject alloc] init] autorelease]];
+    NSPredicate *expected = [NSPredicate predicateWithFormat:
+                             @"SELF MATCHES '<NSObject: 0x[0-9a-fA-F]+>'"];
+    STAssertTrue([expected evaluateWithObject:[description description]], nil);
+}
+
 @end
