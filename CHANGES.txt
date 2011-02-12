@@ -5,7 +5,7 @@ Hamcrest information: http://code.google.com/p/hamcrest/
 
 == Version 1.4 ==  *IN PROGRESS*
 
-* Xcode 4 support: Added arguments to macros for code completion. Also added complete descriptions to macros for Quick Help.
+* Added complete descriptions to macros so they appear in Xcode 4 Quick Help. (Couldn't add arguments to macros without breaking backwards compatibility.)
 
 
 == Version 1.3 ==

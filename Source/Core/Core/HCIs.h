@@ -56,6 +56,7 @@ assertThat(cheese, is(smelly))
 OBJC_EXPORT id<HCMatcher> HC_is(id matcherOrValue);
 
 /**
+    is(matcherOrValue) -
     Decorates another matcher, or provides a shortcut to the frequently used @ref is(equalTo(x)).
 
     If @a matcherOrValue is a matcher, its behavior is retained, but the test may be more expressive.
@@ -74,5 +75,5 @@ assertThat(cheese, is(smelly))
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define is(matcherOrValue)  HC_is(matcherOrValue)
+    #define is HC_is
 #endif

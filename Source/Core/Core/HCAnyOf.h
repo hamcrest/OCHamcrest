@@ -40,6 +40,7 @@
 OBJC_EXPORT id<HCMatcher> HC_anyOf(id<HCMatcher> matcher1, ...);
 
 /**
+    anyOf(matcher1, ..., nil) -
     Evaluates to @c YES if @em any of the given matchers evaluate to @c YES.
  
     Synonym for @ref HC_anyOf, available if @c HC_SHORTHAND is defined.
@@ -48,5 +49,5 @@ OBJC_EXPORT id<HCMatcher> HC_anyOf(id<HCMatcher> matcher1, ...);
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define anyOf(matcher1, ...)  HC_anyOf(matcher1, ##__VA_ARGS__)
+    #define anyOf HC_anyOf
 #endif

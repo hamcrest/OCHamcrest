@@ -48,7 +48,8 @@
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id itemMatcher1, ...);
 
 /**
-    Matches collections that only contain elements satisfying any of a list of matchers.
+    onlyContains(itemMatcher1, ..., nil)
+    matches collections that only contain elements satisfying any of a list of matchers.
 
     For example,
     <code>[NSArray arrayWithObjects:@"c", "a", @"b", nil]</code>
@@ -65,5 +66,5 @@ OBJC_EXPORT id<HCMatcher> HC_onlyContains(id itemMatcher1, ...);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define onlyContains(itemMatcher1, ...)  HC_onlyContains(itemMatcher1, ##__VA_ARGS__)
+    #define onlyContains HC_onlyContains
 #endif

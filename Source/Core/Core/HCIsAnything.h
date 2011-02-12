@@ -45,7 +45,7 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define anything()  HC_anything()
+    #define anything() HC_anything()
 #endif
 
 
@@ -60,6 +60,7 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
 OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *aDescription);
 
 /**
+    anythingWithDescription(description) -
     This matcher always evaluates to @c YES.
 
     Synonym for @ref HC_anythingWithDescription, available if @c HC_SHORTHAND is defined.
@@ -68,5 +69,5 @@ OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *aDescription);
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define anythingWithDescription(description)  HC_anythingWithDescription(description)
+    #define anythingWithDescription HC_anythingWithDescription
 #endif

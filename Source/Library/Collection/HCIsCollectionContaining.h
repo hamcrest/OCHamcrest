@@ -36,6 +36,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasItem(id matcherOrValue);
 
 /**
+    hasItem(matcherOrValue) -
     Matches a collection if any element satifies a given matcher.
 
     Synonym for @ref HC_hasItem, available if @c HC_SHORTHAND is defined.
@@ -44,7 +45,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id matcherOrValue);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasItem(matcherOrValue)  HC_hasItem(matcherOrValue)
+    #define hasItem HC_hasItem
 #endif
 
 
@@ -59,6 +60,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id matcherOrValue);
 OBJC_EXPORT id<HCMatcher> HC_hasItems(id matcherOrValue1, ...);
 
 /**
+    hasItems(matcherOrValue1, ..., nil) -
     Matches a collection if all matchers are satisfied by any of the collection's elements.
 
     Synonym for @ref HC_hasItems, available if @c HC_SHORTHAND is defined.
@@ -67,5 +69,5 @@ OBJC_EXPORT id<HCMatcher> HC_hasItems(id matcherOrValue1, ...);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasItems(matcherOrValue1, ...)  HC_hasItems(matcherOrValue1, ##__VA_ARGS__)
+    #define hasItems HC_hasItems
 #endif

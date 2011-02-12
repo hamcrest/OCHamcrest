@@ -44,6 +44,7 @@ assertThat(cheese, isNot(smelly))
 OBJC_EXPORT id<HCMatcher> HC_isNot(id matcherOrValue);
 
 /**
+    isNot(matcherOrValue) -
     Inverts the rule, or provides a shortcut to the frequently used isNot(equalTo(x)).
 
     For example:
@@ -60,5 +61,5 @@ assertThat(cheese, isNot(smelly))
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define isNot(matcherOrValue)  HC_isNot(matcherOrValue)
+    #define isNot HC_isNot
 #endif

@@ -35,6 +35,7 @@
 OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class type);
 
 /**
+    instanceOf(type) -
     Is the value an instance of a particular type?
 
     Synonym for @ref HC_instanceOf, available if @c HC_SHORTHAND is defined.
@@ -42,5 +43,5 @@ OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class type);
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define instanceOf(type)  HC_instanceOf(type)
+    #define instanceOf HC_instanceOf
 #endif

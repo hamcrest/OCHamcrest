@@ -40,6 +40,7 @@
 OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
 
 /**
+    equalTo(object) -
     Is the object equal to another object, as tested by the @c -isEqual: method?
 
     If the given object is @c nil, the matcher will match @c nil.
@@ -49,5 +50,5 @@ OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalTo(object)  HC_equalTo(object)
+    #define equalTo HC_equalTo
 #endif

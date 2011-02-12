@@ -36,6 +36,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasKey(id matcherOrValue);
 
 /**
+    hasKey(matcherOrValue) -
     Matches dictionaries containing a key satisfying a given matcher.
 
     Synonym for @ref HC_hasKey, available if @c HC_SHORTHAND is defined.
@@ -44,5 +45,5 @@ OBJC_EXPORT id<HCMatcher> HC_hasKey(id matcherOrValue);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasKey(matcherOrValue)  HC_hasKey(matcherOrValue)
+    #define hasKey HC_hasKey
 #endif

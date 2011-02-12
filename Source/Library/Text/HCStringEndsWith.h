@@ -31,6 +31,7 @@
 OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString *aSubstring);
 
 /**
+    endsWith(substring) -
     Tests if the argument is a string that ends with a substring.
 
     Synonym for @ref HC_endsWith, available if @c HC_SHORTHAND is defined.
@@ -38,5 +39,5 @@ OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString *aSubstring);
     @ingroup text_matchers
  */
 #ifdef HC_SHORTHAND
-    #define endsWith(substring)  HC_endsWith(substring)
+    #define endsWith HC_endsWith
 #endif

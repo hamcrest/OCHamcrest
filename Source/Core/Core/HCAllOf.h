@@ -40,6 +40,7 @@
 OBJC_EXPORT id<HCMatcher> HC_allOf(id<HCMatcher> matcher1, ...);
 
 /**
+    allOf(matcher1, ..., nil) -
     Evaluates to @c YES only if @em all of the given matchers evaluate to @c YES.
 
     Synonym for @ref HC_allOf, available if @c HC_SHORTHAND is defined.
@@ -48,5 +49,5 @@ OBJC_EXPORT id<HCMatcher> HC_allOf(id<HCMatcher> matcher1, ...);
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define allOf(matcher1, ...)  HC_allOf(matcher1, ##__VA_ARGS__)
+    #define allOf HC_allOf
 #endif

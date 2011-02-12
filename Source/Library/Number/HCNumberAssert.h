@@ -23,14 +23,14 @@ OBJC_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,
     HC_assertThatBoolWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatBool(actual, matcher) -
     Asserts that @c BOOL actual value, converted to an @c NSNumber, satisfies matcher.
 
     Synonym for @ref HC_assertThatBool, available if @c HC_SHORTHAND is defined.
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatBool(actual, matcher)  \
-        HC_assertThatBoolWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatBool HC_assertThatBool
 #endif
 
 
@@ -47,14 +47,14 @@ OBJC_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
     HC_assertThatCharWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatChar(actual, matcher) -
     Asserts that @c char actual value, converted to an @c NSNumber, satisfies matcher.
 
     Synonym for @ref HC_assertThatChar, available if @c HC_SHORTHAND is defined.
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatChar(actual, matcher)  \
-        HC_assertThatCharWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatChar HC_assertThatChar
 #endif
 
 
@@ -71,14 +71,14 @@ OBJC_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actual,
     HC_assertThatDoubleWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    HC_assertThatDouble(actual, matcher) -
     Asserts that @c double actual value, converted to an @c NSNumber, satisfies matcher.
 
     Synonym for @ref HC_assertThatDouble, available if @c HC_SHORTHAND is defined.
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatDouble(actual, matcher)  \
-        HC_assertThatDoubleWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatDouble HC_assertThatDouble
 #endif
 
 
@@ -95,14 +95,14 @@ OBJC_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
     HC_assertThatFloatWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatFloat(actual, matcher) -
     Asserts that @c float actual value, converted to an @c NSNumber, satisfies matcher.
 
     Synonym for @ref HC_assertThatFloat, available if @c HC_SHORTHAND is defined.
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatFloat(actual, matcher)  \
-        HC_assertThatFloatWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatFloat HC_assertThatFloat
 #endif
 
 
@@ -119,14 +119,14 @@ OBJC_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
     HC_assertThatIntWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatInt(actual, matcher) -
     Asserts that @c int actual value, converted to an @c NSNumber, satisfies matcher.
 
     Synonym for @ref HC_assertThatInt, available if @c HC_SHORTHAND is defined.
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatInt(actual, matcher)  \
-        HC_assertThatIntWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatInt HC_assertThatInt
 #endif
 
 
@@ -143,14 +143,14 @@ OBJC_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
     HC_assertThatLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatLong(actual, matcher) -
     Asserts that @c long actual value, converted to an @c NSNumber, satisfies matcher.
 
     Synonym for @ref HC_assertThatLong, available if @c HC_SHORTHAND is defined.
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatLong(actual, matcher)  \
-        HC_assertThatLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatLong HC_assertThatLong
 #endif
 
 
@@ -168,6 +168,7 @@ OBJC_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long actual
     HC_assertThatLongLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatLongLong(actual, matcher) -
     Asserts that <code>long long</code> actual value, converted to an @c NSNumber, satisfies
     matcher.
 
@@ -175,8 +176,7 @@ OBJC_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long actual
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatLongLong(actual, matcher)  \
-        HC_assertThatLongLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatLongLong HC_assertThatLongLong
 #endif
 
 
@@ -193,14 +193,14 @@ OBJC_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
     HC_assertThatShortWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatShort(actual, matcher) -
     Asserts that @c short actual value, converted to an @c NSNumber, satisfies matcher.
 
     Synonym for @ref HC_assertThatShort, available if @c HC_SHORTHAND is defined.
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatShort(actual, matcher)  \
-        HC_assertThatShortWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatShort HC_assertThatShort
 #endif
 
 
@@ -218,6 +218,7 @@ OBJC_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsigned cha
     HC_assertThatUnsignedCharWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatUnsignedChar(actual, matcher) -
     Asserts that <code>unsigned char</code> actual value, converted to an @c NSNumber, satisfies
     matcher.
 
@@ -225,8 +226,7 @@ OBJC_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsigned cha
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatUnsignedChar(actual, matcher)  \
-        HC_assertThatUnsignedCharWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatUnsignedChar HC_assertThatUnsignedChar
 #endif
 
 
@@ -244,6 +244,7 @@ OBJC_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigned int 
     HC_assertThatUnsignedIntWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatUnsignedInt(actual, matcher) -
     Asserts that <code>unsigned int</code> actual value, converted to an @c NSNumber, satisfies
     matcher.
 
@@ -251,8 +252,7 @@ OBJC_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigned int 
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatUnsignedInt(actual, matcher)  \
-        HC_assertThatUnsignedIntWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatUnsignedInt HC_assertThatUnsignedInt
 #endif
 
 
@@ -270,6 +270,7 @@ OBJC_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsigned lon
     HC_assertThatUnsignedLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatUnsignedLong(actual, matcher) -
     Asserts that <code>unsigned long</code> actual value, converted to an @c NSNumber, satisfies
     matcher.
 
@@ -277,8 +278,7 @@ OBJC_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsigned lon
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatUnsignedLong(actual, matcher)  \
-        HC_assertThatUnsignedLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatUnsignedLong HC_assertThatUnsignedLong
 #endif
 
 
@@ -296,6 +296,7 @@ OBJC_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, unsigned
     HC_assertThatUnsignedLongLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatUnsignedLongLong(actual, matcher) -
     Asserts that <code>unsigned long long</code> actual value, converted to an @c NSNumber,
     satisfies matcher.
 
@@ -303,8 +304,7 @@ OBJC_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, unsigned
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatUnsignedLongLong(actual, matcher)  \
-        HC_assertThatUnsignedLongLongWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatUnsignedLongLong HC_assertThatUnsignedLongLong
 #endif
 
 
@@ -322,6 +322,7 @@ OBJC_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsigned sh
     HC_assertThatUnsignedShortWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatUnsignedShort(actual, matcher) -
     Asserts that <code>unsigned short</code> actual value, converted to an @c NSNumber, satisfies
     matcher.
 
@@ -329,8 +330,7 @@ OBJC_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsigned sh
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatUnsignedShort(actual, matcher)  \
-        HC_assertThatUnsignedShortWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatUnsignedShort HC_assertThatUnsignedShort
 #endif
 
 
@@ -347,14 +347,14 @@ OBJC_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger actual,
     HC_assertThatIntegerWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatInteger(actual, matcher) -
     Asserts that @c NSInteger actual value, converted to an @c NSNumber, satisfies matcher.
 
     Synonym for @ref HC_assertThatInteger, available if @c HC_SHORTHAND is defined.
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatInteger(actual, matcher)  \
-        HC_assertThatIntegerWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatInteger HC_assertThatInteger
 #endif
 
 
@@ -371,12 +371,12 @@ OBJC_EXPORT void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUIntege
     HC_assertThatUnsignedIntegerWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
+    assertThatUnsignedInteger(actual, matcher) -
     Asserts that @c NSUInteger actual value, converted to an @c NSNumber, satisfies matcher.
 
     Synonym for @ref HC_assertThatUnsignedInteger, available if @c HC_SHORTHAND is defined.
     @ingroup integration_numeric
  */
 #ifdef HC_SHORTHAND
-    #define assertThatUnsignedInteger(actual, matcher)  \
-        HC_assertThatUnsignedIntegerWithLocation(self, actual, matcher, __FILE__, __LINE__)
+    #define assertThatUnsignedInteger HC_assertThatUnsignedInteger
 #endif

@@ -35,7 +35,8 @@
 */
 OBJC_EXPORT id<HCMatcher> HC_hasDescription(id matcherOrValue);
 
-    /**
+/**
+    hasDescription(matcherOrValue) -
     Evaluates whether [item description] satisfies a given matcher.
 
     Examples:
@@ -46,7 +47,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasDescription(id matcherOrValue);
     @param matcherOrValue  A matcher, or a value for @ref equalTo matching.
     @see HCHasDescription
     @ingroup object_matchers
-    */
+ */
 #ifdef HC_SHORTHAND
     #define hasDescription(matcherOrValue)  HC_hasDescription(matcherOrValue)
 #endif

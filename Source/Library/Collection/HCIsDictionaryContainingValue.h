@@ -36,6 +36,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasValue(id matcherOrValue);
 
 /**
+    hasValue(matcherOrValue) -
     Matches dictionaries containing a value satisfying a given matcher.
 
     Synonym for @ref HC_hasValue, available if @c HC_SHORTHAND is defined.
@@ -44,5 +45,5 @@ OBJC_EXPORT id<HCMatcher> HC_hasValue(id matcherOrValue);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasValue(matcherOrValue)  HC_hasValue(matcherOrValue)
+    #define hasValue HC_hasValue
 #endif

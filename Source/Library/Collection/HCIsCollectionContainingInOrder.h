@@ -36,7 +36,8 @@
 OBJC_EXPORT id<HCMatcher> HC_contains(id itemMatcher1, ...);
 
 /**
-    Matches a collection if its elements, in order, satisfy a list of matchers.
+    contains(itemMatcher1, ..., nil)
+    matches a collection if its elements, in order, satisfy a list of matchers.
 
     Synonym for @ref HC_contains, available if @c HC_SHORTHAND is defined.
     @param itemMatcher1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
@@ -44,5 +45,5 @@ OBJC_EXPORT id<HCMatcher> HC_contains(id itemMatcher1, ...);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define contains(itemMatcher1, ...)  HC_contains(itemMatcher1, ##__VA_ARGS__)
+    #define contains HC_contains
 #endif
