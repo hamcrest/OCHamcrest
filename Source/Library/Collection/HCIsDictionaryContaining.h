@@ -41,9 +41,14 @@
 OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcher, id valueMatcher);
 
 /**
+    Matches dictionaries containing a key-value pair satisfying a given pair of matchers.
+
     Synonym for @ref HC_hasEntry, available if @c HC_SHORTHAND is defined.
+    @param keyMatcher    A matcher - or a value for @ref equalTo matching - for the key.
+    @param valueMatcher  A matcher - or a value for @ref equalTo matching - for the value.
+    @see HCIsDictionaryContaining
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasEntry HC_hasEntry
+    #define hasEntry(keyMatcher, valueMatcher)  HC_hasEntry(keyMatcher, valueMatcher)
 #endif

@@ -36,9 +36,12 @@
 OBJC_EXPORT id<HCMatcher> HC_closeTo(double aValue, double aDelta);
 
 /**
+    Is the argument a number close to a value, within some delta?
+
     Synonym for @ref HC_closeTo, available if @c HC_SHORTHAND is defined.
+    @see HCIsCloseTo
     @ingroup number_matchers
-*/
+ */
 #ifdef HC_SHORTHAND
-    #define closeTo HC_closeTo
+    #define closeTo(value, delta)  HC_closeTo(value, delta)
 #endif

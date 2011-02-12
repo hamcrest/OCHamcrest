@@ -35,9 +35,12 @@
 OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object);
 
 /**
+    Evaluates to @c YES only when the argument is this same object.
+
     Synonym for @ref HC_sameInstance, available if @c HC_SHORTHAND is defined.
+    @see HCIsSame
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define sameInstance HC_sameInstance
+    #define sameInstance(object)  HC_sameInstance(object)
 #endif

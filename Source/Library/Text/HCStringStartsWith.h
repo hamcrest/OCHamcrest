@@ -31,9 +31,12 @@
 OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString *aSubstring);
 
 /**
+    Tests if the argument is a string that starts with a substring.
+
     Synonym for @ref HC_startsWith, available if @c HC_SHORTHAND is defined.
+    @see HCStringStartsWith
     @ingroup text_matchers
  */
 #ifdef HC_SHORTHAND
-    #define startsWith HC_startsWith
+    #define startsWith(substring)  HC_startsWith(substring)
 #endif

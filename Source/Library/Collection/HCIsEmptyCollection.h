@@ -32,9 +32,12 @@
 OBJC_EXPORT id<HCMatcher> HC_empty();
 
 /**
+    Matches empty collection.
+
     Synonym for @ref HC_empty, available if @c HC_SHORTHAND is defined.
+    @see HCIsEmptyCollection
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define empty HC_empty
+    #define empty()  HC_empty()
 #endif

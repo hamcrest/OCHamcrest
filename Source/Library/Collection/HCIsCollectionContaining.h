@@ -29,18 +29,22 @@
     Matches a collection if any element satifies a given matcher.
  
     @b Synonym: @ref hasItem
-    @param item  A matcher, or a value for @ref equalTo matching.
+    @param matcherOrValue  A matcher, or a value for @ref equalTo matching.
     @see HCIsCollectionContaining
     @ingroup collection_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_hasItem(id item);
+OBJC_EXPORT id<HCMatcher> HC_hasItem(id matcherOrValue);
 
 /**
+    Matches a collection if any element satifies a given matcher.
+
     Synonym for @ref HC_hasItem, available if @c HC_SHORTHAND is defined.
+    @param matcherOrValue  A matcher, or a value for @ref equalTo matching.
+    @see HCIsCollectionContaining
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasItem HC_hasItem
+    #define hasItem(matcherOrValue)  HC_hasItem(matcherOrValue)
 #endif
 
 
@@ -48,16 +52,20 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id item);
     Matches a collection if all matchers are satisfied by any of the collection's elements.
  
     @b Synonym: @ref hasItems
-    @param items  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
+    @param matcherOrValue1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCIsCollectionContaining
     @ingroup collection_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_hasItems(id items, ...);
+OBJC_EXPORT id<HCMatcher> HC_hasItems(id matcherOrValue1, ...);
 
 /**
+    Matches a collection if all matchers are satisfied by any of the collection's elements.
+
     Synonym for @ref HC_hasItems, available if @c HC_SHORTHAND is defined.
+    @param matcherOrValue1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
+    @see HCIsCollectionContaining
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasItems HC_hasItems
+    #define hasItems(matcherOrValue1, ...)  HC_hasItems(matcherOrValue1, ##__VA_ARGS__)
 #endif

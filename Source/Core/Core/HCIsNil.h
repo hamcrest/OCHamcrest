@@ -31,11 +31,14 @@
 OBJC_EXPORT id<HCMatcher> HC_nilValue();
 
 /**
+    Matches if the value is @c nil.
+
     Synonym for @ref HC_nilValue, available if @c HC_SHORTHAND is defined.
+    @see HCIsNil
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define nilValue HC_nilValue
+    #define nilValue()  HC_nilValue()
 #endif
 
 
@@ -50,9 +53,13 @@ OBJC_EXPORT id<HCMatcher> HC_nilValue();
 OBJC_EXPORT id<HCMatcher> HC_notNilValue();
 
 /**
+    Matches if the value is not @c nil.
+
     Synonym for @ref HC_notNilValue, available if @c HC_SHORTHAND is defined.
+    @see HCIsNil
+    @see HCIsNot
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define notNilValue HC_notNilValue
+    #define notNilValue()  HC_notNilValue()
 #endif

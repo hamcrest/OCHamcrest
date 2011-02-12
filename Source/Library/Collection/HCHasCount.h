@@ -35,11 +35,14 @@
 OBJC_EXPORT id<HCMatcher> HC_hasCount(id<HCMatcher> matcher);
 
 /**
+    Matches collections for which @c -count satisfies a given matcher.
+
     Synonym for @ref HC_hasCount, available if @c HC_SHORTHAND is defined.
+    @see HCHasCount
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasCount HC_hasCount
+    #define hasCount(matcher)  HC_hasCount(matcher)
 #endif
 
 
@@ -53,9 +56,12 @@ OBJC_EXPORT id<HCMatcher> HC_hasCount(id<HCMatcher> matcher);
 OBJC_EXPORT id<HCMatcher> HC_hasCountOf(NSUInteger count);
 
 /**
+    Matches collections for which @c -count equals a given NSUInteger count.
+
     Synonym for @ref HC_hasCountOf, available if @c HC_SHORTHAND is defined.
+    @see HCHasCount
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasCountOf HC_hasCountOf
+    #define hasCountOf(count)  HC_hasCountOf(count)
 #endif

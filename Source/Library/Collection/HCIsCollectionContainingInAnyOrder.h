@@ -29,16 +29,20 @@
     Matches a collection if its elements, in any order, satisfy a list of matchers.
  
     @b Synonym: @ref containsInAnyOrder
-    @param items  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
+    @param itemMatcher1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCIsCollectionContainingInAnyOrder
     @ingroup collection_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_containsInAnyOrder(id items, ...);
+OBJC_EXPORT id<HCMatcher> HC_containsInAnyOrder(id itemMatcher1, ...);
 
 /**
+    Matches a collection if its elements, in any order, satisfy a list of matchers.
+
     Synonym for @ref HC_containsInAnyOrder, available if @c HC_SHORTHAND is defined.
+    @param itemMatcher1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
+    @see HCIsCollectionContainingInAnyOrder
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define containsInAnyOrder HC_containsInAnyOrder
+    #define containsInAnyOrder(itemMatcher1, ...)  HC_containsInAnyOrder(itemMatcher1,  ##__VA_ARGS__)
 #endif

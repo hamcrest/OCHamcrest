@@ -36,11 +36,14 @@
 OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString *string);
 
 /**
+    Tests if a string is equal to another string, ignoring any changes in whitespace.
+
     Synonym for @ref HC_equalToIgnoringWhiteSpace, available if @c HC_SHORTHAND is defined.
+    @see HCIsEqualIgnoringWhiteSpace
     @ingroup text_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToIgnoringWhiteSpace HC_equalToIgnoringWhiteSpace
+    #define equalToIgnoringWhiteSpace(string)  HC_equalToIgnoringWhiteSpace(string)
 #endif
 
 
