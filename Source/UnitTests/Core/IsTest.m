@@ -37,9 +37,9 @@
 }
 
 
-- (void)testGeneratesIsPrefixInDescription
+- (void)testDescriptionShouldPassThrough
 {
-    assertDescription(@"is \"A\"", is(equalTo(@"A")));
+    assertDescription(@"\"A\"", is(equalTo(@"A")));
 }
 
 
@@ -49,7 +49,7 @@
     assertMatches(@"should match", is(@"B"), @"B");
     assertDoesNotMatch(@"should not match", is(@"A"), @"B");
     assertDoesNotMatch(@"should not match", is(@"B"), @"A");
-    assertDescription(@"is \"A\"", is(@"A"));
+    assertDescription(@"\"A\"", is(@"A"));
 }
 
 

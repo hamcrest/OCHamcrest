@@ -51,7 +51,7 @@
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [[description appendText:@"is "] appendDescriptionOf:matcher];
+    [description appendDescriptionOf:matcher];
 }
 
 @end
