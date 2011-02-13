@@ -17,7 +17,7 @@
 @implementation HCIsDictionaryContaining
 
 + (id)isDictionaryContainingKey:(id<HCMatcher>)aKeyMatcher
-                          value:(id<HCMatcher>)aValueMatcher;
+                          value:(id<HCMatcher>)aValueMatcher
 {
     return [[[self alloc]
                     initWithKeyMatcher:aKeyMatcher valueMatcher:aValueMatcher] autorelease];
@@ -25,7 +25,7 @@
 
 
 - (id)initWithKeyMatcher:(id<HCMatcher>)aKeyMatcher
-            valueMatcher:(id<HCMatcher>)aValueMatcher;
+            valueMatcher:(id<HCMatcher>)aValueMatcher
 {
     self = [super init];
     if (self != nil)

@@ -50,6 +50,10 @@
 		087F5C6212C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087F5C6012C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.mm */; };
 		089B9C781298B73200D4F34F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2A4B030D8B679900051BCF /* Foundation.framework */; };
 		08B5181912A058FA00147210 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08B5181812A058FA00147210 /* LICENSE.txt */; };
+		08BE96821307AB4D0076D726 /* IsDictionaryContainingEntriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 08BE96811307AB4D0076D726 /* IsDictionaryContainingEntriesTest.m */; };
+		08BE96901307ABC70076D726 /* HCIsDictionaryContainingEntries.h in Headers */ = {isa = PBXBuildFile; fileRef = 08BE968E1307ABC70076D726 /* HCIsDictionaryContainingEntries.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08BE96911307ABC70076D726 /* HCIsDictionaryContainingEntries.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08BE968F1307ABC70076D726 /* HCIsDictionaryContainingEntries.mm */; };
+		08BE96921307ABD00076D726 /* HCIsDictionaryContainingEntries.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08BE968F1307ABC70076D726 /* HCIsDictionaryContainingEntries.mm */; };
 		08C131E312CC201A0068FC9D /* HCIsCollectionContainingInAnyOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087F5C6012C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.mm */; };
 		08C131E412CC201C0068FC9D /* HCIsCollectionContainingInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087F5B1C12C53618008B6B72 /* HCIsCollectionContainingInOrder.mm */; };
 		08DB90DB12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08DB90DA12CE8B0900EFB75C /* HCRequireNonNilObject.mm */; };
@@ -239,6 +243,9 @@
 		087F5C5F12C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContainingInAnyOrder.h; sourceTree = "<group>"; };
 		087F5C6012C6C349008B6B72 /* HCIsCollectionContainingInAnyOrder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsCollectionContainingInAnyOrder.mm; sourceTree = "<group>"; };
 		08B5181812A058FA00147210 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = SOURCE_ROOT; };
+		08BE96811307AB4D0076D726 /* IsDictionaryContainingEntriesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsDictionaryContainingEntriesTest.m; sourceTree = "<group>"; };
+		08BE968E1307ABC70076D726 /* HCIsDictionaryContainingEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingEntries.h; sourceTree = "<group>"; };
+		08BE968F1307ABC70076D726 /* HCIsDictionaryContainingEntries.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsDictionaryContainingEntries.mm; sourceTree = "<group>"; };
 		08DB90D912CE8B0900EFB75C /* HCRequireNonNilObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilObject.h; sourceTree = "<group>"; };
 		08DB90DA12CE8B0900EFB75C /* HCRequireNonNilObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCRequireNonNilObject.mm; sourceTree = "<group>"; };
 		08EDD34412E24C0800785BD5 /* StringDescriptionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringDescriptionTest.m; sourceTree = "<group>"; };
@@ -617,8 +624,9 @@
 				087F5C5412C6C2E0008B6B72 /* IsCollectionContainingInAnyOrderTest.m */,
 				087F5B1612C53484008B6B72 /* IsCollectionContainingInOrderTest.m */,
 				0F2A4DE00D8C9DE100051BCF /* IsCollectionOnlyContainingTest.m */,
-				0FE5E3540D95D7470021A644 /* IsDictionaryContainingKeyTest.m */,
 				0F3855BA0D98CD29006235A6 /* IsDictionaryContainingTest.m */,
+				08BE96811307AB4D0076D726 /* IsDictionaryContainingEntriesTest.m */,
+				0FE5E3540D95D7470021A644 /* IsDictionaryContainingKeyTest.m */,
 				0F3855870D98C183006235A6 /* IsDictionaryContainingValueTest.m */,
 				086CB35212CFDF2000DCCB68 /* IsEmptyCollectionTest.m */,
 				0F2FCF670D9212C700443CD7 /* IsInTest.m */,
@@ -641,6 +649,8 @@
 				0F2A4DE80D8C9E8D00051BCF /* HCIsCollectionOnlyContaining.mm */,
 				0F2EBB260D9E0BD700340F95 /* HCIsDictionaryContaining.h */,
 				0F2EBB270D9E0BD700340F95 /* HCIsDictionaryContaining.mm */,
+				08BE968E1307ABC70076D726 /* HCIsDictionaryContainingEntries.h */,
+				08BE968F1307ABC70076D726 /* HCIsDictionaryContainingEntries.mm */,
 				0FE5E3580D95D7A50021A644 /* HCIsDictionaryContainingKey.h */,
 				0FE5E3590D95D7A50021A644 /* HCIsDictionaryContainingKey.mm */,
 				0F3855970D98C4C4006235A6 /* HCIsDictionaryContainingValue.h */,
@@ -756,6 +766,7 @@
 				08DB90DC12CE8B0900EFB75C /* HCRequireNonNilObject.h in Headers */,
 				086CB26B12CFBE9100DCCB68 /* HCHasCount.h in Headers */,
 				086CB3A112CFE5D700DCCB68 /* HCIsEmptyCollection.h in Headers */,
+				08BE96901307ABC70076D726 /* HCIsDictionaryContainingEntries.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -975,6 +986,7 @@
 				08DB90DB12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */,
 				086CB26D12CFBE9100DCCB68 /* HCHasCount.mm in Sources */,
 				086CB3A012CFE5D700DCCB68 /* HCIsEmptyCollection.mm in Sources */,
+				08BE96921307ABD00076D726 /* HCIsDictionaryContainingEntries.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1020,6 +1032,7 @@
 				086CB37412CFE22500DCCB68 /* FakeWithCount.m in Sources */,
 				08EDD34512E24C0800785BD5 /* StringDescriptionTest.m in Sources */,
 				08EDD38A12E2B90300785BD5 /* NeverMatch.m in Sources */,
+				08BE96821307AB4D0076D726 /* IsDictionaryContainingEntriesTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1068,6 +1081,7 @@
 				08DB90DD12CE8B0900EFB75C /* HCRequireNonNilObject.mm in Sources */,
 				086CB26C12CFBE9100DCCB68 /* HCHasCount.mm in Sources */,
 				086CB3A212CFE5D700DCCB68 /* HCIsEmptyCollection.mm in Sources */,
+				08BE96911307ABC70076D726 /* HCIsDictionaryContainingEntries.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

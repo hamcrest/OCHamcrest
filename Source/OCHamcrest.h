@@ -42,6 +42,7 @@
 #import <OCHamcrest/HCIsCollectionContainingInOrder.h>
 #import <OCHamcrest/HCIsCollectionOnlyContaining.h>
 #import <OCHamcrest/HCIsDictionaryContaining.h>
+#import <OCHamcrest/HCIsDictionaryContainingEntries.h>
 #import <OCHamcrest/HCIsDictionaryContainingKey.h>
 #import <OCHamcrest/HCIsDictionaryContainingValue.h>
 #import <OCHamcrest/HCIsEmptyCollection.h>
