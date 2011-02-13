@@ -69,7 +69,7 @@
 
 - (void)testHasReadableDescription
 {
-    assertDescription(@"dictionary containing [\"a\": \"1\"]", hasEntry(@"a", @"1"));
+    assertDescription(@"dictionary containing { \"a\" = \"1\"; }", hasEntry(@"a", @"1"));
 }
 
 

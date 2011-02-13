@@ -62,11 +62,11 @@
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [[[[[description appendText:@"dictionary containing ["]
+    [[[[[description appendText:@"dictionary containing { "]
                      appendDescriptionOf:keyMatcher]
-                     appendText:@": "]
+                     appendText:@" = "]
                      appendDescriptionOf:valueMatcher]
-                     appendText:@"]"];
+                     appendText:@"; }"];
 }
 
 @end

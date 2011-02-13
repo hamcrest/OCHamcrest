@@ -5,10 +5,12 @@ Hamcrest information: http://code.google.com/p/hamcrest/
 
 == Version 1.4 ==  *IN PROGRESS*
 
-* Added complete descriptions to macros so they appear in Xcode 4 Quick Help. (Couldn't add arguments to macros without breaking backwards compatibility.)
-
 * New matchers:
  - "hasEntries" matches dictionary containing key-value pairs satisfying a given list of alternating keys and value matchers.
+
+* Added complete descriptions to macros so they appear in Xcode 4 Quick Help. (Couldn't add arguments to macros without breaking backwards compatibility.)
+
+* Improved description of "hasEntry", removing colon so it doesn't get truncated in Xcode's error display.
 
 
 == Version 1.3 ==
