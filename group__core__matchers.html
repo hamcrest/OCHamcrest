@@ -61,35 +61,39 @@ Classes</h2></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga5ca6068b496deb040e97e16551fbdb99">allOf</a>&nbsp;&nbsp;&nbsp;HC_allOf</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__core__matchers.html#ga5816bf8a494cd5703bb9099f8e03fe90">HC_allOf</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga5ca6068b496deb040e97e16551fbdb99"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">allOf(matcher1, ...) - Evaluates to <code>YES</code> only if <em>all</em> of the given matchers evaluate to <code>YES</code>.  <a href="#ga5ca6068b496deb040e97e16551fbdb99"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gae78b2508e6bbafe28ede0bcb821a67b4">anyOf</a>&nbsp;&nbsp;&nbsp;HC_anyOf</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">anyOf(matcher1, ...) - Evaluates to <code>YES</code> if <em>any</em> of the given matchers evaluate to <code>YES</code>.  <a href="#gae78b2508e6bbafe28ede0bcb821a67b4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga4a703ae0e2036cc226769fca4a6da0d7">describedAs</a>&nbsp;&nbsp;&nbsp;HC_describedAs</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__core__matchers.html#ga66f87e2b6e9a5e6afd01add2ba476d62">HC_describedAs</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga4a703ae0e2036cc226769fca4a6da0d7"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">describedAs(description, matcher, ...) - Wraps an existing matcher and overrides the description when it fails.  <a href="#ga4a703ae0e2036cc226769fca4a6da0d7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07">is</a>&nbsp;&nbsp;&nbsp;HC_is</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__core__matchers.html#gac6ceae01ca24e18a75c355fb177378af">HC_is</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga9870e0caa2f8e3e5700c4cbb21d73c07"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(matcherOrValue) - Decorates another matcher, or provides a shortcut to the frequently used is(equa...">is(matcherOrValue)</a> - Decorates another matcher, or provides a shortcut to the frequently used <a class="el" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07">is</a>(<a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(x)</a>).  <a href="#ga9870e0caa2f8e3e5700c4cbb21d73c07"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga46b873bc5b4acc4eabc88b72a08ce750">anything</a>()&nbsp;&nbsp;&nbsp;HC_anything()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This matcher always evaluates to <code>YES</code>.  <a href="#ga46b873bc5b4acc4eabc88b72a08ce750"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga35062b182f95e8a2cd6d6270b00e57e5">anythingWithDescription</a>&nbsp;&nbsp;&nbsp;HC_anythingWithDescription</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__core__matchers.html#ga6d521143f3c02c4e4352a9a00148adfc">HC_anythingWithDescription</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga35062b182f95e8a2cd6d6270b00e57e5"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__core__matchers.html#ga35062b182f95e8a2cd6d6270b00e57e5" title="anythingWithDescription(description) - This matcher always evaluates to YES.">anythingWithDescription(description)</a> - This matcher always evaluates to <code>YES</code>.  <a href="#ga35062b182f95e8a2cd6d6270b00e57e5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a>&nbsp;&nbsp;&nbsp;HC_equalTo</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__core__matchers.html#gae581d9388fa7485b616876b0b4d0cb99">HC_equalTo</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#gaed554671d587236694fbb3723fe2f8a4"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(object)</a> - Is the object equal to another object, as tested by the <code>-isEqual</code>: method?  <a href="#gaed554671d587236694fbb3723fe2f8a4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga684af0672998244dbcf0a4e1467de892">instanceOf</a>&nbsp;&nbsp;&nbsp;HC_instanceOf</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__core__matchers.html#ga4fa80c6d464fc4ae6c028c9af2029c41">HC_instanceOf</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga684af0672998244dbcf0a4e1467de892"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gaa0f27a0925da3c9ee015da2ad4176111">nilValue</a>&nbsp;&nbsp;&nbsp;HC_nilValue</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__core__matchers.html#ga6228653e2adb57814043e181dc10ab6d">HC_nilValue</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#gaa0f27a0925da3c9ee015da2ad4176111"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga44fe6140b02868e95a1faf7922060270">notNilValue</a>&nbsp;&nbsp;&nbsp;HC_notNilValue</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__core__matchers.html#gab28820ba91abed936972a6e200124b78">HC_notNilValue</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga44fe6140b02868e95a1faf7922060270"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__core__matchers.html#ga684af0672998244dbcf0a4e1467de892" title="instanceOf(type) - Is the value an instance of a particular type?">instanceOf(type)</a> - Is the value an instance of a particular type?  <a href="#ga684af0672998244dbcf0a4e1467de892"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga5760ec0b6b3c0602d7063a7fc6dcaac9">nilValue</a>()&nbsp;&nbsp;&nbsp;HC_nilValue()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches if the value is <code>nil</code>.  <a href="#ga5760ec0b6b3c0602d7063a7fc6dcaac9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga9ffdd81537ca99784c8d81bd239f4942">notNilValue</a>()&nbsp;&nbsp;&nbsp;HC_notNilValue()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches if the value is not <code>nil</code>.  <a href="#ga9ffdd81537ca99784c8d81bd239f4942"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga9fce91422af9e0ceee72859379886c06">isNot</a>&nbsp;&nbsp;&nbsp;HC_isNot</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__core__matchers.html#ga450a7fc202ee5c16f843f7f1ac954a35">HC_isNot</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga9fce91422af9e0ceee72859379886c06"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__core__matchers.html#ga9fce91422af9e0ceee72859379886c06" title="isNot(matcherOrValue) - Inverts the rule, or provides a shortcut to the frequently used isNot(equalTo...">isNot(matcherOrValue)</a> - Inverts the rule, or provides a shortcut to the frequently used isNot(<a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(x)</a>).  <a href="#ga9fce91422af9e0ceee72859379886c06"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gae8cfe45f9aee662b08b823587aea8a34">sameInstance</a>&nbsp;&nbsp;&nbsp;HC_sameInstance</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__core__matchers.html#ga5c40465d1c802417675362d451c89db7">HC_sameInstance</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#gae8cfe45f9aee662b08b823587aea8a34"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__core__matchers.html#gae8cfe45f9aee662b08b823587aea8a34" title="sameInstance(object) - Evaluates to YES only when the argument is this same object.">sameInstance(object)</a> - Evaluates to <code>YES</code> only when the argument is this same object.  <a href="#gae8cfe45f9aee662b08b823587aea8a34"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga5816bf8a494cd5703bb9099f8e03fe90">HC_allOf</a> (id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt; matcher,...)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evaluates to <code>YES</code> only if <em>all</em> of the passed in matchers evaluate to <code>YES</code>.  <a href="#ga5816bf8a494cd5703bb9099f8e03fe90"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gaa500981bcf9910ea6346d3f71784fcb6">HC_anyOf</a> (id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt; matcher,...)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evaluates to <code>YES</code> if <em>any</em> of the passed in matchers evaluate to <code>YES</code>.  <a href="#gaa500981bcf9910ea6346d3f71784fcb6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gaecefcbbc58128ef1591a1827e33df291">HC_allOf</a> (id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt; matcher1,...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evaluates to <code>YES</code> only if <em>all</em> of the given matchers evaluate to <code>YES</code>.  <a href="#gaecefcbbc58128ef1591a1827e33df291"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga9949586392bfc3661ca1fca0f4614277">HC_anyOf</a> (id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt; matcher1,...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evaluates to <code>YES</code> if <em>any</em> of the given matchers evaluate to <code>YES</code>.  <a href="#ga9949586392bfc3661ca1fca0f4614277"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga66f87e2b6e9a5e6afd01add2ba476d62">HC_describedAs</a> (NSString *description, id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt; matcher,...)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wraps an existing matcher and overrides the description when it fails.  <a href="#ga66f87e2b6e9a5e6afd01add2ba476d62"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gac6ceae01ca24e18a75c355fb177378af">HC_is</a> (id matcherOrValue)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Decorates another matcher, or provides a shortcut to the frequently used <a class="el" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07">is</a>(<a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="Synonym for HC_equalTo, available if HC_SHORTHAND is defined.">equalTo(x)</a>).  <a href="#gac6ceae01ca24e18a75c355fb177378af"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Decorates another matcher, or provides a shortcut to the frequently used <a class="el" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07">is</a>(<a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(x)</a>).  <a href="#gac6ceae01ca24e18a75c355fb177378af"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gacb5551422545c0f15db2a8deb3dfef8f">HC_anything</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This matcher always evaluates to <code>YES</code>.  <a href="#gacb5551422545c0f15db2a8deb3dfef8f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga6d521143f3c02c4e4352a9a00148adfc">HC_anythingWithDescription</a> (NSString *aDescription)</td></tr>
@@ -103,7 +107,7 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gab28820ba91abed936972a6e200124b78">HC_notNilValue</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches if the value is not <code>nil</code>.  <a href="#gab28820ba91abed936972a6e200124b78"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga450a7fc202ee5c16f843f7f1ac954a35">HC_isNot</a> (id matcherOrValue)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inverts the rule, or provides a shortcut to the frequently used isNot(<a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="Synonym for HC_equalTo, available if HC_SHORTHAND is defined.">equalTo(x)</a>).  <a href="#ga450a7fc202ee5c16f843f7f1ac954a35"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inverts the rule, or provides a shortcut to the frequently used isNot(<a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(x)</a>).  <a href="#ga450a7fc202ee5c16f843f7f1ac954a35"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga5c40465d1c802417675362d451c89db7">HC_sameInstance</a> (id object)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evaluates to <code>YES</code> only when the argument is this same object.  <a href="#ga5c40465d1c802417675362d451c89db7"></a><br/></td></tr>
 </table>
@@ -121,7 +125,59 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Synonym for <a class="el" href="group__core__matchers.html#ga5816bf8a494cd5703bb9099f8e03fe90">HC_allOf</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<p>allOf(matcher1, ...) - Evaluates to <code>YES</code> only if <em>all</em> of the given matchers evaluate to <code>YES</code>. </p>
+<p>Synonym for <a class="el" href="group__core__matchers.html#gaecefcbbc58128ef1591a1827e33df291">HC_allOf</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>matcher1</em>&nbsp;</td><td>Comma-separated list of matchers ending with <code>nil</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_all_of.html" title="Calculates the logical conjunction of multiple matchers.">HCAllOf</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae78b2508e6bbafe28ede0bcb821a67b4"></a><!-- doxytag: member="HCAnyOf.h::anyOf" ref="gae78b2508e6bbafe28ede0bcb821a67b4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define anyOf&nbsp;&nbsp;&nbsp;HC_anyOf</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>anyOf(matcher1, ...) - Evaluates to <code>YES</code> if <em>any</em> of the given matchers evaluate to <code>YES</code>. </p>
+<p>Synonym for <a class="el" href="group__core__matchers.html#ga9949586392bfc3661ca1fca0f4614277">HC_anyOf</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>matcher1</em>&nbsp;</td><td>Comma-separated list of matchers ending with <code>nil</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_any_of.html" title="Calculates the logical disjunction of multiple matchers.">HCAnyOf</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga46b873bc5b4acc4eabc88b72a08ce750"></a><!-- doxytag: member="HCIsAnything.h::anything" ref="ga46b873bc5b4acc4eabc88b72a08ce750" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define anything</td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;HC_anything()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This matcher always evaluates to <code>YES</code>. </p>
+<p>Synonym for <a class="el" href="group__core__matchers.html#gacb5551422545c0f15db2a8deb3dfef8f">HC_anything</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_anything.html" title="A matcher that always returns YES.">HCIsAnything</a> </dd></dl>
 
 </div>
 </div>
@@ -136,7 +192,15 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p><a class="el" href="group__core__matchers.html#ga35062b182f95e8a2cd6d6270b00e57e5" title="anythingWithDescription(description) - This matcher always evaluates to YES.">anythingWithDescription(description)</a> - This matcher always evaluates to <code>YES</code>. </p>
 <p>Synonym for <a class="el" href="group__core__matchers.html#ga6d521143f3c02c4e4352a9a00148adfc">HC_anythingWithDescription</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>aDescription</em>&nbsp;</td><td>A meaningful string used when describing itself. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_anything.html" title="A matcher that always returns YES.">HCIsAnything</a> </dd></dl>
 
 </div>
 </div>
@@ -151,7 +215,10 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>describedAs(description, matcher, ...) - Wraps an existing matcher and overrides the description when it fails. </p>
+<p>Optional values following the matcher are substituted for %0, %1, etc., in the description. The last argument must be nil.</p>
 <p>Synonym for <a class="el" href="group__core__matchers.html#ga66f87e2b6e9a5e6afd01add2ba476d62">HC_describedAs</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_described_as.html" title="Provides a custom description to another matcher.">HCDescribedAs</a> </dd></dl>
 
 </div>
 </div>
@@ -166,7 +233,10 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p><a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(object)</a> - Is the object equal to another object, as tested by the <code>-isEqual</code>: method? </p>
+<p>If the given object is <code>nil</code>, the matcher will match <code>nil</code>.</p>
 <p>Synonym for <a class="el" href="group__core__matchers.html#gae581d9388fa7485b616876b0b4d0cb99">HC_equalTo</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_equal.html" title="Is the object equal to another object, as tested by the -isEqual: method?">HCIsEqual</a> </dd></dl>
 
 </div>
 </div>
@@ -181,7 +251,9 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p><a class="el" href="group__core__matchers.html#ga684af0672998244dbcf0a4e1467de892" title="instanceOf(type) - Is the value an instance of a particular type?">instanceOf(type)</a> - Is the value an instance of a particular type? </p>
 <p>Synonym for <a class="el" href="group__core__matchers.html#ga4fa80c6d464fc4ae6c028c9af2029c41">HC_instanceOf</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_instance_of.html" title="Tests whether the value is an instance of a class (including subclasses).">HCIsInstanceOf</a> </dd></dl>
 
 </div>
 </div>
@@ -196,7 +268,15 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p><a class="el" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(matcherOrValue) - Decorates another matcher, or provides a shortcut to the frequently used is(equa...">is(matcherOrValue)</a> - Decorates another matcher, or provides a shortcut to the frequently used <a class="el" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07">is</a>(<a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(x)</a>). </p>
+<p>If <em>matcherOrValue</em> is a matcher, its behavior is retained, but the test may be more expressive.</p>
+<p>If <em>matcherOrValue</em> is not a matcher, it is wrapped in an <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matcher. This makes the following three statements the same: </p>
+<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo</a>(smelly))
+<a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(matcherOrValue) - Decorates another matcher, or provides a shortcut to the frequently used is(equa...">is</a>(<a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo</a>(smelly)))
+<a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(matcherOrValue) - Decorates another matcher, or provides a shortcut to the frequently used is(equa...">is</a>(smelly))
+</pre></div><p> Choose the style that makes your expression most readable. This will vary depending on context.</p>
 <p>Synonym for <a class="el" href="group__core__matchers.html#gac6ceae01ca24e18a75c355fb177378af">HC_is</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is.html" title="Decorates another HCMatcher, retaining the behavior but allowing tests to be slightly more expressive...">HCIs</a> </dd></dl>
 
 </div>
 </div>
@@ -211,37 +291,57 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Synonym for <a class="el" href="group__core__matchers.html#ga450a7fc202ee5c16f843f7f1ac954a35">HC_isNot</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<p><a class="el" href="group__core__matchers.html#ga9fce91422af9e0ceee72859379886c06" title="isNot(matcherOrValue) - Inverts the rule, or provides a shortcut to the frequently used isNot(equalTo...">isNot(matcherOrValue)</a> - Inverts the rule, or provides a shortcut to the frequently used isNot(<a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(x)</a>). </p>
+<p>For example: </p>
+<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#ga9fce91422af9e0ceee72859379886c06" title="isNot(matcherOrValue) - Inverts the rule, or provides a shortcut to the frequently used isNot(equalTo...">isNot</a>(<a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo</a>(smelly)))
+</pre></div><p> vs. </p>
+<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#ga9fce91422af9e0ceee72859379886c06" title="isNot(matcherOrValue) - Inverts the rule, or provides a shortcut to the frequently used isNot(equalTo...">isNot</a>(smelly))
+</pre></div><p>Synonym for <a class="el" href="group__core__matchers.html#ga450a7fc202ee5c16f843f7f1ac954a35">HC_isNot</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_not.html" title="Calculates the logical negation of a matcher.">HCIsNot</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gaa0f27a0925da3c9ee015da2ad4176111"></a><!-- doxytag: member="HCIsNil.h::nilValue" ref="gaa0f27a0925da3c9ee015da2ad4176111" args="" -->
+<a class="anchor" id="ga5760ec0b6b3c0602d7063a7fc6dcaac9"></a><!-- doxytag: member="HCIsNil.h::nilValue" ref="ga5760ec0b6b3c0602d7063a7fc6dcaac9" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define nilValue&nbsp;&nbsp;&nbsp;HC_nilValue</td>
+          <td class="memname">#define nilValue</td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;HC_nilValue()</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
+<p>Matches if the value is <code>nil</code>. </p>
 <p>Synonym for <a class="el" href="group__core__matchers.html#ga6228653e2adb57814043e181dc10ab6d">HC_nilValue</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_nil.html" title="Is the value nil?">HCIsNil</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga44fe6140b02868e95a1faf7922060270"></a><!-- doxytag: member="HCIsNil.h::notNilValue" ref="ga44fe6140b02868e95a1faf7922060270" args="" -->
+<a class="anchor" id="ga9ffdd81537ca99784c8d81bd239f4942"></a><!-- doxytag: member="HCIsNil.h::notNilValue" ref="ga9ffdd81537ca99784c8d81bd239f4942" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define notNilValue&nbsp;&nbsp;&nbsp;HC_notNilValue</td>
+          <td class="memname">#define notNilValue</td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;HC_notNilValue()</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
+<p>Matches if the value is not <code>nil</code>. </p>
 <p>Synonym for <a class="el" href="group__core__matchers.html#gab28820ba91abed936972a6e200124b78">HC_notNilValue</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_nil.html" title="Is the value nil?">HCIsNil</a> </dd>
+<dd>
+<a class="el" href="interface_h_c_is_not.html" title="Calculates the logical negation of a matcher.">HCIsNot</a> </dd></dl>
 
 </div>
 </div>
@@ -256,12 +356,14 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p><a class="el" href="group__core__matchers.html#gae8cfe45f9aee662b08b823587aea8a34" title="sameInstance(object) - Evaluates to YES only when the argument is this same object.">sameInstance(object)</a> - Evaluates to <code>YES</code> only when the argument is this same object. </p>
 <p>Synonym for <a class="el" href="group__core__matchers.html#ga5c40465d1c802417675362d451c89db7">HC_sameInstance</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_same.html" title="Is the item the same object as another?">HCIsSame</a> </dd></dl>
 
 </div>
 </div>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="ga5816bf8a494cd5703bb9099f8e03fe90"></a><!-- doxytag: member="HCAllOf.h::HC_allOf" ref="ga5816bf8a494cd5703bb9099f8e03fe90" args="(id&lt; HCMatcher &gt; matcher,...)" -->
+<a class="anchor" id="gaecefcbbc58128ef1591a1827e33df291"></a><!-- doxytag: member="HCAllOf.h::HC_allOf" ref="gaecefcbbc58128ef1591a1827e33df291" args="(id&lt; HCMatcher &gt; matcher1,...)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -269,7 +371,7 @@ Functions</h2></td></tr>
           <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_allOf </td>
           <td>(</td>
           <td class="paramtype">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td>
-          <td class="paramname"> <em>matcher</em>, </td>
+          <td class="paramname"> <em>matcher1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -286,11 +388,11 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Evaluates to <code>YES</code> only if <em>all</em> of the passed in matchers evaluate to <code>YES</code>. </p>
+<p>Evaluates to <code>YES</code> only if <em>all</em> of the given matchers evaluate to <code>YES</code>. </p>
 <p><b>Synonym:</b> <a class="el" href="group__core__matchers.html#ga5ca6068b496deb040e97e16551fbdb99">allOf</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>matcher</em>&nbsp;</td><td>Comma-separated list of matchers ending with <code>nil</code>. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>matcher1</em>&nbsp;</td><td>Comma-separated list of matchers ending with <code>nil</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -298,7 +400,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gaa500981bcf9910ea6346d3f71784fcb6"></a><!-- doxytag: member="HCAnyOf.h::HC_anyOf" ref="gaa500981bcf9910ea6346d3f71784fcb6" args="(id&lt; HCMatcher &gt; matcher,...)" -->
+<a class="anchor" id="ga9949586392bfc3661ca1fca0f4614277"></a><!-- doxytag: member="HCAnyOf.h::HC_anyOf" ref="ga9949586392bfc3661ca1fca0f4614277" args="(id&lt; HCMatcher &gt; matcher1,...)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -306,7 +408,7 @@ Functions</h2></td></tr>
           <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_anyOf </td>
           <td>(</td>
           <td class="paramtype">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td>
-          <td class="paramname"> <em>matcher</em>, </td>
+          <td class="paramname"> <em>matcher1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -323,11 +425,11 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Evaluates to <code>YES</code> if <em>any</em> of the passed in matchers evaluate to <code>YES</code>. </p>
-<p><b>Synonym:</b> <a class="el" href="_h_c_any_of_8h.html#ae78b2508e6bbafe28ede0bcb821a67b4">anyOf</a> </p>
+<p>Evaluates to <code>YES</code> if <em>any</em> of the given matchers evaluate to <code>YES</code>. </p>
+<p><b>Synonym:</b> <a class="el" href="group__core__matchers.html#gae78b2508e6bbafe28ede0bcb821a67b4">anyOf</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>matcher</em>&nbsp;</td><td>Comma-separated list of matchers ending with <code>nil</code>. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>matcher1</em>&nbsp;</td><td>Comma-separated list of matchers ending with <code>nil</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -351,7 +453,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>This matcher always evaluates to <code>YES</code>. </p>
-<p><b>Synonym:</b> <a class="el" href="_h_c_is_anything_8h.html#a00f2d1d0d1d77547f5ee07bf75c4746d">anything</a> </p>
+<p><b>Synonym:</b> <a class="el" href="group__core__matchers.html#ga46b873bc5b4acc4eabc88b72a08ce750">anything</a> </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_anything.html" title="A matcher that always returns YES.">HCIsAnything</a> </dd></dl>
 
 </div>
@@ -416,7 +518,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Wraps an existing matcher and overrides the description when it fails. </p>
-<p>Optional values following the matcher are substituted for %0, %1, etc. The last argument must be nil.</p>
+<p>Optional values following the matcher are substituted for %0, %1, etc., in the description. The last argument must be nil.</p>
 <p><b>Synonym:</b> <a class="el" href="group__core__matchers.html#ga4a703ae0e2036cc226769fca4a6da0d7">describedAs</a> </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_described_as.html" title="Provides a custom description to another matcher.">HCDescribedAs</a> </dd></dl>
 
@@ -483,12 +585,12 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Decorates another matcher, or provides a shortcut to the frequently used <a class="el" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07">is</a>(<a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="Synonym for HC_equalTo, available if HC_SHORTHAND is defined.">equalTo(x)</a>). </p>
+<p>Decorates another matcher, or provides a shortcut to the frequently used <a class="el" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07">is</a>(<a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(x)</a>). </p>
 <p>If <em>matcherOrValue</em> is a matcher, its behavior is retained, but the test may be more expressive.</p>
 <p>If <em>matcherOrValue</em> is not a matcher, it is wrapped in an <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matcher. This makes the following three statements the same: </p>
-<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="Synonym for HC_assertThat, available if HC_SHORTHAND is defined.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="Synonym for HC_equalTo, available if HC_SHORTHAND is defined.">equalTo</a>(smelly))
-<a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="Synonym for HC_assertThat, available if HC_SHORTHAND is defined.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="Synonym for HC_is, available if HC_SHORTHAND is defined.">is</a>(<a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="Synonym for HC_equalTo, available if HC_SHORTHAND is defined.">equalTo</a>(smelly)))
-<a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="Synonym for HC_assertThat, available if HC_SHORTHAND is defined.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="Synonym for HC_is, available if HC_SHORTHAND is defined.">is</a>(smelly))
+<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo</a>(smelly))
+<a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(matcherOrValue) - Decorates another matcher, or provides a shortcut to the frequently used is(equa...">is</a>(<a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo</a>(smelly)))
+<a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(matcherOrValue) - Decorates another matcher, or provides a shortcut to the frequently used is(equa...">is</a>(smelly))
 </pre></div><p> Choose the style that makes your expression most readable. This will vary depending on context.</p>
 <p><b>Synonym:</b> <a class="el" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07">is</a> </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is.html" title="Decorates another HCMatcher, retaining the behavior but allowing tests to be slightly more expressive...">HCIs</a> </dd></dl>
@@ -511,11 +613,11 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Inverts the rule, or provides a shortcut to the frequently used isNot(<a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="Synonym for HC_equalTo, available if HC_SHORTHAND is defined.">equalTo(x)</a>). </p>
+<p>Inverts the rule, or provides a shortcut to the frequently used isNot(<a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(x)</a>). </p>
 <p>For example: </p>
-<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="Synonym for HC_assertThat, available if HC_SHORTHAND is defined.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#ga9fce91422af9e0ceee72859379886c06" title="Synonym for HC_isNot, available if HC_SHORTHAND is defined.">isNot</a>(<a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="Synonym for HC_equalTo, available if HC_SHORTHAND is defined.">equalTo</a>(smelly)))
+<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#ga9fce91422af9e0ceee72859379886c06" title="isNot(matcherOrValue) - Inverts the rule, or provides a shortcut to the frequently used isNot(equalTo...">isNot</a>(<a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo</a>(smelly)))
 </pre></div><p> vs. </p>
-<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="Synonym for HC_assertThat, available if HC_SHORTHAND is defined.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#ga9fce91422af9e0ceee72859379886c06" title="Synonym for HC_isNot, available if HC_SHORTHAND is defined.">isNot</a>(smelly))
+<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#ga9fce91422af9e0ceee72859379886c06" title="isNot(matcherOrValue) - Inverts the rule, or provides a shortcut to the frequently used isNot(equalTo...">isNot</a>(smelly))
 </pre></div><p><b>Synonym:</b> <a class="el" href="group__core__matchers.html#ga9fce91422af9e0ceee72859379886c06">isNot</a> </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_not.html" title="Calculates the logical negation of a matcher.">HCIsNot</a> </dd></dl>
 
@@ -537,7 +639,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Matches if the value is <code>nil</code>. </p>
-<p><b>Synonym:</b> <a class="el" href="group__core__matchers.html#gaa0f27a0925da3c9ee015da2ad4176111">nilValue</a> </p>
+<p><b>Synonym:</b> <a class="el" href="group__core__matchers.html#ga5760ec0b6b3c0602d7063a7fc6dcaac9">nilValue</a> </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_nil.html" title="Is the value nil?">HCIsNil</a> </dd></dl>
 
 </div>
@@ -558,7 +660,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Matches if the value is not <code>nil</code>. </p>
-<p><b>Synonym:</b> <a class="el" href="group__core__matchers.html#ga44fe6140b02868e95a1faf7922060270">notNilValue</a> </p>
+<p><b>Synonym:</b> <a class="el" href="group__core__matchers.html#ga9ffdd81537ca99784c8d81bd239f4942">notNilValue</a> </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_nil.html" title="Is the value nil?">HCIsNil</a> </dd>
 <dd>
 <a class="el" href="interface_h_c_is_not.html" title="Calculates the logical negation of a matcher.">HCIsNot</a> </dd></dl>
@@ -588,7 +690,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 15:08:58 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 13 2011 16:49:16 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>OCHamcrest: HCIsEqual.h File Reference</title>
+<title>OCHamcrest: HCIsDictionaryContainingEntries.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -32,22 +32,22 @@
 <a href="#define-members">Defines</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<h1>HCIsEqual.h File Reference</h1>  </div>
+<h1>HCIsDictionaryContainingEntries.h File Reference</h1>  </div>
 </div>
 <div class="contents">
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_equal.html">HCIsEqual</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the object equal to another object, as tested by the <code>-isEqual</code>: method?  <a href="interface_h_c_is_equal.html#_details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_dictionary_containing_entries.html">HCIsDictionaryContainingEntries</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches dictionaries containing key-value pairs satisfying given lists of keys and value matchers.  <a href="interface_h_c_is_dictionary_containing_entries.html#_details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a>&nbsp;&nbsp;&nbsp;HC_equalTo</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(object)</a> - Is the object equal to another object, as tested by the <code>-isEqual</code>: method?  <a href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga31a46265336c1cbe571557a3dcad02c8">hasEntries</a>&nbsp;&nbsp;&nbsp;HC_hasEntries</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">HC_hasEntries(id keysAndValueMatchers, ...) - Matches dictionaries containing key-value pairs satisfying a given lists of alternating keys and value matchers.  <a href="group__collection__matchers.html#ga31a46265336c1cbe571557a3dcad02c8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gae581d9388fa7485b616876b0b4d0cb99">HC_equalTo</a> (id object)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the object equal to another object, as tested by the <code>-isEqual</code>: method?  <a href="group__core__matchers.html#gae581d9388fa7485b616876b0b4d0cb99"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga28e0149764789ff144c6729ed78c2ac8">HC_hasEntries</a> (id keysAndValueMatchers,...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches dictionaries containing key-value pairs satisfying a given lists of alternating keys and value matchers.  <a href="group__collection__matchers.html#ga28e0149764789ff144c6729ed78c2ac8"></a><br/></td></tr>
 </table>
 </div>
 <hr class="footer"/><address class="footer"><small>Generated on Sun Feb 13 2011 16:49:15 for OCHamcrest by&nbsp;

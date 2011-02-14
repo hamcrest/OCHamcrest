@@ -75,7 +75,7 @@ My first OCHamcrest test</h2>
 {
     Biscuit* theBiscuit = [Biscuit biscuitNamed:@&quot;Ginger&quot;];
     Biscuit* myBiscuit = [Biscuit biscuitNamed:@&quot;Ginger&quot;];
-    <a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="Synonym for HC_assertThat, available if HC_SHORTHAND is defined.">assertThat</a>(theBiscuit, <a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="Synonym for HC_equalTo, available if HC_SHORTHAND is defined.">equalTo</a>(myBiscuit));
+    <a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(theBiscuit, <a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo</a>(myBiscuit));
 }
 
 <span class="keyword">@end</span>
@@ -88,7 +88,7 @@ A tour of common matchers</h2>
 <li>
 Core <ul>
 <li>
-<a class="el" href="_h_c_is_anything_8h.html#a00f2d1d0d1d77547f5ee07bf75c4746d">anything</a> - always matches, useful if you don't care what the object under test is </li>
+<a class="el" href="group__core__matchers.html#ga46b873bc5b4acc4eabc88b72a08ce750">anything</a> - always matches, useful if you don't care what the object under test is </li>
 <li>
 <a class="el" href="group__core__matchers.html#ga4a703ae0e2036cc226769fca4a6da0d7">describedAs</a> - decorator to add custom failure description </li>
 <li>
@@ -100,7 +100,7 @@ Logical <ul>
 <li>
 <a class="el" href="group__core__matchers.html#ga5ca6068b496deb040e97e16551fbdb99">allOf</a> - matches if all matchers match, short circuits (like C's <code>&amp;&amp;</code>) </li>
 <li>
-<a class="el" href="_h_c_any_of_8h.html#ae78b2508e6bbafe28ede0bcb821a67b4">anyOf</a> - matches if any matchers match, short circuits (like C's <code>||</code>) </li>
+<a class="el" href="group__core__matchers.html#gae78b2508e6bbafe28ede0bcb821a67b4">anyOf</a> - matches if any matchers match, short circuits (like C's <code>||</code>) </li>
 <li>
 <a class="el" href="group__core__matchers.html#ga9fce91422af9e0ceee72859379886c06">isNot</a> - matches if the wrapped matcher doesn't match and vice versa </li>
 </ul>
@@ -110,11 +110,11 @@ Object <ul>
 <li>
 <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> - tests object equality using <code>-isEqual</code>: </li>
 <li>
-<a class="el" href="group__object__matchers.html#ga1387c03591bf1654b93420c827d08ccb">hasDescription</a> - tests whether <code>-description</code> satisfies a given matcher </li>
+<a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9">hasDescription</a> - tests whether <code>-description</code> satisfies a given matcher </li>
 <li>
 <a class="el" href="group__core__matchers.html#ga684af0672998244dbcf0a4e1467de892">instanceOf</a> - tests type </li>
 <li>
-<a class="el" href="group__core__matchers.html#ga44fe6140b02868e95a1faf7922060270">notNilValue</a>, <a class="el" href="group__core__matchers.html#gaa0f27a0925da3c9ee015da2ad4176111">nilValue</a> - tests for nil </li>
+<a class="el" href="group__core__matchers.html#ga9ffdd81537ca99784c8d81bd239f4942">notNilValue</a>, <a class="el" href="group__core__matchers.html#ga5760ec0b6b3c0602d7063a7fc6dcaac9">nilValue</a> - tests for nil </li>
 <li>
 <a class="el" href="group__core__matchers.html#gae8cfe45f9aee662b08b823587aea8a34">sameInstance</a> - tests object identity </li>
 </ul>
@@ -122,9 +122,9 @@ Object <ul>
 <li>
 Collections <ul>
 <li>
-<a class="el" href="group__collection__matchers.html#ga22cc888ea6cdc18d6a633dd2ba2542a1">hasEntry</a>, <a class="el" href="group__collection__matchers.html#ga58754aa8b36ae52c05a03c140488a85f">hasKey</a>, <a class="el" href="group__collection__matchers.html#gaf141b74c5177da00f45c49b50f867e52">hasValue</a> - tests that an NSDictionary contains an entry, key or value </li>
+<a class="el" href="group__collection__matchers.html#ga22cc888ea6cdc18d6a633dd2ba2542a1">hasEntry</a>, <a class="el" href="group__collection__matchers.html#ga31a46265336c1cbe571557a3dcad02c8">hasEntries</a>, <a class="el" href="group__collection__matchers.html#ga58754aa8b36ae52c05a03c140488a85f">hasKey</a>, <a class="el" href="group__collection__matchers.html#gaf141b74c5177da00f45c49b50f867e52">hasValue</a> - tests that an NSDictionary contains an entry, key or value </li>
 <li>
-<a class="el" href="group__collection__matchers.html#gab282df09dd90f5ed84d5f2a3974d6c32">hasItem</a>, <a class="el" href="group__collection__matchers.html#ga3b027a5554b1072e61823e82635e7827">hasItems</a> - tests that a collection contains elements </li>
+<a class="el" href="group__collection__matchers.html#gab282df09dd90f5ed84d5f2a3974d6c32">hasItem</a>, <a class="el" href="group__collection__matchers.html#gafd4dbc21f13183304c6618a48eb8af33">contains</a>, <a class="el" href="group__collection__matchers.html#ga7ed8cf5b20580a511df3a0fb3b8fbd28">containsInAnyOrder</a> - tests that a collection contains elements </li>
 </ul>
 </li>
 <li>
@@ -149,14 +149,14 @@ Text <ul>
 <h2><a class="anchor" id="sugar"></a>
 Syntactic sugar</h2>
 <p>OCHamcrest strives to make your tests as readable as possible. For example, the <a class="el" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07">is</a> matcher is a wrapper that doesn't add any extra behavior to the underlying matcher. The following assertions are all equivalent:</p>
-<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="Synonym for HC_assertThat, available if HC_SHORTHAND is defined.">assertThat</a>(theBiscuit, <a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="Synonym for HC_equalTo, available if HC_SHORTHAND is defined.">equalTo</a>(myBiscuit));
-<a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="Synonym for HC_assertThat, available if HC_SHORTHAND is defined.">assertThat</a>(theBiscuit, <a class="code" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="Synonym for HC_is, available if HC_SHORTHAND is defined.">is</a>(<a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="Synonym for HC_equalTo, available if HC_SHORTHAND is defined.">equalTo</a>(myBiscuit)));
-<a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="Synonym for HC_assertThat, available if HC_SHORTHAND is defined.">assertThat</a>(theBiscuit, <a class="code" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="Synonym for HC_is, available if HC_SHORTHAND is defined.">is</a>(myBiscuit));
+<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(theBiscuit, <a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo</a>(myBiscuit));
+<a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(theBiscuit, <a class="code" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(matcherOrValue) - Decorates another matcher, or provides a shortcut to the frequently used is(equa...">is</a>(<a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo</a>(myBiscuit)));
+<a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(theBiscuit, <a class="code" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(matcherOrValue) - Decorates another matcher, or provides a shortcut to the frequently used is(equa...">is</a>(myBiscuit));
 </pre></div><h2><a class="anchor" id="custom"></a>
 Writing custom matchers</h2>
 <p>A key feature of OCHamcrest is its extensibility. See <a class="el" href="custom-matchers.html">Writing custom matchers</a> for an example of how to write your own matchers. </p>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 15:08:58 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 13 2011 16:49:15 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

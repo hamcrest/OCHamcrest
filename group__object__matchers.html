@@ -42,8 +42,8 @@ Classes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Does the object's <code>-description</code> satisfy a given matcher?  <a href="interface_h_c_has_description.html#_details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga1387c03591bf1654b93420c827d08ccb">hasDescription</a>&nbsp;&nbsp;&nbsp;HC_hasDescription</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__object__matchers.html#ga3bbc7543cb19082eeb4ab4fdadfbf2a9">HC_hasDescription</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga1387c03591bf1654b93420c827d08ccb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9">hasDescription</a>(matcherOrValue)&nbsp;&nbsp;&nbsp;HC_hasDescription(matcherOrValue)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9" title="hasDescription(matcherOrValue) - Evaluates whether [item description] satisfies a given matcher...">hasDescription(matcherOrValue)</a> - Evaluates whether [item description] satisfies a given matcher.  <a href="#ga64625b33c8bb12d301d4f184d7788ec9"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga3bbc7543cb19082eeb4ab4fdadfbf2a9">HC_hasDescription</a> (id matcherOrValue)</td></tr>
@@ -52,18 +52,36 @@ Functions</h2></td></tr>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Matchers that inspect objects. </p>
 <hr/><h2>Define Documentation</h2>
-<a class="anchor" id="ga1387c03591bf1654b93420c827d08ccb"></a><!-- doxytag: member="HCHasDescription.h::hasDescription" ref="ga1387c03591bf1654b93420c827d08ccb" args="" -->
+<a class="anchor" id="ga64625b33c8bb12d301d4f184d7788ec9"></a><!-- doxytag: member="HCHasDescription.h::hasDescription" ref="ga64625b33c8bb12d301d4f184d7788ec9" args="(matcherOrValue)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define hasDescription&nbsp;&nbsp;&nbsp;HC_hasDescription</td>
+          <td class="memname">#define hasDescription</td>
+          <td>(</td>
+          <td class="paramtype">&nbsp;</td>
+          <td class="paramname">matcherOrValue</td>
+          <td>&nbsp;)&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;HC_hasDescription(matcherOrValue)</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
+<p><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9" title="hasDescription(matcherOrValue) - Evaluates whether [item description] satisfies a given matcher...">hasDescription(matcherOrValue)</a> - Evaluates whether [item description] satisfies a given matcher. </p>
+<p>Examples: </p>
+<ul>
+<li><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9">hasDescription</a>(<a class="el" href="group__text__matchers.html#ga7933ad8e9864c8958618ff3b5655cb78">startsWith</a>(@"foo")) </li>
+<li><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9">hasDescription</a>(@"bar")</li>
+</ul>
 <p>Synonym for <a class="el" href="group__object__matchers.html#ga3bbc7543cb19082eeb4ab4fdadfbf2a9">HC_hasDescription</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>matcherOrValue</em>&nbsp;</td><td>A matcher, or a value for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_has_description.html" title="Does the object&#39;s -description satisfy a given matcher?">HCHasDescription</a> </dd></dl>
 
 </div>
 </div>
@@ -87,10 +105,10 @@ Functions</h2></td></tr>
 <p>Evaluates whether [item description] satisfies a given matcher. </p>
 <p>Examples: </p>
 <ul>
-<li><a class="el" href="group__object__matchers.html#ga1387c03591bf1654b93420c827d08ccb">hasDescription</a>(<a class="el" href="group__text__matchers.html#ga7933ad8e9864c8958618ff3b5655cb78">startsWith</a>(@"foo")) </li>
-<li><a class="el" href="group__object__matchers.html#ga1387c03591bf1654b93420c827d08ccb">hasDescription</a>(@"bar")</li>
+<li><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9">hasDescription</a>(<a class="el" href="group__text__matchers.html#ga7933ad8e9864c8958618ff3b5655cb78">startsWith</a>(@"foo")) </li>
+<li><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9">hasDescription</a>(@"bar")</li>
 </ul>
-<p><b>Synonym:</b> <a class="el" href="group__object__matchers.html#ga1387c03591bf1654b93420c827d08ccb">hasDescription</a> </p>
+<p><b>Synonym:</b> <a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9">hasDescription</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>matcherOrValue</em>&nbsp;</td><td>A matcher, or a value for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
@@ -102,7 +120,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 15:08:58 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 13 2011 16:49:16 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

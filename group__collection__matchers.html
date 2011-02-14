@@ -50,6 +50,8 @@ Classes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches collections that only contain elements satisfying a given matcher.  <a href="interface_h_c_is_collection_only_containing.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_dictionary_containing.html">HCIsDictionaryContaining</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches dictionaries containing a key-value pair satisfying a given pair of matchers.  <a href="interface_h_c_is_dictionary_containing.html#_details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_dictionary_containing_entries.html">HCIsDictionaryContainingEntries</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches dictionaries containing key-value pairs satisfying given lists of keys and value matchers.  <a href="interface_h_c_is_dictionary_containing_entries.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_dictionary_containing_key.html">HCIsDictionaryContainingKey</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches dictionaries containing a key satisfying a given matcher.  <a href="interface_h_c_is_dictionary_containing_key.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_dictionary_containing_value.html">HCIsDictionaryContainingValue</a></td></tr>
@@ -61,47 +63,51 @@ Classes</h2></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga01dedc08a716dd8e54e36a6e491a9933">hasCount</a>&nbsp;&nbsp;&nbsp;HC_hasCount</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#ga1e18fd3a4735fd757678a203e2c244bb">HC_hasCount</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga01dedc08a716dd8e54e36a6e491a9933"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__collection__matchers.html#ga01dedc08a716dd8e54e36a6e491a9933" title="hasCount(matcher) - Matches collections for which -count satisfies a given matcher.">hasCount(matcher)</a> - Matches collections for which <code>-count</code> satisfies a given matcher.  <a href="#ga01dedc08a716dd8e54e36a6e491a9933"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga176c4d73e4cc76b79aba4e6c4df73d4c">hasCountOf</a>&nbsp;&nbsp;&nbsp;HC_hasCountOf</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#ga8d51d038913eb65b2160d9b7d1a76727">HC_hasCountOf</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga176c4d73e4cc76b79aba4e6c4df73d4c"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__collection__matchers.html#ga176c4d73e4cc76b79aba4e6c4df73d4c" title="hasCountOf(count) - Matches collections for which -count equals a given NSUInteger count...">hasCountOf(count)</a> - Matches collections for which <code>-count</code> equals a given NSUInteger count.  <a href="#ga176c4d73e4cc76b79aba4e6c4df73d4c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gab282df09dd90f5ed84d5f2a3974d6c32">hasItem</a>&nbsp;&nbsp;&nbsp;HC_hasItem</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#ga49a962831306520ab68afa4e311c6c9f">HC_hasItem</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#gab282df09dd90f5ed84d5f2a3974d6c32"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__collection__matchers.html#gab282df09dd90f5ed84d5f2a3974d6c32" title="hasItem(matcherOrValue) - Matches a collection if any element satifies a given matcher.">hasItem(matcherOrValue)</a> - Matches a collection if any element satifies a given matcher.  <a href="#gab282df09dd90f5ed84d5f2a3974d6c32"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga3b027a5554b1072e61823e82635e7827">hasItems</a>&nbsp;&nbsp;&nbsp;HC_hasItems</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#ga0f3e65a2d579b9e73b670e814b742e0a">HC_hasItems</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga3b027a5554b1072e61823e82635e7827"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">hasItems(matcherOrValue1, ...) - Matches a collection if all matchers are satisfied by any of the collection's elements.  <a href="#ga3b027a5554b1072e61823e82635e7827"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga7ed8cf5b20580a511df3a0fb3b8fbd28">containsInAnyOrder</a>&nbsp;&nbsp;&nbsp;HC_containsInAnyOrder</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#gae24cc1faaeedcdf068fa1cae7db9bdc4">HC_containsInAnyOrder</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga7ed8cf5b20580a511df3a0fb3b8fbd28"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">containsInAnyOrder(itemMatcher1, ...) - Matches a collection if its elements, in any order, satisfy a list of matchers.  <a href="#ga7ed8cf5b20580a511df3a0fb3b8fbd28"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gafd4dbc21f13183304c6618a48eb8af33">contains</a>&nbsp;&nbsp;&nbsp;HC_contains</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#gaeaf89507fbfa44fa3fb79c50def29d31">HC_contains</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#gafd4dbc21f13183304c6618a48eb8af33"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">contains(itemMatcher1, ...) matches a collection if its elements, in order, satisfy a list of matchers.  <a href="#gafd4dbc21f13183304c6618a48eb8af33"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga5754e443f35581cc3d7addf329161c0e">onlyContains</a>&nbsp;&nbsp;&nbsp;HC_onlyContains</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#gadf720692033cdff5dc030f0a44fae825">HC_onlyContains</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga5754e443f35581cc3d7addf329161c0e"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">onlyContains(itemMatcher1, ...) matches collections that only contain elements satisfying any of a list of matchers.  <a href="#ga5754e443f35581cc3d7addf329161c0e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga22cc888ea6cdc18d6a633dd2ba2542a1">hasEntry</a>&nbsp;&nbsp;&nbsp;HC_hasEntry</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#gadeb57baee0d54dd65e8ac5e2829b9b10">HC_hasEntry</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga22cc888ea6cdc18d6a633dd2ba2542a1"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__collection__matchers.html#ga22cc888ea6cdc18d6a633dd2ba2542a1" title="hasEntry(keyMatcher, valueMatcher) - Matches dictionaries containing a key-value pair satisfying a gi...">hasEntry(keyMatcher, valueMatcher)</a> - Matches dictionaries containing a key-value pair satisfying a given pair of matchers.  <a href="#ga22cc888ea6cdc18d6a633dd2ba2542a1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga31a46265336c1cbe571557a3dcad02c8">hasEntries</a>&nbsp;&nbsp;&nbsp;HC_hasEntries</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">HC_hasEntries(id keysAndValueMatchers, ...) - Matches dictionaries containing key-value pairs satisfying a given lists of alternating keys and value matchers.  <a href="#ga31a46265336c1cbe571557a3dcad02c8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga58754aa8b36ae52c05a03c140488a85f">hasKey</a>&nbsp;&nbsp;&nbsp;HC_hasKey</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#gaaa1513c0e20a59df43384f4b59c9a4fc">HC_hasKey</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga58754aa8b36ae52c05a03c140488a85f"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__collection__matchers.html#ga58754aa8b36ae52c05a03c140488a85f" title="hasKey(matcherOrValue) - Matches dictionaries containing a key satisfying a given matcher...">hasKey(matcherOrValue)</a> - Matches dictionaries containing a key satisfying a given matcher.  <a href="#ga58754aa8b36ae52c05a03c140488a85f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gaf141b74c5177da00f45c49b50f867e52">hasValue</a>&nbsp;&nbsp;&nbsp;HC_hasValue</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#gae65254dcc20e9dca3f0acb7b8e120cc7">HC_hasValue</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#gaf141b74c5177da00f45c49b50f867e52"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga00b5ed499d524a920815b9d8f24ef3a2">empty</a>&nbsp;&nbsp;&nbsp;HC_empty</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#ga3a1d4fabbd118ff5a20c691c20febd49">HC_empty</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga00b5ed499d524a920815b9d8f24ef3a2"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__collection__matchers.html#gaf141b74c5177da00f45c49b50f867e52" title="hasValue(matcherOrValue) - Matches dictionaries containing a value satisfying a given matcher...">hasValue(matcherOrValue)</a> - Matches dictionaries containing a value satisfying a given matcher.  <a href="#gaf141b74c5177da00f45c49b50f867e52"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gadafd520091b5ddf350fc4b2fedfdffa5">empty</a>()&nbsp;&nbsp;&nbsp;HC_empty()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches empty collection.  <a href="#gadafd520091b5ddf350fc4b2fedfdffa5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga461b9aa2f6e1983ae9039cf5ca8e90c2">isIn</a>&nbsp;&nbsp;&nbsp;HC_isIn</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synonym for <a class="el" href="group__collection__matchers.html#gafb758a625006309b7edb5bb303a09ed4">HC_isIn</a>, available if <code>HC_SHORTHAND</code> is defined.  <a href="#ga461b9aa2f6e1983ae9039cf5ca8e90c2"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__collection__matchers.html#ga461b9aa2f6e1983ae9039cf5ca8e90c2" title="isIn(collection) - Is the object present in the given collection?">isIn(collection)</a> - Is the object present in the given collection?  <a href="#ga461b9aa2f6e1983ae9039cf5ca8e90c2"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga1e18fd3a4735fd757678a203e2c244bb">HC_hasCount</a> (id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt; matcher)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches collections for which <code>-count</code> satisfies a given matcher.  <a href="#ga1e18fd3a4735fd757678a203e2c244bb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga8d51d038913eb65b2160d9b7d1a76727">HC_hasCountOf</a> (NSUInteger count)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches collections for which <code>-count</code> equals a given count.  <a href="#ga8d51d038913eb65b2160d9b7d1a76727"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga49a962831306520ab68afa4e311c6c9f">HC_hasItem</a> (id item)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches a collection if any element satifies a given matcher.  <a href="#ga49a962831306520ab68afa4e311c6c9f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga0f3e65a2d579b9e73b670e814b742e0a">HC_hasItems</a> (id items,...)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches a collection if all matchers are satisfied by any of the collection's elements.  <a href="#ga0f3e65a2d579b9e73b670e814b742e0a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gae24cc1faaeedcdf068fa1cae7db9bdc4">HC_containsInAnyOrder</a> (id items,...)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches a collection if its elements, in any order, satisfy a list of matchers.  <a href="#gae24cc1faaeedcdf068fa1cae7db9bdc4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gaeaf89507fbfa44fa3fb79c50def29d31">HC_contains</a> (id items,...)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches a collection if its elements, in order, satisfy a list of matchers.  <a href="#gaeaf89507fbfa44fa3fb79c50def29d31"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gadf720692033cdff5dc030f0a44fae825">HC_onlyContains</a> (id items,...)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches collections that only contain elements satisfying any of a list of matchers.  <a href="#gadf720692033cdff5dc030f0a44fae825"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gaa7d3f2a636366993dfa21ac14c47a86b">HC_hasItem</a> (id matcherOrValue)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches a collection if any element satifies a given matcher.  <a href="#gaa7d3f2a636366993dfa21ac14c47a86b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga194b7cb507941890a165c4e0d426f7e9">HC_hasItems</a> (id matcherOrValue1,...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches a collection if all matchers are satisfied by any of the collection's elements.  <a href="#ga194b7cb507941890a165c4e0d426f7e9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gafa3e74b5479dde51a8223c27d876a2be">HC_containsInAnyOrder</a> (id itemMatcher1,...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches a collection if its elements, in any order, satisfy a list of matchers.  <a href="#gafa3e74b5479dde51a8223c27d876a2be"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga44f2d02fdd63fa7df5c821db19c574c9">HC_contains</a> (id itemMatcher1,...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches a collection if its elements, in order, satisfy a list of matchers.  <a href="#ga44f2d02fdd63fa7df5c821db19c574c9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gaaa416ac8dc2757aeb77176b7040f2a74">HC_onlyContains</a> (id itemMatcher1,...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches collections that only contain elements satisfying any of a list of matchers.  <a href="#gaaa416ac8dc2757aeb77176b7040f2a74"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gadeb57baee0d54dd65e8ac5e2829b9b10">HC_hasEntry</a> (id keyMatcher, id valueMatcher)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches dictionaries containing a key-value pair satisfying a given pair of matchers.  <a href="#gadeb57baee0d54dd65e8ac5e2829b9b10"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga28e0149764789ff144c6729ed78c2ac8">HC_hasEntries</a> (id keysAndValueMatchers,...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches dictionaries containing key-value pairs satisfying a given lists of alternating keys and value matchers.  <a href="#ga28e0149764789ff144c6729ed78c2ac8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gaaa1513c0e20a59df43384f4b59c9a4fc">HC_hasKey</a> (id matcherOrValue)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches dictionaries containing a key satisfying a given matcher.  <a href="#gaaa1513c0e20a59df43384f4b59c9a4fc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gae65254dcc20e9dca3f0acb7b8e120cc7">HC_hasValue</a> (id matcherOrValue)</td></tr>
@@ -125,7 +131,15 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Synonym for <a class="el" href="group__collection__matchers.html#gaeaf89507fbfa44fa3fb79c50def29d31">HC_contains</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<p>contains(itemMatcher1, ...) matches a collection if its elements, in order, satisfy a list of matchers. </p>
+<p>Synonym for <a class="el" href="group__collection__matchers.html#ga44f2d02fdd63fa7df5c821db19c574c9">HC_contains</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>itemMatcher1</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_collection_containing_in_order.html" title="Matches a collection if its elements, in order, satisfy a list of matchers.">HCIsCollectionContainingInOrder</a> </dd></dl>
 
 </div>
 </div>
@@ -140,22 +154,36 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Synonym for <a class="el" href="group__collection__matchers.html#gae24cc1faaeedcdf068fa1cae7db9bdc4">HC_containsInAnyOrder</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<p>containsInAnyOrder(itemMatcher1, ...) - Matches a collection if its elements, in any order, satisfy a list of matchers. </p>
+<p>Synonym for <a class="el" href="group__collection__matchers.html#gafa3e74b5479dde51a8223c27d876a2be">HC_containsInAnyOrder</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>itemMatcher1</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_collection_containing_in_any_order.html" title="Matches a collection if its elements, in any order, satisfy a list of matchers.">HCIsCollectionContainingInAnyOrder</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga00b5ed499d524a920815b9d8f24ef3a2"></a><!-- doxytag: member="HCIsEmptyCollection.h::empty" ref="ga00b5ed499d524a920815b9d8f24ef3a2" args="" -->
+<a class="anchor" id="gadafd520091b5ddf350fc4b2fedfdffa5"></a><!-- doxytag: member="HCIsEmptyCollection.h::empty" ref="gadafd520091b5ddf350fc4b2fedfdffa5" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define empty&nbsp;&nbsp;&nbsp;HC_empty</td>
+          <td class="memname">#define empty</td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;HC_empty()</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
+<p>Matches empty collection. </p>
 <p>Synonym for <a class="el" href="group__collection__matchers.html#ga3a1d4fabbd118ff5a20c691c20febd49">HC_empty</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_empty_collection.html" title="Matches empty collection.">HCIsEmptyCollection</a> </dd></dl>
 
 </div>
 </div>
@@ -170,7 +198,9 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p><a class="el" href="group__collection__matchers.html#ga01dedc08a716dd8e54e36a6e491a9933" title="hasCount(matcher) - Matches collections for which -count satisfies a given matcher.">hasCount(matcher)</a> - Matches collections for which <code>-count</code> satisfies a given matcher. </p>
 <p>Synonym for <a class="el" href="group__collection__matchers.html#ga1e18fd3a4735fd757678a203e2c244bb">HC_hasCount</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_has_count.html" title="Matches collections for which -count satisfies a given matcher.">HCHasCount</a> </dd></dl>
 
 </div>
 </div>
@@ -185,7 +215,32 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p><a class="el" href="group__collection__matchers.html#ga176c4d73e4cc76b79aba4e6c4df73d4c" title="hasCountOf(count) - Matches collections for which -count equals a given NSUInteger count...">hasCountOf(count)</a> - Matches collections for which <code>-count</code> equals a given NSUInteger count. </p>
 <p>Synonym for <a class="el" href="group__collection__matchers.html#ga8d51d038913eb65b2160d9b7d1a76727">HC_hasCountOf</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_has_count.html" title="Matches collections for which -count satisfies a given matcher.">HCHasCount</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga31a46265336c1cbe571557a3dcad02c8"></a><!-- doxytag: member="HCIsDictionaryContainingEntries.h::hasEntries" ref="ga31a46265336c1cbe571557a3dcad02c8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define hasEntries&nbsp;&nbsp;&nbsp;HC_hasEntries</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>HC_hasEntries(id keysAndValueMatchers, ...) - Matches dictionaries containing key-value pairs satisfying a given lists of alternating keys and value matchers. </p>
+<p>Synonym for <a class="el" href="group__collection__matchers.html#ga28e0149764789ff144c6729ed78c2ac8">HC_hasEntries</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>keysAndValueMatchers</em>&nbsp;</td><td>Alternating pairs of keys and value matchers - or straight values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_dictionary_containing_entries.html" title="Matches dictionaries containing key-value pairs satisfying given lists of keys and value matchers...">HCIsDictionaryContainingEntries</a> </dd></dl>
 
 </div>
 </div>
@@ -200,7 +255,16 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p><a class="el" href="group__collection__matchers.html#ga22cc888ea6cdc18d6a633dd2ba2542a1" title="hasEntry(keyMatcher, valueMatcher) - Matches dictionaries containing a key-value pair satisfying a gi...">hasEntry(keyMatcher, valueMatcher)</a> - Matches dictionaries containing a key-value pair satisfying a given pair of matchers. </p>
 <p>Synonym for <a class="el" href="group__collection__matchers.html#gadeb57baee0d54dd65e8ac5e2829b9b10">HC_hasEntry</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>keyMatcher</em>&nbsp;</td><td>A matcher - or a value for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - for the key. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>valueMatcher</em>&nbsp;</td><td>A matcher - or a value for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - for the value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_dictionary_containing.html" title="Matches dictionaries containing a key-value pair satisfying a given pair of matchers.">HCIsDictionaryContaining</a> </dd></dl>
 
 </div>
 </div>
@@ -215,7 +279,15 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Synonym for <a class="el" href="group__collection__matchers.html#ga49a962831306520ab68afa4e311c6c9f">HC_hasItem</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<p><a class="el" href="group__collection__matchers.html#gab282df09dd90f5ed84d5f2a3974d6c32" title="hasItem(matcherOrValue) - Matches a collection if any element satifies a given matcher.">hasItem(matcherOrValue)</a> - Matches a collection if any element satifies a given matcher. </p>
+<p>Synonym for <a class="el" href="group__collection__matchers.html#gaa7d3f2a636366993dfa21ac14c47a86b">HC_hasItem</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>matcherOrValue</em>&nbsp;</td><td>A matcher, or a value for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_collection_containing.html" title="Matches a collection if any element satisfies a given matcher.">HCIsCollectionContaining</a> </dd></dl>
 
 </div>
 </div>
@@ -230,7 +302,15 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Synonym for <a class="el" href="group__collection__matchers.html#ga0f3e65a2d579b9e73b670e814b742e0a">HC_hasItems</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<p>hasItems(matcherOrValue1, ...) - Matches a collection if all matchers are satisfied by any of the collection's elements. </p>
+<p>Synonym for <a class="el" href="group__collection__matchers.html#ga194b7cb507941890a165c4e0d426f7e9">HC_hasItems</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>matcherOrValue1</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_collection_containing.html" title="Matches a collection if any element satisfies a given matcher.">HCIsCollectionContaining</a> </dd></dl>
 
 </div>
 </div>
@@ -245,7 +325,15 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p><a class="el" href="group__collection__matchers.html#ga58754aa8b36ae52c05a03c140488a85f" title="hasKey(matcherOrValue) - Matches dictionaries containing a key satisfying a given matcher...">hasKey(matcherOrValue)</a> - Matches dictionaries containing a key satisfying a given matcher. </p>
 <p>Synonym for <a class="el" href="group__collection__matchers.html#gaaa1513c0e20a59df43384f4b59c9a4fc">HC_hasKey</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>matcherOrValue</em>&nbsp;</td><td>A matcher, or a value for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_dictionary_containing_key.html" title="Matches dictionaries containing a key satisfying a given matcher.">HCIsDictionaryContainingKey</a> </dd></dl>
 
 </div>
 </div>
@@ -260,7 +348,15 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p><a class="el" href="group__collection__matchers.html#gaf141b74c5177da00f45c49b50f867e52" title="hasValue(matcherOrValue) - Matches dictionaries containing a value satisfying a given matcher...">hasValue(matcherOrValue)</a> - Matches dictionaries containing a value satisfying a given matcher. </p>
 <p>Synonym for <a class="el" href="group__collection__matchers.html#gae65254dcc20e9dca3f0acb7b8e120cc7">HC_hasValue</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>matcherOrValue</em>&nbsp;</td><td>A matcher, or a value for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_dictionary_containing_value.html" title="Matches dictionaries containing a value satisfying a given matcher.">HCIsDictionaryContainingValue</a> </dd></dl>
 
 </div>
 </div>
@@ -275,7 +371,9 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p><a class="el" href="group__collection__matchers.html#ga461b9aa2f6e1983ae9039cf5ca8e90c2" title="isIn(collection) - Is the object present in the given collection?">isIn(collection)</a> - Is the object present in the given collection? </p>
 <p>Synonym for <a class="el" href="group__collection__matchers.html#gafb758a625006309b7edb5bb303a09ed4">HC_isIn</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_in.html" title="Is the object present in the given collection?">HCIsIn</a> </dd></dl>
 
 </div>
 </div>
@@ -290,12 +388,22 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Synonym for <a class="el" href="group__collection__matchers.html#gadf720692033cdff5dc030f0a44fae825">HC_onlyContains</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<p>onlyContains(itemMatcher1, ...) matches collections that only contain elements satisfying any of a list of matchers. </p>
+<p>For example, <code>[NSArray arrayWithObjects:"c", "a", @"b", nil]</code> would satisfy <code>onlyContains(lessThan("d"), nil)</code>.</p>
+<p>If a <em>items</em> is not a matcher, it is equivalent to <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(x)</a>, so the array in the example above would also satisfy <code>onlyContains("a", @"b", @"c", nil)</code>.</p>
+<p>Synonym for <a class="el" href="group__collection__matchers.html#gaaa416ac8dc2757aeb77176b7040f2a74">HC_onlyContains</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>itemMatcher1</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_collection_only_containing.html" title="Matches collections that only contain elements satisfying a given matcher.">HCIsCollectionOnlyContaining</a> </dd></dl>
 
 </div>
 </div>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="gaeaf89507fbfa44fa3fb79c50def29d31"></a><!-- doxytag: member="HCIsCollectionContainingInOrder.h::HC_contains" ref="gaeaf89507fbfa44fa3fb79c50def29d31" args="(id items,...)" -->
+<a class="anchor" id="ga44f2d02fdd63fa7df5c821db19c574c9"></a><!-- doxytag: member="HCIsCollectionContainingInOrder.h::HC_contains" ref="ga44f2d02fdd63fa7df5c821db19c574c9" args="(id itemMatcher1,...)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -303,7 +411,7 @@ Functions</h2></td></tr>
           <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_contains </td>
           <td>(</td>
           <td class="paramtype">id&nbsp;</td>
-          <td class="paramname"> <em>items</em>, </td>
+          <td class="paramname"> <em>itemMatcher1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -324,7 +432,7 @@ Functions</h2></td></tr>
 <p><b>Synonym:</b> <a class="el" href="group__collection__matchers.html#gafd4dbc21f13183304c6618a48eb8af33">contains</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>items</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>itemMatcher1</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -332,7 +440,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gae24cc1faaeedcdf068fa1cae7db9bdc4"></a><!-- doxytag: member="HCIsCollectionContainingInAnyOrder.h::HC_containsInAnyOrder" ref="gae24cc1faaeedcdf068fa1cae7db9bdc4" args="(id items,...)" -->
+<a class="anchor" id="gafa3e74b5479dde51a8223c27d876a2be"></a><!-- doxytag: member="HCIsCollectionContainingInAnyOrder.h::HC_containsInAnyOrder" ref="gafa3e74b5479dde51a8223c27d876a2be" args="(id itemMatcher1,...)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -340,7 +448,7 @@ Functions</h2></td></tr>
           <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_containsInAnyOrder </td>
           <td>(</td>
           <td class="paramtype">id&nbsp;</td>
-          <td class="paramname"> <em>items</em>, </td>
+          <td class="paramname"> <em>itemMatcher1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -361,7 +469,7 @@ Functions</h2></td></tr>
 <p><b>Synonym:</b> <a class="el" href="group__collection__matchers.html#ga7ed8cf5b20580a511df3a0fb3b8fbd28">containsInAnyOrder</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>items</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>itemMatcher1</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -385,7 +493,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Matches empty collection. </p>
-<p><b>Synonym:</b> <a class="el" href="group__collection__matchers.html#ga00b5ed499d524a920815b9d8f24ef3a2">empty</a> </p>
+<p><b>Synonym:</b> <a class="el" href="group__collection__matchers.html#gadafd520091b5ddf350fc4b2fedfdffa5">empty</a> </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_empty_collection.html" title="Matches empty collection.">HCIsEmptyCollection</a> </dd></dl>
 
 </div>
@@ -434,6 +542,43 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ga28e0149764789ff144c6729ed78c2ac8"></a><!-- doxytag: member="HCIsDictionaryContainingEntries.h::HC_hasEntries" ref="ga28e0149764789ff144c6729ed78c2ac8" args="(id keysAndValueMatchers,...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_hasEntries </td>
+          <td>(</td>
+          <td class="paramtype">id&nbsp;</td>
+          <td class="paramname"> <em>keysAndValueMatchers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&nbsp;</td>
+          <td class="paramname"> <em>...</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Matches dictionaries containing key-value pairs satisfying a given lists of alternating keys and value matchers. </p>
+<p><b>Synonym:</b> <a class="el" href="group__collection__matchers.html#ga31a46265336c1cbe571557a3dcad02c8">hasEntries</a> </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>keysAndValueMatchers</em>&nbsp;</td><td>Alternating pairs of keys and value matchers - or straight values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_dictionary_containing_entries.html" title="Matches dictionaries containing key-value pairs satisfying given lists of keys and value matchers...">HCIsDictionaryContainingEntries</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="gadeb57baee0d54dd65e8ac5e2829b9b10"></a><!-- doxytag: member="HCIsDictionaryContaining.h::HC_hasEntry" ref="gadeb57baee0d54dd65e8ac5e2829b9b10" args="(id keyMatcher, id valueMatcher)" -->
 <div class="memitem">
 <div class="memproto">
@@ -472,7 +617,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga49a962831306520ab68afa4e311c6c9f"></a><!-- doxytag: member="HCIsCollectionContaining.h::HC_hasItem" ref="ga49a962831306520ab68afa4e311c6c9f" args="(id item)" -->
+<a class="anchor" id="gaa7d3f2a636366993dfa21ac14c47a86b"></a><!-- doxytag: member="HCIsCollectionContaining.h::HC_hasItem" ref="gaa7d3f2a636366993dfa21ac14c47a86b" args="(id matcherOrValue)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -480,7 +625,7 @@ Functions</h2></td></tr>
           <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_hasItem </td>
           <td>(</td>
           <td class="paramtype">id&nbsp;</td>
-          <td class="paramname"> <em>item</em></td>
+          <td class="paramname"> <em>matcherOrValue</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -492,7 +637,7 @@ Functions</h2></td></tr>
 <p><b>Synonym:</b> <a class="el" href="group__collection__matchers.html#gab282df09dd90f5ed84d5f2a3974d6c32">hasItem</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>item</em>&nbsp;</td><td>A matcher, or a value for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>matcherOrValue</em>&nbsp;</td><td>A matcher, or a value for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
   </table>
   </dd>
 </dl>
@@ -500,7 +645,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga0f3e65a2d579b9e73b670e814b742e0a"></a><!-- doxytag: member="HCIsCollectionContaining.h::HC_hasItems" ref="ga0f3e65a2d579b9e73b670e814b742e0a" args="(id items,...)" -->
+<a class="anchor" id="ga194b7cb507941890a165c4e0d426f7e9"></a><!-- doxytag: member="HCIsCollectionContaining.h::HC_hasItems" ref="ga194b7cb507941890a165c4e0d426f7e9" args="(id matcherOrValue1,...)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -508,7 +653,7 @@ Functions</h2></td></tr>
           <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_hasItems </td>
           <td>(</td>
           <td class="paramtype">id&nbsp;</td>
-          <td class="paramname"> <em>items</em>, </td>
+          <td class="paramname"> <em>matcherOrValue1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -529,7 +674,7 @@ Functions</h2></td></tr>
 <p><b>Synonym:</b> <a class="el" href="group__collection__matchers.html#ga3b027a5554b1072e61823e82635e7827">hasItems</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>items</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>matcherOrValue1</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -554,6 +699,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Matches dictionaries containing a key satisfying a given matcher. </p>
+<p><b>Synonym:</b> <a class="el" href="group__collection__matchers.html#ga58754aa8b36ae52c05a03c140488a85f">hasKey</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>matcherOrValue</em>&nbsp;</td><td>A matcher, or a value for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
@@ -614,7 +760,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gadf720692033cdff5dc030f0a44fae825"></a><!-- doxytag: member="HCIsCollectionOnlyContaining.h::HC_onlyContains" ref="gadf720692033cdff5dc030f0a44fae825" args="(id items,...)" -->
+<a class="anchor" id="gaaa416ac8dc2757aeb77176b7040f2a74"></a><!-- doxytag: member="HCIsCollectionOnlyContaining.h::HC_onlyContains" ref="gaaa416ac8dc2757aeb77176b7040f2a74" args="(id itemMatcher1,...)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -622,7 +768,7 @@ Functions</h2></td></tr>
           <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_onlyContains </td>
           <td>(</td>
           <td class="paramtype">id&nbsp;</td>
-          <td class="paramname"> <em>items</em>, </td>
+          <td class="paramname"> <em>itemMatcher1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -641,11 +787,11 @@ Functions</h2></td></tr>
 
 <p>Matches collections that only contain elements satisfying any of a list of matchers. </p>
 <p>For example, <code>[NSArray arrayWithObjects:"c", "a", @"b", nil]</code> would satisfy <code>onlyContains(lessThan("d"), nil)</code>.</p>
-<p>If a <em>items</em> is not a matcher, it is equivalent to <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="Synonym for HC_equalTo, available if HC_SHORTHAND is defined.">equalTo(x)</a>, so the array in the example above would also satisfy <code>onlyContains("a", @"b", @"c", nil)</code>.</p>
+<p>If a <em>items</em> is not a matcher, it is equivalent to <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(x)</a>, so the array in the example above would also satisfy <code>onlyContains("a", @"b", @"c", nil)</code>.</p>
 <p><b>Synonym:</b> <a class="el" href="group__collection__matchers.html#ga5754e443f35581cc3d7addf329161c0e">onlyContains</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>items</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>itemMatcher1</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -654,7 +800,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sat Feb 5 2011 15:08:58 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 13 2011 16:49:16 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
