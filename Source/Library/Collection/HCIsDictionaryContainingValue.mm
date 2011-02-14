@@ -54,7 +54,7 @@
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [[description appendText:@"dictionary containing value "]
+    [[description appendText:@"a dictionary containing value "]
                   appendDescriptionOf:valueMatcher];
 }
 

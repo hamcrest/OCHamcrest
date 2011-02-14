@@ -61,7 +61,7 @@
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [[description appendText:@"collection with count of "] appendDescriptionOf:countMatcher];
+    [[description appendText:@"a collection with count of "] appendDescriptionOf:countMatcher];
 }
 
 @end

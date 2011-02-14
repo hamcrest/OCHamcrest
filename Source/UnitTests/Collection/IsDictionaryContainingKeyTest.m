@@ -86,7 +86,7 @@
 
 - (void)testHasReadableDescription
 {
-    assertDescription(@"dictionary containing key \"a\"", hasKey(@"a"));
+    assertDescription(@"a dictionary containing key \"a\"", hasKey(@"a"));
 }
 
 

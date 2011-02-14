@@ -86,7 +86,7 @@
 
 - (void)testHasReadableDescription
 {
-    assertDescription(@"dictionary containing value \"a\"", hasValue(@"a"));
+    assertDescription(@"a dictionary containing value \"a\"", hasValue(@"a"));
 }
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription

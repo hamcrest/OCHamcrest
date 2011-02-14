@@ -42,7 +42,7 @@
 
 - (void)testHasReadableDescription
 {
-    assertDescription(@"collection with count of a value greater than <5>",
+    assertDescription(@"a collection with count of a value greater than <5>",
                       hasCount(greaterThan([NSNumber numberWithUnsignedInteger:5])));
 }
 
@@ -108,7 +108,7 @@
 
 - (void)testHasReadableDescription
 {
-    assertDescription(@"collection with count of <5>", hasCountOf(5));
+    assertDescription(@"a collection with count of <5>", hasCountOf(5));
 }
 
 

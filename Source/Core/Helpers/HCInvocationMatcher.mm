@@ -97,7 +97,7 @@
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [[[[description appendText:@"object with "]
+    [[[[description appendText:@"an object with "]
                     appendText:[self stringFromSelector]]
                     appendText:@" "]
                     appendDescriptionOf:subMatcher];

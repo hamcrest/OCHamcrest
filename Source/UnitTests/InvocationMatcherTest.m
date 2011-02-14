@@ -120,7 +120,7 @@
 - (void)testMatchesFeature
 {
     assertMatches(@"invoke on Thingy", resultMatcher, [Thingy thingyWithResult:@"bar"]);
-    assertDescription(@"object with result \"bar\"", resultMatcher);
+    assertDescription(@"an object with result \"bar\"", resultMatcher);
 }
 
 

@@ -64,7 +64,7 @@ static NSString *fakeDescription = @"DESCRIPTION";
 
 - (void)testHasReadableDescription
 {
-    assertDescription(@"object with description \"foo\"", hasDescription(@"foo"));
+    assertDescription(@"an object with description \"foo\"", hasDescription(@"foo"));
 }
 
 
