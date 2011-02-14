@@ -36,7 +36,7 @@
 OBJC_EXPORT id<HCMatcher> HC_contains(id itemMatcher1, ...);
 
 /**
-    contains(itemMatcher1, ..., nil)
+    contains(itemMatcher1, ...)
     matches a collection if its elements, in order, satisfy a list of matchers.
 
     Synonym for @ref HC_contains, available if @c HC_SHORTHAND is defined.

@@ -48,7 +48,7 @@
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id itemMatcher1, ...);
 
 /**
-    onlyContains(itemMatcher1, ..., nil)
+    onlyContains(itemMatcher1, ...)
     matches collections that only contain elements satisfying any of a list of matchers.
 
     For example,

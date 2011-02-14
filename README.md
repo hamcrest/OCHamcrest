@@ -104,7 +104,7 @@ important ones.
 
   * ``anything`` - always matches, useful if you don't care what the object
     under test is
-  * ``describedAs`` - decorator to adding custom failure description
+  * ``describedAs`` - decorator to add custom failure description
   * ``is`` - decorator to improve readability - see `Syntactic sugar`, below
 
 * Logical
@@ -124,9 +124,9 @@ important ones.
 
 * Collections
 
-  * ``hasEntry``, ``hasKey``, ``hasValue`` - tests that an NSDictionary
+  * ``hasEntry``, ``hasEntries``, ``hasKey``, ``hasValue`` - tests that an NSDictionary
     contains an entry, key or value
-  * ``hasItem``, ``hasItems`` - tests that a collection contains elements
+  * ``hasItem``, ``contains``, ``containsInAnyOrder`` - tests that a collection contains elements
 
 * Number
 

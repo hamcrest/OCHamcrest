@@ -125,9 +125,9 @@
         </ul>
     <li>Collections</li>
         <ul>
-        <li>@ref hasEntry, @ref hasKey, @ref hasValue - tests that an NSDictionary contains an entry, key
+        <li>@ref hasEntry, @ref hasEntries, @ref hasKey, @ref hasValue - tests that an NSDictionary contains an entry, key
             or value</li>
-        <li>@ref hasItem, @ref hasItems - tests that a collection contains elements</li>
+        <li>@ref hasItem, @ref contains, @ref containsInAnyOrder - tests that a collection contains elements</li>
         </ul>
     <li>Number</li>
         <ul>

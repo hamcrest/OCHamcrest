@@ -43,7 +43,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasEntries(id keysAndValueMatchers, ...);
 
 /**
-    HC_hasEntries(id keysAndValueMatchers, ..., nil) -
+    HC_hasEntries(id keysAndValueMatchers, ...) -
     Matches dictionaries containing key-value pairs satisfying a given lists of alternating keys and
     value matchers.
 

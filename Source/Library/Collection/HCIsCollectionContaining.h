@@ -60,7 +60,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id matcherOrValue);
 OBJC_EXPORT id<HCMatcher> HC_hasItems(id matcherOrValue1, ...);
 
 /**
-    hasItems(matcherOrValue1, ..., nil) -
+    hasItems(matcherOrValue1, ...) -
     Matches a collection if all matchers are satisfied by any of the collection's elements.
 
     Synonym for @ref HC_hasItems, available if @c HC_SHORTHAND is defined.
