@@ -811,7 +811,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32604E8B123601CD0084AB0B /* Build configuration list for PBXNativeTarget "OCHamcrestIOS" */;
 			buildPhases = (
-				32604E97123602320084AB0B /* Modify OS X framework */,
+				32604E97123602320084AB0B /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -895,7 +895,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "VERSION=1.4\nDISTFILE=OCHamcrest-${VERSION}\nDISTPATH=${SYMROOT}/${DISTFILE}\nPROJECTROOT=${SRCROOT}/..\nDOCSET=${BUILD_DIR}/Documentation/org.hamcrest.OCHamcrest.docset\n\necho Preparing clean build\nxcodebuild clean > /dev/null\n\necho Building OCHamcrest - Release\nxcodebuild -configuration Release -target OCHamcrest > /dev/null\nOUT=$?\nif [ \"${OUT}\" -ne \"0\" ]; then\n\techo OCHamcrest release build failed\n\texit ${OUT}\nfi\n\necho Building OCHamcrestIOS - Release\nxcodebuild -configuration Release -target OCHamcrestIOS > /dev/null\nOUT=$?\nif [ \"${OUT}\" -ne \"0\" ]; then\n\techo OCHamcrestIOS release build failed\n\texit ${OUT}\nfi\n\necho Building Documentation\nxcodebuild -configuration Release -target Documentation > /dev/null\n\necho Assembling Distribution\nrm -rf \"${DISTPATH}\"\nmkdir \"${DISTPATH}\"\ncp -R \"${SYMROOT}/Release/OCHamcrest.framework\" \"${DISTPATH}\"\ncp -R \"${SYMROOT}/Release/OCHamcrestIOS.framework\" \"${DISTPATH}\"\ncp \"${PROJECTROOT}/CHANGES.txt\" \"${DISTPATH}\"\ncp \"${PROJECTROOT}/LICENSE.txt\" \"${DISTPATH}\"\ncp -R \"${PROJECTROOT}/Examples\" \"${DISTPATH}\"\nmkdir \"${DISTPATH}/Documentation\"\ncp -R \"${DOCSET}\" \"${DISTPATH}/Documentation\"\ncp \"${PROJECTROOT}/Documentation/Makefile\" \"${DISTPATH}/Documentation\"\ncp \"${PROJECTROOT}/Documentation/README.txt\" \"${DISTPATH}/Documentation\"\n\nfind \"${DISTPATH}/Examples\" -type d \\( -name 'build' -or -name '.svn' -or -name '.git' \\) | while read DIR\ndo\n\trm -R \"${DIR}\";\ndone\n\nfind \"${DISTPATH}/Examples\" -type f \\( -name '*.pbxuser' -or -name '*.perspectivev3' -or -name '.DS_Store' -or -name '.gitignore' \\) | while read FILE\ndo\n\trm \"${FILE}\";\ndone\n\ncd \"${SYMROOT}\"\nzip --recurse-paths --symlinks ${DISTFILE}.zip ${DISTFILE} > /dev/null\nopen .\n";
+			shellScript = ./Scripts/MakeDistribution.sh;
 		};
 		08EEF60E129E0B1B0076BFCC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -908,7 +908,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "DOXYGEN=/Applications/Doxygen.app/Contents/Resources/doxygen\n\nif ! [ -f $DOXYGEN ]; then \n  echo :: error : Requires Doxygen in Applications folder\n  exit 1\nfi\n\n$DOXYGEN \"${SRCROOT}/../Documentation/Doxyfile\"\n\n# Generate Xcode documentation set\ncd build/Documentation\nmake\n";
+			shellScript = ./Scripts/MakeDocumentation.sh;
 		};
 		0F2A4B1D0D8B68B400051BCF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -923,19 +923,19 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-		32604E97123602320084AB0B /* Modify OS X framework */ = {
+		32604E97123602320084AB0B /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Modify OS X framework";
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# We'll copy the OS X framework to a new location, then modify it in place.\nOSX_FRAMEWORK=\"${BUILT_PRODUCTS_DIR}/OCHamcrest.framework/\"\nIOS_FRAMEWORK=\"${BUILT_PRODUCTS_DIR}/OCHamcrestIOS.framework/\"\n\n# Trigger builds of the static library for both the simulator and the device.\nxcodebuild -configuration Release -target libochamcrest -sdk iphoneos > /dev/null\nOUT=$?\nif [ \"${OUT}\" -ne \"0\" ]; then\n\techo Device build failed\n\texit ${OUT}\nfi\nxcodebuild -configuration Release -target libochamcrest -sdk iphonesimulator > /dev/null\nOUT=$?\nif [ \"${OUT}\" -ne \"0\" ]; then\n\techo Simulator build failed\n\texit ${OUT}\nfi\n\n# Copy the OS X framework to the new location.\nmkdir -p \"${IOS_FRAMEWORK}\"\nrsync -q -a --delete \"${OSX_FRAMEWORK}\" \"${IOS_FRAMEWORK}\"\n\n# Rename the main header.\nmv \"${IOS_FRAMEWORK}/Headers/OCHamcrest.h\" \"${IOS_FRAMEWORK}/Headers/OCHamcrestIOS.h\"\n\n# Update all imports to use the new framework name.\nIMPORT_EXPRESSION=\"s/#import <OCHamcrest/#import <OCHamcrestIOS/g;\"\nfind \"${IOS_FRAMEWORK}\" -name '*.h' -print0 | xargs -0 perl -pi -e \"${IMPORT_EXPRESSION}\"\n\n# Delete the existing (OS X) library and the link to it.\nrm \"${IOS_FRAMEWORK}/OCHamcrest\" \"${IOS_FRAMEWORK}/Versions/Current/OCHamcrest\"\n\n# Create a new library that is a fat library containing both static libraries.\nDEVICE_LIB=\"${PROJECT_DIR}/build/Release-iphoneos/libochamcrest.a\"\nSIMULATOR_LIB=\"${PROJECT_DIR}/build/Release-iphonesimulator/libochamcrest.a\"\nOUTPUT_LIB=\"${IOS_FRAMEWORK}/Versions/Current/OCHamcrestIOS\"\n\nlipo -create \"${DEVICE_LIB}\" -arch i386 \"${SIMULATOR_LIB}\" -o \"${OUTPUT_LIB}\"\n\n# Add a symlink, as required by the framework.\nln -s Versions/Current/OCHamcrestIOS \"${IOS_FRAMEWORK}/OCHamcrestIOS\"\n\n# Update the name in the plist file.\nNAME_EXPRESSION=\"s/OCHamcrest/OCHamcrestIOS/g;\"\nperl -pi -e \"${NAME_EXPRESSION}\" \"${IOS_FRAMEWORK}/Resources/Info.plist\"\n";
+			shellScript = ./Scripts/ModifyFrameworkForiOS.sh;
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
