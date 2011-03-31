@@ -3,13 +3,13 @@ OSX_FRAMEWORK="${BUILT_PRODUCTS_DIR}/OCHamcrest.framework/"
 IOS_FRAMEWORK="${BUILT_PRODUCTS_DIR}/OCHamcrestIOS.framework/"
 
 # Trigger builds of the static library for both the simulator and the device.
-xcodebuild -configuration Release -target libochamcrest -sdk iphoneos > /dev/null
+xcodebuild -configuration Release -target iOS_StaticLibrary -sdk iphoneos > /dev/null
 OUT=$?
 if [ "${OUT}" -ne "0" ]; then
 	echo Device build failed
 	exit ${OUT}
 fi
-xcodebuild -configuration Release -target libochamcrest -sdk iphonesimulator > /dev/null
+xcodebuild -configuration Release -target iOS_StaticLibrary -sdk iphonesimulator > /dev/null
 OUT=$?
 if [ "${OUT}" -ne "0" ]; then
 	echo Simulator build failed
