@@ -1,14 +1,15 @@
 VERSION=1.4
 DISTFILE=OCHamcrest-${VERSION}
-DISTPATH=${SYMROOT}/${DISTFILE}
-PROJECTROOT=${SRCROOT}/..
-DOCSET=${BUILD_DIR}/Documentation/org.hamcrest.OCHamcrest.docset
+DISTPATH=build/${DISTFILE}
+PROJECTROOT=..
+DOCSET=build/Documentation/org.hamcrest.OCHamcrest.docset
 
 echo Preparing clean build
-xcodebuild clean > /dev/null
+rm -rf build
+mkdir build
 
 echo Building OCHamcrest - Release
-xcodebuild -configuration Release -target OCHamcrest > /dev/null
+xcodebuild -configuration Release -target OCHamcrest
 OUT=$?
 if [ "${OUT}" -ne "0" ]; then
 	echo OCHamcrest release build failed
@@ -16,7 +17,7 @@ if [ "${OUT}" -ne "0" ]; then
 fi
 
 echo Building OCHamcrestIOS - Release
-xcodebuild -configuration Release -target OCHamcrestIOS > /dev/null
+source MakeIOSFramework.sh
 OUT=$?
 if [ "${OUT}" -ne "0" ]; then
 	echo OCHamcrestIOS release build failed
@@ -24,13 +25,13 @@ if [ "${OUT}" -ne "0" ]; then
 fi
 
 echo Building Documentation
-xcodebuild -configuration Release -target Documentation > /dev/null
+source MakeDocumentation.sh
 
 echo Assembling Distribution
 rm -rf "${DISTPATH}"
 mkdir "${DISTPATH}"
-cp -R "${SYMROOT}/Release/OCHamcrest.framework" "${DISTPATH}"
-cp -R "${SYMROOT}/Release/OCHamcrestIOS.framework" "${DISTPATH}"
+cp -R "build/Release/OCHamcrest.framework" "${DISTPATH}"
+cp -R "build/Release/OCHamcrestIOS.framework" "${DISTPATH}"
 cp "${PROJECTROOT}/CHANGES.txt" "${DISTPATH}"
 cp "${PROJECTROOT}/LICENSE.txt" "${DISTPATH}"
 cp -R "${PROJECTROOT}/Examples" "${DISTPATH}"
@@ -39,16 +40,17 @@ cp -R "${DOCSET}" "${DISTPATH}/Documentation"
 cp "${PROJECTROOT}/Documentation/Makefile" "${DISTPATH}/Documentation"
 cp "${PROJECTROOT}/Documentation/README.txt" "${DISTPATH}/Documentation"
 
-find "${DISTPATH}/Examples" -type d \( -name 'build' -or -name '.svn' -or -name '.git' \) | while read DIR
+find "${DISTPATH}/Examples" -type d \( -name 'build' -or -name 'xcuserdata' -or -name '.svn' -or -name '.git' \) | while read DIR
 do
 	rm -R "${DIR}";
 done
 
-find "${DISTPATH}/Examples" -type f \( -name '*.pbxuser' -or -name '*.perspectivev3' -or -name '.DS_Store' -or -name '.gitignore' \) | while read FILE
+find "${DISTPATH}/Examples" -type f \( -name '*.pbxuser' -or -name '*.perspectivev3' -or -name '*.mode1v3' -or -name '.DS_Store' -or -name '.gitignore' \) | while read FILE
 do
 	rm "${FILE}";
 done
 
-cd "${SYMROOT}"
-zip --recurse-paths --symlinks ${DISTFILE}.zip ${DISTFILE} > /dev/null
+pushd build
+zip --recurse-paths --symlinks ${DISTFILE}.zip ${DISTFILE}
 open .
+popd

@@ -5,8 +5,9 @@ if ! [ -f $DOXYGEN ]; then
   exit 1
 fi
 
-$DOXYGEN "${SRCROOT}/../Documentation/Doxyfile"
+$DOXYGEN "../Documentation/Doxyfile"
 
 # Generate Xcode documentation set
-cd build/Documentation
+pushd build/Documentation
 make
+popd

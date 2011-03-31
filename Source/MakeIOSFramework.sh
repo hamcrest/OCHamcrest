@@ -1,15 +1,18 @@
+# First build the OS X framework to get its folder structure.
+xcodebuild -configuration Release -target OCHamcrest -sdk macosx
+
 # We'll copy the OS X framework to a new location, then modify it in place.
-OSX_FRAMEWORK="${BUILT_PRODUCTS_DIR}/OCHamcrest.framework/"
-IOS_FRAMEWORK="${BUILT_PRODUCTS_DIR}/OCHamcrestIOS.framework/"
+OSX_FRAMEWORK="build/Release/OCHamcrest.framework/"
+IOS_FRAMEWORK="build/Release/OCHamcrestIOS.framework/"
 
 # Trigger builds of the static library for both the simulator and the device.
-xcodebuild -configuration Release -target iOS_StaticLibrary -sdk iphoneos > /dev/null
+xcodebuild -configuration Release -target iOS_StaticLibrary -sdk iphoneos
 OUT=$?
 if [ "${OUT}" -ne "0" ]; then
 	echo Device build failed
 	exit ${OUT}
 fi
-xcodebuild -configuration Release -target iOS_StaticLibrary -sdk iphonesimulator > /dev/null
+xcodebuild -configuration Release -target iOS_StaticLibrary -sdk iphonesimulator
 OUT=$?
 if [ "${OUT}" -ne "0" ]; then
 	echo Simulator build failed
@@ -31,8 +34,8 @@ find "${IOS_FRAMEWORK}" -name '*.h' -print0 | xargs -0 perl -pi -e "${IMPORT_EXP
 rm "${IOS_FRAMEWORK}/OCHamcrest" "${IOS_FRAMEWORK}/Versions/Current/OCHamcrest"
 
 # Create a new library that is a fat library containing both static libraries.
-DEVICE_LIB="${PROJECT_DIR}/build/Release-iphoneos/libochamcrest.a"
-SIMULATOR_LIB="${PROJECT_DIR}/build/Release-iphonesimulator/libochamcrest.a"
+DEVICE_LIB="build/Release-iphoneos/libochamcrest.a"
+SIMULATOR_LIB="build/Release-iphonesimulator/libochamcrest.a"
 OUTPUT_LIB="${IOS_FRAMEWORK}/Versions/Current/OCHamcrestIOS"
 
 lipo -create "${DEVICE_LIB}" -arch i386 "${SIMULATOR_LIB}" -o "${OUTPUT_LIB}"
