@@ -1,6 +1,3 @@
-*.pbxuser
-*.perspectivev3
-*.mode1v3
 build/
-xcuserdata/
-project.xcuserspace/
+*.xcodeproj/
+! *.xcodeproj/project.pbxproj
