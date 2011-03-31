@@ -895,7 +895,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ./Scripts/MakeDistribution.sh;
+			shellScript = ./MakeDistribution.sh;
 		};
 		08EEF60E129E0B1B0076BFCC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -908,7 +908,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ./Scripts/MakeDocumentation.sh;
+			shellScript = ./MakeDocumentation.sh;
 		};
 		0F2A4B1D0D8B68B400051BCF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -935,7 +935,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ./Scripts/ModifyFrameworkForiOS.sh;
+			shellScript = ./MakeIOSFramework.sh;
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
