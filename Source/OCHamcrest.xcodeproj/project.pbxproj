@@ -759,9 +759,9 @@
 			productReference = 087601F713440807001B439B /* OCHamcrestTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		087603CD13441E18001B439B /* iOS_StaticLibrary */ = {
+		087603CD13441E18001B439B /* libochamcrest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 087603EC13441E18001B439B /* Build configuration list for PBXNativeTarget "iOS_StaticLibrary" */;
+			buildConfigurationList = 087603EC13441E18001B439B /* Build configuration list for PBXNativeTarget "libochamcrest" */;
 			buildPhases = (
 				087603CA13441E18001B439B /* Sources */,
 				087603CB13441E18001B439B /* Frameworks */,
@@ -771,7 +771,7 @@
 			);
 			dependencies = (
 			);
-			name = iOS_StaticLibrary;
+			name = libochamcrest;
 			productName = iOS_StaticLibrary;
 			productReference = 081BBF6A134430A60074E99C /* libochamcrest.a */;
 			productType = "com.apple.product-type.library.static";
@@ -798,7 +798,7 @@
 			targets = (
 				087601E113440806001B439B /* OCHamcrest */,
 				087601F613440807001B439B /* OCHamcrestTests */,
-				087603CD13441E18001B439B /* iOS_StaticLibrary */,
+				087603CD13441E18001B439B /* libochamcrest */,
 			);
 		};
 /* End PBXProject section */
@@ -1174,7 +1174,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		087603EC13441E18001B439B /* Build configuration list for PBXNativeTarget "iOS_StaticLibrary" */ = {
+		087603EC13441E18001B439B /* Build configuration list for PBXNativeTarget "libochamcrest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				087603ED13441E18001B439B /* Debug */,
