@@ -7,7 +7,91 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		083EBD281344F1AE004D5622 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083EBD271344F1AE004D5622 /* Foundation.framework */; };
+		08026526134597C000A8DCCA /* HCAllOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021913440A83001B439B /* HCAllOf.mm */; };
+		08026527134597C000A8DCCA /* HCAnyOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021B13440A83001B439B /* HCAnyOf.mm */; };
+		08026528134597C000A8DCCA /* HCAssertThat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022D13440A83001B439B /* HCAssertThat.mm */; };
+		08026529134597C000A8DCCA /* HCBaseDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022F13440A83001B439B /* HCBaseDescription.mm */; };
+		0802652A134597C000A8DCCA /* HCBaseMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023113440A83001B439B /* HCBaseMatcher.mm */; };
+		0802652B134597C000A8DCCA /* HCCollectMatchers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023913440A83001B439B /* HCCollectMatchers.mm */; };
+		0802652C134597C000A8DCCA /* HCDescribedAs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021D13440A83001B439B /* HCDescribedAs.mm */; };
+		0802652D134597C000A8DCCA /* HCHasCount.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D113440A9E001B439B /* HCHasCount.mm */; };
+		0802652E134597C000A8DCCA /* HCHasDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F213440A9F001B439B /* HCHasDescription.mm */; };
+		0802652F134597C000A8DCCA /* HCInvocationMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023B13440A83001B439B /* HCInvocationMatcher.mm */; };
+		08026530134597C000A8DCCA /* HCIs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021F13440A83001B439B /* HCIs.mm */; };
+		08026531134597C000A8DCCA /* HCIsAnything.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022113440A83001B439B /* HCIsAnything.mm */; };
+		08026532134597C000A8DCCA /* HCIsCloseTo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E913440A9F001B439B /* HCIsCloseTo.mm */; };
+		08026533134597C000A8DCCA /* HCIsCollectionContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D313440A9E001B439B /* HCIsCollectionContaining.mm */; };
+		08026534134597C000A8DCCA /* HCIsCollectionContainingInAnyOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D513440A9E001B439B /* HCIsCollectionContainingInAnyOrder.mm */; };
+		08026535134597C000A8DCCA /* HCIsCollectionContainingInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D713440A9E001B439B /* HCIsCollectionContainingInOrder.mm */; };
+		08026536134597C000A8DCCA /* HCIsCollectionOnlyContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D913440A9E001B439B /* HCIsCollectionOnlyContaining.mm */; };
+		08026537134597C000A8DCCA /* HCIsDictionaryContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DB13440A9E001B439B /* HCIsDictionaryContaining.mm */; };
+		08026538134597C000A8DCCA /* HCIsDictionaryContainingEntries.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.mm */; };
+		08026539134597C000A8DCCA /* HCIsDictionaryContainingKey.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DF13440A9E001B439B /* HCIsDictionaryContainingKey.mm */; };
+		0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E113440A9E001B439B /* HCIsDictionaryContainingValue.mm */; };
+		0802653B134597C000A8DCCA /* HCIsEmptyCollection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E313440A9E001B439B /* HCIsEmptyCollection.mm */; };
+		0802653C134597C000A8DCCA /* HCIsEqual.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022313440A83001B439B /* HCIsEqual.mm */; };
+		0802653D134597C000A8DCCA /* HCIsEqualIgnoringCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F513440A9F001B439B /* HCIsEqualIgnoringCase.mm */; };
+		0802653E134597C000A8DCCA /* HCIsEqualIgnoringWhiteSpace.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F713440A9F001B439B /* HCIsEqualIgnoringWhiteSpace.mm */; };
+		0802653F134597C000A8DCCA /* HCIsEqualToNumber.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602EB13440A9F001B439B /* HCIsEqualToNumber.mm */; };
+		08026540134597C000A8DCCA /* HCIsIn.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E513440A9E001B439B /* HCIsIn.mm */; };
+		08026541134597C000A8DCCA /* HCIsInstanceOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022513440A83001B439B /* HCIsInstanceOf.mm */; };
+		08026542134597C000A8DCCA /* HCIsNil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022713440A83001B439B /* HCIsNil.mm */; };
+		08026543134597C000A8DCCA /* HCIsNot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022913440A83001B439B /* HCIsNot.mm */; };
+		08026544134597C000A8DCCA /* HCIsSame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022B13440A83001B439B /* HCIsSame.mm */; };
+		08026545134597C000A8DCCA /* HCNumberAssert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602ED13440A9F001B439B /* HCNumberAssert.mm */; };
+		08026546134597C000A8DCCA /* HCOrderingComparison.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602EF13440A9F001B439B /* HCOrderingComparison.mm */; };
+		08026547134597C000A8DCCA /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023D13440A83001B439B /* HCRequireNonNilObject.mm */; };
+		08026548134597C000A8DCCA /* HCRequireNonNilString.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023F13440A83001B439B /* HCRequireNonNilString.mm */; };
+		08026549134597C000A8DCCA /* HCStringContains.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F913440A9F001B439B /* HCStringContains.mm */; };
+		0802654A134597C000A8DCCA /* HCStringDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023613440A83001B439B /* HCStringDescription.mm */; };
+		0802654B134597C000A8DCCA /* HCStringEndsWith.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602FB13440A9F001B439B /* HCStringEndsWith.mm */; };
+		0802654C134597C000A8DCCA /* HCStringStartsWith.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602FD13440A9F001B439B /* HCStringStartsWith.mm */; };
+		0802654D134597C000A8DCCA /* HCSubstringMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602FF13440A9F001B439B /* HCSubstringMatcher.mm */; };
+		0802654E134597C000A8DCCA /* HCWrapInMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876024113440A83001B439B /* HCWrapInMatcher.mm */; };
+		0802654F134597C000A8DCCA /* NSObject+HCSelfDescribingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876024313440A83001B439B /* NSObject+HCSelfDescribingValue.mm */; };
+		080265BC13459A9D00A8DCCA /* AbstractMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033113440AD8001B439B /* AbstractMatcherTest.m */; };
+		081BEE631345979F003F846A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
+		081BEE6E1345979F003F846A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
+		081BEE721345979F003F846A /* libochamcrest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 081BEE621345979F003F846A /* libochamcrest.a */; };
+		081BEE9613459FB2003F846A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
+		0859830B13459CA400BE7892 /* AllOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034513440AD8001B439B /* AllOfTest.m */; };
+		0859830C13459CA400BE7892 /* AnyOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034613440AD8001B439B /* AnyOfTest.m */; };
+		0859830D13459CA400BE7892 /* AssertThatTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033213440AD8001B439B /* AssertThatTest.m */; };
+		0859830E13459CA400BE7892 /* BaseMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033313440AD8001B439B /* BaseMatcherTest.m */; };
+		0859830F13459CA400BE7892 /* DescribedAsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034713440AD8001B439B /* DescribedAsTest.m */; };
+		0859831013459CA400BE7892 /* FakeWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033613440AD8001B439B /* FakeWithCount.m */; };
+		0859831113459CA400BE7892 /* FakeWithoutCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033813440AD8001B439B /* FakeWithoutCount.m */; };
+		0859831213459CA400BE7892 /* HasCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033913440AD8001B439B /* HasCountTest.m */; };
+		0859831313459CA400BE7892 /* HasDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035813440AD8001B439B /* HasDescriptionTest.m */; };
+		0859831413459CA400BE7892 /* InvocationMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035113440AD8001B439B /* InvocationMatcherTest.m */; };
+		0859831513459CA400BE7892 /* IsAnythingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034813440AD8001B439B /* IsAnythingTest.m */; };
+		0859831613459CA400BE7892 /* IsCloseToTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035313440AD8001B439B /* IsCloseToTest.m */; };
+		0859831713459CA400BE7892 /* IsCollectionContainingInAnyOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033A13440AD8001B439B /* IsCollectionContainingInAnyOrderTest.m */; };
+		0859831813459CA400BE7892 /* IsCollectionContainingInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033B13440AD8001B439B /* IsCollectionContainingInOrderTest.m */; };
+		0859831913459CA400BE7892 /* IsCollectionContainingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033C13440AD8001B439B /* IsCollectionContainingTest.m */; };
+		0859831A13459CA400BE7892 /* IsCollectionOnlyContainingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033D13440AD8001B439B /* IsCollectionOnlyContainingTest.m */; };
+		0859831B13459CA400BE7892 /* IsDictionaryContainingEntriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033E13440AD8001B439B /* IsDictionaryContainingEntriesTest.m */; };
+		0859831C13459CA400BE7892 /* IsDictionaryContainingKeyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033F13440AD8001B439B /* IsDictionaryContainingKeyTest.m */; };
+		0859831D13459CA400BE7892 /* IsDictionaryContainingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034013440AD8001B439B /* IsDictionaryContainingTest.m */; };
+		0859831E13459CA400BE7892 /* IsDictionaryContainingValueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034113440AD8001B439B /* IsDictionaryContainingValueTest.m */; };
+		0859831F13459CA400BE7892 /* IsEmptyCollectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034213440AD8001B439B /* IsEmptyCollectionTest.m */; };
+		0859832013459CA400BE7892 /* IsEqualIgnoringCaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035B13440AD8001B439B /* IsEqualIgnoringCaseTest.m */; };
+		0859832113459CA400BE7892 /* IsEqualIgnoringWhiteSpaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035C13440AD8001B439B /* IsEqualIgnoringWhiteSpaceTest.m */; };
+		0859832213459CA400BE7892 /* IsEqualTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034913440AD8001B439B /* IsEqualTest.m */; };
+		0859832313459CA400BE7892 /* IsEqualToNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035413440AD8001B439B /* IsEqualToNumberTest.m */; };
+		0859832413459CA400BE7892 /* IsInstanceOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034A13440AD8001B439B /* IsInstanceOfTest.m */; };
+		0859832513459CA400BE7892 /* IsInTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034313440AD8001B439B /* IsInTest.m */; };
+		0859832613459CA400BE7892 /* IsNilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034B13440AD8001B439B /* IsNilTest.m */; };
+		0859832713459CA400BE7892 /* IsNotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034C13440AD8001B439B /* IsNotTest.m */; };
+		0859832813459CA400BE7892 /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034D13440AD8001B439B /* IsSameTest.m */; };
+		0859832913459CA400BE7892 /* IsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034E13440AD8001B439B /* IsTest.m */; };
+		0859832A13459CA400BE7892 /* NeverMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035013440AD8001B439B /* NeverMatch.m */; };
+		0859832B13459CA400BE7892 /* NumberAssertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035513440AD8001B439B /* NumberAssertTest.m */; };
+		0859832C13459CA400BE7892 /* OrderingComparisonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035613440AD8001B439B /* OrderingComparisonTest.m */; };
+		0859832D13459CA400BE7892 /* StringContainsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035D13440AD8001B439B /* StringContainsTest.m */; };
+		0859832E13459CA400BE7892 /* StringDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035913440AD8001B439B /* StringDescriptionTest.m */; };
+		0859832F13459CA400BE7892 /* StringEndsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035E13440AD8001B439B /* StringEndsWithTest.m */; };
+		0859833013459CA400BE7892 /* StringStartsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035F13440AD8001B439B /* StringStartsWithTest.m */; };
 		087601FB13440807001B439B /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601E213440806001B439B /* OCHamcrest.framework */; };
 		0876024413440A83001B439B /* HCAllOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876021813440A83001B439B /* HCAllOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876024513440A83001B439B /* HCAllOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021913440A83001B439B /* HCAllOf.mm */; };
@@ -138,52 +222,16 @@
 		0876038513440AD8001B439B /* StringEndsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035E13440AD8001B439B /* StringEndsWithTest.m */; };
 		0876038613440AD8001B439B /* StringStartsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035F13440AD8001B439B /* StringStartsWithTest.m */; };
 		0876039213440E28001B439B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
-		087603CF13441E18001B439B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
-		087603F213441F08001B439B /* HCAllOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021913440A83001B439B /* HCAllOf.mm */; };
-		087603F313441F08001B439B /* HCAnyOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021B13440A83001B439B /* HCAnyOf.mm */; };
-		087603F413441F08001B439B /* HCDescribedAs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021D13440A83001B439B /* HCDescribedAs.mm */; };
-		087603F513441F08001B439B /* HCIs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021F13440A83001B439B /* HCIs.mm */; };
-		087603F613441F08001B439B /* HCIsAnything.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022113440A83001B439B /* HCIsAnything.mm */; };
-		087603F713441F08001B439B /* HCIsEqual.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022313440A83001B439B /* HCIsEqual.mm */; };
-		087603F813441F08001B439B /* HCIsInstanceOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022513440A83001B439B /* HCIsInstanceOf.mm */; };
-		087603F913441F08001B439B /* HCIsNil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022713440A83001B439B /* HCIsNil.mm */; };
-		087603FA13441F08001B439B /* HCIsNot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022913440A83001B439B /* HCIsNot.mm */; };
-		087603FB13441F08001B439B /* HCIsSame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022B13440A83001B439B /* HCIsSame.mm */; };
-		087603FC13441F08001B439B /* HCAssertThat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022D13440A83001B439B /* HCAssertThat.mm */; };
-		087603FD13441F08001B439B /* HCBaseDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022F13440A83001B439B /* HCBaseDescription.mm */; };
-		087603FE13441F08001B439B /* HCBaseMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023113440A83001B439B /* HCBaseMatcher.mm */; };
-		087603FF13441F08001B439B /* HCStringDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023613440A83001B439B /* HCStringDescription.mm */; };
-		0876040013441F0D001B439B /* HCCollectMatchers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023913440A83001B439B /* HCCollectMatchers.mm */; };
-		0876040113441F0D001B439B /* HCInvocationMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023B13440A83001B439B /* HCInvocationMatcher.mm */; };
-		0876040213441F0D001B439B /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023D13440A83001B439B /* HCRequireNonNilObject.mm */; };
-		0876040313441F0D001B439B /* HCRequireNonNilString.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023F13440A83001B439B /* HCRequireNonNilString.mm */; };
-		0876040413441F0D001B439B /* HCWrapInMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876024113440A83001B439B /* HCWrapInMatcher.mm */; };
-		0876040513441F0D001B439B /* NSObject+HCSelfDescribingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876024313440A83001B439B /* NSObject+HCSelfDescribingValue.mm */; };
-		0876040613441F12001B439B /* HCHasCount.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D113440A9E001B439B /* HCHasCount.mm */; };
-		0876040713441F12001B439B /* HCIsCollectionContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D313440A9E001B439B /* HCIsCollectionContaining.mm */; };
-		0876040813441F12001B439B /* HCIsCollectionContainingInAnyOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D513440A9E001B439B /* HCIsCollectionContainingInAnyOrder.mm */; };
-		0876040913441F12001B439B /* HCIsCollectionContainingInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D713440A9E001B439B /* HCIsCollectionContainingInOrder.mm */; };
-		0876040A13441F12001B439B /* HCIsCollectionOnlyContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D913440A9E001B439B /* HCIsCollectionOnlyContaining.mm */; };
-		0876040B13441F12001B439B /* HCIsDictionaryContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DB13440A9E001B439B /* HCIsDictionaryContaining.mm */; };
-		0876040C13441F12001B439B /* HCIsDictionaryContainingEntries.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.mm */; };
-		0876040D13441F12001B439B /* HCIsDictionaryContainingKey.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DF13440A9E001B439B /* HCIsDictionaryContainingKey.mm */; };
-		0876040E13441F12001B439B /* HCIsDictionaryContainingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E113440A9E001B439B /* HCIsDictionaryContainingValue.mm */; };
-		0876040F13441F12001B439B /* HCIsEmptyCollection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E313440A9E001B439B /* HCIsEmptyCollection.mm */; };
-		0876041013441F12001B439B /* HCIsIn.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E513440A9E001B439B /* HCIsIn.mm */; };
-		0876041113441F1B001B439B /* HCIsCloseTo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E913440A9F001B439B /* HCIsCloseTo.mm */; };
-		0876041213441F1B001B439B /* HCIsEqualToNumber.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602EB13440A9F001B439B /* HCIsEqualToNumber.mm */; };
-		0876041313441F1B001B439B /* HCNumberAssert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602ED13440A9F001B439B /* HCNumberAssert.mm */; };
-		0876041413441F1B001B439B /* HCOrderingComparison.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602EF13440A9F001B439B /* HCOrderingComparison.mm */; };
-		0876041513441F1E001B439B /* HCHasDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F213440A9F001B439B /* HCHasDescription.mm */; };
-		0876041613441F22001B439B /* HCIsEqualIgnoringCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F513440A9F001B439B /* HCIsEqualIgnoringCase.mm */; };
-		0876041713441F22001B439B /* HCIsEqualIgnoringWhiteSpace.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F713440A9F001B439B /* HCIsEqualIgnoringWhiteSpace.mm */; };
-		0876041813441F22001B439B /* HCStringContains.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F913440A9F001B439B /* HCStringContains.mm */; };
-		0876041913441F22001B439B /* HCStringEndsWith.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602FB13440A9F001B439B /* HCStringEndsWith.mm */; };
-		0876041A13441F22001B439B /* HCStringStartsWith.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602FD13440A9F001B439B /* HCStringStartsWith.mm */; };
-		0876041B13441F22001B439B /* HCSubstringMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602FF13440A9F001B439B /* HCSubstringMatcher.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		081BEE701345979F003F846A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 087601D813440806001B439B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 081BEE611345979F003F846A;
+			remoteInfo = libochamcrest;
+		};
 		087601F913440807001B439B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 087601D813440806001B439B /* Project object */;
@@ -194,8 +242,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		081BBF6A134430A60074E99C /* libochamcrest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libochamcrest.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		083EBD271344F1AE004D5622 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		081BEE621345979F003F846A /* libochamcrest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libochamcrest.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		081BEE6C1345979F003F846A /* libochamcrestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libochamcrestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		087601E213440806001B439B /* OCHamcrest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCHamcrest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		087601EA13440807001B439B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		087601F713440807001B439B /* OCHamcrestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCHamcrestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -337,6 +385,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		081BEE5F1345979F003F846A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				081BEE631345979F003F846A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081BEE681345979F003F846A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				081BEE6E1345979F003F846A /* Foundation.framework in Frameworks */,
+				081BEE721345979F003F846A /* libochamcrest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		087601DE13440806001B439B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,16 +414,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				083EBD281344F1AE004D5622 /* Foundation.framework in Frameworks */,
+				081BEE9613459FB2003F846A /* Foundation.framework in Frameworks */,
 				087601FB13440807001B439B /* OCHamcrest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		087603CB13441E18001B439B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				087603CF13441E18001B439B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +425,6 @@
 		087601D613440806001B439B = {
 			isa = PBXGroup;
 			children = (
-				083EBD271344F1AE004D5622 /* Foundation.framework */,
 				0876021513440A6A001B439B /* Classes */,
 				0876032F13440AD8001B439B /* UnitTests */,
 				0876038C13440B64001B439B /* Supporting Files */,
@@ -382,7 +438,8 @@
 			children = (
 				087601E213440806001B439B /* OCHamcrest.framework */,
 				087601F713440807001B439B /* OCHamcrestTests.octest */,
-				081BBF6A134430A60074E99C /* libochamcrest.a */,
+				081BEE621345979F003F846A /* libochamcrest.a */,
+				081BEE6C1345979F003F846A /* libochamcrestTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -658,6 +715,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		081BEE601345979F003F846A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		087601DF13440806001B439B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -712,16 +776,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		087603CC13441E18001B439B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		081BEE611345979F003F846A /* libochamcrest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 081BEE7E1345979F003F846A /* Build configuration list for PBXNativeTarget "libochamcrest" */;
+			buildPhases = (
+				081BEE5E1345979F003F846A /* Sources */,
+				081BEE5F1345979F003F846A /* Frameworks */,
+				081BEE601345979F003F846A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libochamcrest;
+			productName = libochamcrest;
+			productReference = 081BEE621345979F003F846A /* libochamcrest.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		081BEE6B1345979F003F846A /* libochamcrestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 081BEE811345979F003F846A /* Build configuration list for PBXNativeTarget "libochamcrestTests" */;
+			buildPhases = (
+				081BEE671345979F003F846A /* Sources */,
+				081BEE681345979F003F846A /* Frameworks */,
+				081BEE691345979F003F846A /* Resources */,
+				081BEE6A1345979F003F846A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				081BEE711345979F003F846A /* PBXTargetDependency */,
+			);
+			name = libochamcrestTests;
+			productName = libochamcrestTests;
+			productReference = 081BEE6C1345979F003F846A /* libochamcrestTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		087601E113440806001B439B /* OCHamcrest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0876020913440807001B439B /* Build configuration list for PBXNativeTarget "OCHamcrest" */;
@@ -759,23 +852,6 @@
 			productReference = 087601F713440807001B439B /* OCHamcrestTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		087603CD13441E18001B439B /* libochamcrest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 087603EC13441E18001B439B /* Build configuration list for PBXNativeTarget "libochamcrest" */;
-			buildPhases = (
-				087603CA13441E18001B439B /* Sources */,
-				087603CB13441E18001B439B /* Frameworks */,
-				087603CC13441E18001B439B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = libochamcrest;
-			productName = iOS_StaticLibrary;
-			productReference = 081BBF6A134430A60074E99C /* libochamcrest.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -798,12 +874,20 @@
 			targets = (
 				087601E113440806001B439B /* OCHamcrest */,
 				087601F613440807001B439B /* OCHamcrestTests */,
-				087603CD13441E18001B439B /* libochamcrest */,
+				081BEE611345979F003F846A /* libochamcrest */,
+				081BEE6B1345979F003F846A /* libochamcrestTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		081BEE691345979F003F846A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		087601E013440806001B439B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -821,6 +905,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		081BEE6A1345979F003F846A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 		087601F513440807001B439B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -837,6 +934,101 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		081BEE5E1345979F003F846A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08026526134597C000A8DCCA /* HCAllOf.mm in Sources */,
+				08026527134597C000A8DCCA /* HCAnyOf.mm in Sources */,
+				08026528134597C000A8DCCA /* HCAssertThat.mm in Sources */,
+				08026529134597C000A8DCCA /* HCBaseDescription.mm in Sources */,
+				0802652A134597C000A8DCCA /* HCBaseMatcher.mm in Sources */,
+				0802652B134597C000A8DCCA /* HCCollectMatchers.mm in Sources */,
+				0802652C134597C000A8DCCA /* HCDescribedAs.mm in Sources */,
+				0802652D134597C000A8DCCA /* HCHasCount.mm in Sources */,
+				0802652E134597C000A8DCCA /* HCHasDescription.mm in Sources */,
+				0802652F134597C000A8DCCA /* HCInvocationMatcher.mm in Sources */,
+				08026530134597C000A8DCCA /* HCIs.mm in Sources */,
+				08026531134597C000A8DCCA /* HCIsAnything.mm in Sources */,
+				08026532134597C000A8DCCA /* HCIsCloseTo.mm in Sources */,
+				08026533134597C000A8DCCA /* HCIsCollectionContaining.mm in Sources */,
+				08026534134597C000A8DCCA /* HCIsCollectionContainingInAnyOrder.mm in Sources */,
+				08026535134597C000A8DCCA /* HCIsCollectionContainingInOrder.mm in Sources */,
+				08026536134597C000A8DCCA /* HCIsCollectionOnlyContaining.mm in Sources */,
+				08026537134597C000A8DCCA /* HCIsDictionaryContaining.mm in Sources */,
+				08026538134597C000A8DCCA /* HCIsDictionaryContainingEntries.mm in Sources */,
+				08026539134597C000A8DCCA /* HCIsDictionaryContainingKey.mm in Sources */,
+				0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.mm in Sources */,
+				0802653B134597C000A8DCCA /* HCIsEmptyCollection.mm in Sources */,
+				0802653C134597C000A8DCCA /* HCIsEqual.mm in Sources */,
+				0802653D134597C000A8DCCA /* HCIsEqualIgnoringCase.mm in Sources */,
+				0802653E134597C000A8DCCA /* HCIsEqualIgnoringWhiteSpace.mm in Sources */,
+				0802653F134597C000A8DCCA /* HCIsEqualToNumber.mm in Sources */,
+				08026540134597C000A8DCCA /* HCIsIn.mm in Sources */,
+				08026541134597C000A8DCCA /* HCIsInstanceOf.mm in Sources */,
+				08026542134597C000A8DCCA /* HCIsNil.mm in Sources */,
+				08026543134597C000A8DCCA /* HCIsNot.mm in Sources */,
+				08026544134597C000A8DCCA /* HCIsSame.mm in Sources */,
+				08026545134597C000A8DCCA /* HCNumberAssert.mm in Sources */,
+				08026546134597C000A8DCCA /* HCOrderingComparison.mm in Sources */,
+				08026547134597C000A8DCCA /* HCRequireNonNilObject.mm in Sources */,
+				08026548134597C000A8DCCA /* HCRequireNonNilString.mm in Sources */,
+				08026549134597C000A8DCCA /* HCStringContains.mm in Sources */,
+				0802654A134597C000A8DCCA /* HCStringDescription.mm in Sources */,
+				0802654B134597C000A8DCCA /* HCStringEndsWith.mm in Sources */,
+				0802654C134597C000A8DCCA /* HCStringStartsWith.mm in Sources */,
+				0802654D134597C000A8DCCA /* HCSubstringMatcher.mm in Sources */,
+				0802654E134597C000A8DCCA /* HCWrapInMatcher.mm in Sources */,
+				0802654F134597C000A8DCCA /* NSObject+HCSelfDescribingValue.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081BEE671345979F003F846A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				080265BC13459A9D00A8DCCA /* AbstractMatcherTest.m in Sources */,
+				0859830B13459CA400BE7892 /* AllOfTest.m in Sources */,
+				0859830C13459CA400BE7892 /* AnyOfTest.m in Sources */,
+				0859830D13459CA400BE7892 /* AssertThatTest.m in Sources */,
+				0859830E13459CA400BE7892 /* BaseMatcherTest.m in Sources */,
+				0859830F13459CA400BE7892 /* DescribedAsTest.m in Sources */,
+				0859831013459CA400BE7892 /* FakeWithCount.m in Sources */,
+				0859831113459CA400BE7892 /* FakeWithoutCount.m in Sources */,
+				0859831213459CA400BE7892 /* HasCountTest.m in Sources */,
+				0859831313459CA400BE7892 /* HasDescriptionTest.m in Sources */,
+				0859831413459CA400BE7892 /* InvocationMatcherTest.m in Sources */,
+				0859831513459CA400BE7892 /* IsAnythingTest.m in Sources */,
+				0859831613459CA400BE7892 /* IsCloseToTest.m in Sources */,
+				0859831713459CA400BE7892 /* IsCollectionContainingInAnyOrderTest.m in Sources */,
+				0859831813459CA400BE7892 /* IsCollectionContainingInOrderTest.m in Sources */,
+				0859831913459CA400BE7892 /* IsCollectionContainingTest.m in Sources */,
+				0859831A13459CA400BE7892 /* IsCollectionOnlyContainingTest.m in Sources */,
+				0859831B13459CA400BE7892 /* IsDictionaryContainingEntriesTest.m in Sources */,
+				0859831C13459CA400BE7892 /* IsDictionaryContainingKeyTest.m in Sources */,
+				0859831D13459CA400BE7892 /* IsDictionaryContainingTest.m in Sources */,
+				0859831E13459CA400BE7892 /* IsDictionaryContainingValueTest.m in Sources */,
+				0859831F13459CA400BE7892 /* IsEmptyCollectionTest.m in Sources */,
+				0859832013459CA400BE7892 /* IsEqualIgnoringCaseTest.m in Sources */,
+				0859832113459CA400BE7892 /* IsEqualIgnoringWhiteSpaceTest.m in Sources */,
+				0859832213459CA400BE7892 /* IsEqualTest.m in Sources */,
+				0859832313459CA400BE7892 /* IsEqualToNumberTest.m in Sources */,
+				0859832413459CA400BE7892 /* IsInstanceOfTest.m in Sources */,
+				0859832513459CA400BE7892 /* IsInTest.m in Sources */,
+				0859832613459CA400BE7892 /* IsNilTest.m in Sources */,
+				0859832713459CA400BE7892 /* IsNotTest.m in Sources */,
+				0859832813459CA400BE7892 /* IsSameTest.m in Sources */,
+				0859832913459CA400BE7892 /* IsTest.m in Sources */,
+				0859832A13459CA400BE7892 /* NeverMatch.m in Sources */,
+				0859832B13459CA400BE7892 /* NumberAssertTest.m in Sources */,
+				0859832C13459CA400BE7892 /* OrderingComparisonTest.m in Sources */,
+				0859832D13459CA400BE7892 /* StringContainsTest.m in Sources */,
+				0859832E13459CA400BE7892 /* StringDescriptionTest.m in Sources */,
+				0859832F13459CA400BE7892 /* StringEndsWithTest.m in Sources */,
+				0859833013459CA400BE7892 /* StringStartsWithTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		087601DD13440806001B439B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -932,58 +1124,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		087603CA13441E18001B439B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				087603F213441F08001B439B /* HCAllOf.mm in Sources */,
-				087603F313441F08001B439B /* HCAnyOf.mm in Sources */,
-				087603F413441F08001B439B /* HCDescribedAs.mm in Sources */,
-				087603F513441F08001B439B /* HCIs.mm in Sources */,
-				087603F613441F08001B439B /* HCIsAnything.mm in Sources */,
-				087603F713441F08001B439B /* HCIsEqual.mm in Sources */,
-				087603F813441F08001B439B /* HCIsInstanceOf.mm in Sources */,
-				087603F913441F08001B439B /* HCIsNil.mm in Sources */,
-				087603FA13441F08001B439B /* HCIsNot.mm in Sources */,
-				087603FB13441F08001B439B /* HCIsSame.mm in Sources */,
-				087603FC13441F08001B439B /* HCAssertThat.mm in Sources */,
-				087603FD13441F08001B439B /* HCBaseDescription.mm in Sources */,
-				087603FE13441F08001B439B /* HCBaseMatcher.mm in Sources */,
-				087603FF13441F08001B439B /* HCStringDescription.mm in Sources */,
-				0876040013441F0D001B439B /* HCCollectMatchers.mm in Sources */,
-				0876040113441F0D001B439B /* HCInvocationMatcher.mm in Sources */,
-				0876040213441F0D001B439B /* HCRequireNonNilObject.mm in Sources */,
-				0876040313441F0D001B439B /* HCRequireNonNilString.mm in Sources */,
-				0876040413441F0D001B439B /* HCWrapInMatcher.mm in Sources */,
-				0876040513441F0D001B439B /* NSObject+HCSelfDescribingValue.mm in Sources */,
-				0876040613441F12001B439B /* HCHasCount.mm in Sources */,
-				0876040713441F12001B439B /* HCIsCollectionContaining.mm in Sources */,
-				0876040813441F12001B439B /* HCIsCollectionContainingInAnyOrder.mm in Sources */,
-				0876040913441F12001B439B /* HCIsCollectionContainingInOrder.mm in Sources */,
-				0876040A13441F12001B439B /* HCIsCollectionOnlyContaining.mm in Sources */,
-				0876040B13441F12001B439B /* HCIsDictionaryContaining.mm in Sources */,
-				0876040C13441F12001B439B /* HCIsDictionaryContainingEntries.mm in Sources */,
-				0876040D13441F12001B439B /* HCIsDictionaryContainingKey.mm in Sources */,
-				0876040E13441F12001B439B /* HCIsDictionaryContainingValue.mm in Sources */,
-				0876040F13441F12001B439B /* HCIsEmptyCollection.mm in Sources */,
-				0876041013441F12001B439B /* HCIsIn.mm in Sources */,
-				0876041113441F1B001B439B /* HCIsCloseTo.mm in Sources */,
-				0876041213441F1B001B439B /* HCIsEqualToNumber.mm in Sources */,
-				0876041313441F1B001B439B /* HCNumberAssert.mm in Sources */,
-				0876041413441F1B001B439B /* HCOrderingComparison.mm in Sources */,
-				0876041513441F1E001B439B /* HCHasDescription.mm in Sources */,
-				0876041613441F22001B439B /* HCIsEqualIgnoringCase.mm in Sources */,
-				0876041713441F22001B439B /* HCIsEqualIgnoringWhiteSpace.mm in Sources */,
-				0876041813441F22001B439B /* HCStringContains.mm in Sources */,
-				0876041913441F22001B439B /* HCStringEndsWith.mm in Sources */,
-				0876041A13441F22001B439B /* HCStringStartsWith.mm in Sources */,
-				0876041B13441F22001B439B /* HCSubstringMatcher.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		081BEE711345979F003F846A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 081BEE611345979F003F846A /* libochamcrest */;
+			targetProxy = 081BEE701345979F003F846A /* PBXContainerItemProxy */;
+		};
 		087601FA13440807001B439B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 087601E113440806001B439B /* OCHamcrest */;
@@ -992,6 +1140,76 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		081BEE7F1345979F003F846A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/libochamcrest.dst;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ochamcrest;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		081BEE801345979F003F846A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/libochamcrest.dst;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ochamcrest;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		081BEE821345979F003F846A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "UnitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		081BEE831345979F003F846A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "UnitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		0876020713440807001B439B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1013,7 +1231,6 @@
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				WARNING_CFLAGS = (
@@ -1042,7 +1259,6 @@
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1064,6 +1280,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = supported;
 				INFOPLIST_FILE = Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1081,6 +1298,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = supported;
 				INFOPLIST_FILE = Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1122,31 +1340,27 @@
 			};
 			name = Release;
 		};
-		087603ED13441E18001B439B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DSTROOT = /tmp/iOS_StaticLibrary.dst;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = ochamcrest;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		087603EE13441E18001B439B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DSTROOT = /tmp/iOS_StaticLibrary.dst;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = ochamcrest;
-				SDKROOT = iphoneos;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		081BEE7E1345979F003F846A /* Build configuration list for PBXNativeTarget "libochamcrest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081BEE7F1345979F003F846A /* Debug */,
+				081BEE801345979F003F846A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		081BEE811345979F003F846A /* Build configuration list for PBXNativeTarget "libochamcrestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081BEE821345979F003F846A /* Debug */,
+				081BEE831345979F003F846A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		087601DB13440806001B439B /* Build configuration list for PBXProject "OCHamcrest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1170,15 +1384,6 @@
 			buildConfigurations = (
 				0876020D13440807001B439B /* Debug */,
 				0876020E13440807001B439B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		087603EC13441E18001B439B /* Build configuration list for PBXNativeTarget "libochamcrest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				087603ED13441E18001B439B /* Debug */,
-				087603EE13441E18001B439B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -111,6 +111,7 @@
 }
 
 
+#if !TARGET_OS_IPHONE	// iOS version of SenTestingKit doesn't like this test
 - (void)testAssertion_stoppingAtFirstError
 {
     QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
@@ -121,5 +122,6 @@
     STAssertEquals([testRun failureCount], 1U, nil);
     STAssertEquals([testRun unexpectedExceptionCount], 0U, nil);
 }
+#endif
 
 @end
