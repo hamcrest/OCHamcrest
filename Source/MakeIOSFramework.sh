@@ -9,14 +9,14 @@ IOS_FRAMEWORK="build/Release/OCHamcrestIOS.framework/"
 xcodebuild -configuration Release -target libochamcrest -sdk iphoneos
 OUT=$?
 if [ "${OUT}" -ne "0" ]; then
-	echo Device build failed
-	exit ${OUT}
+    echo Device build failed
+    exit ${OUT}
 fi
 xcodebuild -configuration Release -target libochamcrest -sdk iphonesimulator
 OUT=$?
 if [ "${OUT}" -ne "0" ]; then
-	echo Simulator build failed
-	exit ${OUT}
+    echo Simulator build failed
+    exit ${OUT}
 fi
 
 # Copy the OS X framework to the new location.

@@ -9,7 +9,7 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsCloseTo.h>
 
-	// Test support
+    // Test support
 #import "AbstractMatcherTest.h"
 
 
@@ -28,11 +28,11 @@
 - (void)testEvaluatesToTrueIfArgumentIsEqualToADoubleValueWithinSomeError
 {
     id<HCMatcher> matcher = closeTo(1.0, 0.5);
-    
+
     assertMatches(@"equal", matcher, [NSNumber numberWithDouble:1.0]);
     assertMatches(@"less but within delta", matcher, [NSNumber numberWithDouble:0.5]);
     assertMatches(@"greater but within delta", matcher, [NSNumber numberWithDouble:1.5]);
-    
+
     assertDoesNotMatch(@"too small", matcher, [NSNumber numberWithDouble:0.4]);
     assertDoesNotMatch(@"too big", matcher, [NSNumber numberWithDouble:1.6]);
 }
@@ -41,7 +41,7 @@
 - (void)testFailsIfMatchingAgainstNonNumber
 {
     id<HCMatcher> matcher = closeTo(1.0, 0.5);
-    
+
     assertDoesNotMatch(@"not a number", matcher, @"a");
     assertDoesNotMatch(@"not a number", matcher, nil);
 }

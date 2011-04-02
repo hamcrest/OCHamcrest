@@ -5,15 +5,15 @@
 //  Created by: Jon Reid
 //
 
-	// Class under test
+    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsNil.h>
 
-	// Collaborators
+    // Collaborators
 #import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCIsNot.h>
 
-	// Test support
+    // Test support
 #import "AbstractMatcherTest.h"
 
 
@@ -84,7 +84,7 @@
 - (void)testEvaluatesToTrueIfArgumentIsNotNil
 {
     id ANY_NON_NULL_ARGUMENT = [[[NSObject alloc] init] autorelease];
-    
+
     assertMatches(@"not nil", notNilValue(), ANY_NON_NULL_ARGUMENT);
 }
 

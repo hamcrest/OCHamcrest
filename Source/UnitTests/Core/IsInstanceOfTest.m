@@ -5,11 +5,11 @@
 //  Created by: Jon Reid
 //
 
-	// Class under test
+    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsInstanceOf.h>
 
-	// Test support
+    // Test support
 #import "AbstractMatcherTest.h"
 
 
@@ -27,7 +27,7 @@
 - (void)testEvaluatesToTrueIfArgumentIsInstanceOfASpecificClass
 {
     NSNumber *number = [NSNumber numberWithInt:1];
-    
+
     assertMatches(@"same class", instanceOf([NSNumber class]), number);
     assertMatches(@"subclass", instanceOf([NSValue class]), number);
 

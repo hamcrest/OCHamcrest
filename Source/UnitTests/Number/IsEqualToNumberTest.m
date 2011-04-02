@@ -5,7 +5,7 @@
 //  Created by: Jon Reid
 //
 
-	// Module under test
+    // Module under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsEqualToNumber.h>
 

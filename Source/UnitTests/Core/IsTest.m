@@ -5,7 +5,7 @@
 //  Created by: Jon Reid
 //
 
-	// Class under test
+    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIs.h>
 

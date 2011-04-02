@@ -5,7 +5,7 @@
 //  Created by: Jon Reid
 //
 
-	// Class under test
+    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsSame.h>
 
@@ -14,7 +14,7 @@
 #import <OCHamcrest/HCIsNot.h>
 #import <OCHamcrest/HCStringDescription.h>
 
-	// Test support
+    // Test support
 #import "AbstractMatcherTest.h"
 
 
@@ -53,7 +53,7 @@
     HCStringDescription *description = [HCStringDescription stringDescription];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES 'same instance as 0x[0-9a-fA-F]+ \"abc\"'"];
-    
+
     [description appendDescriptionOf:sameInstance(@"abc")];
     STAssertTrue([expected evaluateWithObject:[description description]], nil);
 }
@@ -72,7 +72,7 @@
     HCStringDescription *description = [HCStringDescription stringDescription];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES 'was 0x[0-9a-fA-F]+ \"hi\"'"];
-    
+
     BOOL result = [matcher matches:@"hi" describingMismatchTo:description];
     STAssertFalse(result, @"Precondition: Matcher should not match item");
     STAssertTrue([expected evaluateWithObject:[description description]], nil);
@@ -91,7 +91,7 @@
     HCStringDescription *description = [HCStringDescription stringDescription];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES 'was 0x[0-9a-fA-F]+ \"hi\"'"];
-    
+
     [matcher describeMismatchOf:@"hi" to:description];
     STAssertTrue([expected evaluateWithObject:[description description]], nil);
 }

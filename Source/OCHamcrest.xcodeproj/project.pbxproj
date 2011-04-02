@@ -432,6 +432,7 @@
 				087601E313440806001B439B /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		087601E313440806001B439B /* Products */ = {
 			isa = PBXGroup;

@@ -6,17 +6,17 @@
 //
 
 /**
-	@defgroup library Matcher Library
+    @defgroup library Matcher Library
 
-	Library of Matcher implementations
+    Library of Matcher implementations
  */
 
 /**
-	@defgroup core_matchers Core Matchers
- 
-	Fundamental matchers of objects and values, and composite matchers
- 
-	@ingroup library
+    @defgroup core_matchers Core Matchers
+
+    Fundamental matchers of objects and values, and composite matchers
+
+    @ingroup library
  */
 #import <OCHamcrest/HCAllOf.h>
 #import <OCHamcrest/HCAnyOf.h>
@@ -30,11 +30,11 @@
 #import <OCHamcrest/HCIsSame.h>
 
 /**
-	@defgroup collection_matchers Collection Matchers
-    
+    @defgroup collection_matchers Collection Matchers
+
     Matchers of collections
- 
-	@ingroup library
+
+    @ingroup library
  */
 #import <OCHamcrest/HCHasCount.h>
 #import <OCHamcrest/HCIsCollectionContaining.h>
@@ -49,39 +49,39 @@
 #import <OCHamcrest/HCIsIn.h>
 
 /**
-	@defgroup number_matchers Number Matchers
-    
+    @defgroup number_matchers Number Matchers
+
     Matchers that perform numeric comparisons
- 
-	@ingroup library
+
+    @ingroup library
  */
 #import <OCHamcrest/HCIsCloseTo.h>
 #import <OCHamcrest/HCOrderingComparison.h>
 
 /**
-	@defgroup primitive_number_matchers Primitive Number Matchers
+    @defgroup primitive_number_matchers Primitive Number Matchers
 
-	Matchers for testing equality against primitive numeric types
+    Matchers for testing equality against primitive numeric types
 
-	@ingroup number_matchers
+    @ingroup number_matchers
  */
 #import <OCHamcrest/HCIsEqualToNumber.h>
 
 /**
-	@defgroup object_matchers Object Matchers
-    
+    @defgroup object_matchers Object Matchers
+
     Matchers that inspect objects
- 
-	@ingroup library
+
+    @ingroup library
  */
 #import <OCHamcrest/HCHasDescription.h>
 
 /**
-	@defgroup text_matchers Text Matchers
-    
+    @defgroup text_matchers Text Matchers
+
     Matchers that perform text comparisons
- 
-	@ingroup library
+
+    @ingroup library
  */
 #import <OCHamcrest/HCIsEqualIgnoringCase.h>
 #import <OCHamcrest/HCIsEqualIgnoringWhiteSpace.h>
@@ -90,27 +90,27 @@
 #import <OCHamcrest/HCStringStartsWith.h>
 
 /**
-	@defgroup integration Unit Test Integration
+    @defgroup integration Unit Test Integration
  */
 #import <OCHamcrest/HCAssertThat.h>
 
 /**
-	@defgroup integration_numeric Unit Tests of Primitive Numbers
+    @defgroup integration_numeric Unit Tests of Primitive Numbers
 
-	Unit test integration for primitive numbers
+    Unit test integration for primitive numbers
 
-	@ingroup integration
+    @ingroup integration
  */
 #import <OCHamcrest/HCNumberAssert.h>
 
 /**
-	@defgroup core Core API
+    @defgroup core Core API
  */
 
 /**
-	@defgroup helpers Helpers
- 
-	Utilities for writing Matchers
- 
-	@ingroup core
+    @defgroup helpers Helpers
+
+    Utilities for writing Matchers
+
+    @ingroup core
  */

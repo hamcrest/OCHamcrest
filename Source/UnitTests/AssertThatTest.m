@@ -27,11 +27,11 @@
 @implementation QuietTestRun
 
 - (void)addException:(NSException *) anException
-{	
+{
     if ([[anException name] isEqualToString:SenTestFailureException])
-		++myFailureCount;
-	else
-		++myUnexpectedExceptionCount;
+        ++myFailureCount;
+    else
+        ++myUnexpectedExceptionCount;
 }
 
 - (unsigned int)failureCount
@@ -84,7 +84,7 @@
     NSString *expected = @"EXPECTED";
     NSString *actual = @"ACTUAL";
     NSString *expectedMessage = @"Expected \"EXPECTED\", but was \"ACTUAL\"";
-    
+
     @try
     {
         [self raiseAfterFailure];
@@ -103,7 +103,7 @@
 {
     QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
     [testCase continueAfterFailure];    // Default behavior of OCUnit
-    
+
     QuietTestRun *testRun = (QuietTestRun *)[testCase run];
 
     STAssertEquals([testRun failureCount], 2U, nil);
@@ -111,12 +111,12 @@
 }
 
 
-#if !TARGET_OS_IPHONE	// iOS version of SenTestingKit doesn't like this test
+#if !TARGET_OS_IPHONE   // iOS version of SenTestingKit doesn't like this test
 - (void)testAssertion_stoppingAtFirstError
 {
     QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
     [testCase raiseAfterFailure];
-    
+
     QuietTestRun *testRun = (QuietTestRun *)[testCase run];
 
     STAssertEquals([testRun failureCount], 1U, nil);
