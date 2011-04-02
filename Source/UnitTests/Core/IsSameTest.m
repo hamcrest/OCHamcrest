@@ -79,6 +79,12 @@
 }
 
 
+- (void)testMismatchDescriptionWithNilShouldNotIncludeAddress
+{
+    assertMismatchDescription(@"was nil", sameInstance(@"foo"), nil);
+}
+
+
 - (void)testDescribeMismatch
 {
     id<HCMatcher> matcher = sameInstance(@"foo");
@@ -88,6 +94,12 @@
     
     [matcher describeMismatchOf:@"hi" to:description];
     STAssertTrue([expected evaluateWithObject:[description description]], nil);
+}
+
+
+- (void)testDescribeMismatchWithNilShouldNotIncludeAddress
+{
+    assertDescribeMismatch(@"was nil", sameInstance(@"foo"), nil);
 }
 
 @end

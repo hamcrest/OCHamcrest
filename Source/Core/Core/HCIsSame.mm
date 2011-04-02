@@ -43,8 +43,10 @@
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
-    [[mismatchDescription appendText:[NSString stringWithFormat:@"was 0x%0x ", item]]
-                 appendDescriptionOf:item];
+	[mismatchDescription appendText:@"was "];
+	if (item != nil)
+		[mismatchDescription appendText:[NSString stringWithFormat:@"0x%0x ", item]];
+    [mismatchDescription appendDescriptionOf:item];
 }
 
 
