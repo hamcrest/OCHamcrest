@@ -9,7 +9,7 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsCollectionOnlyContaining.h>
 
-    // Other OCHamcrest
+    // Collaborators
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCOrderingComparison.h>
 

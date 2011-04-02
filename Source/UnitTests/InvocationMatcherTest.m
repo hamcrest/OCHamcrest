@@ -9,7 +9,7 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCInvocationMatcher.h>
 
-    // Other OCHamcrest
+    // Collaborators
 #import <OCHamcrest/HCDescription.h>
 #import <OCHamcrest/HCIsEqual.h>
 

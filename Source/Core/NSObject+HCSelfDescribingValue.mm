@@ -5,10 +5,8 @@
 //  Created by: Jon Reid
 //
 
-    // Self
 #import "NSObject+HCSelfDescribingValue.h"
 
-    // OCHamcrest
 #import "HCDescription.h"
 
 

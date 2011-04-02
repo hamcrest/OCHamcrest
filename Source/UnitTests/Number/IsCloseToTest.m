@@ -5,12 +5,12 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsCloseTo.h>
+
+	// Test support
+#import "AbstractMatcherTest.h"
 
 
 @interface IsCloseToTest : AbstractMatcherTest

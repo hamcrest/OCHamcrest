@@ -9,10 +9,10 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsNot.h>
 
-    // Other OCHamcrest
+    // Collaborators
 #import <OCHamcrest/HCIsEqual.h>
 
-    // Inherited
+    // Test support
 #import "AbstractMatcherTest.h"
 
 

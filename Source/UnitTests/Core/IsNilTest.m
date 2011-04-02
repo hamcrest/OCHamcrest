@@ -5,14 +5,17 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
+	// Class under test
+#define HC_SHORTHAND
+#import <OCHamcrest/HCIsNil.h>
+
+	// Collaborators
+#import <OCHamcrest/HCAssertThat.h>
+#import <OCHamcrest/HCIsNot.h>
+
+	// Test support
 #import "AbstractMatcherTest.h"
 
-    // OCHamcrest
-#define HC_SHORTHAND
-#import <OCHamcrest/HCAssertThat.h>
-#import <OCHamcrest/HCIsNil.h>
-#import <OCHamcrest/HCIsNot.h>
 
 
 @interface IsNilTest : AbstractMatcherTest

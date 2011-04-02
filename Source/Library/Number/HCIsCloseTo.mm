@@ -5,13 +5,9 @@
 //  Created by: Jon Reid
 //
 
-    // Self
 #import "HCIsCloseTo.h"
 
-    // OCHamcrest
 #import "HCDescription.h"
-
-    // C++
 #import <cmath>
 using namespace std;
 

@@ -5,7 +5,6 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
 #import <SenTestingKit/SenTestingKit.h>
 
 @protocol HCMatcher;

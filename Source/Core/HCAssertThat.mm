@@ -5,14 +5,11 @@
 //  Created by: Jon Reid
 //
 
-    // Self
 #import "HCAssertThat.h"
 
-    // OCHamcrest
 #import "HCStringDescription.h"
 #import "HCMatcher.h"
 
-    // Objective-C
 #if TARGET_OS_IPHONE
     #import <objc/runtime.h>
 #else

@@ -5,10 +5,8 @@
 //  Created by: Jon Reid
 //
 
-    // Self
 #import "AbstractMatcherTest.h"
 
-    // OCHamcrest
 #import <OCHamcrest/HCMatcher.h>
 #import <OCHamcrest/HCStringDescription.h>
 

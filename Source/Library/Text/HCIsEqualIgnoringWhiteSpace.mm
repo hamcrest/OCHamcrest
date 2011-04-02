@@ -5,14 +5,10 @@
 //  Created by: Jon Reid
 //
 
-    // Self
 #import "HCIsEqualIgnoringWhiteSpace.h"
 
-    // OCHamcrest
 #import "HCDescription.h"
 #import "HCRequireNonNilObject.h"
-
-    // C++
 #import <cctype>
 using namespace std;
 

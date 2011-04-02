@@ -9,7 +9,7 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCHasCount.h>
 
-    // Other OCHamcrest
+    // Collaborators
 #import <OCHamcrest/HCIsEqualToNumber.h>
 #import <OCHamcrest/HCOrderingComparison.h>
 

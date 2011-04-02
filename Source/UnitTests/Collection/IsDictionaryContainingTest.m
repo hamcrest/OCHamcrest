@@ -9,7 +9,7 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsDictionaryContaining.h>
 
-    // Other OCHamcrest
+    // Collaborators
 #import <OCHamcrest/HCIsAnything.h>
 #import <OCHamcrest/HCIsEqual.h>
 

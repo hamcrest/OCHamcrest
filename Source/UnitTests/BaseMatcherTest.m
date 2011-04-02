@@ -8,7 +8,7 @@
     // Class under test
 #import <OCHamcrest/HCBaseMatcher.h>
 
-    // Other OCHamcrest
+    // Collaborators
 #import <OCHamcrest/HCDescription.h>
 
     // Test support

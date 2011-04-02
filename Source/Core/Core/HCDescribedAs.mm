@@ -5,13 +5,9 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
 #import "HCDescribedAs.h"
 
-    // OCHamcrest
 #import "HCDescription.h"
-
-    // C++
 #import <cstdarg>
 #import <cctype>
 #import <utility>

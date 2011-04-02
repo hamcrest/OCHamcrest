@@ -5,16 +5,17 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+	// Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIs.h>
+
+    // Collaborators
 #import <OCHamcrest/HCIsEqual.h>
 
     // Test support
+#import "AbstractMatcherTest.h"
 #import "NeverMatch.h"
+
 
 
 @interface IsTest : AbstractMatcherTest

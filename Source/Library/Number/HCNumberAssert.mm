@@ -5,10 +5,8 @@
 //  Created by: Jon Reid
 //
 
-    // Self
 #import "HCNumberAssert.h"
 
-    // OCHamcrest
 #import "HCAssertThat.h"
 #import "HCBoxNumber.h"
 using namespace hamcrest;

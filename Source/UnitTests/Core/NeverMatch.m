@@ -5,7 +5,6 @@
 //  Created by: Jon Reid
 //
 
-    // Self
 #import "NeverMatch.h"
 
 #import "HCDescription.h"

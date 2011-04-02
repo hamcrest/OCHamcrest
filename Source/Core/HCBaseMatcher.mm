@@ -5,10 +5,8 @@
 //  Created by: Jon Reid
 //
 
-    // Self
 #import "HCBaseMatcher.h"
 
-    // OCHamcrest
 #import "HCStringDescription.h"
 
 

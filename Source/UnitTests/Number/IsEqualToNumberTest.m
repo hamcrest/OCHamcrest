@@ -5,14 +5,14 @@
 //  Created by: Jon Reid
 //
 
-    // Module under test
+	// Module under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsEqualToNumber.h>
 
-    // Other OCHamcrest
+    // Collaborators
 #import <OCHamcrest/HCAssertThat.h>
 
-    // Test Support
+    // Test support
 #import "AbstractMatcherTest.h"
 
 

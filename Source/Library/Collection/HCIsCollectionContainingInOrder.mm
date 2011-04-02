@@ -5,10 +5,8 @@
 //  Created by: Jon Reid
 //
 
-    // Self
 #import "HCIsCollectionContainingInOrder.h"
 
-    // OCHamcrest
 #import "HCAllOf.h"
 #import "HCDescription.h"
 #import "HCWrapInMatcher.h"

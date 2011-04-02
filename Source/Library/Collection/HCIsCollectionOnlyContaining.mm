@@ -5,10 +5,8 @@
 //  Created by: Jon Reid
 //
 
-    // Self
 #import "HCIsCollectionOnlyContaining.h"
 
-    // OCHamcrest
 #import "HCAnyOf.h"
 #import "HCDescription.h"
 #import "HCRequireNonNilObject.h"

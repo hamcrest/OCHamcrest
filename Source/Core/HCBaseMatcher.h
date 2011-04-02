@@ -5,12 +5,10 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
 #import <Foundation/Foundation.h>
 #import <OCHamcrest/HCMatcher.h>
 
-    // Convenience header, to provide OBJC_EXPORT
-#import <objc/objc-api.h>
+#import <objc/objc-api.h>	// Convenience header, to provide OBJC_EXPORT
 
 
 /**

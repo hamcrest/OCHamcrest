@@ -5,7 +5,6 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
 #import <Foundation/Foundation.h>
 #import <OCHamcrest/HCDescription.h>
 

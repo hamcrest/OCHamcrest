@@ -5,10 +5,8 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
 #import "HCIsNot.h"
 
-    // OCHamcrest
 #import "HCDescription.h"
 #import "HCWrapInMatcher.h"
 

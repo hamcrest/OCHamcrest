@@ -5,7 +5,6 @@
 //  Created by: Jon Reid
 //
 
-    // Self
 #import "HCCollectMatchers.h"
 
 

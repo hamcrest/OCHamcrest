@@ -8,7 +8,7 @@
     // Class under test
 #import <OCHamcrest/HCStringDescription.h>
 
-    // Other OCHamcrest
+    // Collaborators
 #import <OCHamcrest/HCSelfDescribing.h>
 
     // Test support

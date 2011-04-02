@@ -9,7 +9,7 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCDescribedAs.h>
 
-    // Other OCHamcrest
+    // Collaborators
 #import <OCHamcrest/HCIsAnything.h>
 
     // Test support

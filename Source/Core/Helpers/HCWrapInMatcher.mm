@@ -5,10 +5,8 @@
 //  Created by: Jon Reid
 //
 
-    // Self
 #import "HCWrapInMatcher.h"
 
-    // OCHamcrest
 #import "HCIsEqual.h"
 
 

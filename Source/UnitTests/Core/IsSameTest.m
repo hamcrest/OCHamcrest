@@ -5,15 +5,17 @@
 //  Created by: Jon Reid
 //
 
-    // Inherited
-#import "AbstractMatcherTest.h"
-
-    // OCHamcrest
+	// Class under test
 #define HC_SHORTHAND
-#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCIsSame.h>
+
+    // Collaborators
+#import <OCHamcrest/HCAssertThat.h>
 #import <OCHamcrest/HCIsNot.h>
 #import <OCHamcrest/HCStringDescription.h>
+
+	// Test support
+#import "AbstractMatcherTest.h"
 
 
 @interface IsSameTest : AbstractMatcherTest

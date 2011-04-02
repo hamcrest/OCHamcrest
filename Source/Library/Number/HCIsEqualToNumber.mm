@@ -5,10 +5,8 @@
 //  Created by: Jon Reid
 //
 
-    // Self
 #import "HCIsEqualToNumber.h"
 
-    // OCHamcrest
 #import "HCBoxNumber.h"
 #import "HCIsEqual.h"
 using namespace hamcrest;
