@@ -10,6 +10,8 @@
 
 /**
     Matches empty collection.
+
+    @b Factory: @ref empty
     @ingroup collection_matchers
  */
 @interface HCIsEmptyCollection : HCHasCount

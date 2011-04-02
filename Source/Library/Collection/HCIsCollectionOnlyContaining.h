@@ -13,6 +13,7 @@
 
     This matcher will never match an empty collection.
 
+    @b Factory: @ref onlyContains
     @ingroup collection_matchers
 */
 @interface HCIsCollectionOnlyContaining : HCBaseMatcher

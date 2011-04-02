@@ -10,6 +10,8 @@
 
 /**
     Tests if a string is equal to another string, ignoring any changes in whitespace.
+
+    @b Factory: @ref equalToIgnoringWhiteSpace
     @ingroup text_matchers
 */
 @interface HCIsEqualIgnoringWhiteSpace : HCBaseMatcher

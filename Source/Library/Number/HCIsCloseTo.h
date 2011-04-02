@@ -10,6 +10,8 @@
 
 /**
     Is the argument a number close to a value, within some delta?
+
+    @b Factory: @ref closeTo
     @ingroup number_matchers
  */
 @interface HCIsCloseTo : HCBaseMatcher

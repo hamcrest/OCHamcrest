@@ -10,6 +10,8 @@
 
 /**
     Calculates the logical negation of a matcher.
+
+    @b Factory: @ref isNot
     @ingroup core_matchers
 */
 @interface HCIsNot : HCBaseMatcher

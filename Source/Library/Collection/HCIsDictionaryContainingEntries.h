@@ -12,6 +12,7 @@
     Matches dictionaries containing key-value pairs satisfying given lists of keys and value
     matchers.
  
+    @b Factory: @ref hasEntries
     @ingroup collection_matchers
  */
 @interface HCIsDictionaryContainingEntries : HCBaseMatcher

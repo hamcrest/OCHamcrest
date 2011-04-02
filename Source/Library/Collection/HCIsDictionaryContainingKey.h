@@ -10,6 +10,8 @@
 
 /**
     Matches dictionaries containing a key satisfying a given matcher.
+
+    @b Factory: @ref hasKey
     @ingroup collection_matchers
  */
 @interface HCIsDictionaryContainingKey : HCBaseMatcher

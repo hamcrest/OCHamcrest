@@ -14,6 +14,7 @@
     Evaluation is shortcut, so subsequent matchers are not called if an earlier matcher returns
     @c NO.
 
+    @b Factory: @ref allOf
     @ingroup core_matchers
  */
 @interface HCAllOf : HCBaseMatcher

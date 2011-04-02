@@ -10,6 +10,8 @@
 
 /**
     A matcher that always returns @c YES.
+
+    @b Factory: @ref anything
     @ingroup core_matchers
  */
 @interface HCIsAnything : HCBaseMatcher

@@ -10,6 +10,8 @@
 
 /**
     Tests whether the value is an instance of a class (including subclasses).
+
+    @b Factory: @ref instanceOf
     @ingroup core_matchers
  */
 @interface HCIsInstanceOf : HCBaseMatcher

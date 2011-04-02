@@ -10,6 +10,8 @@
 
 /**
     Matches collections for which @c -count satisfies a given matcher.
+
+    @b Factory: @ref hasCount, @ref hasCountOf
     @ingroup collection_matchers
  */
 @interface HCHasCount : HCBaseMatcher

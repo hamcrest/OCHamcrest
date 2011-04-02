@@ -10,6 +10,8 @@
 
 /**
     Is the value @c nil?
+
+    @b Factory: @ref nilValue, @ref notNilValue
     @ingroup core_matchers
 */
 @interface HCIsNil : HCBaseMatcher

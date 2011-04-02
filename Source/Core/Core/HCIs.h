@@ -21,6 +21,7 @@ assertThat(cheese, equalTo(smelly))
 assertThat(cheese, is(equalTo(smelly)))
 @endcode
 
+    @b Factory: @ref is
     @ingroup core_matchers
  */
 @interface HCIs : HCBaseMatcher
