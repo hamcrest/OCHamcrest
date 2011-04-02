@@ -10,20 +10,10 @@
 #import "HCStringDescription.h"
 
 
-@interface HCBaseMatcher (Private)
+@interface HCBaseMatcher ()
 - (void)subclassResponsibility:(SEL)command;
 @end
 
-@implementation HCBaseMatcher (Private)
-
-- (void)subclassResponsibility:(SEL)command
-{
-    NSString *className = NSStringFromClass([self class]);
-    [NSException raise:NSGenericException
-                format:@"-[%@  %s] not implemented", className, command];
-}
-
-@end
 
 #define ABSTRACT_METHOD [self subclassResponsibility:_cmd]
 
@@ -61,6 +51,14 @@
 - (void)describeTo:(id<HCDescription>)description
 {
     ABSTRACT_METHOD;
+}
+
+
+- (void)subclassResponsibility:(SEL)command
+{
+    NSString *className = NSStringFromClass([self class]);
+    [NSException raise:NSGenericException
+                format:@"-[%@  %s] not implemented", className, command];
 }
 
 @end

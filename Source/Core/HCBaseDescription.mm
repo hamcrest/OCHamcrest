@@ -11,10 +11,12 @@
 #import "HCSelfDescribing.h"
 
 
-@interface HCBaseDescription(Private)
+@interface HCBaseDescription ()
+- (id<HCDescription>)appendObjectDescriptionOf:(id)value;
 - (void)toCSyntaxString:(NSString *)unformatted;
 - (void)toCSyntax:(unichar)ch;
 @end
+
 
 @implementation HCBaseDescription
 
@@ -34,21 +36,30 @@
     else if ([value isKindOfClass:[NSString class]])
         [self toCSyntaxString:value];
     else
+        [self appendObjectDescriptionOf:value];
+    
+    return self;
+}
+
+
+- (id<HCDescription>)appendObjectDescriptionOf:(id)value
+{
+    NSString *description = [value description];
+    NSUInteger descriptionLength = [description length];
+    if (descriptionLength == 0)
     {
-        NSString *description = [value description];
-        NSUInteger descriptionLen = [description length];
-        if (descriptionLen > 0
-            && [description characterAtIndex:0] == '<'
-            && [description characterAtIndex:descriptionLen - 1] == '>')
-        {
-            [self append:description];
-        }
-        else
-        {
-            [self append:@"<"];
-            [self append:[value description]];
-            [self append:@">"];
-        }
+        [self append:[NSString stringWithFormat:@"<%@: 0x%0x>", NSStringFromClass([value class]), value]];
+    }
+    else if ([description characterAtIndex:0] == '<'
+             && [description characterAtIndex:descriptionLength - 1] == '>')
+    {
+        [self append:description];
+    }
+    else
+    {
+        [self append:@"<"];
+        [self append:description];
+        [self append:@">"];
     }
     return self;
 }
@@ -89,10 +100,6 @@
     return self;
 }
 
-@end
-
-
-@implementation HCBaseDescription (Private)
 
 - (void)toCSyntaxString:(NSString *)unformatted
 {

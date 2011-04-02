@@ -5,7 +5,11 @@ Hamcrest information: http://code.google.com/p/hamcrest/
 == NEXT VERSION IN PROGRESS
 
 * Updated project to Xcode 4. iOS framework / documentation / distribution scripts are now external, run from command-line instead of Xcode.
+
+* Fixed iOS simulator crash when trying to describe an object with nil description.
+
 * Changed sameInstance mismatch description to omit 0x0 address when describing nil argument.
+
 * Improved documentation by adding Factory headings pointing from implementing classes back to their factories.
 
 

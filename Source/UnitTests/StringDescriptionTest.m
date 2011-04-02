@@ -27,6 +27,21 @@
 
 @end
 
+
+#pragma mark -
+
+@interface ObjectWithNilDescription : NSObject
+@end
+
+@implementation ObjectWithNilDescription
+
+- (NSString *)description
+{
+    return nil;
+}
+
+@end
+
 //--------------------------------------------------------------------------------------------------
 
 @interface StringDescriptionTest : SenTestCase
@@ -87,6 +102,15 @@
     [description appendDescriptionOf:[[[NSObject alloc] init] autorelease]];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES '<NSObject: 0x[0-9a-fA-F]+>'"];
+    STAssertTrue([expected evaluateWithObject:[description description]], nil);
+}
+
+
+- (void)testCanDescribeObjectWithNilDescription
+{
+    [description appendDescriptionOf:[[[ObjectWithNilDescription alloc] init] autorelease]];
+    NSPredicate *expected = [NSPredicate predicateWithFormat:
+                             @"SELF MATCHES '<ObjectWithNilDescription: 0x[0-9a-fA-F]+>'"];
     STAssertTrue([expected evaluateWithObject:[description description]], nil);
 }
 
