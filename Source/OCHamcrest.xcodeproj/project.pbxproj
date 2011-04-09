@@ -382,6 +382,9 @@
 		0876038D13440B80001B439B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0876039013440BA7001B439B /* OCHamcrest_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHamcrest_Prefix.pch; sourceTree = "<group>"; };
 		0876039113440BB0001B439B /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		08BDD5FD1350C7BE00E5A443 /* MakeDistribution.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeDistribution.sh; sourceTree = "<group>"; };
+		08BDD5FE1350C7BE00E5A443 /* MakeDocumentation.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeDocumentation.sh; sourceTree = "<group>"; };
+		08BDD5FF1350C7BE00E5A443 /* MakeIOSFramework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeIOSFramework.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,6 +430,7 @@
 			children = (
 				0876021513440A6A001B439B /* Classes */,
 				0876032F13440AD8001B439B /* UnitTests */,
+				08BDD5FC1350C7A600E5A443 /* Scripts */,
 				0876038C13440B64001B439B /* Supporting Files */,
 				087601E413440806001B439B /* Frameworks */,
 				087601E313440806001B439B /* Products */,
@@ -711,6 +715,16 @@
 				0876039113440BB0001B439B /* UnitTests-Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		08BDD5FC1350C7A600E5A443 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				08BDD5FD1350C7BE00E5A443 /* MakeDistribution.sh */,
+				08BDD5FE1350C7BE00E5A443 /* MakeDocumentation.sh */,
+				08BDD5FF1350C7BE00E5A443 /* MakeIOSFramework.sh */,
+			);
+			name = Scripts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
