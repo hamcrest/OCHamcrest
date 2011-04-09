@@ -632,7 +632,8 @@
 				0876035913440AD8001B439B /* StringDescriptionTest.m */,
 				0876035A13440AD8001B439B /* Text */,
 			);
-			path = UnitTests;
+			name = UnitTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		0876033413440AD8001B439B /* Collection */ = {
