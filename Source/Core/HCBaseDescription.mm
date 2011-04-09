@@ -27,7 +27,7 @@
 }
 
 
-- (id<HCDescription>)appendDescriptionOf:(id)value;
+- (id<HCDescription>)appendDescriptionOf:(id)value
 {
     if (value == nil)
         [self append:@"nil"];

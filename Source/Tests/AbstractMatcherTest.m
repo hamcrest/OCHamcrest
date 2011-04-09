@@ -14,7 +14,7 @@
 @implementation AbstractMatcherTest
 
 - (void)assertTrue:(BOOL)condition message:(NSString *)message
-                inFile:(const char *)fileName atLine:(int)lineNumber;
+                inFile:(const char *)fileName atLine:(int)lineNumber
 {
     if (!condition)
     {
@@ -26,7 +26,7 @@
 
 
 - (void)assertFalse:(BOOL)condition message:(NSString *)message
-                inFile:(const char *)fileName atLine:(int)lineNumber;
+                inFile:(const char *)fileName atLine:(int)lineNumber
 {
     if (condition)
     {
@@ -76,7 +76,7 @@
 
 
 - (void)assertMatcher:(id<HCMatcher>)matcher matching:(id)arg yieldsMismatchDescription:(NSString *)expected
-                inFile:(const char *)fileName atLine:(int)lineNumber;
+                inFile:(const char *)fileName atLine:(int)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     BOOL result = [matcher matches:arg describingMismatchTo:description];

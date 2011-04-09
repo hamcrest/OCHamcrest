@@ -100,13 +100,13 @@
 
 @implementation HCIsCollectionContainingInAnyOrder
 
-+ (id)isCollectionContainingInAnyOrder:(NSMutableArray *)itemMatchers;
++ (id)isCollectionContainingInAnyOrder:(NSMutableArray *)itemMatchers
 {
     return [[[self alloc] initWithMatchers:itemMatchers] autorelease];
 }
 
 
-- (id)initWithMatchers:(NSMutableArray *)itemMatchers;
+- (id)initWithMatchers:(NSMutableArray *)itemMatchers
 {
     self = [super init];
     if (self != nil)

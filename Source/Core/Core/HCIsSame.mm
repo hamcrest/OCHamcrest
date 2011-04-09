@@ -12,7 +12,7 @@
 
 @implementation HCIsSame
 
-+ (id)isSameAs:(id)anObject;
++ (id)isSameAs:(id)anObject
 {
     return [[[self alloc] initSameAs:anObject] autorelease];
 }

@@ -103,13 +103,13 @@
 
 @implementation HCIsCollectionContainingInOrder
 
-+ (id)isCollectionContainingInOrder:(NSArray *)itemMatchers;
++ (id)isCollectionContainingInOrder:(NSArray *)itemMatchers
 {
     return [[[self alloc] initWithMatchers:itemMatchers] autorelease];
 }
 
 
-- (id)initWithMatchers:(NSArray *)itemMatchers;
+- (id)initWithMatchers:(NSArray *)itemMatchers
 {
     self = [super init];
     if (self != nil)

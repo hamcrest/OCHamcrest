@@ -12,7 +12,7 @@
 
 @implementation HCIsEqual
 
-+ (id)isEqualTo:(id)anObject;
++ (id)isEqualTo:(id)anObject
 {
     return [[[self alloc] initEqualTo:anObject] autorelease];
 }
