@@ -379,9 +379,9 @@
 		0876035D13440AD8001B439B /* StringContainsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringContainsTest.m; sourceTree = "<group>"; };
 		0876035E13440AD8001B439B /* StringEndsWithTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringEndsWithTest.m; sourceTree = "<group>"; };
 		0876035F13440AD8001B439B /* StringStartsWithTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringStartsWithTest.m; sourceTree = "<group>"; };
-		0876038D13440B80001B439B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0876039013440BA7001B439B /* OCHamcrest_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHamcrest_Prefix.pch; sourceTree = "<group>"; };
-		0876039113440BB0001B439B /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		0876038D13440B80001B439B /* OCHamcrest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OCHamcrest-Info.plist"; sourceTree = "<group>"; };
+		0876039013440BA7001B439B /* OCHamcrest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCHamcrest-Prefix.pch"; sourceTree = "<group>"; };
+		0876039113440BB0001B439B /* Tests-Info.plist */ = {isa = PBXFileReference; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		08BDD5FD1350C7BE00E5A443 /* MakeDistribution.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeDistribution.sh; sourceTree = "<group>"; };
 		08BDD5FE1350C7BE00E5A443 /* MakeDocumentation.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeDocumentation.sh; sourceTree = "<group>"; };
 		08BDD5FF1350C7BE00E5A443 /* MakeIOSFramework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeIOSFramework.sh; sourceTree = "<group>"; };
@@ -710,9 +710,9 @@
 		0876038C13440B64001B439B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0876038D13440B80001B439B /* Info.plist */,
-				0876039013440BA7001B439B /* OCHamcrest_Prefix.pch */,
-				0876039113440BB0001B439B /* UnitTests-Info.plist */,
+				0876038D13440B80001B439B /* OCHamcrest-Info.plist */,
+				0876039013440BA7001B439B /* OCHamcrest-Prefix.pch */,
+				0876039113440BB0001B439B /* Tests-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1190,7 +1190,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = "UnitTests-Info.plist";
+				INFOPLIST_FILE = "Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-lstdc++",
@@ -1212,7 +1212,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = "UnitTests-Info.plist";
+				INFOPLIST_FILE = "Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-lstdc++",
@@ -1233,7 +1233,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = OCHamcrest_Prefix.pch;
+				GCC_PREFIX_HEADER = "OCHamcrest-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -1263,7 +1263,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = OCHamcrest_Prefix.pch;
+				GCC_PREFIX_HEADER = "OCHamcrest-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = 4.2;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1294,7 +1294,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = supported;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = "OCHamcrest-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
@@ -1312,7 +1312,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = supported;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = "OCHamcrest-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
@@ -1327,7 +1327,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				INFOPLIST_FILE = "UnitTests-Info.plist";
+				INFOPLIST_FILE = "Tests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
 					SenTestingKit,
@@ -1345,7 +1345,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				INFOPLIST_FILE = "UnitTests-Info.plist";
+				INFOPLIST_FILE = "Tests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
 					SenTestingKit,
