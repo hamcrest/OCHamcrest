@@ -24,7 +24,8 @@
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 /**
     Evaluates to @c YES only when the argument is this same object.

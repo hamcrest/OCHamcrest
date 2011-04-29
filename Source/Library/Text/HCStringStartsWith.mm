@@ -34,7 +34,8 @@
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString *aSubstring)
 {

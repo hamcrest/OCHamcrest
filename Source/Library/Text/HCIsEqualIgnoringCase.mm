@@ -54,7 +54,8 @@
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString *string)
 {

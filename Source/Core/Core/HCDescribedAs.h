@@ -31,7 +31,8 @@
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 /**
     Wraps an existing matcher and overrides the description when it fails.

@@ -20,7 +20,8 @@
 - (NSString *)description  { return @"ARGUMENT DESCRIPTION"; }
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 @interface AlwaysEqual : NSObject
 @end
@@ -29,7 +30,8 @@
 - (BOOL)isEqual:(id)anObject  { return YES; }
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 @interface NeverEqual : NSObject
 @end
@@ -38,7 +40,8 @@
 - (BOOL)isEqual:(id)anObject  { return NO; }
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 @interface IsEqualTest : AbstractMatcherTest
 @end

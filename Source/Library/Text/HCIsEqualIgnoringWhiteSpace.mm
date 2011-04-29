@@ -54,7 +54,8 @@ NSMutableString *stripSpace(NSString *string)
 
 }   // namespace
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 @implementation HCIsEqualIgnoringWhiteSpace
 
@@ -104,7 +105,8 @@ NSMutableString *stripSpace(NSString *string)
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString *string)
 {

@@ -20,7 +20,8 @@
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 /**
     Tests if the argument is a string that ends with a substring.

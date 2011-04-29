@@ -64,7 +64,8 @@
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 OBJC_EXPORT id<HCMatcher> HC_hasCount(id<HCMatcher> matcher)
 {

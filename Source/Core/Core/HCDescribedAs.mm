@@ -43,7 +43,8 @@ pair<int, NSString*> separate(NSString *component)
 
 }   // namespace
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 @implementation HCDescribedAs
 
@@ -121,7 +122,8 @@ pair<int, NSString*> separate(NSString *component)
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString *description, id<HCMatcher> matcher, ...)
 {

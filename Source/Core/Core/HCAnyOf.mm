@@ -53,7 +53,8 @@
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 OBJC_EXPORT id<HCMatcher> HC_anyOf(id<HCMatcher> matcher, ...)
 {

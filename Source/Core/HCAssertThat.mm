@@ -67,7 +67,8 @@ NSException *createAssertThatFailure(const char *fileName, int lineNumber, NSStr
 
 }   // namespace
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 // As of 2010-09-09, the iPhone simulator has a bug where you can't catch
 // exceptions when they are thrown across NSInvocation boundaries. (See

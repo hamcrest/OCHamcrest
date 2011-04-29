@@ -68,7 +68,8 @@
 
 @end
 
-//==================================================================================================
+
+#pragma mark -
 
 @interface NotNilTest : AbstractMatcherTest
 @end

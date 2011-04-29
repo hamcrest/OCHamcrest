@@ -27,7 +27,8 @@
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 /**
     Evaluates to @c YES if @em any of the given matchers evaluate to @c YES.

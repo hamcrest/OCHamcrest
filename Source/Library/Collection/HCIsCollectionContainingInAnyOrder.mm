@@ -96,7 +96,8 @@
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 @implementation HCIsCollectionContainingInAnyOrder
 
@@ -163,7 +164,8 @@
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 OBJC_EXPORT id<HCMatcher> HC_containsInAnyOrder(id items, ...)
 {

@@ -25,7 +25,8 @@
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 /**
     Is the argument a number close to a value, within some delta?

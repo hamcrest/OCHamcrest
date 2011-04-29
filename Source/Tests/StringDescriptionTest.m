@@ -42,7 +42,8 @@
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 @interface StringDescriptionTest : SenTestCase
 {

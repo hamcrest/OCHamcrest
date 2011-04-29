@@ -29,7 +29,8 @@
 
 @end
 
-//--------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 /**
     Matches dictionaries containing key-value pairs satisfying a given lists of alternating keys and
