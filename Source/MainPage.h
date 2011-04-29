@@ -100,7 +100,7 @@
 
     @section tour A tour of common matchers
 
-    OCHamcrest comes with a library of useful matchers. Here are some of the most important ones.
+    OCHamcrest comes with a library of useful matchers:
 
     <ul>
     <li>Core</li>
@@ -127,7 +127,8 @@
         <ul>
         <li>@ref hasEntry, @ref hasEntries, @ref hasKey, @ref hasValue - tests that an NSDictionary contains an entry, key
             or value</li>
-        <li>@ref hasItem, @ref contains, @ref containsInAnyOrder - tests that a collection contains elements</li>
+        <li>@ref hasItem, @ref contains, @ref containsInAnyOrder, @ref onlyContains - tests that a collection contains elements</li>
+        <li>@ref hasCount, @ref hasCountOf - tests that a collection has a given number of elements</li>
         </ul>
     <li>Number</li>
         <ul>
@@ -139,7 +140,7 @@
         <ul>
         <li>@ref equalToIgnoringCase - tests string equality ignoring case</li>
         <li>@ref equalToIgnoringWhiteSpace - tests string equality ignoring differences in runs of whitespace</li>
-        <li>@ref containsString, @ref endsWith, @ref startsWith - tests string matching</li>
+        <li>@ref containsString, @ref endsWith, @ref startsWith, @ref stringContainsInOrder - tests string matching</li>
         </ul>
     </ul>
 

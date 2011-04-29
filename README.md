@@ -97,8 +97,7 @@ instead of writing ``HC_assertThat``, simply write ``assertThat``.
 A tour of common matchers
 =========================
 
-Hamcrest comes with a library of useful matchers. Here are some of the most
-important ones.
+Hamcrest comes with a library of useful matchers:
 
 * Core
 
@@ -126,7 +125,8 @@ important ones.
 
   * ``hasEntry``, ``hasEntries``, ``hasKey``, ``hasValue`` - tests that an NSDictionary
     contains an entry, key or value
-  * ``hasItem``, ``contains``, ``containsInAnyOrder`` - tests that a collection contains elements
+  * ``hasItem``, ``contains``, ``containsInAnyOrder``, ``onlyContains`` - tests that a collection contains elements
+  * ``hasCount``, ``hasCountOf`` - tests that a collection has a given number of elements
 
 * Number
 
@@ -139,7 +139,7 @@ important ones.
   * ``equalToIgnoringCase`` - tests string equality ignoring case
   * ``equalToIgnoringWhitespace`` - test strings equality ignoring
     differences in runs of whitespace
-  * ``containsString``, ``endsWith``, ``startsWith`` - tests string
+  * ``containsString``, ``endsWith``, ``startsWith``, ``stringContainsInOrder``,  - tests string
     matching
 
 
