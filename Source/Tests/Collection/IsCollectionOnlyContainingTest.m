@@ -52,7 +52,7 @@
 }
 
 
-- (void)testProvidesConvenientShortcutForMatchingWithIsEqualTo
+- (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"Values automatically wrapped with equal_to",
                   onlyContains(lessThan(@"d"), @"hi", nil),

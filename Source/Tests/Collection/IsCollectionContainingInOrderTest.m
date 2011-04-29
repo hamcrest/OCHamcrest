@@ -43,7 +43,7 @@
 }
 
 
-- (void)testProvidesConvenientShortcutForMatchingWithIsEqualTo
+- (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"Values automatically wrapped with equalTo",
                   (contains(@"a", @"b", @"c", nil)),

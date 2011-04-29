@@ -48,7 +48,7 @@
 }
 
 
-- (void)testProvidesConvenientShortcutForMatchingWithIsEqualTo
+- (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"list contains 'a'",
                   hasItem(@"a"), ([NSSet setWithObjects:@"a", @"b", @"c", nil]));
@@ -110,7 +110,7 @@
 }
 
 
-- (void)testProvidesConvenientShortcutForMatchingWithIsEqualTo
+- (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"contains all items",
                   (hasItems(@"a", @"b", @"c", nil)),

@@ -41,7 +41,7 @@
 }
 
 
-- (void)testProvidesConvenientShortcutForMatchingWithIsEqualTo
+- (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
                                             @"1", @"a",
