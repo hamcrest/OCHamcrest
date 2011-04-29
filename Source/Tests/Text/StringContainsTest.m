@@ -44,7 +44,7 @@ static NSString *EXCERPT = @"EXCERPT";
 
 
 - (void)testEvaluatesToTrueIfArgumentContainsSpecifiedSubstring
-{    
+{
     assertMatches(@"excerpt at beginning", matcher, [EXCERPT stringByAppendingString:@"END"]);
     assertMatches(@"excerpt at end", matcher, [@"START" stringByAppendingString:EXCERPT]);
     assertMatches(@"excerpt in middle", matcher,
@@ -65,6 +65,12 @@ static NSString *EXCERPT = @"EXCERPT";
 - (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(containsString(nil), @"Should require non-nil argument");
+}
+
+
+- (void)testFailsIfMatchingAgainstNonString
+{
+    assertDoesNotMatch(@"non-string", matcher, [NSNumber numberWithInt:3]);
 }
 
 

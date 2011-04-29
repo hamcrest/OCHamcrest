@@ -67,6 +67,12 @@ static NSString *EXCERPT = @"EXCERPT";
 }
 
 
+- (void)testFailsIfMatchingAgainstNonString
+{
+    assertDoesNotMatch(@"non-string", matcher, [NSNumber numberWithInt:3]);
+}
+
+
 - (void)testHasAReadableDescription
 {
     assertDescription(@"a string ending with \"EXCERPT\"", matcher);
