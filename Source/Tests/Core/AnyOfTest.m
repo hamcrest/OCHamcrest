@@ -35,6 +35,14 @@
 }
 
 
+- (void)testProvidesConvenientShortcutForMatchingWithEqualTo
+{
+    assertMatches(@"first matcher", anyOf(@"good", @"bad", nil), @"good");
+    assertMatches(@"second matcher", anyOf(@"bad", @"good", nil), @"good");
+    assertMatches(@"both matchers", anyOf(@"good", @"good", nil), @"good");
+}
+
+
 - (void)testNoMatchIfArgumentFailsToSatisfyEitherOfTwoOtherMatchers
 {
     assertDoesNotMatch(@"first matcher", anyOf(equalTo(@"bad"), equalTo(@"bad"), nil), @"good");

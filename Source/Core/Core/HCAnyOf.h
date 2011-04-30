@@ -34,18 +34,18 @@
     Evaluates to @c YES if @em any of the given matchers evaluate to @c YES.
  
     @b Synonym: @ref anyOf
-    @param matcher1  Comma-separated list of matchers ending with @c nil.
+    @param matcherOrValue1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCAnyOf
     @ingroup core_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_anyOf(id<HCMatcher> matcher1, ...);
+OBJC_EXPORT id<HCMatcher> HC_anyOf(id matcherOrValue1, ...);
 
 /**
-    anyOf(matcher1, ...) -
+    anyOf(matcherOrValue1, ...) -
     Evaluates to @c YES if @em any of the given matchers evaluate to @c YES.
  
     Synonym for @ref HC_anyOf, available if @c HC_SHORTHAND is defined.
-    @param matcher1  Comma-separated list of matchers ending with @c nil.
+    @param matcherOrValue1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCAnyOf
     @ingroup core_matchers
  */

@@ -7,16 +7,18 @@
 
 #import "HCCollectMatchers.h"
 
+#import "HCWrapInMatcher.h"
 
-OBJC_EXPORT NSMutableArray *HCCollectMatchers(id<HCMatcher> matcher, va_list args)
+
+OBJC_EXPORT NSMutableArray *HCCollectMatchers(id item, va_list args)
 {
-    NSMutableArray *matcherList = [NSMutableArray arrayWithObject:matcher];
+    NSMutableArray *matcherList = [NSMutableArray arrayWithObject:HCWrapInMatcher(item)];
     
-    matcher = va_arg(args, id<HCMatcher>);
-    while (matcher != nil)
+    item = va_arg(args, id);
+    while (item != nil)
     {
-        [matcherList addObject:matcher];
-        matcher = va_arg(args, id<HCMatcher>);
+        [matcherList addObject:HCWrapInMatcher(item)];
+        item = va_arg(args, id);
     }
     
     return matcherList;
