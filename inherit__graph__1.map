@@ -1,36 +1,37 @@
 <map id="G" name="G">
-<area shape="rect" href="$protocol_h_c_self_describing&#45;p.html" title="The ability of an object to describe itself." alt="" coords="7,639,140,666" />
-<area shape="rect" href="$protocol_h_c_matcher&#45;p.html" title="A matcher over acceptable values." alt="" coords="189,639,288,666" />
-<area shape="rect" href="$interface_h_c_base_matcher.html" title="Base class for all HCMatcher implementations." alt="" coords="337,639,447,666" />
-<area shape="rect" href="$interface_h_c_all_of.html" title="Calculates the logical conjunction of multiple matchers." alt="" coords="576,6,645,32" />
+<area shape="rect" href="$protocol_h_c_self_describing&#45;p.html" title="The ability of an object to describe itself." alt="" coords="7,664,140,691" />
+<area shape="rect" href="$protocol_h_c_matcher&#45;p.html" title="A matcher over acceptable values." alt="" coords="189,664,288,691" />
+<area shape="rect" href="$interface_h_c_base_matcher.html" title="Base class for all HCMatcher implementations." alt="" coords="337,664,447,691" />
+<area shape="rect" href="$interface_h_c_all_of.html" title="Calculates the logical conjunction of multiple matchers." alt="" coords="576,5,645,32" />
 <area shape="rect" href="$interface_h_c_any_of.html" title="Calculates the logical disjunction of multiple matchers." alt="" coords="572,56,649,83" />
-<area shape="rect" href="$interface_h_c_described_as.html" title="Provides a custom description to another matcher." alt="" coords="556,107,665,134" />
-<area shape="rect" href="$interface_h_c_has_count.html" title="Matches collections for which &#45;count satisfies a given matcher." alt="" coords="564,158,657,184" />
+<area shape="rect" href="$interface_h_c_described_as.html" title="Provides a custom description to another matcher." alt="" coords="556,107,665,133" />
+<area shape="rect" href="$interface_h_c_has_count.html" title="Matches collections for which &#45;count satisfies a given matcher." alt="" coords="564,157,657,184" />
 <area shape="rect" href="$interface_h_c_invocation_matcher.html" title="Supporting class for matching a feature of an object." alt="" coords="540,208,681,235" />
-<area shape="rect" href="$interface_h_c_is.html" title="Decorates another HCMatcher, retaining the behavior but allowing tests to be slightly more expressive..." alt="" coords="587,259,635,286" />
-<area shape="rect" href="$interface_h_c_is_anything.html" title="A matcher that always returns YES." alt="" coords="561,310,660,336" />
+<area shape="rect" href="$interface_h_c_is.html" title="Decorates another HCMatcher, retaining the behavior but allowing tests to be slightly more expressive..." alt="" coords="587,259,635,285" />
+<area shape="rect" href="$interface_h_c_is_anything.html" title="A matcher that always returns YES." alt="" coords="561,309,660,336" />
 <area shape="rect" href="$interface_h_c_is_close_to.html" title="Is the argument a number close to a value, within some delta?" alt="" coords="564,360,657,387" />
-<area shape="rect" href="$interface_h_c_is_collection_containing.html" title="Matches a collection if any element satisfies a given matcher." alt="" coords="529,411,692,438" />
-<area shape="rect" href="$interface_h_c_is_collection_containing_in_any_order.html" title="Matches a collection if its elements, in any order, satisfy a list of matchers." alt="" coords="496,462,725,488" />
+<area shape="rect" href="$interface_h_c_is_collection_containing.html" title="Matches a collection if any element satisfies a given matcher." alt="" coords="529,411,692,437" />
+<area shape="rect" href="$interface_h_c_is_collection_containing_in_any_order.html" title="Matches a collection if its elements, in any order, satisfy a list of matchers." alt="" coords="496,461,725,488" />
 <area shape="rect" href="$interface_h_c_is_collection_containing_in_order.html" title="Matches a collection if its elements, in order, satisfy a list of matchers." alt="" coords="508,512,713,539" />
-<area shape="rect" href="$interface_h_c_is_collection_only_containing.html" title="Matches collections that only contain elements satisfying a given matcher." alt="" coords="516,563,705,590" />
-<area shape="rect" href="$interface_h_c_is_dictionary_containing.html" title="Matches dictionaries containing a key&#45;value pair satisfying a given pair of matchers." alt="" coords="528,614,693,640" />
+<area shape="rect" href="$interface_h_c_is_collection_only_containing.html" title="Matches collections that only contain elements satisfying a given matcher." alt="" coords="516,563,705,589" />
+<area shape="rect" href="$interface_h_c_is_dictionary_containing.html" title="Matches dictionaries containing a key&#45;value pair satisfying a given pair of matchers." alt="" coords="528,613,693,640" />
 <area shape="rect" href="$interface_h_c_is_dictionary_containing_entries.html" title="Matches dictionaries containing key&#45;value pairs satisfying given lists of keys and value matchers..." alt="" coords="509,664,712,691" />
-<area shape="rect" href="$interface_h_c_is_dictionary_containing_key.html" title="Matches dictionaries containing a key satisfying a given matcher." alt="" coords="517,715,704,742" />
-<area shape="rect" href="$interface_h_c_is_dictionary_containing_value.html" title="Matches dictionaries containing a value satisfying a given matcher." alt="" coords="512,766,709,792" />
+<area shape="rect" href="$interface_h_c_is_dictionary_containing_key.html" title="Matches dictionaries containing a key satisfying a given matcher." alt="" coords="517,715,704,741" />
+<area shape="rect" href="$interface_h_c_is_dictionary_containing_value.html" title="Matches dictionaries containing a value satisfying a given matcher." alt="" coords="512,765,709,792" />
 <area shape="rect" href="$interface_h_c_is_equal.html" title="Is the object equal to another object, as tested by the &#45;isEqual: method?" alt="" coords="571,816,651,843" />
-<area shape="rect" href="$interface_h_c_is_equal_ignoring_case.html" title="Tests if a string is equal to another string, regardless of the case." alt="" coords="535,867,687,894" />
-<area shape="rect" href="$interface_h_c_is_equal_ignoring_white_space.html" title="Tests if a string is equal to another string, ignoring any changes in whitespace." alt="" coords="516,918,705,944" />
+<area shape="rect" href="$interface_h_c_is_equal_ignoring_case.html" title="Tests if a string is equal to another string, regardless of the case." alt="" coords="535,867,687,893" />
+<area shape="rect" href="$interface_h_c_is_equal_ignoring_white_space.html" title="Tests if a string is equal to another string, ignoring any changes in whitespace." alt="" coords="516,917,705,944" />
 <area shape="rect" href="$interface_h_c_is_in.html" title="Is the object present in the given collection?" alt="" coords="581,968,640,995" />
-<area shape="rect" href="$interface_h_c_is_instance_of.html" title="Tests whether the value is an instance of a class (including subclasses)." alt="" coords="557,1019,664,1046" />
-<area shape="rect" href="$interface_h_c_is_nil.html" title="Is the value nil?" alt="" coords="577,1070,644,1096" />
+<area shape="rect" href="$interface_h_c_is_instance_of.html" title="Tests whether the value is an instance of a class (including subclasses)." alt="" coords="557,1019,664,1045" />
+<area shape="rect" href="$interface_h_c_is_nil.html" title="Is the value nil?" alt="" coords="577,1069,644,1096" />
 <area shape="rect" href="$interface_h_c_is_not.html" title="Calculates the logical negation of a matcher." alt="" coords="576,1120,645,1147" />
-<area shape="rect" href="$interface_h_c_is_same.html" title="Is the item the same object as another?" alt="" coords="572,1171,649,1198" />
-<area shape="rect" href="$interface_h_c_ordering_comparison.html" title="HCOrderingComparison" alt="" coords="535,1222,687,1248" />
-<area shape="rect" href="$interface_h_c_substring_matcher.html" title="HCSubstringMatcher" alt="" coords="543,1272,679,1299" />
-<area shape="rect" href="$interface_h_c_is_empty_collection.html" title="Matches empty collection." alt="" coords="775,158,913,184" />
+<area shape="rect" href="$interface_h_c_is_same.html" title="Is the item the same object as another?" alt="" coords="572,1171,649,1197" />
+<area shape="rect" href="$interface_h_c_ordering_comparison.html" title="HCOrderingComparison" alt="" coords="535,1221,687,1248" />
+<area shape="rect" href="$interface_h_c_string_contains_in_order.html" title="Tests if a string contains a given list of substrings, in order." alt="" coords="529,1272,692,1299" />
+<area shape="rect" href="$interface_h_c_substring_matcher.html" title="HCSubstringMatcher" alt="" coords="543,1323,679,1349" />
+<area shape="rect" href="$interface_h_c_is_empty_collection.html" title="Matches empty collection." alt="" coords="775,157,913,184" />
 <area shape="rect" href="$interface_h_c_has_description.html" title="Does the object&#39;s &#45;description satisfy a given matcher?" alt="" coords="783,208,905,235" />
-<area shape="rect" href="$interface_h_c_string_contains.html" title="Tests if the argument is a string that contains a substring." alt="" coords="784,1222,904,1248" />
-<area shape="rect" href="$interface_h_c_string_ends_with.html" title="Tests if the argument is a string that ends with a substring." alt="" coords="781,1272,907,1299" />
-<area shape="rect" href="$interface_h_c_string_starts_with.html" title="Tests if the argument is a string that starts with a substring." alt="" coords="780,1323,908,1350" />
+<area shape="rect" href="$interface_h_c_string_contains.html" title="Tests if the argument is a string that contains a substring." alt="" coords="784,1272,904,1299" />
+<area shape="rect" href="$interface_h_c_string_ends_with.html" title="Tests if the argument is a string that ends with a substring." alt="" coords="781,1323,907,1349" />
+<area shape="rect" href="$interface_h_c_string_starts_with.html" title="Tests if the argument is a string that starts with a substring." alt="" coords="780,1373,908,1400" />
 </map>

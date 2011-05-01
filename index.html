@@ -83,7 +83,7 @@ My first OCHamcrest test</h2>
 <p>OCHamcrest's functions are actually declared with an "HC" package prefix (such as <code>HC_assertThat</code> and <code>HC_equalTo</code>) to avoid name clashes. To make test writing faster and test code more legible, shorthand macros are provided if <code>HC_SHORTHAND</code> is defined before including the OCHamcrest header. For example, instead of writing <a class="el" href="group__integration.html#ga34a6bb24f565e41c864bcbe6538b26fc">HC_assertThat</a>, simply write <a class="el" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458">assertThat</a>.</p>
 <h2><a class="anchor" id="tour"></a>
 A tour of common matchers</h2>
-<p>OCHamcrest comes with a library of useful matchers. Here are some of the most important ones.</p>
+<p>OCHamcrest comes with a library of useful matchers:</p>
 <ul>
 <li>
 Core <ul>
@@ -124,7 +124,9 @@ Collections <ul>
 <li>
 <a class="el" href="group__collection__matchers.html#ga22cc888ea6cdc18d6a633dd2ba2542a1">hasEntry</a>, <a class="el" href="group__collection__matchers.html#ga31a46265336c1cbe571557a3dcad02c8">hasEntries</a>, <a class="el" href="group__collection__matchers.html#ga58754aa8b36ae52c05a03c140488a85f">hasKey</a>, <a class="el" href="group__collection__matchers.html#gaf141b74c5177da00f45c49b50f867e52">hasValue</a> - tests that an NSDictionary contains an entry, key or value </li>
 <li>
-<a class="el" href="group__collection__matchers.html#gab282df09dd90f5ed84d5f2a3974d6c32">hasItem</a>, <a class="el" href="group__collection__matchers.html#gafd4dbc21f13183304c6618a48eb8af33">contains</a>, <a class="el" href="group__collection__matchers.html#ga7ed8cf5b20580a511df3a0fb3b8fbd28">containsInAnyOrder</a> - tests that a collection contains elements </li>
+<a class="el" href="group__collection__matchers.html#gab282df09dd90f5ed84d5f2a3974d6c32">hasItem</a>, <a class="el" href="group__collection__matchers.html#gafd4dbc21f13183304c6618a48eb8af33">contains</a>, <a class="el" href="group__collection__matchers.html#ga7ed8cf5b20580a511df3a0fb3b8fbd28">containsInAnyOrder</a>, <a class="el" href="group__collection__matchers.html#ga5754e443f35581cc3d7addf329161c0e">onlyContains</a> - tests that a collection contains elements </li>
+<li>
+<a class="el" href="group__collection__matchers.html#ga01dedc08a716dd8e54e36a6e491a9933">hasCount</a>, <a class="el" href="group__collection__matchers.html#ga176c4d73e4cc76b79aba4e6c4df73d4c">hasCountOf</a> - tests that a collection has a given number of elements </li>
 </ul>
 </li>
 <li>
@@ -142,7 +144,7 @@ Text <ul>
 <li>
 <a class="el" href="group__text__matchers.html#ga0cf9cf0cd0cf028cd0629cb663e7e71b">equalToIgnoringWhiteSpace</a> - tests string equality ignoring differences in runs of whitespace </li>
 <li>
-<a class="el" href="group__text__matchers.html#ga35821bba7e5cd4e9c2d8b098b815864c">containsString</a>, <a class="el" href="group__text__matchers.html#ga180075d9487555730ba5772e8cf871f0">endsWith</a>, <a class="el" href="group__text__matchers.html#ga7933ad8e9864c8958618ff3b5655cb78">startsWith</a> - tests string matching </li>
+<a class="el" href="group__text__matchers.html#ga35821bba7e5cd4e9c2d8b098b815864c">containsString</a>, <a class="el" href="group__text__matchers.html#ga180075d9487555730ba5772e8cf871f0">endsWith</a>, <a class="el" href="group__text__matchers.html#ga7933ad8e9864c8958618ff3b5655cb78">startsWith</a>, <a class="el" href="group__text__matchers.html#ga276f48147b76c92949277f991d3106c5">stringContainsInOrder</a> - tests string matching </li>
 </ul>
 </li>
 </ul>
@@ -156,7 +158,7 @@ Syntactic sugar</h2>
 Writing custom matchers</h2>
 <p>A key feature of OCHamcrest is its extensibility. See <a class="el" href="custom-matchers.html">Writing custom matchers</a> for an example of how to write your own matchers. </p>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 13 2011 16:49:15 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat Apr 30 2011 16:57:57 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

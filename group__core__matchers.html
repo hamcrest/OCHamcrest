@@ -61,9 +61,9 @@ Classes</h2></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga5ca6068b496deb040e97e16551fbdb99">allOf</a>&nbsp;&nbsp;&nbsp;HC_allOf</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">allOf(matcher1, ...) - Evaluates to <code>YES</code> only if <em>all</em> of the given matchers evaluate to <code>YES</code>.  <a href="#ga5ca6068b496deb040e97e16551fbdb99"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">allOf(matcherOrValue1, ...) - Evaluates to <code>YES</code> only if <em>all</em> of the given matchers evaluate to <code>YES</code>.  <a href="#ga5ca6068b496deb040e97e16551fbdb99"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gae78b2508e6bbafe28ede0bcb821a67b4">anyOf</a>&nbsp;&nbsp;&nbsp;HC_anyOf</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">anyOf(matcher1, ...) - Evaluates to <code>YES</code> if <em>any</em> of the given matchers evaluate to <code>YES</code>.  <a href="#gae78b2508e6bbafe28ede0bcb821a67b4"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">anyOf(matcherOrValue1, ...) - Evaluates to <code>YES</code> if <em>any</em> of the given matchers evaluate to <code>YES</code>.  <a href="#gae78b2508e6bbafe28ede0bcb821a67b4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga4a703ae0e2036cc226769fca4a6da0d7">describedAs</a>&nbsp;&nbsp;&nbsp;HC_describedAs</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">describedAs(description, matcher, ...) - Wraps an existing matcher and overrides the description when it fails.  <a href="#ga4a703ae0e2036cc226769fca4a6da0d7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07">is</a>&nbsp;&nbsp;&nbsp;HC_is</td></tr>
@@ -86,10 +86,10 @@ Defines</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__core__matchers.html#gae8cfe45f9aee662b08b823587aea8a34" title="sameInstance(object) - Evaluates to YES only when the argument is this same object.">sameInstance(object)</a> - Evaluates to <code>YES</code> only when the argument is this same object.  <a href="#gae8cfe45f9aee662b08b823587aea8a34"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gaecefcbbc58128ef1591a1827e33df291">HC_allOf</a> (id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt; matcher1,...)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evaluates to <code>YES</code> only if <em>all</em> of the given matchers evaluate to <code>YES</code>.  <a href="#gaecefcbbc58128ef1591a1827e33df291"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga9949586392bfc3661ca1fca0f4614277">HC_anyOf</a> (id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt; matcher1,...)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evaluates to <code>YES</code> if <em>any</em> of the given matchers evaluate to <code>YES</code>.  <a href="#ga9949586392bfc3661ca1fca0f4614277"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga471b4d97d2358c721764c8495b093299">HC_allOf</a> (id matcherOrValue1,...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evaluates to <code>YES</code> only if <em>all</em> of the given matchers evaluate to <code>YES</code>.  <a href="#ga471b4d97d2358c721764c8495b093299"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gaf94b958cbf778f30bf0c28985e051580">HC_anyOf</a> (id matcherOrValue1,...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evaluates to <code>YES</code> if <em>any</em> of the given matchers evaluate to <code>YES</code>.  <a href="#gaf94b958cbf778f30bf0c28985e051580"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#ga66f87e2b6e9a5e6afd01add2ba476d62">HC_describedAs</a> (NSString *description, id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt; matcher,...)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wraps an existing matcher and overrides the description when it fails.  <a href="#ga66f87e2b6e9a5e6afd01add2ba476d62"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__matchers.html#gac6ceae01ca24e18a75c355fb177378af">HC_is</a> (id matcherOrValue)</td></tr>
@@ -125,11 +125,11 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>allOf(matcher1, ...) - Evaluates to <code>YES</code> only if <em>all</em> of the given matchers evaluate to <code>YES</code>. </p>
-<p>Synonym for <a class="el" href="group__core__matchers.html#gaecefcbbc58128ef1591a1827e33df291">HC_allOf</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<p>allOf(matcherOrValue1, ...) - Evaluates to <code>YES</code> only if <em>all</em> of the given matchers evaluate to <code>YES</code>. </p>
+<p>Synonym for <a class="el" href="group__core__matchers.html#ga471b4d97d2358c721764c8495b093299">HC_allOf</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>matcher1</em>&nbsp;</td><td>Comma-separated list of matchers ending with <code>nil</code>. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>matcherOrValue1</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -148,11 +148,11 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>anyOf(matcher1, ...) - Evaluates to <code>YES</code> if <em>any</em> of the given matchers evaluate to <code>YES</code>. </p>
-<p>Synonym for <a class="el" href="group__core__matchers.html#ga9949586392bfc3661ca1fca0f4614277">HC_anyOf</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<p>anyOf(matcherOrValue1, ...) - Evaluates to <code>YES</code> if <em>any</em> of the given matchers evaluate to <code>YES</code>. </p>
+<p>Synonym for <a class="el" href="group__core__matchers.html#gaf94b958cbf778f30bf0c28985e051580">HC_anyOf</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>matcher1</em>&nbsp;</td><td>Comma-separated list of matchers ending with <code>nil</code>. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>matcherOrValue1</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -363,15 +363,15 @@ Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="gaecefcbbc58128ef1591a1827e33df291"></a><!-- doxytag: member="HCAllOf.h::HC_allOf" ref="gaecefcbbc58128ef1591a1827e33df291" args="(id&lt; HCMatcher &gt; matcher1,...)" -->
+<a class="anchor" id="ga471b4d97d2358c721764c8495b093299"></a><!-- doxytag: member="HCAllOf.h::HC_allOf" ref="ga471b4d97d2358c721764c8495b093299" args="(id matcherOrValue1,...)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_allOf </td>
           <td>(</td>
-          <td class="paramtype">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td>
-          <td class="paramname"> <em>matcher1</em>, </td>
+          <td class="paramtype">id&nbsp;</td>
+          <td class="paramname"> <em>matcherOrValue1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -392,7 +392,7 @@ Functions</h2></td></tr>
 <p><b>Synonym:</b> <a class="el" href="group__core__matchers.html#ga5ca6068b496deb040e97e16551fbdb99">allOf</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>matcher1</em>&nbsp;</td><td>Comma-separated list of matchers ending with <code>nil</code>. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>matcherOrValue1</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -400,15 +400,15 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga9949586392bfc3661ca1fca0f4614277"></a><!-- doxytag: member="HCAnyOf.h::HC_anyOf" ref="ga9949586392bfc3661ca1fca0f4614277" args="(id&lt; HCMatcher &gt; matcher1,...)" -->
+<a class="anchor" id="gaf94b958cbf778f30bf0c28985e051580"></a><!-- doxytag: member="HCAnyOf.h::HC_anyOf" ref="gaf94b958cbf778f30bf0c28985e051580" args="(id matcherOrValue1,...)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_anyOf </td>
           <td>(</td>
-          <td class="paramtype">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td>
-          <td class="paramname"> <em>matcher1</em>, </td>
+          <td class="paramtype">id&nbsp;</td>
+          <td class="paramname"> <em>matcherOrValue1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -429,7 +429,7 @@ Functions</h2></td></tr>
 <p><b>Synonym:</b> <a class="el" href="group__core__matchers.html#gae78b2508e6bbafe28ede0bcb821a67b4">anyOf</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>matcher1</em>&nbsp;</td><td>Comma-separated list of matchers ending with <code>nil</code>. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>matcherOrValue1</em>&nbsp;</td><td>Comma-separated list of matchers - or values for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching - ending with <code>nil</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -690,7 +690,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Feb 13 2011 16:49:16 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat Apr 30 2011 16:57:57 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
