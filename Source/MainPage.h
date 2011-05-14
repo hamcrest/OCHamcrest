@@ -128,7 +128,7 @@
         <li>@ref hasEntry, @ref hasEntries, @ref hasKey, @ref hasValue - tests that an NSDictionary contains an entry, key
             or value</li>
         <li>@ref hasItem, @ref contains, @ref containsInAnyOrder, @ref onlyContains - tests that a collection contains elements</li>
-        <li>@ref hasCount, @ref hasCountOf - tests that a collection has a given number of elements</li>
+        <li>@ref hasCount, @ref hasCountOf, @ref empty - tests that a collection has a given number of elements</li>
         </ul>
     <li>Number</li>
         <ul>

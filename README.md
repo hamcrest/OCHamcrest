@@ -126,7 +126,7 @@ Hamcrest comes with a library of useful matchers:
   * ``hasEntry``, ``hasEntries``, ``hasKey``, ``hasValue`` - tests that an NSDictionary
     contains an entry, key or value
   * ``hasItem``, ``contains``, ``containsInAnyOrder``, ``onlyContains`` - tests that a collection contains elements
-  * ``hasCount``, ``hasCountOf`` - tests that a collection has a given number of elements
+  * ``hasCount``, ``hasCountOf``, ``empty`` - tests that a collection has a given number of elements
 
 * Number
 
