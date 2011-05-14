@@ -31,18 +31,17 @@
     Matches a collection if any element satifies a given matcher.
  
     @b Synonym: @ref hasItem
-    @param matcherOrValue  A matcher, or a value for @ref equalTo matching.
+    @param itemMatch  A matcher, or a value for @ref equalTo matching.
     @see HCIsCollectionContaining
     @ingroup collection_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_hasItem(id matcherOrValue);
+OBJC_EXPORT id<HCMatcher> HC_hasItem(id itemMatch);
 
 /**
-    hasItem(matcherOrValue) -
     Matches a collection if any element satifies a given matcher.
 
     Synonym for @ref HC_hasItem, available if @c HC_SHORTHAND is defined.
-    @param matcherOrValue  A matcher, or a value for @ref equalTo matching.
+    @param itemMatch  A matcher, or a value for @ref equalTo matching.
     @see HCIsCollectionContaining
     @ingroup collection_matchers
  */
@@ -55,21 +54,20 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id matcherOrValue);
     Matches a collection if all matchers are satisfied by any of the collection's elements.
  
     @b Synonym: @ref hasItems
-    @param matcherOrValue1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
+    @param itemMatch  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCIsCollectionContaining
     @ingroup collection_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_hasItems(id matcherOrValue1, ...);
+OBJC_EXPORT id<HCMatcher> HC_hasItems(id itemMatch, ...);
 
 /**
-    hasItems(matcherOrValue1, ...) -
     Matches a collection if all matchers are satisfied by any of the collection's elements.
 
     Synonym for @ref HC_hasItems, available if @c HC_SHORTHAND is defined.
-    @param matcherOrValue1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
+    @param itemMatch  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCIsCollectionContaining
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasItems HC_hasItems
+    #define hasItems(itemMatch, ...)  HC_hasItems(itemMatch, ##__VA_ARGS__)
 #endif

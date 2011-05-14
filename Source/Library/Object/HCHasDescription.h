@@ -30,14 +30,14 @@
     @li @ref hasDescription(\@"bar")
 
     @b Synonym: @ref hasDescription
-    @param matcherOrValue  A matcher, or a value for @ref equalTo matching.
+    @param match  A matcher, or a value for @ref equalTo matching.
     @see HCHasDescription
     @ingroup object_matchers
 */
-OBJC_EXPORT id<HCMatcher> HC_hasDescription(id matcherOrValue);
+OBJC_EXPORT id<HCMatcher> HC_hasDescription(id match);
 
 /**
-    hasDescription(matcherOrValue) -
+    hasDescription(match) -
     Evaluates whether [item description] satisfies a given matcher.
 
     Examples:
@@ -45,10 +45,10 @@ OBJC_EXPORT id<HCMatcher> HC_hasDescription(id matcherOrValue);
     @li @ref hasDescription(\@"bar")
 
     Synonym for @ref HC_hasDescription, available if @c HC_SHORTHAND is defined.
-    @param matcherOrValue  A matcher, or a value for @ref equalTo matching.
+    @param match  A matcher, or a value for @ref equalTo matching.
     @see HCHasDescription
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasDescription(matcherOrValue)  HC_hasDescription(matcherOrValue)
+    #define hasDescription(match)  HC_hasDescription(match)
 #endif

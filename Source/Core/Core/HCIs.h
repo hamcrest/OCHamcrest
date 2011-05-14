@@ -38,10 +38,10 @@ assertThat(cheese, is(equalTo(smelly)))
 /**
     Decorates another matcher, or provides a shortcut to the frequently used @ref is(equalTo(x)).
 
-    If @a matcherOrValue is a matcher, its behavior is retained, but the test may be more expressive.
+    If @a match is a matcher, its behavior is retained, but the test may be more expressive.
 
-    If @a matcherOrValue is not a matcher, it is wrapped in an @ref equalTo matcher. This makes the
-    following three statements the same:
+    If @a match is not a matcher, it is wrapped in an @ref equalTo matcher. This makes the following
+    three statements the same:
 @code
 assertThat(cheese, equalTo(smelly))
 assertThat(cheese, is(equalTo(smelly)))
@@ -53,16 +53,16 @@ assertThat(cheese, is(smelly))
     @see HCIs
     @ingroup core_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_is(id matcherOrValue);
+OBJC_EXPORT id<HCMatcher> HC_is(id match);
 
 /**
-    is(matcherOrValue) -
+    is(match) -
     Decorates another matcher, or provides a shortcut to the frequently used @ref is(equalTo(x)).
 
-    If @a matcherOrValue is a matcher, its behavior is retained, but the test may be more expressive.
+    If @a match is a matcher, its behavior is retained, but the test may be more expressive.
 
-    If @a matcherOrValue is not a matcher, it is wrapped in an @ref equalTo matcher. This makes the
-    following three statements the same:
+    If @a match is not a matcher, it is wrapped in an @ref equalTo matcher. This makes the following
+    three statements the same:
 @code
 assertThat(cheese, equalTo(smelly))
 assertThat(cheese, is(equalTo(smelly)))

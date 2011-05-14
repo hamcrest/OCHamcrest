@@ -37,22 +37,20 @@
     value matchers.
  
     @b Synonym: @ref hasEntries
-    @param keysAndValueMatchers  Alternating pairs of keys and value matchers - or straight values for @ref equalTo matching.
+    @param keysAndValueMatch  Alternating pairs of keys and value matchers - or straight values for @ref equalTo matching.
     @see HCIsDictionaryContainingEntries
     @ingroup collection_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_hasEntries(id keysAndValueMatchers, ...);
+OBJC_EXPORT id<HCMatcher> HC_hasEntries(id keysAndValueMatch, ...);
 
 /**
-    HC_hasEntries(id keysAndValueMatchers, ...) -
     Matches dictionaries containing key-value pairs satisfying a given lists of alternating keys and
     value matchers.
 
     Synonym for @ref HC_hasEntries, available if @c HC_SHORTHAND is defined.
-    @param keysAndValueMatchers  Alternating pairs of keys and value matchers - or straight values for @ref equalTo matching.
     @see HCIsDictionaryContainingEntries
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasEntries HC_hasEntries
+    #define hasEntries(keyMatch, valueMatch, ...)  HC_hasEntries(keyMatch, valueMatch, ##__VA_ARGS__)
 #endif

@@ -31,18 +31,18 @@
     Matches dictionaries containing a value satisfying a given matcher.
  
     @b Synonym: @ref hasValue
-    @param matcherOrValue  A matcher, or a value for @ref equalTo matching.
+    @param valueMatch  A matcher, or a value for @ref equalTo matching.
     @see HCIsDictionaryContainingValue
     @ingroup collection_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_hasValue(id matcherOrValue);
+OBJC_EXPORT id<HCMatcher> HC_hasValue(id valueMatch);
 
 /**
-    hasValue(matcherOrValue) -
+    hasValue(valueMatch) -
     Matches dictionaries containing a value satisfying a given matcher.
 
     Synonym for @ref HC_hasValue, available if @c HC_SHORTHAND is defined.
-    @param matcherOrValue  A matcher, or a value for @ref equalTo matching.
+    @param valueMatch  A matcher, or a value for @ref equalTo matching.
     @see HCIsDictionaryContainingValue
     @ingroup collection_matchers
  */

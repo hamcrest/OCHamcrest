@@ -47,7 +47,6 @@
 OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString *description, id<HCMatcher> matcher, ...);
 
 /**
-    describedAs(description, matcher, ...) -
     Wraps an existing matcher and overrides the description when it fails.
 
     Optional values following the matcher are substituted for \%0, \%1, etc., in the description.
@@ -58,5 +57,5 @@ OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString *description, id<HCMatcher> ma
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define describedAs HC_describedAs
+    #define describedAs(description, matcher, ...)  HC_describedAs(description, matcher, ##__VA_ARGS__)
 #endif

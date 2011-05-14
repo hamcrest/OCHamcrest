@@ -9,7 +9,6 @@
 
 #import "HCAnyOf.h"
 #import "HCDescription.h"
-#import "HCRequireNonNilObject.h"
 #import "HCWrapInMatcher.h"
 
 
@@ -65,18 +64,17 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_onlyContains(id items, ...)
+OBJC_EXPORT id<HCMatcher> HC_onlyContains(id itemMatch, ...)
 {
-    HCRequireNonNilObject(items);
-    NSMutableArray *matchers = [NSMutableArray arrayWithObject:HCWrapInMatcher(items)];
+    NSMutableArray *matchers = [NSMutableArray arrayWithObject:HCWrapInMatcher(itemMatch)];
     
     va_list args;
-    va_start(args, items);
-    items = va_arg(args, id);
-    while (items != nil)
+    va_start(args, itemMatch);
+    itemMatch = va_arg(args, id);
+    while (itemMatch != nil)
     {
-        [matchers addObject:HCWrapInMatcher(items)];
-        items = va_arg(args, id);
+        [matchers addObject:HCWrapInMatcher(itemMatch)];
+        itemMatch = va_arg(args, id);
     }
     va_end(args);
     

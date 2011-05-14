@@ -2,6 +2,11 @@ Full documentation: http://jonreid.github.com/OCHamcrest/
 Latest sources: https://github.com/jonreid/OCHamcrest
 Hamcrest information: http://code.google.com/p/hamcrest/
 
+== NEXT VERSION IN PROGRESS
+
+ * Improved code completion, especially for matchers with variadic arguments. There is a chance that some existing code may break. If this happens, please send email to: jon.reid [at] mac.com
+
+
 == Version 1.5 ==
 
 29 Apr 2011

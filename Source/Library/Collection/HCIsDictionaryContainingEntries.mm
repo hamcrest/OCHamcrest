@@ -129,12 +129,12 @@ static void requirePairedObject(id obj)
 }
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasEntries(id keysAndValueMatchers, ...)
+OBJC_EXPORT id<HCMatcher> HC_hasEntries(id keysAndValueMatch, ...)
 {
     va_list args;
-    va_start(args, keysAndValueMatchers);
+    va_start(args, keysAndValueMatch);
     
-    id key = keysAndValueMatchers;
+    id key = keysAndValueMatch;
     id valueMatcher = va_arg(args, id);
     requirePairedObject(valueMatcher);
     NSMutableArray *keys = [NSMutableArray arrayWithObject:key];

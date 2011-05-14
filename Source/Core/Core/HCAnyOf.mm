@@ -56,11 +56,11 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_anyOf(id item, ...)
+OBJC_EXPORT id<HCMatcher> HC_anyOf(id match, ...)
 {
     va_list args;
-    va_start(args, item);
-    NSArray *matcherList = HCCollectMatchers(item, args);
+    va_start(args, match);
+    NSArray *matcherList = HCCollectMatchers(match, args);
     va_end(args);
     
     return [HCAnyOf anyOf:matcherList];

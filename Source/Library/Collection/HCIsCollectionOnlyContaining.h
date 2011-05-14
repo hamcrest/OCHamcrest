@@ -42,15 +42,14 @@
     <code>onlyContains(@"a", @"b", @"c", nil)</code>.
  
     @b Synonym: @ref onlyContains
-    @param itemMatcher1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
+    @param itemMatch  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCIsCollectionOnlyContaining
     @ingroup collection_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_onlyContains(id itemMatcher1, ...);
+OBJC_EXPORT id<HCMatcher> HC_onlyContains(id itemMatch, ...);
 
 /**
-    onlyContains(itemMatcher1, ...)
-    matches collections that only contain elements satisfying any of a list of matchers.
+    Matches collections that only contain elements satisfying any of a list of matchers.
 
     For example,
     <code>[NSArray arrayWithObjects:@"c", "a", @"b", nil]</code>
@@ -62,10 +61,10 @@ OBJC_EXPORT id<HCMatcher> HC_onlyContains(id itemMatcher1, ...);
     <code>onlyContains(@"a", @"b", @"c", nil)</code>.
 
     Synonym for @ref HC_onlyContains, available if @c HC_SHORTHAND is defined.
-    @param itemMatcher1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
+    @param itemMatch  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCIsCollectionOnlyContaining
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define onlyContains HC_onlyContains
+    #define onlyContains(itemMatch, ...) HC_onlyContains(itemMatch, ##__VA_ARGS__)
 #endif

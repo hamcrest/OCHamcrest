@@ -62,24 +62,24 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_hasItem(id item)
+OBJC_EXPORT id<HCMatcher> HC_hasItem(id itemMatch)
 {
-    HCRequireNonNilObject(item);
-    return [HCIsCollectionContaining isCollectionContaining:HCWrapInMatcher(item)];
+    HCRequireNonNilObject(itemMatch);
+    return [HCIsCollectionContaining isCollectionContaining:HCWrapInMatcher(itemMatch)];
 }
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasItems(id items, ...)
+OBJC_EXPORT id<HCMatcher> HC_hasItems(id itemMatch, ...)
 {
-    NSMutableArray *matchers = [NSMutableArray arrayWithObject:HC_hasItem(items)];
+    NSMutableArray *matchers = [NSMutableArray arrayWithObject:HC_hasItem(itemMatch)];
     
     va_list args;
-    va_start(args, items);
-    items = va_arg(args, id);
-    while (items != nil)
+    va_start(args, itemMatch);
+    itemMatch = va_arg(args, id);
+    while (itemMatch != nil)
     {
-        [matchers addObject:HC_hasItem(items)];
-        items = va_arg(args, id);
+        [matchers addObject:HC_hasItem(itemMatch)];
+        itemMatch = va_arg(args, id);
     }
     va_end(args);
     

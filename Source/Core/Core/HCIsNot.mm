@@ -52,7 +52,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_isNot(id matcherOrValue)
+OBJC_EXPORT id<HCMatcher> HC_isNot(id match)
 {
-    return [HCIsNot isNot:HCWrapInMatcher(matcherOrValue)];
+    return [HCIsNot isNot:HCWrapInMatcher(match)];
 }

@@ -61,8 +61,8 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_hasValue(id matcherOrValue)
+OBJC_EXPORT id<HCMatcher> HC_hasValue(id valueMatch)
 {
-    HCRequireNonNilObject(matcherOrValue);
-    return [HCIsDictionaryContainingValue isDictionaryContainingValue:HCWrapInMatcher(matcherOrValue)];
+    HCRequireNonNilObject(valueMatch);
+    return [HCIsDictionaryContainingValue isDictionaryContainingValue:HCWrapInMatcher(valueMatch)];
 }

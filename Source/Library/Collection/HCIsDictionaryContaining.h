@@ -35,20 +35,20 @@
     Matches dictionaries containing a key-value pair satisfying a given pair of matchers.
  
     @b Synonym: @ref hasEntry
-    @param keyMatcher    A matcher - or a value for @ref equalTo matching - for the key.
-    @param valueMatcher  A matcher - or a value for @ref equalTo matching - for the value.
+    @param keyMatch    A matcher - or a value for @ref equalTo matching - for the key.
+    @param valueMatch  A matcher - or a value for @ref equalTo matching - for the value.
     @see HCIsDictionaryContaining
     @ingroup collection_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcher, id valueMatcher);
+OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatch, id valueMatch);
 
 /**
-    hasEntry(keyMatcher, valueMatcher) -
+    hasEntry(keyMatch, valueMatch) -
     Matches dictionaries containing a key-value pair satisfying a given pair of matchers.
 
     Synonym for @ref HC_hasEntry, available if @c HC_SHORTHAND is defined.
-    @param keyMatcher    A matcher - or a value for @ref equalTo matching - for the key.
-    @param valueMatcher  A matcher - or a value for @ref equalTo matching - for the value.
+    @param keyMatch    A matcher - or a value for @ref equalTo matching - for the key.
+    @param valueMatch  A matcher - or a value for @ref equalTo matching - for the value.
     @see HCIsDictionaryContaining
     @ingroup collection_matchers
  */

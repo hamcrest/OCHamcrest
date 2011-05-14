@@ -47,7 +47,7 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define anything() HC_anything()
+    #define anything()  HC_anything()
 #endif
 
 
@@ -66,7 +66,7 @@ OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *aDescription);
     This matcher always evaluates to @c YES.
 
     Synonym for @ref HC_anythingWithDescription, available if @c HC_SHORTHAND is defined.
-    @param aDescription  A meaningful string used when describing itself.
+    @param description  A meaningful string used when describing itself.
     @see HCIsAnything
     @ingroup core_matchers
  */

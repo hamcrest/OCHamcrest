@@ -34,21 +34,20 @@
     Evaluates to @c YES only if @em all of the given matchers evaluate to @c YES.
  
     @b Synonym: @ref allOf
-    @param matcherOrValue1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
+    @param match  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCAllOf
     @ingroup core_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_allOf(id matcherOrValue1, ...);
+OBJC_EXPORT id<HCMatcher> HC_allOf(id match, ...);
 
 /**
-    allOf(matcherOrValue1, ...) -
     Evaluates to @c YES only if @em all of the given matchers evaluate to @c YES.
 
     Synonym for @ref HC_allOf, available if @c HC_SHORTHAND is defined.
-    @param matcherOrValue1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
+    @param match  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCAllOf
     @ingroup core_matchers
  */
 #ifdef HC_SHORTHAND
-    #define allOf HC_allOf
+    #define allOf(match, ...)  HC_allOf(match, ##__VA_ARGS__)
 #endif

@@ -57,7 +57,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_is(id matcherOrValue)
+OBJC_EXPORT id<HCMatcher> HC_is(id match)
 {
-    return [HCIs is:HCWrapInMatcher(matcherOrValue)];
+    return [HCIs is:HCWrapInMatcher(match)];
 }

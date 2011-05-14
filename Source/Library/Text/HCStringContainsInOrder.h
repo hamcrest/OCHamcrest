@@ -31,21 +31,20 @@
     Tests if a string contains a given list of substrings, in order.
 
     @b Synonym: @ref stringContainsInOrder
-    @param substring1  Comma-separated list of strings, ending with @c nil.
+    @param substring  Comma-separated list of strings, ending with @c nil.
     @see HCStringContainsInOrder
     @ingroup text_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_stringContainsInOrder(NSString *substring1, ...);
+OBJC_EXPORT id<HCMatcher> HC_stringContainsInOrder(NSString *substring, ...);
 
 /**
-    stringContainsInOrder(substring1, ...) -
     Tests if a string contains a given list of substrings, in order.
 
     Synonym for @ref HC_stringContainsInOrder, available if @c HC_SHORTHAND is defined.
-    @param substring1  Comma-separated list of strings, ending with @c nil.
+    @param substring  Comma-separated list of strings, ending with @c nil.
     @see HCStringContainsInOrder
     @ingroup text_matchers
  */
 #ifdef HC_SHORTHAND
-    #define stringContainsInOrder HC_stringContainsInOrder
+    #define stringContainsInOrder(substring, ...)  HC_stringContainsInOrder(substring, ##__VA_ARGS__)
 #endif

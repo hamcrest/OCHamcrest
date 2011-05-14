@@ -31,21 +31,20 @@
     Matches a collection if its elements, in order, satisfy a list of matchers.
  
     @b Synonym: @ref contains
-    @param itemMatcher1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
+    @param itemMatch  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCIsCollectionContainingInOrder
     @ingroup collection_matchers
  */
-OBJC_EXPORT id<HCMatcher> HC_contains(id itemMatcher1, ...);
+OBJC_EXPORT id<HCMatcher> HC_contains(id itemMatch, ...);
 
 /**
-    contains(itemMatcher1, ...)
-    matches a collection if its elements, in order, satisfy a list of matchers.
+    Matches a collection if its elements, in order, satisfy a list of matchers.
 
     Synonym for @ref HC_contains, available if @c HC_SHORTHAND is defined.
-    @param itemMatcher1  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
+    @param itemMatch  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCIsCollectionContainingInOrder
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define contains HC_contains
+    #define contains(itemMatch, ...)  HC_contains(itemMatch, ##__VA_ARGS__)
 #endif
