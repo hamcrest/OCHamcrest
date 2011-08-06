@@ -86,6 +86,7 @@
 #import <OCHamcrest/HCIsEqualIgnoringCase.h>
 #import <OCHamcrest/HCIsEqualIgnoringWhiteSpace.h>
 #import <OCHamcrest/HCStringContains.h>
+#import <OCHamcrest/HCStringContainsInOrder.h>
 #import <OCHamcrest/HCStringEndsWith.h>
 #import <OCHamcrest/HCStringStartsWith.h>
 
