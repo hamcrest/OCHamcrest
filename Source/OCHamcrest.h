@@ -12,6 +12,19 @@
  */
 
 /**
+    @defgroup object_matchers Object Matchers
+
+    Matchers that inspect objects
+
+    @ingroup library
+ */
+#import <OCHamcrest/HCHasDescription.h>
+#import <OCHamcrest/HCIsEqual.h>
+#import <OCHamcrest/HCIsInstanceOf.h>
+#import <OCHamcrest/HCIsNil.h>
+#import <OCHamcrest/HCIsSame.h>
+
+/**
     @defgroup collection_matchers Collection Matchers
 
     Matchers of collections
@@ -29,28 +42,6 @@
 #import <OCHamcrest/HCIsDictionaryContainingValue.h>
 #import <OCHamcrest/HCIsEmptyCollection.h>
 #import <OCHamcrest/HCIsIn.h>
-
-/**
-    @defgroup decorator_matchers Decorator Matchers
-
-    Matchers that decorate other matchers for better expression
-
-    @ingroup library
- */
-#import <OCHamcrest/HCDescribedAs.h>
-#import <OCHamcrest/HCIs.h>
-
-/**
-    @defgroup logical_matchers Logical Matchers
-
-    Boolean logic composing multiple matchers
-
-    @ingroup library
- */
-#import <OCHamcrest/HCAllOf.h>
-#import <OCHamcrest/HCAnyOf.h>
-#import <OCHamcrest/HCIsAnything.h>
-#import <OCHamcrest/HCIsNot.h>
 
 /**
     @defgroup number_matchers Number Matchers
@@ -72,19 +63,6 @@
 #import <OCHamcrest/HCIsEqualToNumber.h>
 
 /**
-    @defgroup object_matchers Object Matchers
-
-    Matchers that inspect objects
-
-    @ingroup library
- */
-#import <OCHamcrest/HCHasDescription.h>
-#import <OCHamcrest/HCIsEqual.h>
-#import <OCHamcrest/HCIsInstanceOf.h>
-#import <OCHamcrest/HCIsNil.h>
-#import <OCHamcrest/HCIsSame.h>
-
-/**
     @defgroup text_matchers Text Matchers
 
     Matchers that perform text comparisons
@@ -97,6 +75,28 @@
 #import <OCHamcrest/HCStringContainsInOrder.h>
 #import <OCHamcrest/HCStringEndsWith.h>
 #import <OCHamcrest/HCStringStartsWith.h>
+
+/**
+    @defgroup logical_matchers Logical Matchers
+
+    Boolean logic composing multiple matchers
+
+    @ingroup library
+ */
+#import <OCHamcrest/HCAllOf.h>
+#import <OCHamcrest/HCAnyOf.h>
+#import <OCHamcrest/HCIsAnything.h>
+#import <OCHamcrest/HCIsNot.h>
+
+/**
+    @defgroup decorator_matchers Decorator Matchers
+
+    Matchers that decorate other matchers for better expression
+
+    @ingroup library
+ */
+#import <OCHamcrest/HCDescribedAs.h>
+#import <OCHamcrest/HCIs.h>
 
 /**
     @defgroup integration Unit Test Integration
