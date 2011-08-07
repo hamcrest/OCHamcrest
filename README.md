@@ -59,7 +59,7 @@ My first OCHamcrest test
 
 We'll start by writing a very simple Xcode unit test, but instead of using
 OCUnit's ``STAssertEqualObjects`` function, we'll use Hamcrest's ``assertThat``
-construct and the standard set of matchers:
+construct and a predefined matcher:
 
     #import <SenTestingKit/SenTestingKit.h>
 
@@ -94,49 +94,69 @@ writing faster and test code more legible, shorthand macros are provided if
 instead of writing ``HC_assertThat``, simply write ``assertThat``.
 
 
-A tour of common matchers
-=========================
+Predefined matchers
+===================
 
 Hamcrest comes with a library of useful matchers:
 
 * Object
 
   * ``equalTo`` - tests object equality using ``-isEqual:``
-  * ``hasDescription`` - tests whether ``-description`` satisfies another
-    matcher
-  * ``instanceOf`` - tests type
+  * ``hasDescription`` - tests whether ``-description`` satisfies another matcher
+  * ``instanceOf`` - tests object type
   * ``nilValue``, ``notNilValue`` - tests for nil
-  * ``sameInstance`` - tests object identity
+  * ``sameInstance`` - tests object identity using ``==``
 
 * Collections
 
-  * ``hasEntry``, ``hasEntries``, ``hasKey``, ``hasValue`` - tests that an
-    NSDictionary contains an entry, key or value
-  * ``hasItem``, ``contains``, ``containsInAnyOrder``, ``onlyContains`` - tests
-    that a collection contains elements
-  * ``hasCount``, ``hasCountOf``, ``empty`` - tests that a collection has a
-    given number of elements
+  * ``contains`` - tests whether collection's elements, in order, satisfy a list
+  of matchers
+  * ``containsInAnyOrder`` - tests whether collection's elements, in any order,
+  satisfy a list of matchers
+  * ``empty`` - tests whether collection is empty
+  * ``hasCount`` - tests whether collection's count satisfies another matcher
+  * ``hasCountOf`` - tests whether collection has a given number of elements
+  * ``hasEntries`` - tests whether dictionary has key-value pairs satisfying a
+  list of matchers
+  * ``hasEntry`` - tests whether dictionary has a key-value pair satisfying a
+  pair of matchers
+  * ``hasKey`` - tests whether dictionary has a key satisfying another matcher
+  * ``hasValue`` - tests whether dictionary has a value satisfying another
+  matcher
+  * ``hasItem`` - tests whether any element in collection satisfies another
+  matcher
+  * ``hasItems`` - tests whether collection contains any elements satisfying
+  all of a given set of matchers
+  * ``onlyContains`` tests whether collection contains only elements satisfying
+  any of a given set of matchers
 
 * Number
 
-  * ``closeTo`` - tests that numeric values are close to a given value
-  * ``greaterThan``, ``greaterThanOrEqualTo``, ``lessThan``,
-    ``lessThanOrEqualTo`` - tests ordering
+  * ``closeTo`` - tests whether primitive double is close to a given value
+  * equalTo<TypeName> - tests whether primitive number equals given value, with
+  separate function defined for each numeric type
+  * ``greaterThan`` - tests NSNumber ordering
+  * ``greaterThanOrEqualTo`` - tests NSNumber ordering
+  * ``lessThan`` - tests NSNumber ordering
+  * ``lessThanOrEqualTo`` - tests NSNumber ordering
 
 * Text
 
+  * ``containsString`` - tests whether string contains a given string
+  * ``endsWith`` - tests whether string ends with a given string
   * ``equalToIgnoringCase`` - tests string equality ignoring case
-  * ``equalToIgnoringWhitespace`` - test strings equality ignoring
-    differences in runs of whitespace
-  * ``containsString``, ``endsWith``, ``startsWith``, ``stringContainsInOrder``,
-    - tests string matching
+  * ``equalToIgnoringWhitespace`` - test string equality ignoring differences in
+  runs of whitespace
+  * ``startsWith`` - tests whether string starts with a given string
+  * ``stringContainsInOrder`` - tests whether string contains given substrings,
+  in order
 
 * Logical
 
-  * ``allOf`` - matches if all matchers match, short circuits (like C's ``&&``)
-  * ``anyOf`` - matches if any matchers match, short circuits (like C's ``||``)
-  * ``anything`` - always matches, useful in composite collection matchers if
-    you don't care about a particular sub-component
+  * ``allOf`` - matches if all matchers match (short-circuits like C's ``&&``)
+  * ``anyOf`` - matches if any matchers match (short-circuits like C's ``||``)
+  * ``anything`` - always matches, useful in collection matchers when you don't
+  care about a particular element
   * ``isNot`` - matches if the wrapped matcher doesn't match and vice versa
 
 * Decorator
