@@ -14,7 +14,7 @@
     If the given object is @c nil, the matcher will match @c nil.
  
     @b Factory: @ref equalTo
-    @ingroup core_matchers
+    @ingroup object_matchers
  */
 @interface HCIsEqual : HCBaseMatcher
 {
@@ -36,7 +36,7 @@
  
     @b Synonym: @ref equalTo
     @see HCIsEqual
-    @ingroup core_matchers
+    @ingroup object_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
 
@@ -48,7 +48,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
 
     Synonym for @ref HC_equalTo, available if @c HC_SHORTHAND is defined.
     @see HCIsEqual
-    @ingroup core_matchers
+    @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
     #define equalTo HC_equalTo

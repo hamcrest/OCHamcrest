@@ -12,7 +12,7 @@
     Provides a custom description to another matcher.
 
     @b Factory: @ref describedAs
-    @ingroup core_matchers
+    @ingroup decorator_matchers
  */
 @interface HCDescribedAs : HCBaseMatcher
 {
@@ -42,7 +42,7 @@
 
     @b Synonym: @ref describedAs
     @see HCDescribedAs
-    @ingroup core_matchers
+    @ingroup decorator_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString *description, id<HCMatcher> matcher, ...);
 
@@ -54,7 +54,7 @@ OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString *description, id<HCMatcher> ma
 
     Synonym for @ref HC_describedAs, available if @c HC_SHORTHAND is defined.
     @see HCDescribedAs
-    @ingroup core_matchers
+    @ingroup decorator_matchers
  */
 #ifdef HC_SHORTHAND
     #define describedAs(description, matcher, ...)  HC_describedAs(description, matcher, ##__VA_ARGS__)

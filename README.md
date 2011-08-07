@@ -38,8 +38,8 @@ the Run Script phase that executes tests.
 
 Add:
 
-      #define HC_SHORTHAND
-      #import <OCHamcrest/OCHamcrest.h>
+    #define HC_SHORTHAND
+    #import <OCHamcrest/OCHamcrest.h>
 
 
 __iOS:__
@@ -99,19 +99,6 @@ A tour of common matchers
 
 Hamcrest comes with a library of useful matchers:
 
-* Core
-
-  * ``anything`` - always matches, useful if you don't care what the object
-    under test is
-  * ``describedAs`` - decorator to add custom failure description
-  * ``is`` - decorator to improve readability - see `Syntactic sugar`, below
-
-* Logical
-
-  * ``allOf`` - matches if all matchers match, short circuits (like C's ``&&``)
-  * ``anyOf`` - matches if any matchers match, short circuits (like C's ``||``)
-  * ``isNot`` - matches if the wrapped matcher doesn't match and vice versa
-
 * Object
 
   * ``equalTo`` - tests object equality using ``-isEqual:``
@@ -123,10 +110,12 @@ Hamcrest comes with a library of useful matchers:
 
 * Collections
 
-  * ``hasEntry``, ``hasEntries``, ``hasKey``, ``hasValue`` - tests that an NSDictionary
-    contains an entry, key or value
-  * ``hasItem``, ``contains``, ``containsInAnyOrder``, ``onlyContains`` - tests that a collection contains elements
-  * ``hasCount``, ``hasCountOf``, ``empty`` - tests that a collection has a given number of elements
+  * ``hasEntry``, ``hasEntries``, ``hasKey``, ``hasValue`` - tests that an
+    NSDictionary contains an entry, key or value
+  * ``hasItem``, ``contains``, ``containsInAnyOrder``, ``onlyContains`` - tests
+    that a collection contains elements
+  * ``hasCount``, ``hasCountOf``, ``empty`` - tests that a collection has a
+    given number of elements
 
 * Number
 
@@ -139,8 +128,21 @@ Hamcrest comes with a library of useful matchers:
   * ``equalToIgnoringCase`` - tests string equality ignoring case
   * ``equalToIgnoringWhitespace`` - test strings equality ignoring
     differences in runs of whitespace
-  * ``containsString``, ``endsWith``, ``startsWith``, ``stringContainsInOrder``,  - tests string
-    matching
+  * ``containsString``, ``endsWith``, ``startsWith``, ``stringContainsInOrder``,
+    - tests string matching
+
+* Logical
+
+  * ``allOf`` - matches if all matchers match, short circuits (like C's ``&&``)
+  * ``anyOf`` - matches if any matchers match, short circuits (like C's ``||``)
+  * ``anything`` - always matches, useful in composite collection matchers if
+    you don't care about a particular sub-component
+  * ``isNot`` - matches if the wrapped matcher doesn't match and vice versa
+
+* Decorator
+
+  * ``describedAs`` - decorator to add custom failure description
+  * ``is`` - decorator to improve readability - see `Syntactic sugar`, below
 
 
 Syntactic sugar

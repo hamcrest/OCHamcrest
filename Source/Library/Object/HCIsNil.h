@@ -12,7 +12,7 @@
     Is the value @c nil?
 
     @b Factory: @ref nilValue, @ref notNilValue
-    @ingroup core_matchers
+    @ingroup object_matchers
 */
 @interface HCIsNil : HCBaseMatcher
 
@@ -28,7 +28,7 @@
  
     @b Synonym: @ref nilValue
     @see HCIsNil
-    @ingroup core_matchers
+    @ingroup object_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_nilValue();
 
@@ -37,7 +37,7 @@ OBJC_EXPORT id<HCMatcher> HC_nilValue();
 
     Synonym for @ref HC_nilValue, available if @c HC_SHORTHAND is defined.
     @see HCIsNil
-    @ingroup core_matchers
+    @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
     #define nilValue()  HC_nilValue()
@@ -50,7 +50,7 @@ OBJC_EXPORT id<HCMatcher> HC_nilValue();
     @b Synonym: @ref notNilValue
     @see HCIsNil
     @see HCIsNot
-    @ingroup core_matchers
+    @ingroup object_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_notNilValue();
 
@@ -60,7 +60,7 @@ OBJC_EXPORT id<HCMatcher> HC_notNilValue();
     Synonym for @ref HC_notNilValue, available if @c HC_SHORTHAND is defined.
     @see HCIsNil
     @see HCIsNot
-    @ingroup core_matchers
+    @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
     #define notNilValue()  HC_notNilValue()

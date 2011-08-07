@@ -12,24 +12,6 @@
  */
 
 /**
-    @defgroup core_matchers Core Matchers
-
-    Fundamental matchers of objects and values, and composite matchers
-
-    @ingroup library
- */
-#import <OCHamcrest/HCAllOf.h>
-#import <OCHamcrest/HCAnyOf.h>
-#import <OCHamcrest/HCDescribedAs.h>
-#import <OCHamcrest/HCIs.h>
-#import <OCHamcrest/HCIsAnything.h>
-#import <OCHamcrest/HCIsEqual.h>
-#import <OCHamcrest/HCIsInstanceOf.h>
-#import <OCHamcrest/HCIsNil.h>
-#import <OCHamcrest/HCIsNot.h>
-#import <OCHamcrest/HCIsSame.h>
-
-/**
     @defgroup collection_matchers Collection Matchers
 
     Matchers of collections
@@ -47,6 +29,28 @@
 #import <OCHamcrest/HCIsDictionaryContainingValue.h>
 #import <OCHamcrest/HCIsEmptyCollection.h>
 #import <OCHamcrest/HCIsIn.h>
+
+/**
+    @defgroup decorator_matchers Decorator Matchers
+
+    Matchers that decorate other matchers for better expression
+
+    @ingroup library
+ */
+#import <OCHamcrest/HCDescribedAs.h>
+#import <OCHamcrest/HCIs.h>
+
+/**
+    @defgroup logical_matchers Logical Matchers
+
+    Boolean logic composing multiple matchers
+
+    @ingroup library
+ */
+#import <OCHamcrest/HCAllOf.h>
+#import <OCHamcrest/HCAnyOf.h>
+#import <OCHamcrest/HCIsAnything.h>
+#import <OCHamcrest/HCIsNot.h>
 
 /**
     @defgroup number_matchers Number Matchers
@@ -75,6 +79,10 @@
     @ingroup library
  */
 #import <OCHamcrest/HCHasDescription.h>
+#import <OCHamcrest/HCIsEqual.h>
+#import <OCHamcrest/HCIsInstanceOf.h>
+#import <OCHamcrest/HCIsNil.h>
+#import <OCHamcrest/HCIsSame.h>
 
 /**
     @defgroup text_matchers Text Matchers

@@ -12,7 +12,7 @@
     Calculates the logical negation of a matcher.
 
     @b Factory: @ref isNot
-    @ingroup core_matchers
+    @ingroup logical_matchers
 */
 @interface HCIsNot : HCBaseMatcher
 {
@@ -41,7 +41,7 @@ assertThat(cheese, isNot(smelly))
 
     @b Synonym: @ref isNot
     @see HCIsNot
-    @ingroup core_matchers
+    @ingroup logical_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_isNot(id match);
 
@@ -60,7 +60,7 @@ assertThat(cheese, isNot(smelly))
 
     Synonym for @ref HC_isNot, available if @c HC_SHORTHAND is defined.
     @see HCIsNot
-    @ingroup core_matchers
+    @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND
     #define isNot HC_isNot

@@ -12,7 +12,7 @@
     A matcher that always returns @c YES.
 
     @b Factory: @ref anything
-    @ingroup core_matchers
+    @ingroup logical_matchers
  */
 @interface HCIsAnything : HCBaseMatcher
 {
@@ -35,7 +35,7 @@
  
     @b Synonym: @ref anything
     @see HCIsAnything
-    @ingroup core_matchers
+    @ingroup logical_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_anything();
 
@@ -44,7 +44,7 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
 
     Synonym for @ref HC_anything, available if @c HC_SHORTHAND is defined.
     @see HCIsAnything
-    @ingroup core_matchers
+    @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND
     #define anything()  HC_anything()
@@ -57,7 +57,7 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
     @b Synonym: @ref anythingWithDescription
     @param aDescription  A meaningful string used when describing itself.
     @see HCIsAnything
-    @ingroup core_matchers
+    @ingroup logical_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *aDescription);
 
@@ -68,7 +68,7 @@ OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *aDescription);
     Synonym for @ref HC_anythingWithDescription, available if @c HC_SHORTHAND is defined.
     @param description  A meaningful string used when describing itself.
     @see HCIsAnything
-    @ingroup core_matchers
+    @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND
     #define anythingWithDescription HC_anythingWithDescription

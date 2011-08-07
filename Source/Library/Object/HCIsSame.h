@@ -12,7 +12,7 @@
     Is the item the same object as another?
 
     @b Factory: @ref sameInstance
-    @ingroup core_matchers
+    @ingroup object_matchers
 */
 @interface HCIsSame : HCBaseMatcher
 {
@@ -32,7 +32,7 @@
  
     @b Synonym: @ref sameInstance
     @see HCIsSame
-    @ingroup core_matchers
+    @ingroup object_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object);
 
@@ -42,7 +42,7 @@ OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object);
 
     Synonym for @ref HC_sameInstance, available if @c HC_SHORTHAND is defined.
     @see HCIsSame
-    @ingroup core_matchers
+    @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
     #define sameInstance HC_sameInstance

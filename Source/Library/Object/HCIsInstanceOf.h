@@ -12,7 +12,7 @@
     Tests whether the value is an instance of a class (including subclasses).
 
     @b Factory: @ref instanceOf
-    @ingroup core_matchers
+    @ingroup object_matchers
  */
 @interface HCIsInstanceOf : HCBaseMatcher
 {
@@ -32,7 +32,7 @@
  
     @b Synonym: @ref instanceOf
     @see HCIsInstanceOf
-    @ingroup core_matchers
+    @ingroup object_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class type);
 
@@ -42,7 +42,7 @@ OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class type);
 
     Synonym for @ref HC_instanceOf, available if @c HC_SHORTHAND is defined.
     @see HCIsInstanceOf
-    @ingroup core_matchers
+    @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
     #define instanceOf HC_instanceOf

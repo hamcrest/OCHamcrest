@@ -15,7 +15,7 @@
     @c YES.
 
     @b Factory: @ref anyOf
-    @ingroup core_matchers
+    @ingroup logical_matchers
  */
 @interface HCAnyOf : HCBaseMatcher
 {
@@ -36,7 +36,7 @@
     @b Synonym: @ref anyOf
     @param match  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCAnyOf
-    @ingroup core_matchers
+    @ingroup logical_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_anyOf(id match, ...);
 
@@ -46,7 +46,7 @@ OBJC_EXPORT id<HCMatcher> HC_anyOf(id match, ...);
     Synonym for @ref HC_anyOf, available if @c HC_SHORTHAND is defined.
     @param match  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCAnyOf
-    @ingroup core_matchers
+    @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND
     #define anyOf(match, ...)  HC_anyOf(match, ##__VA_ARGS__)

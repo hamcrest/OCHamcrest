@@ -15,7 +15,7 @@
     @c NO.
 
     @b Factory: @ref allOf
-    @ingroup core_matchers
+    @ingroup logical_matchers
  */
 @interface HCAllOf : HCBaseMatcher
 {
@@ -36,7 +36,7 @@
     @b Synonym: @ref allOf
     @param match  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCAllOf
-    @ingroup core_matchers
+    @ingroup logical_matchers
  */
 OBJC_EXPORT id<HCMatcher> HC_allOf(id match, ...);
 
@@ -46,7 +46,7 @@ OBJC_EXPORT id<HCMatcher> HC_allOf(id match, ...);
     Synonym for @ref HC_allOf, available if @c HC_SHORTHAND is defined.
     @param match  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
     @see HCAllOf
-    @ingroup core_matchers
+    @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND
     #define allOf(match, ...)  HC_allOf(match, ##__VA_ARGS__)
