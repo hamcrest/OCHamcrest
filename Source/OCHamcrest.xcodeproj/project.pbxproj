@@ -7,18 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08026526134597C000A8DCCA /* HCAllOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021913440A83001B439B /* HCAllOf.mm */; };
-		08026527134597C000A8DCCA /* HCAnyOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021B13440A83001B439B /* HCAnyOf.mm */; };
 		08026528134597C000A8DCCA /* HCAssertThat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022D13440A83001B439B /* HCAssertThat.mm */; };
 		08026529134597C000A8DCCA /* HCBaseDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022F13440A83001B439B /* HCBaseDescription.mm */; };
 		0802652A134597C000A8DCCA /* HCBaseMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023113440A83001B439B /* HCBaseMatcher.mm */; };
 		0802652B134597C000A8DCCA /* HCCollectMatchers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023913440A83001B439B /* HCCollectMatchers.mm */; };
-		0802652C134597C000A8DCCA /* HCDescribedAs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021D13440A83001B439B /* HCDescribedAs.mm */; };
 		0802652D134597C000A8DCCA /* HCHasCount.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D113440A9E001B439B /* HCHasCount.mm */; };
 		0802652E134597C000A8DCCA /* HCHasDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F213440A9F001B439B /* HCHasDescription.mm */; };
 		0802652F134597C000A8DCCA /* HCInvocationMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023B13440A83001B439B /* HCInvocationMatcher.mm */; };
-		08026530134597C000A8DCCA /* HCIs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021F13440A83001B439B /* HCIs.mm */; };
-		08026531134597C000A8DCCA /* HCIsAnything.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022113440A83001B439B /* HCIsAnything.mm */; };
 		08026532134597C000A8DCCA /* HCIsCloseTo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E913440A9F001B439B /* HCIsCloseTo.mm */; };
 		08026533134597C000A8DCCA /* HCIsCollectionContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D313440A9E001B439B /* HCIsCollectionContaining.mm */; };
 		08026534134597C000A8DCCA /* HCIsCollectionContainingInAnyOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D513440A9E001B439B /* HCIsCollectionContainingInAnyOrder.mm */; };
@@ -29,15 +24,10 @@
 		08026539134597C000A8DCCA /* HCIsDictionaryContainingKey.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DF13440A9E001B439B /* HCIsDictionaryContainingKey.mm */; };
 		0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E113440A9E001B439B /* HCIsDictionaryContainingValue.mm */; };
 		0802653B134597C000A8DCCA /* HCIsEmptyCollection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E313440A9E001B439B /* HCIsEmptyCollection.mm */; };
-		0802653C134597C000A8DCCA /* HCIsEqual.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022313440A83001B439B /* HCIsEqual.mm */; };
 		0802653D134597C000A8DCCA /* HCIsEqualIgnoringCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F513440A9F001B439B /* HCIsEqualIgnoringCase.mm */; };
 		0802653E134597C000A8DCCA /* HCIsEqualIgnoringWhiteSpace.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F713440A9F001B439B /* HCIsEqualIgnoringWhiteSpace.mm */; };
 		0802653F134597C000A8DCCA /* HCIsEqualToNumber.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602EB13440A9F001B439B /* HCIsEqualToNumber.mm */; };
 		08026540134597C000A8DCCA /* HCIsIn.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E513440A9E001B439B /* HCIsIn.mm */; };
-		08026541134597C000A8DCCA /* HCIsInstanceOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022513440A83001B439B /* HCIsInstanceOf.mm */; };
-		08026542134597C000A8DCCA /* HCIsNil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022713440A83001B439B /* HCIsNil.mm */; };
-		08026543134597C000A8DCCA /* HCIsNot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022913440A83001B439B /* HCIsNot.mm */; };
-		08026544134597C000A8DCCA /* HCIsSame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022B13440A83001B439B /* HCIsSame.mm */; };
 		08026545134597C000A8DCCA /* HCNumberAssert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602ED13440A9F001B439B /* HCNumberAssert.mm */; };
 		08026546134597C000A8DCCA /* HCOrderingComparison.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602EF13440A9F001B439B /* HCOrderingComparison.mm */; };
 		08026547134597C000A8DCCA /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023D13440A83001B439B /* HCRequireNonNilObject.mm */; };
@@ -54,17 +44,65 @@
 		081BEE6E1345979F003F846A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
 		081BEE721345979F003F846A /* libochamcrest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 081BEE621345979F003F846A /* libochamcrest.a */; };
 		081BEE9613459FB2003F846A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
-		0859830B13459CA400BE7892 /* AllOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034513440AD8001B439B /* AllOfTest.m */; };
-		0859830C13459CA400BE7892 /* AnyOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034613440AD8001B439B /* AnyOfTest.m */; };
+		0846B69C13EE5D6200EA68E8 /* HCDescribedAs.h in Headers */ = {isa = PBXBuildFile; fileRef = 0846B69813EE5D6200EA68E8 /* HCDescribedAs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0846B69E13EE5D6200EA68E8 /* HCDescribedAs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B69913EE5D6200EA68E8 /* HCDescribedAs.mm */; };
+		0846B69F13EE5D6200EA68E8 /* HCDescribedAs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B69913EE5D6200EA68E8 /* HCDescribedAs.mm */; };
+		0846B6A013EE5D6200EA68E8 /* HCIs.h in Headers */ = {isa = PBXBuildFile; fileRef = 0846B69A13EE5D6200EA68E8 /* HCIs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0846B6A213EE5D6200EA68E8 /* HCIs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B69B13EE5D6200EA68E8 /* HCIs.mm */; };
+		0846B6A313EE5D6200EA68E8 /* HCIs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B69B13EE5D6200EA68E8 /* HCIs.mm */; };
+		0846B6AD13EE5D7500EA68E8 /* HCAllOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 0846B6A513EE5D7500EA68E8 /* HCAllOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0846B6AF13EE5D7500EA68E8 /* HCAllOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6A613EE5D7500EA68E8 /* HCAllOf.mm */; };
+		0846B6B013EE5D7500EA68E8 /* HCAllOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6A613EE5D7500EA68E8 /* HCAllOf.mm */; };
+		0846B6B113EE5D7500EA68E8 /* HCAnyOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 0846B6A713EE5D7500EA68E8 /* HCAnyOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0846B6B313EE5D7500EA68E8 /* HCAnyOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6A813EE5D7500EA68E8 /* HCAnyOf.mm */; };
+		0846B6B413EE5D7500EA68E8 /* HCAnyOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6A813EE5D7500EA68E8 /* HCAnyOf.mm */; };
+		0846B6B513EE5D7500EA68E8 /* HCIsAnything.h in Headers */ = {isa = PBXBuildFile; fileRef = 0846B6A913EE5D7500EA68E8 /* HCIsAnything.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0846B6B713EE5D7500EA68E8 /* HCIsAnything.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6AA13EE5D7500EA68E8 /* HCIsAnything.mm */; };
+		0846B6B813EE5D7500EA68E8 /* HCIsAnything.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6AA13EE5D7500EA68E8 /* HCIsAnything.mm */; };
+		0846B6B913EE5D7500EA68E8 /* HCIsNot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0846B6AB13EE5D7500EA68E8 /* HCIsNot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0846B6BB13EE5D7500EA68E8 /* HCIsNot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6AC13EE5D7500EA68E8 /* HCIsNot.mm */; };
+		0846B6BC13EE5D7500EA68E8 /* HCIsNot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6AC13EE5D7500EA68E8 /* HCIsNot.mm */; };
+		0846B6C513EE5D8A00EA68E8 /* HCIsEqual.h in Headers */ = {isa = PBXBuildFile; fileRef = 0846B6BD13EE5D8A00EA68E8 /* HCIsEqual.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0846B6C713EE5D8A00EA68E8 /* HCIsEqual.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6BE13EE5D8A00EA68E8 /* HCIsEqual.mm */; };
+		0846B6C813EE5D8A00EA68E8 /* HCIsEqual.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6BE13EE5D8A00EA68E8 /* HCIsEqual.mm */; };
+		0846B6C913EE5D8A00EA68E8 /* HCIsInstanceOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 0846B6BF13EE5D8A00EA68E8 /* HCIsInstanceOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0846B6CB13EE5D8A00EA68E8 /* HCIsInstanceOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6C013EE5D8A00EA68E8 /* HCIsInstanceOf.mm */; };
+		0846B6CC13EE5D8A00EA68E8 /* HCIsInstanceOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6C013EE5D8A00EA68E8 /* HCIsInstanceOf.mm */; };
+		0846B6CD13EE5D8A00EA68E8 /* HCIsNil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0846B6C113EE5D8A00EA68E8 /* HCIsNil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0846B6CF13EE5D8A00EA68E8 /* HCIsNil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6C213EE5D8A00EA68E8 /* HCIsNil.mm */; };
+		0846B6D013EE5D8A00EA68E8 /* HCIsNil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6C213EE5D8A00EA68E8 /* HCIsNil.mm */; };
+		0846B6D113EE5D8A00EA68E8 /* HCIsSame.h in Headers */ = {isa = PBXBuildFile; fileRef = 0846B6C313EE5D8A00EA68E8 /* HCIsSame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0846B6D313EE5D8A00EA68E8 /* HCIsSame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6C413EE5D8A00EA68E8 /* HCIsSame.mm */; };
+		0846B6D413EE5D8A00EA68E8 /* HCIsSame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6C413EE5D8A00EA68E8 /* HCIsSame.mm */; };
+		0846B6E013EE5F9D00EA68E8 /* DescribedAsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DC13EE5F9D00EA68E8 /* DescribedAsTest.m */; };
+		0846B6E113EE5F9D00EA68E8 /* DescribedAsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DC13EE5F9D00EA68E8 /* DescribedAsTest.m */; };
+		0846B6E213EE5F9D00EA68E8 /* IsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DD13EE5F9D00EA68E8 /* IsTest.m */; };
+		0846B6E313EE5F9D00EA68E8 /* IsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DD13EE5F9D00EA68E8 /* IsTest.m */; };
+		0846B6E413EE5F9D00EA68E8 /* NeverMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DF13EE5F9D00EA68E8 /* NeverMatch.m */; };
+		0846B6E513EE5F9D00EA68E8 /* NeverMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DF13EE5F9D00EA68E8 /* NeverMatch.m */; };
+		0846B6EB13EE5FB400EA68E8 /* AllOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E713EE5FB400EA68E8 /* AllOfTest.m */; };
+		0846B6EC13EE5FB400EA68E8 /* AllOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E713EE5FB400EA68E8 /* AllOfTest.m */; };
+		0846B6ED13EE5FB400EA68E8 /* AnyOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E813EE5FB400EA68E8 /* AnyOfTest.m */; };
+		0846B6EE13EE5FB400EA68E8 /* AnyOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E813EE5FB400EA68E8 /* AnyOfTest.m */; };
+		0846B6EF13EE5FB400EA68E8 /* IsAnythingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E913EE5FB400EA68E8 /* IsAnythingTest.m */; };
+		0846B6F013EE5FB400EA68E8 /* IsAnythingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E913EE5FB400EA68E8 /* IsAnythingTest.m */; };
+		0846B6F113EE5FB400EA68E8 /* IsNotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6EA13EE5FB400EA68E8 /* IsNotTest.m */; };
+		0846B6F213EE5FB400EA68E8 /* IsNotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6EA13EE5FB400EA68E8 /* IsNotTest.m */; };
+		0846B6F713EE5FD200EA68E8 /* IsEqualTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F313EE5FD200EA68E8 /* IsEqualTest.m */; };
+		0846B6F813EE5FD200EA68E8 /* IsEqualTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F313EE5FD200EA68E8 /* IsEqualTest.m */; };
+		0846B6F913EE5FD200EA68E8 /* IsInstanceOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F413EE5FD200EA68E8 /* IsInstanceOfTest.m */; };
+		0846B6FA13EE5FD200EA68E8 /* IsInstanceOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F413EE5FD200EA68E8 /* IsInstanceOfTest.m */; };
+		0846B6FB13EE5FD200EA68E8 /* IsNilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F513EE5FD200EA68E8 /* IsNilTest.m */; };
+		0846B6FC13EE5FD200EA68E8 /* IsNilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F513EE5FD200EA68E8 /* IsNilTest.m */; };
+		0846B6FD13EE5FD200EA68E8 /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F613EE5FD200EA68E8 /* IsSameTest.m */; };
+		0846B6FE13EE5FD200EA68E8 /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F613EE5FD200EA68E8 /* IsSameTest.m */; };
 		0859830D13459CA400BE7892 /* AssertThatTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033213440AD8001B439B /* AssertThatTest.m */; };
 		0859830E13459CA400BE7892 /* BaseMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033313440AD8001B439B /* BaseMatcherTest.m */; };
-		0859830F13459CA400BE7892 /* DescribedAsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034713440AD8001B439B /* DescribedAsTest.m */; };
 		0859831013459CA400BE7892 /* FakeWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033613440AD8001B439B /* FakeWithCount.m */; };
 		0859831113459CA400BE7892 /* FakeWithoutCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033813440AD8001B439B /* FakeWithoutCount.m */; };
 		0859831213459CA400BE7892 /* HasCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033913440AD8001B439B /* HasCountTest.m */; };
 		0859831313459CA400BE7892 /* HasDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035813440AD8001B439B /* HasDescriptionTest.m */; };
 		0859831413459CA400BE7892 /* InvocationMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035113440AD8001B439B /* InvocationMatcherTest.m */; };
-		0859831513459CA400BE7892 /* IsAnythingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034813440AD8001B439B /* IsAnythingTest.m */; };
 		0859831613459CA400BE7892 /* IsCloseToTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035313440AD8001B439B /* IsCloseToTest.m */; };
 		0859831713459CA400BE7892 /* IsCollectionContainingInAnyOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033A13440AD8001B439B /* IsCollectionContainingInAnyOrderTest.m */; };
 		0859831813459CA400BE7892 /* IsCollectionContainingInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033B13440AD8001B439B /* IsCollectionContainingInOrderTest.m */; };
@@ -77,15 +115,8 @@
 		0859831F13459CA400BE7892 /* IsEmptyCollectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034213440AD8001B439B /* IsEmptyCollectionTest.m */; };
 		0859832013459CA400BE7892 /* IsEqualIgnoringCaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035B13440AD8001B439B /* IsEqualIgnoringCaseTest.m */; };
 		0859832113459CA400BE7892 /* IsEqualIgnoringWhiteSpaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035C13440AD8001B439B /* IsEqualIgnoringWhiteSpaceTest.m */; };
-		0859832213459CA400BE7892 /* IsEqualTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034913440AD8001B439B /* IsEqualTest.m */; };
 		0859832313459CA400BE7892 /* IsEqualToNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035413440AD8001B439B /* IsEqualToNumberTest.m */; };
-		0859832413459CA400BE7892 /* IsInstanceOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034A13440AD8001B439B /* IsInstanceOfTest.m */; };
 		0859832513459CA400BE7892 /* IsInTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034313440AD8001B439B /* IsInTest.m */; };
-		0859832613459CA400BE7892 /* IsNilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034B13440AD8001B439B /* IsNilTest.m */; };
-		0859832713459CA400BE7892 /* IsNotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034C13440AD8001B439B /* IsNotTest.m */; };
-		0859832813459CA400BE7892 /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034D13440AD8001B439B /* IsSameTest.m */; };
-		0859832913459CA400BE7892 /* IsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034E13440AD8001B439B /* IsTest.m */; };
-		0859832A13459CA400BE7892 /* NeverMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035013440AD8001B439B /* NeverMatch.m */; };
 		0859832B13459CA400BE7892 /* NumberAssertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035513440AD8001B439B /* NumberAssertTest.m */; };
 		0859832C13459CA400BE7892 /* OrderingComparisonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035613440AD8001B439B /* OrderingComparisonTest.m */; };
 		0859832D13459CA400BE7892 /* StringContainsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035D13440AD8001B439B /* StringContainsTest.m */; };
@@ -93,26 +124,6 @@
 		0859832F13459CA400BE7892 /* StringEndsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035E13440AD8001B439B /* StringEndsWithTest.m */; };
 		0859833013459CA400BE7892 /* StringStartsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035F13440AD8001B439B /* StringStartsWithTest.m */; };
 		087601FB13440807001B439B /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601E213440806001B439B /* OCHamcrest.framework */; };
-		0876024413440A83001B439B /* HCAllOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876021813440A83001B439B /* HCAllOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876024513440A83001B439B /* HCAllOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021913440A83001B439B /* HCAllOf.mm */; };
-		0876024613440A83001B439B /* HCAnyOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876021A13440A83001B439B /* HCAnyOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876024713440A83001B439B /* HCAnyOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021B13440A83001B439B /* HCAnyOf.mm */; };
-		0876024813440A83001B439B /* HCDescribedAs.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876021C13440A83001B439B /* HCDescribedAs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876024913440A83001B439B /* HCDescribedAs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021D13440A83001B439B /* HCDescribedAs.mm */; };
-		0876024A13440A83001B439B /* HCIs.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876021E13440A83001B439B /* HCIs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876024B13440A83001B439B /* HCIs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876021F13440A83001B439B /* HCIs.mm */; };
-		0876024C13440A83001B439B /* HCIsAnything.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876022013440A83001B439B /* HCIsAnything.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876024D13440A83001B439B /* HCIsAnything.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022113440A83001B439B /* HCIsAnything.mm */; };
-		0876024E13440A83001B439B /* HCIsEqual.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876022213440A83001B439B /* HCIsEqual.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876024F13440A83001B439B /* HCIsEqual.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022313440A83001B439B /* HCIsEqual.mm */; };
-		0876025013440A83001B439B /* HCIsInstanceOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876022413440A83001B439B /* HCIsInstanceOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876025113440A83001B439B /* HCIsInstanceOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022513440A83001B439B /* HCIsInstanceOf.mm */; };
-		0876025213440A83001B439B /* HCIsNil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876022613440A83001B439B /* HCIsNil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876025313440A83001B439B /* HCIsNil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022713440A83001B439B /* HCIsNil.mm */; };
-		0876025413440A83001B439B /* HCIsNot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876022813440A83001B439B /* HCIsNot.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876025513440A83001B439B /* HCIsNot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022913440A83001B439B /* HCIsNot.mm */; };
-		0876025613440A83001B439B /* HCIsSame.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876022A13440A83001B439B /* HCIsSame.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876025713440A83001B439B /* HCIsSame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022B13440A83001B439B /* HCIsSame.mm */; };
 		0876025813440A83001B439B /* HCAssertThat.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876022C13440A83001B439B /* HCAssertThat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876025913440A83001B439B /* HCAssertThat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022D13440A83001B439B /* HCAssertThat.mm */; };
 		0876025A13440A83001B439B /* HCBaseDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876022E13440A83001B439B /* HCBaseDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -198,17 +209,6 @@
 		0876036D13440AD8001B439B /* IsDictionaryContainingValueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034113440AD8001B439B /* IsDictionaryContainingValueTest.m */; };
 		0876036E13440AD8001B439B /* IsEmptyCollectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034213440AD8001B439B /* IsEmptyCollectionTest.m */; };
 		0876036F13440AD8001B439B /* IsInTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034313440AD8001B439B /* IsInTest.m */; };
-		0876037013440AD8001B439B /* AllOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034513440AD8001B439B /* AllOfTest.m */; };
-		0876037113440AD8001B439B /* AnyOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034613440AD8001B439B /* AnyOfTest.m */; };
-		0876037213440AD8001B439B /* DescribedAsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034713440AD8001B439B /* DescribedAsTest.m */; };
-		0876037313440AD8001B439B /* IsAnythingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034813440AD8001B439B /* IsAnythingTest.m */; };
-		0876037413440AD8001B439B /* IsEqualTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034913440AD8001B439B /* IsEqualTest.m */; };
-		0876037513440AD8001B439B /* IsInstanceOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034A13440AD8001B439B /* IsInstanceOfTest.m */; };
-		0876037613440AD8001B439B /* IsNilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034B13440AD8001B439B /* IsNilTest.m */; };
-		0876037713440AD8001B439B /* IsNotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034C13440AD8001B439B /* IsNotTest.m */; };
-		0876037813440AD8001B439B /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034D13440AD8001B439B /* IsSameTest.m */; };
-		0876037913440AD8001B439B /* IsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034E13440AD8001B439B /* IsTest.m */; };
-		0876037A13440AD8001B439B /* NeverMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035013440AD8001B439B /* NeverMatch.m */; };
 		0876037B13440AD8001B439B /* InvocationMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035113440AD8001B439B /* InvocationMatcherTest.m */; };
 		0876037C13440AD8001B439B /* IsCloseToTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035313440AD8001B439B /* IsCloseToTest.m */; };
 		0876037D13440AD8001B439B /* IsEqualToNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035413440AD8001B439B /* IsEqualToNumberTest.m */; };
@@ -249,29 +249,41 @@
 /* Begin PBXFileReference section */
 		081BEE621345979F003F846A /* libochamcrest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libochamcrest.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		081BEE6C1345979F003F846A /* libochamcrestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libochamcrestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0846B69813EE5D6200EA68E8 /* HCDescribedAs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDescribedAs.h; sourceTree = "<group>"; };
+		0846B69913EE5D6200EA68E8 /* HCDescribedAs.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCDescribedAs.mm; sourceTree = "<group>"; };
+		0846B69A13EE5D6200EA68E8 /* HCIs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIs.h; sourceTree = "<group>"; };
+		0846B69B13EE5D6200EA68E8 /* HCIs.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIs.mm; sourceTree = "<group>"; };
+		0846B6A513EE5D7500EA68E8 /* HCAllOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAllOf.h; sourceTree = "<group>"; };
+		0846B6A613EE5D7500EA68E8 /* HCAllOf.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCAllOf.mm; sourceTree = "<group>"; };
+		0846B6A713EE5D7500EA68E8 /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
+		0846B6A813EE5D7500EA68E8 /* HCAnyOf.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCAnyOf.mm; sourceTree = "<group>"; };
+		0846B6A913EE5D7500EA68E8 /* HCIsAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsAnything.h; sourceTree = "<group>"; };
+		0846B6AA13EE5D7500EA68E8 /* HCIsAnything.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsAnything.mm; sourceTree = "<group>"; };
+		0846B6AB13EE5D7500EA68E8 /* HCIsNot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNot.h; sourceTree = "<group>"; };
+		0846B6AC13EE5D7500EA68E8 /* HCIsNot.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsNot.mm; sourceTree = "<group>"; };
+		0846B6BD13EE5D8A00EA68E8 /* HCIsEqual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqual.h; sourceTree = "<group>"; };
+		0846B6BE13EE5D8A00EA68E8 /* HCIsEqual.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsEqual.mm; sourceTree = "<group>"; };
+		0846B6BF13EE5D8A00EA68E8 /* HCIsInstanceOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsInstanceOf.h; sourceTree = "<group>"; };
+		0846B6C013EE5D8A00EA68E8 /* HCIsInstanceOf.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsInstanceOf.mm; sourceTree = "<group>"; };
+		0846B6C113EE5D8A00EA68E8 /* HCIsNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNil.h; sourceTree = "<group>"; };
+		0846B6C213EE5D8A00EA68E8 /* HCIsNil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsNil.mm; sourceTree = "<group>"; };
+		0846B6C313EE5D8A00EA68E8 /* HCIsSame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsSame.h; sourceTree = "<group>"; };
+		0846B6C413EE5D8A00EA68E8 /* HCIsSame.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsSame.mm; sourceTree = "<group>"; };
+		0846B6DC13EE5F9D00EA68E8 /* DescribedAsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescribedAsTest.m; sourceTree = "<group>"; };
+		0846B6DD13EE5F9D00EA68E8 /* IsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTest.m; sourceTree = "<group>"; };
+		0846B6DE13EE5F9D00EA68E8 /* NeverMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeverMatch.h; sourceTree = "<group>"; };
+		0846B6DF13EE5F9D00EA68E8 /* NeverMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeverMatch.m; sourceTree = "<group>"; };
+		0846B6E713EE5FB400EA68E8 /* AllOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOfTest.m; sourceTree = "<group>"; };
+		0846B6E813EE5FB400EA68E8 /* AnyOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyOfTest.m; sourceTree = "<group>"; };
+		0846B6E913EE5FB400EA68E8 /* IsAnythingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsAnythingTest.m; sourceTree = "<group>"; };
+		0846B6EA13EE5FB400EA68E8 /* IsNotTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsNotTest.m; sourceTree = "<group>"; };
+		0846B6F313EE5FD200EA68E8 /* IsEqualTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEqualTest.m; sourceTree = "<group>"; };
+		0846B6F413EE5FD200EA68E8 /* IsInstanceOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsInstanceOfTest.m; sourceTree = "<group>"; };
+		0846B6F513EE5FD200EA68E8 /* IsNilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsNilTest.m; sourceTree = "<group>"; };
+		0846B6F613EE5FD200EA68E8 /* IsSameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsSameTest.m; sourceTree = "<group>"; };
 		087601E213440806001B439B /* OCHamcrest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCHamcrest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		087601EA13440807001B439B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		087601F713440807001B439B /* OCHamcrestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCHamcrestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0876021813440A83001B439B /* HCAllOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAllOf.h; sourceTree = "<group>"; };
-		0876021913440A83001B439B /* HCAllOf.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCAllOf.mm; sourceTree = "<group>"; };
-		0876021A13440A83001B439B /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
-		0876021B13440A83001B439B /* HCAnyOf.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCAnyOf.mm; sourceTree = "<group>"; };
-		0876021C13440A83001B439B /* HCDescribedAs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDescribedAs.h; sourceTree = "<group>"; };
-		0876021D13440A83001B439B /* HCDescribedAs.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCDescribedAs.mm; sourceTree = "<group>"; };
-		0876021E13440A83001B439B /* HCIs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIs.h; sourceTree = "<group>"; };
-		0876021F13440A83001B439B /* HCIs.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIs.mm; sourceTree = "<group>"; };
-		0876022013440A83001B439B /* HCIsAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsAnything.h; sourceTree = "<group>"; };
-		0876022113440A83001B439B /* HCIsAnything.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsAnything.mm; sourceTree = "<group>"; };
-		0876022213440A83001B439B /* HCIsEqual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqual.h; sourceTree = "<group>"; };
-		0876022313440A83001B439B /* HCIsEqual.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsEqual.mm; sourceTree = "<group>"; };
-		0876022413440A83001B439B /* HCIsInstanceOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsInstanceOf.h; sourceTree = "<group>"; };
-		0876022513440A83001B439B /* HCIsInstanceOf.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsInstanceOf.mm; sourceTree = "<group>"; };
-		0876022613440A83001B439B /* HCIsNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNil.h; sourceTree = "<group>"; };
-		0876022713440A83001B439B /* HCIsNil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsNil.mm; sourceTree = "<group>"; };
-		0876022813440A83001B439B /* HCIsNot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNot.h; sourceTree = "<group>"; };
-		0876022913440A83001B439B /* HCIsNot.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsNot.mm; sourceTree = "<group>"; };
-		0876022A13440A83001B439B /* HCIsSame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsSame.h; sourceTree = "<group>"; };
-		0876022B13440A83001B439B /* HCIsSame.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsSame.mm; sourceTree = "<group>"; };
 		0876022C13440A83001B439B /* HCAssertThat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAssertThat.h; sourceTree = "<group>"; };
 		0876022D13440A83001B439B /* HCAssertThat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCAssertThat.mm; sourceTree = "<group>"; };
 		0876022E13440A83001B439B /* HCBaseDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBaseDescription.h; sourceTree = "<group>"; };
@@ -360,18 +372,6 @@
 		0876034113440AD8001B439B /* IsDictionaryContainingValueTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsDictionaryContainingValueTest.m; sourceTree = "<group>"; };
 		0876034213440AD8001B439B /* IsEmptyCollectionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEmptyCollectionTest.m; sourceTree = "<group>"; };
 		0876034313440AD8001B439B /* IsInTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsInTest.m; sourceTree = "<group>"; };
-		0876034513440AD8001B439B /* AllOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOfTest.m; sourceTree = "<group>"; };
-		0876034613440AD8001B439B /* AnyOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyOfTest.m; sourceTree = "<group>"; };
-		0876034713440AD8001B439B /* DescribedAsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescribedAsTest.m; sourceTree = "<group>"; };
-		0876034813440AD8001B439B /* IsAnythingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsAnythingTest.m; sourceTree = "<group>"; };
-		0876034913440AD8001B439B /* IsEqualTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEqualTest.m; sourceTree = "<group>"; };
-		0876034A13440AD8001B439B /* IsInstanceOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsInstanceOfTest.m; sourceTree = "<group>"; };
-		0876034B13440AD8001B439B /* IsNilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsNilTest.m; sourceTree = "<group>"; };
-		0876034C13440AD8001B439B /* IsNotTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsNotTest.m; sourceTree = "<group>"; };
-		0876034D13440AD8001B439B /* IsSameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsSameTest.m; sourceTree = "<group>"; };
-		0876034E13440AD8001B439B /* IsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTest.m; sourceTree = "<group>"; };
-		0876034F13440AD8001B439B /* NeverMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeverMatch.h; sourceTree = "<group>"; };
-		0876035013440AD8001B439B /* NeverMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeverMatch.m; sourceTree = "<group>"; };
 		0876035113440AD8001B439B /* InvocationMatcherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvocationMatcherTest.m; sourceTree = "<group>"; };
 		0876035313440AD8001B439B /* IsCloseToTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsCloseToTest.m; sourceTree = "<group>"; };
 		0876035413440AD8001B439B /* IsEqualToNumberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEqualToNumberTest.m; sourceTree = "<group>"; };
@@ -433,6 +433,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0846B69713EE5D6200EA68E8 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				0846B69813EE5D6200EA68E8 /* HCDescribedAs.h */,
+				0846B69913EE5D6200EA68E8 /* HCDescribedAs.mm */,
+				0846B69A13EE5D6200EA68E8 /* HCIs.h */,
+				0846B69B13EE5D6200EA68E8 /* HCIs.mm */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		0846B6A413EE5D7500EA68E8 /* Logical */ = {
+			isa = PBXGroup;
+			children = (
+				0846B6A513EE5D7500EA68E8 /* HCAllOf.h */,
+				0846B6A613EE5D7500EA68E8 /* HCAllOf.mm */,
+				0846B6A713EE5D7500EA68E8 /* HCAnyOf.h */,
+				0846B6A813EE5D7500EA68E8 /* HCAnyOf.mm */,
+				0846B6A913EE5D7500EA68E8 /* HCIsAnything.h */,
+				0846B6AA13EE5D7500EA68E8 /* HCIsAnything.mm */,
+				0846B6AB13EE5D7500EA68E8 /* HCIsNot.h */,
+				0846B6AC13EE5D7500EA68E8 /* HCIsNot.mm */,
+			);
+			path = Logical;
+			sourceTree = "<group>";
+		};
+		0846B6DB13EE5F9D00EA68E8 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				0846B6DC13EE5F9D00EA68E8 /* DescribedAsTest.m */,
+				0846B6DD13EE5F9D00EA68E8 /* IsTest.m */,
+				0846B6DE13EE5F9D00EA68E8 /* NeverMatch.h */,
+				0846B6DF13EE5F9D00EA68E8 /* NeverMatch.m */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		0846B6E613EE5FB400EA68E8 /* Logical */ = {
+			isa = PBXGroup;
+			children = (
+				0846B6E713EE5FB400EA68E8 /* AllOfTest.m */,
+				0846B6E813EE5FB400EA68E8 /* AnyOfTest.m */,
+				0846B6E913EE5FB400EA68E8 /* IsAnythingTest.m */,
+				0846B6EA13EE5FB400EA68E8 /* IsNotTest.m */,
+			);
+			path = Logical;
+			sourceTree = "<group>";
+		};
 		087601D613440806001B439B = {
 			isa = PBXGroup;
 			children = (
@@ -478,7 +526,6 @@
 		0876021613440A83001B439B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0876021713440A83001B439B /* Core */,
 				0876022C13440A83001B439B /* HCAssertThat.h */,
 				0876022D13440A83001B439B /* HCAssertThat.mm */,
 				0876022E13440A83001B439B /* HCBaseDescription.h */,
@@ -493,33 +540,6 @@
 				0876023713440A83001B439B /* Helpers */,
 				0876024213440A83001B439B /* NSObject+HCSelfDescribingValue.h */,
 				0876024313440A83001B439B /* NSObject+HCSelfDescribingValue.mm */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		0876021713440A83001B439B /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				0876021813440A83001B439B /* HCAllOf.h */,
-				0876021913440A83001B439B /* HCAllOf.mm */,
-				0876021A13440A83001B439B /* HCAnyOf.h */,
-				0876021B13440A83001B439B /* HCAnyOf.mm */,
-				0876021C13440A83001B439B /* HCDescribedAs.h */,
-				0876021D13440A83001B439B /* HCDescribedAs.mm */,
-				0876021E13440A83001B439B /* HCIs.h */,
-				0876021F13440A83001B439B /* HCIs.mm */,
-				0876022013440A83001B439B /* HCIsAnything.h */,
-				0876022113440A83001B439B /* HCIsAnything.mm */,
-				0876022213440A83001B439B /* HCIsEqual.h */,
-				0876022313440A83001B439B /* HCIsEqual.mm */,
-				0876022413440A83001B439B /* HCIsInstanceOf.h */,
-				0876022513440A83001B439B /* HCIsInstanceOf.mm */,
-				0876022613440A83001B439B /* HCIsNil.h */,
-				0876022713440A83001B439B /* HCIsNil.mm */,
-				0876022813440A83001B439B /* HCIsNot.h */,
-				0876022913440A83001B439B /* HCIsNot.mm */,
-				0876022A13440A83001B439B /* HCIsSame.h */,
-				0876022B13440A83001B439B /* HCIsSame.mm */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -545,6 +565,8 @@
 			isa = PBXGroup;
 			children = (
 				087602CF13440A9E001B439B /* Collection */,
+				0846B69713EE5D6200EA68E8 /* Decorator */,
+				0846B6A413EE5D7500EA68E8 /* Logical */,
 				087602E613440A9E001B439B /* Number */,
 				087602F013440A9F001B439B /* Object */,
 				087602F313440A9F001B439B /* Text */,
@@ -602,6 +624,14 @@
 			children = (
 				087602F113440A9F001B439B /* HCHasDescription.h */,
 				087602F213440A9F001B439B /* HCHasDescription.mm */,
+				0846B6BD13EE5D8A00EA68E8 /* HCIsEqual.h */,
+				0846B6BE13EE5D8A00EA68E8 /* HCIsEqual.mm */,
+				0846B6BF13EE5D8A00EA68E8 /* HCIsInstanceOf.h */,
+				0846B6C013EE5D8A00EA68E8 /* HCIsInstanceOf.mm */,
+				0846B6C113EE5D8A00EA68E8 /* HCIsNil.h */,
+				0846B6C213EE5D8A00EA68E8 /* HCIsNil.mm */,
+				0846B6C313EE5D8A00EA68E8 /* HCIsSame.h */,
+				0846B6C413EE5D8A00EA68E8 /* HCIsSame.mm */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -635,8 +665,9 @@
 				0876033213440AD8001B439B /* AssertThatTest.m */,
 				0876033313440AD8001B439B /* BaseMatcherTest.m */,
 				0876033413440AD8001B439B /* Collection */,
-				0876034413440AD8001B439B /* Core */,
+				0846B6DB13EE5F9D00EA68E8 /* Decorator */,
 				0876035113440AD8001B439B /* InvocationMatcherTest.m */,
+				0846B6E613EE5FB400EA68E8 /* Logical */,
 				0876035213440AD8001B439B /* Number */,
 				0876035713440AD8001B439B /* Object */,
 				0876035913440AD8001B439B /* StringDescriptionTest.m */,
@@ -668,25 +699,6 @@
 			path = Collection;
 			sourceTree = "<group>";
 		};
-		0876034413440AD8001B439B /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				0876034513440AD8001B439B /* AllOfTest.m */,
-				0876034613440AD8001B439B /* AnyOfTest.m */,
-				0876034713440AD8001B439B /* DescribedAsTest.m */,
-				0876034813440AD8001B439B /* IsAnythingTest.m */,
-				0876034913440AD8001B439B /* IsEqualTest.m */,
-				0876034A13440AD8001B439B /* IsInstanceOfTest.m */,
-				0876034B13440AD8001B439B /* IsNilTest.m */,
-				0876034C13440AD8001B439B /* IsNotTest.m */,
-				0876034D13440AD8001B439B /* IsSameTest.m */,
-				0876034E13440AD8001B439B /* IsTest.m */,
-				0876034F13440AD8001B439B /* NeverMatch.h */,
-				0876035013440AD8001B439B /* NeverMatch.m */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		0876035213440AD8001B439B /* Number */ = {
 			isa = PBXGroup;
 			children = (
@@ -702,6 +714,10 @@
 			isa = PBXGroup;
 			children = (
 				0876035813440AD8001B439B /* HasDescriptionTest.m */,
+				0846B6F313EE5FD200EA68E8 /* IsEqualTest.m */,
+				0846B6F413EE5FD200EA68E8 /* IsInstanceOfTest.m */,
+				0846B6F513EE5FD200EA68E8 /* IsNilTest.m */,
+				0846B6F613EE5FD200EA68E8 /* IsSameTest.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -753,16 +769,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0876024413440A83001B439B /* HCAllOf.h in Headers */,
-				0876024613440A83001B439B /* HCAnyOf.h in Headers */,
-				0876024813440A83001B439B /* HCDescribedAs.h in Headers */,
-				0876024A13440A83001B439B /* HCIs.h in Headers */,
-				0876024C13440A83001B439B /* HCIsAnything.h in Headers */,
-				0876024E13440A83001B439B /* HCIsEqual.h in Headers */,
-				0876025013440A83001B439B /* HCIsInstanceOf.h in Headers */,
-				0876025213440A83001B439B /* HCIsNil.h in Headers */,
-				0876025413440A83001B439B /* HCIsNot.h in Headers */,
-				0876025613440A83001B439B /* HCIsSame.h in Headers */,
 				0876025813440A83001B439B /* HCAssertThat.h in Headers */,
 				0876025A13440A83001B439B /* HCBaseDescription.h in Headers */,
 				0876025C13440A83001B439B /* HCBaseMatcher.h in Headers */,
@@ -801,6 +807,16 @@
 				0876032B13440A9F001B439B /* HCSubstringMatcher.h in Headers */,
 				0876032E13440AAD001B439B /* OCHamcrest.h in Headers */,
 				088FB0AF136A70B800C191E1 /* HCStringContainsInOrder.h in Headers */,
+				0846B69C13EE5D6200EA68E8 /* HCDescribedAs.h in Headers */,
+				0846B6A013EE5D6200EA68E8 /* HCIs.h in Headers */,
+				0846B6AD13EE5D7500EA68E8 /* HCAllOf.h in Headers */,
+				0846B6B113EE5D7500EA68E8 /* HCAnyOf.h in Headers */,
+				0846B6B513EE5D7500EA68E8 /* HCIsAnything.h in Headers */,
+				0846B6B913EE5D7500EA68E8 /* HCIsNot.h in Headers */,
+				0846B6C513EE5D8A00EA68E8 /* HCIsEqual.h in Headers */,
+				0846B6C913EE5D8A00EA68E8 /* HCIsInstanceOf.h in Headers */,
+				0846B6CD13EE5D8A00EA68E8 /* HCIsNil.h in Headers */,
+				0846B6D113EE5D8A00EA68E8 /* HCIsSame.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -966,18 +982,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08026526134597C000A8DCCA /* HCAllOf.mm in Sources */,
-				08026527134597C000A8DCCA /* HCAnyOf.mm in Sources */,
 				08026528134597C000A8DCCA /* HCAssertThat.mm in Sources */,
 				08026529134597C000A8DCCA /* HCBaseDescription.mm in Sources */,
 				0802652A134597C000A8DCCA /* HCBaseMatcher.mm in Sources */,
 				0802652B134597C000A8DCCA /* HCCollectMatchers.mm in Sources */,
-				0802652C134597C000A8DCCA /* HCDescribedAs.mm in Sources */,
 				0802652D134597C000A8DCCA /* HCHasCount.mm in Sources */,
 				0802652E134597C000A8DCCA /* HCHasDescription.mm in Sources */,
 				0802652F134597C000A8DCCA /* HCInvocationMatcher.mm in Sources */,
-				08026530134597C000A8DCCA /* HCIs.mm in Sources */,
-				08026531134597C000A8DCCA /* HCIsAnything.mm in Sources */,
 				08026532134597C000A8DCCA /* HCIsCloseTo.mm in Sources */,
 				08026533134597C000A8DCCA /* HCIsCollectionContaining.mm in Sources */,
 				08026534134597C000A8DCCA /* HCIsCollectionContainingInAnyOrder.mm in Sources */,
@@ -988,15 +999,10 @@
 				08026539134597C000A8DCCA /* HCIsDictionaryContainingKey.mm in Sources */,
 				0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.mm in Sources */,
 				0802653B134597C000A8DCCA /* HCIsEmptyCollection.mm in Sources */,
-				0802653C134597C000A8DCCA /* HCIsEqual.mm in Sources */,
 				0802653D134597C000A8DCCA /* HCIsEqualIgnoringCase.mm in Sources */,
 				0802653E134597C000A8DCCA /* HCIsEqualIgnoringWhiteSpace.mm in Sources */,
 				0802653F134597C000A8DCCA /* HCIsEqualToNumber.mm in Sources */,
 				08026540134597C000A8DCCA /* HCIsIn.mm in Sources */,
-				08026541134597C000A8DCCA /* HCIsInstanceOf.mm in Sources */,
-				08026542134597C000A8DCCA /* HCIsNil.mm in Sources */,
-				08026543134597C000A8DCCA /* HCIsNot.mm in Sources */,
-				08026544134597C000A8DCCA /* HCIsSame.mm in Sources */,
 				08026545134597C000A8DCCA /* HCNumberAssert.mm in Sources */,
 				08026546134597C000A8DCCA /* HCOrderingComparison.mm in Sources */,
 				08026547134597C000A8DCCA /* HCRequireNonNilObject.mm in Sources */,
@@ -1009,6 +1015,16 @@
 				0802654E134597C000A8DCCA /* HCWrapInMatcher.mm in Sources */,
 				0802654F134597C000A8DCCA /* NSObject+HCSelfDescribingValue.mm in Sources */,
 				088FB0B2136A70B800C191E1 /* HCStringContainsInOrder.mm in Sources */,
+				0846B69F13EE5D6200EA68E8 /* HCDescribedAs.mm in Sources */,
+				0846B6A313EE5D6200EA68E8 /* HCIs.mm in Sources */,
+				0846B6B013EE5D7500EA68E8 /* HCAllOf.mm in Sources */,
+				0846B6B413EE5D7500EA68E8 /* HCAnyOf.mm in Sources */,
+				0846B6B813EE5D7500EA68E8 /* HCIsAnything.mm in Sources */,
+				0846B6BC13EE5D7500EA68E8 /* HCIsNot.mm in Sources */,
+				0846B6C813EE5D8A00EA68E8 /* HCIsEqual.mm in Sources */,
+				0846B6CC13EE5D8A00EA68E8 /* HCIsInstanceOf.mm in Sources */,
+				0846B6D013EE5D8A00EA68E8 /* HCIsNil.mm in Sources */,
+				0846B6D413EE5D8A00EA68E8 /* HCIsSame.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1017,17 +1033,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				080265BC13459A9D00A8DCCA /* AbstractMatcherTest.m in Sources */,
-				0859830B13459CA400BE7892 /* AllOfTest.m in Sources */,
-				0859830C13459CA400BE7892 /* AnyOfTest.m in Sources */,
 				0859830D13459CA400BE7892 /* AssertThatTest.m in Sources */,
 				0859830E13459CA400BE7892 /* BaseMatcherTest.m in Sources */,
-				0859830F13459CA400BE7892 /* DescribedAsTest.m in Sources */,
 				0859831013459CA400BE7892 /* FakeWithCount.m in Sources */,
 				0859831113459CA400BE7892 /* FakeWithoutCount.m in Sources */,
 				0859831213459CA400BE7892 /* HasCountTest.m in Sources */,
 				0859831313459CA400BE7892 /* HasDescriptionTest.m in Sources */,
 				0859831413459CA400BE7892 /* InvocationMatcherTest.m in Sources */,
-				0859831513459CA400BE7892 /* IsAnythingTest.m in Sources */,
 				0859831613459CA400BE7892 /* IsCloseToTest.m in Sources */,
 				0859831713459CA400BE7892 /* IsCollectionContainingInAnyOrderTest.m in Sources */,
 				0859831813459CA400BE7892 /* IsCollectionContainingInOrderTest.m in Sources */,
@@ -1040,15 +1052,8 @@
 				0859831F13459CA400BE7892 /* IsEmptyCollectionTest.m in Sources */,
 				0859832013459CA400BE7892 /* IsEqualIgnoringCaseTest.m in Sources */,
 				0859832113459CA400BE7892 /* IsEqualIgnoringWhiteSpaceTest.m in Sources */,
-				0859832213459CA400BE7892 /* IsEqualTest.m in Sources */,
 				0859832313459CA400BE7892 /* IsEqualToNumberTest.m in Sources */,
-				0859832413459CA400BE7892 /* IsInstanceOfTest.m in Sources */,
 				0859832513459CA400BE7892 /* IsInTest.m in Sources */,
-				0859832613459CA400BE7892 /* IsNilTest.m in Sources */,
-				0859832713459CA400BE7892 /* IsNotTest.m in Sources */,
-				0859832813459CA400BE7892 /* IsSameTest.m in Sources */,
-				0859832913459CA400BE7892 /* IsTest.m in Sources */,
-				0859832A13459CA400BE7892 /* NeverMatch.m in Sources */,
 				0859832B13459CA400BE7892 /* NumberAssertTest.m in Sources */,
 				0859832C13459CA400BE7892 /* OrderingComparisonTest.m in Sources */,
 				0859832D13459CA400BE7892 /* StringContainsTest.m in Sources */,
@@ -1056,6 +1061,17 @@
 				0859832F13459CA400BE7892 /* StringEndsWithTest.m in Sources */,
 				0859833013459CA400BE7892 /* StringStartsWithTest.m in Sources */,
 				088FB0AC136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */,
+				0846B6E113EE5F9D00EA68E8 /* DescribedAsTest.m in Sources */,
+				0846B6E313EE5F9D00EA68E8 /* IsTest.m in Sources */,
+				0846B6E513EE5F9D00EA68E8 /* NeverMatch.m in Sources */,
+				0846B6EC13EE5FB400EA68E8 /* AllOfTest.m in Sources */,
+				0846B6EE13EE5FB400EA68E8 /* AnyOfTest.m in Sources */,
+				0846B6F013EE5FB400EA68E8 /* IsAnythingTest.m in Sources */,
+				0846B6F213EE5FB400EA68E8 /* IsNotTest.m in Sources */,
+				0846B6F813EE5FD200EA68E8 /* IsEqualTest.m in Sources */,
+				0846B6FA13EE5FD200EA68E8 /* IsInstanceOfTest.m in Sources */,
+				0846B6FC13EE5FD200EA68E8 /* IsNilTest.m in Sources */,
+				0846B6FE13EE5FD200EA68E8 /* IsSameTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1063,16 +1079,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0876024513440A83001B439B /* HCAllOf.mm in Sources */,
-				0876024713440A83001B439B /* HCAnyOf.mm in Sources */,
-				0876024913440A83001B439B /* HCDescribedAs.mm in Sources */,
-				0876024B13440A83001B439B /* HCIs.mm in Sources */,
-				0876024D13440A83001B439B /* HCIsAnything.mm in Sources */,
-				0876024F13440A83001B439B /* HCIsEqual.mm in Sources */,
-				0876025113440A83001B439B /* HCIsInstanceOf.mm in Sources */,
-				0876025313440A83001B439B /* HCIsNil.mm in Sources */,
-				0876025513440A83001B439B /* HCIsNot.mm in Sources */,
-				0876025713440A83001B439B /* HCIsSame.mm in Sources */,
 				0876025913440A83001B439B /* HCAssertThat.mm in Sources */,
 				0876025B13440A83001B439B /* HCBaseDescription.mm in Sources */,
 				0876025D13440A83001B439B /* HCBaseMatcher.mm in Sources */,
@@ -1106,6 +1112,16 @@
 				0876032A13440A9F001B439B /* HCStringStartsWith.mm in Sources */,
 				0876032C13440A9F001B439B /* HCSubstringMatcher.mm in Sources */,
 				088FB0B1136A70B800C191E1 /* HCStringContainsInOrder.mm in Sources */,
+				0846B69E13EE5D6200EA68E8 /* HCDescribedAs.mm in Sources */,
+				0846B6A213EE5D6200EA68E8 /* HCIs.mm in Sources */,
+				0846B6AF13EE5D7500EA68E8 /* HCAllOf.mm in Sources */,
+				0846B6B313EE5D7500EA68E8 /* HCAnyOf.mm in Sources */,
+				0846B6B713EE5D7500EA68E8 /* HCIsAnything.mm in Sources */,
+				0846B6BB13EE5D7500EA68E8 /* HCIsNot.mm in Sources */,
+				0846B6C713EE5D8A00EA68E8 /* HCIsEqual.mm in Sources */,
+				0846B6CB13EE5D8A00EA68E8 /* HCIsInstanceOf.mm in Sources */,
+				0846B6CF13EE5D8A00EA68E8 /* HCIsNil.mm in Sources */,
+				0846B6D313EE5D8A00EA68E8 /* HCIsSame.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1129,17 +1145,6 @@
 				0876036D13440AD8001B439B /* IsDictionaryContainingValueTest.m in Sources */,
 				0876036E13440AD8001B439B /* IsEmptyCollectionTest.m in Sources */,
 				0876036F13440AD8001B439B /* IsInTest.m in Sources */,
-				0876037013440AD8001B439B /* AllOfTest.m in Sources */,
-				0876037113440AD8001B439B /* AnyOfTest.m in Sources */,
-				0876037213440AD8001B439B /* DescribedAsTest.m in Sources */,
-				0876037313440AD8001B439B /* IsAnythingTest.m in Sources */,
-				0876037413440AD8001B439B /* IsEqualTest.m in Sources */,
-				0876037513440AD8001B439B /* IsInstanceOfTest.m in Sources */,
-				0876037613440AD8001B439B /* IsNilTest.m in Sources */,
-				0876037713440AD8001B439B /* IsNotTest.m in Sources */,
-				0876037813440AD8001B439B /* IsSameTest.m in Sources */,
-				0876037913440AD8001B439B /* IsTest.m in Sources */,
-				0876037A13440AD8001B439B /* NeverMatch.m in Sources */,
 				0876037B13440AD8001B439B /* InvocationMatcherTest.m in Sources */,
 				0876037C13440AD8001B439B /* IsCloseToTest.m in Sources */,
 				0876037D13440AD8001B439B /* IsEqualToNumberTest.m in Sources */,
@@ -1153,6 +1158,17 @@
 				0876038513440AD8001B439B /* StringEndsWithTest.m in Sources */,
 				0876038613440AD8001B439B /* StringStartsWithTest.m in Sources */,
 				088FB0AB136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */,
+				0846B6E013EE5F9D00EA68E8 /* DescribedAsTest.m in Sources */,
+				0846B6E213EE5F9D00EA68E8 /* IsTest.m in Sources */,
+				0846B6E413EE5F9D00EA68E8 /* NeverMatch.m in Sources */,
+				0846B6EB13EE5FB400EA68E8 /* AllOfTest.m in Sources */,
+				0846B6ED13EE5FB400EA68E8 /* AnyOfTest.m in Sources */,
+				0846B6EF13EE5FB400EA68E8 /* IsAnythingTest.m in Sources */,
+				0846B6F113EE5FB400EA68E8 /* IsNotTest.m in Sources */,
+				0846B6F713EE5FD200EA68E8 /* IsEqualTest.m in Sources */,
+				0846B6F913EE5FD200EA68E8 /* IsInstanceOfTest.m in Sources */,
+				0846B6FB13EE5FD200EA68E8 /* IsNilTest.m in Sources */,
+				0846B6FD13EE5FD200EA68E8 /* IsSameTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
