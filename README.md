@@ -133,7 +133,7 @@ Hamcrest comes with a library of useful matchers:
 * Number
 
   * ``closeTo`` - tests whether primitive double is close to a given value
-  * equalTo<TypeName> - tests whether primitive number equals given value, with
+  * ``equalTo<Type>`` - tests whether primitive number equals given value, with
   separate function defined for each numeric type
   * ``greaterThan`` - tests NSNumber ordering
   * ``greaterThanOrEqualTo`` - tests NSNumber ordering
