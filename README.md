@@ -20,7 +20,7 @@ precisely the aspect under test and describe the values it should have, to a
 controlled level of precision, helps greatly in writing tests that are "just
 right." Such tests fail when the behavior of the aspect under test deviates from
 the expected behavior, yet continue to pass when minor, unrelated changes to the
-behaviour are made.
+behavior are made.
 
 
 Cocoa and iOS
@@ -58,8 +58,8 @@ My first OCHamcrest test
 ========================
 
 We'll start by writing a very simple Xcode unit test, but instead of using
-OCUnit's ``STAssertEqualObjects`` function, we'll use Hamcrest's ``assertThat``
-construct and a predefined matcher:
+OCUnit's ``STAssertEqualObjects`` function, we'll use OCHamcrest's
+``assertThat`` construct and a predefined matcher:
 
     #import <SenTestingKit/SenTestingKit.h>
 
@@ -97,7 +97,7 @@ instead of writing ``HC_assertThat``, simply write ``assertThat``.
 Predefined matchers
 ===================
 
-Hamcrest comes with a library of useful matchers:
+OCHamcrest comes with a library of useful matchers:
 
 * Object
 
