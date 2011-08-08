@@ -33,6 +33,8 @@ OBJC_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,
 #endif
 
 
+#pragma mark -
+
 OBJC_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
 
@@ -55,6 +57,8 @@ OBJC_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
     #define assertThatChar HC_assertThatChar
 #endif
 
+
+#pragma mark -
 
 OBJC_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
@@ -79,6 +83,8 @@ OBJC_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actual,
 #endif
 
 
+#pragma mark -
+
 OBJC_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
 
@@ -101,6 +107,8 @@ OBJC_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
     #define assertThatFloat HC_assertThatFloat
 #endif
 
+
+#pragma mark -
 
 OBJC_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
@@ -125,6 +133,8 @@ OBJC_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
 #endif
 
 
+#pragma mark -
+
 OBJC_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
 
@@ -147,6 +157,8 @@ OBJC_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
     #define assertThatLong HC_assertThatLong
 #endif
 
+
+#pragma mark -
 
 OBJC_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
@@ -172,6 +184,8 @@ OBJC_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long actual
 #endif
 
 
+#pragma mark -
+
 OBJC_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
 
@@ -194,6 +208,8 @@ OBJC_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
     #define assertThatShort HC_assertThatShort
 #endif
 
+
+#pragma mark -
 
 OBJC_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsigned char actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
@@ -219,6 +235,8 @@ OBJC_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsigned cha
 #endif
 
 
+#pragma mark -
+
 OBJC_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigned int actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
 
@@ -242,6 +260,8 @@ OBJC_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigned int 
     #define assertThatUnsignedInt HC_assertThatUnsignedInt
 #endif
 
+
+#pragma mark -
 
 OBJC_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsigned long actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
@@ -267,6 +287,8 @@ OBJC_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsigned lon
 #endif
 
 
+#pragma mark -
+
 OBJC_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, unsigned long long actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
 
@@ -290,6 +312,8 @@ OBJC_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, unsigned
     #define assertThatUnsignedLongLong HC_assertThatUnsignedLongLong
 #endif
 
+
+#pragma mark -
 
 OBJC_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsigned short actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
@@ -315,6 +339,8 @@ OBJC_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsigned sh
 #endif
 
 
+#pragma mark -
+
 OBJC_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
 
@@ -337,6 +363,8 @@ OBJC_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger actual,
     #define assertThatInteger HC_assertThatInteger
 #endif
 
+
+#pragma mark -
 
 OBJC_EXPORT void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUInteger actual,
         id<HCMatcher> matcher, const char* fileName, int lineNumber);
