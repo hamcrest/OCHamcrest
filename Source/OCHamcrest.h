@@ -106,7 +106,15 @@
 /**
     @defgroup integration_numeric Unit Tests of Primitive Numbers
 
-    Unit test integration for primitive numbers
+    Unit test integration for primitive numbers.
+    
+    The @c assertThat&lt;Type&gt; macros convert the primitive actual value to an @c NSNumber,
+    passing that to the matcher for evaluation. If the matcher is not satisfied, an exception is
+    thrown describing the mismatch.
+
+    This family of macros is designed to integrate well with OCUnit and other unit testing
+    frameworks. Unmet assertions are reported as test failures. In Xcode, they can be clicked to
+    reveal the line of the assertion.
 
     @ingroup integration
  */
