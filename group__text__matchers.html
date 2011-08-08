@@ -58,8 +58,8 @@ Defines</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__text__matchers.html#ga0cf9cf0cd0cf028cd0629cb663e7e71b" title="equalToIgnoringWhiteSpace(string) - Tests if a string is equal to another string, ignoring any change...">equalToIgnoringWhiteSpace(string)</a> - Tests if a string is equal to another string, ignoring any changes in whitespace.  <a href="#ga0cf9cf0cd0cf028cd0629cb663e7e71b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__text__matchers.html#ga35821bba7e5cd4e9c2d8b098b815864c">containsString</a>&nbsp;&nbsp;&nbsp;HC_containsString</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__text__matchers.html#ga35821bba7e5cd4e9c2d8b098b815864c" title="containsString(substring) - Tests if the argument is a string that contains a substring.">containsString(substring)</a> - Tests if the argument is a string that contains a substring.  <a href="#ga35821bba7e5cd4e9c2d8b098b815864c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__text__matchers.html#ga276f48147b76c92949277f991d3106c5">stringContainsInOrder</a>&nbsp;&nbsp;&nbsp;HC_stringContainsInOrder</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">stringContainsInOrder(substring1, ...) - Tests if a string contains a given list of substrings, in order.  <a href="#ga276f48147b76c92949277f991d3106c5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__text__matchers.html#ga80483d7853374b03a8e0f9205269b333">stringContainsInOrder</a>(substring,...)&nbsp;&nbsp;&nbsp;HC_stringContainsInOrder(substring, ##__VA_ARGS__)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tests if a string contains a given list of substrings, in order.  <a href="#ga80483d7853374b03a8e0f9205269b333"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__text__matchers.html#ga180075d9487555730ba5772e8cf871f0">endsWith</a>&nbsp;&nbsp;&nbsp;HC_endsWith</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__text__matchers.html#ga180075d9487555730ba5772e8cf871f0" title="endsWith(substring) - Tests if the argument is a string that ends with a substring.">endsWith(substring)</a> - Tests if the argument is a string that ends with a substring.  <a href="#ga180075d9487555730ba5772e8cf871f0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__text__matchers.html#ga7933ad8e9864c8958618ff3b5655cb78">startsWith</a>&nbsp;&nbsp;&nbsp;HC_startsWith</td></tr>
@@ -72,8 +72,8 @@ Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tests if a string is equal to another string, ignoring any changes in whitespace.  <a href="#ga0916e36458efb0488e00a25d198f742a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__text__matchers.html#ga39ce7687421798ea1e9117e77fd8fcae">HC_containsString</a> (NSString *aSubstring)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tests if the argument is a string that contains a substring.  <a href="#ga39ce7687421798ea1e9117e77fd8fcae"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__text__matchers.html#gae3b0523adc74f7481fadb11f04a4b552">HC_stringContainsInOrder</a> (NSString *substring1,...)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tests if a string contains a given list of substrings, in order.  <a href="#gae3b0523adc74f7481fadb11f04a4b552"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__text__matchers.html#ga195cb782ccef3b4d6113acadd7c6e213">HC_stringContainsInOrder</a> (NSString *substring,...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tests if a string contains a given list of substrings, in order.  <a href="#ga195cb782ccef3b4d6113acadd7c6e213"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__text__matchers.html#ga46a71f21b07b6670d498d83608878771">HC_endsWith</a> (NSString *aSubstring)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tests if the argument is a string that ends with a substring.  <a href="#ga46a71f21b07b6670d498d83608878771"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__text__matchers.html#ga496eda52dd5ebfa0c8308a31d0cb827f">HC_startsWith</a> (NSString *aSubstring)</td></tr>
@@ -167,22 +167,36 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga276f48147b76c92949277f991d3106c5"></a><!-- doxytag: member="HCStringContainsInOrder.h::stringContainsInOrder" ref="ga276f48147b76c92949277f991d3106c5" args="" -->
+<a class="anchor" id="ga80483d7853374b03a8e0f9205269b333"></a><!-- doxytag: member="HCStringContainsInOrder.h::stringContainsInOrder" ref="ga80483d7853374b03a8e0f9205269b333" args="(substring,...)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define stringContainsInOrder&nbsp;&nbsp;&nbsp;HC_stringContainsInOrder</td>
+          <td class="memname">#define stringContainsInOrder</td>
+          <td>(</td>
+          <td class="paramtype">&nbsp;</td>
+          <td class="paramname">substring, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&nbsp;</td>
+          <td class="paramname"> <em>...</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td>&nbsp;&nbsp;&nbsp;HC_stringContainsInOrder(substring, ##__VA_ARGS__)</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>stringContainsInOrder(substring1, ...) - Tests if a string contains a given list of substrings, in order. </p>
-<p>Synonym for <a class="el" href="group__text__matchers.html#gae3b0523adc74f7481fadb11f04a4b552">HC_stringContainsInOrder</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<p>Tests if a string contains a given list of substrings, in order. </p>
+<p>Synonym for <a class="el" href="group__text__matchers.html#ga195cb782ccef3b4d6113acadd7c6e213">HC_stringContainsInOrder</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>substring1</em>&nbsp;</td><td>Comma-separated list of strings, ending with <code>nil</code>. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>substring</em>&nbsp;</td><td>Comma-separated list of strings, ending with <code>nil</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -301,7 +315,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gae3b0523adc74f7481fadb11f04a4b552"></a><!-- doxytag: member="HCStringContainsInOrder.h::HC_stringContainsInOrder" ref="gae3b0523adc74f7481fadb11f04a4b552" args="(NSString *substring1,...)" -->
+<a class="anchor" id="ga195cb782ccef3b4d6113acadd7c6e213"></a><!-- doxytag: member="HCStringContainsInOrder.h::HC_stringContainsInOrder" ref="ga195cb782ccef3b4d6113acadd7c6e213" args="(NSString *substring,...)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -309,7 +323,7 @@ Functions</h2></td></tr>
           <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_stringContainsInOrder </td>
           <td>(</td>
           <td class="paramtype">NSString *&nbsp;</td>
-          <td class="paramname"> <em>substring1</em>, </td>
+          <td class="paramname"> <em>substring</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -327,10 +341,10 @@ Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Tests if a string contains a given list of substrings, in order. </p>
-<p><b>Synonym:</b> <a class="el" href="group__text__matchers.html#ga276f48147b76c92949277f991d3106c5">stringContainsInOrder</a> </p>
+<p><b>Synonym:</b> <a class="el" href="group__text__matchers.html#ga80483d7853374b03a8e0f9205269b333">stringContainsInOrder</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>substring1</em>&nbsp;</td><td>Comma-separated list of strings, ending with <code>nil</code>. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>substring</em>&nbsp;</td><td>Comma-separated list of strings, ending with <code>nil</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -339,7 +353,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sat Apr 30 2011 16:57:57 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Aug 7 2011 17:39:01 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -40,19 +40,65 @@
 Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_has_description.html">HCHasDescription</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Does the object's <code>-description</code> satisfy a given matcher?  <a href="interface_h_c_has_description.html#_details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_equal.html">HCIsEqual</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the object equal to another object, as tested by the <code>-isEqual</code>: method?  <a href="interface_h_c_is_equal.html#_details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_instance_of.html">HCIsInstanceOf</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tests whether the value is an instance of a class (including subclasses).  <a href="interface_h_c_is_instance_of.html#_details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_nil.html">HCIsNil</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the value <code>nil</code>?  <a href="interface_h_c_is_nil.html#_details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_h_c_is_same.html">HCIsSame</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the item the same object as another?  <a href="interface_h_c_is_same.html#_details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9">hasDescription</a>(matcherOrValue)&nbsp;&nbsp;&nbsp;HC_hasDescription(matcherOrValue)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9" title="hasDescription(matcherOrValue) - Evaluates whether [item description] satisfies a given matcher...">hasDescription(matcherOrValue)</a> - Evaluates whether [item description] satisfies a given matcher.  <a href="#ga64625b33c8bb12d301d4f184d7788ec9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#gacd6e06d272fb61ba31b4aa3f598b3332">hasDescription</a>(match)&nbsp;&nbsp;&nbsp;HC_hasDescription(match)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__object__matchers.html#gacd6e06d272fb61ba31b4aa3f598b3332" title="hasDescription(match) - Evaluates whether [item description] satisfies a given matcher.">hasDescription(match)</a> - Evaluates whether [item description] satisfies a given matcher.  <a href="#gacd6e06d272fb61ba31b4aa3f598b3332"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a>&nbsp;&nbsp;&nbsp;HC_equalTo</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__object__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(object)</a> - Is the object equal to another object, as tested by the <code>-isEqual</code>: method?  <a href="#gaed554671d587236694fbb3723fe2f8a4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga684af0672998244dbcf0a4e1467de892">instanceOf</a>&nbsp;&nbsp;&nbsp;HC_instanceOf</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__object__matchers.html#ga684af0672998244dbcf0a4e1467de892" title="instanceOf(type) - Is the value an instance of a particular type?">instanceOf(type)</a> - Is the value an instance of a particular type?  <a href="#ga684af0672998244dbcf0a4e1467de892"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga5760ec0b6b3c0602d7063a7fc6dcaac9">nilValue</a>()&nbsp;&nbsp;&nbsp;HC_nilValue()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches if the value is <code>nil</code>.  <a href="#ga5760ec0b6b3c0602d7063a7fc6dcaac9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga9ffdd81537ca99784c8d81bd239f4942">notNilValue</a>()&nbsp;&nbsp;&nbsp;HC_notNilValue()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches if the value is not <code>nil</code>.  <a href="#ga9ffdd81537ca99784c8d81bd239f4942"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#gae8cfe45f9aee662b08b823587aea8a34">sameInstance</a>&nbsp;&nbsp;&nbsp;HC_sameInstance</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="group__object__matchers.html#gae8cfe45f9aee662b08b823587aea8a34" title="sameInstance(object) - Evaluates to YES only when the argument is this same object.">sameInstance(object)</a> - Evaluates to <code>YES</code> only when the argument is this same object.  <a href="#gae8cfe45f9aee662b08b823587aea8a34"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga3bbc7543cb19082eeb4ab4fdadfbf2a9">HC_hasDescription</a> (id matcherOrValue)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evaluates whether [item description] satisfies a given matcher.  <a href="#ga3bbc7543cb19082eeb4ab4fdadfbf2a9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga7739784e63a9ac43b8ee847369f78a29">HC_hasDescription</a> (id match)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evaluates whether [item description] satisfies a given matcher.  <a href="#ga7739784e63a9ac43b8ee847369f78a29"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#gae581d9388fa7485b616876b0b4d0cb99">HC_equalTo</a> (id object)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the object equal to another object, as tested by the <code>-isEqual</code>: method?  <a href="#gae581d9388fa7485b616876b0b4d0cb99"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga4fa80c6d464fc4ae6c028c9af2029c41">HC_instanceOf</a> (Class type)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Is the value an instance of a particular type?  <a href="#ga4fa80c6d464fc4ae6c028c9af2029c41"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga6228653e2adb57814043e181dc10ab6d">HC_nilValue</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches if the value is <code>nil</code>.  <a href="#ga6228653e2adb57814043e181dc10ab6d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#gab28820ba91abed936972a6e200124b78">HC_notNilValue</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Matches if the value is not <code>nil</code>.  <a href="#gab28820ba91abed936972a6e200124b78"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">id&lt; <a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga5c40465d1c802417675362d451c89db7">HC_sameInstance</a> (id object)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evaluates to <code>YES</code> only when the argument is this same object.  <a href="#ga5c40465d1c802417675362d451c89db7"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Matchers that inspect objects. </p>
 <hr/><h2>Define Documentation</h2>
-<a class="anchor" id="ga64625b33c8bb12d301d4f184d7788ec9"></a><!-- doxytag: member="HCHasDescription.h::hasDescription" ref="ga64625b33c8bb12d301d4f184d7788ec9" args="(matcherOrValue)" -->
+<a class="anchor" id="gaed554671d587236694fbb3723fe2f8a4"></a><!-- doxytag: member="HCIsEqual.h::equalTo" ref="gaed554671d587236694fbb3723fe2f8a4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define equalTo&nbsp;&nbsp;&nbsp;HC_equalTo</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><a class="el" href="group__object__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo(object)</a> - Is the object equal to another object, as tested by the <code>-isEqual</code>: method? </p>
+<p>If the given object is <code>nil</code>, the matcher will match <code>nil</code>.</p>
+<p>Synonym for <a class="el" href="group__object__matchers.html#gae581d9388fa7485b616876b0b4d0cb99">HC_equalTo</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_equal.html" title="Is the object equal to another object, as tested by the -isEqual: method?">HCIsEqual</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gacd6e06d272fb61ba31b4aa3f598b3332"></a><!-- doxytag: member="HCHasDescription.h::hasDescription" ref="gacd6e06d272fb61ba31b4aa3f598b3332" args="(match)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -60,24 +106,24 @@ Functions</h2></td></tr>
           <td class="memname">#define hasDescription</td>
           <td>(</td>
           <td class="paramtype">&nbsp;</td>
-          <td class="paramname">matcherOrValue</td>
+          <td class="paramname">match</td>
           <td>&nbsp;)&nbsp;</td>
-          <td>&nbsp;&nbsp;&nbsp;HC_hasDescription(matcherOrValue)</td>
+          <td>&nbsp;&nbsp;&nbsp;HC_hasDescription(match)</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9" title="hasDescription(matcherOrValue) - Evaluates whether [item description] satisfies a given matcher...">hasDescription(matcherOrValue)</a> - Evaluates whether [item description] satisfies a given matcher. </p>
+<p><a class="el" href="group__object__matchers.html#gacd6e06d272fb61ba31b4aa3f598b3332" title="hasDescription(match) - Evaluates whether [item description] satisfies a given matcher.">hasDescription(match)</a> - Evaluates whether [item description] satisfies a given matcher. </p>
 <p>Examples: </p>
 <ul>
-<li><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9">hasDescription</a>(<a class="el" href="group__text__matchers.html#ga7933ad8e9864c8958618ff3b5655cb78">startsWith</a>(@"foo")) </li>
-<li><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9">hasDescription</a>(@"bar")</li>
+<li><a class="el" href="group__object__matchers.html#gacd6e06d272fb61ba31b4aa3f598b3332">hasDescription</a>(<a class="el" href="group__text__matchers.html#ga7933ad8e9864c8958618ff3b5655cb78">startsWith</a>(@"foo")) </li>
+<li><a class="el" href="group__object__matchers.html#gacd6e06d272fb61ba31b4aa3f598b3332">hasDescription</a>(@"bar")</li>
 </ul>
-<p>Synonym for <a class="el" href="group__object__matchers.html#ga3bbc7543cb19082eeb4ab4fdadfbf2a9">HC_hasDescription</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<p>Synonym for <a class="el" href="group__object__matchers.html#ga7739784e63a9ac43b8ee847369f78a29">HC_hasDescription</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>matcherOrValue</em>&nbsp;</td><td>A matcher, or a value for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>match</em>&nbsp;</td><td>A matcher, or a value for <a class="el" href="group__object__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
   </table>
   </dd>
 </dl>
@@ -85,8 +131,109 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ga684af0672998244dbcf0a4e1467de892"></a><!-- doxytag: member="HCIsInstanceOf.h::instanceOf" ref="ga684af0672998244dbcf0a4e1467de892" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define instanceOf&nbsp;&nbsp;&nbsp;HC_instanceOf</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><a class="el" href="group__object__matchers.html#ga684af0672998244dbcf0a4e1467de892" title="instanceOf(type) - Is the value an instance of a particular type?">instanceOf(type)</a> - Is the value an instance of a particular type? </p>
+<p>Synonym for <a class="el" href="group__object__matchers.html#ga4fa80c6d464fc4ae6c028c9af2029c41">HC_instanceOf</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_instance_of.html" title="Tests whether the value is an instance of a class (including subclasses).">HCIsInstanceOf</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5760ec0b6b3c0602d7063a7fc6dcaac9"></a><!-- doxytag: member="HCIsNil.h::nilValue" ref="ga5760ec0b6b3c0602d7063a7fc6dcaac9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define nilValue</td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;HC_nilValue()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Matches if the value is <code>nil</code>. </p>
+<p>Synonym for <a class="el" href="group__object__matchers.html#ga6228653e2adb57814043e181dc10ab6d">HC_nilValue</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_nil.html" title="Is the value nil?">HCIsNil</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga9ffdd81537ca99784c8d81bd239f4942"></a><!-- doxytag: member="HCIsNil.h::notNilValue" ref="ga9ffdd81537ca99784c8d81bd239f4942" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define notNilValue</td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;HC_notNilValue()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Matches if the value is not <code>nil</code>. </p>
+<p>Synonym for <a class="el" href="group__object__matchers.html#gab28820ba91abed936972a6e200124b78">HC_notNilValue</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_nil.html" title="Is the value nil?">HCIsNil</a> </dd>
+<dd>
+<a class="el" href="interface_h_c_is_not.html" title="Calculates the logical negation of a matcher.">HCIsNot</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae8cfe45f9aee662b08b823587aea8a34"></a><!-- doxytag: member="HCIsSame.h::sameInstance" ref="gae8cfe45f9aee662b08b823587aea8a34" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define sameInstance&nbsp;&nbsp;&nbsp;HC_sameInstance</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><a class="el" href="group__object__matchers.html#gae8cfe45f9aee662b08b823587aea8a34" title="sameInstance(object) - Evaluates to YES only when the argument is this same object.">sameInstance(object)</a> - Evaluates to <code>YES</code> only when the argument is this same object. </p>
+<p>Synonym for <a class="el" href="group__object__matchers.html#ga5c40465d1c802417675362d451c89db7">HC_sameInstance</a>, available if <code>HC_SHORTHAND</code> is defined. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_same.html" title="Is the item the same object as another?">HCIsSame</a> </dd></dl>
+
+</div>
+</div>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="ga3bbc7543cb19082eeb4ab4fdadfbf2a9"></a><!-- doxytag: member="HCHasDescription.h::HC_hasDescription" ref="ga3bbc7543cb19082eeb4ab4fdadfbf2a9" args="(id matcherOrValue)" -->
+<a class="anchor" id="gae581d9388fa7485b616876b0b4d0cb99"></a><!-- doxytag: member="HCIsEqual.h::HC_equalTo" ref="gae581d9388fa7485b616876b0b4d0cb99" args="(id object)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_equalTo </td>
+          <td>(</td>
+          <td class="paramtype">id&nbsp;</td>
+          <td class="paramname"> <em>object</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Is the object equal to another object, as tested by the <code>-isEqual</code>: method? </p>
+<p>If the given object is <code>nil</code>, the matcher will match <code>nil</code>.</p>
+<p><b>Synonym:</b> <a class="el" href="group__object__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_equal.html" title="Is the object equal to another object, as tested by the -isEqual: method?">HCIsEqual</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7739784e63a9ac43b8ee847369f78a29"></a><!-- doxytag: member="HCHasDescription.h::HC_hasDescription" ref="ga7739784e63a9ac43b8ee847369f78a29" args="(id match)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -94,7 +241,7 @@ Functions</h2></td></tr>
           <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_hasDescription </td>
           <td>(</td>
           <td class="paramtype">id&nbsp;</td>
-          <td class="paramname"> <em>matcherOrValue</em></td>
+          <td class="paramname"> <em>match</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -105,13 +252,13 @@ Functions</h2></td></tr>
 <p>Evaluates whether [item description] satisfies a given matcher. </p>
 <p>Examples: </p>
 <ul>
-<li><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9">hasDescription</a>(<a class="el" href="group__text__matchers.html#ga7933ad8e9864c8958618ff3b5655cb78">startsWith</a>(@"foo")) </li>
-<li><a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9">hasDescription</a>(@"bar")</li>
+<li><a class="el" href="group__object__matchers.html#gacd6e06d272fb61ba31b4aa3f598b3332">hasDescription</a>(<a class="el" href="group__text__matchers.html#ga7933ad8e9864c8958618ff3b5655cb78">startsWith</a>(@"foo")) </li>
+<li><a class="el" href="group__object__matchers.html#gacd6e06d272fb61ba31b4aa3f598b3332">hasDescription</a>(@"bar")</li>
 </ul>
-<p><b>Synonym:</b> <a class="el" href="group__object__matchers.html#ga64625b33c8bb12d301d4f184d7788ec9">hasDescription</a> </p>
+<p><b>Synonym:</b> <a class="el" href="group__object__matchers.html#gacd6e06d272fb61ba31b4aa3f598b3332">hasDescription</a> </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>matcherOrValue</em>&nbsp;</td><td>A matcher, or a value for <a class="el" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>match</em>&nbsp;</td><td>A matcher, or a value for <a class="el" href="group__object__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matching. </td></tr>
   </table>
   </dd>
 </dl>
@@ -119,8 +266,96 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ga4fa80c6d464fc4ae6c028c9af2029c41"></a><!-- doxytag: member="HCIsInstanceOf.h::HC_instanceOf" ref="ga4fa80c6d464fc4ae6c028c9af2029c41" args="(Class type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_instanceOf </td>
+          <td>(</td>
+          <td class="paramtype">Class&nbsp;</td>
+          <td class="paramname"> <em>type</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sat Apr 30 2011 16:57:57 for OCHamcrest by&nbsp;
+<div class="memdoc">
+
+<p>Is the value an instance of a particular type? </p>
+<p><b>Synonym:</b> <a class="el" href="group__object__matchers.html#ga684af0672998244dbcf0a4e1467de892">instanceOf</a> </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_instance_of.html" title="Tests whether the value is an instance of a class (including subclasses).">HCIsInstanceOf</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga6228653e2adb57814043e181dc10ab6d"></a><!-- doxytag: member="HCIsNil.h::HC_nilValue" ref="ga6228653e2adb57814043e181dc10ab6d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_nilValue </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Matches if the value is <code>nil</code>. </p>
+<p><b>Synonym:</b> <a class="el" href="group__object__matchers.html#ga5760ec0b6b3c0602d7063a7fc6dcaac9">nilValue</a> </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_nil.html" title="Is the value nil?">HCIsNil</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab28820ba91abed936972a6e200124b78"></a><!-- doxytag: member="HCIsNil.h::HC_notNilValue" ref="gab28820ba91abed936972a6e200124b78" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_notNilValue </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Matches if the value is not <code>nil</code>. </p>
+<p><b>Synonym:</b> <a class="el" href="group__object__matchers.html#ga9ffdd81537ca99784c8d81bd239f4942">notNilValue</a> </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_nil.html" title="Is the value nil?">HCIsNil</a> </dd>
+<dd>
+<a class="el" href="interface_h_c_is_not.html" title="Calculates the logical negation of a matcher.">HCIsNot</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5c40465d1c802417675362d451c89db7"></a><!-- doxytag: member="HCIsSame.h::HC_sameInstance" ref="ga5c40465d1c802417675362d451c89db7" args="(id object)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">id&lt;<a class="el" href="protocol_h_c_matcher-p.html">HCMatcher</a>&gt; HC_sameInstance </td>
+          <td>(</td>
+          <td class="paramtype">id&nbsp;</td>
+          <td class="paramname"> <em>object</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Evaluates to <code>YES</code> only when the argument is this same object. </p>
+<p><b>Synonym:</b> <a class="el" href="group__object__matchers.html#gae8cfe45f9aee662b08b823587aea8a34">sameInstance</a> </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_h_c_is_same.html" title="Is the item the same object as another?">HCIsSame</a> </dd></dl>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generated on Sun Aug 7 2011 17:39:01 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

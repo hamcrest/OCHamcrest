@@ -35,7 +35,7 @@
   <div class="headertitle">
 <h1>HCIs Class Reference<br/>
 <small>
-[<a class="el" href="group__core__matchers.html">Core Matchers</a>]</small>
+[<a class="el" href="group__decorator__matchers.html">Decorator Matchers</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
@@ -60,10 +60,10 @@ Protected Attributes</h2></td></tr>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Decorates another <a class="el" href="protocol_h_c_matcher-p.html" title="A matcher over acceptable values.">HCMatcher</a>, retaining the behavior but allowing tests to be slightly more expressive. </p>
 <p>For example: </p>
-<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo</a>(smelly))
+<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__object__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo</a>(smelly))
 </pre></div><p> vs. </p>
-<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(matcherOrValue) - Decorates another matcher, or provides a shortcut to the frequently used is(equa...">is</a>(<a class="code" href="group__core__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo</a>(smelly)))
-</pre></div><p><b>Factory:</b> <a class="el" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07">is</a> </p>
+<div class="fragment"><pre class="fragment"><a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(cheese, <a class="code" href="group__decorator__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(match) - Decorates another matcher, or provides a shortcut to the frequently used is(equalTo(x))...">is</a>(<a class="code" href="group__object__matchers.html#gaed554671d587236694fbb3723fe2f8a4" title="equalTo(object) - Is the object equal to another object, as tested by the -isEqual: method...">equalTo</a>(smelly)))
+</pre></div><p><b>Factory:</b> <a class="el" href="group__decorator__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07">is</a> </p>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a6931e440684b2d1fe18ee5379e031a98"></a><!-- doxytag: member="HCIs::initWithMatcher:" ref="a6931e440684b2d1fe18ee5379e031a98" args="(id&lt; HCMatcher &gt; aMatcher)" -->
 <div class="memitem">
@@ -116,7 +116,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sat Apr 30 2011 16:57:57 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Aug 7 2011 17:39:01 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -31,7 +31,7 @@
 <div class="fragment"><pre class="fragment">- (void)testDateIsOnASaturday
 {
     NSCalendarDate* date = [NSCalendarDate dateWithString:<span class="stringliteral">@&quot;26 Apr 2008&quot;</span> calendarFormat:<span class="stringliteral">@&quot;%d %b %Y&quot;</span>];
-    <a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(date, <a class="code" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(matcherOrValue) - Decorates another matcher, or provides a shortcut to the frequently used is(equa...">is</a>(onASaturday()))
+    <a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(date, <a class="code" href="group__decorator__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(match) - Decorates another matcher, or provides a shortcut to the frequently used is(equalTo(x))...">is</a>(onASaturday()))
 }
 </pre></div><p>Here's the interface:</p>
 <div class="fragment"><pre class="fragment"><span class="preprocessor">#import &lt;OCHamcrest/HCBaseMatcher.h&gt;</span>
@@ -94,12 +94,12 @@ id&lt;HCMatcher&gt; onASaturday()
 </pre></div><p>For our Matcher implementation we implement the <code>-matches</code>: method -- which calls the <code>-dayOfWeek</code> method after confirming that the argument has such a method -- and the <code>-describe_to</code>: method -- which is used to produce a failure message when a test fails. Here's an example of how the failure message looks:</p>
 <div class="fragment"><pre class="fragment">NSCalendarDate* date = [NSCalendarDate dateWithString: @&quot;6 April 2008&quot;
                                        calendarFormat: @&quot;%d %B %Y&quot;];
-<a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(date, <a class="code" href="group__core__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(matcherOrValue) - Decorates another matcher, or provides a shortcut to the frequently used is(equa...">is</a>(onASaturday()));
+<a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(date, <a class="code" href="group__decorator__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(match) - Decorates another matcher, or provides a shortcut to the frequently used is(equalTo(x))...">is</a>(onASaturday()));
 </pre></div><p>fails with the message</p>
 <div class="fragment"><pre class="fragment">Expected: is calendar date falling on Saturday, got: &lt;06 April 2008&gt; </pre></div><p>and Xcode shows it as a build error. Double clicking the error message takes you to the assertion that failed.</p>
 <p>Even though the <code>onASaturday</code> function creates a new matcher each time it is called, you should not assume this is the only usage pattern for your matcher. Therefore you should make sure your matcher is stateless, so a single instance can be reused between matches. </p>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sat Apr 30 2011 16:57:57 for OCHamcrest by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Aug 7 2011 17:39:01 for OCHamcrest by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
