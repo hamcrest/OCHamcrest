@@ -13,7 +13,7 @@
     @li @ref intro
     @li @ref platforms
     @li @ref firsttest
-    @li @ref tour
+    @li @ref predefined
     @li @ref sugar
     @li @ref custom
 
@@ -61,8 +61,8 @@
     @section firsttest My first OCHamcrest test
 
     We'll start by writing a very simple Xcode unit test, but instead of using OCUnit's
-    @c STAssertEqualObjects function, we'll use OCHamcrest's @c assertThat construct and the
-    standard set of matchers.
+    @c STAssertEqualObjects function, we'll use OCHamcrest's @c assertThat construct and a
+    predefined matcher:
 
     @code
 #import <SenTestingKit/SenTestingKit.h>
@@ -98,49 +98,64 @@
     @ref assertThat.
 
 
-    @section tour A tour of common matchers
+    @section predefined Predefined matchers
 
     OCHamcrest comes with a library of useful matchers:
 
     <ul>
-    <li>Core</li>
-        <ul>
-        <li>@ref anything - always matches, useful if you don't care what the object under test is</li>
-        <li>@ref describedAs - decorator to add custom failure description</li>
-        <li>@ref is - decorator to improve readability - see @ref sugar, below</li>
-        </ul>
-    <li>Logical</li>
-        <ul>
-        <li>@ref allOf - matches if all matchers match, short circuits (like C's @c &&)</li>
-        <li>@ref anyOf - matches if any matchers match, short circuits (like C's @c ||)</li>
-        <li>@ref isNot - matches if the wrapped matcher doesn't match and vice versa</li>
-        </ul>
     <li>Object</li>
         <ul>
         <li>@ref equalTo - tests object equality using @c -isEqual:</li>
-        <li>@ref hasDescription - tests whether @c -description satisfies a given matcher</li>
-        <li>@ref instanceOf - tests type</li>
+        <li>@ref hasDescription - tests whether @c -description satisfies another matcher</li>
+        <li>@ref instanceOf - tests object type</li>
         <li>@ref notNilValue, @ref nilValue - tests for nil</li>
-        <li>@ref sameInstance - tests object identity</li>
+        <li>@ref sameInstance - tests object identity using @c ==</li>
         </ul>
     <li>Collections</li>
         <ul>
-        <li>@ref hasEntry, @ref hasEntries, @ref hasKey, @ref hasValue - tests that an NSDictionary contains an entry, key
-            or value</li>
-        <li>@ref hasItem, @ref contains, @ref containsInAnyOrder, @ref onlyContains - tests that a collection contains elements</li>
-        <li>@ref hasCount, @ref hasCountOf, @ref empty - tests that a collection has a given number of elements</li>
+        <li>@ref contains - tests whether collection's elements, in order, satisfy a list of matchers</li>
+        <li>@ref containsInAnyOrder - tests whether collection's elements, in any order, satisfy a list of matchers</li>
+        <li>@ref empty - tests whether collection is empty</li>
+        <li>@ref hasCount - tests whether collection's count satisfies another matcher</li>
+        <li>@ref hasCountOf - tests whether collection has a given number of elements</li>
+        <li>@ref hasEntries - tests whether dictionary has key-value pairs satisfying a list of matchers</li>
+        <li>@ref hasEntry - tests whether dictionary has a key-value pair satisfying a pair of matchers</li>
+        <li>@ref hasKey - tests whether dictionary has a key satisfying another matcher</li>
+        <li>@ref hasValue - tests whether dictionary has a value satisfying another matcher</li>
+        <li>@ref hasItem - tests whether any element in collection satisfies another matcher</li>
+        <li>@ref hasItems - tests whether collection contains any elements satisfying all of a given set of matchers</li>
+        <li>@ref onlyContains -  tests whether collection contains only elements satisfying any of a given set of matchers</li>
         </ul>
     <li>Number</li>
         <ul>
-        <li>@ref closeTo - tests that floating point values are close to a given value</li>
-        <li>@ref greaterThan, @ref greaterThanOrEqualTo, @ref lessThan, @ref lessThanOrEqualTo -
-            tests ordering</li>
+        <li>@ref closeTo - tests whether primitive double is close to a given value</li>
+        <li>@b equalTo&lt;TypeName&gt; - tests whether primitive number equals given value, with separate function defined for each numeric type, such as @ref equalToInt for @c int</li>
+        <li>@ref greaterThan - tests NSNumber ordering</li>
+        <li>@ref greaterThanOrEqualTo - tests NSNumber ordering</li>
+        <li>@ref lessThan - tests NSNumber ordering</li>
+        <li>@ref lessThanOrEqualTo - tests NSNumber ordering</li>
         </ul>
     <li>Text</li>
         <ul>
+        <li>@ref containsString - tests whether string contains a given string</li>
+        <li>@ref endsWith - tests whether string ends with a given string</li>
         <li>@ref equalToIgnoringCase - tests string equality ignoring case</li>
-        <li>@ref equalToIgnoringWhiteSpace - tests string equality ignoring differences in runs of whitespace</li>
-        <li>@ref containsString, @ref endsWith, @ref startsWith, @ref stringContainsInOrder - tests string matching</li>
+        <li>@ref equalToIgnoringWhitespace - test string equality ignoring differences in runs of whitespace</li>
+        <li>@ref startsWith - tests whether string starts with a given string</li>
+        <li>@ref stringContainsInOrder - tests whether string contains given substrings, in order</li>
+        </ul>
+    <li>Logical</li>
+        <ul>
+        <li>@ref allOf - matches if all matchers match (short-circuits like C's @c &&)</li>
+        <li>@ref anyOf - matches if any matchers match (short-circuits like C's @c ||)</li>
+        <li>@ref anything - always matches, useful in collection matchers when you don't
+  care about a particular element</li>
+        <li>@ref isNot - matches if the wrapped matcher doesn't match and vice versa</li>
+        </ul>
+    <li>Decorator</li>
+        <ul>
+        <li>@ref describedAs - decorator to add custom failure description</li>
+        <li>@ref is - decorator to improve readability - see @ref sugar, below</li>
         </ul>
     </ul>
 
