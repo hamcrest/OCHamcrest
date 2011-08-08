@@ -127,14 +127,14 @@ OCHamcrest comes with a library of useful matchers:
   matcher
   * ``hasItems`` - tests whether collection contains any elements satisfying
   all of a given set of matchers
-  * ``onlyContains`` tests whether collection contains only elements satisfying
+  * ``onlyContains`` - tests whether collection contains only elements satisfying
   any of a given set of matchers
 
 * Number
 
   * ``closeTo`` - tests whether primitive double is close to a given value
-  * ``equalTo<Type>`` - tests whether primitive number equals given value, with
-  separate function defined for each numeric type
+  * equalTo<TypeName> - tests whether primitive number equals given value, with
+  separate function defined for each numeric type, such as ``equalToInt`` for ``int``
   * ``greaterThan`` - tests NSNumber ordering
   * ``greaterThanOrEqualTo`` - tests NSNumber ordering
   * ``lessThan`` - tests NSNumber ordering
