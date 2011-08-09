@@ -8,12 +8,6 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-/**
-    Is the item the same object as another?
-
-    @b Factory: @ref sameInstance
-    @ingroup object_matchers
-*/
 @interface HCIsSame : HCBaseMatcher
 {
     id object;
@@ -25,23 +19,17 @@
 @end
 
 
-#pragma mark -
-
-/**
-    Evaluates to @c YES only when the argument is this same object.
- 
-    @b Synonym: @ref sameInstance
-    @see HCIsSame
-    @ingroup object_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object);
 
 /**
     sameInstance(object) -
-    Evaluates to @c YES only when the argument is this same object.
+    Matches if actual object is the same instance as the given object.
 
-    Synonym for @ref HC_sameInstance, available if @c HC_SHORTHAND is defined.
-    @see HCIsSame
+    @param object  Object to compare against; the "expected value."
+    
+    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_sameInstance instead.
+
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
