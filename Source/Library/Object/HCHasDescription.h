@@ -19,7 +19,6 @@
 OBJC_EXPORT id<HCMatcher> HC_hasDescription(id match);
 
 /**
-    hasDescription(matcher) -
     Matches if object's @c -description satisfies the given matcher.
 
     @param matcher  Matcher to satisfy, or an expected value for @ref equalTo matching.

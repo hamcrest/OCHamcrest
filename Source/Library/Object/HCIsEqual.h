@@ -22,7 +22,6 @@
 OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
 
 /**
-    equalTo(object) -
     Matches if object is equal to the given object.
     
     @param object  Object to compare against; the "expected value."
@@ -38,5 +37,5 @@ OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalTo HC_equalTo
+    #define equalTo(object) HC_equalTo(object)
 #endif
