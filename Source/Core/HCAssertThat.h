@@ -20,8 +20,8 @@ OBJC_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher>
     assertThat(actual, matcher) -
     Asserts that actual value satisfies matcher.
  
-    @param actual   An object to evaluate; the "actual value."
-    @param matcher  A matcher to satisfy; the "expected value."
+    @param actual   Object to evaluate; the "actual value."
+    @param matcher  Matcher to satisfy; the "expected value."
  
     The @c assertThat macro passes the actual value to the matcher for evaluation. If the matcher is
     not satisfied, an exception is thrown describing the mismatch.

@@ -21,7 +21,7 @@ OBJC_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,
     Asserts that @c BOOL actual value, converted to an @c NSNumber, satisfies matcher.
 
     @param actual   The actual value, a @c BOOL.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatBool instead.
@@ -46,7 +46,7 @@ OBJC_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
     Asserts that @c char actual value, converted to an @c NSNumber, satisfies matcher.
 
     @param actual   The actual value, a @c char.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatChar instead.
@@ -71,7 +71,7 @@ OBJC_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actual,
     Asserts that @c double actual value, converted to an @c NSNumber, satisfies matcher.
 
     @param actual   The actual value, a @c double.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatDouble instead.
@@ -96,7 +96,7 @@ OBJC_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
     Asserts that @c float actual value, converted to an @c NSNumber, satisfies matcher.
 
     @param actual   The actual value, a @c float.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatFloat instead.
@@ -121,7 +121,7 @@ OBJC_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
     Asserts that @c int actual value, converted to an @c NSNumber, satisfies matcher.
 
     @param actual   The actual value, an @c int.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatInt instead.
@@ -146,7 +146,7 @@ OBJC_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
     Asserts that @c long actual value, converted to an @c NSNumber, satisfies matcher.
 
     @param actual   The actual value, a @c long.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatLong instead.
@@ -172,7 +172,7 @@ OBJC_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long actual
     matcher.
 
     @param actual   The actual value, a <code>long long</code>.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatLongLong instead.
@@ -197,7 +197,7 @@ OBJC_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
     Asserts that @c short actual value, converted to an @c NSNumber, satisfies matcher.
 
     @param actual   The actual value, a @c short.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatShort instead.
@@ -223,7 +223,7 @@ OBJC_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsigned cha
     matcher.
 
     @param actual   The actual value, an <code>unsigned char</code>.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatUnsignedChar instead.
@@ -249,7 +249,7 @@ OBJC_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigned int 
     matcher.
 
     @param actual   The actual value, an <code>unsigned int</code>.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatUnsignedInt instead.
@@ -275,7 +275,7 @@ OBJC_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsigned lon
     matcher.
 
     @param actual   The actual value, an <code>unsigned long</code>.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatUnsignedLong instead.
@@ -301,7 +301,7 @@ OBJC_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, unsigned
     satisfies matcher.
 
     @param actual   The actual value, an <code>unsigned long long</code>.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatUnsignedLongLong instead.
@@ -327,7 +327,7 @@ OBJC_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsigned sh
     matcher.
 
     @param actual   The actual value, an <code>unsigned short</code>.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatUnsignedShort instead.
@@ -352,7 +352,7 @@ OBJC_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger actual,
     Asserts that @c NSInteger actual value, converted to an @c NSNumber, satisfies matcher.
 
     @param actual   The actual value, an @c NSInteger.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatInteger instead.
@@ -377,7 +377,7 @@ OBJC_EXPORT void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUIntege
     Asserts that @c NSUInteger actual value, converted to an @c NSNumber, satisfies matcher.
 
     @param actual   The actual value, an @c NSUInteger.
-    @param matcher  A matcher to satisfy with an NSNumber; the "expected value."
+    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
 
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThatUnsignedInteger instead.
