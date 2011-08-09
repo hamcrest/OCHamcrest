@@ -8,14 +8,6 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-/**
-    Is the object equal to another object, as tested by the @c -isEqual: method?
- 
-    If the given object is @c nil, the matcher will match @c nil.
- 
-    @b Factory: @ref equalTo
-    @ingroup object_matchers
- */
 @interface HCIsEqual : HCBaseMatcher
 {
     id object;
@@ -27,27 +19,22 @@
 @end
 
 
-#pragma mark -
-
-/**
-    Is the object equal to another object, as tested by the @c -isEqual: method?
- 
-    If the given object is @c nil, the matcher will match @c nil.
- 
-    @b Synonym: @ref equalTo
-    @see HCIsEqual
-    @ingroup object_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
 
 /**
     equalTo(object) -
-    Is the object equal to another object, as tested by the @c -isEqual: method?
-
+    Matches if object is equal to the given object.
+    
+    @param object  Object to compare against; the "expected value."
+    
+    The @c equalTo macro compares an object (the actual value) to the given object (the expected
+    value) for equality, as determined by the @c -isEqual: method.
+    
     If the given object is @c nil, the matcher will match @c nil.
 
-    Synonym for @ref HC_equalTo, available if @c HC_SHORTHAND is defined.
-    @see HCIsEqual
+    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalTo instead.
+
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
