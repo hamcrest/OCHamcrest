@@ -19,13 +19,13 @@
 }
 
 
-- (id)initWithType:(Class)type
+- (id)initWithType:(Class)aClass
 {
-    HCRequireNonNilObject(type);
+    HCRequireNonNilObject(aClass);
 
     self = [super init];
     if (self != nil)
-        theClass = type;
+        theClass = aClass;
     return self;
 }
 
@@ -47,7 +47,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class type)
+OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class aClass)
 {
-    return [HCIsInstanceOf isInstanceOf:type];
+    return [HCIsInstanceOf isInstanceOf:aClass];
 }
