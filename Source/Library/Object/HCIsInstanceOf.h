@@ -26,8 +26,8 @@ OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class aClass);
     
     @param aClass  A class object representing the Objective-C class to be tested.
     
-    The @c instanceOf macro checks whether the object is an instance of given class or an instance
-    of any class that inherits from that class.
+    The @c instanceOf matcher checks whether the object is an instance of a given class or an
+    instance of any class that inherits from that class.
     
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_instanceOf instead.

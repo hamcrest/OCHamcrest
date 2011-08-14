@@ -21,11 +21,11 @@ OBJC_EXPORT id<HCMatcher> HC_hasDescription(id match);
 /**
     Matches if object's @c -description satisfies the given matcher.
 
-    @param matcher  Matcher to satisfy, or an expected value for @ref equalTo matching.
+    @param aMatcher  The matcher to satisfy, or an expected value for @ref equalTo matching.
     
-    The @c hasDescription macro gets an object's description by invoking @c -description, passing
-    the result to the given matcher for evaluation. If @c matcher is an  object other than a
-    matcher, it is wrapped in an implicit @ref equalTo matcher to check for equality.
+    The @c hasDescription matcher invokes @c -description on the evaluated object to get its
+    description, passing the result to a given matcher for evaluation. If the @c aMatcher argument
+    is not a matcher, it is wrapped in an implicit @ref equalTo matcher to check for equality.
     
     Examples:
     @li @ref hasDescription(\@"foo")
@@ -37,5 +37,5 @@ OBJC_EXPORT id<HCMatcher> HC_hasDescription(id match);
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasDescription(matcher)  HC_hasDescription(matcher)
+    #define hasDescription(aMatcher)  HC_hasDescription(aMatcher)
 #endif
