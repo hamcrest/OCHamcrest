@@ -12,9 +12,9 @@
 
 @implementation HCStringContains
 
-+ (id)stringContains:(NSString *)aSubstring
++ (id)stringContains:(NSString *)aString
 {
-    return [[[self alloc] initWithSubstring:aSubstring] autorelease];
+    return [[[self alloc] initWithSubstring:aString] autorelease];
 }
 
 
@@ -37,7 +37,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_containsString(NSString *aSubstring)
+OBJC_EXPORT id<HCMatcher> HC_containsString(NSString *aString)
 {
-    return [HCStringContains stringContains:aSubstring];
+    return [HCStringContains stringContains:aString];
 }

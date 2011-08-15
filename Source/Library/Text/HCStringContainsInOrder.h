@@ -8,12 +8,6 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-/**
-    Tests if a string contains a given list of substrings, in order.
-
-    @b Factory: @ref stringContainsInOrder
-    @ingroup text_matchers
- */
 @interface HCStringContainsInOrder : HCBaseMatcher
 {
     NSArray *substrings;
@@ -25,26 +19,22 @@
 @end
 
 
-#pragma mark -
-
-/**
-    Tests if a string contains a given list of substrings, in order.
-
-    @b Synonym: @ref stringContainsInOrder
-    @param substring  Comma-separated list of strings, ending with @c nil.
-    @see HCStringContainsInOrder
-    @ingroup text_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_stringContainsInOrder(NSString *substring, ...);
 
 /**
-    Tests if a string contains a given list of substrings, in order.
+    Matches if object is a string containing a given list of substrings in relative order.
 
-    Synonym for @ref HC_stringContainsInOrder, available if @c HC_SHORTHAND is defined.
-    @param substring  Comma-separated list of strings, ending with @c nil.
-    @see HCStringContainsInOrder
+    @param firstString,...  A comma-separated list of string ending with @c nil.
+    
+    This matcher first checks whether the evaluated object is a string. If so, it checks whether it 
+    contains a given list of strings, in relative order to each other. The searches are performed 
+    starting from the beginning of the evaluated string.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_stringContainsInOrder instead.)
+
     @ingroup text_matchers
  */
 #ifdef HC_SHORTHAND
-    #define stringContainsInOrder(substring, ...)  HC_stringContainsInOrder(substring, ##__VA_ARGS__)
+    #define stringContainsInOrder(firstString, ...) HC_stringContainsInOrder(firstString, ##__VA_ARGS__)
 #endif

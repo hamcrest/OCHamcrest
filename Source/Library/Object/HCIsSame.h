@@ -22,15 +22,15 @@
 OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object);
 
 /**
-    Matches if evaluated object is the same instance as the given object.
+    Matches if evaluated object is the same instance as a given object.
 
     @param anObject  The object to compare against as the expected value.
     
-    The @c sameInstance matcher compares the address of the evaluated object to the address of a
-    given object to see if they are identical.
+    This matcher compares the address of the evaluated object to the address of @a anObject to see
+    if they are identical.
     
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_sameInstance instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_sameInstance instead.)
 
     @ingroup object_matchers
  */

@@ -26,11 +26,11 @@ OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class aClass);
     
     @param aClass  A class object representing the Objective-C class to be tested.
     
-    The @c instanceOf matcher checks whether the object is an instance of a given class or an
-    instance of any class that inherits from that class.
+    This matcher checks whether the evaluated object is an instance of @a aClass or an instance of
+    any class that inherits from @a aClass.
     
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_instanceOf instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_instanceOf instead.)
 
     @ingroup object_matchers
  */

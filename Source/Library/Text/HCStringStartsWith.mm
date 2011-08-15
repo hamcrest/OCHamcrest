@@ -37,7 +37,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString *aSubstring)
+OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString *aString)
 {
-    return [HCStringStartsWith stringStartsWith:aSubstring];
+    return [HCStringStartsWith stringStartsWith:aString];
 }

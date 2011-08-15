@@ -22,17 +22,17 @@
 OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
 
 /**
-    Matches if object is equal to the given object.
+    Matches if object is equal to a given object.
     
     @param anObject  The object to compare against as the expected value.
     
-    The @c equalTo matcher compares the evaluated object to a given object for equality, as
-    determined by the @c -isEqual: method.
+    This matcher compares the evaluated object to @a anObject for equality, as determined by the
+    @c -isEqual: method.
     
-    If @c anObject is @c nil, the matcher will successfully match @c nil.
+    If @a anObject is @c nil, the matcher will successfully match @c nil.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_equalTo instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalTo instead.)
 
     @ingroup object_matchers
  */
