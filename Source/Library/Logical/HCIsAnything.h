@@ -8,12 +8,6 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-/**
-    A matcher that always returns @c YES.
-
-    @b Factory: @ref anything
-    @ingroup logical_matchers
- */
 @interface HCIsAnything : HCBaseMatcher
 {
     NSString *description;
@@ -28,22 +22,17 @@
 @end
 
 
-#pragma mark -
-
-/**
-    This matcher always evaluates to @c YES.
- 
-    @b Synonym: @ref anything
-    @see HCIsAnything
-    @ingroup logical_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_anything();
 
 /**
-    This matcher always evaluates to @c YES.
+    Matches anything.
+    
+    This matcher always evaluates to @c YES. Specify this in collection matchers when the value of a 
+    particular element in a collection is unimportant.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_anything instead.)
 
-    Synonym for @ref HC_anything, available if @c HC_SHORTHAND is defined.
-    @see HCIsAnything
     @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND
@@ -51,25 +40,21 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
 #endif
 
 
-/**
-    This matcher always evaluates to @c YES.
-
-    @b Synonym: @ref anythingWithDescription
-    @param aDescription  A meaningful string used when describing itself.
-    @see HCIsAnything
-    @ingroup logical_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *aDescription);
 
 /**
-    anythingWithDescription(description) -
-    This matcher always evaluates to @c YES.
+    Matches anything.
+    
+    @param description  A meaningful string used when this matcher describes itself.
+    
+    This matcher always evaluates to @c YES. Specify this in collection matchers when the value of a 
+    particular element in a collection is unimportant.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_anything instead.)
 
-    Synonym for @ref HC_anythingWithDescription, available if @c HC_SHORTHAND is defined.
-    @param description  A meaningful string used when describing itself.
-    @see HCIsAnything
     @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND
-    #define anythingWithDescription HC_anythingWithDescription
+    #define anythingWithDescription(description) HC_anythingWithDescription(description)
 #endif
