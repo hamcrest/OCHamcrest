@@ -17,11 +17,11 @@ OBJC_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher>
     HC_assertThatWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
 /**
-    assertThat(actual, aMatcher) -
+    assertThat(actual, matcher) -
     Asserts that actual value satisfies matcher.
  
     @param actual   The object to evaluate as the actual value.
-    @param aMatcher The matcher to satisfy as the expected condition.
+    @param matcher  The matcher to satisfy as the expected condition.
  
     @c assertThat passes the actual value to the matcher for evaluation. If the matcher is not
     satisfied, an exception is thrown describing the mismatch.

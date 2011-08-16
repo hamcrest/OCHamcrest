@@ -29,61 +29,50 @@
 @end
 
 
-#pragma mark -
-
-/**
-    Is value > expected?
- 
-    @b Synonym: @ref greaterThan
-    @ingroup number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_greaterThan(id expected);
 
 /**
-    greaterThan(expected) -
-    Is value > expected?
+    Matches if object is greater than a given number.
+    
+    @param aNumber  The @c NSNumber to compare against.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_greaterThan instead.)
 
-    Synonym for @ref HC_greaterThan, available if @c HC_SHORTHAND is defined.
     @ingroup number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define greaterThan HC_greaterThan
+    #define greaterThan(aNumber) HC_greaterThan(aNumber)
 #endif
 
 
-/**
-    Is value >= expected?
- 
-    @b Synonym: @ref greaterThanOrEqualTo
-    @ingroup number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id expected);
 
 /**
-    greaterThanOrEqualTo(expected) -
-    Is value >= expected?
+    Matches if object is greater than or equal to a given number.
+    
+    @param aNumber  The @c NSNumber to compare against.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_greaterThanOrEqualTo instead.)
 
-    Synonym for @ref HC_greaterThan, available if @c HC_SHORTHAND is defined.
     @ingroup number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define greaterThanOrEqualTo HC_greaterThanOrEqualTo
+    #define greaterThanOrEqualTo(aNumber) HC_greaterThanOrEqualTo(aNumber)
 #endif
 
 
-/**
-    Is value < expected?
- 
-    @b Synonym: @ref lessThan
-    @ingroup number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_lessThan(id expected);
 
 /**
-    lessThan(expected) -
-    Is value < expected?
+    Matches if object is less than a given number.
+    
+    @param aNumber  The @c NSNumber to compare against.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_lessThan instead.)
 
-    Synonym for @ref HC_greaterThan, available if @c HC_SHORTHAND is defined.
     @ingroup number_matchers
  */
 #ifdef HC_SHORTHAND
@@ -91,19 +80,16 @@ OBJC_EXPORT id<HCMatcher> HC_lessThan(id expected);
 #endif
 
 
-/**
-    Is value <= expected?
- 
-    @b Synonym: @ref lessThanOrEqualTo
-    @ingroup number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_lessThanOrEqualTo(id expected);
 
 /**
-    lessThanOrEqualTo(expected) -
-    Is value <= expected?
+    Matches if object is less than or equal to a given number.
+    
+    @param aNumber  The @c NSNumber to compare against.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_lessThanOrEqualTo instead.)
 
-    Synonym for @ref HC_lessThanOrEqualTo, available if @c HC_SHORTHAND is defined.
     @ingroup number_matchers
  */
 #ifdef HC_SHORTHAND

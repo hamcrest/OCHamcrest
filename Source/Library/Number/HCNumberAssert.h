@@ -20,11 +20,11 @@ OBJC_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,
     assertThatBool(actual, matcher) -
     Asserts that @c BOOL actual value, converted to an @c NSNumber, satisfies matcher.
 
-    @param actual   The actual value, a @c BOOL.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The @c BOOL value to convert to an @c NSNumber for evaluation.
+    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatBool instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatBool instead.)
 
     @ingroup integration_numeric
  */
@@ -45,11 +45,11 @@ OBJC_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
     assertThatChar(actual, matcher) -
     Asserts that @c char actual value, converted to an @c NSNumber, satisfies matcher.
 
-    @param actual   The actual value, a @c char.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The @c char value to convert to an @c NSNumber for evaluation.
+    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatChar instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatChar instead.)
 
     @ingroup integration_numeric
  */
@@ -70,11 +70,11 @@ OBJC_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actual,
     HC_assertThatDouble(actual, matcher) -
     Asserts that @c double actual value, converted to an @c NSNumber, satisfies matcher.
 
-    @param actual   The actual value, a @c double.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The @c double value to convert to an @c NSNumber for evaluation.
+    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatDouble instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatDouble instead.)
 
     @ingroup integration_numeric
  */
@@ -95,11 +95,11 @@ OBJC_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
     assertThatFloat(actual, matcher) -
     Asserts that @c float actual value, converted to an @c NSNumber, satisfies matcher.
 
-    @param actual   The actual value, a @c float.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The @c float value to convert to an @c NSNumber for evaluation.
+    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatFloat instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatFloat instead.)
 
     @ingroup integration_numeric
  */
@@ -120,11 +120,11 @@ OBJC_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
     assertThatInt(actual, matcher) -
     Asserts that @c int actual value, converted to an @c NSNumber, satisfies matcher.
 
-    @param actual   The actual value, an @c int.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The @c int value to convert to an @c NSNumber for evaluation.
+    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatInt instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatInt instead.)
 
     @ingroup integration_numeric
  */
@@ -145,11 +145,11 @@ OBJC_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
     assertThatLong(actual, matcher) -
     Asserts that @c long actual value, converted to an @c NSNumber, satisfies matcher.
 
-    @param actual   The actual value, a @c long.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The @c long value to convert to an @c NSNumber for evaluation.
+    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatLong instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatLong instead.)
 
     @ingroup integration_numeric
  */
@@ -171,11 +171,11 @@ OBJC_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long actual
     Asserts that <code>long long</code> actual value, converted to an @c NSNumber, satisfies
     matcher.
 
-    @param actual   The actual value, a <code>long long</code>.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The <code>long long</code> value to convert to an @c NSNumber for evaluation.
+    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatLongLong instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatLongLong instead.)
 
     @ingroup integration_numeric
  */
@@ -196,11 +196,11 @@ OBJC_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
     assertThatShort(actual, matcher) -
     Asserts that @c short actual value, converted to an @c NSNumber, satisfies matcher.
 
-    @param actual   The actual value, a @c short.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The @c short value to convert to an @c NSNumber for evaluation.
+    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatShort instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatShort instead.)
 
     @ingroup integration_numeric
  */
@@ -222,11 +222,11 @@ OBJC_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsigned cha
     Asserts that <code>unsigned char</code> actual value, converted to an @c NSNumber, satisfies
     matcher.
 
-    @param actual   The actual value, an <code>unsigned char</code>.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The <code>unsigned char</code> value to convert to an @c NSNumber for evaluation.
+    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatUnsignedChar instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatUnsignedChar instead.)
 
     @ingroup integration_numeric
  */
@@ -248,11 +248,10 @@ OBJC_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigned int 
     Asserts that <code>unsigned int</code> actual value, converted to an @c NSNumber, satisfies
     matcher.
 
-    @param actual   The actual value, an <code>unsigned int</code>.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The <code>unsigned int</code> value to convert to an @c NSNumber for evaluation    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatUnsignedInt instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatUnsignedInt instead.)
 
     @ingroup integration_numeric
  */
@@ -274,11 +273,10 @@ OBJC_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsigned lon
     Asserts that <code>unsigned long</code> actual value, converted to an @c NSNumber, satisfies
     matcher.
 
-    @param actual   The actual value, an <code>unsigned long</code>.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The <code>unsigned long</code> value to convert to an @c NSNumber for evaluation    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatUnsignedLong instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatUnsignedLong instead.)
 
     @ingroup integration_numeric
  */
@@ -300,11 +298,10 @@ OBJC_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, unsigned
     Asserts that <code>unsigned long long</code> actual value, converted to an @c NSNumber,
     satisfies matcher.
 
-    @param actual   The actual value, an <code>unsigned long long</code>.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The <code>unsigned long long</code> value to convert to an @c NSNumber for evaluation    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatUnsignedLongLong instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatUnsignedLongLong instead.)
 
     @ingroup integration_numeric
  */
@@ -326,11 +323,10 @@ OBJC_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsigned sh
     Asserts that <code>unsigned short</code> actual value, converted to an @c NSNumber, satisfies
     matcher.
 
-    @param actual   The actual value, an <code>unsigned short</code>.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The <code>unsigned short</code> value to convert to an @c NSNumber for evaluation    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatUnsignedShort instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatUnsignedShort instead.)
 
     @ingroup integration_numeric
  */
@@ -351,11 +347,11 @@ OBJC_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger actual,
     assertThatInteger(actual, matcher) -
     Asserts that @c NSInteger actual value, converted to an @c NSNumber, satisfies matcher.
 
-    @param actual   The actual value, an @c NSInteger.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The @c NSInteger value to convert to an @c NSNumber for evaluation.
+    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatInteger instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatInteger instead.)
 
     @ingroup integration_numeric
  */
@@ -376,11 +372,11 @@ OBJC_EXPORT void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUIntege
     assertThatUnsignedInteger(actual, matcher) -
     Asserts that @c NSUInteger actual value, converted to an @c NSNumber, satisfies matcher.
 
-    @param actual   The actual value, an @c NSUInteger.
-    @param matcher  Matcher to satisfy with an NSNumber; the "expected value."
+    @param actual   The @c NSUInteger value to convert to an @c NSNumber for evaluation.
+    @param matcher  The matcher to satisfy as the expected condition.
 
-    In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_assertThatUnsignedInteger instead.
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_assertThatUnsignedInteger instead.)
 
     @ingroup integration_numeric
  */

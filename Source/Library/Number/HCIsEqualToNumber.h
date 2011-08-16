@@ -8,300 +8,301 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-/**
-    Is the @c BOOL value, converted to an @c NSNumber, equal to another object?
-
-    @b Synonym: @ref equalToBool
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value);
 
 /**
-    equalToBool(value) -
-    Is the @c BOOL value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from a @c BOOL.
+    
+    @param value  The @c BOOL value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from a @c BOOL @a value and compares the evaluated
+    object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToBool instead.)
 
-    Synonym for @ref HC_equalToBool, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToBool HC_equalToBool
+    #define equalToBool(value) HC_equalToBool(value)
 #endif
 
 
-/**
-    Is the @c char value, converted to an @c NSNumber, equal to another object?
-
-    @b Synonym: @ref equalToChar
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToChar(char value);
 
 /**
-    equalToChar(value) -
-    Is the @c char value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from a @c char.
+    
+    @param value  The @c char value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from a @c char @a value and compares the evaluated
+    object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToChar instead.)
 
-    Synonym for @ref HC_equalToChar, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToChar HC_equalToChar
+    #define equalToChar(value) HC_equalToChar(value)
 #endif
 
 
-/**
-    Is the @c double value, converted to an @c NSNumber, equal to another object? 
-
-    @b Synonym: @ref equalToDouble
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToDouble(double value);
 
 /**
-    equalToDouble(value) -
-    Is the @c double value, converted to an @c NSNumber, equal to another object? 
+    Matches if object is equal to @c NSNumber created from a @c double.
+    
+    @param value  The @c double value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from a @c double @a value and compares the evaluated
+    object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToDouble instead.)
 
-    Synonym for @ref HC_equalToDouble, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToDouble HC_equalToDouble
+    #define equalToDouble(value) HC_equalToDouble(value)
 #endif
 
-/**
-    Is the @c float value, converted to an @c NSNumber, equal to another object?
 
-    @b Synonym: @ref equalToFloat
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToFloat(float value);
 
 /**
-    equalToFloat(value) -
-    Is the @c float value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from a @c float.
+    
+    @param value  The @c float value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from a @c float @a value and compares the evaluated
+    object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToFloat instead.)
 
-    Synonym for @ref HC_equalToFloat, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToFloat HC_equalToFloat
+    #define equalToFloat(value) HC_equalToFloat(value)
 #endif
 
 
-/**
-    Is the @c int value, converted to an @c NSNumber, equal to another object?
-
-    @b Synonym: @ref equalToInt
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToInt(int value);
 
 /**
-    equalToInt(value) -
-    Is the @c int value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from an @c int.
+    
+    @param value  The @c int value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from a @c int @a value and compares the evaluated
+    object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToInt instead.)
 
-    Synonym for @ref HC_equalToInt, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToInt HC_equalToInt
+    #define equalToInt(value) HC_equalToInt(value)
 #endif
 
 
-/**
-    Is the @c long value, converted to an @c NSNumber, equal to another object?
-
-    @b Synonym: @ref equalToLong
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToLong(long value);
 
 /**
-    equalToLong(value) -
-    Is the @c long value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from a @c long.
+    
+    @param value  The @c long value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from a @c long @a value and compares the evaluated
+    object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToLong instead.)
 
-    Synonym for @ref HC_equalToLong, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToLong HC_equalToLong
+    #define equalToLong(value) HC_equalToLong(value)
 #endif
 
 
-/**
-    Is the <code>long long</code> value, converted to an @c NSNumber, equal to another object?
-
-    @b Synonym: @ref equalToLongLong
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToLongLong(long long value);
 
 /**
-    equalToLongLong(value) -
-    Is the <code>long long</code> value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from a <code>long long</code>.
+    
+    @param value  The <code>long long</code> value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from a <code>long long</code> @a value and compares
+    the evaluated object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToLongLong instead.)
 
-    Synonym for @ref HC_equalToLongLong, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToLongLong HC_equalToLongLong
+    #define equalToLongLong(value) HC_equalToLongLong(value)
 #endif
 
 
-/**
-    Is the @c short value, converted to an @c NSNumber, equal to another object?
-
-    @b Synonym: @ref equalToShort
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToShort(short value);
 
 /**
-    equalToShort(value) -
-    Is the @c short value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from a @c short.
+    
+    @param value  The @c short value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from a @c short @a value and compares the evaluated
+    object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToShort instead.)
 
-    Synonym for @ref HC_equalToShort, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToShort HC_equalToShort
+    #define equalToShort(value) HC_equalToShort(value)
 #endif
 
 
-/**
-    Is the <code>unsigned char</code> value, converted to an @c NSNumber, equal to another object?
-
-    @b Synonym: @ref equalToUnsignedChar
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedChar(unsigned char value);
 
 /**
-    equalToUnsignedChar(value) -
-    Is the <code>unsigned char</code> value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from an <code>unsigned char</code>.
+    
+    @param value  The <code>unsigned char</code> value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from an <code>unsigned char</code> @a value and
+    compares the evaluated object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToUnsignedChar instead.)
 
-    Synonym for @ref HC_equalToUnsignedChar, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToUnsignedChar HC_equalToUnsignedChar
+    #define equalToUnsignedChar(value) HC_equalToUnsignedChar(value)
 #endif
 
 
-/**
-    Is the <code>unsigned int</code> value, converted to an @c NSNumber, equal to another object?
-
-    @b Synonym: @ref equalToUnsignedInt
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInt(unsigned int value);
 
 /**
-    equalToUnsignedInt(value) -
-    Is the <code>unsigned int</code> value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from an <code>unsigned int</code>.
+    
+    @param value  The <code>unsigned int</code> value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from an <code>unsigned int</code> @a value and
+    compares the evaluated object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToUnsignedInt instead.)
 
-    Synonym for @ref HC_equalToUnsignedInt, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToUnsignedInt HC_equalToUnsignedInt
+    #define equalToUnsignedInt(value) HC_equalToUnsignedInt(value)
 #endif
 
 
-/**
-    Is the <code>unsigned long</code> value, converted to an @c NSNumber, equal to another object?
-
-    @b Synonym: @ref equalToUnsignedLong
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLong(unsigned long value);
 
 /**
-    equalToUnsignedLong(value) -
-    Is the <code>unsigned long</code> value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from an <code>unsigned long</code>.
+    
+    @param value  The <code>unsigned long</code> value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from an <code>unsigned long</code> @a value and
+    compares the evaluated object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToUnsignedLong instead.)
 
-    Synonym for @ref HC_equalToUnsignedLong, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToUnsignedLong HC_equalToUnsignedLong
+    #define equalToUnsignedLong(value) HC_equalToUnsignedLong(value)
 #endif
 
 
-/**
-    Is the <code>unsigned long long</code> value, converted to an @c NSNumber, equal to another object?
-
-    @b Synonym: @ref equalToUnsignedLongLong
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
 
 /**
-    equalToUnsignedLongLong(value) -
-    Is the <code>unsigned long long</code> value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from an <code>unsigned long long</code>.
+    
+    @param value  The <code>unsigned long long</code> value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from an <code>unsigned long long</code> @a value and
+    compares the evaluated object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToUnsignedLongLong instead.)
 
-    Synonym for @ref HC_equalToUnsignedLongLong, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToUnsignedLongLong HC_equalToUnsignedLongLong
+    #define equalToUnsignedLongLong(value) HC_equalToUnsignedLongLong(value)
 #endif
 
 
-/**
-    Is the <code>unsigned short</code> value, converted to an @c NSNumber, equal to another object?
-
-    @b Synonym: @ref equalToUnsignedShort
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
 
 /**
-    equalToUnsignedShort(value) -
-    Is the <code>unsigned short</code> value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from an <code>unsigned short</code>.
+    
+    @param value  The <code>unsigned short</code> value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from an <code>unsigned short</code> @a value and
+    compares the evaluated object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToUnsignedShort instead.)
 
-    Synonym for @ref HC_equalToUnsignedShort, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToUnsignedShort HC_equalToUnsignedShort
+    #define equalToUnsignedShort(value) HC_equalToUnsignedShort(value)
 #endif
 
 
-/**
-    Is the @c NSInteger value, converted to an @c NSNumber, equal to another object?
-
-    @b Synonym: @ref equalToInteger
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToInteger(NSInteger value);
 
 /**
-    equalToInteger(value) -
-    Is the @c NSInteger value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from an @c NSInteger.
+    
+    @param value  The @c NSInteger value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from an @c NSInteger @a value and compares the
+    evaluated object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToInteger instead.)
 
-    Synonym for @ref HC_equalToInteger, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToInteger HC_equalToInteger
+    #define equalToInteger(value) HC_equalToInteger(value)
 #endif
 
 
-/**
-    Is the @c NSUInteger value, converted to an @c NSNumber, equal to another object?
-
-    @b Synonym: @ref equalToUnsignedInteger
-    @ingroup primitive_number_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInteger(NSUInteger value);
 
 /**
-    equalToUnsignedInteger(value) -
-    Is the @c NSUInteger value, converted to an @c NSNumber, equal to another object?
+    Matches if object is equal to @c NSNumber created from an @c NSUInteger.
+    
+    @param value  The @c NSUInteger value from which to create an @c NSNumber.
+    
+    This matcher creates an @c NSNumber object from an @c NSUInteger @a value and compares the
+    evaluated object to it for equality.    
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_equalToUnsignedInteger instead.)
 
-    Synonym for @ref HC_equalToUnsignedInteger, available if @c HC_SHORTHAND is defined.
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToUnsignedInteger HC_equalToUnsignedInteger
+    #define equalToUnsignedInteger(value) HC_equalToUnsignedInteger(value)
 #endif
