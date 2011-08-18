@@ -18,6 +18,7 @@
 OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString *aSubstring);
 
 /**
+    endsWith(aString) -
     Matches if object is a string ending with a given string.
 
     @param aString  The string to search for. This value must not be @c nil.
@@ -31,5 +32,5 @@ OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString *aSubstring);
     @ingroup text_matchers
  */
 #ifdef HC_SHORTHAND
-    #define endsWith(aString) HC_endsWith(aString)
+    #define endsWith HC_endsWith
 #endif

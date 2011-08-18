@@ -43,6 +43,7 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
 OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *aDescription);
 
 /**
+    anythingWithDescription(description) -
     Matches anything.
     
     @param description  A meaningful string used when this matcher describes itself.
@@ -56,5 +57,5 @@ OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *aDescription);
     @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND
-    #define anythingWithDescription(description) HC_anythingWithDescription(description)
+    #define anythingWithDescription HC_anythingWithDescription
 #endif

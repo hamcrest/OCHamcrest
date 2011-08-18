@@ -19,6 +19,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasDescription(id match);
 
 /**
+    hasDescription(aMatcher) -
     Matches if object's @c -description satisfies a given matcher.
 
     @param aMatcher  The matcher to satisfy, or an expected value for @ref equalTo matching.
@@ -37,5 +38,5 @@ OBJC_EXPORT id<HCMatcher> HC_hasDescription(id match);
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasDescription(aMatcher)  HC_hasDescription(aMatcher)
+    #define hasDescription HC_hasDescription
 #endif

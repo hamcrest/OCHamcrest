@@ -22,6 +22,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasCount(id<HCMatcher> matcher);
 
 /**
+    hasCount(aMatcher) -
     Matches if object's @c -count satisfies a given matcher.
 
     @param aMatcher  The matcher to satisfy.
@@ -35,13 +36,14 @@ OBJC_EXPORT id<HCMatcher> HC_hasCount(id<HCMatcher> matcher);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasCount(matcher)  HC_hasCount(matcher)
+    #define hasCount HC_hasCount
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_hasCountOf(NSUInteger count);
 
 /**
+    hasCountOf(value) -
     Matches if object's @c -count equals a given value.
 
     @param value  @c NSUInteger value to compare against as the expected value.
@@ -55,5 +57,5 @@ OBJC_EXPORT id<HCMatcher> HC_hasCountOf(NSUInteger count);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasCountOf(value)  HC_hasCountOf(value)
+    #define hasCountOf HC_hasCountOf
 #endif

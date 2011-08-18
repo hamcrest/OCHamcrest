@@ -22,6 +22,7 @@
 OBJC_EXPORT id<HCMatcher> HC_containsInAnyOrder(id itemMatch, ...);
 
 /**
+    containsInAnyOrder(firstMatcher, ...) -
     Matches if collection's elements, in any order, satisfy a given list of matchers.
     
     @param firstMatcher,...  A comma-separated list of matchers ending with @c nil.
@@ -40,5 +41,5 @@ OBJC_EXPORT id<HCMatcher> HC_containsInAnyOrder(id itemMatch, ...);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define containsInAnyOrder(firstMatcher, ...) HC_containsInAnyOrder(firstMatcher, ##__VA_ARGS__)
+    #define containsInAnyOrder HC_containsInAnyOrder
 #endif

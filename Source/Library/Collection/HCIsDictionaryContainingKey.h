@@ -22,7 +22,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasKey(id keyMatch);
 
 /**
-    hasKey(keyMatch) -
+    hasKey(keyMatcher) -
     Matches if dictionary contains an entry whose key satisfies a given matcher.
     
     @param keyMatcher    The matcher to satisfy for the key, or an expected value for @ref equalTo matching.

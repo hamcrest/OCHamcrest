@@ -22,6 +22,7 @@
 OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class aClass);
 
 /**
+    instanceOf(aClass) -
     Matches if object is an instance of, or inherits from, a given class.
     
     @param aClass  A class object representing the Objective-C class to be tested.
@@ -35,5 +36,5 @@ OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class aClass);
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
-    #define instanceOf(aClass) HC_instanceOf(aClass)
+    #define instanceOf HC_instanceOf
 #endif

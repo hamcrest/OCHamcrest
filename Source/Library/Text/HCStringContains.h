@@ -18,6 +18,7 @@
 OBJC_EXPORT id<HCMatcher> HC_containsString(NSString *aSubstring);
 
 /**
+    containsString(aString) -
     Matches if object is a string containing a given string.
 
     @param aString  The string to search for. This value must not be @c nil.
@@ -31,5 +32,5 @@ OBJC_EXPORT id<HCMatcher> HC_containsString(NSString *aSubstring);
     @ingroup text_matchers
  */
 #ifdef HC_SHORTHAND
-    #define containsString(aString) HC_containsString(aString)
+    #define containsString HC_containsString
 #endif

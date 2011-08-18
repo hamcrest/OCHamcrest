@@ -22,6 +22,7 @@
 OBJC_EXPORT id<HCMatcher> HC_is(id match);
 
 /**
+    is(aMatcher) -
     Decorates another matcher, or provides a shortcut to the frequently used @ref is(equalTo(x)).
 
     @param aMatcher  The matcher to satisfy, or an expected value for @ref equalTo matching.
@@ -45,5 +46,5 @@ OBJC_EXPORT id<HCMatcher> HC_is(id match);
     @ingroup decorator_matchers
  */
 #ifdef HC_SHORTHAND
-    #define is(aMatcher) HC_is(aMatcher)
+    #define is HC_is
 #endif

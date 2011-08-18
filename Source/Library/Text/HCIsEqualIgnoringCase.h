@@ -22,6 +22,7 @@
 OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString *aString);
 
 /**
+    equalToIgnoringCase(aString) -
     Matches if object is a string equal to a given string, ignoring case differences.
 
     @param aString  The string to compare against as the expected value. This value must not be @c nil.
@@ -35,5 +36,5 @@ OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString *aString);
     @ingroup text_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToIgnoringCase(aString) HC_equalToIgnoringCase(aString)
+    #define equalToIgnoringCase HC_equalToIgnoringCase
 #endif

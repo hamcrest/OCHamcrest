@@ -32,6 +32,7 @@
 OBJC_EXPORT id<HCMatcher> HC_greaterThan(id expected);
 
 /**
+    greaterThan(aNumber) -
     Matches if object is greater than a given number.
     
     @param aNumber  The @c NSNumber to compare against.
@@ -42,13 +43,14 @@ OBJC_EXPORT id<HCMatcher> HC_greaterThan(id expected);
     @ingroup number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define greaterThan(aNumber) HC_greaterThan(aNumber)
+    #define greaterThan HC_greaterThan
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id expected);
 
 /**
+    greaterThanOrEqualTo(aNumber) -
     Matches if object is greater than or equal to a given number.
     
     @param aNumber  The @c NSNumber to compare against.
@@ -59,13 +61,14 @@ OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id expected);
     @ingroup number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define greaterThanOrEqualTo(aNumber) HC_greaterThanOrEqualTo(aNumber)
+    #define greaterThanOrEqualTo HC_greaterThanOrEqualTo
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_lessThan(id expected);
 
 /**
+    lessThan(aNumber) -
     Matches if object is less than a given number.
     
     @param aNumber  The @c NSNumber to compare against.
@@ -83,6 +86,7 @@ OBJC_EXPORT id<HCMatcher> HC_lessThan(id expected);
 OBJC_EXPORT id<HCMatcher> HC_lessThanOrEqualTo(id expected);
 
 /**
+    lessThanOrEqualTo(aNumber) -
     Matches if object is less than or equal to a given number.
     
     @param aNumber  The @c NSNumber to compare against.

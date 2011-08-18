@@ -22,6 +22,7 @@
 OBJC_EXPORT id<HCMatcher> HC_isNot(id aMatcher);
 
 /**
+    isNot(aMatcher) -
     Inverts the given matcher to its logical negation.
 
     @param aMatcher  The matcher to satisfy, or an expected value for @ref equalTo matching.
@@ -40,5 +41,5 @@ OBJC_EXPORT id<HCMatcher> HC_isNot(id aMatcher);
     @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND
-    #define isNot(aMatcher) HC_isNot(aMatcher)
+    #define isNot HC_isNot
 #endif

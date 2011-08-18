@@ -29,6 +29,7 @@
 OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString *description, id<HCMatcher> matcher, ...);
 
 /**
+    describedAs(description, matcher, ...) -
     Adds custom failure description to a given matcher.
     
     @param description  Overrides the matcher's description.
@@ -43,5 +44,5 @@ OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString *description, id<HCMatcher> ma
     @ingroup decorator_matchers
  */
 #ifdef HC_SHORTHAND
-    #define describedAs(description, matcher, ...)  HC_describedAs(description, matcher, ##__VA_ARGS__)
+    #define describedAs HC_describedAs
 #endif

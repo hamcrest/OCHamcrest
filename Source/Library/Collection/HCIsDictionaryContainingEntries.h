@@ -26,8 +26,9 @@
 OBJC_EXPORT id<HCMatcher> HC_hasEntries(id keysAndValueMatch, ...);
 
 /**
-    Matches if dictionary contains key-value entries satisfying a list of alternating keys and
-    corresponding value matchers.
+    hasEntries(firstKey, valueMatcher, ...) -
+    Matches if dictionary contains entries satisfying a list of alternating keys and their value
+    matchers.
     
     @param firstKey  A key (not a matcher) to look up.
     @param valueMatcher,...  The matcher to satisfy for the value, or an expected value for @ref equalTo matching.
@@ -42,5 +43,5 @@ OBJC_EXPORT id<HCMatcher> HC_hasEntries(id keysAndValueMatch, ...);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasEntries(firstKey, valueMatcher, ...)  HC_hasEntries(firstKey, valueMatcher, ##__VA_ARGS__)
+    #define hasEntries HC_hasEntries
 #endif

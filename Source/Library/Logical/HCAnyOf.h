@@ -22,6 +22,7 @@
 OBJC_EXPORT id<HCMatcher> HC_anyOf(id match, ...);
 
 /**
+    anyOf(firstMatcher, ...) -
     Matches if any of the given matchers evaluate to @c YES.
     
     @param firstMatcher,...  A comma-separated list of matchers ending with @c nil.
@@ -35,5 +36,5 @@ OBJC_EXPORT id<HCMatcher> HC_anyOf(id match, ...);
     @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND
-    #define anyOf(firstMatcher, ...)  HC_anyOf(firstMatcher, ##__VA_ARGS__)
+    #define anyOf HC_anyOf
 #endif

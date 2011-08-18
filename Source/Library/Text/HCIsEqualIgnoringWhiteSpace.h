@@ -23,6 +23,7 @@
 OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString *aString);
 
 /**
+    equalToIgnoringWhiteSpace(aString) -
     Matches if object is a string equal to a given string, ignoring differences in whitespace.
 
     @param aString  The string to compare against as the expected value. This value must not be @c nil.
@@ -36,5 +37,5 @@ OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString *aString);
     @ingroup text_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToIgnoringWhiteSpace(aString) HC_equalToIgnoringWhiteSpace(aString)
+    #define equalToIgnoringWhiteSpace HC_equalToIgnoringWhiteSpace
 #endif

@@ -22,6 +22,7 @@
 OBJC_EXPORT id<HCMatcher> HC_stringContainsInOrder(NSString *substring, ...);
 
 /**
+    stringContainsInOrder(firstString, ...) -
     Matches if object is a string containing a given list of substrings in relative order.
 
     @param firstString,...  A comma-separated list of string ending with @c nil.
@@ -36,5 +37,5 @@ OBJC_EXPORT id<HCMatcher> HC_stringContainsInOrder(NSString *substring, ...);
     @ingroup text_matchers
  */
 #ifdef HC_SHORTHAND
-    #define stringContainsInOrder(firstString, ...) HC_stringContainsInOrder(firstString, ##__VA_ARGS__)
+    #define stringContainsInOrder HC_stringContainsInOrder
 #endif

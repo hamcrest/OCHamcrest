@@ -22,6 +22,7 @@
 OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object);
 
 /**
+    sameInstance(anObject) -
     Matches if evaluated object is the same instance as a given object.
 
     @param anObject  The object to compare against as the expected value.
@@ -35,5 +36,5 @@ OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object);
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
-    #define sameInstance(anObject) HC_sameInstance(anObject)
+    #define sameInstance HC_sameInstance
 #endif

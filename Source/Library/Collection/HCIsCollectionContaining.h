@@ -22,6 +22,7 @@
 OBJC_EXPORT id<HCMatcher> HC_hasItem(id itemMatch);
 
 /**
+    hasItem(aMatcher) -
     Matches if any element of collection satisfies a given matcher.
     
     @param aMatcher  The matcher to satisfy, or an expected value for @ref equalTo matching.
@@ -38,13 +39,14 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id itemMatch);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasItem(aMatcher) HC_hasItem(aMatcher)
+    #define hasItem HC_hasItem
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_hasItems(id itemMatch, ...);
 
 /**
+    hasItems(firstMatcher, ...) -
     Matches if any element of collection satisfies all of the given matchers.
     
     @param firstMatcher,...  A comma-separated list of matchers ending with @c nil.
@@ -61,5 +63,5 @@ OBJC_EXPORT id<HCMatcher> HC_hasItems(id itemMatch, ...);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasItems(firstMatcher, ...) HC_hasItems(firstMatcher, ##__VA_ARGS__)
+    #define hasItems HC_hasItems
 #endif

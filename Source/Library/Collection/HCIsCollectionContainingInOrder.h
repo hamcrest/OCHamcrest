@@ -22,6 +22,7 @@
 OBJC_EXPORT id<HCMatcher> HC_contains(id itemMatch, ...);
 
 /**
+    contains(firstMatcher, ...) -
     Matches if collection's elements satisfy a given list of matchers, in order.
     
     @param firstMatcher,...  A comma-separated list of matchers ending with @c nil.
@@ -38,5 +39,5 @@ OBJC_EXPORT id<HCMatcher> HC_contains(id itemMatch, ...);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define contains(firstMatcher, ...)  HC_contains(firstMatcher, ##__VA_ARGS__)
+    #define contains HC_contains
 #endif

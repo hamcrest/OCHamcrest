@@ -18,6 +18,7 @@
 OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString *aSubstring);
 
 /**
+    startsWith(aString) -
     Matches if object is a string starting with a given string.
 
     @param aString  The string to search for. This value must not be @c nil.
@@ -31,5 +32,5 @@ OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString *aSubstring);
     @ingroup text_matchers
  */
 #ifdef HC_SHORTHAND
-    #define startsWith(aString) HC_startsWith(aString)
+    #define startsWith HC_startsWith
 #endif

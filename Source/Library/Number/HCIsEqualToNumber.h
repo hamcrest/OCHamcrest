@@ -11,6 +11,7 @@
 OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value);
 
 /**
+    equalToBool(value) -
     Matches if object is equal to @c NSNumber created from a @c BOOL.
     
     @param value  The @c BOOL value from which to create an @c NSNumber.
@@ -24,13 +25,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToBool(value) HC_equalToBool(value)
+    #define equalToBool HC_equalToBool
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToChar(char value);
 
 /**
+    equalToChar(value) -
     Matches if object is equal to @c NSNumber created from a @c char.
     
     @param value  The @c char value from which to create an @c NSNumber.
@@ -44,13 +46,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToChar(char value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToChar(value) HC_equalToChar(value)
+    #define equalToChar HC_equalToChar
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToDouble(double value);
 
 /**
+    equalToDouble(value) -
     Matches if object is equal to @c NSNumber created from a @c double.
     
     @param value  The @c double value from which to create an @c NSNumber.
@@ -64,13 +67,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToDouble(double value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToDouble(value) HC_equalToDouble(value)
+    #define equalToDouble HC_equalToDouble
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToFloat(float value);
 
 /**
+    equalToFloat(value) -
     Matches if object is equal to @c NSNumber created from a @c float.
     
     @param value  The @c float value from which to create an @c NSNumber.
@@ -84,13 +88,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToFloat(float value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToFloat(value) HC_equalToFloat(value)
+    #define equalToFloat HC_equalToFloat
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToInt(int value);
 
 /**
+    equalToInt(value) -
     Matches if object is equal to @c NSNumber created from an @c int.
     
     @param value  The @c int value from which to create an @c NSNumber.
@@ -104,13 +109,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToInt(int value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToInt(value) HC_equalToInt(value)
+    #define equalToInt HC_equalToInt
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToLong(long value);
 
 /**
+    equalToLong(value) -
     Matches if object is equal to @c NSNumber created from a @c long.
     
     @param value  The @c long value from which to create an @c NSNumber.
@@ -124,13 +130,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToLong(long value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToLong(value) HC_equalToLong(value)
+    #define equalToLong HC_equalToLong
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToLongLong(long long value);
 
 /**
+    equalToLongLong(value) -
     Matches if object is equal to @c NSNumber created from a <code>long long</code>.
     
     @param value  The <code>long long</code> value from which to create an @c NSNumber.
@@ -144,13 +151,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToLongLong(long long value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToLongLong(value) HC_equalToLongLong(value)
+    #define equalToLongLong HC_equalToLongLong
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToShort(short value);
 
 /**
+    equalToShort(value) -
     Matches if object is equal to @c NSNumber created from a @c short.
     
     @param value  The @c short value from which to create an @c NSNumber.
@@ -164,13 +172,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToShort(short value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToShort(value) HC_equalToShort(value)
+    #define equalToShort HC_equalToShort
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedChar(unsigned char value);
 
 /**
+    equalToUnsignedChar(value) -
     Matches if object is equal to @c NSNumber created from an <code>unsigned char</code>.
     
     @param value  The <code>unsigned char</code> value from which to create an @c NSNumber.
@@ -184,13 +193,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedChar(unsigned char value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToUnsignedChar(value) HC_equalToUnsignedChar(value)
+    #define equalToUnsignedChar HC_equalToUnsignedChar
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInt(unsigned int value);
 
 /**
+    equalToUnsignedInt(value) -
     Matches if object is equal to @c NSNumber created from an <code>unsigned int</code>.
     
     @param value  The <code>unsigned int</code> value from which to create an @c NSNumber.
@@ -204,13 +214,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInt(unsigned int value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToUnsignedInt(value) HC_equalToUnsignedInt(value)
+    #define equalToUnsignedInt HC_equalToUnsignedInt
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLong(unsigned long value);
 
 /**
+    equalToUnsignedLong(value) -
     Matches if object is equal to @c NSNumber created from an <code>unsigned long</code>.
     
     @param value  The <code>unsigned long</code> value from which to create an @c NSNumber.
@@ -224,13 +235,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLong(unsigned long value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToUnsignedLong(value) HC_equalToUnsignedLong(value)
+    #define equalToUnsignedLong HC_equalToUnsignedLong
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
 
 /**
+    equalToUnsignedLongLong(value) -
     Matches if object is equal to @c NSNumber created from an <code>unsigned long long</code>.
     
     @param value  The <code>unsigned long long</code> value from which to create an @c NSNumber.
@@ -244,13 +256,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToUnsignedLongLong(value) HC_equalToUnsignedLongLong(value)
+    #define equalToUnsignedLongLong HC_equalToUnsignedLongLong
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
 
 /**
+    equalToUnsignedShort(value) -
     Matches if object is equal to @c NSNumber created from an <code>unsigned short</code>.
     
     @param value  The <code>unsigned short</code> value from which to create an @c NSNumber.
@@ -264,13 +277,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToUnsignedShort(value) HC_equalToUnsignedShort(value)
+    #define equalToUnsignedShort HC_equalToUnsignedShort
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToInteger(NSInteger value);
 
 /**
+    equalToInteger(value) -
     Matches if object is equal to @c NSNumber created from an @c NSInteger.
     
     @param value  The @c NSInteger value from which to create an @c NSNumber.
@@ -284,13 +298,14 @@ OBJC_EXPORT id<HCMatcher> HC_equalToInteger(NSInteger value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToInteger(value) HC_equalToInteger(value)
+    #define equalToInteger HC_equalToInteger
 #endif
 
 
 OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInteger(NSUInteger value);
 
 /**
+    equalToUnsignedInteger(value) -
     Matches if object is equal to @c NSNumber created from an @c NSUInteger.
     
     @param value  The @c NSUInteger value from which to create an @c NSNumber.
@@ -304,5 +319,5 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInteger(NSUInteger value);
     @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define equalToUnsignedInteger(value) HC_equalToUnsignedInteger(value)
+    #define equalToUnsignedInteger HC_equalToUnsignedInteger
 #endif

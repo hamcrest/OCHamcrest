@@ -22,6 +22,7 @@
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id itemMatch, ...);
 
 /**
+    onlyContains(firstMatcher, ...) -
     Matches if each element of collection satisfies any of the given matchers.
     
     @param firstMatcher,...  A comma-separated list of matchers ending with @c nil.
@@ -38,5 +39,5 @@ OBJC_EXPORT id<HCMatcher> HC_onlyContains(id itemMatch, ...);
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define onlyContains(firstMatcher, ...) HC_onlyContains(firstMatcher, ##__VA_ARGS__)
+    #define onlyContains HC_onlyContains
 #endif
