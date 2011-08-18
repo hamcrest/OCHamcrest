@@ -8,12 +8,6 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-/**
-    Matches dictionaries containing a value satisfying a given matcher.
-
-    @b Factory: @ref hasValue
-    @ingroup collection_matchers
- */
 @interface HCIsDictionaryContainingValue : HCBaseMatcher
 {
     id<HCMatcher> valueMatcher;
@@ -25,25 +19,23 @@
 @end
 
 
-#pragma mark -
-
-/**
-    Matches dictionaries containing a value satisfying a given matcher.
- 
-    @b Synonym: @ref hasValue
-    @param valueMatch  A matcher, or a value for @ref equalTo matching.
-    @see HCIsDictionaryContainingValue
-    @ingroup collection_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_hasValue(id valueMatch);
 
 /**
-    hasValue(valueMatch) -
-    Matches dictionaries containing a value satisfying a given matcher.
+    hasValue(valueMatcher) -
+    Matches if dictionary contains an entry whose value satisfies a given matcher.
+    
+    @param valueMatcher  The matcher to satisfy for the value, or an expected value for @ref equalTo matching.
+    
+    This matcher iterates the evaluated dictionary, searching for any key-value entry whose value
+    satisfies the given matcher. @c hasValue is satisfied if a matching entry is found.
+    
+    Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
+    equality.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_hasValue instead.)
 
-    Synonym for @ref HC_hasValue, available if @c HC_SHORTHAND is defined.
-    @param valueMatch  A matcher, or a value for @ref equalTo matching.
-    @see HCIsDictionaryContainingValue
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND

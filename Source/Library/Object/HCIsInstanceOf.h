@@ -8,12 +8,6 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-/**
-    Tests whether the value is an instance of a class (including subclasses).
-
-    @b Factory: @ref instanceOf
-    @ingroup object_matchers
- */
 @interface HCIsInstanceOf : HCBaseMatcher
 {
     Class theClass;
@@ -25,23 +19,20 @@
 @end
 
 
-#pragma mark -
+OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class aClass);
 
 /**
-    Is the value an instance of a particular type?
- 
-    @b Synonym: @ref instanceOf
-    @see HCIsInstanceOf
-    @ingroup object_matchers
- */
-OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class type);
+    instanceOf(aClass) -
+    Matches if object is an instance of, or inherits from, a given class.
+    
+    @param aClass  A class object representing the Objective-C class to be tested.
+    
+    This matcher checks whether the evaluated object is an instance of @a aClass or an instance of
+    any class that inherits from @a aClass.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_instanceOf instead.)
 
-/**
-    instanceOf(type) -
-    Is the value an instance of a particular type?
-
-    Synonym for @ref HC_instanceOf, available if @c HC_SHORTHAND is defined.
-    @see HCIsInstanceOf
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND

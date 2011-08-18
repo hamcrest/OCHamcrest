@@ -8,12 +8,6 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-/**
-    Calculates the logical negation of a matcher.
-
-    @b Factory: @ref isNot
-    @ingroup logical_matchers
-*/
 @interface HCIsNot : HCBaseMatcher
 {
     id<HCMatcher> matcher;
@@ -25,41 +19,25 @@
 @end
 
 
-#pragma mark -
+OBJC_EXPORT id<HCMatcher> HC_isNot(id aMatcher);
 
 /**
-    Inverts the rule, or provides a shortcut to the frequently used isNot(equalTo(x)).
+    isNot(aMatcher) -
+    Inverts the given matcher to its logical negation.
 
-    For example:
-@code
-assertThat(cheese, isNot(equalTo(smelly)))
-@endcode
-    vs.
-@code
-assertThat(cheese, isNot(smelly))
-@endcode
+    @param aMatcher  The matcher to satisfy, or an expected value for @ref equalTo matching.
+        
+    This matcher compares the evaluated object to the negation of the given matcher. If the
+    @a aMatcher argument is not a matcher, it is implicitly wrapped in an @ref equalTo matcher to
+    check for equality.
 
-    @b Synonym: @ref isNot
-    @see HCIsNot
-    @ingroup logical_matchers
- */
-OBJC_EXPORT id<HCMatcher> HC_isNot(id match);
+    Examples:
+    @li <code>@ref assertThat(cheese, isNot(equalTo(smelly)))</code>
+    @li <code>@ref assertThat(cheese, isNot(smelly))</code>
 
-/**
-    isNot(match) -
-    Inverts the rule, or provides a shortcut to the frequently used isNot(equalTo(x)).
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_isNot instead.)
 
-    For example:
-@code
-assertThat(cheese, isNot(equalTo(smelly)))
-@endcode
-    vs.
-@code
-assertThat(cheese, isNot(smelly))
-@endcode
-
-    Synonym for @ref HC_isNot, available if @c HC_SHORTHAND is defined.
-    @see HCIsNot
     @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND

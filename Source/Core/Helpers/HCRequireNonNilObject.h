@@ -11,6 +11,7 @@
 
 /**
     Throws an NSException if @a obj is @c nil.
+    
     @ingroup helpers
 */
 OBJC_EXPORT void HCRequireNonNilObject(id obj);

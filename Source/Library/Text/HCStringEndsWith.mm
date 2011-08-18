@@ -12,9 +12,9 @@
 
 @implementation HCStringEndsWith
 
-+ (id)stringEndsWith:(NSString *)aSubstring
++ (id)stringEndsWith:(NSString *)aString
 {
-    return [[[self alloc] initWithSubstring:aSubstring] autorelease];
+    return [[[self alloc] initWithSubstring:aString] autorelease];
 }
 
 
@@ -37,7 +37,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString *aSubstring)
+OBJC_EXPORT id<HCMatcher> HC_endsWith(NSString *aString)
 {
-    return [HCStringEndsWith stringEndsWith:aSubstring];
+    return [HCStringEndsWith stringEndsWith:aString];
 }

@@ -18,13 +18,13 @@
 
 @implementation HCSubstringMatcher
 
-- (id)initWithSubstring:(NSString *)aSubstring
+- (id)initWithSubstring:(NSString *)aString
 {
-    HCRequireNonNilObject(aSubstring);
+    HCRequireNonNilObject(aString);
     
     self = [super init];
     if (self != nil)
-        substring = [aSubstring copy];
+        substring = [aString copy];
     return self;
 }
 

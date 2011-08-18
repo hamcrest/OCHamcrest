@@ -8,12 +8,6 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-/**
-    Provides a custom description to another matcher.
-
-    @b Factory: @ref describedAs
-    @ingroup decorator_matchers
- */
 @interface HCDescribedAs : HCBaseMatcher
 {
     NSString *descriptionTemplate;
@@ -32,30 +26,23 @@
 @end
 
 
-#pragma mark -
-
-/**
-    Wraps an existing matcher and overrides the description when it fails.
-
-    Optional values following the matcher are substituted for \%0, \%1, etc., in the description.
-    The last argument must be nil.
-
-    @b Synonym: @ref describedAs
-    @see HCDescribedAs
-    @ingroup decorator_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString *description, id<HCMatcher> matcher, ...);
 
 /**
-    Wraps an existing matcher and overrides the description when it fails.
-
-    Optional values following the matcher are substituted for \%0, \%1, etc., in the description.
-    The last argument must be nil.
-
-    Synonym for @ref HC_describedAs, available if @c HC_SHORTHAND is defined.
-    @see HCDescribedAs
+    describedAs(description, matcher, ...) -
+    Adds custom failure description to a given matcher.
+    
+    @param description  Overrides the matcher's description.
+    @param matcher,...  The matcher to satisfy, followed by a comma-separated list of substitution values ending with @c nil.
+    
+    The description may contain substitution placeholders \%0, \%1, etc. These will be replaced by
+    any values that follow the matcher.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_describedAs instead.)
+    
     @ingroup decorator_matchers
  */
 #ifdef HC_SHORTHAND
-    #define describedAs(description, matcher, ...)  HC_describedAs(description, matcher, ##__VA_ARGS__)
+    #define describedAs HC_describedAs
 #endif

@@ -13,6 +13,6 @@
     NSString *substring;
 }
 
-- (id)initWithSubstring:(NSString *)aSubstring;
+- (id)initWithSubstring:(NSString *)aString;
 
 @end

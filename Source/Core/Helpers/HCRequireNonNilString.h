@@ -11,7 +11,9 @@
 
 /**
     Throws an NSException if @a string is @c nil.
+    
     @b Deprecated: Use @ref HCRequireNonNilObject instead.
+    
     @ingroup helpers
 */
 OBJC_EXPORT void HCRequireNonNilString(NSString *string)    __attribute__((deprecated));

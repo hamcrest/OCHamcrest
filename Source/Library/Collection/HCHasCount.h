@@ -8,12 +8,6 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-/**
-    Matches collections for which @c -count satisfies a given matcher.
-
-    @b Factory: @ref hasCount, @ref hasCountOf
-    @ingroup collection_matchers
- */
 @interface HCHasCount : HCBaseMatcher
 {
     id<HCMatcher> countMatcher;
@@ -25,45 +19,43 @@
 @end
 
 
-#pragma mark -
-
-/**
-    Matches collections for which @c -count satisfies a given matcher.
-
-    @b Synonym: @ref hasCount
-    @see HCHasCount
-    @ingroup collection_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_hasCount(id<HCMatcher> matcher);
 
 /**
-    Matches collections for which @c -count satisfies a given matcher.
+    hasCount(aMatcher) -
+    Matches if object's @c -count satisfies a given matcher.
 
-    Synonym for @ref HC_hasCount, available if @c HC_SHORTHAND is defined.
-    @see HCHasCount
+    @param aMatcher  The matcher to satisfy.
+    
+    This matcher invokes @c -count on the evaluated object to get the number of elements it
+    contains, passing the result to @a aMatcher for evaluation.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_hasCount instead.)
+
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasCount(matcher)  HC_hasCount(matcher)
+    #define hasCount HC_hasCount
 #endif
 
 
-/**
-    Matches collections for which @c -count equals a given count.
- 
-    @b Synonym: @ref hasCountOf
-    @see HCHasCount
-    @ingroup collection_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_hasCountOf(NSUInteger count);
 
 /**
-    Matches collections for which @c -count equals a given NSUInteger count.
+    hasCountOf(value) -
+    Matches if object's @c -count equals a given value.
 
-    Synonym for @ref HC_hasCountOf, available if @c HC_SHORTHAND is defined.
-    @see HCHasCount
+    @param value  @c NSUInteger value to compare against as the expected value.
+    
+    This matcher invokes @c -count on the evaluated object to get the number of elements it
+    contains, comparing the result to @a value for equality.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_hasCountOf instead.)
+
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define hasCountOf(count)  HC_hasCountOf(count)
+    #define hasCountOf HC_hasCountOf
 #endif

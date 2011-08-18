@@ -8,12 +8,6 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-/**
-    Is the value @c nil?
-
-    @b Factory: @ref nilValue, @ref notNilValue
-    @ingroup object_matchers
-*/
 @interface HCIsNil : HCBaseMatcher
 
 + (id)isNil;
@@ -21,22 +15,14 @@
 @end
 
 
-#pragma mark -
-
-/**
-    Matches if the value is @c nil.
- 
-    @b Synonym: @ref nilValue
-    @see HCIsNil
-    @ingroup object_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_nilValue();
 
 /**
-    Matches if the value is @c nil.
+    Matches if the evaluated value is @c nil.
 
-    Synonym for @ref HC_nilValue, available if @c HC_SHORTHAND is defined.
-    @see HCIsNil
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_nilValue instead.)
+
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
@@ -44,22 +30,14 @@ OBJC_EXPORT id<HCMatcher> HC_nilValue();
 #endif
 
 
-/**
-    Matches if the value is not @c nil.
- 
-    @b Synonym: @ref notNilValue
-    @see HCIsNil
-    @see HCIsNot
-    @ingroup object_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_notNilValue();
 
 /**
-    Matches if the value is not @c nil.
+    Matches if the evaluated value is not @c nil.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_notNilValue instead.)
 
-    Synonym for @ref HC_notNilValue, available if @c HC_SHORTHAND is defined.
-    @see HCIsNil
-    @see HCIsNot
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND

@@ -68,7 +68,7 @@ using namespace std;
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_closeTo(double aValue, double anError)
+OBJC_EXPORT id<HCMatcher> HC_closeTo(double value, double delta)
 {
-    return [HCIsCloseTo isCloseTo:aValue within:anError];
+    return [HCIsCloseTo isCloseTo:value within:delta];
 }
