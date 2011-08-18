@@ -73,7 +73,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasCount(id<HCMatcher> matcher)
 }
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasCountOf(NSUInteger count)
+OBJC_EXPORT id<HCMatcher> HC_hasCountOf(NSUInteger value)
 {
-    return HC_hasCount(HC_equalToUnsignedInteger(count));
+    return HC_hasCount(HC_equalToUnsignedInteger(value));
 }

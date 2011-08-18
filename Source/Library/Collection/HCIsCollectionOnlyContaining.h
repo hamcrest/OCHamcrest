@@ -8,14 +8,6 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-/**
-    Matches collections that only contain elements satisfying a given matcher.
-
-    This matcher will never match an empty collection.
-
-    @b Factory: @ref onlyContains
-    @ingroup collection_matchers
-*/
 @interface HCIsCollectionOnlyContaining : HCBaseMatcher
 {
     id<HCMatcher> matcher;
@@ -27,44 +19,24 @@
 @end
 
 
-#pragma mark -
-
-/**
-    Matches collections that only contain elements satisfying any of a list of matchers.
-
-    For example,
-    <code>[NSArray arrayWithObjects:@"c", "a", @"b", nil]</code>
-    would satisfy
-    <code>onlyContains(lessThan(@"d"), nil)</code>.
-    
-    If a @a items is not a matcher, it is equivalent to equalTo(x), so the array in the example
-    above would also satisfy
-    <code>onlyContains(@"a", @"b", @"c", nil)</code>.
- 
-    @b Synonym: @ref onlyContains
-    @param itemMatch  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
-    @see HCIsCollectionOnlyContaining
-    @ingroup collection_matchers
- */
 OBJC_EXPORT id<HCMatcher> HC_onlyContains(id itemMatch, ...);
 
 /**
-    Matches collections that only contain elements satisfying any of a list of matchers.
+    Matches if each element of collection satisfies any of the given matchers.
+    
+    @param firstMatcher,...  A comma-separated list of matchers ending with @c nil.
+    
+    This matcher iterates the evaluated collection, confirming whether each element satisfies any of
+    the given matchers.
+    
+    Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
+    equality.
+    
+    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+    @c HC_onlyContains instead.)
 
-    For example,
-    <code>[NSArray arrayWithObjects:@"c", "a", @"b", nil]</code>
-    would satisfy
-    <code>onlyContains(lessThan(@"d"), nil)</code>.
-
-    If a @a items is not a matcher, it is equivalent to equalTo(x), so the array in the example
-    above would also satisfy
-    <code>onlyContains(@"a", @"b", @"c", nil)</code>.
-
-    Synonym for @ref HC_onlyContains, available if @c HC_SHORTHAND is defined.
-    @param itemMatch  Comma-separated list of matchers - or values for @ref equalTo matching - ending with @c nil.
-    @see HCIsCollectionOnlyContaining
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND
-    #define onlyContains(itemMatch, ...) HC_onlyContains(itemMatch, ##__VA_ARGS__)
+    #define onlyContains(firstMatcher, ...) HC_onlyContains(firstMatcher, ##__VA_ARGS__)
 #endif
