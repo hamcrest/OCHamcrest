@@ -26,6 +26,13 @@ OBJC_EXPORT id<HCMatcher> HC_containsString(NSString *aSubstring);
     This matcher first checks whether the evaluated object is a string. If so, it checks whether it 
     contains @a aString.
     
+    Example:
+    
+    @par
+    @ref containsString(@"def")
+    
+    will match "abcdefg".
+
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_containsString instead.)
 

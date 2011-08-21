@@ -101,68 +101,62 @@ OCHamcrest comes with a library of useful matchers:
 
 * Object
 
-  * ``equalTo`` - tests object equality using ``-isEqual:``
-  * ``hasDescription`` - tests whether ``-description`` satisfies another matcher
-  * ``instanceOf`` - tests object type
-  * ``nilValue``, ``notNilValue`` - tests for nil
-  * ``sameInstance`` - tests object identity using ``==``
-
-* Collections
-
-  * ``contains`` - tests whether collection's elements, in order, satisfy a list
-  of matchers
-  * ``containsInAnyOrder`` - tests whether collection's elements, in any order,
-  satisfy a list of matchers
-  * ``empty`` - tests whether collection is empty
-  * ``hasCount`` - tests whether collection's count satisfies another matcher
-  * ``hasCountOf`` - tests whether collection has a given number of elements
-  * ``hasEntries`` - tests whether dictionary has key-value pairs satisfying a
-  list of matchers
-  * ``hasEntry`` - tests whether dictionary has a key-value pair satisfying a
-  pair of matchers
-  * ``hasKey`` - tests whether dictionary has a key satisfying another matcher
-  * ``hasValue`` - tests whether dictionary has a value satisfying another
-  matcher
-  * ``hasItem`` - tests whether any element in collection satisfies another
-  matcher
-  * ``hasItems`` - tests whether collection contains any elements satisfying
-  all of a given set of matchers
-  * ``onlyContains`` - tests whether collection contains only elements satisfying
-  any of a given set of matchers
+  * ``equalTo`` - match equal object
+  * ``hasDescription`` - match object's ``-description``
+  * ``instanceOf`` - match object type
+  * ``nilValue``, ``notNilValue`` - match @c nil, or not @nil
+  * ``sameInstance`` - match same object
 
 * Number
 
-  * ``closeTo`` - tests whether primitive double is close to a given value
-  * equalTo<TypeName> - tests whether primitive number equals given value, with
-  separate function defined for each numeric type, such as ``equalToInt`` for ``int``
-  * ``greaterThan`` - tests NSNumber ordering
-  * ``greaterThanOrEqualTo`` - tests NSNumber ordering
-  * ``lessThan`` - tests NSNumber ordering
-  * ``lessThanOrEqualTo`` - tests NSNumber ordering
+  * ``closeTo`` - match number close to a given value
+  * equalTo<TypeName> - match number equal to a primitive number (such as
+  ``equalToInt`` for an ``int``)
+  * ``greaterThan``, ``greaterThanOrEqualTo``, ``lessThan``,
+  ``lessThanOrEqualTo`` - match numeric ordering
 
 * Text
 
-  * ``containsString`` - tests whether string contains a given string
-  * ``endsWith`` - tests whether string ends with a given string
-  * ``equalToIgnoringCase`` - tests string equality ignoring case
-  * ``equalToIgnoringWhitespace`` - test string equality ignoring differences in
-  runs of whitespace
-  * ``startsWith`` - tests whether string starts with a given string
-  * ``stringContainsInOrder`` - tests whether string contains given substrings,
-  in order
+  * ``containsString`` - match part of a string
+  * ``endsWith`` - match the end of a string
+  * ``equalToIgnoringCase`` - match the complete string but ignore case
+  * ``equalToIgnoringWhitespace`` - match the complete string but ignore
+  extra whitespace
+  * ``startsWith`` - match the beginning of a string
+  * ``stringContainsInOrder`` - match parts of a string, in relative order
 
 * Logical
 
-  * ``allOf`` - matches if all matchers match (short-circuits like C's ``&&``)
-  * ``anyOf`` - matches if any matchers match (short-circuits like C's ``||``)
-  * ``anything`` - always matches, useful in collection matchers when you don't
-  care about a particular element
-  * ``isNot`` - matches if the wrapped matcher doesn't match and vice versa
+  * ``allOf`` - "and" together all matchers
+  * ``anyOf`` - "or" together all matchers
+  * ``anything`` - match anything, useful in composite matchers when you don't
+  care about a particular value
+  * ``isNot`` - negate the matcher
+
+* Collection
+
+  * ``contains`` - exactly match the entire collection
+  * ``containsInAnyOrder`` - match the entire collection, but in any order
+  * ``empty`` - match empty collection
+  * ``hasCount`` - match number of elements against another matcher
+  * ``hasCountOf`` - match collection with given number of elements
+  * ``hasEntries`` - match dictionary with list of key-value pairs
+  * ``hasEntry`` - match dictionary containing a key-value pair
+  * ``hasKey`` - match dictionary with a key
+  * ``hasValue`` - match dictionary with a value
+  * ``hasItem`` - match if given item appears in the collection
+  * ``hasItems`` - match if all given items appear in the collection, in any order
+  * ``onlyContains`` - match if collections's items appear in given list
 
 * Decorator
 
-  * ``describedAs`` - decorator to add custom failure description
-  * ``is`` - decorator to improve readability - see `Syntactic sugar`, below
+  * ``describedAs`` - give the matcher a custom failure description
+  * ``is`` - decorator to improve readability - see `Syntactic sugar` below
+
+The arguments for many of these matchers accept not just a matching value, but
+another matcher, so matchers can be composed for greater flexibility. For
+example, ``only_contains(endsWith(@"."))`` will match any collection where
+every item is a string ending with period.
 
 
 Syntactic sugar

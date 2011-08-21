@@ -26,6 +26,13 @@ OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString *aSubstring);
     This matcher first checks whether the evaluated object is a string. If so, it checks if
     @a aString matches the beginning characters of the evaluated object.
     
+    Example:
+    
+    @par
+    @ref endsWith(@"foo")
+    
+    will match "foobar".
+
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_startsWith instead.)
 

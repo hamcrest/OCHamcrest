@@ -25,11 +25,11 @@ OBJC_EXPORT id<HCMatcher> HC_isNot(id aMatcher);
     isNot(aMatcher) -
     Inverts the given matcher to its logical negation.
 
-    @param aMatcher  The matcher to satisfy, or an expected value for @ref equalTo matching.
+    @param aMatcher  The matcher to negate.
         
     This matcher compares the evaluated object to the negation of the given matcher. If the
     @a aMatcher argument is not a matcher, it is implicitly wrapped in an @ref equalTo matcher to
-    check for equality.
+    check for equality, and thus matches for inequality.
 
     Examples:
     @li <code>@ref assertThat(cheese, isNot(equalTo(smelly)))</code>

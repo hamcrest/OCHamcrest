@@ -32,6 +32,9 @@ OBJC_EXPORT id<HCMatcher> HC_closeTo(double aValue, double aDelta);
     This matcher invokes @c -doubleValue on the evaluated object to get its value as a @c double.
     The result is compared against @a aValue to see if the difference is within a positive @a aDelta.
     
+    Example:
+    @li @ref closeTo(3.0, 0.25)
+
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_closeTo instead.)
 

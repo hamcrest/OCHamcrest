@@ -33,11 +33,17 @@ OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatch, id valueMatch);
     @param valueMatcher  The matcher to satisfy for the value, or an expected value for @ref equalTo matching.
     
     This matcher iterates the evaluated dictionary, searching for any key-value entry that satisfies
-    @a keyMatcher and @a valueMatcher. @c hasEntry is satisfied if a matching entry is found.
+    @a keyMatcher and @a valueMatcher. If a matching entry is found, @c hasEntry is satisfied.
     
     Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
     equality.
     
+    Examples:
+    
+    @li @ref hasEntry(@ref equalTo(@"foo"), equalTo(@"bar"))
+
+    @li @ref hasEntry(@"foo", @"bar")
+
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_hasEntry instead.)
 

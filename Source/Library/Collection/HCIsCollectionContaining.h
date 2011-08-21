@@ -28,7 +28,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id itemMatch);
     @param aMatcher  The matcher to satisfy, or an expected value for @ref equalTo matching.
     
     This matcher iterates the evaluated collection, searching for any element that satisfies a
-    given matcher. @c hasItem is satisfied if a matching element is found.
+    given matcher. If a matching element is found, @c hasItem is satisfied.
     
     If the @a aMatcher argument is not a matcher, it is implicitly wrapped in an @ref equalTo
     matcher to check for equality.
@@ -47,12 +47,12 @@ OBJC_EXPORT id<HCMatcher> HC_hasItems(id itemMatch, ...);
 
 /**
     hasItems(firstMatcher, ...) -
-    Matches if any element of collection satisfies all of the given matchers.
+    Matches if all of the given matchers are satisfied by any elements of the collection.
     
     @param firstMatcher,...  A comma-separated list of matchers ending with @c nil.
     
-    This matcher iterates the evaluated collection, searching for any element that satisfies all of
-    the given matchers. @c hasItems is satisfied if a matching element is found.
+    This matcher iterates the given matchers, searching for any elements in the evaluated collection
+    that satisfy them. If each matcher is satisfied, then @c hasItems is satisfied.
     
     Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
     equality.

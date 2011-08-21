@@ -105,59 +105,59 @@
     <ul>
     <li>Object</li>
         <ul>
-        <li>@ref equalTo - tests object equality using @c -isEqual:</li>
-        <li>@ref hasDescription - tests whether @c -description satisfies another matcher</li>
-        <li>@ref instanceOf - tests object type</li>
-        <li>@ref notNilValue, @ref nilValue - tests for nil</li>
-        <li>@ref sameInstance - tests object identity using @c ==</li>
-        </ul>
-    <li>Collections</li>
-        <ul>
-        <li>@ref contains - tests whether collection's elements, in order, satisfy a list of matchers</li>
-        <li>@ref containsInAnyOrder - tests whether collection's elements, in any order, satisfy a list of matchers</li>
-        <li>@ref empty - tests whether collection is empty</li>
-        <li>@ref hasCount - tests whether collection's count satisfies another matcher</li>
-        <li>@ref hasCountOf - tests whether collection has a given number of elements</li>
-        <li>@ref hasEntries - tests whether dictionary has key-value pairs satisfying a list of matchers</li>
-        <li>@ref hasEntry - tests whether dictionary has a key-value pair satisfying a pair of matchers</li>
-        <li>@ref hasKey - tests whether dictionary has a key satisfying another matcher</li>
-        <li>@ref hasValue - tests whether dictionary has a value satisfying another matcher</li>
-        <li>@ref hasItem - tests whether any element in collection satisfies another matcher</li>
-        <li>@ref hasItems - tests whether collection contains any elements satisfying all of a given set of matchers</li>
-        <li>@ref onlyContains -  tests whether collection contains only elements satisfying any of a given set of matchers</li>
+        <li>@ref equalTo - match equal object</li>
+        <li>@ref hasDescription - match object's @c -description</li>
+        <li>@ref instanceOf - match object type</li>
+        <li>@ref nilValue, @ref notNilValue - match for @c nil, or not @c nil</li>
+        <li>@ref sameInstance - match same object</li>
         </ul>
     <li>Number</li>
         <ul>
-        <li>@ref closeTo - tests whether primitive double is close to a given value</li>
-        <li>@b equalTo&lt;TypeName&gt; - tests whether primitive number equals given value, with separate function defined for each numeric type, such as @ref equalToInt for @c int</li>
-        <li>@ref greaterThan - tests NSNumber ordering</li>
-        <li>@ref greaterThanOrEqualTo - tests NSNumber ordering</li>
-        <li>@ref lessThan - tests NSNumber ordering</li>
-        <li>@ref lessThanOrEqualTo - tests NSNumber ordering</li>
+        <li>@ref closeTo - match number close to a given value</li>
+        <li>@b equalTo&lt;TypeName&gt; - match number equal to a primitive number (such as @ref equalToInt for an @c int)</li>
+        <li>@ref greaterThan, @ref greaterThanOrEqualTo, @ref lessThan, @ref lessThanOrEqualTo - match numeric ordering</li>
         </ul>
     <li>Text</li>
         <ul>
-        <li>@ref containsString - tests whether string contains a given string</li>
-        <li>@ref endsWith - tests whether string ends with a given string</li>
-        <li>@ref equalToIgnoringCase - tests string equality ignoring case</li>
-        <li>@ref equalToIgnoringWhitespace - test string equality ignoring differences in runs of whitespace</li>
-        <li>@ref startsWith - tests whether string starts with a given string</li>
-        <li>@ref stringContainsInOrder - tests whether string contains given substrings, in order</li>
+        <li>@ref containsString - match part of a string</li>
+        <li>@ref endsWith - match the end of a string</li>
+        <li>@ref equalToIgnoringCase - match the complete string but ignore case</li>
+        <li>@ref equalToIgnoringWhitespace - match the complete string but ignore extra whitespace</li>
+        <li>@ref startsWith - match the beginning of a string</li>
+        <li>@ref stringContainsInOrder - match parts of a string, in relative order</li>
         </ul>
     <li>Logical</li>
         <ul>
-        <li>@ref allOf - matches if all matchers match (short-circuits like C's @c &&)</li>
-        <li>@ref anyOf - matches if any matchers match (short-circuits like C's @c ||)</li>
-        <li>@ref anything - always matches, useful in collection matchers when you don't
-  care about a particular element</li>
-        <li>@ref isNot - matches if the wrapped matcher doesn't match and vice versa</li>
+        <li>@ref allOf - "and" together all matchers</li>
+        <li>@ref anyOf - "or" together all matchers</li>
+        <li>@ref anything - match anything, useful in composite matchers when you don't care about a particular value</li>
+        <li>@ref isNot - negate the matcher</li>
+        </ul>
+    <li>Collection</li>
+        <ul>
+        <li>@ref contains - exactly match the entire collection</li>
+        <li>@ref containsInAnyOrder - match the entire collection, but in any order</li>
+        <li>@ref empty - match empty collection</li>
+        <li>@ref hasCount - match number of elements against another matcher</li>
+        <li>@ref hasCountOf - match collection with given number of elements</li>
+        <li>@ref hasEntries - match dictionary with list of key-value pairs</li>
+        <li>@ref hasEntry - match dictionary containing a key-value pair</li>
+        <li>@ref hasKey - match dictionary with a key</li>
+        <li>@ref hasValue - match dictionary with a value</li>
+        <li>@ref hasItems - match if given item appears in the collection</li>
+        <li>@ref onlyContains -  match if collections's items appear in given list</li>
         </ul>
     <li>Decorator</li>
         <ul>
-        <li>@ref describedAs - decorator to add custom failure description</li>
+        <li>@ref describedAs - give the matcher a custom failure description</li>
         <li>@ref is - decorator to improve readability - see @ref sugar, below</li>
         </ul>
     </ul>
+    
+    The arguments for many of these matchers accept not just a matching value, but another matcher,
+    so matchers can be composed for greater flexibility. For example,
+    <tt>only_contains(endsWith(\@"."))</tt> will match any collection where every item is a string
+    ending with period.
 
 
     @section sugar Syntactic sugar

@@ -8,13 +8,13 @@
 /**
     @defgroup library Matcher Library
 
-    Library of Matcher implementations
+    Library of Matcher implementations.
  */
 
 /**
     @defgroup object_matchers Object Matchers
 
-    Matchers that inspect objects
+    Matchers that inspect objects.
 
     @ingroup library
  */
@@ -27,7 +27,7 @@
 /**
     @defgroup collection_matchers Collection Matchers
 
-    Matchers of collections
+    Matchers of collections.
 
     @ingroup library
  */
@@ -46,7 +46,7 @@
 /**
     @defgroup number_matchers Number Matchers
 
-    Matchers that perform numeric comparisons
+    Matchers that perform numeric comparisons.
 
     @ingroup library
  */
@@ -56,7 +56,7 @@
 /**
     @defgroup primitive_number_matchers Primitive Number Matchers
 
-    Matchers for testing equality against primitive numeric types
+    Matchers for testing equality against primitive numeric types.
 
     @ingroup number_matchers
  */
@@ -65,7 +65,7 @@
 /**
     @defgroup text_matchers Text Matchers
 
-    Matchers that perform text comparisons
+    Matchers that perform text comparisons.
 
     @ingroup library
  */
@@ -79,7 +79,7 @@
 /**
     @defgroup logical_matchers Logical Matchers
 
-    Boolean logic composing multiple matchers
+    Boolean logic using other matchers.
 
     @ingroup library
  */
@@ -91,7 +91,7 @@
 /**
     @defgroup decorator_matchers Decorator Matchers
 
-    Matchers that decorate other matchers for better expression
+    Matchers that decorate other matchers for better expression.
 
     @ingroup library
  */
@@ -127,7 +127,7 @@
 /**
     @defgroup helpers Helpers
 
-    Utilities for writing Matchers
+    Utilities for writing Matchers.
 
     @ingroup core
  */

@@ -36,6 +36,12 @@ OBJC_EXPORT id<HCMatcher> HC_hasEntries(id keysAndValueMatch, ...);
     Note that the keys must be actual keys, not matchers. Any value argument that is not a matcher
     is implicitly wrapped in an @ref equalTo matcher to check for equality. The list must end with
     @c nil.
+
+    Examples:
+    
+    @li @ref hasEntries(@"first", equalTo(@"Jon"), @"last", equalTo(@"Reid"), nil)
+    
+    @li @ref hasEntries(@"first", @"Jon", @"last", @"Reid", nil)
     
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_hasEntry instead.)

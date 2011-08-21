@@ -29,8 +29,8 @@ OBJC_EXPORT id<HCMatcher> HC_containsInAnyOrder(id itemMatch, ...);
     
     This matcher iterates the evaluated collection, seeing if each element satisfies any of the
     given matchers. The matchers are tried from left to right, and when a satisfied matcher is
-    found, it is no longer a candidate for the remaining elements. @c containsInAnyOrder is
-    satisfied if a one-to-one correspondence is established between elements and matchers.
+    found, it is no longer a candidate for the remaining elements. If a one-to-one correspondence is 
+    established between elements and matchers, @c containsInAnyOrder is satisfied.
     
     Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
     equality.

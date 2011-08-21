@@ -27,7 +27,7 @@ OBJC_EXPORT id<HCMatcher> HC_contains(id itemMatch, ...);
     
     @param firstMatcher,...  A comma-separated list of matchers ending with @c nil.
     
-    This matcher iterates the evaluated collection and a list of given matchers, seeing if each
+    This matcher iterates the evaluated collection and a given list of matchers, seeing if each
     element satisfies its corresponding matcher.
     
     Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for

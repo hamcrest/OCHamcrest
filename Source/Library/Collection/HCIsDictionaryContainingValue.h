@@ -28,7 +28,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasValue(id valueMatch);
     @param valueMatcher  The matcher to satisfy for the value, or an expected value for @ref equalTo matching.
     
     This matcher iterates the evaluated dictionary, searching for any key-value entry whose value
-    satisfies the given matcher. @c hasValue is satisfied if a matching entry is found.
+    satisfies the given matcher. If a matching entry is found, @c hasValue is satisfied.
     
     Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
     equality.

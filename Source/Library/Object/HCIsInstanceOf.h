@@ -30,6 +30,9 @@ OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class aClass);
     This matcher checks whether the evaluated object is an instance of @a aClass or an instance of
     any class that inherits from @a aClass.
     
+    Example:
+    @li @ref instanceOf([NSString class])
+
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_instanceOf instead.)
 

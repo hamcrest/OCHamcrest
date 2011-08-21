@@ -18,7 +18,7 @@
 OBJC_EXPORT id<HCMatcher> HC_nilValue();
 
 /**
-    Matches if the evaluated value is @c nil.
+    Matches if object is @c nil.
 
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_nilValue instead.)
@@ -33,7 +33,7 @@ OBJC_EXPORT id<HCMatcher> HC_nilValue();
 OBJC_EXPORT id<HCMatcher> HC_notNilValue();
 
 /**
-    Matches if the evaluated value is not @c nil.
+    Matches if object is not @c nil.
     
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_notNilValue instead.)

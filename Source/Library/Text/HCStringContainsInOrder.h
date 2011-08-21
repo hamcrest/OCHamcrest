@@ -25,12 +25,19 @@ OBJC_EXPORT id<HCMatcher> HC_stringContainsInOrder(NSString *substring, ...);
     stringContainsInOrder(firstString, ...) -
     Matches if object is a string containing a given list of substrings in relative order.
 
-    @param firstString,...  A comma-separated list of string ending with @c nil.
+    @param firstString,...  A comma-separated list of strings ending with @c nil.
     
     This matcher first checks whether the evaluated object is a string. If so, it checks whether it 
     contains a given list of strings, in relative order to each other. The searches are performed 
     starting from the beginning of the evaluated string.
     
+    Example:
+
+    @par
+    @ref stringContainsInOrder(@"bc", @"fg", @"jkl", nil)
+
+    will match "abcdefghijklm".
+
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_stringContainsInOrder instead.)
 
