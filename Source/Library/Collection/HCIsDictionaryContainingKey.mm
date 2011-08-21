@@ -19,15 +19,13 @@
     return [[[self alloc] initWithKeyMatcher:theKeyMatcher] autorelease];
 }
 
-
 - (id)initWithKeyMatcher:(id<HCMatcher>)theKeyMatcher
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         keyMatcher = [theKeyMatcher retain];
     return self;
 }
-
 
 - (void)dealloc
 {
@@ -35,20 +33,14 @@
     [super dealloc];
 }
 
-
 - (BOOL)matches:(id)dict
 {
     if ([dict isKindOfClass:[NSDictionary class]])
-    {
         for (id oneKey in dict)
-        {
             if ([keyMatcher matches:oneKey])
                 return YES;
-        }
-    }
     return NO;
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

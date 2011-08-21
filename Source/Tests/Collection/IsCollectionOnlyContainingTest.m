@@ -27,14 +27,12 @@
     return onlyContains(equalTo(@"irrelevant"), nil);
 }
 
-
 - (void)testMatchesSingletonCollection
 {
     assertMatches(@"singleton collection",
                   onlyContains(equalTo(@"a"), nil),
                   ([NSSet setWithObject:@"a"]));
 }
-
 
 - (void)testMatchesAllItemsWithOneMatcher
 {
@@ -43,14 +41,12 @@
                   ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
 }
 
-
 - (void)testMatchesAllItemsWithMultipleMatchers
 {
     assertMatches(@"multiple matcher",
                   onlyContains(lessThan(@"d"), equalTo(@"hi"), nil),
                   ([NSArray arrayWithObjects:@"a", @"hi", @"b", @"c", nil]));
 }
-
 
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
@@ -59,7 +55,6 @@
                   ([NSArray arrayWithObjects:@"a", @"hi", @"b", @"c", nil]));
 }
 
-
 - (void)testDoesNotMatchCollectionWithMismatchingItem
 {
     assertDoesNotMatch(@"d is not less than d",
@@ -67,18 +62,15 @@
                        ([NSArray arrayWithObjects:@"b", @"c", @"d", nil]));
 }
 
-
 - (void)testDoesNotMatchEmptyCollection
 {
     assertDoesNotMatch(@"empty collection", onlyContains(equalTo(@"foo"), nil), ([NSArray array]));
 }
 
-
 - (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(onlyContains(nil), @"Should require non-nil list");
 }
-
 
 - (void)testHasAReadableDescription
 {
@@ -87,12 +79,10 @@
 
 }
 
-
 - (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", (onlyContains(@"a", @"b", nil)), @"bad");
 }
-
 
 - (void)testDescribeMismatchOfNonCollection
 {

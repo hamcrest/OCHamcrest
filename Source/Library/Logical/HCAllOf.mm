@@ -18,15 +18,13 @@
     return [[[self alloc] initWithMatchers:theMatchers] autorelease];
 }
 
-
 - (id)initWithMatchers:(NSArray *)theMatchers
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         matchers = [theMatchers retain];
     return self;
 }
-
 
 - (void)dealloc
 {
@@ -34,12 +32,10 @@
     [super dealloc];
 }
 
-
 - (BOOL)matches:(id)item
 {
     return [self matches:item describingMismatchTo:nil];
 }
-
 
 - (BOOL)matches:(id)item describingMismatchTo:(id<HCDescription>)mismatchDescription
 {
@@ -55,12 +51,10 @@
     return YES;
 }
 
-
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
-    (void) [self matches:item describingMismatchTo:mismatchDescription];
+    [self matches:item describingMismatchTo:mismatchDescription];
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

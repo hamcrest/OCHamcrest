@@ -24,7 +24,6 @@
             autorelease];
 }
 
-
 - (id)initComparing:(id)expectedValue
          minCompare:(NSComparisonResult)min
          maxCompare:(NSComparisonResult)max
@@ -38,7 +37,7 @@
     }
     
     self = [super init];
-    if (self != nil)
+    if (self)
     {
         expected = [expectedValue retain];
         minCompare = min;
@@ -48,15 +47,12 @@
     return self;
 }
 
-
 - (void)dealloc
 {
     [expected release];
     [comparisonDescription release];
-    
     [super dealloc];
 }
-
 
 - (BOOL)matches:(id)item
 {
@@ -66,7 +62,6 @@
     NSComparisonResult compare = [expected compare:item];
     return minCompare <= compare && compare <= maxCompare;
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

@@ -28,7 +28,6 @@
     return sameInstance(@"irrelevant");
 }
 
-
 - (void)testEvaluatesToTrueIfArgumentIsReferenceToASpecifiedObject
 {
     id o1 = [[[NSObject alloc] init] autorelease];
@@ -38,7 +37,6 @@
     assertThat(o2, isNot(sameInstance(o1)));
 }
 
-
 - (void)testDoesNotMatchEqualObjects
 {
     NSString *string1 = @"foobar";
@@ -46,7 +44,6 @@
 
     assertDoesNotMatch(@"not the same object", sameInstance(string1), string2);
 }
-
 
 - (void)testDescriptionIncludesMemoryAddress
 {
@@ -58,13 +55,11 @@
     STAssertTrue([expected evaluateWithObject:[description description]], nil);
 }
 
-
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     id o1 = [[[NSObject alloc] init] autorelease];
     assertNoMismatchDescription(sameInstance(o1), o1);
 }
-
 
 - (void)testMismatchDescriptionShowsActualArgumentAddress
 {
@@ -78,12 +73,10 @@
     STAssertTrue([expected evaluateWithObject:[description description]], nil);
 }
 
-
 - (void)testMismatchDescriptionWithNilShouldNotIncludeAddress
 {
     assertMismatchDescription(@"was nil", sameInstance(@"foo"), nil);
 }
-
 
 - (void)testDescribeMismatch
 {
@@ -95,7 +88,6 @@
     [matcher describeMismatchOf:@"hi" to:description];
     STAssertTrue([expected evaluateWithObject:[description description]], nil);
 }
-
 
 - (void)testDescribeMismatchWithNilShouldNotIncludeAddress
 {

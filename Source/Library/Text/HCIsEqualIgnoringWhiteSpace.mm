@@ -26,7 +26,6 @@ void removeTrailingSpace(NSMutableString *string)
     }
 }
 
-
 NSMutableString *stripSpace(NSString *string)
 {
     NSUInteger length = [string length];
@@ -64,13 +63,12 @@ NSMutableString *stripSpace(NSString *string)
     return [[[self alloc] initWithString:aString] autorelease];
 }
 
-
 - (id)initWithString:(NSString *)aString
 {
     HCRequireNonNilObject(aString);
     
     self = [super init];
-    if (self != nil)
+    if (self)
     {
         originalString = [aString copy];
         strippedString = [stripSpace(aString) retain];
@@ -78,15 +76,12 @@ NSMutableString *stripSpace(NSString *string)
     return self;
 }
 
-
 - (void)dealloc
 {
     [strippedString release];
     [originalString release];
-    
     [super dealloc];
 }
-
 
 - (BOOL)matches:(id)item
 {
@@ -95,7 +90,6 @@ NSMutableString *stripSpace(NSString *string)
     
     return [strippedString isEqualToString:stripSpace(item)];
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

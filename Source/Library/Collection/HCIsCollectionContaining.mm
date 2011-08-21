@@ -20,15 +20,13 @@
     return [[[self alloc] initWithMatcher:anElementMatcher] autorelease];
 }
 
-
 - (id)initWithMatcher:(id<HCMatcher>)anElementMatcher
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         elementMatcher = [anElementMatcher retain];
     return self;
 }
-
 
 - (void)dealloc
 {
@@ -36,20 +34,16 @@
     [super dealloc];
 }
 
-
 - (BOOL)matches:(id)collection
 {
     if (![collection conformsToProtocol:@protocol(NSFastEnumeration)])
         return NO;
         
     for (id item in collection)
-    {
         if ([elementMatcher matches:item])
             return YES;
-    }
     return NO;
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {
@@ -67,7 +61,6 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id itemMatch)
     HCRequireNonNilObject(itemMatch);
     return [HCIsCollectionContaining isCollectionContaining:HCWrapInMatcher(itemMatch)];
 }
-
 
 OBJC_EXPORT id<HCMatcher> HC_hasItems(id itemMatch, ...)
 {

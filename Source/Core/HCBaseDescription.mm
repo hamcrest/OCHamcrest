@@ -26,7 +26,6 @@
     return self;
 }
 
-
 - (id<HCDescription>)appendDescriptionOf:(id)value
 {
     if (value == nil)
@@ -41,15 +40,12 @@
     return self;
 }
 
-
 - (id<HCDescription>)appendObjectDescriptionOf:(id)value
 {
     NSString *description = [value description];
     NSUInteger descriptionLength = [description length];
     if (descriptionLength == 0)
-    {
         [self append:[NSString stringWithFormat:@"<%@: 0x%0x>", NSStringFromClass([value class]), value]];
-    }
     else if ([description characterAtIndex:0] == '<'
              && [description characterAtIndex:descriptionLength - 1] == '>')
     {
@@ -63,7 +59,6 @@
     }
     return self;
 }
-
 
 - (id<HCDescription>)appendValue:(id)value
 {
@@ -79,7 +74,6 @@
     }
     return self;
 }
-
 
 - (id<HCDescription>)appendList:(NSArray *)values
                            start:(NSString *)start
@@ -100,7 +94,6 @@
     return self;
 }
 
-
 - (void)toCSyntaxString:(NSString *)unformatted
 {
     [self append:@"\""];
@@ -109,7 +102,6 @@
         [self toCSyntax:[unformatted characterAtIndex:index]];
     [self append:@"\""];
 }
-
 
 - (void)toCSyntax:(unichar)ch
 {

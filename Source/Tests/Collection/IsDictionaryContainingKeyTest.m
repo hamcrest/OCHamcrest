@@ -26,14 +26,12 @@
     return hasKey(@"irrelevant");
 }
 
-
 - (void)testMatchesSingletonDictionaryContainingKey
 {
     NSDictionary *dict = [NSDictionary dictionaryWithObject:@"1" forKey:@"a"];
     
     assertMatches(@"Matches single key", hasKey(equalTo(@"a")), dict);
 }
-
 
 - (void)testMatchesDictionaryContainingKey
 {
@@ -47,7 +45,6 @@
     assertMatches(@"Matches c", hasKey(equalTo(@"c")), dict);
 }
 
-
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -59,12 +56,10 @@
     assertMatches(@"Matches c", hasKey(@"c"), dict);
 }
 
-
 - (void)testDoesNotMatchEmptyDictionary
 {
     assertDoesNotMatch(@"empty", hasKey(@"Foo"), [NSDictionary dictionary]);
 }
-
 
 - (void)testDoesNotMatchDictionaryMissingKey
 {
@@ -77,18 +72,15 @@
     assertDoesNotMatch(@"no matching key", hasKey(@"d"), dict);
 }
 
-
 - (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(hasKey(nil), @"Should require non-nil argument");
 }
 
-
 - (void)testHasReadableDescription
 {
     assertDescription(@"a dictionary containing key \"a\"", hasKey(@"a"));
 }
-
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
@@ -96,12 +88,10 @@
     assertNoMismatchDescription(hasKey(@"a"), dict);
 }
 
-
 - (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", hasKey(@"a"), @"bad");
 }
-
 
 - (void)testDescribeMismatch
 {

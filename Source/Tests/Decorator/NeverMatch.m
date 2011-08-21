@@ -17,18 +17,15 @@
     return [[[self alloc] init] autorelease];
 }
 
-
 + (NSString *)mismatchDescription
 {
     return @"NEVERMATCH";
 }
 
-
 - (BOOL)matches:(id)item
 {
     return NO;
 }
-
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {

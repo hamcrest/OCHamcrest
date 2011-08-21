@@ -19,18 +19,16 @@ using namespace std;
     return [[[self alloc] initWithValue:aValue delta:aDelta] autorelease];
 }
 
-
 - (id)initWithValue:(double)aValue delta:(double)aDelta
 {
     self = [super init];
-    if (self != nil)
+    if (self)
     {
         value = aValue;
         delta = aDelta;
     }
     return self;
 }
-
 
 - (BOOL)matches:(id)item
 {
@@ -39,7 +37,6 @@ using namespace std;
     
     return fabs([item doubleValue] - value) <= delta;
 }
-
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
@@ -53,7 +50,6 @@ using namespace std;
                                appendDescriptionOf:[NSNumber numberWithDouble:actualDelta]];
     }
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

@@ -17,7 +17,6 @@
     return [[[self alloc] initWithSubstring:aString] autorelease];
 }
 
-
 - (BOOL)matches:(id)item
 {
     if (![item respondsToSelector:@selector(hasSuffix:)])
@@ -25,7 +24,6 @@
     
     return [item hasSuffix:substring];
 }
-
 
 - (NSString *)relationship
 {

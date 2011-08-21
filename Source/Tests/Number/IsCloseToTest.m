@@ -24,7 +24,6 @@
     return closeTo(irrelevant, irrelevant);
 }
 
-
 - (void)testEvaluatesToTrueIfArgumentIsEqualToADoubleValueWithinSomeError
 {
     id<HCMatcher> matcher = closeTo(1.0, 0.5);
@@ -37,7 +36,6 @@
     assertDoesNotMatch(@"too big", matcher, [NSNumber numberWithDouble:1.6]);
 }
 
-
 - (void)testFailsIfMatchingAgainstNonNumber
 {
     id<HCMatcher> matcher = closeTo(1.0, 0.5);
@@ -46,18 +44,15 @@
     assertDoesNotMatch(@"not a number", matcher, nil);
 }
 
-
 - (void)testHasAReadableDescription
 {
     assertDescription(@"a numeric value within <0.5> of <1>", closeTo(1.0, 0.5));
 }
 
-
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(closeTo(1.0, 0.5), ([NSNumber numberWithDouble:1.0]));
 }
-
 
 - (void)testMismatchDescriptionShowsActualDeltaIfArgumentIsNumeric
 {
@@ -65,19 +60,16 @@
                               (closeTo(1.0, 0.5)), [NSNumber numberWithDouble:1.7]);
 }
 
-
 - (void)testMismatchDescriptionShowsActualArgumentIfNotNumeric
 {
     assertMismatchDescription(@"was \"bad\"", (closeTo(1.0, 0.5)), @"bad");
 }
-
 
 - (void)testDescribeMismatchShowsActualDeltaIfArgumentIsNumeric
 {
     assertDescribeMismatch(@"<1.7> differed by <0.7>",
                            (closeTo(1.0, 0.5)), [NSNumber numberWithDouble:1.7]);
 }
-
 
 - (void)testDescribeMismatchShowsActualArgumentIfNotNumeric
 {

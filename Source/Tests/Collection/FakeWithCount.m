@@ -18,17 +18,13 @@
     return [[[self alloc] initWithCount:fakeCount] autorelease];
 }
 
-
 - (id)initWithCount:(NSUInteger)fakeCount
 {
     self = [super init];
-    if (self != nil)
-    {
+    if (self)
         count = fakeCount;
-    }
     return self;
 }
-
 
 - (NSString *)description
 {

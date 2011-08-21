@@ -39,14 +39,12 @@ static NSString *fakeDescription = @"DESCRIPTION";
     return hasDescription(equalTo(@"irrelevant"));
 }
 
-
 - (void)testPassesResultOfDescriptionToNestedMatcher
 {
     FakeWithDescription* fake = [FakeWithDescription fake];
     assertMatches(@"equal", hasDescription(equalTo(fakeDescription)), fake);
     assertDoesNotMatch(@"unequal", hasDescription(equalTo(@"foo")), fake);
 }
-
 
 - (void)testProvidesConvenientShortcutForDescriptionEqualTo
 {
@@ -55,31 +53,26 @@ static NSString *fakeDescription = @"DESCRIPTION";
     assertDoesNotMatch(@"unequal", hasDescription(@"foo"), fake);
 }
 
-
 - (void)testMismatchDoesNotRepeatTheDescription
 {
     FakeWithDescription* fake = [FakeWithDescription fake];
     assertMismatchDescription(@"was \"DESCRIPTION\"", hasDescription(@"foo"), fake);
 }
 
-
 - (void)testHasReadableDescription
 {
     assertDescription(@"an object with description \"foo\"", hasDescription(@"foo"));
 }
-
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(hasDescription(@"DESCRIPTION"), [FakeWithDescription fake]);
 }
 
-
 - (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", hasDescription(@"foo"), @"bad");
 }
-
 
 - (void)testDescribeMismatch
 {

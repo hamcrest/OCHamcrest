@@ -24,7 +24,6 @@
     }
 }
 
-
 - (void)assertFalse:(BOOL)condition message:(NSString *)message
                 inFile:(const char *)fileName atLine:(int)lineNumber
 {
@@ -35,7 +34,6 @@
                                            withDescription:message]];
     }
 }
-
 
 - (void)assertMatcher:(id<HCMatcher>)matcher hasTheDescription:(NSString *)expected
                 inFile:(const char *)fileName atLine:(int)lineNumber
@@ -53,7 +51,6 @@
                                             withDescription:@"Expected description"]];
     }
 }
-
 
 - (void)assertMatcher:(id<HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
                 inFile:(const char *)fileName atLine:(int)lineNumber
@@ -73,7 +70,6 @@
                                            withDescription:@"Expected no mismatch description"]];
     }
 }
-
 
 - (void)assertMatcher:(id<HCMatcher>)matcher matching:(id)arg yieldsMismatchDescription:(NSString *)expected
                 inFile:(const char *)fileName atLine:(int)lineNumber
@@ -98,7 +94,6 @@
     }
 }
 
-
 - (void)assertMatcher:(id<HCMatcher>)matcher matching:(id)arg describesMismatch:(NSString *)expected
                 inFile:(const char *)fileName atLine:(int)lineNumber
 {
@@ -116,19 +111,16 @@
     }
 }
 
-
 - (id<HCMatcher>)createMatcher
 {
     return nil;     // Override in subclass
 }
-
 
 - (void)testIsNilSafe
 {
     // Should not crash or throw exception.
     [[self createMatcher] matches:nil];
 }
-
 
 - (void)testCopesWithUnknownTypes
 {

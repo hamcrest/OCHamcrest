@@ -24,7 +24,6 @@
     return isIn(collection);
 }
 
-
 - (void)testReturnsTrueIfArgumentIsInCollection
 {
     NSArray *collection = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
@@ -36,7 +35,6 @@
     assertDoesNotMatch(@"no d", matcher, @"d");
 }
 
-
 - (void)testMatcherCreationRequiresObjectWithContainsObjectMethod
 {
     id object = [[[NSObject alloc] init] autorelease];
@@ -44,12 +42,10 @@
     STAssertThrows(isIn(object), @"object does not have -containsObject: method");
 }
 
-
 - (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(isIn(nil), @"Should require non-nil argument");
 }
-
 
 - (void)testHasReadableDescription
 {
@@ -58,12 +54,10 @@
     assertDescription(@"one of {\"a\", \"b\", \"c\"}", matcher);
 }
 
-
 - (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", isIn([NSArray arrayWithObject:@"a"]), @"bad");
 }
-
 
 - (void)testDescribesMismatch
 {

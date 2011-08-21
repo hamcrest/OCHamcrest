@@ -26,7 +26,7 @@ OBJC_EXPORT id<HCMatcher> HC_nilValue();
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
-    #define nilValue()  HC_nilValue()
+    #define nilValue() HC_nilValue()
 #endif
 
 
@@ -41,5 +41,5 @@ OBJC_EXPORT id<HCMatcher> HC_notNilValue();
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
-    #define notNilValue()  HC_notNilValue()
+    #define notNilValue() HC_notNilValue()
 #endif

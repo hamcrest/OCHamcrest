@@ -23,19 +23,16 @@
     HCRequireNonNilObject(aString);
     
     self = [super init];
-    if (self != nil)
+    if (self)
         substring = [aString copy];
     return self;
 }
 
-
 - (void)dealloc
 {
     [substring release];
-    
     [super dealloc];
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

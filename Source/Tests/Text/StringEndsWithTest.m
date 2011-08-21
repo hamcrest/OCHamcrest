@@ -29,18 +29,15 @@ static NSString *EXCERPT = @"EXCERPT";
     matcher = [endsWith(EXCERPT) retain];
 }
 
-
 - (void)tearDown
 {
     [matcher release];
 }
 
-
 - (id<HCMatcher>)createMatcher
 {
     return matcher;
 }
-
 
 - (void)testEvaluatesToTrueIfArgumentContainsSpecifiedSubstring
 {
@@ -54,42 +51,35 @@ static NSString *EXCERPT = @"EXCERPT";
     assertDoesNotMatch(@"only part of excerpt", matcher, [EXCERPT substringFromIndex:1]);
 }
 
-
 - (void)testEvaluatesToTrueIfArgumentIsEqualToSubstring
 {
     assertMatches(@"excerpt is entire string", matcher, EXCERPT);
 }
-
 
 - (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(endsWith(nil), @"Should require non-nil argument");
 }
 
-
 - (void)testFailsIfMatchingAgainstNonString
 {
     assertDoesNotMatch(@"non-string", matcher, [NSNumber numberWithInt:3]);
 }
-
 
 - (void)testHasAReadableDescription
 {
     assertDescription(@"a string ending with \"EXCERPT\"", matcher);
 }
 
-
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(matcher, EXCERPT);
 }
 
-
 - (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", matcher, @"bad");
 }
-
 
 - (void)testDescribeMismatch
 {

@@ -43,13 +43,12 @@
 }
 @end
 
-
 @implementation Thingy
 
 - (id)initWithResult:(NSString *)aResult
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         result = [aResult retain];
     return self;
 }
@@ -101,7 +100,6 @@
 }
 @end
 
-
 @implementation InvocationMatcherTest
 
 - (void)setUp
@@ -113,12 +111,10 @@
                                                            matching:[Match matches:@"bar"]];
 }
 
-
 - (void)tearDown
 {
     [resultMatcher release];
 }
-
 
 - (void)testMatchesFeature
 {
@@ -126,13 +122,11 @@
     assertDescription(@"an object with result \"bar\"", resultMatcher);
 }
 
-
 - (void)testMismatchWithDefaultLongDescription
 {
     assertMismatchDescription(@"<Thingy> result MISMATCH", resultMatcher,
                               [Thingy thingyWithResult:@"foo"]);
 }
-
 
 - (void)testMismatchWithShortDescription
 {
@@ -141,19 +135,16 @@
                               [Thingy thingyWithResult:@"foo"]);
 }
 
-
 - (void)testDoesNotMatchNil
 {
     assertMismatchDescription(@"was nil", resultMatcher, nil);
 }
-
 
 - (void)testDoesNotMatchObjectWithoutMethod
 {
     assertDoesNotMatch(@"was <ShouldNotMatch>", resultMatcher,
                        [[[ShouldNotMatch alloc] init] autorelease]);
 }
-
 
 - (void)testObjectWithoutMethodShortDescriptionIsSameAsLongForm
 {

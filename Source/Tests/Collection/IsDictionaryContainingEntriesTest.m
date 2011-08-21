@@ -27,19 +27,16 @@
     return hasEntries(@"irrelevant", @"irrelevant", nil);
 }
 
-
 - (void)testMatcherCreationRequiresEvenNumberOfArgs
 {
     STAssertThrows(hasEntries(@"a", nil), @"Should require pairs of arguments");
 }
-
 
 - (void)testDoesNotMatchNonDictionary
 {
     id object = [[[NSObject alloc] init] autorelease];
     assertDoesNotMatch(@"not dictionary", hasEntries(@"a", equalTo(@"1"), nil), object);
 }
-
 
 - (void)testMatchesDictionaryContainingSingleKeyWithMatchingValue
 {
@@ -54,7 +51,6 @@
     assertDoesNotMatch(@"no c:2", hasEntries(@"c", equalTo(@"2"), nil), dict);
 }
 
-
 - (void)testMatchesDictionaryContainingMultipleKeysWithMatchingValues
 {
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -67,7 +63,6 @@
     assertMatches(@"has c & a", hasEntries(@"c", equalTo(@"3"), @"a", equalTo(@"1"), nil), dict);
     assertDoesNotMatch(@"no d:3", hasEntries(@"d", equalTo(@"3"), nil), dict);
 }
-
 
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
@@ -82,12 +77,10 @@
     assertDoesNotMatch(@"no d:3", hasEntries(@"d", @"3", nil), dict);
 }
 
-
 - (void)testShouldNotMatchNil
 {
     assertDoesNotMatch(@"nil", hasEntries(@"a", @"1", nil), nil);
 }
-
 
 - (void)testMatcherCreationRequiresNonNilArguments
 {    
@@ -95,13 +88,11 @@
     STAssertThrows(hasEntries(@"key", nil, nil), @"Should require non-nil argument");
 }
 
-
 - (void)testHasReadableDescription
 {
     assertDescription(@"a dictionary containing { \"a\" = \"1\"; \"b\" = \"2\"; }",
                       hasEntries(@"a", @"1", @"b", @"2", nil));
 }
-
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
@@ -109,12 +100,10 @@
     assertNoMismatchDescription(hasEntries(@"a", @"1", nil), dict);
 }
 
-
 - (void)testMismatchDescriptionOfNonDictionaryShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", hasEntries(@"a", @"1", nil), @"bad");
 }
-
 
 - (void)testMismatchDescriptionOfDictionaryWithoutKey
 {
@@ -123,19 +112,16 @@
                               hasEntries(@"a", @"1", @"b", @"2", nil), dict);
 }
 
-
 - (void)testMismatchDescriptionOfDictionaryWithNonMatchingValue
 {
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"2", @"a", nil];
     assertMismatchDescription(@"value for \"a\" was \"2\"", hasEntries(@"a", @"1", nil), dict);
 }
 
-
 - (void)testDescribeMismatchOfNonDictionaryShowsActualArgument
 {
     assertDescribeMismatch(@"was \"bad\"", hasEntries(@"a", @"1", nil), @"bad");
 }
-
 
 - (void)testDescribeMismatchOfDictionaryWithoutKey
 {
@@ -143,7 +129,6 @@
     assertDescribeMismatch(@"no \"b\" key in <{\n    a = 1;\n    c = 3;\n}>",
                            hasEntries(@"a", @"1", @"b", @"2", nil), dict);
 }
-
 
 - (void)testDescribeMismatchOfDictionaryWithNonMatchingValue
 {

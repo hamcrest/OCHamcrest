@@ -17,12 +17,10 @@
     return [[[self alloc] init] autorelease];
 }
 
-
 + (id)isAnythingWithDescription:(NSString *)aDescription
 {
     return [[[self alloc] initWithDescription:aDescription] autorelease];
 }
-
 
 - (id)init
 {
@@ -30,15 +28,13 @@
     return self;
 }
 
-
 - (id)initWithDescription:(NSString *)aDescription
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         description = [aDescription copy];
     return self;
 }
-
 
 - (void)dealloc
 {
@@ -46,12 +42,10 @@
     [super dealloc];
 }
 
-
 - (BOOL)matches:(id)item
 {
     return YES;
 }
-
 
 - (void)describeTo:(id<HCDescription>)aDescription
 {
@@ -67,7 +61,6 @@ OBJC_EXPORT id<HCMatcher> HC_anything()
 {
     return [HCIsAnything isAnything];
 }
-
 
 OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *description)
 {

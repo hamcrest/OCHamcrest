@@ -19,7 +19,6 @@
 }
 @end
 
-
 @implementation IsEqualIgnoringCaseTest
 
 - (void)setUp
@@ -27,18 +26,15 @@
     matcher = [equalToIgnoringCase(@"heLLo") retain];
 }
 
-
 - (void)tearDown
 {
     [matcher release];
 }
 
-
 - (id<HCMatcher>)createMatcher
 {
     return matcher;
 }
-
 
 - (void)testIgnoresCaseOfCharsInString
 {
@@ -49,43 +45,36 @@
     assertDoesNotMatch(@"no match", matcher, @"bye");
 }
 
-
 - (void)testFailsIfAdditionalWhitespaceIsPresent
 {
     assertDoesNotMatch(@"whitespace suffix", matcher, @"heLLo ");
     assertDoesNotMatch(@"whitespace prefix", matcher, @" heLLo");
 }
 
-
 - (void)testMatcherCreationRequiresNonNilArgument
 {
     STAssertThrows(equalToIgnoringCase(nil), @"Should require non-nil argument");
 }
-
 
 - (void)testFailsIfMatchingAgainstNonString
 {
     assertDoesNotMatch(@"non-string", matcher, [NSNumber numberWithInt:3]);
 }
 
-
 - (void)testHasAReadableDescription
 {
     assertDescription(@"\"heLLo\" ignoring case", matcher);
 }
-
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(matcher, @"hello");
 }
 
-
 - (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", matcher, @"bad");
 }
-
 
 - (void)testDescribeMismatch
 {
