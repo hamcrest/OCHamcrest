@@ -23,12 +23,14 @@
 
 - (void)setUp
 {
+    [super setUp];
     matcher = [equalToIgnoringCase(@"heLLo") retain];
 }
 
 - (void)tearDown
 {
     [matcher release];
+    [super tearDown];
 }
 
 - (id<HCMatcher>)createMatcher

@@ -26,12 +26,14 @@ static NSString *EXCERPT = @"EXCERPT";
 
 - (void)setUp
 {
+    [super setUp];
     matcher = [endsWith(EXCERPT) retain];
 }
 
 - (void)tearDown
 {
     [matcher release];
+    [super tearDown];
 }
 
 - (id<HCMatcher>)createMatcher

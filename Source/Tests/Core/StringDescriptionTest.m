@@ -55,12 +55,14 @@
 
 - (void)setUp
 {
+    [super setUp];
     description = [[HCStringDescription alloc] init];
 }
 
 - (void)tearDown
 {
     [description release];
+    [super tearDown];
 }
 
 - (void)testDescribesNil

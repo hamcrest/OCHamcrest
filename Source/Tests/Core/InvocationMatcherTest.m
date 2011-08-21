@@ -104,6 +104,7 @@
 
 - (void)setUp
 {
+    [super setUp];
     NSInvocation *invocation = [HCInvocationMatcher invocationForSelector:@selector(result)
                                                                   onClass:[Thingy class]];
     
@@ -114,6 +115,7 @@
 - (void)tearDown
 {
     [resultMatcher release];
+    [super tearDown];
 }
 
 - (void)testMatchesFeature

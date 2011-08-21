@@ -23,12 +23,14 @@
 
 - (void)setUp
 {
+    [super setUp];
     matcher = [stringContainsInOrder(@"string one", @"string two", @"string three", nil) retain];
 }
 
 - (void)tearDown
 {
     [matcher release];
+    [super tearDown];
 }
 
 - (id<HCMatcher>)createMatcher
