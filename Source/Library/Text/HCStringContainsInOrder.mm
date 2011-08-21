@@ -19,11 +19,10 @@
     return [[[self alloc] initWithSubstrings:substringList] autorelease];
 }
 
-
 - (id)initWithSubstrings:(NSArray *)substringList
 {
     self = [super init];
-    if (self != nil)
+    if (self)
     {
         for (id substring in substringList)
         {
@@ -40,13 +39,11 @@
     return self;
 }
 
-
 - (void)dealloc
 {
     [substrings release];
     [super dealloc];
 }
-
 
 - (BOOL)matches:(id)item
 {
@@ -64,7 +61,6 @@
     }
     return YES;
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

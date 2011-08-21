@@ -16,7 +16,6 @@
 #import "AbstractMatcherTest.h"
 
 
-
 @interface IsCollectionContainingInOrderTest : AbstractMatcherTest
 @end
 
@@ -27,13 +26,11 @@
     return contains(equalTo(@"irrelevant"), nil);
 }
 
-
 - (void)testMatchingSingleItemCollection
 {
     assertMatches(@"Single item collection",
                   (contains(equalTo(@"a"), nil)), ([NSArray arrayWithObjects:@"a", nil]));
 }
-
 
 - (void)testMatchingMultipleItemSequence
 {
@@ -42,14 +39,12 @@
                   ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
 }
 
-
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"Values automatically wrapped with equalTo",
                   (contains(@"a", @"b", @"c", nil)),
                   ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
 }
-
 
 - (void)testDoesNotMatchWithMoreElementsThanExpected
 {
@@ -58,7 +53,6 @@
                               ([NSArray arrayWithObjects:@"a", @"b", @"c", @"d", nil]));
 }
 
-
 - (void)testDoesNotMatchWithFewerElementsThanExpected
 {
     assertMismatchDescription(@"no item matched: \"c\"",
@@ -66,13 +60,11 @@
                               ([NSArray arrayWithObjects:@"a", @"b", nil]));
 }
 
-
 - (void)testDoesNotMatchIfSingleItemMismatches
 {
     assertMismatchDescription(@"item 0: was \"c\"",
                               (contains(@"d", nil)), [NSArray arrayWithObject:@"c"]);
 }
-
 
 - (void)testDoesNotMatchIfOneOfMultipleItemsMismatch
 {
@@ -81,18 +73,15 @@
                               ([NSArray arrayWithObjects:@"a", @"b", @"d", nil]));
 }
 
-
 - (void)testDoesNotMatchNil
 {
     assertDoesNotMatch(@"Should not match nil", contains(@"a", nil), nil);
 }
 
-
 - (void)testDoesNotMatchEmptyCollection
 {
     assertMismatchDescription(@"no item matched: \"d\"", (contains(@"d", nil)), [NSArray array]);
 }
-
 
 - (void)testDoesNotMatchObjectWithoutEnumerator
 {
@@ -100,12 +89,10 @@
                        contains(@"a", nil), [[[NSObject alloc] init] autorelease]);
 }
 
-
 - (void)testHasAReadableDescription
 {
     assertDescription(@"a collection containing [\"a\", \"b\"]", contains(@"a", @"b", nil));
 }
-
 
 - (void)testDescribeMismatch
 {
@@ -113,7 +100,6 @@
                            (contains(@"a", @"b", nil)),
                            ([NSArray arrayWithObjects:@"a", @"c", nil]));
 }
-
 
 - (void)testDescribeMismatchOfNonCollection
 {

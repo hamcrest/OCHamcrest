@@ -19,26 +19,24 @@
 }
 @end
 
-
 @implementation IsEqualIgnoringWhiteSpaceTest
 
 - (void)setUp
 {
+    [super setUp];
     matcher = [equalToIgnoringWhiteSpace(@"Hello World   how\n are we? ") retain];
 }
-
 
 - (void)tearDown
 {
     [matcher release];
+    [super tearDown];
 }
-
 
 - (id<HCMatcher>)createMatcher
 {
     return matcher;
 }
-
 
 - (void)testPassesIfWordsAreSameButWhitespaceDiffers
 {
@@ -46,13 +44,11 @@
     assertMatches(@"more whitespace", matcher, @"   Hello World   how are \n\n\twe?");
 }
 
-
 - (void)testFailsIfTextOtherThanWhitespaceDiffers
 {
     assertDoesNotMatch(@"wrong word", matcher, @"Hello PLANET how are we?");
     assertDoesNotMatch(@"incomplete", matcher, @"Hello World how are we");
 }
-
 
 - (void)testFailsIfWhitespaceIsAddedOrRemovedInMidWord
 {
@@ -62,36 +58,30 @@
                        matcher, @"Hello Wo rld how are we?");
 }
 
-
 - (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(equalToIgnoringWhiteSpace(nil), @"Should require non-nil argument");
 }
-
 
 - (void)testFailsIfMatchingAgainstNonString
 {
     assertDoesNotMatch(@"non-string", matcher, [NSNumber numberWithInt:3]);
 }
 
-
 - (void)testHasAReadableDescription
 {
     assertDescription(@"\"Hello World   how\\n are we? \" ignoring whitespace", matcher);
 }
-
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(equalToIgnoringWhiteSpace(@"foo\nbar"), @"foo bar");
 }
 
-
 - (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", matcher, @"bad");
 }
-
 
 - (void)testDescribeMismatch
 {

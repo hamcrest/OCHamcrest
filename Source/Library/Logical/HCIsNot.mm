@@ -18,29 +18,24 @@
     return [[[self alloc] initNot:aMatcher] autorelease];
 }
 
-
 - (id)initNot:(id<HCMatcher>)aMatcher
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         matcher = [aMatcher retain];
     return self;
 }
 
-
 - (void)dealloc
 {
     [matcher release];
-    
     [super dealloc];
 }
-
 
 - (BOOL)matches:(id)item
 {
     return ![matcher matches:item];
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

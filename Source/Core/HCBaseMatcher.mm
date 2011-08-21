@@ -14,7 +14,6 @@
 - (void)subclassResponsibility:(SEL)command;
 @end
 
-
 #define ABSTRACT_METHOD [self subclassResponsibility:_cmd]
 
 
@@ -25,13 +24,11 @@
     return [HCStringDescription stringFrom:self];
 }
 
-
 - (BOOL)matches:(id)item
 {
     ABSTRACT_METHOD;
     return NO;
 }
-
 
 - (BOOL)matches:(id)item describingMismatchTo:(id<HCDescription>)mismatchDescription
 {
@@ -41,18 +38,15 @@
     return matchResult;
 }
 
-
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     [[mismatchDescription appendText:@"was "] appendDescriptionOf:item];
 }
 
-
 - (void)describeTo:(id<HCDescription>)description
 {
     ABSTRACT_METHOD;
 }
-
 
 - (void)subclassResponsibility:(SEL)command
 {

@@ -22,14 +22,12 @@
 @interface HasCountTest : AbstractMatcherTest
 @end
 
-
 @implementation HasCountTest
 
 - (id<HCMatcher>)createMatcher
 {
     return hasCount(equalToUnsignedInteger(42));
 }
-
 
 - (void)testConvertsCountToNSNumberAndPassesToNestedMatcher
 {
@@ -39,19 +37,16 @@
     assertDoesNotMatch(@"different number", hasCount(equalToUnsignedInteger(6)), fakeWithCount);
 }
 
-
 - (void)testHasReadableDescription
 {
     assertDescription(@"a collection with count of a value greater than <5>",
                       hasCount(greaterThan([NSNumber numberWithUnsignedInteger:5])));
 }
 
-
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(hasCountOf(2), ([NSSet setWithObjects:@"a", @"b", nil]));
 }
-
 
 - (void)testMismatchDescriptionForItemWithWrongCount
 {
@@ -60,20 +55,17 @@
                               [FakeWithCount fakeWithCount:42]);
 }
 
-
 - (void)testMismatchDescriptionForItemWithoutCount
 {
     assertMismatchDescription(@"was <FakeWithoutCount>",
                               hasCount(equalToUnsignedInteger(1)), [FakeWithoutCount fake]);
 }
 
-
 - (void)testDescribesMismatchForItemWithWrongCount
 {
     assertDescribeMismatch(@"was <FakeWithCount> with count of <42>",
                            hasCount(equalToUnsignedInteger(1)), [FakeWithCount fakeWithCount:42]);
 }
-
 
 - (void)testDescribesMismatchForItemWithoutCount
 {
@@ -84,10 +76,10 @@
 @end
 
 
+#pragma mark -
 
 @interface HasCountOfTest : AbstractMatcherTest
 @end
-
 
 @implementation HasCountOfTest
 
@@ -95,7 +87,6 @@
 {
     return hasCountOf(42);
 }
-
 
 - (void)testHasCountOfIsShortcutForEqualToUnsignedInteger
 {
@@ -105,12 +96,10 @@
     assertDoesNotMatch(@"different number", hasCountOf(6), fakeWithCount);
 }
 
-
 - (void)testHasReadableDescription
 {
     assertDescription(@"a collection with count of <5>", hasCountOf(5));
 }
-
 
 - (void)testMismatchDescriptionForItemWithWrongCount
 {
@@ -118,19 +107,16 @@
                               hasCountOf(1), [FakeWithCount fakeWithCount:42]);
 }
 
-
 - (void)testMismatchDescriptionForItemWithoutCount
 {
     assertMismatchDescription(@"was <FakeWithoutCount>", hasCountOf(1), [FakeWithoutCount fake]);
 }
-
 
 - (void)testDescribesMismatchForItemWithWrongCount
 {
     assertDescribeMismatch(@"was <FakeWithCount> with count of <42>",
                            hasCountOf(1), [FakeWithCount fakeWithCount:42]);
 }
-
 
 - (void)testDescribesMismatchForItemWithoutCount
 {

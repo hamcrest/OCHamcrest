@@ -18,22 +18,19 @@
     return [[[self alloc] initWithCount:matcher] autorelease];
 }
 
-
 - (id)initWithCount:(id<HCMatcher>)matcher
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         countMatcher = [matcher retain];
     return self;
 }
-
 
 - (void)dealloc
 {
     [countMatcher release];
     [super dealloc];
 }
-
 
 - (BOOL)matches:(id)item
 {
@@ -43,7 +40,6 @@
     NSNumber *count = [NSNumber numberWithUnsignedInteger:[item count]];
     return [countMatcher matches:count];
 }
-
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
@@ -55,7 +51,6 @@
         [[mismatchDescription appendText:@" with count of "] appendDescriptionOf:count];
     }
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {
@@ -71,7 +66,6 @@ OBJC_EXPORT id<HCMatcher> HC_hasCount(id<HCMatcher> matcher)
 {
     return [HCHasCount hasCount:matcher];
 }
-
 
 OBJC_EXPORT id<HCMatcher> HC_hasCountOf(NSUInteger value)
 {

@@ -17,7 +17,6 @@
 #import "NeverMatch.h"
 
 
-
 @interface IsTest : AbstractMatcherTest
 @end
 
@@ -28,7 +27,6 @@
     return is(@"something");
 }
 
-
 - (void)testDelegatesMatchingToNestedMatcher
 {
     assertMatches(@"should match", is(equalTo(@"A")), @"A");
@@ -37,12 +35,10 @@
     assertDoesNotMatch(@"should not match", is(equalTo(@"B")), @"A");
 }
 
-
 - (void)testDescriptionShouldPassThrough
 {
     assertDescription(@"\"A\"", is(equalTo(@"A")));
 }
-
 
 - (void)testProvidesConvenientShortcutForIsEqualTo
 {
@@ -53,12 +49,10 @@
     assertDescription(@"\"A\"", is(@"A"));
 }
 
-
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(is(@"A"), @"A");
 }
-
 
 - (void)testDelegatesMismatchDescriptionToNestedMatcher
 {
@@ -66,7 +60,6 @@
                               is([NeverMatch neverMatch]),
                               @"hi");
 }
-
 
 - (void)testDelegatesDescribeMismatchToNestedMatcher
 {

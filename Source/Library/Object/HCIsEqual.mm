@@ -17,22 +17,19 @@
     return [[[self alloc] initEqualTo:anObject] autorelease];
 }
 
-
 - (id)initEqualTo:(id)anObject
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         object = [anObject retain];
     return self;
 }
-
 
 - (void)dealloc
 {
     [object release];
     [super dealloc];
 }
-
 
 - (BOOL)matches:(id)item
 {
@@ -41,7 +38,6 @@
     else
         return [item isEqual:object];
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

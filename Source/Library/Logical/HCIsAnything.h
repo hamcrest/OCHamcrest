@@ -36,7 +36,7 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
     @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND
-    #define anything()  HC_anything()
+    #define anything() HC_anything()
 #endif
 
 

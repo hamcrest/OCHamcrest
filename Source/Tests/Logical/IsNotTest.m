@@ -26,13 +26,11 @@
     return isNot(@"something");
 }
 
-
 - (void)testEvaluatesToTheTheLogicalNegationOfAnotherMatcher
 {
     assertMatches(@"invert mismatch", isNot(equalTo(@"A")), @"B");
     assertDoesNotMatch(@"invert match", isNot(equalTo(@"A")), @"A");
 }
-
 
 - (void)testProvidesConvenientShortcutForNotEqualTo
 {
@@ -40,24 +38,20 @@
     assertDoesNotMatch(@"invert match", isNot(@"A"), @"A");
 }
 
-
 - (void)testHasAReadableDescription
 {
     assertDescription(@"not \"A\"", isNot(@"A"));
 }
-
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(isNot(@"A"), @"B");
 }
 
-
 - (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"A\"", isNot(@"A"), @"A");
 }
-
 
 - (void)testDescribeMismatch
 {

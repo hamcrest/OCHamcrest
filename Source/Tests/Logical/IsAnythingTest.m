@@ -23,7 +23,6 @@
     return anything();
 }
 
-
 - (void)testAlwaysEvaluatesToTrue
 {
     assertMatches(@"nil", anything(), nil);
@@ -31,19 +30,16 @@
     assertMatches(@"string", anything(), @"hi");
 }
 
-
 - (void)testHasUsefulDefaultDescription
 {
     assertDescription(@"ANYTHING", anything());
 }
-
 
 - (void)testCanOverrideDescription
 {
     NSString *description = @"DESCRIPTION";
     assertDescription(description, anythingWithDescription(description));
 }
-
 
 - (void)testMatchAlwaysSucceedsSoShouldNotGenerateMismatchDescription
 {

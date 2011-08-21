@@ -51,20 +51,19 @@
 }
 @end
 
-
 @implementation StringDescriptionTest
 
 - (void)setUp
 {
+    [super setUp];
     description = [[HCStringDescription alloc] init];
 }
-
 
 - (void)tearDown
 {
     [description release];
+    [super tearDown];
 }
-
 
 - (void)testDescribesNil
 {
@@ -73,14 +72,12 @@
     STAssertEqualObjects(@"nil", [description description], nil);
 }
 
-
 - (void)testLetsSelfDescribingObjectDescribeItself
 {
     [description appendDescriptionOf:[[[FakeSelfDescribing alloc] init] autorelease]];
     
     STAssertEqualObjects(@"DESCRIPTION", [description description], nil);
 }
-
 
 - (void)testDescribesStringInQuotes
 {    
@@ -89,14 +86,12 @@
     STAssertEqualObjects(@"\"FOO\"", [description description], nil);
 }
 
-
 - (void)testWrapsNonSelfDescribingObjectInAngleBrackets
 {    
     [description appendDescriptionOf:[NSNumber numberWithInt:42]];
     
     STAssertEqualObjects(@"<42>", [description description], nil);
 }
-
 
 - (void)testShouldNotAddAngleBracketsIfObjectDescriptionAlreadyHasThem
 {
@@ -105,7 +100,6 @@
                              @"SELF MATCHES '<NSObject: 0x[0-9a-fA-F]+>'"];
     STAssertTrue([expected evaluateWithObject:[description description]], nil);
 }
-
 
 - (void)testCanDescribeObjectWithNilDescription
 {

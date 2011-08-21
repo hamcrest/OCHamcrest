@@ -23,15 +23,14 @@
 
 - (void)setUp
 {
+    [super setUp];
     [self raiseAfterFailure];
 }
-
 
 - (void)testSuccess_withBool
 {
     assertThatBool(YES, equalTo([NSNumber numberWithBool:YES]));
 }
-
 
 - (void)testFailure_withBool
 {
@@ -47,12 +46,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withChar
 {
     assertThatChar('A', equalTo([NSNumber numberWithChar:'A']));
 }
-
 
 - (void)testFailure_withChar
 {
@@ -68,12 +65,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withDouble
 {
     assertThatDouble(1.5, equalTo([NSNumber numberWithDouble:1.5]));
 }
-
 
 - (void)testFailure_withDouble
 {
@@ -89,12 +84,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withFloat
 {
     assertThatFloat(1.5f, equalTo([NSNumber numberWithFloat:1.5f]));
 }
-
 
 - (void)testFailure_withFloat
 {
@@ -110,12 +103,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withInt
 {
     assertThatInt(1, equalTo([NSNumber numberWithInt:1]));
 }
-
 
 - (void)testFailure_withInt
 {
@@ -131,12 +122,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withLong
 {
     assertThatLong(1L, equalTo([NSNumber numberWithLong:1L]));
 }
-
 
 - (void)testFailure_withLong
 {
@@ -152,12 +141,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withLongLong
 {
     assertThatLongLong(1LL, equalTo([NSNumber numberWithLongLong:1LL]));
 }
-
 
 - (void)testFailure_withLongLong
 {
@@ -173,12 +160,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withShort
 {
     assertThatShort(1, equalTo([NSNumber numberWithShort:1]));
 }
-
 
 - (void)testFailure_withShort
 {
@@ -194,12 +179,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withUnsignedChar
 {
     assertThatUnsignedChar('A', equalTo([NSNumber numberWithUnsignedChar:'A']));
 }
-
 
 - (void)testFailure_withUnsignedChar
 {
@@ -215,12 +198,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withUnsignedInt
 {
     assertThatUnsignedInt(1U, equalTo([NSNumber numberWithUnsignedInt:1U]));
 }
-
 
 - (void)testFailure_withUnsignedInt
 {
@@ -236,12 +217,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withUnsignedLong
 {
     assertThatUnsignedLong(1UL, equalTo([NSNumber numberWithUnsignedLong:1UL]));
 }
-
 
 - (void)testFailure_withUnsignedLong
 {
@@ -257,12 +236,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withUnsignedLongLong
 {
     assertThatUnsignedLongLong(1ULL, equalTo([NSNumber numberWithUnsignedLongLong:1ULL]));
 }
-
 
 - (void)testFailure_withUnsignedLongLong
 {
@@ -278,12 +255,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withUnsignedShort
 {
     assertThatUnsignedShort(1U, equalTo([NSNumber numberWithUnsignedShort:1U]));
 }
-
 
 - (void)testFailure_withUnsignedShort
 {
@@ -299,12 +274,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withInteger
 {
     assertThatInteger(1, equalTo([NSNumber numberWithInteger:1]));
 }
-
 
 - (void)testFailure_withInteger
 {
@@ -320,12 +293,10 @@
     STFail(@"should have failed");
 }
 
-
 - (void)testSuccess_withUnsignedInteger
 {
     assertThatUnsignedInteger(1, equalTo([NSNumber numberWithUnsignedInteger:1]));
 }
-
 
 - (void)testFailure_withUnsignedInteger
 {

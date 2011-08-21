@@ -18,23 +18,20 @@
     return [[[self alloc] initWithType:type] autorelease];
 }
 
-
 - (id)initWithType:(Class)aClass
 {
     HCRequireNonNilObject(aClass);
 
     self = [super init];
-    if (self != nil)
+    if (self)
         theClass = aClass;
     return self;
 }
-
 
 - (BOOL)matches:(id)item
 {
     return [item isKindOfClass:theClass];
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

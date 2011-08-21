@@ -17,38 +17,32 @@
     return [[[self alloc] initSameAs:anObject] autorelease];
 }
 
-
 - (id)initSameAs:(id)anObject
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         object = [anObject retain];
     return self;
 }
 
-
 - (void)dealloc
 {
     [object release];
-
     [super dealloc];
 }
-
 
 - (BOOL)matches:(id)item
 {
     return item == object;
 }
 
-
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     [mismatchDescription appendText:@"was "];
-    if (item != nil)
+    if (item)
         [mismatchDescription appendText:[NSString stringWithFormat:@"0x%0x ", item]];
     [mismatchDescription appendDescriptionOf:item];
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

@@ -23,17 +23,15 @@
     return invocation;
 }
 
-
 + (NSInvocation *)createInvocationForSelector:(SEL)selector onClass:(Class)aClass
 {
     return [self invocationForSelector:selector onClass:aClass];
 }
 
-
 - (id)initWithInvocation:(NSInvocation *)anInvocation matching:(id<HCMatcher>)aMatcher
 {
     self = [super init];
-    if (self != nil)
+    if (self)
     {
         invocation = [anInvocation retain];
         subMatcher = [aMatcher retain];
@@ -41,21 +39,17 @@
     return self;
 }
 
-
 - (void)dealloc
 {
     [subMatcher release];
     [invocation release];
-    
     [super dealloc];
 }
-
 
 - (NSString *)stringFromSelector
 {
     return NSStringFromSelector([invocation selector]);
 }
-
 
 - (id)invokeOn:(id)item
 {
@@ -65,7 +59,6 @@
     return result;
 }
 
-
 - (BOOL)matches:(id)item
 {
     if (![item respondsToSelector:[invocation selector]])
@@ -73,7 +66,6 @@
     
     return [subMatcher matches:[self invokeOn:item]];
 }
-
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
@@ -91,7 +83,6 @@
         [subMatcher describeMismatchOf:[self invokeOn:item] to:mismatchDescription];
     }
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

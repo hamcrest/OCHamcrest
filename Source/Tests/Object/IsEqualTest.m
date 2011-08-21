@@ -53,13 +53,11 @@
     return equalTo(@"irrelevant");
 }
 
-
 - (void)testComparesObjectsUsingIsEqualMethod
 {
     assertMatches(@"equal strings", equalTo(@"hi"), @"hi");
     assertDoesNotMatch(@"unequal strings", equalTo(@"hi"), @"bye");
 }
-
 
 - (void)testCanCompareNilValues
 {
@@ -69,19 +67,16 @@
     assertDoesNotMatch(@"nil in equalTo", equalTo(nil), @"hi");
 }
 
-
 - (void)testHonorsIsEqualImplementationEvenWithNilValues
 {
     assertMatches(@"always equal", equalTo(nil), [[[AlwaysEqual alloc] init] autorelease]);
     assertDoesNotMatch(@"never equal", equalTo(nil), [[[NeverEqual alloc] init] autorelease]);
 }
 
-
 - (void)testIncludesTheResultOfCallingDescriptionOnItsArgumentInTheDescription
 {
     assertDescription(@"<ARGUMENT DESCRIPTION>", equalTo([[[FakeArgument alloc] init] autorelease]));
 }
-
 
 - (void)testReturnsAnObviousDescriptionIfCreatedWithANestedMatcherByMistake
 {
@@ -91,24 +86,20 @@
                       equalTo(innerMatcher));
 }
 
-
 - (void)testReturnsGoodDescriptionIfCreatedWithNilReference
 {
     assertDescription(@"nil", equalTo(nil));
 }
-
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(equalTo(@"hi"), @"hi");
 }
 
-
 - (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", equalTo(@"good"), @"bad");
 }
-
 
 - (void)testDescribeMismatch
 {

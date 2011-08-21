@@ -17,7 +17,6 @@
     return [[[self alloc] initWithCollection:aCollection] autorelease];
 }
 
-
 - (id)initWithCollection:(id)aCollection
 {
     if (![aCollection respondsToSelector:@selector(containsObject:)])
@@ -28,7 +27,7 @@
     }
     
     self = [super init];
-    if (self != nil)
+    if (self)
         collection = [aCollection retain];
     return self;
 }
@@ -36,16 +35,13 @@
 - (void)dealloc
 {
     [collection release];
-    
     [super dealloc];
 }
-
 
 - (BOOL)matches:(id)item
 {
     return [collection containsObject:item];
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

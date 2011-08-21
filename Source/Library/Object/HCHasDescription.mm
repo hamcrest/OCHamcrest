@@ -18,7 +18,6 @@
     return [[[self alloc] initWithDescription:descriptionMatcher] autorelease];
 }
 
-
 - (id)initWithDescription:(id<HCMatcher>)descriptionMatcher
 {
     NSInvocation *anInvocation = [HCInvocationMatcher invocationForSelector:@selector(description)

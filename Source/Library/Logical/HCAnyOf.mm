@@ -18,15 +18,13 @@
     return [[[self alloc] initWithMatchers:theMatchers] autorelease];
 }
 
-
 - (id)initWithMatchers:(NSArray *)theMatchers
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         matchers = [theMatchers retain];
     return self;
 }
-
 
 - (void)dealloc
 {
@@ -34,17 +32,13 @@
     [super dealloc];
 }
 
-
 - (BOOL)matches:(id)item
 {
     for (id<HCMatcher> oneMatcher in matchers)
-    {
         if ([oneMatcher matches:item])
             return YES;
-    }
     return NO;
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

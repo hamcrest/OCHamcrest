@@ -53,7 +53,6 @@ NSException *createOCUnitException(const char* fileName, int lineNumber, NSStrin
     return result;
 }
 
-
 NSException *createAssertThatFailure(const char *fileName, int lineNumber, NSString *description)
 {
     // If the Hamcrest client has linked to OCUnit, generate an OCUnit failure.

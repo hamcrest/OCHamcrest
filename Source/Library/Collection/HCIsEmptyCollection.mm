@@ -18,19 +18,16 @@
     return [[[self alloc] init] autorelease];
 }
 
-
 - (id)init
 {
     self = [super initWithCount:HC_equalToUnsignedInteger(0)];
     return self;
 }
 
-
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     [[mismatchDescription appendText:@"was "] appendDescriptionOf:item];
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

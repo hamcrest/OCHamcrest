@@ -18,15 +18,13 @@
     return [[[self alloc] initWithMatcher:aMatcher] autorelease];
 }
 
-
 - (id)initWithMatcher:(id<HCMatcher>)aMatcher
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         matcher = [aMatcher retain];
     return self;
 }
-
 
 - (void)dealloc
 {
@@ -34,18 +32,15 @@
     [super dealloc];
 }
 
-
 - (BOOL)matches:(id)item
 {
     return [matcher matches:item];
 }
 
-
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     [matcher describeMismatchOf:item to:mismatchDescription];
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

@@ -19,38 +19,34 @@
 }
 @end
 
-
 @implementation StringContainsInOrderTest
 
 - (void)setUp
 {
+    [super setUp];
     matcher = [stringContainsInOrder(@"string one", @"string two", @"string three", nil) retain];
 }
-
 
 - (void)tearDown
 {
     [matcher release];
+    [super tearDown];
 }
-
 
 - (id<HCMatcher>)createMatcher
 {
     return matcher;
 }
 
-
 - (void)testMatchesIfOrderIsCorrect
 {
     assertMatches(@"correct order", matcher, @"string one then string two followed by string three");
 }
 
-
 - (void)testDoesNotMatchIfOrderIsIncorrect
 {
     assertDoesNotMatch(@"incorrect order", matcher, @"string two then string one followed by string three");
 }
-
 
 - (void)testDoesNotMatchIfExpectedSubstringsAreMissing
 {
@@ -59,24 +55,20 @@
     assertDoesNotMatch(@"missing string three", matcher, @"string one then string two");
 }
 
-
 - (void)testMatcherCreationRequiresNonNilArgument
 {    
     STAssertThrows(stringContainsInOrder(nil), @"Should require non-nil argument");
 }
-
 
 - (void)testMatcherCreationRequiresStringArguments
 {    
     STAssertThrows(stringContainsInOrder(@"one", [NSNumber numberWithInt:2], nil), @"Should require strings");
 }
 
-
 - (void)testFailsIfMatchingAgainstNonString
 {
     assertDoesNotMatch(@"non-string", matcher, [NSNumber numberWithInt:3]);
 }
-
 
 - (void)testHasAReadableDescription
 {
@@ -84,18 +76,15 @@
                       matcher);
 }
 
-
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(matcher, @"string one then string two followed by string three");
 }
 
-
 - (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", matcher, @"bad");
 }
-
 
 - (void)testDescribeMismatch
 {

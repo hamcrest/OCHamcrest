@@ -27,7 +27,6 @@
     return describedAs(@"irrelevant", anything(), nil);
 }
 
-
 - (void)testOverridesDescriptionOfNestedMatcherInitializerArgument
 {
     id<HCMatcher> m1 = describedAs(@"m1 description", anything(), nil);
@@ -36,7 +35,6 @@
     assertDescription(@"m1 description", m1);
     assertDescription(@"m2 description", m2);
 }
-
 
 - (void)testAppendsValuesToDescription
 {
@@ -49,7 +47,6 @@
     assertDescription(@"value 1 = <33>, value 2 = <97>", m);
 }
 
-
 - (void)testHandlesSubstitutionAtBeginning
 {
     id<HCMatcher> m = describedAs(@"%0ok",
@@ -59,7 +56,6 @@
     
     assertDescription(@"<33>ok", m);
 }
-
 
 - (void)testHandlesSubstitutionAtEnd
 {
@@ -71,14 +67,12 @@
     assertDescription(@"ok<33>", m);
 }
 
-
 - (void)testDoesNotProcessPercentFollowedByNonDigit
 {
     id<HCMatcher> m = describedAs(@"With 33% remaining", anything(), nil);
     
     assertDescription(@"With 33% remaining", m);
 }
-
 
 - (void)testDelegatesMatchingToNestedMatcher
 {
@@ -89,12 +83,10 @@
     STAssertFalse([m2 matches:@"hi"], @"");
 }
 
-
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(describedAs(@"irrelevant", anything(), nil), @"hi");
 }
-
 
 - (void)testDelegatesMismatchDescriptionToNestedMatcher
 {
@@ -102,7 +94,6 @@
                               describedAs(@"irrelevant", [NeverMatch neverMatch], nil),
                               @"hi");
 }
-
 
 - (void)testDelegatesDescribeMismatchToNestedMatcher
 {

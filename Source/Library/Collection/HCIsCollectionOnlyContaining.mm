@@ -19,22 +19,19 @@
     return [[[self alloc] initWithMatcher:aMatcher] autorelease];
 }
 
-
 - (id)initWithMatcher:(id<HCMatcher>)aMatcher
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         matcher = [aMatcher retain];
     return self;
 }
-
 
 - (void)dealloc
 {
     [matcher release];
     [super dealloc];
 }
-
 
 - (BOOL)matches:(id)collection
 {
@@ -45,13 +42,10 @@
         return NO;
     
     for (id item in collection)
-    {
         if (![matcher matches:item])
             return NO;
-    }
     return YES;
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

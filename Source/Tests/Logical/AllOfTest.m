@@ -26,18 +26,15 @@
     return allOf(equalTo(@"irrelevant"), equalTo(@"irrelevant"), nil);
 }
 
-
 - (void)testMatchesIfArgumentSatisfiesBothOfTwoOtherMatchers
 {
     assertMatches(@"both matchers", allOf(equalTo(@"good"), equalTo(@"good"), nil), @"good");
 }
 
-
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"both matchers", allOf(@"good", @"good", nil), @"good");
 }
-
 
 - (void)testNoMatchIfArgumentFailsToSatisfyEitherOfTwoOtherMatchers
 {
@@ -58,7 +55,6 @@
                   @"good");
 }
 
-
 - (void)testNoMatchIfArgumentFailsToSatisfyAllOfManyOtherMatchers
 {
     assertDoesNotMatch(@"matcher in the middle",
@@ -71,20 +67,17 @@
                   @"good");
 }
 
-
 - (void)testHasAReadableDescription
 {
     assertDescription(@"(\"good\" and \"bad\" and \"ugly\")",
                       allOf(equalTo(@"good"), equalTo(@"bad"), equalTo(@"ugly"), nil));
 }
 
-
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(allOf(equalTo(@"good"), equalTo(@"good"), nil),
                                 @"good");
 }
-
 
 - (void)testMismatchDescriptionDescribesFirstFailingMatch
 {
@@ -93,14 +86,12 @@
                               @"bad");
 }
 
-
 - (void)testDescribeMismatch
 {
     assertDescribeMismatch(@"\"good\" was \"bad\"",
                            allOf(equalTo(@"bad"), equalTo(@"good"), nil),
                            @"bad");
 }
-
 
 - (void)testMatcherCreationRequiresNonNilArgument
 {    

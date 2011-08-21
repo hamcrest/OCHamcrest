@@ -26,36 +26,30 @@
     return empty();
 }
 
-
 - (void)testMatchesEmptyCollection
 {
     assertMatches(@"empty", empty(), [FakeWithCount fakeWithCount:0]);
 }
-
 
 - (void)testDoesNotMatchesNonEmptyCollection
 {
     assertDoesNotMatch(@"non-empty", empty(), [FakeWithCount fakeWithCount:1]);
 }
 
-
 - (void)testDoesNotMatchItemWithoutCount
 {
     assertDoesNotMatch(@"no count", empty(), [FakeWithoutCount fake]);
 }
-
 
 - (void)testHasReadableDescription
 {
     assertDescription(@"empty collection", empty());
 }
 
-
 - (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", empty(), @"bad");
 }
-
 
 - (void)testDescribesMismatch
 {

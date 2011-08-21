@@ -23,7 +23,6 @@
     return instanceOf([NSNumber class]);
 }
 
-
 - (void)testEvaluatesToTrueIfArgumentIsInstanceOfASpecificClass
 {
     NSNumber *number = [NSNumber numberWithInt:1];
@@ -35,30 +34,25 @@
     assertDoesNotMatch(@"nil", instanceOf([NSNumber class]), nil);
 }
 
-
 - (void)testMatcherCreationRequiresNonNilArgument
 {
     STAssertThrows(instanceOf(nil), @"Should require non-nil argument");
 }
-
 
 - (void)testHasAReadableDescription
 {
     assertDescription(@"an instance of NSNumber", instanceOf([NSNumber class]));
 }
 
-
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(instanceOf([NSString class]), @"hi");
 }
 
-
 - (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", instanceOf([NSNumber class]), @"bad");
 }
-
 
 - (void)testDescribeMismatch
 {

@@ -57,13 +57,12 @@ pair<int, NSString*> separate(NSString *component)
                                    overValues:templateValues] autorelease];
 }
 
-
 - (id)initWithDescription:(NSString *)description
                 forMatcher:(id<HCMatcher>)aMatcher
                 overValues:(NSArray *)templateValues
 {
     self = [super init];
-    if (self != nil)
+    if (self)
     {
         descriptionTemplate = [description copy];
         matcher = [aMatcher retain];
@@ -72,28 +71,23 @@ pair<int, NSString*> separate(NSString *component)
     return self;
 }
 
-
 - (void)dealloc
 {
     [values release];
     [matcher release];
     [descriptionTemplate release];
-    
     [super dealloc];
 }
-
 
 - (BOOL)matches:(id)item
 {
     return [matcher matches:item];
 }
 
-
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     [matcher describeMismatchOf:item to:mismatchDescription];
 }
-
 
 - (void)describeTo:(id<HCDescription>)description
 {

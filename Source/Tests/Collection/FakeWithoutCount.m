@@ -15,7 +15,6 @@
     return [[[self alloc] init] autorelease];
 }
 
-
 - (NSString *)description
 {
     return @"FakeWithoutCount";
