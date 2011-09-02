@@ -23,7 +23,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasEntries(id keysAndValueMatch, ...);
+OBJC_EXPORT id<HCMatcher> HC_hasEntries(id keysAndValueMatch, ...) NS_REQUIRES_NIL_TERMINATION;
 
 /**
     hasEntries(firstKey, valueMatcher, ...) -

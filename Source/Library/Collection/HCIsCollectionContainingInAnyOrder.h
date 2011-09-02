@@ -19,7 +19,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_containsInAnyOrder(id itemMatch, ...);
+OBJC_EXPORT id<HCMatcher> HC_containsInAnyOrder(id itemMatch, ...) NS_REQUIRES_NIL_TERMINATION;
 
 /**
     containsInAnyOrder(firstMatcher, ...) -
