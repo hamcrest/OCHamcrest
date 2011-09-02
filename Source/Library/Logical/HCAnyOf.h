@@ -19,7 +19,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_anyOf(id match, ...);
+OBJC_EXPORT id<HCMatcher> HC_anyOf(id match, ...) NS_REQUIRES_NIL_TERMINATION;
 
 /**
     anyOf(firstMatcher, ...) -

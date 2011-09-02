@@ -19,7 +19,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_contains(id itemMatch, ...);
+OBJC_EXPORT id<HCMatcher> HC_contains(id itemMatch, ...) NS_REQUIRES_NIL_TERMINATION;
 
 /**
     contains(firstMatcher, ...) -

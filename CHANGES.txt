@@ -4,7 +4,8 @@ Hamcrest information: http://code.google.com/p/hamcrest/
 
 == NEXT VERSION IN PROGRESS
 
- * Rewrote documentation to make it easier to look up matchers.
+* Matchers that require a nil-terminated list now generate a compiler error if you don't have nil.
+* Rewrote documentation, aiming to make it easier to look up specific matchers.
 
  * "stringContainsInOrder" was missing from the master header; now it's there.
 
