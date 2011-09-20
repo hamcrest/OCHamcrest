@@ -19,6 +19,7 @@
     @ingroup library
  */
 #import <OCHamcrest/HCHasDescription.h>
+#import <OCHamcrest/HCHasProperty.h>
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCIsInstanceOf.h>
 #import <OCHamcrest/HCIsNil.h>
