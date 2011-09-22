@@ -5,11 +5,11 @@ Hamcrest information: http://code.google.com/p/hamcrest/
 == NEXT VERSION IN PROGRESS
 
 * New matchers:
-  * "hasProperty" matches the return value of a method with a given name. (It could be a property, but really can be any method with no arguments that returns an object.)
+  * "hasProperty" matches the return value of a method with a given name. (It could be a property, but really can be any method with no arguments that returns an object.) Thanks to: Justin Shacklette
 
 * Improvements:
   * Rewrote documentation, aiming to make it easier to look up specific matchers.
-  * Matchers that require a nil-terminated list now generate a compiler error if you don't have nil.
+  * Matchers that require a nil-terminated list now generate a compiler error if you don't have nil at the end.
 
 * Fixes:
  * "stringContainsInOrder" was missing from the master header; now it's there.
