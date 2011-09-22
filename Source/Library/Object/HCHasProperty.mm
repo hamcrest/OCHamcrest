@@ -60,7 +60,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *property, id valueMatch)
+OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *name, id valueMatch)
 {
-    return [HCHasProperty hasProperty:property value:HCWrapInMatcher(valueMatch)];
+    return [HCHasProperty hasProperty:name value:HCWrapInMatcher(valueMatch)];
 }

@@ -20,18 +20,17 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *property, id valueMatch);
+OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *name, id valueMatch);
 
 /**
-    hasProperty(property, valueMatcher) -
+    hasProperty(name, valueMatcher) -
     Matches if object has a method of a given name whose return value satisfies a given matcher.
  
-    @param property  The name of a method without arguments that returns an object.
+    @param name  The name of a method without arguments that returns an object.
     @param valueMatcher  The matcher to satisfy for the return value, or an expected value for @ref equalTo matching.
  
     This matcher first checks if the evaluated object has a method with a name matching the given
-    @c property string. If so, it invokes the method and sees if the returned value satisfies
-    @c valueMatcher.
+    @c name. If so, it invokes the method and sees if the returned value satisfies @c valueMatcher.
  
     While this matcher is called "hasProperty", it's useful for checking the results of any simple
     methods, not just properties.
