@@ -119,7 +119,7 @@
 
 - (void)testHasAReadableDescription
 {
-    assertDescription(@"an object with a property named <name> with a value of <\"Joe\">", hasProperty(@"name", @"Joe"));
+    assertDescription(@"an object with name \"Joe\"", hasProperty(@"name", @"Joe"));
 }
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription

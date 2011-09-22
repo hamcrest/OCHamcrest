@@ -50,9 +50,10 @@
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [[[description appendText:[NSString stringWithFormat:@"an object with a property named <%@> with a value of <", property]]
-      appendDescriptionOf:valueMatcher]
-     appendText:@">"];
+    [[[[description appendText:@"an object with "]
+                    appendText:property]
+                    appendText:@" "]
+                    appendDescriptionOf:valueMatcher];
 }
 @end
 
