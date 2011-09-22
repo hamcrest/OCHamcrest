@@ -1,8 +1,8 @@
 //
-//  OCHamcrest - StringStartsWithTest.m
+//  OCHamcrest - HasPropertyTest.m
 //  Copyright 2011 hamcrest.org. See LICENSE.txt
 //
-//  Created by: Jon Reid
+//  Created by: Justin Shacklette
 //
 
     // Class under test
@@ -19,21 +19,28 @@
 
 
 @interface Person : NSObject
+{
+    NSString *name;
+    NSNumber *shoeSize;
+}
 
 @property (nonatomic, retain) NSString *name;
-@property (nonatomic, assign) NSNumber *shoeSize;
+@property (nonatomic, retain) NSNumber *shoeSize;
 
 @end
 
 @implementation Person
 
-@synthesize name,shoeSize;
+@synthesize name;
+@synthesize shoeSize;
 
 - (id) initWithName:(NSString *)aName shoeSize:(int)aShoeSize
 {
-    if ((self = [super init]) != nil) {
-        self.name = aName;
-        self.shoeSize = [NSNumber numberWithInt:aShoeSize];
+    self = [super init];
+    if (self)
+    {
+        name = [aName retain];
+        shoeSize = [[NSNumber alloc] initWithInt:aShoeSize];
     }
     return self;
 }
@@ -41,6 +48,7 @@
 - (void) dealloc
 {
     [name release];
+    [shoeSize release];
     [super dealloc];
 }
 
@@ -63,7 +71,6 @@
     [super setUp];
     joe = [[Person alloc] initWithName:@"Joe" shoeSize:13];
     nobody = [[Person alloc] initWithName:nil shoeSize:0];
-
 }
 
 - (void)tearDown

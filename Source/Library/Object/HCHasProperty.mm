@@ -2,7 +2,7 @@
 //  OCHamcrest - HCHasProperty.mm
 //  Copyright 2011 hamcrest.org. See LICENSE.txt
 //
-//  Created by: Jon Reid
+//  Created by: Justin Shacklette
 //
 
 #import "HCHasProperty.h"
@@ -13,12 +13,12 @@
 
 @implementation HCHasProperty
 
-+ (id) hasProperty:(NSString *)aProperty value:(id<HCMatcher>)aValueMatcher
++ (id)hasProperty:(NSString *)aProperty value:(id<HCMatcher>)aValueMatcher
 {
     return [[[self alloc] initWithProperty:aProperty value:aValueMatcher] autorelease];
 }
 
-- (id) initWithProperty:(NSString *)aProperty value:(id<HCMatcher>)aValueMatcher
+- (id)initWithProperty:(NSString *)aProperty value:(id<HCMatcher>)aValueMatcher
 {
     HCRequireNonNilObject(aProperty);
     
@@ -30,7 +30,7 @@
     return self;
 }
 
-- (void) dealloc
+- (void)dealloc
 {
     [property release];
     [valueMatcher release];
@@ -48,7 +48,7 @@
     return NO;
 }
 
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     [[[description appendText:[NSString stringWithFormat:@"an object with a property named <%@> with a value of <", property]]
       appendDescriptionOf:valueMatcher]
