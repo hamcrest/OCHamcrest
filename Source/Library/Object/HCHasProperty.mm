@@ -13,19 +13,19 @@
 
 @implementation HCHasProperty
 
-+ (id)hasProperty:(NSString *)aProperty value:(id<HCMatcher>)aValueMatcher
++ (id)hasProperty:(NSString *)property value:(id<HCMatcher>)aValueMatcher
 {
-    return [[[self alloc] initWithProperty:aProperty value:aValueMatcher] autorelease];
+    return [[[self alloc] initWithProperty:property value:aValueMatcher] autorelease];
 }
 
-- (id)initWithProperty:(NSString *)aProperty value:(id<HCMatcher>)aValueMatcher
+- (id)initWithProperty:(NSString *)property value:(id<HCMatcher>)aValueMatcher
 {
-    HCRequireNonNilObject(aProperty);
+    HCRequireNonNilObject(property);
     
     self = [super init];
     if (self != nil)
     {
-        property = [aProperty copy];
+        propertyName = [property copy];
         valueMatcher = [aValueMatcher retain];
     }
     return self;
@@ -33,14 +33,14 @@
 
 - (void)dealloc
 {
-    [property release];
+    [propertyName release];
     [valueMatcher release];
     [super dealloc];
 }
 
 - (BOOL)matches:(id)item
 {
-    SEL propertyGetter = NSSelectorFromString(property);
+    SEL propertyGetter = NSSelectorFromString(propertyName);
     if (![item respondsToSelector:propertyGetter])
         return NO;
     
@@ -50,7 +50,7 @@
 - (void)describeTo:(id<HCDescription>)description
 {
     [[[[description appendText:@"an object with "]
-                    appendText:property]
+                    appendText:propertyName]
                     appendText:@" "]
                     appendDescriptionOf:valueMatcher];
 }
@@ -59,7 +59,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *aProperty, id aValueMatcher)
+OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *property, id aValueMatcher)
 {
-    return [HCHasProperty hasProperty:aProperty value:HCWrapInMatcher(aValueMatcher)];
+    return [HCHasProperty hasProperty:property value:HCWrapInMatcher(aValueMatcher)];
 }

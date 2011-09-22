@@ -10,23 +10,23 @@
 
 @interface HCHasProperty : HCBaseMatcher
 {
-    NSString *property;
+    NSString *propertyName;
     id<HCMatcher> valueMatcher;
 }
 
-+ (id)hasProperty:(NSString *)aProperty value:(id<HCMatcher>)aValueMatcher;
-- (id)initWithProperty:(NSString *)aProperty value:(id<HCMatcher>)aValueMatcher;
++ (id)hasProperty:(NSString *)property value:(id<HCMatcher>)aValueMatcher;
+- (id)initWithProperty:(NSString *)property value:(id<HCMatcher>)aValueMatcher;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *aProperty, id aValueMatcher);
+OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *property, id aValueMatcher);
 
 /**
-    hasProperty(aProperty, aValueMatcher) -
+    hasProperty(property, aValueMatcher) -
     Matches if object has a property of the given name with the given value.
  
-    @param aProperty  The property name on the object.
+    @param property  The property name on the object.
     @param aValueMatcher  The object to compare against as the expected value.
  
     This matcher first checks if @c -get<property> exist.  If so, it invokes the property
