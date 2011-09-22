@@ -11,6 +11,7 @@
 #import "HCRequireNonNilObject.h"
 #import "HCWrapInMatcher.h"
 
+
 @implementation HCHasProperty
 
 + (id)hasProperty:(NSString *)property value:(id<HCMatcher>)aValueMatcher
@@ -59,7 +60,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *property, id aValueMatcher)
+OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *property, id valueMatch)
 {
-    return [HCHasProperty hasProperty:property value:HCWrapInMatcher(aValueMatcher)];
+    return [HCHasProperty hasProperty:property value:HCWrapInMatcher(valueMatch)];
 }

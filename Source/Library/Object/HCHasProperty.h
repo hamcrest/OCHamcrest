@@ -20,22 +20,25 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *property, id aValueMatcher);
+OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *property, id valueMatch);
 
 /**
-    hasProperty(property, aValueMatcher) -
-    Matches if object has a property of the given name with the given value.
+    hasProperty(property, valueMatcher) -
+    Matches if object has a method of a given name whose return value satisfies a given matcher.
  
-    @param property  The property name on the object.
-    @param aValueMatcher  The object to compare against as the expected value.
+    @param property  The name of a method without arguments that returns an object.
+    @param valueMatcher  The matcher to satisfy for the return value, or an expected value for @ref equalTo matching.
  
-    This matcher first checks if @c -get<property> exist.  If so, it invokes the property
-    getter and compares the returned value with @a aValueMatcher.
+    This matcher first checks if the evaluated object has a method with a name matching the given
+    @c property string. If so, it invokes the method and sees if the returned value satisfies
+    @c valueMatcher.
  
-    If @c -get<property> is @c nil, the matcher will successfully match @c nil.
+    While this matcher is called "hasProperty", it's useful for checking the results of any simple
+    methods, not just properties.
  
-    Example:
+    Examples:
     @li @ref hasProperty(@"firstName", @"Joe")
+    @li @ref hasProperty(@"firstName", startsWith(@"J"))
  
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_hasProperty instead.)

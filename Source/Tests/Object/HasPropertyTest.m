@@ -25,14 +25,13 @@
 }
 
 @property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSNumber *shoeSize;
+- (NSNumber *)shoeSize;
 
 @end
 
 @implementation Person
 
 @synthesize name;
-@synthesize shoeSize;
 
 - (id) initWithName:(NSString *)aName shoeSize:(int)aShoeSize
 {
@@ -50,6 +49,11 @@
     [name release];
     [shoeSize release];
     [super dealloc];
+}
+
+- (NSNumber *)shoeSize
+{
+    return shoeSize;
 }
 
 @end
