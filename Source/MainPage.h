@@ -107,6 +107,7 @@
         <ul>
         <li>@ref equalTo - match equal object</li>
         <li>@ref hasDescription - match object's @c -description</li>
+		<li>@ref hasProperty - match return value of method with given name</li>
         <li>@ref instanceOf - match object type</li>
         <li>@ref nilValue, @ref notNilValue - match for @c nil, or not @c nil</li>
         <li>@ref sameInstance - match same object</li>
