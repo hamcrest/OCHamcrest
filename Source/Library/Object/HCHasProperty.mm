@@ -23,7 +23,8 @@
     HCRequireNonNilObject(aProperty);
     
     self = [super init];
-    if (self != nil) {
+    if (self != nil)
+    {
         property = [aProperty copy];
         valueMatcher = [aValueMatcher retain];
     }
@@ -40,12 +41,10 @@
 - (BOOL)matches:(id)item
 {
     SEL propertyGetter = NSSelectorFromString(property);
+    if (![item respondsToSelector:propertyGetter])
+        return NO;
     
-    if ([item respondsToSelector:propertyGetter]) {
-        if ([valueMatcher matches:[item performSelector:propertyGetter]])
-            return YES;
-    }
-    return NO;
+    return [valueMatcher matches:[item performSelector:propertyGetter]];
 }
 
 - (void)describeTo:(id<HCDescription>)description
