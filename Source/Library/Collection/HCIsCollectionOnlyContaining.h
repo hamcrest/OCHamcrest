@@ -32,6 +32,13 @@ OBJC_EXPORT id<HCMatcher> HC_onlyContains(id itemMatch, ...) NS_REQUIRES_NIL_TER
     
     Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
     equality.
+
+    Example:
+    
+    @par
+    @ref onlyContains(startsWith(@"Jo"), nil)
+    
+    will match a collection [@"Jon", @"John", @"Johann"].
     
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_onlyContains instead.)

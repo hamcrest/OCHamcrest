@@ -29,10 +29,13 @@ OBJC_EXPORT id<HCMatcher> HC_allOf(id match, ...) NS_REQUIRES_NIL_TERMINATION;
     
     The matchers are evaluated from left to right using short-circuit evaluation, so evaluation
     stops as soon as a matcher returns @c NO.
-
+    
+    Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
+    equality.
+    
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_allOf instead.)
-
+    
     @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND

@@ -30,10 +30,12 @@ OBJC_EXPORT id<HCMatcher> HC_is(id match);
     This matcher compares the evaluated object to the given matcher.
     
     If the @a aMatcher argument is a matcher, its behavior is retained, but the test may be more
-    expressive.
+    expressive. For example:
+    @li <code>@ref assertThatInt(value, equalToInt(5))</code>
+    @li <code>@ref assertThatInt(value, is(equalToInt(5)))</code>
 
     If the @a aMatcher argument is not a matcher, it is wrapped in an @ref equalTo matcher. This
-    makes the following three statements equivalent:
+    makes the following statements equivalent:
     @li <code>@ref assertThat(cheese, equalTo(smelly))</code>
     @li <code>@ref assertThat(cheese, is(equalTo(smelly)))</code>
     @li <code>@ref assertThat(cheese, is(smelly))</code>

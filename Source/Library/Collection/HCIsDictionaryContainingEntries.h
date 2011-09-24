@@ -38,9 +38,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasEntries(id keysAndValueMatch, ...) NS_REQUIRES_N
     @c nil.
 
     Examples:
-    
     @li @ref hasEntries(@"first", equalTo(@"Jon"), @"last", equalTo(@"Reid"), nil)
-    
     @li @ref hasEntries(@"first", @"Jon", @"last", @"Reid", nil)
     
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym

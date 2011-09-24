@@ -39,9 +39,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasEntry(id keyMatch, id valueMatch);
     equality.
     
     Examples:
-    
     @li @ref hasEntry(@ref equalTo(@"foo"), equalTo(@"bar"))
-
     @li @ref hasEntry(@"foo", @"bar")
 
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym

@@ -33,6 +33,10 @@ OBJC_EXPORT id<HCMatcher> HC_hasValue(id valueMatch);
     Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
     equality.
     
+    Examples:
+    @li @ref hasValue(equalTo(@"bar"))
+    @li @ref hasValue(@"bar")
+    
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_hasValue instead.)
 

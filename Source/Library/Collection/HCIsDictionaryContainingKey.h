@@ -36,6 +36,10 @@ OBJC_EXPORT id<HCMatcher> HC_hasKey(id keyMatch);
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_hasKey instead.)
 
+    Examples:
+    @li @ref hasEntry(equalTo(@"foo"))
+    @li @ref hasEntry(@"foo")
+    
     @ingroup collection_matchers
  */
 #ifdef HC_SHORTHAND

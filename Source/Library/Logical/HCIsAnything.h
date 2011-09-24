@@ -46,7 +46,7 @@ OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *aDescription);
     anythingWithDescription(description) -
     Matches anything.
     
-    @param description  A meaningful string used when this matcher describes itself.
+    @param description  A string used to describe this matcher.
     
     This matcher always evaluates to @c YES. Specify this in collection matchers when the value of a 
     particular element in a collection is unimportant.

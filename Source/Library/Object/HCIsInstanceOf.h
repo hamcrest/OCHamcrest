@@ -25,7 +25,7 @@ OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class aClass);
     instanceOf(aClass) -
     Matches if object is an instance of, or inherits from, a given class.
     
-    @param aClass  A class object representing the Objective-C class to be tested.
+    @param aClass  The class to compare against as the expected class.
     
     This matcher checks whether the evaluated object is an instance of @a aClass or an instance of
     any class that inherits from @a aClass.

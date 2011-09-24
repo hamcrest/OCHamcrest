@@ -29,8 +29,8 @@ OBJC_EXPORT id<HCMatcher> HC_hasDescription(id match);
     implicitly wrapped in an @ref equalTo matcher to check for equality.
     
     Examples:
-    @li @ref hasDescription(\@"foo")
-    @li @ref hasDescription(@ref startsWith(\@"bar"))
+    @li @ref hasDescription(@ref startsWith(\@"foo"))
+    @li @ref hasDescription(\@"bar")
 
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_hasDescription instead.)
