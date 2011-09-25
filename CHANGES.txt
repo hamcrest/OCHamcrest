@@ -8,7 +8,7 @@ Hamcrest information: http://code.google.com/p/hamcrest/
   * "hasProperty" matches the return value of a method with a given name. (It could be a property, but really can be any method with no arguments that returns an object.) Thanks to: Justin Shacklette
 
 * Improvements:
-  * Rewrote documentation, aiming to make it easier to look up specific matchers.
+  * Rewrote documentation.
   * Matchers that require a nil-terminated list now generate a compiler error if you don't have nil at the end.
 
 * Fixes:
