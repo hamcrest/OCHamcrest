@@ -2,8 +2,14 @@ Full documentation: http://jonreid.github.com/OCHamcrest/
 Latest sources: https://github.com/jonreid/OCHamcrest
 Hamcrest information: http://code.google.com/p/hamcrest/
 
-== NEXT VERSION IN PROGRESS
+See also:
+Python version: http://pypi.python.org/pypi/PyHamcrest
+Quality Coding - Tools, tips and techniques for building quality in to your iOS programs: http://jonreid.blogs.com/qualitycoding/
 
+
+== Version 1.6 ==
+
+27 Sep 2011
 * New matchers:
   * "hasProperty" matches the return value of a method with a given name. (It could be a property, but really can be any method with no arguments that returns an object.) Thanks to: Justin Shacklette
 
