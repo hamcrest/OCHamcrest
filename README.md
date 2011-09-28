@@ -2,7 +2,7 @@
 * [Latest sources](https://github.com/jonreid/OCHamcrest)
 * [Hamcrest information](http://code.google.com/p/hamcrest/)
 
-I also write:
+See also:
 
 * [PyHamcrest](http://pypi.python.org/pypi/PyHamcrest) - Python version.
 * [Quality Coding](http://jonreid.blogs.com/qualitycoding/) - Tools, tips and
