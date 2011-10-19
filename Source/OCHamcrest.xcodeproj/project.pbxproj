@@ -227,6 +227,11 @@
 		088FB0AF136A70B800C191E1 /* HCStringContainsInOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 088FB0AD136A70B800C191E1 /* HCStringContainsInOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		088FB0B1136A70B800C191E1 /* HCStringContainsInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.mm */; };
 		088FB0B2136A70B800C191E1 /* HCStringContainsInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.mm */; };
+		5F2773401436F50C00B9683A /* HCConformsToProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F27733E1436F50C00B9683A /* HCConformsToProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F2773411436F50C00B9683A /* HCConformsToProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F27733F1436F50C00B9683A /* HCConformsToProtocol.mm */; };
+		5F2773471436FA9D00B9683A /* HCConformsToProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F27733F1436F50C00B9683A /* HCConformsToProtocol.mm */; };
+		5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
+		5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
 		77C7B86D14292D5100DE60CC /* HCHasProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 77C7B86B14292D5100DE60CC /* HCHasProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77C7B86E14292D5100DE60CC /* HCHasProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B86C14292D5100DE60CC /* HCHasProperty.mm */; };
 		77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
@@ -398,6 +403,9 @@
 		08BDD5FD1350C7BE00E5A443 /* MakeDistribution.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeDistribution.sh; sourceTree = "<group>"; };
 		08BDD5FE1350C7BE00E5A443 /* MakeDocumentation.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeDocumentation.sh; sourceTree = "<group>"; };
 		08BDD5FF1350C7BE00E5A443 /* MakeIOSFramework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeIOSFramework.sh; sourceTree = "<group>"; };
+		5F27733E1436F50C00B9683A /* HCConformsToProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCConformsToProtocol.h; sourceTree = "<group>"; };
+		5F27733F1436F50C00B9683A /* HCConformsToProtocol.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCConformsToProtocol.mm; sourceTree = "<group>"; };
+		5F2773441436F81000B9683A /* ConformsToProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConformsToProtocolTest.m; sourceTree = "<group>"; };
 		77C7B86B14292D5100DE60CC /* HCHasProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHasProperty.h; sourceTree = "<group>"; };
 		77C7B86C14292D5100DE60CC /* HCHasProperty.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCHasProperty.mm; sourceTree = "<group>"; };
 		77C7B8761429361200DE60CC /* HasPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasPropertyTest.m; sourceTree = "<group>"; };
@@ -643,6 +651,8 @@
 		087602F013440A9F001B439B /* Object */ = {
 			isa = PBXGroup;
 			children = (
+				5F27733E1436F50C00B9683A /* HCConformsToProtocol.h */,
+				5F27733F1436F50C00B9683A /* HCConformsToProtocol.mm */,
 				087602F113440A9F001B439B /* HCHasDescription.h */,
 				087602F213440A9F001B439B /* HCHasDescription.mm */,
 				77C7B86B14292D5100DE60CC /* HCHasProperty.h */,
@@ -731,6 +741,7 @@
 		0876035713440AD8001B439B /* Object */ = {
 			isa = PBXGroup;
 			children = (
+				5F2773441436F81000B9683A /* ConformsToProtocolTest.m */,
 				0876035813440AD8001B439B /* HasDescriptionTest.m */,
 				77C7B8761429361200DE60CC /* HasPropertyTest.m */,
 				0846B6F313EE5FD200EA68E8 /* IsEqualTest.m */,
@@ -837,6 +848,7 @@
 				0846B6CD13EE5D8A00EA68E8 /* HCIsNil.h in Headers */,
 				0846B6D113EE5D8A00EA68E8 /* HCIsSame.h in Headers */,
 				77C7B86D14292D5100DE60CC /* HCHasProperty.h in Headers */,
+				5F2773401436F50C00B9683A /* HCConformsToProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1046,6 +1058,7 @@
 				0846B6D013EE5D8A00EA68E8 /* HCIsNil.mm in Sources */,
 				0846B6D413EE5D8A00EA68E8 /* HCIsSame.mm in Sources */,
 				77C7B87914293CC500DE60CC /* HCHasProperty.mm in Sources */,
+				5F2773471436FA9D00B9683A /* HCConformsToProtocol.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1094,6 +1107,7 @@
 				082E7C3613FF676E004A22FE /* InvocationMatcherTest.m in Sources */,
 				082E7C3813FF676E004A22FE /* StringDescriptionTest.m in Sources */,
 				77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */,
+				5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1145,6 +1159,7 @@
 				0846B6CF13EE5D8A00EA68E8 /* HCIsNil.mm in Sources */,
 				0846B6D313EE5D8A00EA68E8 /* HCIsSame.mm in Sources */,
 				77C7B86E14292D5100DE60CC /* HCHasProperty.mm in Sources */,
+				5F2773411436F50C00B9683A /* HCConformsToProtocol.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1193,6 +1208,7 @@
 				082E7C3513FF676E004A22FE /* InvocationMatcherTest.m in Sources */,
 				082E7C3713FF676E004A22FE /* StringDescriptionTest.m in Sources */,
 				77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */,
+				5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

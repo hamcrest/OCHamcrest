@@ -18,6 +18,7 @@
 
     @ingroup library
  */
+#import <OCHamcrest/HCConformsToProtocol.h>
 #import <OCHamcrest/HCHasDescription.h>
 #import <OCHamcrest/HCHasProperty.h>
 #import <OCHamcrest/HCIsEqual.h>
