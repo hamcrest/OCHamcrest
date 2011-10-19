@@ -143,9 +143,10 @@
         <li>@ref hasCountOf - match collection with given number of elements</li>
         <li>@ref hasEntries - match dictionary with list of key-value pairs</li>
         <li>@ref hasEntry - match dictionary containing a key-value pair</li>
+        <li>@ref hasItem - match if given item appears in the collection</li>
+        <li>@ref hasItems - match if all given items appears in the collection, in any order</li>
         <li>@ref hasKey - match dictionary with a key</li>
         <li>@ref hasValue - match dictionary with a value</li>
-        <li>@ref hasItems - match if given item appears in the collection</li>
         <li>@ref onlyContains -  match if collections's items appear in given list</li>
         </ul>
     <li>Decorator</li>
@@ -154,7 +155,7 @@
         <li>@ref is - decorator to improve readability - see @ref sugar, below</li>
         </ul>
     </ul>
-    
+
     The arguments for many of these matchers accept not just a matching value, but another matcher,
     so matchers can be composed for greater flexibility. For example,
     <tt>only_contains(endsWith(\@"."))</tt> will match any collection where every item is a string

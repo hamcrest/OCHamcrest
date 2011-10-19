@@ -149,10 +149,10 @@ OCHamcrest comes with a library of useful matchers:
   * ``hasCountOf`` - match collection with given number of elements
   * ``hasEntries`` - match dictionary with list of key-value pairs
   * ``hasEntry`` - match dictionary containing a key-value pair
-  * ``hasKey`` - match dictionary with a key
-  * ``hasValue`` - match dictionary with a value
   * ``hasItem`` - match if given item appears in the collection
   * ``hasItems`` - match if all given items appear in the collection, in any order
+  * ``hasKey`` - match dictionary with a key
+  * ``hasValue`` - match dictionary with a value
   * ``onlyContains`` - match if collections's items appear in given list
 
 * Decorator
