@@ -111,13 +111,13 @@ OCHamcrest comes with a library of useful matchers:
   * ``hasDescription`` - match object's ``-description``
   * ``hasProperty`` - match return value of method with given name
   * ``instanceOf`` - match object type
-  * ``nilValue``, ``notNilValue`` - match @c nil, or not @nil
+  * ``nilValue``, ``notNilValue`` - match ``nil``, or not ``nil``
   * ``sameInstance`` - match same object
 
 * Number
 
   * ``closeTo`` - match number close to a given value
-  * equalTo<TypeName> - match number equal to a primitive number (such as
+  * equalTo&lt;TypeName&gt; - match number equal to a primitive number (such as
   ``equalToInt`` for an ``int``)
   * ``greaterThan``, ``greaterThanOrEqualTo``, ``lessThan``,
   ``lessThanOrEqualTo`` - match numeric ordering
