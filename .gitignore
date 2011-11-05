@@ -3,3 +3,4 @@ build/
 *.perspectivev3
 project.xcworkspace/
 xcuserdata/
+Source/TestSupport/env.sh
