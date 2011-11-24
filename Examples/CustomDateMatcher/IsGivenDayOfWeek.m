@@ -3,12 +3,12 @@
 
 @implementation IsGivenDayOfWeek
 
-+ (id) isGivenDayOfWeek:(NSInteger)dayOfWeek
++ (id)isGivenDayOfWeek:(NSInteger)dayOfWeek
 {
     return [[[self alloc] initWithDay:dayOfWeek] autorelease];
 }
 
-- (id) initWithDay:(NSInteger)dayOfWeek
+- (id)initWithDay:(NSInteger)dayOfWeek
 {
     self = [super init];
     if (self != nil)
@@ -17,7 +17,7 @@
 }
 
 // Test whether item matches.
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     if (![item respondsToSelector:@selector(dayOfWeek)])
         return NO;
@@ -26,7 +26,7 @@
 }
 
 // Describe the matcher.
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     NSString* dayAsString[] =
         {@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"};

@@ -8,14 +8,14 @@
 
 @implementation Example
 
-- (void) testUsingAssertThat
+- (void)testUsingAssertThat
 {
     assertThat(@"xx", is(@"xx"));
     assertThat(@"yy", isNot(@"xx"));
     assertThat(@"i like cheese", containsString(@"cheese"));
 }
 
-- (void) testUsingNumbers
+- (void)testUsingNumbers
 {
     assertThatInt(42, is(equalToInt(42)));
     assertThatUnsignedShort(6 * 9, isNot(equalToUnsignedShort(42)));
