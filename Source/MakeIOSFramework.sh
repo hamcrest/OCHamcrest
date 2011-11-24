@@ -45,4 +45,4 @@ ln -s Versions/Current/OCHamcrestIOS "${IOS_FRAMEWORK}/OCHamcrestIOS"
 
 # Update the name in the plist file.
 NAME_EXPRESSION="s/OCHamcrest/OCHamcrestIOS/g;"
-perl -pi -e "${NAME_EXPRESSION}" "${IOS_FRAMEWORK}/Resources/OCHamcrest-Info.plist"
+perl -pi -e "${NAME_EXPRESSION}" "${IOS_FRAMEWORK}/Resources/Info.plist"
