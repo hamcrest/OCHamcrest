@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0817B62B147ED03A00C5401D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0817B62A147ED03A00C5401D /* SenTestingKit.framework */; };
 		089BA20D1298F19A00D4F34F /* IsGivenDayOfWeek.m in Sources */ = {isa = PBXBuildFile; fileRef = 089BA20C1298F19A00D4F34F /* IsGivenDayOfWeek.m */; };
 		08B5196E12A0678400147210 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B5196D12A0678400147210 /* OCHamcrest.framework */; };
 		08B51A4D12A0688B00147210 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08B5196D12A0678400147210 /* OCHamcrest.framework */; };
@@ -27,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0817B62A147ED03A00C5401D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = /System/Library/Frameworks/SenTestingKit.framework; sourceTree = "<absolute>"; };
 		089BA20B1298F19A00D4F34F /* IsGivenDayOfWeek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsGivenDayOfWeek.h; sourceTree = "<group>"; usesTabs = 0; };
 		089BA20C1298F19A00D4F34F /* IsGivenDayOfWeek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsGivenDayOfWeek.m; sourceTree = "<group>"; usesTabs = 0; };
 		08B5196D12A0678400147210 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = ../../OCHamcrest.framework; sourceTree = SOURCE_ROOT; };
@@ -41,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08B5196E12A0678400147210 /* OCHamcrest.framework in Frameworks */,
+				0817B62B147ED03A00C5401D /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +57,7 @@
 				089BA20C1298F19A00D4F34F /* IsGivenDayOfWeek.m */,
 				0FC264980DA88F1100B4CD6B /* SampleTest.m */,
 				0FC2658B0DA8981900B4CD6B /* Resources */,
-				0FC2658F0DA8983200B4CD6B /* External Frameworks and Libraries */,
+				0FC2658F0DA8983200B4CD6B /* Frameworks */,
 				0FC2648F0DA88ECB00B4CD6B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,20 +78,13 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		0FC2658F0DA8983200B4CD6B /* External Frameworks and Libraries */ = {
+		0FC2658F0DA8983200B4CD6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0FC2659D0DA8985800B4CD6B /* Linked Frameworks */,
-			);
-			name = "External Frameworks and Libraries";
-			sourceTree = "<group>";
-		};
-		0FC2659D0DA8985800B4CD6B /* Linked Frameworks */ = {
-			isa = PBXGroup;
-			children = (
+				0817B62A147ED03A00C5401D /* SenTestingKit.framework */,
 				08B5196D12A0678400147210 /* OCHamcrest.framework */,
 			);
-			name = "Linked Frameworks";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

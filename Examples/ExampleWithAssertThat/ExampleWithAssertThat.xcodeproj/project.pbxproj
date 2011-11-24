@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0817B622147ECFFC00C5401D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0817B621147ECFFC00C5401D /* SenTestingKit.framework */; };
 		08B519DB12A0681600147210 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B519DA12A0681600147210 /* OCHamcrest.framework */; };
 		08B519DC12A0682300147210 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08B519DA12A0681600147210 /* OCHamcrest.framework */; };
 		0FC264990DA88F1100B4CD6B /* ExampleWithAssertThat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC264980DA88F1100B4CD6B /* ExampleWithAssertThat.m */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0817B621147ECFFC00C5401D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		08B519DA12A0681600147210 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = ../../OCHamcrest.framework; sourceTree = SOURCE_ROOT; };
 		0FC2648E0DA88ECB00B4CD6B /* Example.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Example.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC264900DA88ECB00B4CD6B /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08B519DB12A0681600147210 /* OCHamcrest.framework in Frameworks */,
+				0817B622147ECFFC00C5401D /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,7 +52,7 @@
 			children = (
 				0FC264980DA88F1100B4CD6B /* ExampleWithAssertThat.m */,
 				0FC2658B0DA8981900B4CD6B /* Resources */,
-				0FC2658F0DA8983200B4CD6B /* External Frameworks and Libraries */,
+				0FC2658F0DA8983200B4CD6B /* Frameworks */,
 				0FC2648F0DA88ECB00B4CD6B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,20 +73,13 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		0FC2658F0DA8983200B4CD6B /* External Frameworks and Libraries */ = {
+		0FC2658F0DA8983200B4CD6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0FC2659D0DA8985800B4CD6B /* Linked Frameworks */,
-			);
-			name = "External Frameworks and Libraries";
-			sourceTree = "<group>";
-		};
-		0FC2659D0DA8985800B4CD6B /* Linked Frameworks */ = {
-			isa = PBXGroup;
-			children = (
+				0817B621147ECFFC00C5401D /* SenTestingKit.framework */,
 				08B519DA12A0681600147210 /* OCHamcrest.framework */,
 			);
-			name = "Linked Frameworks";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +195,6 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
-					"-framework",
-					SenTestingKit,
 				);
 				PRODUCT_NAME = Example;
 				WRAPPER_EXTENSION = octest;
@@ -224,8 +218,6 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
-					"-framework",
-					SenTestingKit,
 				);
 				PRODUCT_NAME = Example;
 				WRAPPER_EXTENSION = octest;

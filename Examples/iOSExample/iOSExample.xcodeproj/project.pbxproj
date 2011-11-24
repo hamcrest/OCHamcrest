@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0817B615147ECF5500C5401D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0817B614147ECF5500C5401D /* SenTestingKit.framework */; };
 		089B9DED1298DB1100D4F34F /* Example.m in Sources */ = {isa = PBXBuildFile; fileRef = 089B9DEC1298DB1100D4F34F /* Example.m */; };
 		08B51A8712A068BC00147210 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B51A8612A068BC00147210 /* OCHamcrestIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0817B614147ECF5500C5401D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		089B9DC71298DA0B00D4F34F /* Example.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Example.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		089B9DC81298DA0B00D4F34F /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
 		089B9DEC1298DB1100D4F34F /* Example.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example.m; sourceTree = "<group>"; usesTabs = 0; };
@@ -24,6 +26,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08B51A8712A068BC00147210 /* OCHamcrestIOS.framework in Frameworks */,
+				0817B615147ECF5500C5401D /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +55,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0817B614147ECF5500C5401D /* SenTestingKit.framework */,
 				08B51A8612A068BC00147210 /* OCHamcrestIOS.framework */,
 			);
 			name = Frameworks;
@@ -157,8 +161,6 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
-					"-framework",
-					SenTestingKit,
 					"-lstdc++",
 					"-ObjC",
 				);
@@ -186,8 +188,6 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
-					"-framework",
-					SenTestingKit,
 					"-lstdc++",
 					"-ObjC",
 				);
