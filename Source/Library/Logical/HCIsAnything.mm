@@ -24,7 +24,7 @@
 
 - (id)init
 {
-    [self initWithDescription:@"ANYTHING"];
+    self = [self initWithDescription:@"ANYTHING"];
     return self;
 }
 
