@@ -47,6 +47,11 @@ Add:
     #define HC_SHORTHAND
     #import <OCHamcrest/OCHamcrest.h>
 
+Note: If your Console shows
+
+    otest[57510:203] *** NSTask: Task create for path '...' failed: 22, "Invalid argument".  Terminating temporary process.
+
+double-check your Copy Files phase.
 
 __iOS:__
 
