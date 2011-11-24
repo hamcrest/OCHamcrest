@@ -35,11 +35,11 @@
     yet continue to pass when minor, unrelated changes to the behavior are made.
 
 
-    @section platforms Cocoa and iOS
+    @section platforms Mac and iOS
 
-    OCHamcrest is supported for both Cocoa and iOS development.
+    OCHamcrest is supported for both Mac and iOS development.
 
-    @b Cocoa:
+    @b Mac:
     @li Add @b OCHamcrest.framework to your project.
     @li Add a Copy Files build phase to copy OCHamcrest.framework to your Products Directory. For
         unit test bundles, make sure this Copy Files phase comes before the Run Script phase that

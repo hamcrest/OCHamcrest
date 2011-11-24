@@ -29,12 +29,12 @@ the expected behavior, yet continue to pass when minor, unrelated changes to the
 behavior are made.
 
 
-Cocoa and iOS
-=============
+Mac and iOS
+===========
 
-OCHamcrest is supported for both Cocoa and iOS development.
+OCHamcrest is supported for both Mac and iOS development.
 
-__Cocoa:__
+__Mac:__
 
 Add OCHamcrest.framework to your project.
 
