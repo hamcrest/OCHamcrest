@@ -3,10 +3,10 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
 
-@interface ExampleWithAssertThat : SenTestCase
+@interface Example : SenTestCase
 @end
 
-@implementation ExampleWithAssertThat
+@implementation Example
 
 - (void)testUsingAssertThat
 {
