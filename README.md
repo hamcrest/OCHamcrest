@@ -32,7 +32,7 @@ behavior are made.
 Mac and iOS
 ===========
 
-OCHamcrest is supported for both Mac and iOS development.
+OCHamcrest supports both Mac and iOS development.
 
 __Mac:__
 

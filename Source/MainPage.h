@@ -37,7 +37,7 @@
 
     @section platforms Mac and iOS
 
-    OCHamcrest is supported for both Mac and iOS development.
+    OCHamcrest supports both Mac and iOS development.
 
     @b Mac:
     @li Add @b OCHamcrest.framework to your project.
