@@ -55,6 +55,8 @@ double-check your Copy Files phase.
 
 __iOS:__
 
+Build OCHamcrestIOS.framework by running Source/MakeIOSFramework.sh.
+ 
 Add OCHamcrestIOS.framework to your project.
 
 Add "-lstdc++" and "-ObjC" to your "Other Linker Flags".
