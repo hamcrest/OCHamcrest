@@ -58,6 +58,45 @@
 
 @end
 
+@interface ValueHolder : NSObject {
+    int intValue;
+    short shortValue;
+    long longValue;
+    long long longLongValue;
+    float floatValue;
+    double doubleValue;
+    char charValue;
+    unsigned int unsignedIntValue;
+    unsigned short unsignedShortValue;
+    unsigned long unsignedLongValue;
+    unsigned long long unsignedLongLongValue;
+    unsigned char unsignedCharValue;
+    BOOL boolValue;    
+}
+
+@property int intValue;
+@property short shortValue;
+@property long longValue;
+@property long long longLongValue;
+@property float floatValue;
+@property double doubleValue;
+@property char charValue;
+@property unsigned int unsignedIntValue;
+@property unsigned short unsignedShortValue;
+@property unsigned long unsignedLongValue;
+@property unsigned long long unsignedLongLongValue;
+@property unsigned char unsignedCharValue;
+@property BOOL boolValue;
+
+@end
+
+@implementation ValueHolder
+
+@synthesize intValue, shortValue, longValue, longLongValue, floatValue, doubleValue, charValue;
+@synthesize unsignedIntValue, unsignedShortValue, unsignedLongValue, unsignedLongLongValue, unsignedCharValue;
+@synthesize boolValue;
+
+@end
 
 #pragma mark -
 
@@ -108,6 +147,38 @@
     assertMatches(@"equal int property values", hasProperty(@"shoeSize", equalToInt(13)), joe);
     assertDoesNotMatch(@"unequal int property values", hasProperty(@"shoeSize", equalToInt(3)), joe);
     assertDoesNotMatch(@"unequal int property values", hasProperty(@"shoeSize", equalToInt(-3)), joe);
+}
+
+- (void)testCanMatchPrimitiveValues 
+{
+    ValueHolder *foo = [[ValueHolder alloc] init];
+    foo.intValue = INT_MIN;
+    foo.shortValue = -2;
+    foo.longValue = LONG_MIN;
+    foo.longLongValue = LONG_MIN - 1;
+    foo.unsignedIntValue = UINT_MAX;
+    foo.unsignedShortValue = 2;
+    foo.unsignedLongValue = ULONG_MAX;
+    foo.unsignedLongLongValue = ULONG_LONG_MAX;
+    foo.charValue = 'a';
+    foo.unsignedCharValue = 'b';
+    foo.floatValue = 1.2;
+    foo.doubleValue = DBL_MAX;
+    foo.boolValue = YES;
+    
+    assertMatches(@"int should match INT_MIN", hasProperty(@"intValue", equalToInt(INT_MIN)), foo);
+    assertMatches(@"short should match -2", hasProperty(@"shortValue", equalToShort(-2)), foo);
+    assertMatches(@"long should match LONG_MIN", hasProperty(@"longValue", equalToLong(LONG_MIN)), foo);
+    assertMatches(@"long long should match LONG_MIN - 1", hasProperty(@"longLongValue", equalToLongLong(LONG_MIN - 1)), foo);
+    assertMatches(@"unsigned int should match UINT_MAX", hasProperty(@"unsignedIntValue", equalToUnsignedInt(UINT_MAX)), foo);
+    assertMatches(@"unsigned short should match 2", hasProperty(@"unsignedShortValue", equalToUnsignedShort(2)), foo);
+    assertMatches(@"unsigned long should match ULONG_MAX", hasProperty(@"unsignedLongValue", equalToUnsignedLong(ULONG_MAX)), foo);
+    assertMatches(@"unsigned long long should match ULONG_LONG_MAX", hasProperty(@"unsignedLongLongValue", equalToUnsignedLongLong(ULONG_LONG_MAX)), foo);
+    assertMatches(@"char should match a", hasProperty(@"charValue", equalToChar('a')), foo);
+    assertMatches(@"unsigned char should match b", hasProperty(@"unsignedCharValue", equalToUnsignedChar('b')), foo);
+    assertMatches(@"float should match 1.2", hasProperty(@"floatValue", equalToFloat(1.2)), foo);
+    assertMatches(@"double should match DBL_MAX", hasProperty(@"doubleValue", equalToDouble(DBL_MAX)), foo);
+    assertMatches(@"bool should match YES", hasProperty(@"boolValue", equalToBool(YES)), foo);
 }
 
 - (void)testNilPropertyValues
