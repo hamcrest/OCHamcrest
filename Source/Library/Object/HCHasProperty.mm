@@ -47,13 +47,25 @@
 
     NSMethodSignature *signature = [item methodSignatureForSelector:propertyGetter];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-    invocation.target = item;
-    invocation.selector = propertyGetter;
+    [invocation setTarget:item];
+    [invocation setSelector:propertyGetter];
     const char *argType = [signature methodReturnType];
 
-    if (argType) {
+    if (argType)
+    {
         [invocation invoke];
-        switch (argType[0]) {
+        switch (argType[0])
+        {
+            case 'B':
+                BOOL boolValue;
+                [invocation getReturnValue:&boolValue];
+                return [valueMatcher matches:[NSNumber numberWithBool:boolValue]];
+                break;
+            case 'c':
+                char charValue;
+                [invocation getReturnValue:&charValue];
+                return [valueMatcher matches:[NSNumber numberWithChar:charValue]];
+                break;
             case 'i':
                 int intValue;
                 [invocation getReturnValue:&intValue];
@@ -73,6 +85,11 @@
                 long long longLongValue;
                 [invocation getReturnValue:&longLongValue];
                 return [valueMatcher matches:[NSNumber numberWithLong:longLongValue]];
+                break;
+            case 'C':
+                unsigned char unsignedCharValue;
+                [invocation getReturnValue:&unsignedCharValue];
+                return [valueMatcher matches:[NSNumber numberWithUnsignedChar:unsignedCharValue]];
                 break;
             case 'I':
                 unsigned int unsignedIntValue;
@@ -94,16 +111,6 @@
                 [invocation getReturnValue:&unsignedLongLongValue];
                 return [valueMatcher matches:[NSNumber numberWithUnsignedLongLong:unsignedLongLongValue]];
                 break;
-            case 'c':
-                char charValue;
-                [invocation getReturnValue:&charValue];
-                return [valueMatcher matches:[NSNumber numberWithChar:charValue]];
-                break;
-            case 'C':
-                unsigned char unsignedCharValue;
-                [invocation getReturnValue:&unsignedCharValue];
-                return [valueMatcher matches:[NSNumber numberWithUnsignedChar:unsignedCharValue]];
-                break;
             case 'f':
                 float floatValue;
                 [invocation getReturnValue:&floatValue];
@@ -113,11 +120,6 @@
                 double doubleValue;
                 [invocation getReturnValue:&doubleValue];
                 return [valueMatcher matches:[NSNumber numberWithDouble:doubleValue]];
-                break;
-            case 'B':
-                BOOL boolValue;
-                [invocation getReturnValue:&boolValue];
-                return [valueMatcher matches:[NSNumber numberWithBool:boolValue]];
                 break;
         }
     }

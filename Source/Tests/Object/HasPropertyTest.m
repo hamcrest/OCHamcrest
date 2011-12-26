@@ -58,43 +58,56 @@
 
 @end
 
-@interface ValueHolder : NSObject {
+#pragma mark -
+
+@interface ValueHolder : NSObject
+{
+    BOOL boolValue;    
+    char charValue;
     int intValue;
     short shortValue;
     long longValue;
     long long longLongValue;
-    float floatValue;
-    double doubleValue;
-    char charValue;
+    unsigned char unsignedCharValue;
     unsigned int unsignedIntValue;
     unsigned short unsignedShortValue;
     unsigned long unsignedLongValue;
     unsigned long long unsignedLongLongValue;
-    unsigned char unsignedCharValue;
-    BOOL boolValue;    
+    float floatValue;
+    double doubleValue;
 }
 
-@property int intValue;
-@property short shortValue;
-@property long longValue;
-@property long long longLongValue;
-@property float floatValue;
-@property double doubleValue;
-@property char charValue;
-@property unsigned int unsignedIntValue;
-@property unsigned short unsignedShortValue;
-@property unsigned long unsignedLongValue;
-@property unsigned long long unsignedLongLongValue;
-@property unsigned char unsignedCharValue;
-@property BOOL boolValue;
+@property(nonatomic, assign) BOOL boolValue;
+@property(nonatomic, assign) char charValue;
+@property(nonatomic, assign) int intValue;
+@property(nonatomic, assign) short shortValue;
+@property(nonatomic, assign) long longValue;
+@property(nonatomic, assign) long long longLongValue;
+@property(nonatomic, assign) unsigned char unsignedCharValue;
+@property(nonatomic, assign) unsigned int unsignedIntValue;
+@property(nonatomic, assign) unsigned short unsignedShortValue;
+@property(nonatomic, assign) unsigned long unsignedLongValue;
+@property(nonatomic, assign) unsigned long long unsignedLongLongValue;
+@property(nonatomic, assign) float floatValue;
+@property(nonatomic, assign) double doubleValue;
 
 @end
 
 @implementation ValueHolder
 
-@synthesize intValue, shortValue, longValue, longLongValue, floatValue, doubleValue, charValue;
-@synthesize unsignedIntValue, unsignedShortValue, unsignedLongValue, unsignedLongLongValue, unsignedCharValue;
 @synthesize boolValue;
+@synthesize charValue;
+@synthesize intValue;
+@synthesize shortValue;
+@synthesize longValue;
+@synthesize longLongValue;
+@synthesize floatValue;
+@synthesize doubleValue;
+@synthesize unsignedCharValue;
+@synthesize unsignedIntValue;
+@synthesize unsignedShortValue;
+@synthesize unsignedLongValue;
+@synthesize unsignedLongLongValue;
 
 @end
 
@@ -151,34 +164,39 @@
 
 - (void)testCanMatchPrimitiveValues 
 {
-    ValueHolder *foo = [[ValueHolder alloc] init];
+    ValueHolder *foo = [[[ValueHolder alloc] init] autorelease];
+    foo.boolValue = YES;
+    foo.charValue = 'a';
     foo.intValue = INT_MIN;
     foo.shortValue = -2;
     foo.longValue = LONG_MIN;
     foo.longLongValue = LONG_MIN - 1;
+    foo.unsignedCharValue = 'b';
     foo.unsignedIntValue = UINT_MAX;
     foo.unsignedShortValue = 2;
     foo.unsignedLongValue = ULONG_MAX;
     foo.unsignedLongLongValue = ULONG_LONG_MAX;
-    foo.charValue = 'a';
-    foo.unsignedCharValue = 'b';
     foo.floatValue = 1.2;
     foo.doubleValue = DBL_MAX;
-    foo.boolValue = YES;
     
-    assertMatches(@"int should match INT_MIN", hasProperty(@"intValue", equalToInt(INT_MIN)), foo);
-    assertMatches(@"short should match -2", hasProperty(@"shortValue", equalToShort(-2)), foo);
-    assertMatches(@"long should match LONG_MIN", hasProperty(@"longValue", equalToLong(LONG_MIN)), foo);
-    assertMatches(@"long long should match LONG_MIN - 1", hasProperty(@"longLongValue", equalToLongLong(LONG_MIN - 1)), foo);
-    assertMatches(@"unsigned int should match UINT_MAX", hasProperty(@"unsignedIntValue", equalToUnsignedInt(UINT_MAX)), foo);
-    assertMatches(@"unsigned short should match 2", hasProperty(@"unsignedShortValue", equalToUnsignedShort(2)), foo);
-    assertMatches(@"unsigned long should match ULONG_MAX", hasProperty(@"unsignedLongValue", equalToUnsignedLong(ULONG_MAX)), foo);
-    assertMatches(@"unsigned long long should match ULONG_LONG_MAX", hasProperty(@"unsignedLongLongValue", equalToUnsignedLongLong(ULONG_LONG_MAX)), foo);
-    assertMatches(@"char should match a", hasProperty(@"charValue", equalToChar('a')), foo);
-    assertMatches(@"unsigned char should match b", hasProperty(@"unsignedCharValue", equalToUnsignedChar('b')), foo);
-    assertMatches(@"float should match 1.2", hasProperty(@"floatValue", equalToFloat(1.2)), foo);
-    assertMatches(@"double should match DBL_MAX", hasProperty(@"doubleValue", equalToDouble(DBL_MAX)), foo);
-    assertMatches(@"bool should match YES", hasProperty(@"boolValue", equalToBool(YES)), foo);
+    assertMatches(@"BOOL should match", hasProperty(@"boolValue", equalToBool(YES)), foo);
+    assertMatches(@"char should match", hasProperty(@"charValue", equalToChar('a')), foo);
+    assertMatches(@"int should match", hasProperty(@"intValue", equalToInt(INT_MIN)), foo);
+    assertMatches(@"short should match", hasProperty(@"shortValue", equalToShort(-2)), foo);
+    assertMatches(@"long should match", hasProperty(@"longValue", equalToLong(LONG_MIN)), foo);
+    assertMatches(@"long long should match", hasProperty(@"longLongValue", equalToLongLong(LONG_MIN - 1)), foo);
+    assertMatches(@"unsigned char should match",
+                  hasProperty(@"unsignedCharValue", equalToUnsignedChar('b')), foo);
+    assertMatches(@"unsigned int should match",
+                  hasProperty(@"unsignedIntValue", equalToUnsignedInt(UINT_MAX)), foo);
+    assertMatches(@"unsigned short should match",
+                  hasProperty(@"unsignedShortValue", equalToUnsignedShort(2)), foo);
+    assertMatches(@"unsigned long should match",
+                  hasProperty(@"unsignedLongValue", equalToUnsignedLong(ULONG_MAX)), foo);
+    assertMatches(@"unsigned long long should match",
+                  hasProperty(@"unsignedLongLongValue", equalToUnsignedLongLong(ULONG_LONG_MAX)), foo);
+    assertMatches(@"float should match", hasProperty(@"floatValue", equalToFloat(1.2)), foo);
+    assertMatches(@"double should match", hasProperty(@"doubleValue", equalToDouble(DBL_MAX)), foo);
 }
 
 - (void)testNilPropertyValues
