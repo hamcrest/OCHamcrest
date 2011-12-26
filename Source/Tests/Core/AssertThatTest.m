@@ -16,7 +16,7 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 
-@interface QuietTestRun : SenTestCaseRun
+@interface MockTestRun : SenTestCaseRun
 {
     // Can't use original attributes because they're declared @private.
     unsigned int myFailureCount;
@@ -24,7 +24,7 @@
 }
 @end
 
-@implementation QuietTestRun
+@implementation MockTestRun
 
 - (void)addException:(NSException *) anException
 {
@@ -56,7 +56,7 @@
 
 - (Class)testRunClass
 {
-    return [QuietTestRun class];
+    return [MockTestRun class];
 }
 
 - (void)twoFailingAssertions
@@ -80,7 +80,6 @@
     assertThat(@"foo", equalTo(@"foo"));
 }
 
-
 - (void)testAssertionErrorShouldDescribeExpectedAndActual
 {
     NSString *expected = @"EXPECTED";
@@ -100,30 +99,26 @@
     STFail(@"should have failed");
 }
 
-
-- (void)testAssertion_recordingAllErrors
+- (void)testAssertionRecordingAllErrors
 {
     QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
     [testCase continueAfterFailure];    // Default behavior of OCUnit
 
-    QuietTestRun *testRun = (QuietTestRun *)[testCase run];
+    MockTestRun *testRun = (MockTestRun *)[testCase run];
 
     STAssertEquals([testRun failureCount], 2U, nil);
     STAssertEquals([testRun unexpectedExceptionCount], 0U, nil);
 }
 
-
-#if !TARGET_OS_IPHONE   // iOS version of SenTestingKit doesn't like this test
-- (void)testAssertion_stoppingAtFirstError
+- (void)testAssertionStoppingAtFirstError
 {
     QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
-    [testCase raiseAfterFailure];
+    [testCase raiseAfterFailure];       // Change behavior
 
-    QuietTestRun *testRun = (QuietTestRun *)[testCase run];
+    MockTestRun *testRun = (MockTestRun *)[testCase run];
 
     STAssertEquals([testRun failureCount], 1U, nil);
     STAssertEquals([testRun unexpectedExceptionCount], 0U, nil);
 }
-#endif
 
 @end
