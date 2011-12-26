@@ -56,11 +56,6 @@
         [invocation invoke];
         switch (argType[0])
         {
-            case 'B':
-                BOOL boolValue;
-                [invocation getReturnValue:&boolValue];
-                return [valueMatcher matches:[NSNumber numberWithBool:boolValue]];
-                break;
             case 'c':
                 char charValue;
                 [invocation getReturnValue:&charValue];
