@@ -11,6 +11,10 @@
 #import "HCRequireNonNilObject.h"
 #import "HCWrapInMatcher.h"
 
+@interface HCHasProperty ()
+- (id)objectFromInvokingSelector:(SEL)selector onObject:(id)item;
+@end
+
 
 @implementation HCHasProperty
 
@@ -45,78 +49,100 @@
     if (![item respondsToSelector:propertyGetter])
         return NO;
 
-    NSMethodSignature *getterSignature = [item methodSignatureForSelector:propertyGetter];
+    id propertyValue = [self objectFromInvokingSelector:propertyGetter onObject:item];
+    return [valueMatcher matches:propertyValue];
+}
+
+- (id)objectFromInvokingSelector:(SEL)selector onObject:(id)object
+{
+    NSMethodSignature *getterSignature = [object methodSignatureForSelector:selector];
     NSInvocation *getterInvocation = [NSInvocation invocationWithMethodSignature:getterSignature];
-    [getterInvocation setTarget:item];
-    [getterInvocation setSelector:propertyGetter];
+    [getterInvocation setTarget:object];
+    [getterInvocation setSelector:selector];
     [getterInvocation invoke];
     
+    id result = nil;
     const char *argType = [getterSignature methodReturnType];
     switch (argType[0])
     {
         case 'c':
             char charValue;
             [getterInvocation getReturnValue:&charValue];
-            return [valueMatcher matches:[NSNumber numberWithChar:charValue]];
+            result = [NSNumber numberWithChar:charValue];
             break;
+            
         case 'i':
             int intValue;
             [getterInvocation getReturnValue:&intValue];
-            return [valueMatcher matches:[NSNumber numberWithInt:intValue]];
+            result = [NSNumber numberWithInt:intValue];
             break;
+            
         case 's':
             short shortValue;
             [getterInvocation getReturnValue:&shortValue];
-            return [valueMatcher matches:[NSNumber numberWithShort:shortValue]];
+            result = [NSNumber numberWithShort:shortValue];
             break;
+            
         case 'l':
             long longValue;
             [getterInvocation getReturnValue:&longValue];
-            return [valueMatcher matches:[NSNumber numberWithLong:longValue]];
+            result = [NSNumber numberWithLong:longValue];
             break;
+            
         case 'q':
             long long longLongValue;
             [getterInvocation getReturnValue:&longLongValue];
-            return [valueMatcher matches:[NSNumber numberWithLong:longLongValue]];
+            result = [NSNumber numberWithLong:longLongValue];
             break;
+            
         case 'C':
             unsigned char unsignedCharValue;
             [getterInvocation getReturnValue:&unsignedCharValue];
-            return [valueMatcher matches:[NSNumber numberWithUnsignedChar:unsignedCharValue]];
+            result = [NSNumber numberWithUnsignedChar:unsignedCharValue];
             break;
+            
         case 'I':
             unsigned int unsignedIntValue;
             [getterInvocation getReturnValue:&unsignedIntValue];
-            return [valueMatcher matches:[NSNumber numberWithUnsignedInt:unsignedIntValue]];
+            result = [NSNumber numberWithUnsignedInt:unsignedIntValue];
             break;
+            
         case 'S':
             unsigned short unsignedShortValue;
             [getterInvocation getReturnValue:&unsignedShortValue];
-            return [valueMatcher matches:[NSNumber numberWithUnsignedShort:unsignedShortValue]];
+            result = [NSNumber numberWithUnsignedShort:unsignedShortValue];
             break;
+            
         case 'L':
             unsigned long unsignedLongValue;
             [getterInvocation getReturnValue:&unsignedLongValue];
-            return [valueMatcher matches:[NSNumber numberWithUnsignedLong:unsignedLongValue]];
+            result = [NSNumber numberWithUnsignedLong:unsignedLongValue];
             break;
+            
         case 'Q':
             unsigned long long unsignedLongLongValue;
             [getterInvocation getReturnValue:&unsignedLongLongValue];
-            return [valueMatcher matches:[NSNumber numberWithUnsignedLongLong:unsignedLongLongValue]];
+            result = [NSNumber numberWithUnsignedLongLong:unsignedLongLongValue];
             break;
+            
         case 'f':
             float floatValue;
             [getterInvocation getReturnValue:&floatValue];
-            return [valueMatcher matches:[NSNumber numberWithFloat:floatValue]];
+            result = [NSNumber numberWithFloat:floatValue];
             break;
+            
         case 'd':
             double doubleValue;
             [getterInvocation getReturnValue:&doubleValue];
-            return [valueMatcher matches:[NSNumber numberWithDouble:doubleValue]];
+            result = [NSNumber numberWithDouble:doubleValue];
+            break;
+            
+        case '@':
+            [getterInvocation getReturnValue:&result];
             break;
     }
-
-    return [valueMatcher matches:[item performSelector:propertyGetter]];
+    
+    return result;
 }
 
 - (void)describeTo:(id<HCDescription>)description
