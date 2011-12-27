@@ -13,9 +13,6 @@
 #import "AbstractMatcherTest.h"
 
 
-@interface ConformsToProtocolTest : AbstractMatcherTest
-@end
-
 @protocol TestProtocol
 @end
 
@@ -24,10 +21,16 @@
 
 @implementation TestClass
 
-+ (TestClass *)testClass {
++ (TestClass *)testClass
+{
     return [[[TestClass alloc] init] autorelease];
 }
 
+@end
+
+#pragma mark -
+
+@interface ConformsToProtocolTest : AbstractMatcherTest
 @end
 
 @implementation ConformsToProtocolTest

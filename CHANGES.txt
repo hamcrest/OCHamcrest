@@ -9,6 +9,9 @@ Quality Coding - Tools, tips and techniques for building quality in to your iOS 
 
 == NEXT VERSION IN PROGRESS ==
 
+* New matchers:
+  - "conformsToProtocol" matches objects that conform to a given protocol. Thanks to: Todd Farrell
+
 * Improved matchers:
   - "hasProperty" now works for methods with primitive return types. Thanks to: Christopher Pickslay
 

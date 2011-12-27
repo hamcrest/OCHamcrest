@@ -36,7 +36,7 @@
 - (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"an object that conforms to "]
-     appendText:NSStringFromProtocol(theProtocol)];
+                  appendText:NSStringFromProtocol(theProtocol)];
 }
 
 @end

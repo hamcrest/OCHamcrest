@@ -114,6 +114,7 @@ OCHamcrest comes with a library of useful matchers:
 
 * Object
 
+  * ``conformsToProtocol`` - match object that conforms to protocol
   * ``equalTo`` - match equal object
   * ``hasDescription`` - match object's ``-description``
   * ``hasProperty`` - match return value of method with given name
