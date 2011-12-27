@@ -7,18 +7,24 @@ Python version: http://pypi.python.org/pypi/PyHamcrest
 Quality Coding - Tools, tips and techniques for building quality in to your iOS programs: http://jonreid.blogs.com/qualitycoding/
 
 
+== NEXT VERSION IN PROGRESS ==
+
+* Improved matchers:
+  - "hasProperty" now works for methods with primitive return types. Thanks to: Christopher Pickslay
+
+
 == Version 1.6 ==
 
 27 Sep 2011
 * New matchers:
-  * "hasProperty" matches the return value of a method with a given name. (It could be a property, but really can be any method with no arguments that returns an object.) Thanks to: Justin Shacklette
+  - "hasProperty" matches the return value of a method with a given name. (It could be a property, but really can be any method with no arguments that returns an object.) Thanks to: Justin Shacklette
 
 * Improvements:
-  * Rewrote documentation.
-  * Matchers that require a nil-terminated list now generate a compiler error if you don't have nil at the end.
+  - Rewrote documentation.
+  - Matchers that require a nil-terminated list now generate a compiler error if you don't have nil at the end.
 
 * Fixes:
- * "stringContainsInOrder" was missing from the master header; now it's there.
+  - "stringContainsInOrder" was missing from the master header; now it's there.
 
 
 == Version 1.5 ==
