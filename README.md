@@ -5,7 +5,7 @@
 See also:
 
 * [PyHamcrest](http://pypi.python.org/pypi/PyHamcrest) - Python version.
-* [Quality Coding](http://jonreid.blogs.com/qualitycoding/) - Tools, tips and
+* [Quality Coding](http://qualitycoding.org/) - Tools, tips and
 techniques for _building quality in_ to your iOS programs.
 
 
