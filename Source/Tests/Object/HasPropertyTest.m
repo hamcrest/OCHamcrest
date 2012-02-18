@@ -77,19 +77,19 @@
     double doubleValue;
 }
 
-@property(nonatomic, assign) BOOL boolValue;
-@property(nonatomic, assign) char charValue;
-@property(nonatomic, assign) int intValue;
-@property(nonatomic, assign) short shortValue;
-@property(nonatomic, assign) long longValue;
-@property(nonatomic, assign) long long longLongValue;
-@property(nonatomic, assign) unsigned char unsignedCharValue;
-@property(nonatomic, assign) unsigned int unsignedIntValue;
-@property(nonatomic, assign) unsigned short unsignedShortValue;
-@property(nonatomic, assign) unsigned long unsignedLongValue;
-@property(nonatomic, assign) unsigned long long unsignedLongLongValue;
-@property(nonatomic, assign) float floatValue;
-@property(nonatomic, assign) double doubleValue;
+@property (nonatomic, assign) BOOL boolValue;
+@property (nonatomic, assign) char charValue;
+@property (nonatomic, assign) int intValue;
+@property (nonatomic, assign) short shortValue;
+@property (nonatomic, assign) long longValue;
+@property (nonatomic, assign) long long longLongValue;
+@property (nonatomic, assign) unsigned char unsignedCharValue;
+@property (nonatomic, assign) unsigned int unsignedIntValue;
+@property (nonatomic, assign) unsigned short unsignedShortValue;
+@property (nonatomic, assign) unsigned long unsignedLongValue;
+@property (nonatomic, assign) unsigned long long unsignedLongLongValue;
+@property (nonatomic, assign) float floatValue;
+@property (nonatomic, assign) double doubleValue;
 
 @end
 
