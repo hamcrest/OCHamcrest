@@ -1,5 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node7" href="$interface_h_c_string_description.html" title="An HCDescription that is stored as a string." alt="" coords="56,160,213,189"/>
-<area shape="rect" id="node2" title="conformsToProtocol(aProtocol) &#45; Matches if object conforms to a given protocol." alt="" coords="5,5,115,35"/>
-<area shape="rect" id="node4" href="$protocol_h_c_description-p.html" title="A description of an HCMatcher." alt="" coords="139,5,280,35"/>
+<area shape="rect" id="node5" href="$interface_h_c_string_description.html" title="An HCDescription that is stored as a string." alt="" coords="5,160,163,189"/>
+<area shape="rect" id="node2" href="$protocol_h_c_description-p.html" title="A description of an HCMatcher." alt="" coords="13,5,155,35"/>
 </map>

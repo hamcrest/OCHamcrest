@@ -223,8 +223,9 @@
       <APILanguage>unknown</APILanguage>
       <Type>macro</Type>
     </TokenIdentifier>
-    <Path>_h_c_conforms_to_protocol_8h.html</Path>
-    <Anchor>a59f43b8a89c80e061e72b05094d4a815</Anchor>
+    <Path>group__object__matchers.html</Path>
+    <Anchor>ga59f43b8a89c80e061e72b05094d4a815</Anchor>
+    <Abstract>conformsToProtocol(aProtocol) - Matches if object conforms to a given protocol.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1676,6 +1677,16 @@
     </TokenIdentifier>
     <Path>group__object__matchers.html</Path>
     <Abstract>Matchers that inspect objects.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>conformsToProtocol</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>macro</Type>
+    </TokenIdentifier>
+    <Path>group__object__matchers.html</Path>
+    <Anchor>ga59f43b8a89c80e061e72b05094d4a815</Anchor>
+    <Abstract>conformsToProtocol(aProtocol) - Matches if object conforms to a given protocol.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>

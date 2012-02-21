@@ -59,6 +59,8 @@
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga59f43b8a89c80e061e72b05094d4a815">conformsToProtocol</a>&#160;&#160;&#160;HC_conformsToProtocol</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__object__matchers.html#ga59f43b8a89c80e061e72b05094d4a815" title="conformsToProtocol(aProtocol) - Matches if object conforms to a given protocol.">conformsToProtocol(aProtocol)</a> - Matches if object conforms to a given protocol.  <a href="#ga59f43b8a89c80e061e72b05094d4a815"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga1387c03591bf1654b93420c827d08ccb">hasDescription</a>&#160;&#160;&#160;HC_hasDescription</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__object__matchers.html#ga1387c03591bf1654b93420c827d08ccb" title="hasDescription(aMatcher) - Matches if object&#39;s -description satisfies a given matcher.">hasDescription(aMatcher)</a> - Matches if object's <code>-description</code> satisfies a given matcher.  <a href="#ga1387c03591bf1654b93420c827d08ccb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#ga0c6179b7cc2e6ff7c8686602669ba082">hasProperty</a>&#160;&#160;&#160;HC_hasProperty</td></tr>
@@ -77,6 +79,33 @@ Defines</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <p>Matchers that inspect objects. </p>
 <hr/><h2>Define Documentation</h2>
+<a class="anchor" id="ga59f43b8a89c80e061e72b05094d4a815"></a><!-- doxytag: member="HCConformsToProtocol.h::conformsToProtocol" ref="ga59f43b8a89c80e061e72b05094d4a815" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define conformsToProtocol&#160;&#160;&#160;HC_conformsToProtocol</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><a class="el" href="group__object__matchers.html#ga59f43b8a89c80e061e72b05094d4a815" title="conformsToProtocol(aProtocol) - Matches if object conforms to a given protocol.">conformsToProtocol(aProtocol)</a> - Matches if object conforms to a given protocol. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aProtocol</td><td>The protocol to compare against as the expected protocol.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This matcher checks whether the evaluated object conforms to <em>aProtocol</em>.</p>
+<p>Example: </p>
+<ul>
+<li><a class="el" href="group__object__matchers.html#ga59f43b8a89c80e061e72b05094d4a815">conformsToProtocol</a>(@protocol(NSObject))</li>
+</ul>
+<p>(In the event of a name clash, don't #define <code>HC_SHORTHAND</code> and use the synonym <code>HC_conformsToProtocol</code> instead.) </p>
+
+</div>
+</div>
 <a class="anchor" id="gaed554671d587236694fbb3723fe2f8a4"></a><!-- doxytag: member="HCIsEqual.h::equalTo" ref="gaed554671d587236694fbb3723fe2f8a4" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -152,8 +181,8 @@ Defines</h2></td></tr>
 <p>While this matcher is called "hasProperty", it's useful for checking the results of any simple methods, not just properties.</p>
 <p>Examples: </p>
 <ul>
-<li><a class="el" href="group__object__matchers.html#ga0c6179b7cc2e6ff7c8686602669ba082">hasProperty</a>("firstName", @"Joe")
-    @li @ref hasProperty(@"firstName", startsWith(@"J"))</li>
+<li><a class="el" href="group__object__matchers.html#ga0c6179b7cc2e6ff7c8686602669ba082">hasProperty</a>(@"firstName", @"Joe") </li>
+<li><a class="el" href="group__object__matchers.html#ga0c6179b7cc2e6ff7c8686602669ba082">hasProperty</a>(@"firstName", startsWith(@"J"))</li>
 </ul>
 <p>(In the event of a name clash, don't #define <code>HC_SHORTHAND</code> and use the synonym <code>HC_hasProperty</code> instead.) </p>
 
@@ -251,7 +280,7 @@ Defines</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 20 2012 22:21:54 for OCHamcrest by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 21 2012 08:58:45 for OCHamcrest by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>

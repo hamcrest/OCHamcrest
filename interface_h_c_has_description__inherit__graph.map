@@ -1,7 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$interface_h_c_invocation_matcher.html" title="Supporting class for matching a feature of an object." alt="" coords="5,315,173,344"/>
-<area shape="rect" id="node4" href="$interface_h_c_base_matcher.html" title="Base class for all HCMatcher implementations." alt="" coords="23,237,156,267"/>
-<area shape="rect" id="node6" title="conformsToProtocol(aProtocol) &#45; Matches if object conforms to a given protocol." alt="" coords="44,5,153,35"/>
-<area shape="rect" id="node10" href="$protocol_h_c_self_describing-p.html" title="The ability of an object to describe itself." alt="" coords="79,83,236,112"/>
-<area shape="rect" id="node8" href="$protocol_h_c_matcher-p.html" title="A matcher over acceptable values." alt="" coords="88,160,208,189"/>
+<area shape="rect" id="node2" href="$interface_h_c_invocation_matcher.html" title="Supporting class for matching a feature of an object." alt="" coords="5,237,173,267"/>
+<area shape="rect" id="node4" href="$interface_h_c_base_matcher.html" title="Base class for all HCMatcher implementations." alt="" coords="23,160,156,189"/>
+<area shape="rect" id="node6" href="$protocol_h_c_matcher-p.html" title="A matcher over acceptable values." alt="" coords="29,83,149,112"/>
+<area shape="rect" id="node8" href="$protocol_h_c_self_describing-p.html" title="The ability of an object to describe itself." alt="" coords="11,5,168,35"/>
 </map>
