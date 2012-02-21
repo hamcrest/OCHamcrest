@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - IsEqualIgnoringCaseTest.m
-//  Copyright 2011 hamcrest.org. See LICENSE.txt
+//  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
 //

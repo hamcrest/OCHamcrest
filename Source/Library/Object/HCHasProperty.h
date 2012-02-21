@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - HCHasProperty.h
-//  Copyright 2011 hamcrest.org. See LICENSE.txt
+//  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Justin Shacklette
 //
