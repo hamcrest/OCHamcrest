@@ -1,19 +1,14 @@
-Full documentation: http://jonreid.github.com/OCHamcrest/
-Latest sources: https://github.com/jonreid/OCHamcrest
-Hamcrest information: http://code.google.com/p/hamcrest/
+== Version 1.7 ==
 
-See also:
-Python version: http://pypi.python.org/pypi/PyHamcrest
-Quality Coding - Tools, tips and techniques for building quality in to your iOS programs: http://jonreid.blogs.com/qualitycoding/
-
-
-== NEXT VERSION IN PROGRESS ==
-
+20 Feb 2011
 * New matchers:
   - "conformsToProtocol" matches objects that conform to a given protocol. Thanks to: Todd Farrell
 
 * Improved matchers:
   - "hasProperty" now works for methods with primitive return types. Thanks to: Christopher Pickslay
+
+* Other improvements:
+  - Rewrote introductory sections of documentation.
 
 
 == Version 1.6 ==
