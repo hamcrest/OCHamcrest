@@ -2,6 +2,7 @@ What is OCHamcrest?
 ===================
 
 OCHamcrest is:
+
 * a library of "matcher" objects that let you declare rules for whether a given
   object matches the criteria or not.
 * a framework for writing your own matchers.
@@ -11,6 +12,7 @@ they're most commonly used for writing unit tests that are expressive and
 flexible.
 
 OCHamcrest is used for both Mac and iOS development with:
+
 * OCUnit (SenTestingKit) built in to Xcode
 * Google Toolbox for Mac (GTM)
 * GHUnit
