@@ -1,38 +1,37 @@
-* [Full documentation](http://jonreid.github.com/OCHamcrest/)
-* [Latest sources](https://github.com/jonreid/OCHamcrest)
-* [Hamcrest information](http://code.google.com/p/hamcrest/)
+What is OCHamcrest?
+===================
 
-See also:
+OCHamcrest is:
+* a library of "matcher" objects that let you declare rules for whether a given
+  object matches the criteria or not.
+* a framework for writing your own matchers.
 
-* [PyHamcrest](http://pypi.python.org/pypi/PyHamcrest) - Python version.
-* [Quality Coding](http://qualitycoding.org/) - Tools, tips &
-techniques for _building quality in_ to iOS development.
+Matchers are useful for a variety of purposes, such as UI validation. But
+they're most commonly used for writing unit tests that are expressive and
+flexible.
 
-
-Introduction
-============
-
-OCHamcrest is a framework for writing matcher objects, allowing you to
-declaratively define "match" rules. There are a number of situations where
-matchers are invaluable, such as UI validation, or data filtering, but it is in
-the area of writing flexible tests that matchers are most commonly used. This
-tutorial shows you how to use OCHamcrest for unit testing.
-
-When writing tests it is sometimes difficult to get the balance right between
-overspecifying the test (and making it brittle to changes), and not specifying
-enough (making the test less valuable since it continues to pass even when the
-thing being tested is broken). Having a tool that allows you to pick out
-precisely the aspect under test and describe the values it should have, to a
-controlled level of precision, helps greatly in writing tests that are "just
-right." Such tests fail when the behavior of the aspect under test deviates from
-the expected behavior, yet continue to pass when minor, unrelated changes to the
-behavior are made.
+OCHamcrest is used for both Mac and iOS development with:
+* OCUnit (SenTestingKit) built in to Xcode
+* Google Toolbox for Mac (GTM)
+* GHUnit
+* Cedar BDD framework
+* OCMock
+* OCHandMock
+* OCMockito
 
 
-Mac and iOS
-===========
+How do I add OCHamcrest to my project?
+======================================
 
-OCHamcrest supports both Mac and iOS development.
+Rather than build OCHamcrest yourself, I recommend you use the pre-built release
+available in Downloads. This works for projects using Automatic Reference
+Counting (ARC) as well as for projects using traditional memory management.
+
+(But if you still want to build OCHamcrest yourself, go into the Source folder
+and execute ``MakeDistribution.sh`` from Terminal.)
+
+The steps vary slightly depending on whether your project is a Mac project or an
+iOS project:
 
 __Mac:__
 
@@ -54,8 +53,6 @@ Note: If your Console shows
 double-check your Copy Files phase.
 
 __iOS:__
-
-To build OCHamcrestIOS.framework, run Source/MakeIOSFramework.sh.
 
 Add OCHamcrestIOS.framework to your project.
 
@@ -291,3 +288,14 @@ Even though the ``onASaturday`` function creates a new matcher each time it is
 called, you should not assume this is the only usage pattern for your matcher.
 Therefore you should make sure your matcher is stateless, so a single instance
 can be reused between matches.
+
+
+More resources
+==============
+
+* [OCHamcrest documentation](http://jonreid.github.com/OCHamcrest/)
+* [Latest OCHamcrest sources](https://github.com/jonreid/OCHamcrest)
+* [Official Hamcrest website](http://code.google.com/p/hamcrest/)
+* [PyHamcrest](http://pypi.python.org/pypi/PyHamcrest) - Python version.
+* [Quality Coding](http://qualitycoding.org/) - Tools, tips &
+techniques for _building quality in_ to iOS development.
