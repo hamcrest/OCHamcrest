@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node12" href="$interface_h_c_has_description.html" title="HCHasDescription" alt="" coords="17,392,161,421"/>
+<area shape="rect" id="node2" href="$interface_h_c_base_matcher.html" title="Base class for all HCMatcher implementations." alt="" coords="23,237,156,267"/>
+<area shape="rect" id="node4" title="conformsToProtocol(aProtocol) &#45; Matches if object conforms to a given protocol." alt="" coords="44,5,153,35"/>
+<area shape="rect" id="node8" href="$protocol_h_c_self_describing-p.html" title="The ability of an object to describe itself." alt="" coords="79,83,236,112"/>
+<area shape="rect" id="node6" href="$protocol_h_c_matcher-p.html" title="A matcher over acceptable values." alt="" coords="88,160,208,189"/>
+</map>

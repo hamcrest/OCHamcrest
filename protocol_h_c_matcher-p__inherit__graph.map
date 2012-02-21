@@ -1,0 +1,39 @@
+<map id="G" name="G">
+<area shape="rect" id="node7" href="$interface_h_c_base_matcher.html" title="Base class for all HCMatcher implementations." alt="" coords="541,752,675,781"/>
+<area shape="rect" id="node2" href="$protocol_h_c_self_describing-p.html" title="The ability of an object to describe itself." alt="" coords="164,752,321,781"/>
+<area shape="rect" id="node4" title="conformsToProtocol(aProtocol) &#45; Matches if object conforms to a given protocol." alt="" coords="5,752,115,781"/>
+<area shape="rect" id="node9" href="$interface_h_c_all_of.html" title="HCAllOf" alt="" coords="820,5,892,35"/>
+<area shape="rect" id="node11" href="$interface_h_c_any_of.html" title="HCAnyOf" alt="" coords="815,59,897,88"/>
+<area shape="rect" id="node13" href="$interface_h_c_conforms_to_protocol.html" title="HCConformsToProtocol" alt="" coords="768,112,944,141"/>
+<area shape="rect" id="node15" href="$interface_h_c_described_as.html" title="HCDescribedAs" alt="" coords="793,165,919,195"/>
+<area shape="rect" id="node17" href="$interface_h_c_has_count.html" title="HCHasCount" alt="" coords="803,219,909,248"/>
+<area shape="rect" id="node21" href="$interface_h_c_has_property.html" title="HCHasProperty" alt="" coords="793,272,919,301"/>
+<area shape="rect" id="node23" href="$interface_h_c_invocation_matcher.html" title="Supporting class for matching a feature of an object." alt="" coords="772,325,940,355"/>
+<area shape="rect" id="node27" href="$interface_h_c_is.html" title="HCIs" alt="" coords="829,379,883,408"/>
+<area shape="rect" id="node29" href="$interface_h_c_is_anything.html" title="HCIsAnything" alt="" coords="800,432,912,461"/>
+<area shape="rect" id="node31" href="$interface_h_c_is_close_to.html" title="HCIsCloseTo" alt="" coords="804,485,908,515"/>
+<area shape="rect" id="node33" href="$interface_h_c_is_collection_containing.html" title="HCIsCollectionContaining" alt="" coords="761,539,951,568"/>
+<area shape="rect" id="node35" href="$interface_h_c_is_collection_containing_in_any_order.html" title="HCIsCollectionContainingInAnyOrder" alt="" coords="723,592,989,621"/>
+<area shape="rect" id="node37" href="$interface_h_c_is_collection_containing_in_order.html" title="HCIsCollectionContainingInOrder" alt="" coords="736,645,976,675"/>
+<area shape="rect" id="node39" href="$interface_h_c_is_collection_only_containing.html" title="HCIsCollectionOnlyContaining" alt="" coords="745,699,967,728"/>
+<area shape="rect" id="node41" href="$interface_h_c_is_dictionary_containing.html" title="HCIsDictionaryContaining" alt="" coords="760,752,952,781"/>
+<area shape="rect" id="node43" href="$interface_h_c_is_dictionary_containing_entries.html" title="HCIsDictionaryContainingEntries" alt="" coords="736,805,976,835"/>
+<area shape="rect" id="node45" href="$interface_h_c_is_dictionary_containing_key.html" title="HCIsDictionaryContainingKey" alt="" coords="747,859,965,888"/>
+<area shape="rect" id="node47" href="$interface_h_c_is_dictionary_containing_value.html" title="HCIsDictionaryContainingValue" alt="" coords="741,912,971,941"/>
+<area shape="rect" id="node49" href="$interface_h_c_is_equal.html" title="HCIsEqual" alt="" coords="812,965,900,995"/>
+<area shape="rect" id="node51" href="$interface_h_c_is_equal_ignoring_case.html" title="HCIsEqualIgnoringCase" alt="" coords="769,1019,943,1048"/>
+<area shape="rect" id="node53" href="$interface_h_c_is_equal_ignoring_white_space.html" title="HCIsEqualIgnoringWhiteSpace" alt="" coords="745,1072,967,1101"/>
+<area shape="rect" id="node55" href="$interface_h_c_is_in.html" title="HCIsIn" alt="" coords="824,1125,888,1155"/>
+<area shape="rect" id="node57" href="$interface_h_c_is_instance_of.html" title="HCIsInstanceOf" alt="" coords="792,1179,920,1208"/>
+<area shape="rect" id="node59" href="$interface_h_c_is_nil.html" title="HCIsNil" alt="" coords="821,1232,891,1261"/>
+<area shape="rect" id="node61" href="$interface_h_c_is_not.html" title="HCIsNot" alt="" coords="817,1285,895,1315"/>
+<area shape="rect" id="node63" href="$interface_h_c_is_same.html" title="HCIsSame" alt="" coords="811,1339,901,1368"/>
+<area shape="rect" id="node65" href="$interface_h_c_ordering_comparison.html" title="HCOrderingComparison" alt="" coords="768,1392,944,1421"/>
+<area shape="rect" id="node67" href="$interface_h_c_string_contains_in_order.html" title="HCStringContainsInOrder" alt="" coords="761,1445,951,1475"/>
+<area shape="rect" id="node69" href="$interface_h_c_substring_matcher.html" title="HCSubstringMatcher" alt="" coords="776,1499,936,1528"/>
+<area shape="rect" id="node19" href="$interface_h_c_is_empty_collection.html" title="HCIsEmptyCollection" alt="" coords="1037,219,1203,248"/>
+<area shape="rect" id="node25" href="$interface_h_c_has_description.html" title="HCHasDescription" alt="" coords="1048,325,1192,355"/>
+<area shape="rect" id="node71" href="$interface_h_c_string_contains.html" title="HCStringContains" alt="" coords="1051,1445,1189,1475"/>
+<area shape="rect" id="node73" href="$interface_h_c_string_ends_with.html" title="HCStringEndsWith" alt="" coords="1048,1499,1192,1528"/>
+<area shape="rect" id="node75" href="$interface_h_c_string_starts_with.html" title="HCStringStartsWith" alt="" coords="1043,1552,1197,1581"/>
+</map>

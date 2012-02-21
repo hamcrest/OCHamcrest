@@ -10,9 +10,15 @@
         <Path>index.html</Path>
        </Node>
        <Node>
-        <Name>Writing custom matchers</Name>
-        <Path>custom-matchers.html</Path>
+        <Name>Related Pages</Name>
+        <Path>pages.html</Path>
         <Subnodes>
+         <Node>
+          <Name>Writing custom matchers</Name>
+          <Path>custom-matchers.html</Path>
+          <Subnodes>
+          </Subnodes>
+         </Node>
         </Subnodes>
        </Node>
        <Node>
@@ -112,6 +118,10 @@
          <Node>
           <Name>HCBaseMatcher</Name>
           <Path>interface_h_c_base_matcher.html</Path>
+         </Node>
+         <Node>
+          <Name>HCConformsToProtocol</Name>
+          <Path>interface_h_c_conforms_to_protocol.html</Path>
          </Node>
          <Node>
           <Name>HCDescribedAs</Name>
@@ -256,6 +266,10 @@
         </Subnodes>
        </Node>
        <Node>
+        <Name>Class Index</Name>
+        <Path>classes.html</Path>
+       </Node>
+       <Node>
         <Name>Class Hierarchy</Name>
         <Path>hierarchy.html</Path>
         <Subnodes>
@@ -274,156 +288,170 @@
             </Subnodes>
            </Node>
           </Subnodes>
-         </Node>
-         <Node>
-          <Name>&lt;HCSelfDescribing&gt;</Name>
-          <Path>protocol_h_c_self_describing-p.html</Path>
           <Subnodes>
            <Node>
-            <Name>&lt;HCMatcher&gt;</Name>
-            <Path>protocol_h_c_matcher-p.html</Path>
+            <Name>HCBaseDescription</Name>
+            <Path>interface_h_c_base_description.html</Path>
+           </Node>
+           <Node>
+            <Name>HCBaseMatcher</Name>
+            <Path>interface_h_c_base_matcher.html</Path>
             <Subnodes>
              <Node>
-              <Name>HCBaseMatcher</Name>
-              <Path>interface_h_c_base_matcher.html</Path>
+              <Name>HCAllOf</Name>
+              <Path>interface_h_c_all_of.html</Path>
+             </Node>
+             <Node>
+              <Name>HCAnyOf</Name>
+              <Path>interface_h_c_any_of.html</Path>
+             </Node>
+             <Node>
+              <Name>HCConformsToProtocol</Name>
+              <Path>interface_h_c_conforms_to_protocol.html</Path>
+             </Node>
+             <Node>
+              <Name>HCDescribedAs</Name>
+              <Path>interface_h_c_described_as.html</Path>
+             </Node>
+             <Node>
+              <Name>HCHasCount</Name>
+              <Path>interface_h_c_has_count.html</Path>
               <Subnodes>
                <Node>
-                <Name>HCAllOf</Name>
-                <Path>interface_h_c_all_of.html</Path>
+                <Name>HCIsEmptyCollection</Name>
+                <Path>interface_h_c_is_empty_collection.html</Path>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>HCHasProperty</Name>
+              <Path>interface_h_c_has_property.html</Path>
+             </Node>
+             <Node>
+              <Name>HCInvocationMatcher</Name>
+              <Path>interface_h_c_invocation_matcher.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>HCHasDescription</Name>
+                <Path>interface_h_c_has_description.html</Path>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>HCIs</Name>
+              <Path>interface_h_c_is.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsAnything</Name>
+              <Path>interface_h_c_is_anything.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsCloseTo</Name>
+              <Path>interface_h_c_is_close_to.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsCollectionContaining</Name>
+              <Path>interface_h_c_is_collection_containing.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsCollectionContainingInAnyOrder</Name>
+              <Path>interface_h_c_is_collection_containing_in_any_order.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsCollectionContainingInOrder</Name>
+              <Path>interface_h_c_is_collection_containing_in_order.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsCollectionOnlyContaining</Name>
+              <Path>interface_h_c_is_collection_only_containing.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsDictionaryContaining</Name>
+              <Path>interface_h_c_is_dictionary_containing.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsDictionaryContainingEntries</Name>
+              <Path>interface_h_c_is_dictionary_containing_entries.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsDictionaryContainingKey</Name>
+              <Path>interface_h_c_is_dictionary_containing_key.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsDictionaryContainingValue</Name>
+              <Path>interface_h_c_is_dictionary_containing_value.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsEqual</Name>
+              <Path>interface_h_c_is_equal.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsEqualIgnoringCase</Name>
+              <Path>interface_h_c_is_equal_ignoring_case.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsEqualIgnoringWhiteSpace</Name>
+              <Path>interface_h_c_is_equal_ignoring_white_space.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsIn</Name>
+              <Path>interface_h_c_is_in.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsInstanceOf</Name>
+              <Path>interface_h_c_is_instance_of.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsNil</Name>
+              <Path>interface_h_c_is_nil.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsNot</Name>
+              <Path>interface_h_c_is_not.html</Path>
+             </Node>
+             <Node>
+              <Name>HCIsSame</Name>
+              <Path>interface_h_c_is_same.html</Path>
+             </Node>
+             <Node>
+              <Name>HCOrderingComparison</Name>
+              <Path>interface_h_c_ordering_comparison.html</Path>
+             </Node>
+             <Node>
+              <Name>HCStringContainsInOrder</Name>
+              <Path>interface_h_c_string_contains_in_order.html</Path>
+             </Node>
+             <Node>
+              <Name>HCSubstringMatcher</Name>
+              <Path>interface_h_c_substring_matcher.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>HCStringContains</Name>
+                <Path>interface_h_c_string_contains.html</Path>
                </Node>
                <Node>
-                <Name>HCAnyOf</Name>
-                <Path>interface_h_c_any_of.html</Path>
+                <Name>HCStringEndsWith</Name>
+                <Path>interface_h_c_string_ends_with.html</Path>
                </Node>
                <Node>
-                <Name>HCDescribedAs</Name>
-                <Path>interface_h_c_described_as.html</Path>
+                <Name>HCStringStartsWith</Name>
+                <Path>interface_h_c_string_starts_with.html</Path>
                </Node>
+              </Subnodes>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
+            <Name>&lt;HCSelfDescribing&gt;</Name>
+            <Path>protocol_h_c_self_describing-p.html</Path>
+            <Subnodes>
+             <Node>
+              <Name>&lt;HCMatcher&gt;</Name>
+              <Path>protocol_h_c_matcher-p.html</Path>
+              <Subnodes>
                <Node>
-                <Name>HCHasCount</Name>
-                <Path>interface_h_c_has_count.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>HCIsEmptyCollection</Name>
-                  <Path>interface_h_c_is_empty_collection.html</Path>
-                 </Node>
-                </Subnodes>
-               </Node>
-               <Node>
-                <Name>HCHasProperty</Name>
-                <Path>interface_h_c_has_property.html</Path>
-               </Node>
-               <Node>
-                <Name>HCInvocationMatcher</Name>
-                <Path>interface_h_c_invocation_matcher.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>HCHasDescription</Name>
-                  <Path>interface_h_c_has_description.html</Path>
-                 </Node>
-                </Subnodes>
-               </Node>
-               <Node>
-                <Name>HCIs</Name>
-                <Path>interface_h_c_is.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsAnything</Name>
-                <Path>interface_h_c_is_anything.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsCloseTo</Name>
-                <Path>interface_h_c_is_close_to.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsCollectionContaining</Name>
-                <Path>interface_h_c_is_collection_containing.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsCollectionContainingInAnyOrder</Name>
-                <Path>interface_h_c_is_collection_containing_in_any_order.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsCollectionContainingInOrder</Name>
-                <Path>interface_h_c_is_collection_containing_in_order.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsCollectionOnlyContaining</Name>
-                <Path>interface_h_c_is_collection_only_containing.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsDictionaryContaining</Name>
-                <Path>interface_h_c_is_dictionary_containing.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsDictionaryContainingEntries</Name>
-                <Path>interface_h_c_is_dictionary_containing_entries.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsDictionaryContainingKey</Name>
-                <Path>interface_h_c_is_dictionary_containing_key.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsDictionaryContainingValue</Name>
-                <Path>interface_h_c_is_dictionary_containing_value.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsEqual</Name>
-                <Path>interface_h_c_is_equal.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsEqualIgnoringCase</Name>
-                <Path>interface_h_c_is_equal_ignoring_case.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsEqualIgnoringWhiteSpace</Name>
-                <Path>interface_h_c_is_equal_ignoring_white_space.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsIn</Name>
-                <Path>interface_h_c_is_in.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsInstanceOf</Name>
-                <Path>interface_h_c_is_instance_of.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsNil</Name>
-                <Path>interface_h_c_is_nil.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsNot</Name>
-                <Path>interface_h_c_is_not.html</Path>
-               </Node>
-               <Node>
-                <Name>HCIsSame</Name>
-                <Path>interface_h_c_is_same.html</Path>
-               </Node>
-               <Node>
-                <Name>HCOrderingComparison</Name>
-                <Path>interface_h_c_ordering_comparison.html</Path>
-               </Node>
-               <Node>
-                <Name>HCStringContainsInOrder</Name>
-                <Path>interface_h_c_string_contains_in_order.html</Path>
-               </Node>
-               <Node>
-                <Name>HCSubstringMatcher</Name>
-                <Path>interface_h_c_substring_matcher.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>HCStringContains</Name>
-                  <Path>interface_h_c_string_contains.html</Path>
-                 </Node>
-                 <Node>
-                  <Name>HCStringEndsWith</Name>
-                  <Path>interface_h_c_string_ends_with.html</Path>
-                 </Node>
-                 <Node>
-                  <Name>HCStringStartsWith</Name>
-                  <Path>interface_h_c_string_starts_with.html</Path>
-                 </Node>
-                </Subnodes>
+                <Name>HCBaseMatcher</Name>
+                <Path>interface_h_c_base_matcher.html</Path>
                </Node>
               </Subnodes>
              </Node>
@@ -436,10 +464,6 @@
        <Node>
         <Name>Class Members</Name>
         <Path>functions.html</Path>
-       </Node>
-       <Node>
-        <Name>Graphical Class Hierarchy</Name>
-        <Path>inherits.html</Path>
        </Node>
        <Node>
         <Name>Namespace List</Name>
@@ -490,6 +514,10 @@
          <Node>
           <Name>HCCollectMatchers.h</Name>
           <Path>_h_c_collect_matchers_8h.html</Path>
+         </Node>
+         <Node>
+          <Name>HCConformsToProtocol.h</Name>
+          <Path>_h_c_conforms_to_protocol_8h.html</Path>
          </Node>
          <Node>
           <Name>HCDescribedAs.h</Name>
