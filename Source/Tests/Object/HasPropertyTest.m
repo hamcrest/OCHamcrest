@@ -24,7 +24,7 @@
     NSNumber *shoeSize;
 }
 
-@property (nonatomic, retain) NSString *name;
+@property (nonatomic, copy) NSString *name;
 - (NSNumber *)shoeSize;
 
 @end
