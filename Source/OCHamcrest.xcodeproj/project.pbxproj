@@ -942,7 +942,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
-				ORGANIZATIONNAME = "eBay Inc";
+				ORGANIZATIONNAME = hamcrest.org;
 			};
 			buildConfigurationList = 087601DB13440806001B439B /* Build configuration list for PBXProject "OCHamcrest" */;
 			compatibilityVersion = "Xcode 3.2";
