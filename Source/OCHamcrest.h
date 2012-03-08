@@ -133,3 +133,6 @@
 
     @ingroup core
  */
+
+#import <OCHamcrest/HCValueAssert.h>
+#import <OCHamcrest/HCValueMatcher.h>

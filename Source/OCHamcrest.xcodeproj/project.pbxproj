@@ -229,6 +229,7 @@
 		088FB0AF136A70B800C191E1 /* HCStringContainsInOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 088FB0AD136A70B800C191E1 /* HCStringContainsInOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		088FB0B1136A70B800C191E1 /* HCStringContainsInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.mm */; };
 		088FB0B2136A70B800C191E1 /* HCStringContainsInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.mm */; };
+		4B61CCF61503E5C70033ABCA /* HCValueAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 77C7B87A14293D0700DE60D6 /* HCValueAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F2773401436F50C00B9683A /* HCConformsToProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F27733E1436F50C00B9683A /* HCConformsToProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F2773411436F50C00B9683A /* HCConformsToProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F27733F1436F50C00B9683A /* HCConformsToProtocol.mm */; };
 		5F2773471436FA9D00B9683A /* HCConformsToProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F27733F1436F50C00B9683A /* HCConformsToProtocol.mm */; };
@@ -239,6 +240,15 @@
 		77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
 		77C7B87914293CC500DE60CC /* HCHasProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B86C14292D5100DE60CC /* HCHasProperty.mm */; };
 		77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
+		77C7B87A14293D0700DE60CF /* HCValueMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 77C7B87A14293D0700DE60CE /* HCValueMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77C7B87A14293D0700DE60D2 /* HCValueMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B87A14293D0700DE60D1 /* HCValueMatcher.mm */; };
+		77C7B87A14293D0700DE60D3 /* HCValueMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B87A14293D0700DE60D1 /* HCValueMatcher.mm */; };
+		77C7B87A14293D0700DE60D4 /* HCValueMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B87A14293D0700DE60D1 /* HCValueMatcher.mm */; };
+		77C7B87A14293D0700DE60D5 /* HCValueMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B87A14293D0700DE60D1 /* HCValueMatcher.mm */; };
+		77C7B87A14293D0700DE60D9 /* IsEqualToValueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B87A14293D0700DE60D8 /* IsEqualToValueTest.m */; };
+		77C7B87A14293D0700DE60DA /* IsEqualToValueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B87A14293D0700DE60D8 /* IsEqualToValueTest.m */; };
+		77C7B87A14293D0700DE60DC /* ValueAssertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B87A14293D0700DE60DB /* ValueAssertTest.m */; };
+		77C7B87A14293D0700DE60DD /* ValueAssertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B87A14293D0700DE60DB /* ValueAssertTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -412,6 +422,11 @@
 		77C7B86B14292D5100DE60CC /* HCHasProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHasProperty.h; sourceTree = "<group>"; };
 		77C7B86C14292D5100DE60CC /* HCHasProperty.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCHasProperty.mm; sourceTree = "<group>"; };
 		77C7B8761429361200DE60CC /* HasPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasPropertyTest.m; sourceTree = "<group>"; };
+		77C7B87A14293D0700DE60CE /* HCValueMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCValueMatcher.h; sourceTree = "<group>"; };
+		77C7B87A14293D0700DE60D1 /* HCValueMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCValueMatcher.mm; sourceTree = "<group>"; };
+		77C7B87A14293D0700DE60D6 /* HCValueAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCValueAssert.h; sourceTree = "<group>"; };
+		77C7B87A14293D0700DE60D8 /* IsEqualToValueTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEqualToValueTest.m; sourceTree = "<group>"; };
+		77C7B87A14293D0700DE60DB /* ValueAssertTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueAssertTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -605,6 +620,7 @@
 				087602E613440A9E001B439B /* Number */,
 				087602F013440A9F001B439B /* Object */,
 				087602F313440A9F001B439B /* Text */,
+				77C7B87A14293D0700DE60CD /* Value */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -706,6 +722,7 @@
 				0876035213440AD8001B439B /* Number */,
 				0876035713440AD8001B439B /* Object */,
 				0876035A13440AD8001B439B /* Text */,
+				77C7B87A14293D0700DE60D7 /* Value */,
 			);
 			name = UnitTests;
 			path = Tests;
@@ -791,6 +808,25 @@
 			name = Scripts;
 			sourceTree = "<group>";
 		};
+		77C7B87A14293D0700DE60CD /* Value */ = {
+			isa = PBXGroup;
+			children = (
+				77C7B87A14293D0700DE60D6 /* HCValueAssert.h */,
+				77C7B87A14293D0700DE60D1 /* HCValueMatcher.mm */,
+				77C7B87A14293D0700DE60CE /* HCValueMatcher.h */,
+			);
+			path = Value;
+			sourceTree = "<group>";
+		};
+		77C7B87A14293D0700DE60D7 /* Value */ = {
+			isa = PBXGroup;
+			children = (
+				77C7B87A14293D0700DE60DB /* ValueAssertTest.m */,
+				77C7B87A14293D0700DE60D8 /* IsEqualToValueTest.m */,
+			);
+			path = Value;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -842,10 +878,12 @@
 				0876032913440A9F001B439B /* HCStringStartsWith.h in Headers */,
 				0876032B13440A9F001B439B /* HCSubstringMatcher.h in Headers */,
 				0876032E13440AAD001B439B /* OCHamcrest.h in Headers */,
+				4B61CCF61503E5C70033ABCA /* HCValueAssert.h in Headers */,
 				088FB0AF136A70B800C191E1 /* HCStringContainsInOrder.h in Headers */,
 				0846B69C13EE5D6200EA68E8 /* HCDescribedAs.h in Headers */,
 				0846B6A013EE5D6200EA68E8 /* HCIs.h in Headers */,
 				0846B6AD13EE5D7500EA68E8 /* HCAllOf.h in Headers */,
+				77C7B87A14293D0700DE60CF /* HCValueMatcher.h in Headers */,
 				0846B6B113EE5D7500EA68E8 /* HCAnyOf.h in Headers */,
 				0846B6B513EE5D7500EA68E8 /* HCIsAnything.h in Headers */,
 				0846B6B913EE5D7500EA68E8 /* HCIsNot.h in Headers */,
@@ -1080,6 +1118,7 @@
 				0846B6D413EE5D8A00EA68E8 /* HCIsSame.mm in Sources */,
 				77C7B87914293CC500DE60CC /* HCHasProperty.mm in Sources */,
 				5F2773471436FA9D00B9683A /* HCConformsToProtocol.mm in Sources */,
+				77C7B87A14293D0700DE60D4 /* HCValueMatcher.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1129,6 +1168,9 @@
 				082E7C3813FF676E004A22FE /* StringDescriptionTest.m in Sources */,
 				77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */,
 				5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */,
+				77C7B87A14293D0700DE60D5 /* HCValueMatcher.mm in Sources */,
+				77C7B87A14293D0700DE60DA /* IsEqualToValueTest.m in Sources */,
+				77C7B87A14293D0700DE60DD /* ValueAssertTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1181,6 +1223,7 @@
 				0846B6D313EE5D8A00EA68E8 /* HCIsSame.mm in Sources */,
 				77C7B86E14292D5100DE60CC /* HCHasProperty.mm in Sources */,
 				5F2773411436F50C00B9683A /* HCConformsToProtocol.mm in Sources */,
+				77C7B87A14293D0700DE60D2 /* HCValueMatcher.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1230,6 +1273,9 @@
 				082E7C3713FF676E004A22FE /* StringDescriptionTest.m in Sources */,
 				77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */,
 				5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */,
+				77C7B87A14293D0700DE60D3 /* HCValueMatcher.mm in Sources */,
+				77C7B87A14293D0700DE60D9 /* IsEqualToValueTest.m in Sources */,
+				77C7B87A14293D0700DE60DC /* ValueAssertTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
