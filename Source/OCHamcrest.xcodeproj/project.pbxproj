@@ -227,8 +227,8 @@
 		088FB0AB136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */; };
 		088FB0AC136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */; };
 		088FB0AF136A70B800C191E1 /* HCStringContainsInOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 088FB0AD136A70B800C191E1 /* HCStringContainsInOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		088FB0B1136A70B800C191E1 /* HCStringContainsInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.mm */; };
-		088FB0B2136A70B800C191E1 /* HCStringContainsInOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.mm */; };
+		088FB0B1136A70B800C191E1 /* HCStringContainsInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.m */; };
+		088FB0B2136A70B800C191E1 /* HCStringContainsInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.m */; };
 		5F2773401436F50C00B9683A /* HCConformsToProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F27733E1436F50C00B9683A /* HCConformsToProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F2773411436F50C00B9683A /* HCConformsToProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F27733F1436F50C00B9683A /* HCConformsToProtocol.m */; };
 		5F2773471436FA9D00B9683A /* HCConformsToProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F27733F1436F50C00B9683A /* HCConformsToProtocol.m */; };
@@ -402,7 +402,7 @@
 		0876039113440BB0001B439B /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringContainsInOrderTest.m; sourceTree = "<group>"; };
 		088FB0AD136A70B800C191E1 /* HCStringContainsInOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringContainsInOrder.h; sourceTree = "<group>"; };
-		088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCStringContainsInOrder.mm; sourceTree = "<group>"; };
+		088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringContainsInOrder.m; sourceTree = "<group>"; };
 		08BDD5FD1350C7BE00E5A443 /* MakeDistribution.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeDistribution.sh; sourceTree = "<group>"; };
 		08BDD5FE1350C7BE00E5A443 /* MakeDocumentation.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeDocumentation.sh; sourceTree = "<group>"; };
 		08BDD5FF1350C7BE00E5A443 /* MakeIOSFramework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeIOSFramework.sh; sourceTree = "<group>"; };
@@ -685,7 +685,7 @@
 				087602F813440A9F001B439B /* HCStringContains.h */,
 				087602F913440A9F001B439B /* HCStringContains.mm */,
 				088FB0AD136A70B800C191E1 /* HCStringContainsInOrder.h */,
-				088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.mm */,
+				088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.m */,
 				087602FA13440A9F001B439B /* HCStringEndsWith.h */,
 				087602FB13440A9F001B439B /* HCStringEndsWith.mm */,
 				087602FC13440A9F001B439B /* HCStringStartsWith.h */,
@@ -1067,7 +1067,7 @@
 				0802654D134597C000A8DCCA /* HCSubstringMatcher.mm in Sources */,
 				0802654E134597C000A8DCCA /* HCWrapInMatcher.m in Sources */,
 				0802654F134597C000A8DCCA /* NSObject+HCSelfDescribingValue.m in Sources */,
-				088FB0B2136A70B800C191E1 /* HCStringContainsInOrder.mm in Sources */,
+				088FB0B2136A70B800C191E1 /* HCStringContainsInOrder.m in Sources */,
 				0846B69F13EE5D6200EA68E8 /* HCDescribedAs.mm in Sources */,
 				0846B6A313EE5D6200EA68E8 /* HCIs.m in Sources */,
 				0846B6B013EE5D7500EA68E8 /* HCAllOf.m in Sources */,
@@ -1168,7 +1168,7 @@
 				0876032813440A9F001B439B /* HCStringEndsWith.mm in Sources */,
 				0876032A13440A9F001B439B /* HCStringStartsWith.mm in Sources */,
 				0876032C13440A9F001B439B /* HCSubstringMatcher.mm in Sources */,
-				088FB0B1136A70B800C191E1 /* HCStringContainsInOrder.mm in Sources */,
+				088FB0B1136A70B800C191E1 /* HCStringContainsInOrder.m in Sources */,
 				0846B69E13EE5D6200EA68E8 /* HCDescribedAs.mm in Sources */,
 				0846B6A213EE5D6200EA68E8 /* HCIs.m in Sources */,
 				0846B6AF13EE5D7500EA68E8 /* HCAllOf.m in Sources */,
