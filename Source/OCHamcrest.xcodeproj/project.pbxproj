@@ -19,7 +19,7 @@
 		08026534134597C000A8DCCA /* HCIsCollectionContainingInAnyOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602D513440A9E001B439B /* HCIsCollectionContainingInAnyOrder.m */; };
 		08026535134597C000A8DCCA /* HCIsCollectionContainingInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602D713440A9E001B439B /* HCIsCollectionContainingInOrder.m */; };
 		08026536134597C000A8DCCA /* HCIsCollectionOnlyContaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602D913440A9E001B439B /* HCIsCollectionOnlyContaining.m */; };
-		08026537134597C000A8DCCA /* HCIsDictionaryContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DB13440A9E001B439B /* HCIsDictionaryContaining.mm */; };
+		08026537134597C000A8DCCA /* HCIsDictionaryContaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602DB13440A9E001B439B /* HCIsDictionaryContaining.m */; };
 		08026538134597C000A8DCCA /* HCIsDictionaryContainingEntries.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.mm */; };
 		08026539134597C000A8DCCA /* HCIsDictionaryContainingKey.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DF13440A9E001B439B /* HCIsDictionaryContainingKey.mm */; };
 		0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E113440A9E001B439B /* HCIsDictionaryContainingValue.mm */; };
@@ -165,7 +165,7 @@
 		0876030813440A9F001B439B /* HCIsCollectionOnlyContaining.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602D813440A9E001B439B /* HCIsCollectionOnlyContaining.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876030913440A9F001B439B /* HCIsCollectionOnlyContaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602D913440A9E001B439B /* HCIsCollectionOnlyContaining.m */; };
 		0876030A13440A9F001B439B /* HCIsDictionaryContaining.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602DA13440A9E001B439B /* HCIsDictionaryContaining.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876030B13440A9F001B439B /* HCIsDictionaryContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DB13440A9E001B439B /* HCIsDictionaryContaining.mm */; };
+		0876030B13440A9F001B439B /* HCIsDictionaryContaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602DB13440A9E001B439B /* HCIsDictionaryContaining.m */; };
 		0876030C13440A9F001B439B /* HCIsDictionaryContainingEntries.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602DC13440A9E001B439B /* HCIsDictionaryContainingEntries.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876030D13440A9F001B439B /* HCIsDictionaryContainingEntries.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.mm */; };
 		0876030E13440A9F001B439B /* HCIsDictionaryContainingKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602DE13440A9E001B439B /* HCIsDictionaryContainingKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -337,7 +337,7 @@
 		087602D813440A9E001B439B /* HCIsCollectionOnlyContaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionOnlyContaining.h; sourceTree = "<group>"; };
 		087602D913440A9E001B439B /* HCIsCollectionOnlyContaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionOnlyContaining.m; sourceTree = "<group>"; };
 		087602DA13440A9E001B439B /* HCIsDictionaryContaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContaining.h; sourceTree = "<group>"; };
-		087602DB13440A9E001B439B /* HCIsDictionaryContaining.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsDictionaryContaining.mm; sourceTree = "<group>"; };
+		087602DB13440A9E001B439B /* HCIsDictionaryContaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContaining.m; sourceTree = "<group>"; };
 		087602DC13440A9E001B439B /* HCIsDictionaryContainingEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingEntries.h; sourceTree = "<group>"; };
 		087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsDictionaryContainingEntries.mm; sourceTree = "<group>"; };
 		087602DE13440A9E001B439B /* HCIsDictionaryContainingKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingKey.h; sourceTree = "<group>"; };
@@ -623,7 +623,7 @@
 				087602D813440A9E001B439B /* HCIsCollectionOnlyContaining.h */,
 				087602D913440A9E001B439B /* HCIsCollectionOnlyContaining.m */,
 				087602DA13440A9E001B439B /* HCIsDictionaryContaining.h */,
-				087602DB13440A9E001B439B /* HCIsDictionaryContaining.mm */,
+				087602DB13440A9E001B439B /* HCIsDictionaryContaining.m */,
 				087602DC13440A9E001B439B /* HCIsDictionaryContainingEntries.h */,
 				087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.mm */,
 				087602DE13440A9E001B439B /* HCIsDictionaryContainingKey.h */,
@@ -1047,7 +1047,7 @@
 				08026534134597C000A8DCCA /* HCIsCollectionContainingInAnyOrder.m in Sources */,
 				08026535134597C000A8DCCA /* HCIsCollectionContainingInOrder.m in Sources */,
 				08026536134597C000A8DCCA /* HCIsCollectionOnlyContaining.m in Sources */,
-				08026537134597C000A8DCCA /* HCIsDictionaryContaining.mm in Sources */,
+				08026537134597C000A8DCCA /* HCIsDictionaryContaining.m in Sources */,
 				08026538134597C000A8DCCA /* HCIsDictionaryContainingEntries.mm in Sources */,
 				08026539134597C000A8DCCA /* HCIsDictionaryContainingKey.mm in Sources */,
 				0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.mm in Sources */,
@@ -1151,7 +1151,7 @@
 				0876030513440A9F001B439B /* HCIsCollectionContainingInAnyOrder.m in Sources */,
 				0876030713440A9F001B439B /* HCIsCollectionContainingInOrder.m in Sources */,
 				0876030913440A9F001B439B /* HCIsCollectionOnlyContaining.m in Sources */,
-				0876030B13440A9F001B439B /* HCIsDictionaryContaining.mm in Sources */,
+				0876030B13440A9F001B439B /* HCIsDictionaryContaining.m in Sources */,
 				0876030D13440A9F001B439B /* HCIsDictionaryContainingEntries.mm in Sources */,
 				0876030F13440A9F001B439B /* HCIsDictionaryContainingKey.mm in Sources */,
 				0876031113440A9F001B439B /* HCIsDictionaryContainingValue.mm in Sources */,
