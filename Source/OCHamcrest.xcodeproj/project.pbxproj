@@ -13,7 +13,7 @@
 		0802652B134597C000A8DCCA /* HCCollectMatchers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023913440A83001B439B /* HCCollectMatchers.m */; };
 		0802652D134597C000A8DCCA /* HCHasCount.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D113440A9E001B439B /* HCHasCount.mm */; };
 		0802652E134597C000A8DCCA /* HCHasDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F213440A9F001B439B /* HCHasDescription.mm */; };
-		0802652F134597C000A8DCCA /* HCInvocationMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023B13440A83001B439B /* HCInvocationMatcher.mm */; };
+		0802652F134597C000A8DCCA /* HCInvocationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023B13440A83001B439B /* HCInvocationMatcher.m */; };
 		08026532134597C000A8DCCA /* HCIsCloseTo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E913440A9F001B439B /* HCIsCloseTo.mm */; };
 		08026533134597C000A8DCCA /* HCIsCollectionContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D313440A9E001B439B /* HCIsCollectionContaining.mm */; };
 		08026534134597C000A8DCCA /* HCIsCollectionContainingInAnyOrder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602D513440A9E001B439B /* HCIsCollectionContainingInAnyOrder.mm */; };
@@ -145,7 +145,7 @@
 		0876026313440A83001B439B /* HCCollectMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023813440A83001B439B /* HCCollectMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876026413440A83001B439B /* HCCollectMatchers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023913440A83001B439B /* HCCollectMatchers.m */; };
 		0876026513440A83001B439B /* HCInvocationMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023A13440A83001B439B /* HCInvocationMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876026613440A83001B439B /* HCInvocationMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023B13440A83001B439B /* HCInvocationMatcher.mm */; };
+		0876026613440A83001B439B /* HCInvocationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023B13440A83001B439B /* HCInvocationMatcher.m */; };
 		0876026713440A83001B439B /* HCRequireNonNilObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023C13440A83001B439B /* HCRequireNonNilObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876026813440A83001B439B /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023D13440A83001B439B /* HCRequireNonNilObject.mm */; };
 		0876026913440A83001B439B /* HCRequireNonNilString.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023E13440A83001B439B /* HCRequireNonNilString.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -317,7 +317,7 @@
 		0876023813440A83001B439B /* HCCollectMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCollectMatchers.h; sourceTree = "<group>"; };
 		0876023913440A83001B439B /* HCCollectMatchers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCollectMatchers.m; sourceTree = "<group>"; };
 		0876023A13440A83001B439B /* HCInvocationMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCInvocationMatcher.h; sourceTree = "<group>"; };
-		0876023B13440A83001B439B /* HCInvocationMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCInvocationMatcher.mm; sourceTree = "<group>"; };
+		0876023B13440A83001B439B /* HCInvocationMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCInvocationMatcher.m; sourceTree = "<group>"; };
 		0876023C13440A83001B439B /* HCRequireNonNilObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilObject.h; sourceTree = "<group>"; };
 		0876023D13440A83001B439B /* HCRequireNonNilObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCRequireNonNilObject.mm; sourceTree = "<group>"; };
 		0876023E13440A83001B439B /* HCRequireNonNilString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilString.h; sourceTree = "<group>"; };
@@ -585,7 +585,7 @@
 				0876023813440A83001B439B /* HCCollectMatchers.h */,
 				0876023913440A83001B439B /* HCCollectMatchers.m */,
 				0876023A13440A83001B439B /* HCInvocationMatcher.h */,
-				0876023B13440A83001B439B /* HCInvocationMatcher.mm */,
+				0876023B13440A83001B439B /* HCInvocationMatcher.m */,
 				0876023C13440A83001B439B /* HCRequireNonNilObject.h */,
 				0876023D13440A83001B439B /* HCRequireNonNilObject.mm */,
 				0876023E13440A83001B439B /* HCRequireNonNilString.h */,
@@ -1041,7 +1041,7 @@
 				0802652B134597C000A8DCCA /* HCCollectMatchers.m in Sources */,
 				0802652D134597C000A8DCCA /* HCHasCount.mm in Sources */,
 				0802652E134597C000A8DCCA /* HCHasDescription.mm in Sources */,
-				0802652F134597C000A8DCCA /* HCInvocationMatcher.mm in Sources */,
+				0802652F134597C000A8DCCA /* HCInvocationMatcher.m in Sources */,
 				08026532134597C000A8DCCA /* HCIsCloseTo.mm in Sources */,
 				08026533134597C000A8DCCA /* HCIsCollectionContaining.mm in Sources */,
 				08026534134597C000A8DCCA /* HCIsCollectionContainingInAnyOrder.mm in Sources */,
@@ -1141,7 +1141,7 @@
 				0876025D13440A83001B439B /* HCBaseMatcher.m in Sources */,
 				0876026213440A83001B439B /* HCStringDescription.m in Sources */,
 				0876026413440A83001B439B /* HCCollectMatchers.m in Sources */,
-				0876026613440A83001B439B /* HCInvocationMatcher.mm in Sources */,
+				0876026613440A83001B439B /* HCInvocationMatcher.m in Sources */,
 				0876026813440A83001B439B /* HCRequireNonNilObject.mm in Sources */,
 				0876026A13440A83001B439B /* HCRequireNonNilString.mm in Sources */,
 				0876026C13440A83001B439B /* HCWrapInMatcher.mm in Sources */,
