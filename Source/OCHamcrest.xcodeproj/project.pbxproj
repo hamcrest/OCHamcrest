@@ -35,7 +35,7 @@
 		08026549134597C000A8DCCA /* HCStringContains.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602F913440A9F001B439B /* HCStringContains.m */; };
 		0802654A134597C000A8DCCA /* HCStringDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023613440A83001B439B /* HCStringDescription.m */; };
 		0802654B134597C000A8DCCA /* HCStringEndsWith.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602FB13440A9F001B439B /* HCStringEndsWith.m */; };
-		0802654C134597C000A8DCCA /* HCStringStartsWith.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602FD13440A9F001B439B /* HCStringStartsWith.mm */; };
+		0802654C134597C000A8DCCA /* HCStringStartsWith.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602FD13440A9F001B439B /* HCStringStartsWith.m */; };
 		0802654D134597C000A8DCCA /* HCSubstringMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602FF13440A9F001B439B /* HCSubstringMatcher.mm */; };
 		0802654E134597C000A8DCCA /* HCWrapInMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876024113440A83001B439B /* HCWrapInMatcher.m */; };
 		0802654F134597C000A8DCCA /* NSObject+HCSelfDescribingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876024313440A83001B439B /* NSObject+HCSelfDescribingValue.m */; };
@@ -196,7 +196,7 @@
 		0876032713440A9F001B439B /* HCStringEndsWith.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602FA13440A9F001B439B /* HCStringEndsWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876032813440A9F001B439B /* HCStringEndsWith.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602FB13440A9F001B439B /* HCStringEndsWith.m */; };
 		0876032913440A9F001B439B /* HCStringStartsWith.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602FC13440A9F001B439B /* HCStringStartsWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876032A13440A9F001B439B /* HCStringStartsWith.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602FD13440A9F001B439B /* HCStringStartsWith.mm */; };
+		0876032A13440A9F001B439B /* HCStringStartsWith.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602FD13440A9F001B439B /* HCStringStartsWith.m */; };
 		0876032B13440A9F001B439B /* HCSubstringMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602FE13440A9F001B439B /* HCSubstringMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876032C13440A9F001B439B /* HCSubstringMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602FF13440A9F001B439B /* HCSubstringMatcher.mm */; };
 		0876032E13440AAD001B439B /* OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876032D13440AAD001B439B /* OCHamcrest.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -368,7 +368,7 @@
 		087602FA13440A9F001B439B /* HCStringEndsWith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringEndsWith.h; sourceTree = "<group>"; };
 		087602FB13440A9F001B439B /* HCStringEndsWith.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringEndsWith.m; sourceTree = "<group>"; };
 		087602FC13440A9F001B439B /* HCStringStartsWith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringStartsWith.h; sourceTree = "<group>"; };
-		087602FD13440A9F001B439B /* HCStringStartsWith.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCStringStartsWith.mm; sourceTree = "<group>"; };
+		087602FD13440A9F001B439B /* HCStringStartsWith.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringStartsWith.m; sourceTree = "<group>"; };
 		087602FE13440A9F001B439B /* HCSubstringMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSubstringMatcher.h; sourceTree = "<group>"; };
 		087602FF13440A9F001B439B /* HCSubstringMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCSubstringMatcher.mm; sourceTree = "<group>"; };
 		0876032D13440AAD001B439B /* OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHamcrest.h; sourceTree = "<group>"; };
@@ -689,7 +689,7 @@
 				087602FA13440A9F001B439B /* HCStringEndsWith.h */,
 				087602FB13440A9F001B439B /* HCStringEndsWith.m */,
 				087602FC13440A9F001B439B /* HCStringStartsWith.h */,
-				087602FD13440A9F001B439B /* HCStringStartsWith.mm */,
+				087602FD13440A9F001B439B /* HCStringStartsWith.m */,
 				087602FE13440A9F001B439B /* HCSubstringMatcher.h */,
 				087602FF13440A9F001B439B /* HCSubstringMatcher.mm */,
 			);
@@ -1063,7 +1063,7 @@
 				08026549134597C000A8DCCA /* HCStringContains.m in Sources */,
 				0802654A134597C000A8DCCA /* HCStringDescription.m in Sources */,
 				0802654B134597C000A8DCCA /* HCStringEndsWith.m in Sources */,
-				0802654C134597C000A8DCCA /* HCStringStartsWith.mm in Sources */,
+				0802654C134597C000A8DCCA /* HCStringStartsWith.m in Sources */,
 				0802654D134597C000A8DCCA /* HCSubstringMatcher.mm in Sources */,
 				0802654E134597C000A8DCCA /* HCWrapInMatcher.m in Sources */,
 				0802654F134597C000A8DCCA /* NSObject+HCSelfDescribingValue.m in Sources */,
@@ -1166,7 +1166,7 @@
 				0876032413440A9F001B439B /* HCIsEqualIgnoringWhiteSpace.mm in Sources */,
 				0876032613440A9F001B439B /* HCStringContains.m in Sources */,
 				0876032813440A9F001B439B /* HCStringEndsWith.m in Sources */,
-				0876032A13440A9F001B439B /* HCStringStartsWith.mm in Sources */,
+				0876032A13440A9F001B439B /* HCStringStartsWith.m in Sources */,
 				0876032C13440A9F001B439B /* HCSubstringMatcher.mm in Sources */,
 				088FB0B1136A70B800C191E1 /* HCStringContainsInOrder.m in Sources */,
 				0846B69E13EE5D6200EA68E8 /* HCDescribedAs.mm in Sources */,
