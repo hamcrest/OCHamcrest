@@ -83,8 +83,8 @@
 		0846B6CF13EE5D8A00EA68E8 /* HCIsNil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6C213EE5D8A00EA68E8 /* HCIsNil.mm */; };
 		0846B6D013EE5D8A00EA68E8 /* HCIsNil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6C213EE5D8A00EA68E8 /* HCIsNil.mm */; };
 		0846B6D113EE5D8A00EA68E8 /* HCIsSame.h in Headers */ = {isa = PBXBuildFile; fileRef = 0846B6C313EE5D8A00EA68E8 /* HCIsSame.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0846B6D313EE5D8A00EA68E8 /* HCIsSame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6C413EE5D8A00EA68E8 /* HCIsSame.mm */; };
-		0846B6D413EE5D8A00EA68E8 /* HCIsSame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6C413EE5D8A00EA68E8 /* HCIsSame.mm */; };
+		0846B6D313EE5D8A00EA68E8 /* HCIsSame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6C413EE5D8A00EA68E8 /* HCIsSame.m */; };
+		0846B6D413EE5D8A00EA68E8 /* HCIsSame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6C413EE5D8A00EA68E8 /* HCIsSame.m */; };
 		0846B6E013EE5F9D00EA68E8 /* DescribedAsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DC13EE5F9D00EA68E8 /* DescribedAsTest.m */; };
 		0846B6E113EE5F9D00EA68E8 /* DescribedAsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DC13EE5F9D00EA68E8 /* DescribedAsTest.m */; };
 		0846B6E213EE5F9D00EA68E8 /* IsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DD13EE5F9D00EA68E8 /* IsTest.m */; };
@@ -287,7 +287,7 @@
 		0846B6C113EE5D8A00EA68E8 /* HCIsNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNil.h; sourceTree = "<group>"; };
 		0846B6C213EE5D8A00EA68E8 /* HCIsNil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsNil.mm; sourceTree = "<group>"; };
 		0846B6C313EE5D8A00EA68E8 /* HCIsSame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsSame.h; sourceTree = "<group>"; };
-		0846B6C413EE5D8A00EA68E8 /* HCIsSame.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsSame.mm; sourceTree = "<group>"; };
+		0846B6C413EE5D8A00EA68E8 /* HCIsSame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsSame.m; sourceTree = "<group>"; };
 		0846B6DC13EE5F9D00EA68E8 /* DescribedAsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescribedAsTest.m; sourceTree = "<group>"; };
 		0846B6DD13EE5F9D00EA68E8 /* IsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTest.m; sourceTree = "<group>"; };
 		0846B6DE13EE5F9D00EA68E8 /* NeverMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeverMatch.h; sourceTree = "<group>"; };
@@ -670,7 +670,7 @@
 				0846B6C113EE5D8A00EA68E8 /* HCIsNil.h */,
 				0846B6C213EE5D8A00EA68E8 /* HCIsNil.mm */,
 				0846B6C313EE5D8A00EA68E8 /* HCIsSame.h */,
-				0846B6C413EE5D8A00EA68E8 /* HCIsSame.mm */,
+				0846B6C413EE5D8A00EA68E8 /* HCIsSame.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -1077,7 +1077,7 @@
 				0846B6C813EE5D8A00EA68E8 /* HCIsEqual.m in Sources */,
 				0846B6CC13EE5D8A00EA68E8 /* HCIsInstanceOf.m in Sources */,
 				0846B6D013EE5D8A00EA68E8 /* HCIsNil.mm in Sources */,
-				0846B6D413EE5D8A00EA68E8 /* HCIsSame.mm in Sources */,
+				0846B6D413EE5D8A00EA68E8 /* HCIsSame.m in Sources */,
 				77C7B87914293CC500DE60CC /* HCHasProperty.mm in Sources */,
 				5F2773471436FA9D00B9683A /* HCConformsToProtocol.m in Sources */,
 			);
@@ -1178,7 +1178,7 @@
 				0846B6C713EE5D8A00EA68E8 /* HCIsEqual.m in Sources */,
 				0846B6CB13EE5D8A00EA68E8 /* HCIsInstanceOf.m in Sources */,
 				0846B6CF13EE5D8A00EA68E8 /* HCIsNil.mm in Sources */,
-				0846B6D313EE5D8A00EA68E8 /* HCIsSame.mm in Sources */,
+				0846B6D313EE5D8A00EA68E8 /* HCIsSame.m in Sources */,
 				77C7B86E14292D5100DE60CC /* HCHasProperty.mm in Sources */,
 				5F2773411436F50C00B9683A /* HCConformsToProtocol.m in Sources */,
 			);
