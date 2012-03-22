@@ -37,7 +37,7 @@
 		0802654B134597C000A8DCCA /* HCStringEndsWith.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602FB13440A9F001B439B /* HCStringEndsWith.mm */; };
 		0802654C134597C000A8DCCA /* HCStringStartsWith.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602FD13440A9F001B439B /* HCStringStartsWith.mm */; };
 		0802654D134597C000A8DCCA /* HCSubstringMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602FF13440A9F001B439B /* HCSubstringMatcher.mm */; };
-		0802654E134597C000A8DCCA /* HCWrapInMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876024113440A83001B439B /* HCWrapInMatcher.mm */; };
+		0802654E134597C000A8DCCA /* HCWrapInMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876024113440A83001B439B /* HCWrapInMatcher.m */; };
 		0802654F134597C000A8DCCA /* NSObject+HCSelfDescribingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876024313440A83001B439B /* NSObject+HCSelfDescribingValue.mm */; };
 		0817B5CD147EC45200C5401D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0817B5CC147EC45200C5401D /* SenTestingKit.framework */; };
 		0817B5CE147EC45200C5401D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0817B5CC147EC45200C5401D /* SenTestingKit.framework */; };
@@ -151,7 +151,7 @@
 		0876026913440A83001B439B /* HCRequireNonNilString.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023E13440A83001B439B /* HCRequireNonNilString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876026A13440A83001B439B /* HCRequireNonNilString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023F13440A83001B439B /* HCRequireNonNilString.m */; };
 		0876026B13440A83001B439B /* HCWrapInMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876024013440A83001B439B /* HCWrapInMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876026C13440A83001B439B /* HCWrapInMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876024113440A83001B439B /* HCWrapInMatcher.mm */; };
+		0876026C13440A83001B439B /* HCWrapInMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876024113440A83001B439B /* HCWrapInMatcher.m */; };
 		0876026D13440A83001B439B /* NSObject+HCSelfDescribingValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876024213440A83001B439B /* NSObject+HCSelfDescribingValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876026E13440A83001B439B /* NSObject+HCSelfDescribingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876024313440A83001B439B /* NSObject+HCSelfDescribingValue.mm */; };
 		0876030013440A9F001B439B /* HCHasCount.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602D013440A9E001B439B /* HCHasCount.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -323,7 +323,7 @@
 		0876023E13440A83001B439B /* HCRequireNonNilString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilString.h; sourceTree = "<group>"; };
 		0876023F13440A83001B439B /* HCRequireNonNilString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCRequireNonNilString.m; sourceTree = "<group>"; };
 		0876024013440A83001B439B /* HCWrapInMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCWrapInMatcher.h; sourceTree = "<group>"; };
-		0876024113440A83001B439B /* HCWrapInMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCWrapInMatcher.mm; sourceTree = "<group>"; };
+		0876024113440A83001B439B /* HCWrapInMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCWrapInMatcher.m; sourceTree = "<group>"; };
 		0876024213440A83001B439B /* NSObject+HCSelfDescribingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCSelfDescribingValue.h"; sourceTree = "<group>"; };
 		0876024313440A83001B439B /* NSObject+HCSelfDescribingValue.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSObject+HCSelfDescribingValue.mm"; sourceTree = "<group>"; };
 		087602D013440A9E001B439B /* HCHasCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHasCount.h; sourceTree = "<group>"; };
@@ -591,7 +591,7 @@
 				0876023E13440A83001B439B /* HCRequireNonNilString.h */,
 				0876023F13440A83001B439B /* HCRequireNonNilString.m */,
 				0876024013440A83001B439B /* HCWrapInMatcher.h */,
-				0876024113440A83001B439B /* HCWrapInMatcher.mm */,
+				0876024113440A83001B439B /* HCWrapInMatcher.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1065,7 +1065,7 @@
 				0802654B134597C000A8DCCA /* HCStringEndsWith.mm in Sources */,
 				0802654C134597C000A8DCCA /* HCStringStartsWith.mm in Sources */,
 				0802654D134597C000A8DCCA /* HCSubstringMatcher.mm in Sources */,
-				0802654E134597C000A8DCCA /* HCWrapInMatcher.mm in Sources */,
+				0802654E134597C000A8DCCA /* HCWrapInMatcher.m in Sources */,
 				0802654F134597C000A8DCCA /* NSObject+HCSelfDescribingValue.mm in Sources */,
 				088FB0B2136A70B800C191E1 /* HCStringContainsInOrder.mm in Sources */,
 				0846B69F13EE5D6200EA68E8 /* HCDescribedAs.mm in Sources */,
@@ -1144,7 +1144,7 @@
 				0876026613440A83001B439B /* HCInvocationMatcher.m in Sources */,
 				0876026813440A83001B439B /* HCRequireNonNilObject.m in Sources */,
 				0876026A13440A83001B439B /* HCRequireNonNilString.m in Sources */,
-				0876026C13440A83001B439B /* HCWrapInMatcher.mm in Sources */,
+				0876026C13440A83001B439B /* HCWrapInMatcher.m in Sources */,
 				0876026E13440A83001B439B /* NSObject+HCSelfDescribingValue.mm in Sources */,
 				0876030113440A9F001B439B /* HCHasCount.mm in Sources */,
 				0876030313440A9F001B439B /* HCIsCollectionContaining.mm in Sources */,
