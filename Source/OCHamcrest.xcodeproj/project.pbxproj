@@ -30,7 +30,7 @@
 		08026540134597C000A8DCCA /* HCIsIn.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E513440A9E001B439B /* HCIsIn.mm */; };
 		08026545134597C000A8DCCA /* HCNumberAssert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602ED13440A9F001B439B /* HCNumberAssert.mm */; };
 		08026546134597C000A8DCCA /* HCOrderingComparison.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602EF13440A9F001B439B /* HCOrderingComparison.mm */; };
-		08026547134597C000A8DCCA /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023D13440A83001B439B /* HCRequireNonNilObject.mm */; };
+		08026547134597C000A8DCCA /* HCRequireNonNilObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023D13440A83001B439B /* HCRequireNonNilObject.m */; };
 		08026548134597C000A8DCCA /* HCRequireNonNilString.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023F13440A83001B439B /* HCRequireNonNilString.mm */; };
 		08026549134597C000A8DCCA /* HCStringContains.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F913440A9F001B439B /* HCStringContains.mm */; };
 		0802654A134597C000A8DCCA /* HCStringDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023613440A83001B439B /* HCStringDescription.m */; };
@@ -147,7 +147,7 @@
 		0876026513440A83001B439B /* HCInvocationMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023A13440A83001B439B /* HCInvocationMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876026613440A83001B439B /* HCInvocationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023B13440A83001B439B /* HCInvocationMatcher.m */; };
 		0876026713440A83001B439B /* HCRequireNonNilObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023C13440A83001B439B /* HCRequireNonNilObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876026813440A83001B439B /* HCRequireNonNilObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023D13440A83001B439B /* HCRequireNonNilObject.mm */; };
+		0876026813440A83001B439B /* HCRequireNonNilObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023D13440A83001B439B /* HCRequireNonNilObject.m */; };
 		0876026913440A83001B439B /* HCRequireNonNilString.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023E13440A83001B439B /* HCRequireNonNilString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876026A13440A83001B439B /* HCRequireNonNilString.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876023F13440A83001B439B /* HCRequireNonNilString.mm */; };
 		0876026B13440A83001B439B /* HCWrapInMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876024013440A83001B439B /* HCWrapInMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -319,7 +319,7 @@
 		0876023A13440A83001B439B /* HCInvocationMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCInvocationMatcher.h; sourceTree = "<group>"; };
 		0876023B13440A83001B439B /* HCInvocationMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCInvocationMatcher.m; sourceTree = "<group>"; };
 		0876023C13440A83001B439B /* HCRequireNonNilObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilObject.h; sourceTree = "<group>"; };
-		0876023D13440A83001B439B /* HCRequireNonNilObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCRequireNonNilObject.mm; sourceTree = "<group>"; };
+		0876023D13440A83001B439B /* HCRequireNonNilObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCRequireNonNilObject.m; sourceTree = "<group>"; };
 		0876023E13440A83001B439B /* HCRequireNonNilString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilString.h; sourceTree = "<group>"; };
 		0876023F13440A83001B439B /* HCRequireNonNilString.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCRequireNonNilString.mm; sourceTree = "<group>"; };
 		0876024013440A83001B439B /* HCWrapInMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCWrapInMatcher.h; sourceTree = "<group>"; };
@@ -587,7 +587,7 @@
 				0876023A13440A83001B439B /* HCInvocationMatcher.h */,
 				0876023B13440A83001B439B /* HCInvocationMatcher.m */,
 				0876023C13440A83001B439B /* HCRequireNonNilObject.h */,
-				0876023D13440A83001B439B /* HCRequireNonNilObject.mm */,
+				0876023D13440A83001B439B /* HCRequireNonNilObject.m */,
 				0876023E13440A83001B439B /* HCRequireNonNilString.h */,
 				0876023F13440A83001B439B /* HCRequireNonNilString.mm */,
 				0876024013440A83001B439B /* HCWrapInMatcher.h */,
@@ -1058,7 +1058,7 @@
 				08026540134597C000A8DCCA /* HCIsIn.mm in Sources */,
 				08026545134597C000A8DCCA /* HCNumberAssert.mm in Sources */,
 				08026546134597C000A8DCCA /* HCOrderingComparison.mm in Sources */,
-				08026547134597C000A8DCCA /* HCRequireNonNilObject.mm in Sources */,
+				08026547134597C000A8DCCA /* HCRequireNonNilObject.m in Sources */,
 				08026548134597C000A8DCCA /* HCRequireNonNilString.mm in Sources */,
 				08026549134597C000A8DCCA /* HCStringContains.mm in Sources */,
 				0802654A134597C000A8DCCA /* HCStringDescription.m in Sources */,
@@ -1142,7 +1142,7 @@
 				0876026213440A83001B439B /* HCStringDescription.m in Sources */,
 				0876026413440A83001B439B /* HCCollectMatchers.m in Sources */,
 				0876026613440A83001B439B /* HCInvocationMatcher.m in Sources */,
-				0876026813440A83001B439B /* HCRequireNonNilObject.mm in Sources */,
+				0876026813440A83001B439B /* HCRequireNonNilObject.m in Sources */,
 				0876026A13440A83001B439B /* HCRequireNonNilString.mm in Sources */,
 				0876026C13440A83001B439B /* HCWrapInMatcher.mm in Sources */,
 				0876026E13440A83001B439B /* NSObject+HCSelfDescribingValue.mm in Sources */,
