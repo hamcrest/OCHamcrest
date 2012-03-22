@@ -22,7 +22,7 @@
 		08026537134597C000A8DCCA /* HCIsDictionaryContaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602DB13440A9E001B439B /* HCIsDictionaryContaining.m */; };
 		08026538134597C000A8DCCA /* HCIsDictionaryContainingEntries.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.mm */; };
 		08026539134597C000A8DCCA /* HCIsDictionaryContainingKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602DF13440A9E001B439B /* HCIsDictionaryContainingKey.m */; };
-		0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E113440A9E001B439B /* HCIsDictionaryContainingValue.mm */; };
+		0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E113440A9E001B439B /* HCIsDictionaryContainingValue.m */; };
 		0802653B134597C000A8DCCA /* HCIsEmptyCollection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E313440A9E001B439B /* HCIsEmptyCollection.mm */; };
 		0802653D134597C000A8DCCA /* HCIsEqualIgnoringCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F513440A9F001B439B /* HCIsEqualIgnoringCase.mm */; };
 		0802653E134597C000A8DCCA /* HCIsEqualIgnoringWhiteSpace.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602F713440A9F001B439B /* HCIsEqualIgnoringWhiteSpace.mm */; };
@@ -171,7 +171,7 @@
 		0876030E13440A9F001B439B /* HCIsDictionaryContainingKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602DE13440A9E001B439B /* HCIsDictionaryContainingKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876030F13440A9F001B439B /* HCIsDictionaryContainingKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602DF13440A9E001B439B /* HCIsDictionaryContainingKey.m */; };
 		0876031013440A9F001B439B /* HCIsDictionaryContainingValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602E013440A9E001B439B /* HCIsDictionaryContainingValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876031113440A9F001B439B /* HCIsDictionaryContainingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E113440A9E001B439B /* HCIsDictionaryContainingValue.mm */; };
+		0876031113440A9F001B439B /* HCIsDictionaryContainingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E113440A9E001B439B /* HCIsDictionaryContainingValue.m */; };
 		0876031213440A9F001B439B /* HCIsEmptyCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602E213440A9E001B439B /* HCIsEmptyCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876031313440A9F001B439B /* HCIsEmptyCollection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E313440A9E001B439B /* HCIsEmptyCollection.mm */; };
 		0876031413440A9F001B439B /* HCIsIn.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602E413440A9E001B439B /* HCIsIn.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -343,7 +343,7 @@
 		087602DE13440A9E001B439B /* HCIsDictionaryContainingKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingKey.h; sourceTree = "<group>"; };
 		087602DF13440A9E001B439B /* HCIsDictionaryContainingKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContainingKey.m; sourceTree = "<group>"; };
 		087602E013440A9E001B439B /* HCIsDictionaryContainingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingValue.h; sourceTree = "<group>"; };
-		087602E113440A9E001B439B /* HCIsDictionaryContainingValue.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsDictionaryContainingValue.mm; sourceTree = "<group>"; };
+		087602E113440A9E001B439B /* HCIsDictionaryContainingValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContainingValue.m; sourceTree = "<group>"; };
 		087602E213440A9E001B439B /* HCIsEmptyCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEmptyCollection.h; sourceTree = "<group>"; };
 		087602E313440A9E001B439B /* HCIsEmptyCollection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsEmptyCollection.mm; sourceTree = "<group>"; };
 		087602E413440A9E001B439B /* HCIsIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsIn.h; sourceTree = "<group>"; };
@@ -629,7 +629,7 @@
 				087602DE13440A9E001B439B /* HCIsDictionaryContainingKey.h */,
 				087602DF13440A9E001B439B /* HCIsDictionaryContainingKey.m */,
 				087602E013440A9E001B439B /* HCIsDictionaryContainingValue.h */,
-				087602E113440A9E001B439B /* HCIsDictionaryContainingValue.mm */,
+				087602E113440A9E001B439B /* HCIsDictionaryContainingValue.m */,
 				087602E213440A9E001B439B /* HCIsEmptyCollection.h */,
 				087602E313440A9E001B439B /* HCIsEmptyCollection.mm */,
 				087602E413440A9E001B439B /* HCIsIn.h */,
@@ -1050,7 +1050,7 @@
 				08026537134597C000A8DCCA /* HCIsDictionaryContaining.m in Sources */,
 				08026538134597C000A8DCCA /* HCIsDictionaryContainingEntries.mm in Sources */,
 				08026539134597C000A8DCCA /* HCIsDictionaryContainingKey.m in Sources */,
-				0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.mm in Sources */,
+				0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.m in Sources */,
 				0802653B134597C000A8DCCA /* HCIsEmptyCollection.mm in Sources */,
 				0802653D134597C000A8DCCA /* HCIsEqualIgnoringCase.mm in Sources */,
 				0802653E134597C000A8DCCA /* HCIsEqualIgnoringWhiteSpace.mm in Sources */,
@@ -1154,7 +1154,7 @@
 				0876030B13440A9F001B439B /* HCIsDictionaryContaining.m in Sources */,
 				0876030D13440A9F001B439B /* HCIsDictionaryContainingEntries.mm in Sources */,
 				0876030F13440A9F001B439B /* HCIsDictionaryContainingKey.m in Sources */,
-				0876031113440A9F001B439B /* HCIsDictionaryContainingValue.mm in Sources */,
+				0876031113440A9F001B439B /* HCIsDictionaryContainingValue.m in Sources */,
 				0876031313440A9F001B439B /* HCIsEmptyCollection.mm in Sources */,
 				0876031513440A9F001B439B /* HCIsIn.mm in Sources */,
 				0876031813440A9F001B439B /* HCIsCloseTo.mm in Sources */,
