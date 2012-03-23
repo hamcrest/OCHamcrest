@@ -38,7 +38,6 @@
 		0802654C134597C000A8DCCA /* HCStringStartsWith.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602FD13440A9F001B439B /* HCStringStartsWith.m */; };
 		0802654D134597C000A8DCCA /* HCSubstringMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602FF13440A9F001B439B /* HCSubstringMatcher.m */; };
 		0802654E134597C000A8DCCA /* HCWrapInMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876024113440A83001B439B /* HCWrapInMatcher.m */; };
-		0802654F134597C000A8DCCA /* NSObject+HCSelfDescribingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876024313440A83001B439B /* NSObject+HCSelfDescribingValue.m */; };
 		0817B5CD147EC45200C5401D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0817B5CC147EC45200C5401D /* SenTestingKit.framework */; };
 		0817B5CE147EC45200C5401D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0817B5CC147EC45200C5401D /* SenTestingKit.framework */; };
 		081BEE631345979F003F846A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
@@ -152,8 +151,6 @@
 		0876026A13440A83001B439B /* HCRequireNonNilString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023F13440A83001B439B /* HCRequireNonNilString.m */; };
 		0876026B13440A83001B439B /* HCWrapInMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876024013440A83001B439B /* HCWrapInMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876026C13440A83001B439B /* HCWrapInMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876024113440A83001B439B /* HCWrapInMatcher.m */; };
-		0876026D13440A83001B439B /* NSObject+HCSelfDescribingValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876024213440A83001B439B /* NSObject+HCSelfDescribingValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876026E13440A83001B439B /* NSObject+HCSelfDescribingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876024313440A83001B439B /* NSObject+HCSelfDescribingValue.m */; };
 		0876030013440A9F001B439B /* HCHasCount.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602D013440A9E001B439B /* HCHasCount.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876030113440A9F001B439B /* HCHasCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602D113440A9E001B439B /* HCHasCount.m */; };
 		0876030213440A9F001B439B /* HCIsCollectionContaining.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602D213440A9E001B439B /* HCIsCollectionContaining.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -324,8 +321,6 @@
 		0876023F13440A83001B439B /* HCRequireNonNilString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCRequireNonNilString.m; sourceTree = "<group>"; };
 		0876024013440A83001B439B /* HCWrapInMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCWrapInMatcher.h; sourceTree = "<group>"; };
 		0876024113440A83001B439B /* HCWrapInMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCWrapInMatcher.m; sourceTree = "<group>"; };
-		0876024213440A83001B439B /* NSObject+HCSelfDescribingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCSelfDescribingValue.h"; sourceTree = "<group>"; };
-		0876024313440A83001B439B /* NSObject+HCSelfDescribingValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCSelfDescribingValue.m"; sourceTree = "<group>"; };
 		087602D013440A9E001B439B /* HCHasCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHasCount.h; sourceTree = "<group>"; };
 		087602D113440A9E001B439B /* HCHasCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHasCount.m; sourceTree = "<group>"; };
 		087602D213440A9E001B439B /* HCIsCollectionContaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContaining.h; sourceTree = "<group>"; };
@@ -573,8 +568,6 @@
 				0876023513440A83001B439B /* HCStringDescription.h */,
 				0876023613440A83001B439B /* HCStringDescription.m */,
 				0876023713440A83001B439B /* Helpers */,
-				0876024213440A83001B439B /* NSObject+HCSelfDescribingValue.h */,
-				0876024313440A83001B439B /* NSObject+HCSelfDescribingValue.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -817,7 +810,6 @@
 				0876026713440A83001B439B /* HCRequireNonNilObject.h in Headers */,
 				0876026913440A83001B439B /* HCRequireNonNilString.h in Headers */,
 				0876026B13440A83001B439B /* HCWrapInMatcher.h in Headers */,
-				0876026D13440A83001B439B /* NSObject+HCSelfDescribingValue.h in Headers */,
 				0876030013440A9F001B439B /* HCHasCount.h in Headers */,
 				0876030213440A9F001B439B /* HCIsCollectionContaining.h in Headers */,
 				0876030413440A9F001B439B /* HCIsCollectionContainingInAnyOrder.h in Headers */,
@@ -1066,7 +1058,6 @@
 				0802654C134597C000A8DCCA /* HCStringStartsWith.m in Sources */,
 				0802654D134597C000A8DCCA /* HCSubstringMatcher.m in Sources */,
 				0802654E134597C000A8DCCA /* HCWrapInMatcher.m in Sources */,
-				0802654F134597C000A8DCCA /* NSObject+HCSelfDescribingValue.m in Sources */,
 				088FB0B2136A70B800C191E1 /* HCStringContainsInOrder.m in Sources */,
 				0846B69F13EE5D6200EA68E8 /* HCDescribedAs.m in Sources */,
 				0846B6A313EE5D6200EA68E8 /* HCIs.m in Sources */,
@@ -1145,7 +1136,6 @@
 				0876026813440A83001B439B /* HCRequireNonNilObject.m in Sources */,
 				0876026A13440A83001B439B /* HCRequireNonNilString.m in Sources */,
 				0876026C13440A83001B439B /* HCWrapInMatcher.m in Sources */,
-				0876026E13440A83001B439B /* NSObject+HCSelfDescribingValue.m in Sources */,
 				0876030113440A9F001B439B /* HCHasCount.m in Sources */,
 				0876030313440A9F001B439B /* HCIsCollectionContaining.m in Sources */,
 				0876030513440A9F001B439B /* HCIsCollectionContainingInAnyOrder.m in Sources */,
