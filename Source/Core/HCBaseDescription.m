@@ -60,21 +60,6 @@
     return self;
 }
 
-- (id<HCDescription>)appendValue:(id)value
-{
-    if (value == nil)
-        [self append:@"nil"];
-    else if ([value isKindOfClass:[NSString class]])
-        [self toCSyntaxString:value];
-    else
-    {
-        [self append:@"<"];
-        [self append:[value description]];
-        [self append:@">"];
-    }
-    return self;
-}
-
 - (id<HCDescription>)appendList:(NSArray *)values
                            start:(NSString *)start
                        separator:(NSString *)separator

@@ -11,6 +11,9 @@ namespace hamcrest {
 
 /**
     Boxes a scalar value in an NSNumber, specialized per type.
+ 
+    @b Deprecated
+ 
     @ingroup number_matchers
  */
 template <typename T>

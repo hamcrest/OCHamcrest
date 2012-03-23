@@ -1,7 +1,13 @@
 == NEXT VERSION IN PROGRESS
 
 * Moved OCHamcrest away from Objective-C++, so there's no need for projects to set "-lstdc++" in "Other Linker Flags".
-* Deprecated C++ template function boxNumber.
+
+* Deprecated:
+  - C++ template function boxNumber.
+
+* Deleted following items deprecated in v1.2:
+  - HCDescription's -appendValue
+  - NSObject+SelfDescribingValue
 
 
 == Version 1.7 ==
