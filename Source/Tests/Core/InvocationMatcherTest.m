@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - InvocationMatcherTest.mm
+//  OCHamcrest - InvocationMatcherTest.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
