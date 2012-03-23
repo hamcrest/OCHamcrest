@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsNil.mm
+//  OCHamcrest - HCIsNil.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -33,12 +33,12 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_nilValue()
+id<HCMatcher> HC_nilValue()
 {
     return [HCIsNil isNil];
 }
 
-OBJC_EXPORT id<HCMatcher> HC_notNilValue()
+id<HCMatcher> HC_notNilValue()
 {
     return HC_isNot([HCIsNil isNil]);
 }

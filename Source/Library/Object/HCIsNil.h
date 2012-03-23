@@ -15,7 +15,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_nilValue();
+OBJC_EXPORT id<HCMatcher> HC_nilValue(void);
 
 /**
     Matches if object is @c nil.
@@ -30,7 +30,7 @@ OBJC_EXPORT id<HCMatcher> HC_nilValue();
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_notNilValue();
+OBJC_EXPORT id<HCMatcher> HC_notNilValue(void);
 
 /**
     Matches if object is not @c nil.
