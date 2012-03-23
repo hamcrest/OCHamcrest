@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCConformsToProtocol.mm
+//  OCHamcrest - HCConformsToProtocol.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Todd Farrell
@@ -44,7 +44,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_conformsToProtocol(Protocol *aProtocol)
+id<HCMatcher> HC_conformsToProtocol(Protocol *aProtocol)
 {
     return [HCConformsToProtocol conformsToProtocol:aProtocol];
 }

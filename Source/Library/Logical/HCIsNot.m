@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsNot.mm
+//  OCHamcrest - HCIsNot.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -47,7 +47,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_isNot(id aMatcher)
+id<HCMatcher> HC_isNot(id aMatcher)
 {
     return [HCIsNot isNot:HCWrapInMatcher(aMatcher)];
 }

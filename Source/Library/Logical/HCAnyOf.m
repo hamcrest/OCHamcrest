@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCAnyOf.mm
+//  OCHamcrest - HCAnyOf.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -50,7 +50,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_anyOf(id match, ...)
+id<HCMatcher> HC_anyOf(id match, ...)
 {
     va_list args;
     va_start(args, match);

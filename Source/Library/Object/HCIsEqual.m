@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsEqual.mm
+//  OCHamcrest - HCIsEqual.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -56,7 +56,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_equalTo(id object)
+id<HCMatcher> HC_equalTo(id object)
 {
     return [HCIsEqual isEqualTo:object];
 }

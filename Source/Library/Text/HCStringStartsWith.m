@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCStringStartsWith.mm
+//  OCHamcrest - HCStringStartsWith.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -35,7 +35,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString *aString)
+id<HCMatcher> HC_startsWith(NSString *aString)
 {
     return [HCStringStartsWith stringStartsWith:aString];
 }

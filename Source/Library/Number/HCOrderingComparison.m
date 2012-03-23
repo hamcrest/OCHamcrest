@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCOrderingComparison.mm
+//  OCHamcrest - HCOrderingComparison.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -76,7 +76,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_greaterThan(id aValue)
+id<HCMatcher> HC_greaterThan(id aValue)
 {
     return [HCOrderingComparison compare:aValue
                               minCompare:NSOrderedAscending
@@ -84,7 +84,7 @@ OBJC_EXPORT id<HCMatcher> HC_greaterThan(id aValue)
                    comparisonDescription:@"greater than"];
 }
 
-OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id aValue)
+id<HCMatcher> HC_greaterThanOrEqualTo(id aValue)
 {
     return [HCOrderingComparison compare:aValue
                               minCompare:NSOrderedAscending
@@ -92,7 +92,7 @@ OBJC_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id aValue)
                    comparisonDescription:@"greater than or equal to"];
 }
 
-OBJC_EXPORT id<HCMatcher> HC_lessThan(id aValue)
+id<HCMatcher> HC_lessThan(id aValue)
 {
     return [HCOrderingComparison compare:aValue
                               minCompare:NSOrderedDescending
@@ -100,7 +100,7 @@ OBJC_EXPORT id<HCMatcher> HC_lessThan(id aValue)
                    comparisonDescription:@"less than"];
 }
 
-OBJC_EXPORT id<HCMatcher> HC_lessThanOrEqualTo(id aValue)
+id<HCMatcher> HC_lessThanOrEqualTo(id aValue)
 {
     return [HCOrderingComparison compare:aValue
                               minCompare:NSOrderedSame

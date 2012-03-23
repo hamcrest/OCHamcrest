@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCHasDescription.mm
+//  OCHamcrest - HCHasDescription.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -30,7 +30,9 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasDescription(id match)
+#pragma mark -
+
+id<HCMatcher> HC_hasDescription(id match)
 {
     return [HCHasDescription hasDescription:HCWrapInMatcher(match)];
 }

@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsCollectionContainingInOrder.mm
+//  OCHamcrest - HCIsCollectionContainingInOrder.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -154,7 +154,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_contains(id itemMatch, ...)
+id<HCMatcher> HC_contains(id itemMatch, ...)
 {
     NSMutableArray *matchers = [NSMutableArray arrayWithObject:HCWrapInMatcher(itemMatch)];
     

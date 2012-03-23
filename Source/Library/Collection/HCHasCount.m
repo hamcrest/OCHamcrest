@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCHasCount.mm
+//  OCHamcrest - HCHasCount.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -62,12 +62,12 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_hasCount(id<HCMatcher> matcher)
+id<HCMatcher> HC_hasCount(id<HCMatcher> matcher)
 {
     return [HCHasCount hasCount:matcher];
 }
 
-OBJC_EXPORT id<HCMatcher> HC_hasCountOf(NSUInteger value)
+id<HCMatcher> HC_hasCountOf(NSUInteger value)
 {
     return HC_hasCount(HC_equalToUnsignedInteger(value));
 }

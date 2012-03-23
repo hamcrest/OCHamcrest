@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - NSObject+HCSelfDescribingValue.mm
+//  OCHamcrest - NSObject+HCSelfDescribingValue.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid

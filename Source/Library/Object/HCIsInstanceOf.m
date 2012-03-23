@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsInstanceOf.mm
+//  OCHamcrest - HCIsInstanceOf.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -44,7 +44,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class aClass)
+id<HCMatcher> HC_instanceOf(Class aClass)
 {
     return [HCIsInstanceOf isInstanceOf:aClass];
 }

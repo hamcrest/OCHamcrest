@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsSame.mm
+//  OCHamcrest - HCIsSame.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -55,7 +55,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object)
+id<HCMatcher> HC_sameInstance(id object)
 {
     return [HCIsSame isSameAs:object];
 }

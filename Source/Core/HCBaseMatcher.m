@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCBaseMatcher.mm
+//  OCHamcrest - HCBaseMatcher.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid

@@ -8,7 +8,7 @@
 #import "HCRequireNonNilObject.h"
 
 
-OBJC_EXPORT void HCRequireNonNilObject(id obj)
+void HCRequireNonNilObject(id obj)
 {
     if (obj == nil)
     {

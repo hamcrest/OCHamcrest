@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsCollectionContaining.mm
+//  OCHamcrest - HCIsCollectionContaining.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -56,13 +56,13 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_hasItem(id itemMatch)
+id<HCMatcher> HC_hasItem(id itemMatch)
 {
     HCRequireNonNilObject(itemMatch);
     return [HCIsCollectionContaining isCollectionContaining:HCWrapInMatcher(itemMatch)];
 }
 
-OBJC_EXPORT id<HCMatcher> HC_hasItems(id itemMatch, ...)
+id<HCMatcher> HC_hasItems(id itemMatch, ...)
 {
     NSMutableArray *matchers = [NSMutableArray arrayWithObject:HC_hasItem(itemMatch)];
     

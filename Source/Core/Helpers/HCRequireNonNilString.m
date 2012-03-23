@@ -8,7 +8,7 @@
 #import "HCRequireNonNilString.h"
 
 
-OBJC_EXPORT void HCRequireNonNilString(NSString *string)
+void HCRequireNonNilString(NSString *string)
 {
     if (string == nil)
     {

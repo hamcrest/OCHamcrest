@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsIn.mm
+//  OCHamcrest - HCIsIn.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -54,7 +54,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_isIn(id aCollection)
+id<HCMatcher> HC_isIn(id aCollection)
 {
     return [HCIsIn isInCollection:aCollection];
 }

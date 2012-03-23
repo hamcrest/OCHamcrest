@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCCollectMatchers.mm
+//  OCHamcrest - HCCollectMatchers.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -10,7 +10,7 @@
 #import "HCWrapInMatcher.h"
 
 
-OBJC_EXPORT NSMutableArray *HCCollectMatchers(id item, va_list args)
+NSMutableArray *HCCollectMatchers(id item, va_list args)
 {
     NSMutableArray *matcherList = [NSMutableArray arrayWithObject:HCWrapInMatcher(item)];
     

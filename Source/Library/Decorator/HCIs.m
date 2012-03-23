@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIs.mm
+//  OCHamcrest - HCIs.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -52,7 +52,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_is(id match)
+id<HCMatcher> HC_is(id match)
 {
     return [HCIs is:HCWrapInMatcher(match)];
 }

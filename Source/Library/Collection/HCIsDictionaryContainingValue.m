@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsDictionaryContainingValue.mm
+//  OCHamcrest - HCIsDictionaryContainingValue.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -53,7 +53,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_hasValue(id valueMatch)
+id<HCMatcher> HC_hasValue(id valueMatch)
 {
     HCRequireNonNilObject(valueMatch);
     return [HCIsDictionaryContainingValue isDictionaryContainingValue:HCWrapInMatcher(valueMatch)];

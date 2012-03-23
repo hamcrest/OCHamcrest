@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsEqualIgnoringCase.mm
+//  OCHamcrest - HCIsEqualIgnoringCase.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -53,7 +53,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString *aString)
+id<HCMatcher> HC_equalToIgnoringCase(NSString *aString)
 {
     return [HCIsEqualIgnoringCase isEqualIgnoringCase:aString];
 }
