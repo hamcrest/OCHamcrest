@@ -23,11 +23,6 @@
     return invocation;
 }
 
-+ (NSInvocation *)createInvocationForSelector:(SEL)selector onClass:(Class)aClass
-{
-    return [self invocationForSelector:selector onClass:aClass];
-}
-
 - (id)initWithInvocation:(NSInvocation *)anInvocation matching:(id<HCMatcher>)aMatcher
 {
     self = [super init];

@@ -38,13 +38,6 @@
 + (NSInvocation *)invocationForSelector:(SEL)selector onClass:(Class)aClass;
 
 /**
-    Helper method for creating an invocation.
- 
-    @b Deprecated: Use new name +invocationForSelector:onClass:
- */
-+ (NSInvocation *)createInvocationForSelector:(SEL)selector onClass:(Class)aClass   __attribute__((deprecated));
-
-/**
     Returns an HCInvocationMatcher object initialized with an invocation and a matcher.
  */
 - (id)initWithInvocation:(NSInvocation *)anInvocation matching:(id<HCMatcher>)aMatcher;

@@ -6,7 +6,8 @@
   - C++ template function boxNumber.
 
 * Deleted following items deprecated in v1.2:
-  - HCDescription's -appendValue
+  - -[HCDescription appendValue]
+  - +[HCInvocationMatcher createInvocationForSelector:onClass:]
   - NSObject+SelfDescribingValue
 
 
