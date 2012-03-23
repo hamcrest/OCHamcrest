@@ -16,7 +16,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_empty();
+OBJC_EXPORT id<HCMatcher> HC_empty(void);
 
 /**
     Matches empty collection.

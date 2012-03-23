@@ -23,7 +23,7 @@
 		08026538134597C000A8DCCA /* HCIsDictionaryContainingEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.m */; };
 		08026539134597C000A8DCCA /* HCIsDictionaryContainingKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602DF13440A9E001B439B /* HCIsDictionaryContainingKey.m */; };
 		0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E113440A9E001B439B /* HCIsDictionaryContainingValue.m */; };
-		0802653B134597C000A8DCCA /* HCIsEmptyCollection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E313440A9E001B439B /* HCIsEmptyCollection.mm */; };
+		0802653B134597C000A8DCCA /* HCIsEmptyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E313440A9E001B439B /* HCIsEmptyCollection.m */; };
 		0802653D134597C000A8DCCA /* HCIsEqualIgnoringCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602F513440A9F001B439B /* HCIsEqualIgnoringCase.m */; };
 		0802653E134597C000A8DCCA /* HCIsEqualIgnoringWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602F713440A9F001B439B /* HCIsEqualIgnoringWhiteSpace.m */; };
 		0802653F134597C000A8DCCA /* HCIsEqualToNumber.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602EB13440A9F001B439B /* HCIsEqualToNumber.mm */; };
@@ -173,7 +173,7 @@
 		0876031013440A9F001B439B /* HCIsDictionaryContainingValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602E013440A9E001B439B /* HCIsDictionaryContainingValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876031113440A9F001B439B /* HCIsDictionaryContainingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E113440A9E001B439B /* HCIsDictionaryContainingValue.m */; };
 		0876031213440A9F001B439B /* HCIsEmptyCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602E213440A9E001B439B /* HCIsEmptyCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876031313440A9F001B439B /* HCIsEmptyCollection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E313440A9E001B439B /* HCIsEmptyCollection.mm */; };
+		0876031313440A9F001B439B /* HCIsEmptyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E313440A9E001B439B /* HCIsEmptyCollection.m */; };
 		0876031413440A9F001B439B /* HCIsIn.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602E413440A9E001B439B /* HCIsIn.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876031513440A9F001B439B /* HCIsIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E513440A9E001B439B /* HCIsIn.m */; };
 		0876031613440A9F001B439B /* HCBoxNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602E713440A9E001B439B /* HCBoxNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -285,7 +285,7 @@
 		0846B6BF13EE5D8A00EA68E8 /* HCIsInstanceOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsInstanceOf.h; sourceTree = "<group>"; };
 		0846B6C013EE5D8A00EA68E8 /* HCIsInstanceOf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsInstanceOf.m; sourceTree = "<group>"; };
 		0846B6C113EE5D8A00EA68E8 /* HCIsNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNil.h; sourceTree = "<group>"; };
-		0846B6C213EE5D8A00EA68E8 /* HCIsNil.m */ = {isa = PBXFileReference; fileEncoding = 4; path = HCIsNil.m; sourceTree = "<group>"; };
+		0846B6C213EE5D8A00EA68E8 /* HCIsNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsNil.m; sourceTree = "<group>"; };
 		0846B6C313EE5D8A00EA68E8 /* HCIsSame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsSame.h; sourceTree = "<group>"; };
 		0846B6C413EE5D8A00EA68E8 /* HCIsSame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsSame.m; sourceTree = "<group>"; };
 		0846B6DC13EE5F9D00EA68E8 /* DescribedAsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescribedAsTest.m; sourceTree = "<group>"; };
@@ -345,7 +345,7 @@
 		087602E013440A9E001B439B /* HCIsDictionaryContainingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingValue.h; sourceTree = "<group>"; };
 		087602E113440A9E001B439B /* HCIsDictionaryContainingValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContainingValue.m; sourceTree = "<group>"; };
 		087602E213440A9E001B439B /* HCIsEmptyCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEmptyCollection.h; sourceTree = "<group>"; };
-		087602E313440A9E001B439B /* HCIsEmptyCollection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsEmptyCollection.mm; sourceTree = "<group>"; };
+		087602E313440A9E001B439B /* HCIsEmptyCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEmptyCollection.m; sourceTree = "<group>"; };
 		087602E413440A9E001B439B /* HCIsIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsIn.h; sourceTree = "<group>"; };
 		087602E513440A9E001B439B /* HCIsIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsIn.m; sourceTree = "<group>"; };
 		087602E713440A9E001B439B /* HCBoxNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBoxNumber.h; sourceTree = "<group>"; };
@@ -631,7 +631,7 @@
 				087602E013440A9E001B439B /* HCIsDictionaryContainingValue.h */,
 				087602E113440A9E001B439B /* HCIsDictionaryContainingValue.m */,
 				087602E213440A9E001B439B /* HCIsEmptyCollection.h */,
-				087602E313440A9E001B439B /* HCIsEmptyCollection.mm */,
+				087602E313440A9E001B439B /* HCIsEmptyCollection.m */,
 				087602E413440A9E001B439B /* HCIsIn.h */,
 				087602E513440A9E001B439B /* HCIsIn.m */,
 			);
@@ -1051,7 +1051,7 @@
 				08026538134597C000A8DCCA /* HCIsDictionaryContainingEntries.m in Sources */,
 				08026539134597C000A8DCCA /* HCIsDictionaryContainingKey.m in Sources */,
 				0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.m in Sources */,
-				0802653B134597C000A8DCCA /* HCIsEmptyCollection.mm in Sources */,
+				0802653B134597C000A8DCCA /* HCIsEmptyCollection.m in Sources */,
 				0802653D134597C000A8DCCA /* HCIsEqualIgnoringCase.m in Sources */,
 				0802653E134597C000A8DCCA /* HCIsEqualIgnoringWhiteSpace.m in Sources */,
 				0802653F134597C000A8DCCA /* HCIsEqualToNumber.mm in Sources */,
@@ -1155,7 +1155,7 @@
 				0876030D13440A9F001B439B /* HCIsDictionaryContainingEntries.m in Sources */,
 				0876030F13440A9F001B439B /* HCIsDictionaryContainingKey.m in Sources */,
 				0876031113440A9F001B439B /* HCIsDictionaryContainingValue.m in Sources */,
-				0876031313440A9F001B439B /* HCIsEmptyCollection.mm in Sources */,
+				0876031313440A9F001B439B /* HCIsEmptyCollection.m in Sources */,
 				0876031513440A9F001B439B /* HCIsIn.m in Sources */,
 				0876031813440A9F001B439B /* HCIsCloseTo.m in Sources */,
 				0876031A13440A9F001B439B /* HCIsEqualToNumber.mm in Sources */,
