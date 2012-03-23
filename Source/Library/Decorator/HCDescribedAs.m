@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCDescribedAs.mm
+//  OCHamcrest - HCDescribedAs.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -8,18 +8,21 @@
 #import "HCDescribedAs.h"
 
 #import "HCDescription.h"
-#import <cstdarg>
-#import <cctype>
-#import <utility>
-using namespace std;
+#import <stdarg.h>
+#import <ctype.h>
 
 
-namespace {
+typedef struct
+{
+    int first;
+    NSString *second;
+} HCPairIntNSString;
+
 
 /**
     Splits string into decimal number (-1 if not found) and remaining string.
  */
-pair<int, NSString*> separate(NSString *component)
+static HCPairIntNSString separate(NSString *component)
 {
     unsigned int index = 0;
     bool gotIndex = false;
@@ -36,12 +39,10 @@ pair<int, NSString*> separate(NSString *component)
     }
     
     if (!gotIndex)
-        return make_pair(-1, component);
+        return (HCPairIntNSString){ -1, component };
     else
-        return make_pair(index, [component substringFromIndex:charIndex]);
+        return (HCPairIntNSString){ index, [component substringFromIndex:charIndex] };
 }
-
-}   // namespace
 
 
 #pragma mark -
@@ -102,7 +103,7 @@ pair<int, NSString*> separate(NSString *component)
         }
         else
         {
-            pair<int, NSString*> parseIndex = separate(oneComponent);
+            HCPairIntNSString parseIndex = separate(oneComponent);
             if (parseIndex.first < 0)
                 [[description appendText:@"%"] appendText:oneComponent];
             else
@@ -119,7 +120,7 @@ pair<int, NSString*> separate(NSString *component)
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_describedAs(NSString *description, id<HCMatcher> matcher, ...)
+id<HCMatcher> HC_describedAs(NSString *description, id<HCMatcher> matcher, ...)
 {
     NSMutableArray *valueList = [NSMutableArray array];
     
