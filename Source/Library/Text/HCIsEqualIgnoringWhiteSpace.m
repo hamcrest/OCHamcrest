@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsEqualIgnoringWhiteSpace.mm
+//  OCHamcrest - HCIsEqualIgnoringWhiteSpace.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -9,13 +9,10 @@
 
 #import "HCDescription.h"
 #import "HCRequireNonNilObject.h"
-#import <cctype>
-using namespace std;
+#import <ctype.h>
 
 
-namespace {
-
-void removeTrailingSpace(NSMutableString *string)
+static void removeTrailingSpace(NSMutableString *string)
 {
     NSUInteger length = [string length];
     if (length > 0)
@@ -26,7 +23,7 @@ void removeTrailingSpace(NSMutableString *string)
     }
 }
 
-NSMutableString *stripSpace(NSString *string)
+static NSMutableString *stripSpace(NSString *string)
 {
     NSUInteger length = [string length];
     NSMutableString *result = [NSMutableString stringWithCapacity:length];
@@ -50,8 +47,6 @@ NSMutableString *stripSpace(NSString *string)
     removeTrailingSpace(result);
     return result;
 }
-
-}   // namespace
 
 
 #pragma mark -
@@ -102,7 +97,7 @@ NSMutableString *stripSpace(NSString *string)
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString *aString)
+id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString *aString)
 {
     return [HCIsEqualIgnoringWhiteSpace isEqualIgnoringWhiteSpace:aString];
 }

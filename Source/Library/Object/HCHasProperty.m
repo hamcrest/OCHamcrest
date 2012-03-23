@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCHasProperty.mm
+//  OCHamcrest - HCHasProperty.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Justin Shacklette
@@ -158,7 +158,7 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *name, id valueMatch)
+id<HCMatcher> HC_hasProperty(NSString *name, id valueMatch)
 {
     return [HCHasProperty hasProperty:name value:HCWrapInMatcher(valueMatch)];
 }
