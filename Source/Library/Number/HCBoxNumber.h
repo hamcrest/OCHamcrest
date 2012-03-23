@@ -15,7 +15,7 @@ namespace hamcrest {
  */
 template <typename T>
 inline
-NSNumber *boxNumber(T value)
+NSNumber *boxNumber(T value)    __attribute__((deprecated));
     { return nil; }
 
 template <>
