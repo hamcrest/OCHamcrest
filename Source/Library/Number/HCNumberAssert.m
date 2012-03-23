@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCNumberAssert.mm
+//  OCHamcrest - HCNumberAssert.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -8,15 +8,13 @@
 #import "HCNumberAssert.h"
 
 #import "HCAssertThat.h"
-#import "HCBoxNumber.h"
-using namespace hamcrest;
 
 
-#define DEFINE_NUMBER_ASSERT(name, type)                                                        \
-    OBJC_EXPORT void HC_assertThat ## name ## WithLocation(id testCase, type actual, id<HCMatcher> matcher, \
-                                                    const char* fileName, int lineNumber)       \
-    {                                                                                           \
-        HC_assertThatWithLocation(testCase, boxNumber(actual), matcher, fileName, lineNumber);  \
+#define DEFINE_NUMBER_ASSERT(name, type)                                                                            \
+    OBJC_EXPORT void HC_assertThat ## name ## WithLocation(id testCase, type actual, id<HCMatcher> matcher,         \
+                                                           const char* fileName, int lineNumber)                    \
+    {                                                                                                               \
+        HC_assertThatWithLocation(testCase, [NSNumber numberWith ## name :actual], matcher, fileName, lineNumber);  \
     }
 
 DEFINE_NUMBER_ASSERT(Bool, BOOL)
