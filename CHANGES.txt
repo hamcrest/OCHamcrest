@@ -1,6 +1,8 @@
 == NEXT VERSION IN PROGRESS
 
-* Moved OCHamcrest away from Objective-C++, so there's no need for projects to set "-lstdc++" in "Other Linker Flags".
+* No need to specify "Other Linker Flags" in iOS projects:
+  - Changed all Objective-C++ to Objective-C
+  - Eliminated categories
 
 * Deprecated:
   - C++ template function boxNumber.
