@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsDictionaryContainingEntries.mm
+//  OCHamcrest - HCIsDictionaryContainingEntries.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -109,9 +109,7 @@
 
 #pragma mark -
 
-namespace {
-
-void requirePairedObject(id obj)
+static void requirePairedObject(id obj)
 {
     if (obj == nil)
     {
@@ -121,10 +119,8 @@ void requirePairedObject(id obj)
     }
 }
 
-}   // namespace
 
-
-OBJC_EXPORT id<HCMatcher> HC_hasEntries(id keysAndValueMatch, ...)
+id<HCMatcher> HC_hasEntries(id keysAndValueMatch, ...)
 {
     va_list args;
     va_start(args, keysAndValueMatch);

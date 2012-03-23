@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08026528134597C000A8DCCA /* HCAssertThat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022D13440A83001B439B /* HCAssertThat.mm */; };
+		08026528134597C000A8DCCA /* HCAssertThat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022D13440A83001B439B /* HCAssertThat.m */; };
 		08026529134597C000A8DCCA /* HCBaseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022F13440A83001B439B /* HCBaseDescription.m */; };
 		0802652A134597C000A8DCCA /* HCBaseMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023113440A83001B439B /* HCBaseMatcher.m */; };
 		0802652B134597C000A8DCCA /* HCCollectMatchers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023913440A83001B439B /* HCCollectMatchers.m */; };
@@ -20,7 +20,7 @@
 		08026535134597C000A8DCCA /* HCIsCollectionContainingInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602D713440A9E001B439B /* HCIsCollectionContainingInOrder.m */; };
 		08026536134597C000A8DCCA /* HCIsCollectionOnlyContaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602D913440A9E001B439B /* HCIsCollectionOnlyContaining.m */; };
 		08026537134597C000A8DCCA /* HCIsDictionaryContaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602DB13440A9E001B439B /* HCIsDictionaryContaining.m */; };
-		08026538134597C000A8DCCA /* HCIsDictionaryContainingEntries.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.mm */; };
+		08026538134597C000A8DCCA /* HCIsDictionaryContainingEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.m */; };
 		08026539134597C000A8DCCA /* HCIsDictionaryContainingKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602DF13440A9E001B439B /* HCIsDictionaryContainingKey.m */; };
 		0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E113440A9E001B439B /* HCIsDictionaryContainingValue.m */; };
 		0802653B134597C000A8DCCA /* HCIsEmptyCollection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602E313440A9E001B439B /* HCIsEmptyCollection.mm */; };
@@ -132,7 +132,7 @@
 		0859833013459CA400BE7892 /* StringStartsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035F13440AD8001B439B /* StringStartsWithTest.m */; };
 		087601FB13440807001B439B /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601E213440806001B439B /* OCHamcrest.framework */; };
 		0876025813440A83001B439B /* HCAssertThat.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876022C13440A83001B439B /* HCAssertThat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876025913440A83001B439B /* HCAssertThat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0876022D13440A83001B439B /* HCAssertThat.mm */; };
+		0876025913440A83001B439B /* HCAssertThat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022D13440A83001B439B /* HCAssertThat.m */; };
 		0876025A13440A83001B439B /* HCBaseDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876022E13440A83001B439B /* HCBaseDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876025B13440A83001B439B /* HCBaseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022F13440A83001B439B /* HCBaseDescription.m */; };
 		0876025C13440A83001B439B /* HCBaseMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023013440A83001B439B /* HCBaseMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -167,7 +167,7 @@
 		0876030A13440A9F001B439B /* HCIsDictionaryContaining.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602DA13440A9E001B439B /* HCIsDictionaryContaining.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876030B13440A9F001B439B /* HCIsDictionaryContaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602DB13440A9E001B439B /* HCIsDictionaryContaining.m */; };
 		0876030C13440A9F001B439B /* HCIsDictionaryContainingEntries.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602DC13440A9E001B439B /* HCIsDictionaryContainingEntries.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876030D13440A9F001B439B /* HCIsDictionaryContainingEntries.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.mm */; };
+		0876030D13440A9F001B439B /* HCIsDictionaryContainingEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.m */; };
 		0876030E13440A9F001B439B /* HCIsDictionaryContainingKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602DE13440A9E001B439B /* HCIsDictionaryContainingKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876030F13440A9F001B439B /* HCIsDictionaryContainingKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602DF13440A9E001B439B /* HCIsDictionaryContainingKey.m */; };
 		0876031013440A9F001B439B /* HCIsDictionaryContainingValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602E013440A9E001B439B /* HCIsDictionaryContainingValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -304,7 +304,7 @@
 		087601EA13440807001B439B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		087601F713440807001B439B /* OCHamcrestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCHamcrestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0876022C13440A83001B439B /* HCAssertThat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAssertThat.h; sourceTree = "<group>"; };
-		0876022D13440A83001B439B /* HCAssertThat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCAssertThat.mm; sourceTree = "<group>"; };
+		0876022D13440A83001B439B /* HCAssertThat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAssertThat.m; sourceTree = "<group>"; };
 		0876022E13440A83001B439B /* HCBaseDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBaseDescription.h; sourceTree = "<group>"; };
 		0876022F13440A83001B439B /* HCBaseDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBaseDescription.m; sourceTree = "<group>"; };
 		0876023013440A83001B439B /* HCBaseMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBaseMatcher.h; sourceTree = "<group>"; };
@@ -339,7 +339,7 @@
 		087602DA13440A9E001B439B /* HCIsDictionaryContaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContaining.h; sourceTree = "<group>"; };
 		087602DB13440A9E001B439B /* HCIsDictionaryContaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContaining.m; sourceTree = "<group>"; };
 		087602DC13440A9E001B439B /* HCIsDictionaryContainingEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingEntries.h; sourceTree = "<group>"; };
-		087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsDictionaryContainingEntries.mm; sourceTree = "<group>"; };
+		087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContainingEntries.m; sourceTree = "<group>"; };
 		087602DE13440A9E001B439B /* HCIsDictionaryContainingKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingKey.h; sourceTree = "<group>"; };
 		087602DF13440A9E001B439B /* HCIsDictionaryContainingKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContainingKey.m; sourceTree = "<group>"; };
 		087602E013440A9E001B439B /* HCIsDictionaryContainingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingValue.h; sourceTree = "<group>"; };
@@ -562,7 +562,7 @@
 			isa = PBXGroup;
 			children = (
 				0876022C13440A83001B439B /* HCAssertThat.h */,
-				0876022D13440A83001B439B /* HCAssertThat.mm */,
+				0876022D13440A83001B439B /* HCAssertThat.m */,
 				0876022E13440A83001B439B /* HCBaseDescription.h */,
 				0876022F13440A83001B439B /* HCBaseDescription.m */,
 				0876023013440A83001B439B /* HCBaseMatcher.h */,
@@ -625,7 +625,7 @@
 				087602DA13440A9E001B439B /* HCIsDictionaryContaining.h */,
 				087602DB13440A9E001B439B /* HCIsDictionaryContaining.m */,
 				087602DC13440A9E001B439B /* HCIsDictionaryContainingEntries.h */,
-				087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.mm */,
+				087602DD13440A9E001B439B /* HCIsDictionaryContainingEntries.m */,
 				087602DE13440A9E001B439B /* HCIsDictionaryContainingKey.h */,
 				087602DF13440A9E001B439B /* HCIsDictionaryContainingKey.m */,
 				087602E013440A9E001B439B /* HCIsDictionaryContainingValue.h */,
@@ -1035,7 +1035,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08026528134597C000A8DCCA /* HCAssertThat.mm in Sources */,
+				08026528134597C000A8DCCA /* HCAssertThat.m in Sources */,
 				08026529134597C000A8DCCA /* HCBaseDescription.m in Sources */,
 				0802652A134597C000A8DCCA /* HCBaseMatcher.m in Sources */,
 				0802652B134597C000A8DCCA /* HCCollectMatchers.m in Sources */,
@@ -1048,7 +1048,7 @@
 				08026535134597C000A8DCCA /* HCIsCollectionContainingInOrder.m in Sources */,
 				08026536134597C000A8DCCA /* HCIsCollectionOnlyContaining.m in Sources */,
 				08026537134597C000A8DCCA /* HCIsDictionaryContaining.m in Sources */,
-				08026538134597C000A8DCCA /* HCIsDictionaryContainingEntries.mm in Sources */,
+				08026538134597C000A8DCCA /* HCIsDictionaryContainingEntries.m in Sources */,
 				08026539134597C000A8DCCA /* HCIsDictionaryContainingKey.m in Sources */,
 				0802653A134597C000A8DCCA /* HCIsDictionaryContainingValue.m in Sources */,
 				0802653B134597C000A8DCCA /* HCIsEmptyCollection.mm in Sources */,
@@ -1136,7 +1136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0876025913440A83001B439B /* HCAssertThat.mm in Sources */,
+				0876025913440A83001B439B /* HCAssertThat.m in Sources */,
 				0876025B13440A83001B439B /* HCBaseDescription.m in Sources */,
 				0876025D13440A83001B439B /* HCBaseMatcher.m in Sources */,
 				0876026213440A83001B439B /* HCStringDescription.m in Sources */,
@@ -1152,7 +1152,7 @@
 				0876030713440A9F001B439B /* HCIsCollectionContainingInOrder.m in Sources */,
 				0876030913440A9F001B439B /* HCIsCollectionOnlyContaining.m in Sources */,
 				0876030B13440A9F001B439B /* HCIsDictionaryContaining.m in Sources */,
-				0876030D13440A9F001B439B /* HCIsDictionaryContainingEntries.mm in Sources */,
+				0876030D13440A9F001B439B /* HCIsDictionaryContainingEntries.m in Sources */,
 				0876030F13440A9F001B439B /* HCIsDictionaryContainingKey.m in Sources */,
 				0876031113440A9F001B439B /* HCIsDictionaryContainingValue.m in Sources */,
 				0876031313440A9F001B439B /* HCIsEmptyCollection.mm in Sources */,

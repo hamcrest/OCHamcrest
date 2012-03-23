@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCAssertThat.mm
+//  OCHamcrest - HCAssertThat.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -17,8 +17,6 @@
 #endif
 
 
-namespace {
-
 /**
     Create OCUnit failure
     
@@ -30,7 +28,7 @@ namespace {
 @endcode
     except we use an NSInvocation so that OCUnit (SenTestingKit) does not have to be linked.
  */
-NSException *createOCUnitException(const char* fileName, int lineNumber, NSString *description)
+static NSException *createOCUnitException(const char* fileName, int lineNumber, NSString *description)
 {
     NSException *result = nil;
 
@@ -53,7 +51,7 @@ NSException *createOCUnitException(const char* fileName, int lineNumber, NSStrin
     return result;
 }
 
-NSException *createAssertThatFailure(const char *fileName, int lineNumber, NSString *description)
+static NSException *createAssertThatFailure(const char *fileName, int lineNumber, NSString *description)
 {
     // If the Hamcrest client has linked to OCUnit, generate an OCUnit failure.
     if (NSClassFromString(@"SenTestCase") != Nil)
@@ -63,8 +61,6 @@ NSException *createAssertThatFailure(const char *fileName, int lineNumber, NSStr
                                                         fileName, lineNumber, description];
     return [NSException exceptionWithName:@"Hamcrest Error" reason:failureReason userInfo:nil];
 }
-
-}   // namespace
 
 
 #pragma mark -
@@ -78,7 +74,7 @@ NSException *createAssertThatFailure(const char *fileName, int lineNumber, NSStr
 - (void)failWithException:(NSException *)exception;
 @end
 
-OBJC_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
+void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
                                            const char *fileName, int lineNumber)
 {
     if (![matcher matches:actual])
