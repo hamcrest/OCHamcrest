@@ -161,7 +161,6 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
-					"-lstdc++",
 					"-ObjC",
 				);
 				PREBINDING = NO;
@@ -188,7 +187,6 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
-					"-lstdc++",
 					"-ObjC",
 				);
 				PREBINDING = NO;

@@ -58,7 +58,7 @@ __iOS:__
 
 Add OCHamcrestIOS.framework to your project.
 
-Add "-lstdc++" and "-ObjC" to your "Other Linker Flags".
+Add "-ObjC" to your "Other Linker Flags".
 
 Add:
 
