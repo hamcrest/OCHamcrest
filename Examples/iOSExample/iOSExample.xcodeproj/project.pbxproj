@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0817B615147ECF5500C5401D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0817B614147ECF5500C5401D /* SenTestingKit.framework */; };
+		087F064E151C2E150030C044 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087F064D151C2E150030C044 /* Foundation.framework */; };
 		089B9DED1298DB1100D4F34F /* Example.m in Sources */ = {isa = PBXBuildFile; fileRef = 089B9DEC1298DB1100D4F34F /* Example.m */; };
 		08B51A8712A068BC00147210 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B51A8612A068BC00147210 /* OCHamcrestIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0817B614147ECF5500C5401D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		087F064D151C2E150030C044 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		089B9DC71298DA0B00D4F34F /* Example.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Example.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		089B9DC81298DA0B00D4F34F /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
 		089B9DEC1298DB1100D4F34F /* Example.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example.m; sourceTree = "<group>"; usesTabs = 0; };
@@ -25,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				087F064E151C2E150030C044 /* Foundation.framework in Frameworks */,
 				08B51A8712A068BC00147210 /* OCHamcrestIOS.framework in Frameworks */,
 				0817B615147ECF5500C5401D /* SenTestingKit.framework in Frameworks */,
 			);
@@ -44,6 +47,7 @@
 		0867D691FE84028FC02AAC07 /* iOSExample */ = {
 			isa = PBXGroup;
 			children = (
+				087F064D151C2E150030C044 /* Foundation.framework */,
 				089B9DEC1298DB1100D4F34F /* Example.m */,
 				089B9F4B1298DE6400D4F34F /* Resources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
@@ -145,7 +149,6 @@
 		089B9DCA1298DA0C00D4F34F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -153,17 +156,9 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 					"\"$(SRCROOT)/../..\"",
 				);
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = "Example-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-ObjC",
-				);
-				PREBINDING = NO;
 				PRODUCT_NAME = Example;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -172,7 +167,6 @@
 		089B9DCB1298DA0C00D4F34F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -182,17 +176,9 @@
 					"\"$(SRCROOT)/../..\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "Example-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-ObjC",
-				);
-				PREBINDING = NO;
 				PRODUCT_NAME = Example;
 				WRAPPER_EXTENSION = octest;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};

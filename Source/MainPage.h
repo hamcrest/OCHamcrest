@@ -67,7 +67,6 @@ otest[57510:203] *** NSTask: Task create for path '...' failed: 22, "Invalid arg
 
     @b iOS:
     @li Add @b OCHamcrestIOS.framework to your project.
-    @li Add \e "-ObjC" to your "Other Linker Flags".
     @li Add @code
 #define HC_SHORTHAND
 #import <OCHamcrestIOS/OCHamcrestIOS.h>

@@ -58,8 +58,6 @@ __iOS:__
 
 Add OCHamcrestIOS.framework to your project.
 
-Add "-ObjC" to your "Other Linker Flags".
-
 Add:
 
     #define HC_SHORTHAND
