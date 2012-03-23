@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsEqualToNumber.mm
+//  OCHamcrest - HCIsEqualToNumber.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -7,15 +7,13 @@
 
 #import "HCIsEqualToNumber.h"
 
-#import "HCBoxNumber.h"
 #import "HCIsEqual.h"
-using namespace hamcrest;
 
 
-#define DEFINE_EQUAL_TO_NUMBER(name, type)                      \
-    OBJC_EXPORT id<HCMatcher> HC_equalTo ## name(type value)    \
-    {                                                           \
-        return [HCIsEqual isEqualTo:boxNumber(value)];          \
+#define DEFINE_EQUAL_TO_NUMBER(name, type)                                  \
+    OBJC_EXPORT id<HCMatcher> HC_equalTo ## name(type value)                \
+    {                                                                       \
+        return [HCIsEqual isEqualTo:[NSNumber numberWith ## name :value]];  \
     }
 
 DEFINE_EQUAL_TO_NUMBER(Bool, BOOL)

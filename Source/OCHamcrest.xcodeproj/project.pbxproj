@@ -26,7 +26,7 @@
 		0802653B134597C000A8DCCA /* HCIsEmptyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E313440A9E001B439B /* HCIsEmptyCollection.m */; };
 		0802653D134597C000A8DCCA /* HCIsEqualIgnoringCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602F513440A9F001B439B /* HCIsEqualIgnoringCase.m */; };
 		0802653E134597C000A8DCCA /* HCIsEqualIgnoringWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602F713440A9F001B439B /* HCIsEqualIgnoringWhiteSpace.m */; };
-		0802653F134597C000A8DCCA /* HCIsEqualToNumber.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602EB13440A9F001B439B /* HCIsEqualToNumber.mm */; };
+		0802653F134597C000A8DCCA /* HCIsEqualToNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602EB13440A9F001B439B /* HCIsEqualToNumber.m */; };
 		08026540134597C000A8DCCA /* HCIsIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E513440A9E001B439B /* HCIsIn.m */; };
 		08026545134597C000A8DCCA /* HCNumberAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602ED13440A9F001B439B /* HCNumberAssert.m */; };
 		08026546134597C000A8DCCA /* HCOrderingComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602EF13440A9F001B439B /* HCOrderingComparison.m */; };
@@ -180,7 +180,7 @@
 		0876031713440A9F001B439B /* HCIsCloseTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602E813440A9F001B439B /* HCIsCloseTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876031813440A9F001B439B /* HCIsCloseTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E913440A9F001B439B /* HCIsCloseTo.m */; };
 		0876031913440A9F001B439B /* HCIsEqualToNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602EA13440A9F001B439B /* HCIsEqualToNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876031A13440A9F001B439B /* HCIsEqualToNumber.mm in Sources */ = {isa = PBXBuildFile; fileRef = 087602EB13440A9F001B439B /* HCIsEqualToNumber.mm */; };
+		0876031A13440A9F001B439B /* HCIsEqualToNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602EB13440A9F001B439B /* HCIsEqualToNumber.m */; };
 		0876031B13440A9F001B439B /* HCNumberAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602EC13440A9F001B439B /* HCNumberAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876031C13440A9F001B439B /* HCNumberAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602ED13440A9F001B439B /* HCNumberAssert.m */; };
 		0876031D13440A9F001B439B /* HCOrderingComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602EE13440A9F001B439B /* HCOrderingComparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -352,7 +352,7 @@
 		087602E813440A9F001B439B /* HCIsCloseTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCloseTo.h; sourceTree = "<group>"; };
 		087602E913440A9F001B439B /* HCIsCloseTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCloseTo.m; sourceTree = "<group>"; };
 		087602EA13440A9F001B439B /* HCIsEqualToNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualToNumber.h; sourceTree = "<group>"; };
-		087602EB13440A9F001B439B /* HCIsEqualToNumber.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsEqualToNumber.mm; sourceTree = "<group>"; };
+		087602EB13440A9F001B439B /* HCIsEqualToNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualToNumber.m; sourceTree = "<group>"; };
 		087602EC13440A9F001B439B /* HCNumberAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNumberAssert.h; sourceTree = "<group>"; };
 		087602ED13440A9F001B439B /* HCNumberAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCNumberAssert.m; sourceTree = "<group>"; };
 		087602EE13440A9F001B439B /* HCOrderingComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCOrderingComparison.h; sourceTree = "<group>"; };
@@ -645,7 +645,7 @@
 				087602E813440A9F001B439B /* HCIsCloseTo.h */,
 				087602E913440A9F001B439B /* HCIsCloseTo.m */,
 				087602EA13440A9F001B439B /* HCIsEqualToNumber.h */,
-				087602EB13440A9F001B439B /* HCIsEqualToNumber.mm */,
+				087602EB13440A9F001B439B /* HCIsEqualToNumber.m */,
 				087602EC13440A9F001B439B /* HCNumberAssert.h */,
 				087602ED13440A9F001B439B /* HCNumberAssert.m */,
 				087602EE13440A9F001B439B /* HCOrderingComparison.h */,
@@ -1054,7 +1054,7 @@
 				0802653B134597C000A8DCCA /* HCIsEmptyCollection.m in Sources */,
 				0802653D134597C000A8DCCA /* HCIsEqualIgnoringCase.m in Sources */,
 				0802653E134597C000A8DCCA /* HCIsEqualIgnoringWhiteSpace.m in Sources */,
-				0802653F134597C000A8DCCA /* HCIsEqualToNumber.mm in Sources */,
+				0802653F134597C000A8DCCA /* HCIsEqualToNumber.m in Sources */,
 				08026540134597C000A8DCCA /* HCIsIn.m in Sources */,
 				08026545134597C000A8DCCA /* HCNumberAssert.m in Sources */,
 				08026546134597C000A8DCCA /* HCOrderingComparison.m in Sources */,
@@ -1158,7 +1158,7 @@
 				0876031313440A9F001B439B /* HCIsEmptyCollection.m in Sources */,
 				0876031513440A9F001B439B /* HCIsIn.m in Sources */,
 				0876031813440A9F001B439B /* HCIsCloseTo.m in Sources */,
-				0876031A13440A9F001B439B /* HCIsEqualToNumber.mm in Sources */,
+				0876031A13440A9F001B439B /* HCIsEqualToNumber.m in Sources */,
 				0876031C13440A9F001B439B /* HCNumberAssert.m in Sources */,
 				0876031E13440A9F001B439B /* HCOrderingComparison.m in Sources */,
 				0876032013440A9F001B439B /* HCHasDescription.m in Sources */,
