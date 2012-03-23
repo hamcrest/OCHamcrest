@@ -61,78 +61,79 @@
     [getterInvocation setSelector:selector];
     [getterInvocation invoke];
     
+    char charValue;
+    int intValue;
+    short shortValue;
+    long longValue;
+    long long longLongValue;
+    unsigned char unsignedCharValue;
+    unsigned int unsignedIntValue;
+    unsigned short unsignedShortValue;
+    unsigned long unsignedLongValue;
+    unsigned long long unsignedLongLongValue;
+    float floatValue;
+    double doubleValue;
+
     id result = nil;
     const char *argType = [getterSignature methodReturnType];
     switch (argType[0])
     {
         case 'c':
-            char charValue;
             [getterInvocation getReturnValue:&charValue];
             result = [NSNumber numberWithChar:charValue];
             break;
             
         case 'i':
-            int intValue;
             [getterInvocation getReturnValue:&intValue];
             result = [NSNumber numberWithInt:intValue];
             break;
             
         case 's':
-            short shortValue;
             [getterInvocation getReturnValue:&shortValue];
             result = [NSNumber numberWithShort:shortValue];
             break;
             
         case 'l':
-            long longValue;
             [getterInvocation getReturnValue:&longValue];
             result = [NSNumber numberWithLong:longValue];
             break;
             
         case 'q':
-            long long longLongValue;
             [getterInvocation getReturnValue:&longLongValue];
             result = [NSNumber numberWithLong:longLongValue];
             break;
             
         case 'C':
-            unsigned char unsignedCharValue;
             [getterInvocation getReturnValue:&unsignedCharValue];
             result = [NSNumber numberWithUnsignedChar:unsignedCharValue];
             break;
             
         case 'I':
-            unsigned int unsignedIntValue;
             [getterInvocation getReturnValue:&unsignedIntValue];
             result = [NSNumber numberWithUnsignedInt:unsignedIntValue];
             break;
             
         case 'S':
-            unsigned short unsignedShortValue;
             [getterInvocation getReturnValue:&unsignedShortValue];
             result = [NSNumber numberWithUnsignedShort:unsignedShortValue];
             break;
             
         case 'L':
-            unsigned long unsignedLongValue;
             [getterInvocation getReturnValue:&unsignedLongValue];
             result = [NSNumber numberWithUnsignedLong:unsignedLongValue];
             break;
             
         case 'Q':
-            unsigned long long unsignedLongLongValue;
             [getterInvocation getReturnValue:&unsignedLongLongValue];
             result = [NSNumber numberWithUnsignedLongLong:unsignedLongLongValue];
             break;
             
         case 'f':
-            float floatValue;
             [getterInvocation getReturnValue:&floatValue];
             result = [NSNumber numberWithFloat:floatValue];
             break;
             
         case 'd':
-            double doubleValue;
             [getterInvocation getReturnValue:&doubleValue];
             result = [NSNumber numberWithDouble:doubleValue];
             break;

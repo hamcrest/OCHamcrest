@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsCloseTo.mm
+//  OCHamcrest - HCIsCloseTo.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -8,8 +8,7 @@
 #import "HCIsCloseTo.h"
 
 #import "HCDescription.h"
-#import <cmath>
-using namespace std;
+#import <math.h>
 
 
 @implementation HCIsCloseTo
@@ -64,7 +63,7 @@ using namespace std;
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_closeTo(double value, double delta)
+id<HCMatcher> HC_closeTo(double value, double delta)
 {
     return [HCIsCloseTo isCloseTo:value within:delta];
 }
