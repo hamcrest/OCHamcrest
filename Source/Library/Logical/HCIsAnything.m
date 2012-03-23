@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCIsAnything.mm
+//  OCHamcrest - HCIsAnything.m
 //  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid
@@ -57,12 +57,12 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_anything()
+id<HCMatcher> HC_anything()
 {
     return [HCIsAnything isAnything];
 }
 
-OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *description)
+id<HCMatcher> HC_anythingWithDescription(NSString *description)
 {
     return [HCIsAnything isAnythingWithDescription:description];
 }

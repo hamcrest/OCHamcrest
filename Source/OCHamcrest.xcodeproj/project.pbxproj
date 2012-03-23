@@ -68,8 +68,8 @@
 		0846B6B313EE5D7500EA68E8 /* HCAnyOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6A813EE5D7500EA68E8 /* HCAnyOf.m */; };
 		0846B6B413EE5D7500EA68E8 /* HCAnyOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6A813EE5D7500EA68E8 /* HCAnyOf.m */; };
 		0846B6B513EE5D7500EA68E8 /* HCIsAnything.h in Headers */ = {isa = PBXBuildFile; fileRef = 0846B6A913EE5D7500EA68E8 /* HCIsAnything.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0846B6B713EE5D7500EA68E8 /* HCIsAnything.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6AA13EE5D7500EA68E8 /* HCIsAnything.mm */; };
-		0846B6B813EE5D7500EA68E8 /* HCIsAnything.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6AA13EE5D7500EA68E8 /* HCIsAnything.mm */; };
+		0846B6B713EE5D7500EA68E8 /* HCIsAnything.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6AA13EE5D7500EA68E8 /* HCIsAnything.m */; };
+		0846B6B813EE5D7500EA68E8 /* HCIsAnything.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6AA13EE5D7500EA68E8 /* HCIsAnything.m */; };
 		0846B6B913EE5D7500EA68E8 /* HCIsNot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0846B6AB13EE5D7500EA68E8 /* HCIsNot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0846B6BB13EE5D7500EA68E8 /* HCIsNot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6AC13EE5D7500EA68E8 /* HCIsNot.m */; };
 		0846B6BC13EE5D7500EA68E8 /* HCIsNot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6AC13EE5D7500EA68E8 /* HCIsNot.m */; };
@@ -277,7 +277,7 @@
 		0846B6A713EE5D7500EA68E8 /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
 		0846B6A813EE5D7500EA68E8 /* HCAnyOf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAnyOf.m; sourceTree = "<group>"; };
 		0846B6A913EE5D7500EA68E8 /* HCIsAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsAnything.h; sourceTree = "<group>"; };
-		0846B6AA13EE5D7500EA68E8 /* HCIsAnything.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsAnything.mm; sourceTree = "<group>"; };
+		0846B6AA13EE5D7500EA68E8 /* HCIsAnything.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsAnything.m; sourceTree = "<group>"; };
 		0846B6AB13EE5D7500EA68E8 /* HCIsNot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNot.h; sourceTree = "<group>"; };
 		0846B6AC13EE5D7500EA68E8 /* HCIsNot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsNot.m; sourceTree = "<group>"; };
 		0846B6BD13EE5D8A00EA68E8 /* HCIsEqual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqual.h; sourceTree = "<group>"; };
@@ -486,7 +486,7 @@
 				0846B6A713EE5D7500EA68E8 /* HCAnyOf.h */,
 				0846B6A813EE5D7500EA68E8 /* HCAnyOf.m */,
 				0846B6A913EE5D7500EA68E8 /* HCIsAnything.h */,
-				0846B6AA13EE5D7500EA68E8 /* HCIsAnything.mm */,
+				0846B6AA13EE5D7500EA68E8 /* HCIsAnything.m */,
 				0846B6AB13EE5D7500EA68E8 /* HCIsNot.h */,
 				0846B6AC13EE5D7500EA68E8 /* HCIsNot.m */,
 			);
@@ -1072,7 +1072,7 @@
 				0846B6A313EE5D6200EA68E8 /* HCIs.m in Sources */,
 				0846B6B013EE5D7500EA68E8 /* HCAllOf.m in Sources */,
 				0846B6B413EE5D7500EA68E8 /* HCAnyOf.m in Sources */,
-				0846B6B813EE5D7500EA68E8 /* HCIsAnything.mm in Sources */,
+				0846B6B813EE5D7500EA68E8 /* HCIsAnything.m in Sources */,
 				0846B6BC13EE5D7500EA68E8 /* HCIsNot.m in Sources */,
 				0846B6C813EE5D8A00EA68E8 /* HCIsEqual.m in Sources */,
 				0846B6CC13EE5D8A00EA68E8 /* HCIsInstanceOf.m in Sources */,
@@ -1173,7 +1173,7 @@
 				0846B6A213EE5D6200EA68E8 /* HCIs.m in Sources */,
 				0846B6AF13EE5D7500EA68E8 /* HCAllOf.m in Sources */,
 				0846B6B313EE5D7500EA68E8 /* HCAnyOf.m in Sources */,
-				0846B6B713EE5D7500EA68E8 /* HCIsAnything.mm in Sources */,
+				0846B6B713EE5D7500EA68E8 /* HCIsAnything.m in Sources */,
 				0846B6BB13EE5D7500EA68E8 /* HCIsNot.m in Sources */,
 				0846B6C713EE5D8A00EA68E8 /* HCIsEqual.m in Sources */,
 				0846B6CB13EE5D8A00EA68E8 /* HCIsInstanceOf.m in Sources */,

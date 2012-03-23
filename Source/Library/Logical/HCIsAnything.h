@@ -22,7 +22,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_anything();
+OBJC_EXPORT id<HCMatcher> HC_anything(void);
 
 /**
     Matches anything.
