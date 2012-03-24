@@ -17,10 +17,6 @@
     NSMutableArray *matchers;
     id<HCDescription, NSObject> mismatchDescription;
 }
-
-- (BOOL)isMatched:(id)item;
-- (BOOL)isNotSurplus:(id)item;
-
 @end
 
 
@@ -47,33 +43,6 @@
 
 - (BOOL)matches:(id)item
 {
-    return [self isNotSurplus:item] && [self isMatched:item];
-}
-
-- (BOOL)isFinishedWith:(NSArray *)collection
-{
-    if ([matchers count] == 0)
-        return YES;
-    
-    [[[[mismatchDescription appendText:@"no item matches: "]
-                            appendList:matchers start:@"" separator:@", " end:@""]
-                            appendText:@" in "]
-                            appendList:collection start:@"[" separator:@", " end:@"]"];
-    return NO;
-}
-
-- (BOOL)isNotSurplus:(id)item
-{
-    if ([matchers count] == 0)
-    {
-        [[mismatchDescription appendText:@"not matched: "] appendDescriptionOf:item];
-        return NO;
-    }
-    return YES;
-}
-
-- (BOOL)isMatched:(id)item
-{
     NSUInteger index = 0;
     for (id<HCMatcher> matcher in matchers)
     {
@@ -85,6 +54,18 @@
         ++index;
     }
     [[mismatchDescription appendText:@"not matched: "] appendDescriptionOf:item];
+    return NO;
+}
+
+- (BOOL)isFinishedWith:(NSArray *)collection
+{
+    if ([matchers count] == 0)
+        return YES;
+    
+    [[[[mismatchDescription appendText:@"no item matches: "]
+                            appendList:matchers start:@"" separator:@", " end:@""]
+                            appendText:@" in "]
+                            appendList:collection start:@"[" separator:@", " end:@"]"];
     return NO;
 }
 
