@@ -160,4 +160,34 @@
     STAssertTrue([expected evaluateWithObject:[description description]], nil);
 }
 
+- (void)testAppendListWithEmptyListShouldHaveStartAndEndOnly
+{
+    [description appendList:[NSArray array]
+                      start:@"["
+                  separator:@","
+                        end:@"]"];
+    
+    STAssertEqualObjects([description description], @"[]", nil);
+}
+
+- (void)testAppendListWithOneItemShouldHaveStartItemAndEnd
+{
+    [description appendList:[NSArray arrayWithObject:@"a"]
+                      start:@"["
+                  separator:@","
+                        end:@"]"];
+    
+    STAssertEqualObjects([description description], @"[\"a\"]", nil);
+}
+
+- (void)testAppendListWithTwoItemsShouldHaveItemsWithSeparator
+{
+    [description appendList:[NSArray arrayWithObjects:@"a", @"b", nil]
+                      start:@"["
+                  separator:@","
+                        end:@"]"];
+    
+    STAssertEqualObjects([description description], @"[\"a\",\"b\"]", nil);
+}
+
 @end

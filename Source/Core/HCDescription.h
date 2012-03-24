@@ -39,8 +39,8 @@
     @return @c self, for chaining.
  */
 - (id<HCDescription>)appendList:(NSArray *)values
-                           start:(NSString *)start
-                       separator:(NSString *)separator
-                             end:(NSString *)end;
+                          start:(NSString *)start
+                      separator:(NSString *)separator
+                            end:(NSString *)end;
 
 @end
