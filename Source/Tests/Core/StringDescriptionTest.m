@@ -86,6 +86,34 @@
     STAssertEqualObjects([description description], @"\"FOO\"", nil);
 }
 
+- (void)testDescriptionOfStringWithQuotesShouldExpandToCSyntax
+{    
+    [description appendDescriptionOf:@"a\"b"];
+    
+    STAssertEqualObjects([description description], @"\"a\\\"b\"", nil);
+}
+
+- (void)testDescriptionOfStringWithNewlineShouldExpandToCSyntax
+{    
+    [description appendDescriptionOf:@"a\nb"];
+    
+    STAssertEqualObjects([description description], @"\"a\\nb\"", nil);
+}
+
+- (void)testDescriptionOfStringWithCarriageReturnShouldExpandToCSyntax
+{    
+    [description appendDescriptionOf:@"a\rb"];
+    
+    STAssertEqualObjects([description description], @"\"a\\rb\"", nil);
+}
+
+- (void)testDescriptionOfStringWithTabShouldExpandToCSyntax
+{    
+    [description appendDescriptionOf:@"a\tb"];
+    
+    STAssertEqualObjects([description description], @"\"a\\tb\"", nil);
+}
+
 - (void)testWrapsNonSelfDescribingObjectInAngleBrackets
 {    
     [description appendDescriptionOf:[NSNumber numberWithInt:42]];
