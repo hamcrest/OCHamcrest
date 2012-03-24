@@ -69,28 +69,28 @@
 {
     [description appendDescriptionOf:nil];
     
-    STAssertEqualObjects(@"nil", [description description], nil);
+    STAssertEqualObjects([description description], @"nil", nil);
 }
 
 - (void)testLetsSelfDescribingObjectDescribeItself
 {
     [description appendDescriptionOf:[[[FakeSelfDescribing alloc] init] autorelease]];
     
-    STAssertEqualObjects(@"DESCRIPTION", [description description], nil);
+    STAssertEqualObjects([description description], @"DESCRIPTION", nil);
 }
 
 - (void)testDescribesStringInQuotes
 {    
     [description appendDescriptionOf:@"FOO"];
     
-    STAssertEqualObjects(@"\"FOO\"", [description description], nil);
+    STAssertEqualObjects([description description], @"\"FOO\"", nil);
 }
 
 - (void)testWrapsNonSelfDescribingObjectInAngleBrackets
 {    
     [description appendDescriptionOf:[NSNumber numberWithInt:42]];
     
-    STAssertEqualObjects(@"<42>", [description description], nil);
+    STAssertEqualObjects([description description], @"<42>", nil);
 }
 
 - (void)testShouldNotAddAngleBracketsIfObjectDescriptionAlreadyHasThem

@@ -36,7 +36,7 @@
 - (void)testDescriptionShouldDescribeMatcher
 {
     TestingBaseMatcher *matcher = [[[TestingBaseMatcher alloc] init] autorelease];
-    STAssertEqualObjects(@"SOME DESCRIPTION", [matcher description], nil);
+    STAssertEqualObjects([matcher description], @"SOME DESCRIPTION", nil);
 }
 
 @end
