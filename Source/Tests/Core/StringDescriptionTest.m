@@ -30,6 +30,21 @@
 
 #pragma mark -
 
+@interface ObjectDescriptionWithLessThan : NSObject
+@end
+
+@implementation ObjectDescriptionWithLessThan
+
+- (NSString *)description
+{
+    return @"< is less than";
+}
+
+@end
+
+
+#pragma mark -
+
 @interface ObjectWithNilDescription : NSObject
 @end
 
@@ -127,6 +142,14 @@
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES '<NSObject: 0x[0-9a-fA-F]+>'"];
     STAssertTrue([expected evaluateWithObject:[description description]], nil);
+}
+
+- (void)testWrapsNonSelfDescribingObjectInAngleBracketsIfItDoesNotEndInClosingBracket
+{
+    ObjectDescriptionWithLessThan *lessThanDescription = [[[ObjectDescriptionWithLessThan alloc] init] autorelease];
+    [description appendDescriptionOf:lessThanDescription];
+    
+    STAssertEqualObjects([description description], @"<< is less than>", nil);
 }
 
 - (void)testCanDescribeObjectWithNilDescription
