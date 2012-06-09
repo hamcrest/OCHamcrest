@@ -19,10 +19,11 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_conformsToProtocol(Protocol *aProtocol);
+OBJC_EXPORT id<HCMatcher> HC_conformsTo(Protocol *aProtocol);
+OBJC_EXPORT id<HCMatcher> HC_conformsToProtocol(Protocol *aProtocol)    __attribute__((deprecated));
 
 /**
-    conformsToProtocol(aProtocol) -
+    conformsTo(aProtocol) -
     Matches if object conforms to a given protocol.
 
     @param aProtocol  The protocol to compare against as the expected protocol.
@@ -30,13 +31,13 @@ OBJC_EXPORT id<HCMatcher> HC_conformsToProtocol(Protocol *aProtocol);
     This matcher checks whether the evaluated object conforms to @a aProtocol.
 
     Example:
-    @li @ref conformsToProtocol(\@protocol(NSObject))
+    @li @ref conformsTo(\@protocol(NSObject))
 
     (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_conformsToProtocol instead.)
+    @c HC_conformsTo instead.)
 
     @ingroup object_matchers
  */
 #ifdef HC_SHORTHAND
-    #define conformsToProtocol HC_conformsToProtocol
+    #define conformsTo HC_conformsTo
 #endif

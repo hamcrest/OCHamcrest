@@ -37,42 +37,42 @@
 
 - (id<HCMatcher>)createMatcher
 {
-    return conformsToProtocol(@protocol(TestProtocol));
+    return conformsTo(@protocol(TestProtocol));
 }
 
 - (void)testEvaluatesToTrueIfArgumentConformsToASpecificProtocol
 {
     TestClass *instance = [TestClass testClass];
 
-    assertMatches(@"conforms to protocol", conformsToProtocol(@protocol(TestProtocol)), instance);
+    assertMatches(@"conforms to protocol", conformsTo(@protocol(TestProtocol)), instance);
 
-    assertDoesNotMatch(@"does not conform to protocol", conformsToProtocol(@protocol(TestProtocol)), @"hi");
-    assertDoesNotMatch(@"nil", conformsToProtocol(@protocol(TestProtocol)), nil);
+    assertDoesNotMatch(@"does not conform to protocol", conformsTo(@protocol(TestProtocol)), @"hi");
+    assertDoesNotMatch(@"nil", conformsTo(@protocol(TestProtocol)), nil);
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
 {
-    STAssertThrows(conformsToProtocol(nil), @"Should require non-nil argument");
+    STAssertThrows(conformsTo(nil), @"Should require non-nil argument");
 }
 
 - (void)testHasAReadableDescription
 {
-    assertDescription(@"an object that conforms to TestProtocol", conformsToProtocol(@protocol(TestProtocol)));
+    assertDescription(@"an object that conforms to TestProtocol", conformsTo(@protocol(TestProtocol)));
 }
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    assertNoMismatchDescription(conformsToProtocol(@protocol(NSObject)), @"hi");
+    assertNoMismatchDescription(conformsTo(@protocol(NSObject)), @"hi");
 }
 
 - (void)testMismatchDescriptionShowsActualArgument
 {
-    assertMismatchDescription(@"was \"bad\"", conformsToProtocol(@protocol(TestProtocol)), @"bad");
+    assertMismatchDescription(@"was \"bad\"", conformsTo(@protocol(TestProtocol)), @"bad");
 }
 
 - (void)testDescribeMismatch
 {
-    assertDescribeMismatch(@"was \"bad\"", conformsToProtocol(@protocol(TestProtocol)), @"bad");
+    assertDescribeMismatch(@"was \"bad\"", conformsTo(@protocol(TestProtocol)), @"bad");
 }
 
 @end
