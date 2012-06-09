@@ -6,6 +6,7 @@
 
 * Deprecated:
   - C++ template function boxNumber.
+  - conformsToProtocol clashed with the method of the same name. It has been renamed to "conformsTo".
 
 * Deleted following items deprecated in v1.2:
   - -[HCDescription appendValue]
