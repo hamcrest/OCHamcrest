@@ -1,8 +1,10 @@
 //
 //  OCHamcrest - MainPage.h
-//  Copyright 2011 hamcrest.org. See LICENSE.txt
+//  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
-//  Created by: Jon Reid
+//  Created by: Jon Reid, http://qualitycoding.org/
+//  Docs: http://hamcrest.github.com/OCHamcrest/
+//  Source: https://github.com/hamcrest/OCHamcrest
 //
 
 

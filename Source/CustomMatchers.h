@@ -1,8 +1,10 @@
 //
 //  OCHamcrest - CustomMatchers.h
-//  Copyright 2011 hamcrest.org. See LICENSE.txt
+//  Copyright 2012 hamcrest.org. See LICENSE.txt
 //
-//  Created by: Jon Reid
+//  Created by: Jon Reid, http://qualitycoding.org/
+//  Docs: http://hamcrest.github.com/OCHamcrest/
+//  Source: https://github.com/hamcrest/OCHamcrest
 //
 
 
@@ -17,7 +19,7 @@
 
     Let's write our own matcher for testing if a calendar date falls on a Saturday. This is the test
     we want to write:
-    
+
     @code
 - (void)testDateIsOnASaturday
 {
@@ -25,7 +27,7 @@
     assertThat(date, is(onASaturday()))
 }
     @endcode
-    
+
     Here's the interface:
 
     @code
@@ -44,7 +46,7 @@
 
 OBJC_EXPORT id<HCMatcher> onASaturday();
     @endcode
-    
+
     The interface consists of two parts: a class definition, and a factory function (with C binding).
     Here's what the implementation looks like:
 
@@ -92,7 +94,7 @@ id<HCMatcher> onASaturday()
     return [IsGivenDayOfWeek isGivenDayOfWeek:6];
 }
     @endcode
-    
+
     For our Matcher implementation we implement the @c -matches: method -- which calls the
     @c -dayOfWeek method after confirming that the argument has such a method -- and the
     @c -describe_to: method -- which is used to produce a failure message when a test fails.
@@ -103,11 +105,11 @@ NSCalendarDate* date = [NSCalendarDate dateWithString: @"6 April 2008"
                                        calendarFormat: @"%d %B %Y"];
 assertThat(date, is(onASaturday()));
     @endcode
-    
+
     fails with the message
-    
+
     @verbatim Expected: is calendar date falling on Saturday, got: <06 April 2008> @endverbatim
-    
+
     and Xcode shows it as a build error. Double clicking the error message takes you to the
     assertion that failed.
 
