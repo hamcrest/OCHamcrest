@@ -11,11 +11,11 @@
 /**
     @page custom-matchers Writing custom matchers
 
-    OCHamcrest comes bundled with lots of useful matchers, but you'll probably find that you need to
-    create your own from time to time to fit your testing needs. This commonly occurs when you find
-    a fragment of code that tests the same set of properties over and over again (and in different
-    tests), and you want to bundle the fragment into a single assertion. By writing your own matcher
-    you'll elimate code duplication and make your tests more readable!
+OCHamcrest comes bundled with lots of useful matchers, but you'll probably find that you need to
+create your own from time to time to fit your testing needs.
+This commonly occurs when you find a fragment of code that tests the same set of properties over
+and over again (and in different tests), and you want to bundle the fragment into a single assertion.
+By writing your own matcher you'll elimate code duplication and make your tests more readable!
 
     Let's write our own matcher for testing if a calendar date falls on a Saturday. This is the test
     we want to write:

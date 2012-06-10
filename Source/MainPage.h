@@ -201,10 +201,6 @@ assertThat(theBiscuit, is(myBiscuit));
 
     @section resources More resources
 
-    @li <a href="http://jonreid.github.com/OCHamcrest/">OCHamcrest documentation</a>
-    @li <a href="https://github.com/jonreid/OCHamcrest">Latest OCHamcrest sources</a>
-    @li <a href="http://code.google.com/p/hamcrest/">Official Hamcrest website
-    @li <a href="http://pypi.python.org/pypi/PyHamcrest">PyHamcrest</a> - Python version.
     @li <a href="http://qualitycoding.org/">Quality Coding</a> - Tools, tips &amp; techniques for
         <em>building quality in</em> to iOS development.
 
