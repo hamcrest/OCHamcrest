@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$interface_h_c_base_matcher.html" title="Base class for all HCMatcher implementations." alt="" coords="17,160,151,189"/>
-<area shape="rect" id="node4" href="$protocol_h_c_matcher-p.html" title="A matcher over acceptable values." alt="" coords="24,83,144,112"/>
-<area shape="rect" id="node6" href="$protocol_h_c_self_describing-p.html" title="The ability of an object to describe itself." alt="" coords="5,5,163,35"/>
+<area shape="rect" id="node2" href="$interface_h_c_base_matcher.html" title="Base class for all HCMatcher implementations." alt="" coords="21,166,141,197"/>
+<area shape="rect" id="node4" href="$protocol_h_c_matcher-p.html" title="A matcher over acceptable values." alt="" coords="25,86,137,117"/>
+<area shape="rect" id="node6" href="$protocol_h_c_self_describing-p.html" title="The ability of an object to describe itself." alt="" coords="4,6,157,37"/>
 </map>
