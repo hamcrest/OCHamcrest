@@ -5,3 +5,5 @@ build/
 project.xcworkspace/
 xcuserdata/
 Source/TestSupport/env.sh
+
+Source/TestSupport/environment.sh
