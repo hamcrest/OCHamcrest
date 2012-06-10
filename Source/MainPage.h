@@ -149,7 +149,7 @@ otest[57510:203] *** NSTask: Task create for path '...' failed: 22, "Invalid arg
         <ul>
         <li>@ref allOf - "and" together all matchers</li>
         <li>@ref anyOf - "or" together all matchers</li>
-        <li>@ref anything - match anything, useful in composite matchers when you don't care about a particular value</li>
+        <li>@ref anything - match anything (useful in composite matchers when you don't care about a particular value)</li>
         <li>@ref isNot - negate the matcher</li>
         </ul>
     <li>Collection</li>

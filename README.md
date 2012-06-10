@@ -141,8 +141,8 @@ OCHamcrest comes with a library of useful matchers:
 
   * ``allOf`` - "and" together all matchers
   * ``anyOf`` - "or" together all matchers
-  * ``anything`` - match anything, useful in composite matchers when you don't
-  care about a particular value
+  * ``anything`` - match anything (useful in composite matchers when you don't
+  care about a particular value)
   * ``isNot`` - negate the matcher
 
 * Collection
