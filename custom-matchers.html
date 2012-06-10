@@ -52,10 +52,10 @@
 <div class="title">Writing custom matchers </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="fragment"><pre class="fragment">OCHamcrest comes bundled with lots of useful matchers, but you'll probably find that you need to
-create your own from time to time to fit your testing needs.</pre></div><p>This commonly occurs when you find a fragment of code that tests the same set of properties over and over again (and in different tests), and you want to bundle the fragment into a single assertion. By writing your own matcher you'll elimate code duplication and make your tests more readable!</p>
-<p>Let's write our own matcher for testing if a calendar date falls on a Saturday. This is the test we want to write:</p>
-<div class="fragment"><pre class="fragment">- (void)testDateIsOnASaturday
+<div class="textblock"><p>OCHamcrest comes bundled with lots of useful matchers, but you'll probably find that you need to create your own from time to time to fit your testing needs.</p>
+<p>This commonly occurs when you find a fragment of code that tests the same set of properties over and over again (and in different tests), and you want to bundle the fragment into a single assertion. By writing your own matcher you'll elimate code duplication and make your tests more readable! </p>
+<div class="fragment"><pre class="fragment">Let's write our own matcher for testing if a calendar date falls on a Saturday. This is the test
+we want to write:</pre></div> <div class="fragment"><pre class="fragment">- (void)testDateIsOnASaturday
 {
     NSCalendarDate* date = [NSCalendarDate dateWithString:<span class="stringliteral">@&quot;26 Apr 2008&quot;</span> calendarFormat:<span class="stringliteral">@&quot;%d %b %Y&quot;</span>];
     <a class="code" href="group__integration.html#ga75b04fe22150cca452998ada49d3e458" title="assertThat(actual, matcher) - Asserts that actual value satisfies matcher.">assertThat</a>(date, <a class="code" href="group__decorator__matchers.html#ga9870e0caa2f8e3e5700c4cbb21d73c07" title="is(aMatcher) - Decorates another matcher, or provides a shortcut to the frequently used is(equalTo(x)...">is</a>(onASaturday()))
@@ -129,7 +129,7 @@ id&lt;HCMatcher&gt; onASaturday()
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 9 2012 19:25:23 for OCHamcrest by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 9 2012 19:43:43 for OCHamcrest by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
