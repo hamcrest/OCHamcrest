@@ -293,9 +293,7 @@ can be reused between matches.
 More resources
 ==============
 
-* [OCHamcrest documentation](http://jonreid.github.com/OCHamcrest/)
-* [Latest OCHamcrest sources](https://github.com/jonreid/OCHamcrest)
-* [Official Hamcrest website](http://code.google.com/p/hamcrest/)
-* [PyHamcrest](http://pypi.python.org/pypi/PyHamcrest) - Python version.
+* [Documentation](http://hamcrest.github.com/OCHamcrest/)
+* [Sources](https://github.com/hamcrest/OCHamcrest)
 * [Quality Coding](http://qualitycoding.org/) - Tools, tips &
 techniques for _building quality in_ to iOS development.
