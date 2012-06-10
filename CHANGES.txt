@@ -1,4 +1,11 @@
-== NEXT VERSION IN PROGRESS
+== Version 1.8 ==
+
+09 Jul 2012
+The primary purpose of this release is to make it easier to add OCHamcrest to iOS projects. No more need to specify "Other Linker Flags"! Depending on your project, you may be able to eliminate:
+  * -lstdc++
+  * -ObjC
+
+Also, the repository has a new official home: https://github.com/hamcrest/OCHamcrest/
 
 * No need to specify "Other Linker Flags" in iOS projects:
   - Changed all Objective-C++ to Objective-C
@@ -16,7 +23,7 @@
 
 == Version 1.7 ==
 
-20 Feb 2011
+20 Feb 2012
 * New matchers:
   - "conformsToProtocol" matches objects that conform to a given protocol. Thanks to: Todd Farrell
 
