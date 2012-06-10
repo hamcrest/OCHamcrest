@@ -403,6 +403,8 @@
 		08BDD5FD1350C7BE00E5A443 /* MakeDistribution.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeDistribution.sh; sourceTree = "<group>"; };
 		08BDD5FE1350C7BE00E5A443 /* MakeDocumentation.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeDocumentation.sh; sourceTree = "<group>"; };
 		08BDD5FF1350C7BE00E5A443 /* MakeIOSFramework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MakeIOSFramework.sh; sourceTree = "<group>"; };
+		08C7868215843B7200A7FA46 /* MainPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPage.h; sourceTree = "<group>"; };
+		08C7868315843B7900A7FA46 /* CustomMatchers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomMatchers.h; sourceTree = "<group>"; };
 		5F27733E1436F50C00B9683A /* HCConformsToProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCConformsToProtocol.h; sourceTree = "<group>"; };
 		5F27733F1436F50C00B9683A /* HCConformsToProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCConformsToProtocol.m; sourceTree = "<group>"; };
 		5F2773441436F81000B9683A /* ConformsToProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConformsToProtocolTest.m; sourceTree = "<group>"; };
@@ -517,7 +519,7 @@
 			children = (
 				0876021513440A6A001B439B /* Classes */,
 				0876032F13440AD8001B439B /* UnitTests */,
-				08BDD5FC1350C7A600E5A443 /* Scripts */,
+				08BDD5FC1350C7A600E5A443 /* Scripts & Docs */,
 				0876038C13440B64001B439B /* Supporting Files */,
 				087601E413440806001B439B /* Frameworks */,
 				087601E313440806001B439B /* Products */,
@@ -777,14 +779,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		08BDD5FC1350C7A600E5A443 /* Scripts */ = {
+		08BDD5FC1350C7A600E5A443 /* Scripts & Docs */ = {
 			isa = PBXGroup;
 			children = (
 				08BDD5FD1350C7BE00E5A443 /* MakeDistribution.sh */,
 				08BDD5FE1350C7BE00E5A443 /* MakeDocumentation.sh */,
 				08BDD5FF1350C7BE00E5A443 /* MakeIOSFramework.sh */,
+				08C7868215843B7200A7FA46 /* MainPage.h */,
+				08C7868315843B7900A7FA46 /* CustomMatchers.h */,
 			);
-			name = Scripts;
+			name = "Scripts & Docs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
