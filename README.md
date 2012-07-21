@@ -26,8 +26,9 @@ How do I add OCHamcrest to my project?
 ======================================
 
 Rather than build OCHamcrest yourself, I recommend you use the pre-built release
-available in Downloads. This works for projects using Automatic Reference
-Counting (ARC) as well as for projects using traditional memory management.
+available in [Downloads](https://github.com/hamcrest/OCHamcrest/downloads). This
+works for projects using Automatic Reference Counting (ARC) as well as for
+projects using traditional memory management.
 
 (But if you still want to build OCHamcrest yourself, go into the Source folder
 and execute ``MakeDistribution.sh`` from Terminal.)
