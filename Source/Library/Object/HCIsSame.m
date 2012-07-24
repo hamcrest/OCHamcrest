@@ -42,13 +42,13 @@
 {
     [mismatchDescription appendText:@"was "];
     if (item)
-        [mismatchDescription appendText:[NSString stringWithFormat:@"0x%0x ", item]];
+        [mismatchDescription appendText:[NSString stringWithFormat:@"%p ", item]];
     [mismatchDescription appendDescriptionOf:item];
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [[description appendText:[NSString stringWithFormat:@"same instance as 0x%0x ", object]]
+    [[description appendText:[NSString stringWithFormat:@"same instance as %p ", object]]
          appendDescriptionOf:object];
 }
 
