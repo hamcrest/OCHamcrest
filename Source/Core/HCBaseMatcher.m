@@ -54,7 +54,7 @@
 {
     NSString *className = NSStringFromClass([self class]);
     [NSException raise:NSGenericException
-                format:@"-[%@  %s] not implemented", className, command];
+                format:@"-[%@  %s] not implemented", className, (char *)command];
 }
 
 @end
