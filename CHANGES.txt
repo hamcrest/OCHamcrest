@@ -1,6 +1,7 @@
 == NEXT VERSION IN PROGRESS
 
 * Fixed warnings revealed by latest Xcode. Thanks to: David Hart
+* Added armv6 to iOS device build.
 
 
 == Version 1.8 ==
