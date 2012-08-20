@@ -1,3 +1,8 @@
+== NEXT VERSION IN PROGRESS
+
+* Fixed warnings revealed by latest Xcode. Thanks to: David Hart
+
+
 == Version 1.8 ==
 
 09 Jul 2012
