@@ -18,7 +18,6 @@ OCHamcrest is used for both Mac and iOS development with:
 * GHUnit
 * Cedar BDD framework
 * OCMock
-* OCHandMock
 * OCMockito
 
 

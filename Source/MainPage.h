@@ -37,7 +37,6 @@
     @li GHUnit
     @li Cedar BDD framework
     @li OCMock
-    @li OCHandMock
     @li OCMockito
 
 
