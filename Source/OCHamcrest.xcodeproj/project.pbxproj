@@ -1252,8 +1252,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
-					armv6,
-					armv7,
+					"$(ARCHS_STANDARD_32_BIT)",
+					arm6,
 				);
 				DSTROOT = /tmp/libochamcrest.dst;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -1268,8 +1268,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
-					armv6,
-					armv7,
+					"$(ARCHS_STANDARD_32_BIT)",
+					arm6,
 				);
 				DSTROOT = /tmp/libochamcrest.dst;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -1378,8 +1378,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
-					armv6,
-					armv7,
+					"$(ARCHS_STANDARD_32_BIT)",
+					arm6,
 				);
 				DSTROOT = /tmp/libochamcrest.dst;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
