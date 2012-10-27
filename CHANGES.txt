@@ -1,7 +1,7 @@
 == NEXT VERSION IN PROGRESS
 
 * Fixed warnings revealed by latest Xcode. Thanks to: David Hart
-* Added armv6 to iOS device build.
+* Changed iOS Achitectures to "Standard" (which includes armv7s)
 
 
 == Version 1.8 ==
