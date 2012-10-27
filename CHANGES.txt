@@ -1,7 +1,8 @@
 == NEXT VERSION IN PROGRESS
 
 * Fixed warnings revealed by latest Xcode. Thanks to: David Hart
-* Changed iOS Achitectures to "Standard" (which includes armv7s)
+* Changed iOS Architecture support to "Standard" (which includes armv7s)
+* Changed Mac Architecture support to 64-bit only
 
 
 == Version 1.8 ==
