@@ -26,7 +26,7 @@ typedef struct
  */
 static HCPairIntNSString separate(NSString *component)
 {
-    unsigned int index = 0;
+    int index = 0;
     bool gotIndex = false;
     
     NSUInteger length = [component length];
@@ -110,7 +110,7 @@ static HCPairIntNSString separate(NSString *component)
                 [[description appendText:@"%"] appendText:oneComponent];
             else
             {
-                [description appendDescriptionOf:[values objectAtIndex:parseIndex.first]];
+                [description appendDescriptionOf:[values objectAtIndex:(NSUInteger)parseIndex.first]];
                 [description appendText:parseIndex.second];
             }
         }

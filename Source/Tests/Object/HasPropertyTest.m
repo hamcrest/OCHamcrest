@@ -325,9 +325,9 @@
 
 - (void)testCanMatchPrimitiveFloatValues 
 {
-    foo.floatValue = 1.2;
-    assertMatches(@"float should match", hasProperty(@"floatValue", equalToFloat(1.2)), foo);
-    assertDoesNotMatch(@"float should not match", hasProperty(@"floatValue", equalToFloat(1.3)), foo);
+    foo.floatValue = 1.2f;
+    assertMatches(@"float should match", hasProperty(@"floatValue", equalToFloat(1.2f)), foo);
+    assertDoesNotMatch(@"float should not match", hasProperty(@"floatValue", equalToFloat(1.3f)), foo);
 }
 
 - (void)testCanMatchPrimitiveDoubleValues 

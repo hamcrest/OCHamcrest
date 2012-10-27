@@ -299,6 +299,7 @@
 		0846B6F413EE5FD200EA68E8 /* IsInstanceOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsInstanceOfTest.m; sourceTree = "<group>"; };
 		0846B6F513EE5FD200EA68E8 /* IsNilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsNilTest.m; sourceTree = "<group>"; };
 		0846B6F613EE5FD200EA68E8 /* IsSameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsSameTest.m; sourceTree = "<group>"; };
+		086C6D4B163C565100307026 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 		087601E213440806001B439B /* OCHamcrest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCHamcrest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		087601EA13440807001B439B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		087601F713440807001B439B /* OCHamcrestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCHamcrestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -772,8 +773,9 @@
 			isa = PBXGroup;
 			children = (
 				0876038D13440B80001B439B /* OCHamcrest-Info.plist */,
-				0876039013440BA7001B439B /* OCHamcrest-Prefix.pch */,
 				0876039113440BB0001B439B /* Tests-Info.plist */,
+				0876039013440BA7001B439B /* OCHamcrest-Prefix.pch */,
+				086C6D4B163C565100307026 /* Warnings.xcconfig */,
 				080D961C1527B16100EF14D2 /* fixCoverage.c */,
 			);
 			name = "Supporting Files";
@@ -1317,15 +1319,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = "";
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wextra",
-					"-Wno-unused-parameter",
-					"-Wno-missing-field-initializers",
-				);
 			};
 			name = Coverage;
 		};
@@ -1395,6 +1389,7 @@
 		};
 		0876020713440807001B439B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 086C6D4B163C565100307026 /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1405,15 +1400,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = "";
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wextra",
-					"-Wno-unused-parameter",
-					"-Wno-missing-field-initializers",
-				);
 			};
 			name = Debug;
 		};
@@ -1426,14 +1413,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OCHamcrest-Prefix.pch";
 				GCC_VERSION = "";
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wextra",
-					"-Wno-unused-parameter",
-					"-Wno-missing-field-initializers",
-				);
 			};
 			name = Release;
 		};

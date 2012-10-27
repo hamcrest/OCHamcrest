@@ -100,7 +100,7 @@
             
         case 'q':
             [getterInvocation getReturnValue:&longLongValue];
-            result = [NSNumber numberWithLong:longLongValue];
+            result = [NSNumber numberWithLongLong:longLongValue];
             break;
             
         case 'C':
