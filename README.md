@@ -11,7 +11,7 @@ Matchers are useful for a variety of purposes, such as UI validation. But
 they're most commonly used for writing unit tests that are expressive and
 flexible.
 
-OCHamcrest is used for both Mac and iOS development with:
+OCHamcrest can be used for either Mac and iOS development with:
 
 * OCUnit (SenTestingKit) built in to Xcode
 * Google Toolbox for Mac (GTM)
@@ -24,18 +24,17 @@ OCHamcrest is used for both Mac and iOS development with:
 How do I add OCHamcrest to my project?
 ======================================
 
-Rather than build OCHamcrest yourself, I recommend you use the pre-built release
-available in [Downloads](https://github.com/hamcrest/OCHamcrest/downloads). This
-works for projects using Automatic Reference Counting (ARC) as well as for
-projects using traditional memory management.
+__Building:__
 
-(But if you still want to build OCHamcrest yourself, go into the Source folder
-and execute ``MakeDistribution.sh`` from Terminal.)
+If you want to build OCHamcrest yourself, cd to the Source folder, then
 
-The steps vary slightly depending on whether your project is a Mac project or an
-iOS project:
+    $ ./MakeDistribution.sh
 
-__Mac:__
+Or just use the pre-built release available in
+[Downloads](https://github.com/hamcrest/OCHamcrest/downloads).
+
+
+__Mac Project Setup:__
 
 Add OCHamcrest.framework to your project.
 
@@ -54,7 +53,7 @@ Note: If your Console shows
 
 double-check your Copy Files phase.
 
-__iOS:__
+__iOS Project Setup:__
 
 Add OCHamcrestIOS.framework to your project.
 
