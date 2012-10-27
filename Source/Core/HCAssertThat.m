@@ -34,14 +34,12 @@ static NSException *createOCUnitException(const char* fileName, int lineNumber, 
 {
     NSException *result = nil;
 
-    // See http://www.omnigroup.com/mailman/archive/macosx-dev/2001-February/021441.html
-    // for an explanation of how to use create an NSInvocation of a class method.
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     SEL selector = @selector(failureInFile:atLine:withDescription:);
 #pragma clang diagnostic pop
-    NSMethodSignature *signature =
-        [[NSException class]->isa instanceMethodSignatureForSelector:selector];
+    
+    NSMethodSignature *signature = [[NSException class] methodSignatureForSelector:selector];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
     [invocation setTarget:[NSException class]];
     [invocation setSelector:selector];
