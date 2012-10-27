@@ -50,7 +50,7 @@
 
 - (id)invokeOn:(id)item
 {
-    id result = nil;
+    __unsafe_unretained id result = nil;
     [invocation invokeWithTarget:item];
     [invocation getReturnValue:&result];
     return result;

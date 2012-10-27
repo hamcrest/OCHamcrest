@@ -17,7 +17,7 @@
 typedef struct
 {
     int first;
-    NSString *second;
+    __unsafe_unretained NSString *second;
 } HCPairIntNSString;
 
 

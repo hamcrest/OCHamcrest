@@ -70,7 +70,7 @@
     float floatValue;
     double doubleValue;
 
-    id result = nil;
+    __unsafe_unretained id result = nil;
     const char *argType = [getterSignature methodReturnType];
     switch (argType[0])
     {

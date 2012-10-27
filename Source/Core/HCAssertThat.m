@@ -30,9 +30,9 @@
 @endcode
     except we use an NSInvocation so that OCUnit (SenTestingKit) does not have to be linked.
  */
-static NSException *createOCUnitException(const char* fileName, int lineNumber, NSString *description)
+static NSException *createOCUnitException(const char* fileName, int lineNumber, __unsafe_unretained NSString *description)
 {
-    NSException *result = nil;
+    __unsafe_unretained NSException *result = nil;
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
@@ -44,7 +44,7 @@ static NSException *createOCUnitException(const char* fileName, int lineNumber, 
     [invocation setTarget:[NSException class]];
     [invocation setSelector:selector];
     
-    id fileArg = [NSString stringWithUTF8String:fileName];
+    __unsafe_unretained id fileArg = [NSString stringWithUTF8String:fileName];
     [invocation setArgument:&fileArg atIndex:2];
     [invocation setArgument:&lineNumber atIndex:3];
     [invocation setArgument:&description atIndex:4];
