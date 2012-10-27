@@ -11,11 +11,6 @@
 
 #import "HCStringDescription.h"
 
-
-@interface HCBaseMatcher ()
-- (void)subclassResponsibility:(SEL)command;
-@end
-
 #define ABSTRACT_METHOD [self subclassResponsibility:_cmd]
 
 

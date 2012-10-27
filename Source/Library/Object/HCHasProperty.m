@@ -11,10 +11,6 @@
 #import "HCRequireNonNilObject.h"
 #import "HCWrapInMatcher.h"
 
-@interface HCHasProperty ()
-- (id)objectFromInvokingSelector:(SEL)selector onObject:(id)item;
-@end
-
 
 @implementation HCHasProperty
 

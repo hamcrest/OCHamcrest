@@ -13,13 +13,6 @@
 #import "HCSelfDescribing.h"
 
 
-@interface HCBaseDescription ()
-- (id<HCDescription>)appendObjectDescriptionOf:(id)value;
-- (void)toCSyntaxString:(NSString *)unformatted;
-- (void)toCSyntax:(unichar)ch;
-@end
-
-
 @implementation HCBaseDescription
 
 - (id<HCDescription>)appendText:(NSString *)text
