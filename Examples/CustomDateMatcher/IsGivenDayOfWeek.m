@@ -5,7 +5,7 @@
 
 + (id)isGivenDayOfWeek:(NSInteger)dayOfWeek
 {
-    return [[[self alloc] initWithDay:dayOfWeek] autorelease];
+    return [[self alloc] initWithDay:dayOfWeek];
 }
 
 - (id)initWithDay:(NSInteger)dayOfWeek
