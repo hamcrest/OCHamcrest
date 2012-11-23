@@ -1,3 +1,5 @@
+![ochamcrest](http://hamcrest.org/images/logo.jpg)
+
 What is OCHamcrest?
 ===================
 
@@ -292,7 +294,8 @@ can be reused between matches.
 More resources
 ==============
 
-* [Documentation](http://hamcrest.github.com/OCHamcrest/)
+* [Documentation](http://hamcrest.org/OCHamcrest/)
 * [Sources](https://github.com/hamcrest/OCHamcrest)
+* [Hamcrest](http://hamcrest.org)
 * [Quality Coding](http://qualitycoding.org/) - Tools, tips &
-techniques for _building quality in_ to iOS development.
+techniques for _building quality in_ to iOS development

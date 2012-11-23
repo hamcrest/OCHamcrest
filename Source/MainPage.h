@@ -208,9 +208,9 @@ assertThat(theBiscuit, is(myBiscuit));
 
     @section resources More resources
 
-    @li <a href="http://hamcrest.github.com/OCHamcrest/">Online Documentation</a>
     @li <a href="https://github.com/hamcrest/OCHamcrest">Sources</a>
+    @li <a href="http://hamcrest.org/">Hamcrest</a>
     @li <a href="http://qualitycoding.org/">Quality Coding</a> - Tools, tips &amp; techniques for
-        <em>building quality in</em> to iOS development.
+        <em>building quality in</em> to iOS development
 
  */
