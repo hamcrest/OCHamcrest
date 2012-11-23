@@ -28,8 +28,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				087F064E151C2E150030C044 /* Foundation.framework in Frameworks */,
-				08B51A8712A068BC00147210 /* OCHamcrestIOS.framework in Frameworks */,
 				0817B615147ECF5500C5401D /* SenTestingKit.framework in Frameworks */,
+				08B51A8712A068BC00147210 /* OCHamcrestIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +47,6 @@
 		0867D691FE84028FC02AAC07 /* iOSExample */ = {
 			isa = PBXGroup;
 			children = (
-				087F064D151C2E150030C044 /* Foundation.framework */,
 				089B9DEC1298DB1100D4F34F /* Example.m */,
 				089B9F4B1298DE6400D4F34F /* Resources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
@@ -59,6 +58,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				087F064D151C2E150030C044 /* Foundation.framework */,
 				0817B614147ECF5500C5401D /* SenTestingKit.framework */,
 				08B51A8612A068BC00147210 /* OCHamcrestIOS.framework */,
 			);
@@ -186,14 +186,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PREBINDING = NO;
-				SDKROOT = iphonesimulator5.0;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -201,13 +201,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PREBINDING = NO;
-				SDKROOT = iphonesimulator5.0;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
