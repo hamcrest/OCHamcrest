@@ -3,6 +3,7 @@
 * Fixed warnings revealed by latest Xcode. Thanks to: David Hart
 * Changed iOS Architecture support to "Standard" (which includes armv7s)
 * Changed Mac Architecture support to 64-bit only
+* Converted to ARC
 
 
 == Version 1.8 ==
