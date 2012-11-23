@@ -39,13 +39,14 @@
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
-    [super describeMismatchOf:item to:mismatchDescription];
-    
+    [mismatchDescription appendText:@"was "];
     if ([item respondsToSelector:@selector(count)])
     {
-        NSNumber *count = @([item count]);
-        [[mismatchDescription appendText:@" with count of "] appendDescriptionOf:count];
+        [[[mismatchDescription appendText:@"count of "]
+                               appendDescriptionOf:@([item count])]
+                               appendText:@" with "];
     }
+    [mismatchDescription appendDescriptionOf:item];
 }
 
 - (void)describeTo:(id<HCDescription>)description

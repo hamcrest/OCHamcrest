@@ -52,7 +52,7 @@
 
 - (void)testMismatchDescriptionForItemWithWrongCount
 {
-    assertMismatchDescription(@"was <FakeWithCount> with count of <42>",
+    assertMismatchDescription(@"was count of <42> with <FakeWithCount>",
                               hasCount(equalToUnsignedInteger(1)),
                               [FakeWithCount fakeWithCount:42]);
 }
@@ -65,7 +65,7 @@
 
 - (void)testDescribesMismatchForItemWithWrongCount
 {
-    assertDescribeMismatch(@"was <FakeWithCount> with count of <42>",
+    assertDescribeMismatch(@"was count of <42> with <FakeWithCount>",
                            hasCount(equalToUnsignedInteger(1)), [FakeWithCount fakeWithCount:42]);
 }
 
@@ -105,7 +105,7 @@
 
 - (void)testMismatchDescriptionForItemWithWrongCount
 {
-    assertMismatchDescription(@"was <FakeWithCount> with count of <42>",
+    assertMismatchDescription(@"was count of <42> with <FakeWithCount>",
                               hasCountOf(1), [FakeWithCount fakeWithCount:42]);
 }
 
@@ -116,7 +116,7 @@
 
 - (void)testDescribesMismatchForItemWithWrongCount
 {
-    assertDescribeMismatch(@"was <FakeWithCount> with count of <42>",
+    assertDescribeMismatch(@"was count of <42> with <FakeWithCount>",
                            hasCountOf(1), [FakeWithCount fakeWithCount:42]);
 }
 
