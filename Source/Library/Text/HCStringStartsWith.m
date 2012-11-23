@@ -16,7 +16,7 @@
 
 + (id)stringStartsWith:(NSString *)aSubstring
 {
-    return [[[self alloc] initWithSubstring:aSubstring] autorelease];
+    return [[self alloc] initWithSubstring:aSubstring];
 }
 
 - (BOOL)matches:(id)item

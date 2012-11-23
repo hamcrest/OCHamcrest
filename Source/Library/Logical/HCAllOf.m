@@ -17,21 +17,15 @@
 
 + (id)allOf:(NSArray *)theMatchers
 {
-    return [[[self alloc] initWithMatchers:theMatchers] autorelease];
+    return [[self alloc] initWithMatchers:theMatchers];
 }
 
 - (id)initWithMatchers:(NSArray *)theMatchers
 {
     self = [super init];
     if (self)
-        matchers = [theMatchers retain];
+        matchers = theMatchers;
     return self;
-}
-
-- (void)dealloc
-{
-    [matchers release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item

@@ -15,7 +15,7 @@
 
 + (id)conformsToProtocol:(Protocol *)protocol
 {
-    return [[[self alloc] initWithProtocol:protocol] autorelease];
+    return [[self alloc] initWithProtocol:protocol];
 }
 
 - (id)initWithProtocol:(Protocol *)aProtocol

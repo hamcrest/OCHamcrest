@@ -16,21 +16,15 @@
 
 + (id)isEqualTo:(id)anObject
 {
-    return [[[self alloc] initEqualTo:anObject] autorelease];
+    return [[self alloc] initEqualTo:anObject];
 }
 
 - (id)initEqualTo:(id)anObject
 {
     self = [super init];
     if (self)
-        object = [anObject retain];
+        object = anObject;
     return self;
-}
-
-- (void)dealloc
-{
-    [object release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item

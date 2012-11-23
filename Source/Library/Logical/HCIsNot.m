@@ -17,21 +17,15 @@
 
 + (id)isNot:(id<HCMatcher>)aMatcher
 {
-    return [[[self alloc] initNot:aMatcher] autorelease];
+    return [[self alloc] initNot:aMatcher];
 }
 
 - (id)initNot:(id<HCMatcher>)aMatcher
 {
     self = [super init];
     if (self)
-        matcher = [aMatcher retain];
+        matcher = aMatcher;
     return self;
-}
-
-- (void)dealloc
-{
-    [matcher release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item

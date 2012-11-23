@@ -23,7 +23,7 @@
 
 + (HCStringDescription *)stringDescription
 {
-    return [[[HCStringDescription alloc] init] autorelease];
+    return [[HCStringDescription alloc] init];
 }
 
 - (id)init
@@ -32,12 +32,6 @@
     if (self)
         accumulator = [[NSMutableString alloc] init];
     return self;
-}
-
-- (void)dealloc
-{
-    [accumulator release];
-    [super dealloc];
 }
 
 - (NSString *)description

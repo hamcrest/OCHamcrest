@@ -16,7 +16,7 @@
 
 + (id)hasProperty:(NSString *)property value:(id<HCMatcher>)aValueMatcher
 {
-    return [[[self alloc] initWithProperty:property value:aValueMatcher] autorelease];
+    return [[self alloc] initWithProperty:property value:aValueMatcher];
 }
 
 - (id)initWithProperty:(NSString *)property value:(id<HCMatcher>)aValueMatcher
@@ -27,16 +27,9 @@
     if (self != nil)
     {
         propertyName = [property copy];
-        valueMatcher = [aValueMatcher retain];
+        valueMatcher = aValueMatcher;
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [propertyName release];
-    [valueMatcher release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item

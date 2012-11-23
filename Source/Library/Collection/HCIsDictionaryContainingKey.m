@@ -18,21 +18,15 @@
 
 + (id)isDictionaryContainingKey:(id<HCMatcher>)theKeyMatcher
 {
-    return [[[self alloc] initWithKeyMatcher:theKeyMatcher] autorelease];
+    return [[self alloc] initWithKeyMatcher:theKeyMatcher];
 }
 
 - (id)initWithKeyMatcher:(id<HCMatcher>)theKeyMatcher
 {
     self = [super init];
     if (self)
-        keyMatcher = [theKeyMatcher retain];
+        keyMatcher = theKeyMatcher;
     return self;
-}
-
-- (void)dealloc
-{
-    [keyMatcher release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)dict

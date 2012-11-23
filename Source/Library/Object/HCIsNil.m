@@ -17,7 +17,7 @@
 
 + (id)isNil
 {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 - (BOOL)matches:(id)item

@@ -17,7 +17,7 @@
 
 + (id)hasDescription:(id<HCMatcher>)descriptionMatcher
 {
-    return [[[self alloc] initWithDescription:descriptionMatcher] autorelease];
+    return [[self alloc] initWithDescription:descriptionMatcher];
 }
 
 - (id)initWithDescription:(id<HCMatcher>)descriptionMatcher

@@ -16,7 +16,7 @@
 
 + (id)isInCollection:(id)aCollection
 {
-    return [[[self alloc] initWithCollection:aCollection] autorelease];
+    return [[self alloc] initWithCollection:aCollection];
 }
 
 - (id)initWithCollection:(id)aCollection
@@ -30,14 +30,8 @@
     
     self = [super init];
     if (self)
-        collection = [aCollection retain];
+        collection = aCollection;
     return self;
-}
-
-- (void)dealloc
-{
-    [collection release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item

@@ -132,9 +132,7 @@
 		0859833013459CA400BE7892 /* StringStartsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035F13440AD8001B439B /* StringStartsWithTest.m */; };
 		087601FB13440807001B439B /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601E213440806001B439B /* OCHamcrest.framework */; };
 		0876025813440A83001B439B /* HCAssertThat.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876022C13440A83001B439B /* HCAssertThat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876025913440A83001B439B /* HCAssertThat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022D13440A83001B439B /* HCAssertThat.m */; };
 		0876025A13440A83001B439B /* HCBaseDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876022E13440A83001B439B /* HCBaseDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876025B13440A83001B439B /* HCBaseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022F13440A83001B439B /* HCBaseDescription.m */; };
 		0876025C13440A83001B439B /* HCBaseMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023013440A83001B439B /* HCBaseMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876025D13440A83001B439B /* HCBaseMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023113440A83001B439B /* HCBaseMatcher.m */; };
 		0876025E13440A83001B439B /* HCDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023213440A83001B439B /* HCDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -227,6 +225,8 @@
 		088FB0AF136A70B800C191E1 /* HCStringContainsInOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 088FB0AD136A70B800C191E1 /* HCStringContainsInOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		088FB0B1136A70B800C191E1 /* HCStringContainsInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.m */; };
 		088FB0B2136A70B800C191E1 /* HCStringContainsInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.m */; };
+		08EE4340165FFE3F006AB8E1 /* HCAssertThat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022D13440A83001B439B /* HCAssertThat.m */; };
+		08EE4341165FFE47006AB8E1 /* HCBaseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022F13440A83001B439B /* HCBaseDescription.m */; };
 		5F2773401436F50C00B9683A /* HCConformsToProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F27733E1436F50C00B9683A /* HCConformsToProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F2773411436F50C00B9683A /* HCConformsToProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F27733F1436F50C00B9683A /* HCConformsToProtocol.m */; };
 		5F2773471436FA9D00B9683A /* HCConformsToProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F27733F1436F50C00B9683A /* HCConformsToProtocol.m */; };
@@ -1137,8 +1137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0876025913440A83001B439B /* HCAssertThat.m in Sources */,
-				0876025B13440A83001B439B /* HCBaseDescription.m in Sources */,
+				08EE4340165FFE3F006AB8E1 /* HCAssertThat.m in Sources */,
+				08EE4341165FFE47006AB8E1 /* HCBaseDescription.m in Sources */,
 				0876025D13440A83001B439B /* HCBaseMatcher.m in Sources */,
 				0876026213440A83001B439B /* HCStringDescription.m in Sources */,
 				0876026413440A83001B439B /* HCCollectMatchers.m in Sources */,
@@ -1253,8 +1253,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/libochamcrest.dst;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ochamcrest;
 				SDKROOT = iphoneos;
@@ -1265,8 +1267,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/libochamcrest.dst;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ochamcrest;
 				SDKROOT = iphoneos;
@@ -1332,6 +1336,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1339,7 +1344,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "OCHamcrest-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.6.8;
+				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -1368,8 +1374,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/libochamcrest.dst;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ochamcrest;
 				SDKROOT = iphoneos;
@@ -1428,6 +1436,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1435,7 +1444,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "OCHamcrest-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.6.8;
+				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -1447,6 +1457,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1454,7 +1465,8 @@
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "OCHamcrest-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.6.8;
+				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;

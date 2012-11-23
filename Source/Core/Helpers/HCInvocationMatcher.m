@@ -30,17 +30,10 @@
     self = [super init];
     if (self)
     {
-        invocation = [anInvocation retain];
-        subMatcher = [aMatcher retain];
+        invocation = anInvocation;
+        subMatcher = aMatcher;
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [subMatcher release];
-    [invocation release];
-    [super dealloc];
 }
 
 - (NSString *)stringFromSelector

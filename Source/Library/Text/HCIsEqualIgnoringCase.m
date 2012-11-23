@@ -17,7 +17,7 @@
 
 + (id)isEqualIgnoringCase:(NSString *)aString
 {
-    return [[[self alloc] initWithString:aString] autorelease];
+    return [[self alloc] initWithString:aString];
 }
 
 - (id)initWithString:(NSString *)aString
@@ -28,12 +28,6 @@
     if (self)
         string = [aString copy];
     return self;
-}
-
-- (void)dealloc
-{
-    [string release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item

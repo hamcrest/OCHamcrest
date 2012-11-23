@@ -57,7 +57,7 @@ static NSMutableString *stripSpace(NSString *string)
 
 + (id)isEqualIgnoringWhiteSpace:(NSString *)aString
 {
-    return [[[self alloc] initWithString:aString] autorelease];
+    return [[self alloc] initWithString:aString];
 }
 
 - (id)initWithString:(NSString *)aString
@@ -68,16 +68,9 @@ static NSMutableString *stripSpace(NSString *string)
     if (self)
     {
         originalString = [aString copy];
-        strippedString = [stripSpace(aString) retain];
+        strippedString = stripSpace(aString);
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [strippedString release];
-    [originalString release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item

@@ -17,7 +17,7 @@
 
 + (id)isInstanceOf:(Class)type
 {
-    return [[[self alloc] initWithType:type] autorelease];
+    return [[self alloc] initWithType:type];
 }
 
 - (id)initWithType:(Class)aClass

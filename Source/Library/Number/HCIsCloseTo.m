@@ -17,7 +17,7 @@
 
 + (id)isCloseTo:(double)aValue within:(double)aDelta
 {
-    return [[[self alloc] initWithValue:aValue delta:aDelta] autorelease];
+    return [[self alloc] initWithValue:aValue delta:aDelta];
 }
 
 - (id)initWithValue:(double)aValue delta:(double)aDelta

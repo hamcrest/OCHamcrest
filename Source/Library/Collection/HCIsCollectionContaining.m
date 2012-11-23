@@ -19,21 +19,15 @@
 
 + (id)isCollectionContaining:(id<HCMatcher>)anElementMatcher
 {
-    return [[[self alloc] initWithMatcher:anElementMatcher] autorelease];
+    return [[self alloc] initWithMatcher:anElementMatcher];
 }
 
 - (id)initWithMatcher:(id<HCMatcher>)anElementMatcher
 {
     self = [super init];
     if (self)
-        elementMatcher = [anElementMatcher retain];
+        elementMatcher = anElementMatcher;
     return self;
-}
-
-- (void)dealloc
-{
-    [elementMatcher release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)collection

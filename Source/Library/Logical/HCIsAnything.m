@@ -16,12 +16,12 @@
 
 + (id)isAnything
 {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 + (id)isAnythingWithDescription:(NSString *)aDescription
 {
-    return [[[self alloc] initWithDescription:aDescription] autorelease];
+    return [[self alloc] initWithDescription:aDescription];
 }
 
 - (id)init
@@ -36,12 +36,6 @@
     if (self)
         description = [aDescription copy];
     return self;
-}
-
-- (void)dealloc
-{
-    [description release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item

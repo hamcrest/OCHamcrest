@@ -19,8 +19,7 @@
 + (id)isDictionaryContainingKey:(id<HCMatcher>)aKeyMatcher
                           value:(id<HCMatcher>)aValueMatcher
 {
-    return [[[self alloc]
-                    initWithKeyMatcher:aKeyMatcher valueMatcher:aValueMatcher] autorelease];
+    return [[self alloc] initWithKeyMatcher:aKeyMatcher valueMatcher:aValueMatcher];
 }
 
 - (id)initWithKeyMatcher:(id<HCMatcher>)aKeyMatcher
@@ -29,17 +28,10 @@
     self = [super init];
     if (self)
     {
-        keyMatcher = [aKeyMatcher retain];
-        valueMatcher = [aValueMatcher retain];
+        keyMatcher = aKeyMatcher;
+        valueMatcher = aValueMatcher;
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [valueMatcher release];
-    [keyMatcher release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)dict

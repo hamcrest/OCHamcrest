@@ -18,7 +18,7 @@
 
 + (id)containsInOrder:(NSArray *)substringList
 {
-    return [[[self alloc] initWithSubstrings:substringList] autorelease];
+    return [[self alloc] initWithSubstrings:substringList];
 }
 
 - (id)initWithSubstrings:(NSArray *)substringList
@@ -36,15 +36,9 @@
             }
         }
         
-        substrings = [substringList retain];
+        substrings = substringList;
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [substrings release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item

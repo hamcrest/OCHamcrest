@@ -19,11 +19,10 @@
    maxCompare:(NSComparisonResult)max
    comparisonDescription:(NSString *)description
 {
-    return [[[self alloc] initComparing:expectedValue
+    return [[self alloc] initComparing:expectedValue
                              minCompare:min
                              maxCompare:max
-                  comparisonDescription:description]
-            autorelease];
+                  comparisonDescription:description];
 }
 
 - (id)initComparing:(id)expectedValue
@@ -41,19 +40,12 @@
     self = [super init];
     if (self)
     {
-        expected = [expectedValue retain];
+        expected = expectedValue;
         minCompare = min;
         maxCompare = max;
         comparisonDescription = [description copy];
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [expected release];
-    [comparisonDescription release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item

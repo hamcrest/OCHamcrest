@@ -30,12 +30,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [substring release];
-    [super dealloc];
-}
-
 - (void)describeTo:(id<HCDescription>)description
 {
     [[[[description appendText:@"a string "]

@@ -55,9 +55,9 @@ static HCPairIntNSString separate(NSString *component)
        forMatcher:(id<HCMatcher>)aMatcher
        overValues:(NSArray *)templateValues
 {
-    return [[[self alloc] initWithDescription:description
-                                   forMatcher:aMatcher
-                                   overValues:templateValues] autorelease];
+    return [[self alloc] initWithDescription:description
+                                  forMatcher:aMatcher
+                                  overValues:templateValues];
 }
 
 - (id)initWithDescription:(NSString *)description
@@ -68,18 +68,10 @@ static HCPairIntNSString separate(NSString *component)
     if (self)
     {
         descriptionTemplate = [description copy];
-        matcher = [aMatcher retain];
-        values = [templateValues retain];
+        matcher = aMatcher;
+        values = templateValues;
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [values release];
-    [matcher release];
-    [descriptionTemplate release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item

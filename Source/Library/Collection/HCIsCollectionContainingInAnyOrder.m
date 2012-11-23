@@ -30,17 +30,10 @@
     self = [super init];
     if (self)
     {
-        matchers = [itemMatchers retain];
-        mismatchDescription = [description retain];        
+        matchers = itemMatchers;
+        mismatchDescription = description;        
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [matchers release];
-    [mismatchDescription release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item
@@ -80,21 +73,15 @@
 
 + (id)isCollectionContainingInAnyOrder:(NSMutableArray *)itemMatchers
 {
-    return [[[self alloc] initWithMatchers:itemMatchers] autorelease];
+    return [[self alloc] initWithMatchers:itemMatchers];
 }
 
 - (id)initWithMatchers:(NSMutableArray *)itemMatchers
 {
     self = [super init];
     if (self)
-        matchers = [itemMatchers retain];
+        matchers = itemMatchers;
     return self;
-}
-
-- (void)dealloc
-{
-    [matchers release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)collection
@@ -111,8 +98,8 @@
     }
     
     HCMatchingInAnyOrder *matchSequence =
-        [[[HCMatchingInAnyOrder alloc] initWithMatchers:matchers 
-                                    mismatchDescription:mismatchDescription] autorelease];
+        [[HCMatchingInAnyOrder alloc] initWithMatchers:matchers 
+                                   mismatchDescription:mismatchDescription];
     for (id item in collection)
         if (![matchSequence matches:item])
             return NO;

@@ -17,21 +17,15 @@
 
 + (id)hasCount:(id<HCMatcher>)matcher
 {
-    return [[[self alloc] initWithCount:matcher] autorelease];
+    return [[self alloc] initWithCount:matcher];
 }
 
 - (id)initWithCount:(id<HCMatcher>)matcher
 {
     self = [super init];
     if (self)
-        countMatcher = [matcher retain];
+        countMatcher = matcher;
     return self;
-}
-
-- (void)dealloc
-{
-    [countMatcher release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item

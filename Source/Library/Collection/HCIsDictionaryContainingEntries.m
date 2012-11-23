@@ -18,7 +18,7 @@
 + (id)isDictionaryContainingKeys:(NSArray *)theKeys
                    valueMatchers:(NSArray *)theValueMatchers
 {
-    return [[[self alloc] initWithKeys:theKeys valueMatchers:theValueMatchers] autorelease];
+    return [[self alloc] initWithKeys:theKeys valueMatchers:theValueMatchers];
 }
 
 - (id)initWithKeys:(NSArray *)theKeys
@@ -27,17 +27,10 @@
     self = [super init];
     if (self)
     {
-        keys = [theKeys retain];
-        valueMatchers = [theValueMatchers retain];
+        keys = theKeys;
+        valueMatchers = theValueMatchers;
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [valueMatchers release];
-    [keys release];
-    [super dealloc];
 }
 
 - (BOOL)matches:(id)item
