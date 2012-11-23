@@ -30,18 +30,16 @@
 
 - (void)testMatchesSingletonDictionaryContainingKey
 {
-    NSDictionary *dict = [NSDictionary dictionaryWithObject:@"1" forKey:@"a"];
+    NSDictionary *dict = @{@"a": @"1"};
     
     assertMatches(@"Matches single key", hasKey(equalTo(@"a")), dict);
 }
 
 - (void)testMatchesDictionaryContainingKey
 {
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                            @"1", @"a",
-                                            @"2", @"b",
-                                            @"3", @"c",
-                                            nil];
+    NSDictionary *dict = @{@"a": @"1",
+                                            @"b": @"2",
+                                            @"c": @"3"};
     
     assertMatches(@"Matches a", hasKey(equalTo(@"a")), dict);
     assertMatches(@"Matches c", hasKey(equalTo(@"c")), dict);
@@ -49,27 +47,23 @@
 
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                            @"1", @"a",
-                                            @"2", @"b",
-                                            @"3", @"c",
-                                            nil];
+    NSDictionary *dict = @{@"a": @"1",
+                                            @"b": @"2",
+                                            @"c": @"3"};
 
     assertMatches(@"Matches c", hasKey(@"c"), dict);
 }
 
 - (void)testDoesNotMatchEmptyDictionary
 {
-    assertDoesNotMatch(@"empty", hasKey(@"Foo"), [NSDictionary dictionary]);
+    assertDoesNotMatch(@"empty", hasKey(@"Foo"), @{});
 }
 
 - (void)testDoesNotMatchDictionaryMissingKey
 {
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                            @"1", @"a",
-                                            @"2", @"b",
-                                            @"3", @"c",
-                                            nil];
+    NSDictionary *dict = @{@"a": @"1",
+                                            @"b": @"2",
+                                            @"c": @"3"};
     
     assertDoesNotMatch(@"no matching key", hasKey(@"d"), dict);
 }
@@ -86,7 +80,7 @@
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"1", @"a", nil];
+    NSDictionary *dict = @{@"a": @"1"};
     assertNoMismatchDescription(hasKey(@"a"), dict);
 }
 

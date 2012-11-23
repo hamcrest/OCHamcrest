@@ -56,8 +56,8 @@
     NSUInteger count = [keys count];
     for (NSUInteger index = 0; index < count; ++index)
     {
-        id key = [keys objectAtIndex:index];
-        if ([dict objectForKey:key] == nil)
+        id key = keys[index];
+        if (dict[key] == nil)
         {
             [[[[mismatchDescription appendText:@"no "]
                                     appendDescriptionOf:key]
@@ -66,8 +66,8 @@
             return NO;
         }
 
-        id valueMatcher = [valueMatchers objectAtIndex:index];
-        id actualValue = [dict objectForKey:key];
+        id valueMatcher = valueMatchers[index];
+        id actualValue = dict[key];
         
         if (![valueMatcher matches:actualValue])
         {
@@ -89,9 +89,9 @@
 
 - (void)describeKeyValueAtIndex:(NSUInteger)index to:(id<HCDescription>)description
 {
-    [[[[description appendDescriptionOf:[keys objectAtIndex:index]]
+    [[[[description appendDescriptionOf:keys[index]]
                     appendText:@" = "]
-                    appendDescriptionOf:[valueMatchers objectAtIndex:index]]
+                    appendDescriptionOf:valueMatchers[index]]
                     appendText:@"; "];
 }
 

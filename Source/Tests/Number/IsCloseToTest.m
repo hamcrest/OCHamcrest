@@ -30,12 +30,12 @@
 {
     id<HCMatcher> matcher = closeTo(1.0, 0.5);
 
-    assertMatches(@"equal", matcher, [NSNumber numberWithDouble:1.0]);
-    assertMatches(@"less but within delta", matcher, [NSNumber numberWithDouble:0.5]);
-    assertMatches(@"greater but within delta", matcher, [NSNumber numberWithDouble:1.5]);
+    assertMatches(@"equal", matcher, @1.0);
+    assertMatches(@"less but within delta", matcher, @0.5);
+    assertMatches(@"greater but within delta", matcher, @1.5);
 
-    assertDoesNotMatch(@"too small", matcher, [NSNumber numberWithDouble:0.4]);
-    assertDoesNotMatch(@"too big", matcher, [NSNumber numberWithDouble:1.6]);
+    assertDoesNotMatch(@"too small", matcher, @0.4);
+    assertDoesNotMatch(@"too big", matcher, @1.6);
 }
 
 - (void)testFailsIfMatchingAgainstNonNumber
@@ -53,13 +53,13 @@
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    assertNoMismatchDescription(closeTo(1.0, 0.5), ([NSNumber numberWithDouble:1.0]));
+    assertNoMismatchDescription(closeTo(1.0, 0.5), (@1.0));
 }
 
 - (void)testMismatchDescriptionShowsActualDeltaIfArgumentIsNumeric
 {
     assertMismatchDescription(@"<1.7> differed by <0.7>",
-                              (closeTo(1.0, 0.5)), [NSNumber numberWithDouble:1.7]);
+                              (closeTo(1.0, 0.5)), @1.7);
 }
 
 - (void)testMismatchDescriptionShowsActualArgumentIfNotNumeric
@@ -70,7 +70,7 @@
 - (void)testDescribeMismatchShowsActualDeltaIfArgumentIsNumeric
 {
     assertDescribeMismatch(@"<1.7> differed by <0.7>",
-                           (closeTo(1.0, 0.5)), [NSNumber numberWithDouble:1.7]);
+                           (closeTo(1.0, 0.5)), @1.7);
 }
 
 - (void)testDescribeMismatchShowsActualArgumentIfNotNumeric

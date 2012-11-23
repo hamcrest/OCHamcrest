@@ -27,41 +27,33 @@
 
 - (void)testComparesObjectsForGreaterThan
 {
-    assertMatches(@"match", greaterThan([NSNumber numberWithInt:1]), [NSNumber numberWithInt:2]);
-    assertDoesNotMatch(@"no match", greaterThan([NSNumber numberWithInt:1]),
-                       [NSNumber numberWithInt:1]);
+    assertMatches(@"match", greaterThan(@1), @2);
+    assertDoesNotMatch(@"no match", greaterThan(@1), @1);
 }
 
 - (void)testComparesObjectsForLessThan
 {
-    assertMatches(@"match", lessThan([NSNumber numberWithInt:1]), [NSNumber numberWithInt:0]);
-    assertDoesNotMatch(@"no match", lessThan([NSNumber numberWithInt:1]),
-                       [NSNumber numberWithInt:1]);
+    assertMatches(@"match", lessThan(@1), @0);
+    assertDoesNotMatch(@"no match", lessThan(@1), @1);
 }
 
 - (void)testComparesObjectsForGreaterThanOrEqualTo
 {
-    assertMatches(@"match", greaterThanOrEqualTo([NSNumber numberWithInt:1]),
-                  [NSNumber numberWithInt:2]);
-    assertMatches(@"match", greaterThanOrEqualTo([NSNumber numberWithInt:1]),
-                  [NSNumber numberWithInt:1]);
-    assertDoesNotMatch(@"no match", greaterThanOrEqualTo([NSNumber numberWithInt:1]),
-                       [NSNumber numberWithInt:0]);
+    assertMatches(@"match", greaterThanOrEqualTo(@1), @2);
+    assertMatches(@"match", greaterThanOrEqualTo(@1), @1);
+    assertDoesNotMatch(@"no match", greaterThanOrEqualTo(@1), @0);
 }
 
 - (void)testComparesObjectsForLessThanOrEqualTo
 {
-    assertMatches(@"match", lessThanOrEqualTo([NSNumber numberWithInt:1]),
-                  [NSNumber numberWithInt:0]);
-    assertMatches(@"match", lessThanOrEqualTo([NSNumber numberWithInt:1]),
-                  [NSNumber numberWithInt:1]);
-    assertDoesNotMatch(@"no match", lessThanOrEqualTo([NSNumber numberWithInt:1]),
-                       [NSNumber numberWithInt:2]);
+    assertMatches(@"match", lessThanOrEqualTo(@1), @0);
+    assertMatches(@"match", lessThanOrEqualTo(@1), @1);
+    assertDoesNotMatch(@"no match", lessThanOrEqualTo(@1), @2);
 }
 
 - (void)testDoesNotMatchNil
 {
-    assertDoesNotMatch(@"nil argument", greaterThan([NSNumber numberWithInt:1]), nil);
+    assertDoesNotMatch(@"nil argument", greaterThan(@1), nil);
 }
 
 - (void)testSupportsDifferentTypesOfComparableObjects
@@ -78,7 +70,7 @@
 
 - (void)testHasAReadableDescription
 {
-    id one = [NSNumber numberWithInt:1];
+    id one = @1;
     
     assertDescription(@"a value greater than <1>", greaterThan(one));
     assertDescription(@"a value greater than or equal to <1>", greaterThanOrEqualTo(one));
@@ -88,32 +80,32 @@
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    id one = [NSNumber numberWithInt:1];
+    id one = @1;
 
-    assertNoMismatchDescription(greaterThan(one), [NSNumber numberWithInt:2]);
-    assertNoMismatchDescription(lessThan(one), [NSNumber numberWithInt:0]);
-    assertNoMismatchDescription(greaterThanOrEqualTo(one), [NSNumber numberWithInt:1]);
-    assertNoMismatchDescription(lessThanOrEqualTo(one), [NSNumber numberWithInt:1]);
+    assertNoMismatchDescription(greaterThan(one), @2);
+    assertNoMismatchDescription(lessThan(one), @0);
+    assertNoMismatchDescription(greaterThanOrEqualTo(one), @1);
+    assertNoMismatchDescription(lessThanOrEqualTo(one), @1);
 }
 
 - (void)testMismatchDescription
 {
-    id one = [NSNumber numberWithInt:1];
+    id one = @1;
     
-    assertMismatchDescription(@"was <0>", greaterThan(one), [NSNumber numberWithInt:0]);
-    assertMismatchDescription(@"was <2>", lessThan(one), [NSNumber numberWithInt:2]);
-    assertMismatchDescription(@"was <0>", greaterThanOrEqualTo(one), [NSNumber numberWithInt:0]);
-    assertMismatchDescription(@"was <2>", lessThanOrEqualTo(one), [NSNumber numberWithInt:2]);
+    assertMismatchDescription(@"was <0>", greaterThan(one), @0);
+    assertMismatchDescription(@"was <2>", lessThan(one), @2);
+    assertMismatchDescription(@"was <0>", greaterThanOrEqualTo(one), @0);
+    assertMismatchDescription(@"was <2>", lessThanOrEqualTo(one), @2);
 }
 
 - (void)testDescribeMismatch
 {
-    id one = [NSNumber numberWithInt:1];
+    id one = @1;
     
-    assertDescribeMismatch(@"was <0>", greaterThan(one), [NSNumber numberWithInt:0]);
-    assertDescribeMismatch(@"was <2>", lessThan(one), [NSNumber numberWithInt:2]);
-    assertDescribeMismatch(@"was <0>", greaterThanOrEqualTo(one), [NSNumber numberWithInt:0]);
-    assertDescribeMismatch(@"was <2>", lessThanOrEqualTo(one), [NSNumber numberWithInt:2]);
+    assertDescribeMismatch(@"was <0>", greaterThan(one), @0);
+    assertDescribeMismatch(@"was <2>", lessThan(one), @2);
+    assertDescribeMismatch(@"was <0>", greaterThanOrEqualTo(one), @0);
+    assertDescribeMismatch(@"was <2>", lessThanOrEqualTo(one), @2);
 }
 
 @end

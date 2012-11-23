@@ -66,7 +66,7 @@
 
 - (void)testDoesNotMatchEmptyCollection
 {
-    assertDoesNotMatch(@"empty collection", onlyContains(equalTo(@"foo"), nil), ([NSArray array]));
+    assertDoesNotMatch(@"empty collection", onlyContains(equalTo(@"foo"), nil), (@[]));
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument

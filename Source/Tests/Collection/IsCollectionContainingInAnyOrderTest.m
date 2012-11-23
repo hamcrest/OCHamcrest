@@ -58,7 +58,7 @@
 - (void)testDoesNotMatchEmptyCollection
 {
     assertMismatchDescription(@"no item matches: \"a\", \"b\" in []",
-                              (containsInAnyOrder(@"a", @"b", nil)), [NSArray array]);
+                              (containsInAnyOrder(@"a", @"b", nil)), @[]);
 }
 
 - (void)testDoesNotMatchNil

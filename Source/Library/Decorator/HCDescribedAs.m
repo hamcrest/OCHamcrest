@@ -110,7 +110,7 @@ static HCPairIntNSString separate(NSString *component)
                 [[description appendText:@"%"] appendText:oneComponent];
             else
             {
-                [description appendDescriptionOf:[values objectAtIndex:(NSUInteger)parseIndex.first]];
+                [description appendDescriptionOf:values[(NSUInteger)parseIndex.first]];
                 [description appendText:parseIndex.second];
             }
         }

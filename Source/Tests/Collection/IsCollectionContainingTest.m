@@ -38,7 +38,7 @@
 {
     assertDoesNotMatch(@"list without 'a'",
                        hasItem(equalTo(@"a")), ([NSArray arrayWithObjects:@"b", @"c", nil]));    
-    assertDoesNotMatch(@"empty", hasItem(equalTo(@"a")), [NSArray array]);
+    assertDoesNotMatch(@"empty", hasItem(equalTo(@"a")), @[]);
 }
 
 - (void)testDoesNotMatchNil

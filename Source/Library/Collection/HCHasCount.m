@@ -39,7 +39,7 @@
     if (![item respondsToSelector:@selector(count)])
         return NO;
     
-    NSNumber *count = [NSNumber numberWithUnsignedInteger:[item count]];
+    NSNumber *count = @([item count]);
     return [countMatcher matches:count];
 }
 
@@ -49,7 +49,7 @@
     
     if ([item respondsToSelector:@selector(count)])
     {
-        NSNumber *count = [NSNumber numberWithUnsignedInteger:[item count]];
+        NSNumber *count = @([item count]);
         [[mismatchDescription appendText:@" with count of "] appendDescriptionOf:count];
     }
 }

@@ -50,14 +50,14 @@
 
 - (void)testSuccess_withChar
 {
-    assertThatChar('A', equalTo([NSNumber numberWithChar:'A']));
+    assertThatChar('A', equalTo(@'A'));
 }
 
 - (void)testFailure_withChar
 {
     @try
     {
-        assertThatChar('B', equalTo([NSNumber numberWithChar:'A']));
+        assertThatChar('B', equalTo(@'A'));
     }
     @catch (NSException* exception)
     {
@@ -69,14 +69,14 @@
 
 - (void)testSuccess_withDouble
 {
-    assertThatDouble(1.5, equalTo([NSNumber numberWithDouble:1.5]));
+    assertThatDouble(1.5, equalTo(@1.5));
 }
 
 - (void)testFailure_withDouble
 {
     @try
     {
-        assertThatDouble(2.5, equalTo([NSNumber numberWithDouble:1.5]));
+        assertThatDouble(2.5, equalTo(@1.5));
     }
     @catch (NSException* exception)
     {
@@ -88,14 +88,14 @@
 
 - (void)testSuccess_withFloat
 {
-    assertThatFloat(1.5f, equalTo([NSNumber numberWithFloat:1.5f]));
+    assertThatFloat(1.5f, equalTo(@1.5f));
 }
 
 - (void)testFailure_withFloat
 {
     @try
     {
-        assertThatFloat(2.5f, equalTo([NSNumber numberWithFloat:1.5f]));
+        assertThatFloat(2.5f, equalTo(@1.5f));
     }
     @catch (NSException* exception)
     {
@@ -107,14 +107,14 @@
 
 - (void)testSuccess_withInt
 {
-    assertThatInt(1, equalTo([NSNumber numberWithInt:1]));
+    assertThatInt(1, equalTo(@1));
 }
 
 - (void)testFailure_withInt
 {
     @try
     {
-        assertThatInt(2, equalTo([NSNumber numberWithInt:1]));
+        assertThatInt(2, equalTo(@1));
     }
     @catch (NSException* exception)
     {
@@ -126,14 +126,14 @@
 
 - (void)testSuccess_withLong
 {
-    assertThatLong(1L, equalTo([NSNumber numberWithLong:1L]));
+    assertThatLong(1L, equalTo(@1L));
 }
 
 - (void)testFailure_withLong
 {
     @try
     {
-        assertThatLong(2L, equalTo([NSNumber numberWithLong:1L]));
+        assertThatLong(2L, equalTo(@1L));
     }
     @catch (NSException* exception)
     {
@@ -145,14 +145,14 @@
 
 - (void)testSuccess_withLongLong
 {
-    assertThatLongLong(1LL, equalTo([NSNumber numberWithLongLong:1LL]));
+    assertThatLongLong(1LL, equalTo(@1LL));
 }
 
 - (void)testFailure_withLongLong
 {
     @try
     {
-        assertThatLongLong(2LL, equalTo([NSNumber numberWithLongLong:1LL]));
+        assertThatLongLong(2LL, equalTo(@1LL));
     }
     @catch (NSException* exception)
     {
@@ -202,14 +202,14 @@
 
 - (void)testSuccess_withUnsignedInt
 {
-    assertThatUnsignedInt(1U, equalTo([NSNumber numberWithUnsignedInt:1U]));
+    assertThatUnsignedInt(1U, equalTo(@1U));
 }
 
 - (void)testFailure_withUnsignedInt
 {
     @try
     {
-        assertThatUnsignedInt(2U, equalTo([NSNumber numberWithUnsignedInt:1U]));
+        assertThatUnsignedInt(2U, equalTo(@1U));
     }
     @catch (NSException* exception)
     {
@@ -221,14 +221,14 @@
 
 - (void)testSuccess_withUnsignedLong
 {
-    assertThatUnsignedLong(1UL, equalTo([NSNumber numberWithUnsignedLong:1UL]));
+    assertThatUnsignedLong(1UL, equalTo(@1UL));
 }
 
 - (void)testFailure_withUnsignedLong
 {
     @try
     {
-        assertThatUnsignedLong(2UL, equalTo([NSNumber numberWithUnsignedLong:1UL]));
+        assertThatUnsignedLong(2UL, equalTo(@1UL));
     }
     @catch (NSException* exception)
     {
@@ -240,14 +240,14 @@
 
 - (void)testSuccess_withUnsignedLongLong
 {
-    assertThatUnsignedLongLong(1ULL, equalTo([NSNumber numberWithUnsignedLongLong:1ULL]));
+    assertThatUnsignedLongLong(1ULL, equalTo(@1ULL));
 }
 
 - (void)testFailure_withUnsignedLongLong
 {
     @try
     {
-        assertThatUnsignedLongLong(2ULL, equalTo([NSNumber numberWithUnsignedLongLong:1ULL]));
+        assertThatUnsignedLongLong(2ULL, equalTo(@1ULL));
     }
     @catch (NSException* exception)
     {
@@ -278,14 +278,14 @@
 
 - (void)testSuccess_withInteger
 {
-    assertThatInteger(1, equalTo([NSNumber numberWithInteger:1]));
+    assertThatInteger(1, equalTo(@1));
 }
 
 - (void)testFailure_withInteger
 {
     @try
     {
-        assertThatInteger(2, equalTo([NSNumber numberWithInteger:1]));
+        assertThatInteger(2, equalTo(@1));
     }
     @catch (NSException* exception)
     {

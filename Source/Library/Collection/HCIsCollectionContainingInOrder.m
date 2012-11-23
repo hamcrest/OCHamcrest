@@ -57,7 +57,7 @@
     if (nextMatchIndex < [matchers count])
     {
         [[mismatchDescription appendText:@"no item matched: "]
-                              appendDescriptionOf:[matchers objectAtIndex:nextMatchIndex]];
+                              appendDescriptionOf:matchers[nextMatchIndex]];
         return NO;
     }
     return YES;
@@ -65,7 +65,7 @@
 
 - (BOOL)isMatched:(id)item
 {
-    id<HCMatcher> matcher = [matchers objectAtIndex:nextMatchIndex];
+    id<HCMatcher> matcher = matchers[nextMatchIndex];
     if (![matcher matches:item])
     {
         [self describeMismatchOfMatcher:matcher item:item];

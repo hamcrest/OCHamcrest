@@ -27,7 +27,7 @@
 
 - (void)testEvaluatesToTrueIfArgumentIsInstanceOfASpecificClass
 {
-    NSNumber *number = [NSNumber numberWithInt:1];
+    NSNumber *number = @1;
 
     assertMatches(@"same class", instanceOf([NSNumber class]), number);
     assertMatches(@"subclass", instanceOf([NSValue class]), number);

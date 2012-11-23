@@ -76,62 +76,62 @@
     {
         case 'c':
             [getterInvocation getReturnValue:&charValue];
-            result = [NSNumber numberWithChar:charValue];
+            result = @(charValue);
             break;
             
         case 'i':
             [getterInvocation getReturnValue:&intValue];
-            result = [NSNumber numberWithInt:intValue];
+            result = @(intValue);
             break;
             
         case 's':
             [getterInvocation getReturnValue:&shortValue];
-            result = [NSNumber numberWithShort:shortValue];
+            result = @(shortValue);
             break;
             
         case 'l':
             [getterInvocation getReturnValue:&longValue];
-            result = [NSNumber numberWithLong:longValue];
+            result = @(longValue);
             break;
             
         case 'q':
             [getterInvocation getReturnValue:&longLongValue];
-            result = [NSNumber numberWithLongLong:longLongValue];
+            result = @(longLongValue);
             break;
             
         case 'C':
             [getterInvocation getReturnValue:&unsignedCharValue];
-            result = [NSNumber numberWithUnsignedChar:unsignedCharValue];
+            result = @(unsignedCharValue);
             break;
             
         case 'I':
             [getterInvocation getReturnValue:&unsignedIntValue];
-            result = [NSNumber numberWithUnsignedInt:unsignedIntValue];
+            result = @(unsignedIntValue);
             break;
             
         case 'S':
             [getterInvocation getReturnValue:&unsignedShortValue];
-            result = [NSNumber numberWithUnsignedShort:unsignedShortValue];
+            result = @(unsignedShortValue);
             break;
             
         case 'L':
             [getterInvocation getReturnValue:&unsignedLongValue];
-            result = [NSNumber numberWithUnsignedLong:unsignedLongValue];
+            result = @(unsignedLongValue);
             break;
             
         case 'Q':
             [getterInvocation getReturnValue:&unsignedLongLongValue];
-            result = [NSNumber numberWithUnsignedLongLong:unsignedLongLongValue];
+            result = @(unsignedLongLongValue);
             break;
             
         case 'f':
             [getterInvocation getReturnValue:&floatValue];
-            result = [NSNumber numberWithFloat:floatValue];
+            result = @(floatValue);
             break;
             
         case 'd':
             [getterInvocation getReturnValue:&doubleValue];
-            result = [NSNumber numberWithDouble:doubleValue];
+            result = @(doubleValue);
             break;
             
         case '@':

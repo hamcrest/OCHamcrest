@@ -65,7 +65,7 @@
 - (void)testDoesNotMatchIfSingleItemMismatches
 {
     assertMismatchDescription(@"item 0: was \"c\"",
-                              (contains(@"d", nil)), [NSArray arrayWithObject:@"c"]);
+                              (contains(@"d", nil)), @[@"c"]);
 }
 
 - (void)testDoesNotMatchIfOneOfMultipleItemsMismatch
@@ -82,7 +82,7 @@
 
 - (void)testDoesNotMatchEmptyCollection
 {
-    assertMismatchDescription(@"no item matched: \"d\"", (contains(@"d", nil)), [NSArray array]);
+    assertMismatchDescription(@"no item matched: \"d\"", (contains(@"d", nil)), @[]);
 }
 
 - (void)testDoesNotMatchObjectWithoutEnumerator

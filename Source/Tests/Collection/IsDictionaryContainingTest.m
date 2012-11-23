@@ -31,10 +31,8 @@
 
 - (void)testMatchesDictionaryContainingMatchingKeyAndValue
 {
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                            @"1", @"a",
-                                            @"2", @"b",
-                                            nil];
+    NSDictionary *dict = @{@"a": @"1",
+                                            @"b": @"2"};
 
     assertMatches(@"has a:1", hasEntry(equalTo(@"a"), equalTo(@"1")), dict);
     assertMatches(@"has b:2", hasEntry(equalTo(@"b"), equalTo(@"2")), dict);
@@ -43,10 +41,8 @@
 
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                            @"1", @"a",
-                                            @"2", @"b",
-                                            nil];
+    NSDictionary *dict = @{@"a": @"1",
+                                            @"b": @"2"};
 
     assertMatches(@"has a:1", hasEntry(@"a", equalTo(@"1")), dict);
     assertMatches(@"has b:2", hasEntry(equalTo(@"b"), @"2"), dict);
@@ -71,7 +67,7 @@
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"1", @"a", nil];
+    NSDictionary *dict = @{@"a": @"1"};
     assertNoMismatchDescription(hasEntry(@"a", @"1"), dict);
 }
 

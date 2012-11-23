@@ -133,7 +133,7 @@
 
 - (void)testWrapsNonSelfDescribingObjectInAngleBrackets
 {    
-    [description appendDescriptionOf:[NSNumber numberWithInt:42]];
+    [description appendDescriptionOf:@42];
     
     STAssertEqualObjects([description description], @"<42>", nil);
 }
@@ -164,7 +164,7 @@
 
 - (void)testAppendListWithEmptyListShouldHaveStartAndEndOnly
 {
-    [description appendList:[NSArray array]
+    [description appendList:@[]
                       start:@"["
                   separator:@","
                         end:@"]"];
@@ -174,7 +174,7 @@
 
 - (void)testAppendListWithOneItemShouldHaveStartItemAndEnd
 {
-    [description appendList:[NSArray arrayWithObject:@"a"]
+    [description appendList:@[@"a"]
                       start:@"["
                   separator:@","
                         end:@"]"];
@@ -184,7 +184,7 @@
 
 - (void)testAppendListWithTwoItemsShouldHaveItemsWithSeparator
 {
-    [description appendList:[NSArray arrayWithObjects:@"a", @"b", nil]
+    [description appendList:@[@"a", @"b"]
                       start:@"["
                   separator:@","
                         end:@"]"];

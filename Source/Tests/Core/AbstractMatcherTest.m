@@ -20,7 +20,7 @@
 {
     if (!condition)
     {
-        [self failWithException:[NSException failureInFile:[NSString stringWithUTF8String:fileName]
+        [self failWithException:[NSException failureInFile:@(fileName)
                                                     atLine:lineNumber
                                            withDescription:message]];
     }
@@ -31,7 +31,7 @@
 {
     if (condition)
     {
-        [self failWithException:[NSException failureInFile:[NSString stringWithUTF8String:fileName]
+        [self failWithException:[NSException failureInFile:@(fileName)
                                                     atLine:lineNumber
                                            withDescription:message]];
     }
@@ -48,7 +48,7 @@
         [self failWithException:
                 [NSException failureInEqualityBetweenObject:actual
                                                   andObject:expected
-                                                     inFile:[NSString stringWithUTF8String:fileName]
+                                                     inFile:@(fileName)
                                                      atLine:lineNumber
                                             withDescription:@"Expected description"]];
     }
@@ -61,13 +61,13 @@
     BOOL result = [matcher matches:arg];
     if (!result)
     {
-        [self failWithException:[NSException failureInFile:[NSString stringWithUTF8String:fileName]
+        [self failWithException:[NSException failureInFile:@(fileName)
                                                     atLine:lineNumber
                                            withDescription:@"Precondition: Matcher should match item"]];
     }
     if ([[description description] length] != 0)
     {
-        [self failWithException:[NSException failureInFile:[NSString stringWithUTF8String:fileName]
+        [self failWithException:[NSException failureInFile:@(fileName)
                                                     atLine:lineNumber
                                            withDescription:@"Expected no mismatch description"]];
     }
@@ -80,7 +80,7 @@
     BOOL result = [matcher matches:arg describingMismatchTo:description];
     if (result)
     {
-        [self failWithException:[NSException failureInFile:[NSString stringWithUTF8String:fileName]
+        [self failWithException:[NSException failureInFile:@(fileName)
                                                     atLine:lineNumber
                                            withDescription:@"Precondition: Matcher should not match item"]];
     }
@@ -90,7 +90,7 @@
         [self failWithException:
                 [NSException failureInEqualityBetweenObject:actual
                                                   andObject:expected
-                                                     inFile:[NSString stringWithUTF8String:fileName]
+                                                     inFile:@(fileName)
                                                      atLine:lineNumber
                                             withDescription:@"Expected mismatch description"]];
     }
@@ -107,7 +107,7 @@
         [self failWithException:
                 [NSException failureInEqualityBetweenObject:actual
                                                   andObject:expected
-                                                     inFile:[NSString stringWithUTF8String:fileName]
+                                                     inFile:@(fileName)
                                                      atLine:lineNumber
                                             withDescription:@"Expected mismatch description"]];
     }

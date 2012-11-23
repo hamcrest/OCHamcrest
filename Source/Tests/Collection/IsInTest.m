@@ -22,13 +22,13 @@
 
 - (id<HCMatcher>)createMatcher
 {
-    NSArray *collection = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
+    NSArray *collection = @[@"a", @"b", @"c"];
     return isIn(collection);
 }
 
 - (void)testReturnsTrueIfArgumentIsInCollection
 {
-    NSArray *collection = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
+    NSArray *collection = @[@"a", @"b", @"c"];
     id<HCMatcher> matcher = isIn(collection);
     
     assertMatches(@"has a", matcher, @"a");
@@ -51,19 +51,19 @@
 
 - (void)testHasReadableDescription
 {
-    id<HCMatcher> matcher = isIn([NSArray arrayWithObjects:@"a", @"b", @"c", nil]);
+    id<HCMatcher> matcher = isIn(@[@"a", @"b", @"c"]);
     
     assertDescription(@"one of {\"a\", \"b\", \"c\"}", matcher);
 }
 
 - (void)testMismatchDescriptionShowsActualArgument
 {
-    assertMismatchDescription(@"was \"bad\"", isIn([NSArray arrayWithObject:@"a"]), @"bad");
+    assertMismatchDescription(@"was \"bad\"", isIn(@[@"a"]), @"bad");
 }
 
 - (void)testDescribesMismatch
 {
-    assertDescribeMismatch(@"was \"bad\"", isIn([NSArray arrayWithObject:@"a"]), @"bad");
+    assertDescribeMismatch(@"was \"bad\"", isIn(@[@"a"]), @"bad");
 }
 
 @end

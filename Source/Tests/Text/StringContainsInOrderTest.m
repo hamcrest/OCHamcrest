@@ -64,12 +64,12 @@
 
 - (void)testMatcherCreationRequiresStringArguments
 {    
-    STAssertThrows(stringContainsInOrder(@"one", [NSNumber numberWithInt:2], nil), @"Should require strings");
+    STAssertThrows(stringContainsInOrder(@"one", @2, nil), @"Should require strings");
 }
 
 - (void)testFailsIfMatchingAgainstNonString
 {
-    assertDoesNotMatch(@"non-string", matcher, [NSNumber numberWithInt:3]);
+    assertDoesNotMatch(@"non-string", matcher, @3);
 }
 
 - (void)testHasAReadableDescription

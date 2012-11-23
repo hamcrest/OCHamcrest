@@ -48,16 +48,16 @@
         double actualDelta = fabs([item doubleValue] - value);
         [[[mismatchDescription appendDescriptionOf:item]
                                appendText:@" differed by "]
-                               appendDescriptionOf:[NSNumber numberWithDouble:actualDelta]];
+                               appendDescriptionOf:@(actualDelta)];
     }
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
     [[[[description appendText:@"a numeric value within "]
-                    appendDescriptionOf:[NSNumber numberWithDouble:delta]]
+                    appendDescriptionOf:@(delta)]
                     appendText:@" of "]
-                    appendDescriptionOf:[NSNumber numberWithDouble:value]];
+                    appendDescriptionOf:@(value)];
 }
 
 @end
