@@ -23,7 +23,7 @@
 
 + (TestClass *)testClass
 {
-    return [[[TestClass alloc] init] autorelease];
+    return [[TestClass alloc] init];
 }
 
 @end

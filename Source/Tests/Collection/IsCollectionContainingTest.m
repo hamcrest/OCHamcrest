@@ -57,7 +57,7 @@
 - (void)testDoesNotMatchObjectWithoutEnumerator
 {
     assertDoesNotMatch(@"should not match object without enumerator",
-                       hasItem(@"a"), [[[NSObject alloc] init] autorelease]);
+                       hasItem(@"a"), [[NSObject alloc] init]);
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument

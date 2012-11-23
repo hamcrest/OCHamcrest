@@ -36,7 +36,7 @@
 
 - (void)testDoesNotMatchNonDictionary
 {
-    id object = [[[NSObject alloc] init] autorelease];
+    id object = [[NSObject alloc] init];
     assertDoesNotMatch(@"not dictionary", hasEntries(@"a", equalTo(@"1"), nil), object);
 }
 

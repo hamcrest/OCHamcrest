@@ -37,7 +37,7 @@
 
 - (void)testEvaluatesToFalseIfArgumentIsNotNil
 {
-    id ANY_NON_NULL_ARGUMENT = [[[NSObject alloc] init] autorelease];
+    id ANY_NON_NULL_ARGUMENT = [[NSObject alloc] init];
 
     assertDoesNotMatch(@"not nil", nilValue(), ANY_NON_NULL_ARGUMENT);
 }
@@ -79,7 +79,7 @@
 
 - (void)testEvaluatesToTrueIfArgumentIsNotNil
 {
-    id ANY_NON_NULL_ARGUMENT = [[[NSObject alloc] init] autorelease];
+    id ANY_NON_NULL_ARGUMENT = [[NSObject alloc] init];
 
     assertMatches(@"not nil", notNilValue(), ANY_NON_NULL_ARGUMENT);
 }

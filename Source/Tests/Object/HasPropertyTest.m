@@ -38,17 +38,10 @@
     self = [super init];
     if (self)
     {
-        name = [aName retain];
+        name = aName;
         shoeSize = [[NSNumber alloc] initWithInt:aShoeSize];
     }
     return self;
-}
-
-- (void) dealloc
-{
-    [name release];
-    [shoeSize release];
-    [super dealloc];
 }
 
 - (NSNumber *)shoeSize
@@ -79,8 +72,8 @@
 
 - (void)tearDown
 {
-    [joe release];
-    [nobody release];
+    joe = nil;
+    nobody = nil;
     [super tearDown];
 }
 
@@ -216,7 +209,7 @@
 
 - (void)tearDown
 {
-    [foo release];
+    foo = nil;
     [super tearDown];
 }
 

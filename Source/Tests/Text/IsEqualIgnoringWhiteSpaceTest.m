@@ -26,12 +26,12 @@
 - (void)setUp
 {
     [super setUp];
-    matcher = [equalToIgnoringWhiteSpace(@"Hello World   how\n are we? ") retain];
+    matcher = equalToIgnoringWhiteSpace(@"Hello World   how\n are we? ");
 }
 
 - (void)tearDown
 {
-    [matcher release];
+    matcher = nil;
     [super tearDown];
 }
 

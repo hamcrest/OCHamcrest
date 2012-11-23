@@ -16,7 +16,7 @@
 
 + (id)neverMatch
 {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 + (NSString *)mismatchDescription

@@ -29,12 +29,12 @@ static NSString *EXCERPT = @"EXCERPT";
 - (void)setUp
 {
     [super setUp];
-    matcher = [startsWith(EXCERPT) retain];
+    matcher = startsWith(EXCERPT);
 }
 
 - (void)tearDown
 {
-    [matcher release];
+    matcher = nil;
     [super tearDown];
 }
 

@@ -88,7 +88,7 @@
 - (void)testDoesNotMatchObjectWithoutEnumerator
 {
     assertDoesNotMatch(@"should not match object without enumerator",
-                       contains(@"a", nil), [[[NSObject alloc] init] autorelease]);
+                       contains(@"a", nil), [[NSObject alloc] init]);
 }
 
 - (void)testHasAReadableDescription

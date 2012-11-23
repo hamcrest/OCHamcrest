@@ -26,7 +26,7 @@
 
 + (Match *)matches:(id)arg
 {
-    return [[[Match alloc] initEqualTo:arg] autorelease];
+    return [[Match alloc] initEqualTo:arg];
 }
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)description
@@ -51,14 +51,8 @@
 {
     self = [super init];
     if (self)
-        result = [aResult retain];
+        result = aResult;
     return self;
-}
-
-- (void)dealloc
-{
-    [result release];
-    [super dealloc];
 }
 
 - (NSString *)description
@@ -73,7 +67,7 @@
 
 + (Thingy*) thingyWithResult:(NSString *)result
 {
-    return [[[Thingy alloc] initWithResult:result] autorelease];
+    return [[Thingy alloc] initWithResult:result];
 }
 
 @end
@@ -116,7 +110,7 @@
 
 - (void)tearDown
 {
-    [resultMatcher release];
+    resultMatcher = nil;
     [super tearDown];
 }
 
@@ -146,15 +140,13 @@
 
 - (void)testDoesNotMatchObjectWithoutMethod
 {
-    assertDoesNotMatch(@"was <ShouldNotMatch>", resultMatcher,
-                       [[[ShouldNotMatch alloc] init] autorelease]);
+    assertDoesNotMatch(@"was <ShouldNotMatch>", resultMatcher, [[ShouldNotMatch alloc] init]);
 }
 
 - (void)testObjectWithoutMethodShortDescriptionIsSameAsLongForm
 {
     [resultMatcher setShortMismatchDescription:YES];
-    assertDoesNotMatch(@"was <ShouldNotMatch>", resultMatcher,
-                       [[[ShouldNotMatch alloc] init] autorelease]);
+    assertDoesNotMatch(@"was <ShouldNotMatch>", resultMatcher, [[ShouldNotMatch alloc] init]);
 }
 
 @end

@@ -127,7 +127,7 @@
 - (void)testCopesWithUnknownTypes
 {
     // Should not crash or throw exception.
-    [[self createMatcher] matches:[[[NSObject alloc] init] autorelease]];
+    [[self createMatcher] matches:[[NSObject alloc] init]];
 }
 
 @end

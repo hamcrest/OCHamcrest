@@ -90,7 +90,7 @@
 - (void)testDoesNotMatchObjectWithoutEnumerator
 {
     assertDoesNotMatch(@"no enumerator",
-                       containsInAnyOrder(@"a", nil), [[[NSObject alloc] init] autorelease]);
+                       containsInAnyOrder(@"a", nil), [[NSObject alloc] init]);
 }
 
 - (void)testHasAReadableDescription

@@ -39,7 +39,7 @@
 
 - (void)testMatcherCreationRequiresObjectWithContainsObjectMethod
 {
-    id object = [[[NSObject alloc] init] autorelease];
+    id object = [[NSObject alloc] init];
     
     STAssertThrows(isIn(object), @"object does not have -containsObject: method");
 }

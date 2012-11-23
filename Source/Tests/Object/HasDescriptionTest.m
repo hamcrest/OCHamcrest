@@ -24,7 +24,7 @@ static NSString *fakeDescription = @"DESCRIPTION";
 @end
 
 @implementation FakeWithDescription
-+ (id)fake  { return [[[self alloc] init] autorelease]; }
++ (id)fake  { return [[self alloc] init]; }
 - (NSString *)description  { return fakeDescription; }
 @end
 

@@ -78,7 +78,7 @@
 
 - (void)tearDown
 {
-    [description release];
+    description = nil;
     [super tearDown];
 }
 
@@ -91,7 +91,7 @@
 
 - (void)testLetsSelfDescribingObjectDescribeItself
 {
-    [description appendDescriptionOf:[[[FakeSelfDescribing alloc] init] autorelease]];
+    [description appendDescriptionOf:[[FakeSelfDescribing alloc] init]];
     
     STAssertEqualObjects([description description], @"DESCRIPTION", nil);
 }
@@ -140,7 +140,7 @@
 
 - (void)testShouldNotAddAngleBracketsIfObjectDescriptionAlreadyHasThem
 {
-    [description appendDescriptionOf:[[[NSObject alloc] init] autorelease]];
+    [description appendDescriptionOf:[[NSObject alloc] init]];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES '<NSObject: 0x[0-9a-fA-F]+>'"];
     STAssertTrue([expected evaluateWithObject:[description description]], nil);
@@ -148,7 +148,7 @@
 
 - (void)testWrapsNonSelfDescribingObjectInAngleBracketsIfItDoesNotEndInClosingBracket
 {
-    ObjectDescriptionWithLessThan *lessThanDescription = [[[ObjectDescriptionWithLessThan alloc] init] autorelease];
+    ObjectDescriptionWithLessThan *lessThanDescription = [[ObjectDescriptionWithLessThan alloc] init];
     [description appendDescriptionOf:lessThanDescription];
     
     STAssertEqualObjects([description description], @"<< is less than>", nil);
@@ -156,7 +156,7 @@
 
 - (void)testCanDescribeObjectWithNilDescription
 {
-    [description appendDescriptionOf:[[[ObjectWithNilDescription alloc] init] autorelease]];
+    [description appendDescriptionOf:[[ObjectWithNilDescription alloc] init]];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES '<ObjectWithNilDescription: 0x[0-9a-fA-F]+>'"];
     STAssertTrue([expected evaluateWithObject:[description description]], nil);

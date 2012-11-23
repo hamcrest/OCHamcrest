@@ -26,12 +26,12 @@
 - (void)setUp
 {
     [super setUp];
-    matcher = [stringContainsInOrder(@"string one", @"string two", @"string three", nil) retain];
+    matcher = stringContainsInOrder(@"string one", @"string two", @"string three", nil);
 }
 
 - (void)tearDown
 {
-    [matcher release];
+    matcher = nil;
     [super tearDown];
 }
 

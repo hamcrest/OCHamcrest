@@ -26,12 +26,12 @@
 - (void)setUp
 {
     [super setUp];
-    matcher = [equalToIgnoringCase(@"heLLo") retain];
+    matcher = equalToIgnoringCase(@"heLLo");
 }
 
 - (void)tearDown
 {
-    [matcher release];
+    matcher = nil;
     [super tearDown];
 }
 

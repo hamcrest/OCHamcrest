@@ -28,7 +28,7 @@
 - (void)testAlwaysEvaluatesToTrue
 {
     assertMatches(@"nil", anything(), nil);
-    assertMatches(@"object", anything(), [[[NSObject alloc] init] autorelease]);
+    assertMatches(@"object", anything(), [[NSObject alloc] init]);
     assertMatches(@"string", anything(), @"hi");
 }
 

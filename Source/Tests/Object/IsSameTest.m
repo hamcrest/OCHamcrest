@@ -32,8 +32,8 @@
 
 - (void)testEvaluatesToTrueIfArgumentIsReferenceToASpecifiedObject
 {
-    id o1 = [[[NSObject alloc] init] autorelease];
-    id o2 = [[[NSObject alloc] init] autorelease];
+    id o1 = [[NSObject alloc] init];
+    id o2 = [[NSObject alloc] init];
 
     assertThat(o1, sameInstance(o1));
     assertThat(o2, isNot(sameInstance(o1)));
@@ -59,7 +59,7 @@
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    id o1 = [[[NSObject alloc] init] autorelease];
+    id o1 = [[NSObject alloc] init];
     assertNoMismatchDescription(sameInstance(o1), o1);
 }
 

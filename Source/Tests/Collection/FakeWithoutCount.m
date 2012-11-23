@@ -14,7 +14,7 @@
 
 + (id)fake
 {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 - (NSString *)description

@@ -30,12 +30,12 @@ static NSString *EXCERPT = @"EXCERPT";
 - (void)setUp
 {
     [super setUp];
-    matcher = [containsString(EXCERPT) retain];
+    matcher = containsString(EXCERPT);
 }
 
 - (void)tearDown
 {
-    [matcher release];
+    matcher = nil;
     [super tearDown];
 }
 

@@ -71,13 +71,13 @@
 
 - (void)testHonorsIsEqualImplementationEvenWithNilValues
 {
-    assertMatches(@"always equal", equalTo(nil), [[[AlwaysEqual alloc] init] autorelease]);
-    assertDoesNotMatch(@"never equal", equalTo(nil), [[[NeverEqual alloc] init] autorelease]);
+    assertMatches(@"always equal", equalTo(nil), [[AlwaysEqual alloc] init]);
+    assertDoesNotMatch(@"never equal", equalTo(nil), [[NeverEqual alloc] init]);
 }
 
 - (void)testIncludesTheResultOfCallingDescriptionOnItsArgumentInTheDescription
 {
-    assertDescription(@"<ARGUMENT DESCRIPTION>", equalTo([[[FakeArgument alloc] init] autorelease]));
+    assertDescription(@"<ARGUMENT DESCRIPTION>", equalTo([[FakeArgument alloc] init]));
 }
 
 - (void)testReturnsAnObviousDescriptionIfCreatedWithANestedMatcherByMistake

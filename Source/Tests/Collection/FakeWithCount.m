@@ -17,7 +17,7 @@
 
 + (id)fakeWithCount:(NSUInteger)fakeCount
 {
-    return [[[self alloc] initWithCount:fakeCount] autorelease];
+    return [[self alloc] initWithCount:fakeCount];
 }
 
 - (id)initWithCount:(NSUInteger)fakeCount
