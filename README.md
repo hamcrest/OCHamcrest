@@ -232,7 +232,7 @@ The interface consists of two parts: a class definition, and a factory function
 
     + (id) isGivenDayOfWeek:(NSInteger)dayOfWeek
     {
-        return [[[self alloc] initWithDay:dayOfWeek] autorelease];
+        return [[self alloc] initWithDay:dayOfWeek];
     }
 
     - (id) initWithDay:(NSInteger)dayOfWeek
@@ -268,10 +268,10 @@ The interface consists of two parts: a class definition, and a factory function
         return [IsGivenDayOfWeek isGivenDayOfWeek:6];
     }
 
-For our Matcher implementation we implement the ``-matches:`` method -- which
-calls the ``-dayOfWeek`` method after confirming that the argument has such a
-method -- and the ``-describe_to:`` method -- which is used to produce a failure
-message when a test fails. Here's an example of how the failure message looks:
+For our Matcher implementation we implement the ``-matches:`` method (which
+calls ``-dayOfWeek`` after confirming that the argument has such a method) and
+the ``-describe_to:`` method (which is used to produce a failure message when a
+test fails). Here's an example of how the failure message looks:
 
     NSCalendarDate* date = [NSCalendarDate dateWithString: @"6 April 2008" calendarFormat: @"%d %B %Y"];
     assertThat(date, is(onASaturday()));
@@ -280,8 +280,8 @@ fails with the message
 
     Expected: is calendar date falling on Saturday, got: <06 April 2008>
 
-and Xcode shows it as a build error. Double clicking the error message takes you
-to the assertion that failed.
+and Xcode shows it as a build error. Clicking the error message takes you to the
+assertion that failed.
 
 Even though the ``onASaturday`` function creates a new matcher each time it is
 called, you should not assume this is the only usage pattern for your matcher.

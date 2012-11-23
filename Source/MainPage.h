@@ -42,21 +42,26 @@
 
     @section addtoproject How do I add OCHamcrest to my project?
 
-    Rather than build OCHamcrest yourself, I recommend you use the pre-built release available in
-    Downloads. This works for projects using Automatic Reference Counting (ARC) as well as for
-    projects using traditional memory management.
+    @b Building:
 
-    (But if you still want to build OCHamcrest yourself, go into the Source folder and execute
-    @c MakeDistribution.sh from Terminal.)
+    If you want to build OCHamcrest yourself, cd to the Source folder, then
+    @code
+$ ./MakeDistribution.sh
+    @endcode
 
-    The steps vary slightly depending on whether your project is a Mac project or an iOS project:
+    Or just use the pre-built release available in
+    <a href="https://github.com/hamcrest/OCHamcrest/downloads">Downloads</a>.
 
-    @b Mac:
-    @li Add @b OCHamcrest.framework to your project.
-    @li Add a Copy Files build phase to copy OCHamcrest.framework to your Products Directory. For
-        unit test bundles, make sure this Copy Files phase comes before the Run Script phase that
-        executes tests.
-    @li Add @code
+    @b Mac Project Setup:
+
+    Add OCHamcrest.framework to your project.
+
+    Add a Copy Files build phase to copy OCHamcrest.framework to your Products Directory. For
+    unit test bundles, make sure this Copy Files phase comes before the Run Script phase that
+    executes tests.
+
+    Add:
+    @code
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
     @endcode
@@ -66,9 +71,12 @@ otest[57510:203] *** NSTask: Task create for path '...' failed: 22, "Invalid arg
 	@endcode
 	double-check your Copy Files phase.
 
-    @b iOS:
-    @li Add @b OCHamcrestIOS.framework to your project.
-    @li Add @code
+    @b iOS Project Setup:
+
+    Add OCHamcrestIOS.framework to your project.
+
+    Add:
+    @code
 #define HC_SHORTHAND
 #import <OCHamcrestIOS/OCHamcrestIOS.h>
     @endcode
@@ -200,6 +208,8 @@ assertThat(theBiscuit, is(myBiscuit));
 
     @section resources More resources
 
+    @li <a href="http://hamcrest.github.com/OCHamcrest/">Online Documentation</a>
+    @li <a href="https://github.com/hamcrest/OCHamcrest">Sources</a>
     @li <a href="http://qualitycoding.org/">Quality Coding</a> - Tools, tips &amp; techniques for
         <em>building quality in</em> to iOS development.
 

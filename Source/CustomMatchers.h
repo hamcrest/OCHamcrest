@@ -17,8 +17,8 @@ This commonly occurs when you find a fragment of code that tests the same set of
 and over again (and in different tests), and you want to bundle the fragment into a single assertion.
 By writing your own matcher you'll elimate code duplication and make your tests more readable!
 
-    Let's write our own matcher for testing if a calendar date falls on a Saturday. This is the test
-    we want to write:
+Let's write our own matcher for testing if a calendar date falls on a Saturday. This is the test
+we want to write:
 
     @code
 - (void)testDateIsOnASaturday
@@ -95,9 +95,9 @@ id<HCMatcher> onASaturday()
 }
     @endcode
 
-    For our Matcher implementation we implement the @c -matches: method -- which calls the
-    @c -dayOfWeek method after confirming that the argument has such a method -- and the
-    @c -describe_to: method -- which is used to produce a failure message when a test fails.
+    For our Matcher implementation we implement the @c -matches: method (which calls
+    @c -dayOfWeek after confirming that the argument has such a method) and the
+    @c -describe_to: method (which is used to produce a failure message when a test fails).
     Here's an example of how the failure message looks:
 
     @code
@@ -110,8 +110,8 @@ assertThat(date, is(onASaturday()));
 
     @verbatim Expected: is calendar date falling on Saturday, got: <06 April 2008> @endverbatim
 
-    and Xcode shows it as a build error. Double clicking the error message takes you to the
-    assertion that failed.
+    and Xcode shows it as a build error. Clicking the error message takes you to the assertion that
+    failed.
 
     Even though the @c onASaturday function creates a new matcher each time it is called, you should
     not assume this is the only usage pattern for your matcher. Therefore you should make sure your
