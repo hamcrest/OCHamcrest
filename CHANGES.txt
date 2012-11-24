@@ -1,10 +1,15 @@
-== NEXT VERSION IN PROGRESS
+== Version 1.9 ==
 
-* Fixed warnings revealed by latest Xcode. Thanks to: David Hart
-* Changed iOS Architecture support to "Standard" (which includes armv7s)
-* Changed Mac Architecture support to 64-bit only
-* Converted to ARC
-* Changed order of hasCount/hasCountOf mismatch description so that if object has a count, it comes first.
+23 Nov 2012
+* Improved matchers:
+  - Changed hasCount/hasCountOf mismatch description so that count comes first (if object has a count).
+
+* Project changes:
+  - Fixed warnings revealed by latest Xcode. Thanks to: David Hart
+  - Changed iOS Architecture support to "Standard" (which includes armv7s)
+  - Changed Mac Architecture support to 64-bit only
+  - Converted source, tests, and examples to ARC
+  - Added CocoaPods spec. Thanks to: Sebastian Ludwig
 
 
 == Version 1.8 ==
