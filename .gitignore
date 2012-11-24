@@ -6,3 +6,5 @@ project.xcworkspace/
 xcuserdata/
 Source/TestSupport/environment.sh
 Source/TestSupport/lcov-1.9
+
+Source/TestSupport/envbuild.sh

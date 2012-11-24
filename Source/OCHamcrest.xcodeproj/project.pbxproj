@@ -907,6 +907,7 @@
 				087601DE13440806001B439B /* Frameworks */,
 				087601DF13440806001B439B /* Headers */,
 				087601E013440806001B439B /* Resources */,
+				08502324166051B8004B3EA5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1002,6 +1003,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		08502324166051B8004B3EA5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = TestSupport/exportenv.sh;
 		};
 		08627FF81465CE1A00F80D7D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1255,6 +1269,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/libochamcrest.dst;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				OTHER_LDFLAGS = "-ObjC";
@@ -1287,6 +1303,8 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = "Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1312,95 +1330,6 @@
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
-		};
-		08627FEE1465BDFA00F80D7D /* Coverage */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "OCHamcrest-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = "";
-				ONLY_ACTIVE_ARCH = YES;
-			};
-			name = Coverage;
-		};
-		08627FEF1465BDFA00F80D7D /* Coverage */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				INFOPLIST_FILE = "OCHamcrest-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6.8;
-				OTHER_CFLAGS = "-fobjc-arc-exceptions";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Coverage;
-		};
-		08627FF01465BDFA00F80D7D /* Coverage */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_OBJCPP_ARC_ABI = YES;
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				INFOPLIST_FILE = "Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Coverage;
-		};
-		08627FF11465BDFA00F80D7D /* Coverage */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				DSTROOT = /tmp/libochamcrest.dst;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_CFLAGS = "-fobjc-arc-exceptions";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = ochamcrest;
-				SDKROOT = iphoneos;
-			};
-			name = Coverage;
-		};
-		08627FF21465BDFA00F80D7D /* Coverage */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_OBJCPP_ARC_ABI = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				INFOPLIST_FILE = "Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Coverage;
 		};
 		0876020713440807001B439B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1516,7 +1445,6 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				081BEE7F1345979F003F846A /* Debug */,
-				08627FF11465BDFA00F80D7D /* Coverage */,
 				081BEE801345979F003F846A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1526,7 +1454,6 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				081BEE821345979F003F846A /* Debug */,
-				08627FF21465BDFA00F80D7D /* Coverage */,
 				081BEE831345979F003F846A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1536,7 +1463,6 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0876020713440807001B439B /* Debug */,
-				08627FEE1465BDFA00F80D7D /* Coverage */,
 				0876020813440807001B439B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1546,7 +1472,6 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0876020A13440807001B439B /* Debug */,
-				08627FEF1465BDFA00F80D7D /* Coverage */,
 				0876020B13440807001B439B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1556,7 +1481,6 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0876020D13440807001B439B /* Debug */,
-				08627FF01465BDFA00F80D7D /* Coverage */,
 				0876020E13440807001B439B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

@@ -1,9 +1,5 @@
 #!/bin/sh
-source environment.sh
-
-LCOV_INFO=Coverage.info
-LCOV_PATH=${SRCROOT}/TestSupport/lcov-1.9/bin
-OBJ_DIR=${OBJECT_FILE_DIR_normal}/${NATIVE_ARCH}
+source envcov.sh
 
 # Remove old report
 pushd ${BUILT_PRODUCTS_DIR}
@@ -16,6 +12,8 @@ popd
 cd ${BUILT_PRODUCTS_DIR}
 mkdir lcov
 cd lcov
+
+LCOV_INFO=OCHamcrest.info
 
 # Gather coverage data
 "${LCOV_PATH}/lcov" -b "${SRCROOT}" -d "${OBJ_DIR}" --capture -o ${LCOV_INFO}
