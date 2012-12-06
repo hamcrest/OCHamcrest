@@ -19,5 +19,6 @@ Pod::Spec.new do |s|
   }
 
   s.source_files = 'Source/OCHamcrest.h', 'Source/Core/**/*.{h,m}', 'Source/Library/**/*.{h,m}'
+  s.requires_arc = true
 
 end
