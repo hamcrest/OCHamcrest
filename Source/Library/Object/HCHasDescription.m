@@ -9,7 +9,6 @@
 
 #import "HCHasDescription.h"
 
-#import "HCDescription.h"
 #import "HCWrapInMatcher.h"
 
 

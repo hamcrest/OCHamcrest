@@ -11,7 +11,6 @@
 
 #import "HCDescription.h"
 #import "HCRequireNonNilObject.h"
-#import <ctype.h>
 
 
 static void removeTrailingSpace(NSMutableString *string)

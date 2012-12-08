@@ -10,7 +10,6 @@
 #import "HCIsCloseTo.h"
 
 #import "HCDescription.h"
-#import <math.h>
 
 
 @implementation HCIsCloseTo
