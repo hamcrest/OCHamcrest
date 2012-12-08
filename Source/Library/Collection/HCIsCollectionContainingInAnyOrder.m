@@ -89,7 +89,7 @@
     return [self matches:collection describingMismatchTo:nil];
 }
 
-- (BOOL)matches:(id)collection describingMismatchTo:(id<HCDescription, NSObject>)mismatchDescription
+- (BOOL)matches:(id)collection describingMismatchTo:(id<HCDescription>)mismatchDescription
 {
     if (![collection conformsToProtocol:@protocol(NSFastEnumeration)])
     {

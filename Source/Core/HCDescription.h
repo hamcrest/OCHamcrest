@@ -17,7 +17,7 @@
 
     @ingroup core
  */
-@protocol HCDescription
+@protocol HCDescription <NSObject>
 
 /**
     Appends some plain text to the description.
