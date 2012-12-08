@@ -36,13 +36,13 @@
 {
     [mismatchDescription appendText:@"was "];
     if (item)
-        [mismatchDescription appendText:[NSString stringWithFormat:@"%p ", item]];
+        [mismatchDescription appendText:[NSString stringWithFormat:@"%p ", (__bridge void *)item]];
     [mismatchDescription appendDescriptionOf:item];
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [[description appendText:[NSString stringWithFormat:@"same instance as %p ", object]]
+    [[description appendText:[NSString stringWithFormat:@"same instance as %p ", (__bridge void *)object]]
          appendDescriptionOf:object];
 }
 
