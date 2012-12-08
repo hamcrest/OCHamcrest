@@ -307,12 +307,12 @@
 
 - (void)testCanMatchPrimitiveUnsignedLongLongValues 
 {
-    foo.unsignedLongLongValue = ULONG_LONG_MAX;
+    foo.unsignedLongLongValue = ULLONG_MAX;
     assertMatches(@"unsigned long long should match",
-                  hasProperty(@"unsignedLongLongValue", equalToUnsignedLongLong(ULONG_LONG_MAX)),
+                  hasProperty(@"unsignedLongLongValue", equalToUnsignedLongLong(ULLONG_MAX)),
                   foo);
     assertDoesNotMatch(@"unsigned long long should not match",
-                       hasProperty(@"unsignedLongLongValue", equalToUnsignedLongLong(ULONG_LONG_MAX - 1)),
+                       hasProperty(@"unsignedLongLongValue", equalToUnsignedLongLong(ULLONG_MAX - 1)),
                        foo);
 }
 
