@@ -10,8 +10,6 @@
 #import "HCDescribedAs.h"
 
 #import "HCDescription.h"
-#import <stdarg.h>
-#import <ctype.h>
 
 
 typedef struct
