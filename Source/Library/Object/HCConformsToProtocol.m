@@ -13,7 +13,7 @@
 
 @implementation HCConformsToProtocol
 
-+ (id)conformsToProtocol:(Protocol *)protocol
++ (id)conformsTo:(Protocol *)protocol
 {
     return [[self alloc] initWithProtocol:protocol];
 }
@@ -46,7 +46,7 @@
 
 id<HCMatcher> HC_conformsTo(Protocol *aProtocol)
 {
-    return [HCConformsToProtocol conformsToProtocol:aProtocol];
+    return [HCConformsToProtocol conformsTo:aProtocol];
 }
 
 id<HCMatcher> HC_conformsToProtocol(Protocol *aProtocol)
