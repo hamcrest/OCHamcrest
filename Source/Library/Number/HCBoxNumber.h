@@ -7,6 +7,8 @@
 //  Source: https://github.com/hamcrest/OCHamcrest
 //
 
+#import <Foundation/Foundation.h>
+
 #ifdef __cplusplus
 
 namespace hamcrest {
