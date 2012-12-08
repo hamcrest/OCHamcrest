@@ -1,3 +1,8 @@
+== NEXT VERSION IN PROGRESS
+
+* Removed CocoaPods spec, since it's maintained at CocoaPods.
+
+
 == Version 1.9 ==
 
 23 Nov 2012
@@ -9,7 +14,6 @@
   - Changed iOS Architecture support to "Standard" (which includes armv7s)
   - Changed Mac Architecture support to 64-bit only
   - Converted source, tests, and examples to ARC
-  - Added CocoaPods spec. Thanks to: Sebastian Ludwig
 
 
 == Version 1.8 ==
