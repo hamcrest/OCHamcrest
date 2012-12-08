@@ -10,8 +10,6 @@
 #import "HCStringContainsInOrder.h"
 
 #import "HCDescription.h"
-#import "HCRequireNonNilObject.h"
-#import <stdarg.h>
 
 
 @implementation HCStringContainsInOrder

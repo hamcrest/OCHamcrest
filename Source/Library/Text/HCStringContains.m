@@ -9,8 +9,6 @@
 
 #import "HCStringContains.h"
 
-#import "HCDescription.h"
-
 
 @implementation HCStringContains
 

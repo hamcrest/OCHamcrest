@@ -9,8 +9,6 @@
 
 #import "HCStringEndsWith.h"
 
-#import "HCDescription.h"
-
 
 @implementation HCStringEndsWith
 

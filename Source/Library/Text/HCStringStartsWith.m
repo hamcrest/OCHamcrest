@@ -9,8 +9,6 @@
 
 #import "HCStringStartsWith.h"
 
-#import "HCDescription.h"
-
 
 @implementation HCStringStartsWith
 
