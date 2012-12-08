@@ -34,7 +34,7 @@
                   hasItem(equalTo(@"a")), ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
 }
 
-- (void)testNoMatchIfCollectionDoesntContainAnElementMatchingTheGivenMatcher
+- (void)testNoMatchIfCollectionDoesNotContainAnElementMatchingTheGivenMatcher
 {
     assertDoesNotMatch(@"list without 'a'",
                        hasItem(equalTo(@"a")), ([NSArray arrayWithObjects:@"b", @"c", nil]));    
@@ -123,7 +123,7 @@
                   ([NSArray arrayWithObjects:@"e", @"c", @"b", @"a", @"d", nil]));
 }
 
-- (void)testNoMatchIfCollectionDoesntSatisfyAllMatchers
+- (void)testNoMatchIfCollectionDoesNotSatisfyAllMatchers
 {
     assertDoesNotMatch(@"missing 'a'",
                        (hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil)),
