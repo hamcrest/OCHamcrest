@@ -12,12 +12,6 @@
 #import "HCStringDescription.h"
 #import "HCMatcher.h"
 
-#if TARGET_OS_IPHONE
-    #import <objc/runtime.h>
-#else
-    #import <objc/objc-class.h>
-#endif
-
 
 /**
     Create OCUnit failure
