@@ -130,6 +130,9 @@
         case '@':
             [getterInvocation getReturnValue:&result];
             break;
+
+        default:
+            break;
     }
     
     return result;
