@@ -35,8 +35,16 @@ If you want to build OCHamcrest yourself, cd to the Source folder, then
 Or just use the pre-built release available at
 [QualityCoding.org](http://qualitycoding.org/resources/).
 
+__iOS Project Setup:__
 
-__Mac Project Setup:__
+Add OCHamcrestIOS.framework to your project.
+
+Add:
+
+    #define HC_SHORTHAND
+    #import <OCHamcrestIOS/OCHamcrestIOS.h>
+
+__OS X Project Setup:__
 
 Add OCHamcrest.framework to your project.
 
@@ -54,15 +62,6 @@ Note: If your Console shows
     otest[57510:203] *** NSTask: Task create for path '...' failed: 22, "Invalid argument".  Terminating temporary process.
 
 double-check your Copy Files phase.
-
-__iOS Project Setup:__
-
-Add OCHamcrestIOS.framework to your project.
-
-Add:
-
-    #define HC_SHORTHAND
-    #import <OCHamcrestIOS/OCHamcrestIOS.h>
 
 
 My first OCHamcrest test
