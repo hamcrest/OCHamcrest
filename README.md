@@ -41,8 +41,10 @@ Add OCHamcrestIOS.framework to your project.
 
 Add:
 
-    #define HC_SHORTHAND
-    #import <OCHamcrestIOS/OCHamcrestIOS.h>
+```objective-c
+#define HC_SHORTHAND
+#import <OCHamcrestIOS/OCHamcrestIOS.h>
+```
 
 __OS X Project Setup:__
 
@@ -54,8 +56,10 @@ the Run Script phase that executes tests.
 
 Add:
 
-    #define HC_SHORTHAND
-    #import <OCHamcrest/OCHamcrest.h>
+```objective-c
+#define HC_SHORTHAND
+#import <OCHamcrest/OCHamcrest.h>
+```
 
 Note: If your Console shows
 
@@ -71,24 +75,26 @@ We'll start by writing a very simple Xcode unit test, but instead of using
 OCUnit's ``STAssertEqualObjects`` function, we'll use OCHamcrest's
 ``assertThat`` construct and a predefined matcher:
 
-    #import <SenTestingKit/SenTestingKit.h>
+```objective-c
+#import <SenTestingKit/SenTestingKit.h>
 
-    #define HC_SHORTHAND
-    #import <OCHamcrest/OCHamcrest.h>
+#define HC_SHORTHAND
+#import <OCHamcrest/OCHamcrest.h>
 
-    @interface BiscuitTest : SenTestCase
-    @end
+@interface BiscuitTest : SenTestCase
+@end
 
-    @implementation BiscuitTest
+@implementation BiscuitTest
 
-    - (void) testEquals
-    {
-        Biscuit* theBiscuit = [Biscuit biscuitNamed:@"Ginger"];
-        Biscuit* myBiscuit = [Biscuit biscuitNamed:@"Ginger"];
-        assertThat(theBiscuit, equalTo(myBiscuit));
-    }
+- (void) testEquals
+{
+    Biscuit* theBiscuit = [Biscuit biscuitNamed:@"Ginger"];
+    Biscuit* myBiscuit = [Biscuit biscuitNamed:@"Ginger"];
+    assertThat(theBiscuit, equalTo(myBiscuit));
+}
 
-    @end
+@end
+```
 
 The ``assertThat`` function is a stylized sentence for making a test assertion.
 In this example, the subject of the assertion is the object ``theBiscuit``,
@@ -178,9 +184,11 @@ OCHamcrest strives to make your tests as readable as possible. For example, the
 ``is`` matcher is a wrapper that doesn't add any extra behavior to the
 underlying matcher. The following assertions are all equivalent:
 
-    assertThat(theBiscuit, equalTo(myBiscuit));
-    assertThat(theBiscuit, is(equalTo(myBiscuit)));
-    assertThat(theBiscuit, is(myBiscuit));
+```objective-c
+assertThat(theBiscuit, equalTo(myBiscuit));
+assertThat(theBiscuit, is(equalTo(myBiscuit)));
+assertThat(theBiscuit, is(myBiscuit));
+```
 
 The last form is allowed since ``is`` wraps non-matcher arguments with
 ``equalTo``. Other matchers that take matchers as arguments provide similar
@@ -200,82 +208,90 @@ eliminate code duplication and make your tests more readable!
 Let's write our own matcher for testing if a calendar date falls on a Saturday.
 This is the test we want to write:
 
-    - (void) testDateIsOnASaturday
-    {
-        NSCalendarDate* date = [NSCalendarDate dateWithString:@"26 Apr 2008" calendarFormat:@"%d %b %Y"];
-        assertThat(date, is(onASaturday()))
-    }
+```objective-c
+- (void) testDateIsOnASaturday
+{
+    NSCalendarDate* date = [NSCalendarDate dateWithString:@"26 Apr 2008" calendarFormat:@"%d %b %Y"];
+    assertThat(date, is(onASaturday()))
+}
+```
 
 Here's the interface:
 
-    #import <OCHamcrest/HCBaseMatcher.h>
-    #import <objc/objc-api.h>
+```objective-c
+#import <OCHamcrest/HCBaseMatcher.h>
+#import <objc/objc-api.h>
 
-    @interface IsGivenDayOfWeek : HCBaseMatcher
-    {
-        NSInteger day;      // 0 indicates Sunday
-    }
+@interface IsGivenDayOfWeek : HCBaseMatcher
+{
+    NSInteger day;      // 0 indicates Sunday
+}
 
-    + (id) isGivenDayOfWeek:(NSInteger)dayOfWeek;
-    - (id) initWithDay:(NSInteger)dayOfWeek;
++ (id) isGivenDayOfWeek:(NSInteger)dayOfWeek;
+- (id) initWithDay:(NSInteger)dayOfWeek;
 
-    @end
+@end
 
-    OBJC_EXPORT id<HCMatcher> onASaturday();
+OBJC_EXPORT id<HCMatcher> onASaturday();
+```
 
 The interface consists of two parts: a class definition, and a factory function
 (with C binding). Here's what the implementation looks like:
 
-    #import "IsGivenDayOfWeek.h"
-    #import <OCHamcrest/HCDescription.h>
+```objective-c
+#import "IsGivenDayOfWeek.h"
+#import <OCHamcrest/HCDescription.h>
 
-    @implementation IsGivenDayOfWeek
+@implementation IsGivenDayOfWeek
 
-    + (id) isGivenDayOfWeek:(NSInteger)dayOfWeek
-    {
-        return [[self alloc] initWithDay:dayOfWeek];
-    }
++ (id) isGivenDayOfWeek:(NSInteger)dayOfWeek
+{
+    return [[self alloc] initWithDay:dayOfWeek];
+}
 
-    - (id) initWithDay:(NSInteger)dayOfWeek
-    {
-        self = [super init];
-        if (self != nil)
-            day = dayOfWeek;
-        return self;
-    }
+- (id) initWithDay:(NSInteger)dayOfWeek
+{
+    self = [super init];
+    if (self != nil)
+        day = dayOfWeek;
+    return self;
+}
 
-    // Test whether item matches.
-    - (BOOL) matches:(id)item
-    {
-        if (![item respondsToSelector:@selector(dayOfWeek)])
-            return NO;
+// Test whether item matches.
+- (BOOL) matches:(id)item
+{
+    if (![item respondsToSelector:@selector(dayOfWeek)])
+        return NO;
 
-        return [item dayOfWeek] == day;
-    }
+    return [item dayOfWeek] == day;
+}
 
-    // Describe the matcher.
-    - (void) describeTo:(id<HCDescription>)description
-    {
-        NSString* dayAsString[] =
-            {@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"};
-        [[description appendText:@"calendar date falling on "] appendText:dayAsString[day]];
-    }
+// Describe the matcher.
+- (void) describeTo:(id<HCDescription>)description
+{
+    NSString* dayAsString[] =
+        {@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"};
+    [[description appendText:@"calendar date falling on "] appendText:dayAsString[day]];
+}
 
-    @end
+@end
 
 
-    id<HCMatcher> onASaturday()
-    {
-        return [IsGivenDayOfWeek isGivenDayOfWeek:6];
-    }
+id<HCMatcher> onASaturday()
+{
+    return [IsGivenDayOfWeek isGivenDayOfWeek:6];
+}
+```
 
 For our Matcher implementation we implement the ``-matches:`` method (which
 calls ``-dayOfWeek`` after confirming that the argument has such a method) and
 the ``-describe_to:`` method (which is used to produce a failure message when a
 test fails). Here's an example of how the failure message looks:
 
-    NSCalendarDate* date = [NSCalendarDate dateWithString: @"6 April 2008" calendarFormat: @"%d %B %Y"];
-    assertThat(date, is(onASaturday()));
+```objective-c
+NSCalendarDate* date = [NSCalendarDate dateWithString: @"6 April 2008" calendarFormat: @"%d %B %Y"];
+assertThat(date, is(onASaturday()));
+```
 
 fails with the message
 
