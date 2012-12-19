@@ -88,7 +88,7 @@ OCUnit's ``STAssertEqualObjects`` function, we'll use OCHamcrest's
 
 @implementation BiscuitTest
 
-- (void) testEquals
+- (void)testEquals
 {
     Biscuit* theBiscuit = [Biscuit biscuitNamed:@"Ginger"];
     Biscuit* myBiscuit = [Biscuit biscuitNamed:@"Ginger"];
@@ -211,7 +211,7 @@ Let's write our own matcher for testing if a calendar date falls on a Saturday.
 This is the test we want to write:
 
 ```obj-c
-- (void) testDateIsOnASaturday
+- (void)testDateIsOnASaturday
 {
     NSCalendarDate* date = [NSCalendarDate dateWithString:@"26 Apr 2008" calendarFormat:@"%d %b %Y"];
     assertThat(date, is(onASaturday()))
@@ -229,8 +229,8 @@ Here's the interface:
     NSInteger day;      // 0 indicates Sunday
 }
 
-+ (id) isGivenDayOfWeek:(NSInteger)dayOfWeek;
-- (id) initWithDay:(NSInteger)dayOfWeek;
++ (id)isGivenDayOfWeek:(NSInteger)dayOfWeek;
+- (id)initWithDay:(NSInteger)dayOfWeek;
 
 @end
 
@@ -246,12 +246,12 @@ The interface consists of two parts: a class definition, and a factory function
 
 @implementation IsGivenDayOfWeek
 
-+ (id) isGivenDayOfWeek:(NSInteger)dayOfWeek
++ (id)isGivenDayOfWeek:(NSInteger)dayOfWeek
 {
     return [[self alloc] initWithDay:dayOfWeek];
 }
 
-- (id) initWithDay:(NSInteger)dayOfWeek
+- (id)initWithDay:(NSInteger)dayOfWeek
 {
     self = [super init];
     if (self != nil)
@@ -260,7 +260,7 @@ The interface consists of two parts: a class definition, and a factory function
 }
 
 // Test whether item matches.
-- (BOOL) matches:(id)item
+- (BOOL)matches:(id)item
 {
     if (![item respondsToSelector:@selector(dayOfWeek)])
         return NO;
@@ -269,7 +269,7 @@ The interface consists of two parts: a class definition, and a factory function
 }
 
 // Describe the matcher.
-- (void) describeTo:(id<HCDescription>)description
+- (void)describeTo:(id<HCDescription>)description
 {
     NSString* dayAsString[] =
         {@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"};
