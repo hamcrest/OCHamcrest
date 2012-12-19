@@ -43,10 +43,8 @@ Add OCHamcrestIOS.framework to your project.
 
 Add:
 
-```obj-c
-#define HC_SHORTHAND
-#import <OCHamcrestIOS/OCHamcrestIOS.h>
-```
+    #define HC_SHORTHAND
+    #import <OCHamcrestIOS/OCHamcrestIOS.h>
 
 __OS X Project Setup:__
 
@@ -58,10 +56,8 @@ the Run Script phase that executes tests.
 
 Add:
 
-```obj-c
-#define HC_SHORTHAND
-#import <OCHamcrest/OCHamcrest.h>
-```
+    #define HC_SHORTHAND
+    #import <OCHamcrest/OCHamcrest.h>
 
 Note: If your Console shows
 
