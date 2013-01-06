@@ -11,10 +11,6 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsNil.h>
 
-    // Collaborators
-#import <OCHamcrest/HCAssertThat.h>
-#import <OCHamcrest/HCIsNot.h>
-
     // Test support
 #import "AbstractMatcherTest.h"
 

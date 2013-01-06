@@ -11,9 +11,6 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsEqualToNumber.h>
 
-    // Collaborators
-#import <OCHamcrest/HCAssertThat.h>
-
     // Test support
 #import "AbstractMatcherTest.h"
 
