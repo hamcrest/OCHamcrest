@@ -1,6 +1,7 @@
 == NEXT VERSION IN PROGRESS
 
 * Removed CocoaPods spec, since it's maintained at CocoaPods.
+* Fixed unit tests so they remain quiet when handling expected test failures.
 
 
 == Version 1.9 ==

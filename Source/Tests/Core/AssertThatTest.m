@@ -46,6 +46,11 @@
     return myUnexpectedExceptionCount;
 }
 
+- (void)stop
+{
+    // Override to avoid posting notification.
+}
+
 @end
 
 
