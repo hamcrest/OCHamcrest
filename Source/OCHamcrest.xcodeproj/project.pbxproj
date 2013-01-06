@@ -38,7 +38,6 @@
 		0802654C134597C000A8DCCA /* HCStringStartsWith.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602FD13440A9F001B439B /* HCStringStartsWith.m */; };
 		0802654D134597C000A8DCCA /* HCSubstringMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602FF13440A9F001B439B /* HCSubstringMatcher.m */; };
 		0802654E134597C000A8DCCA /* HCWrapInMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876024113440A83001B439B /* HCWrapInMatcher.m */; };
-		080D961D1527B16100EF14D2 /* fixCoverage.c in Sources */ = {isa = PBXBuildFile; fileRef = 080D961C1527B16100EF14D2 /* fixCoverage.c */; };
 		0817B5CD147EC45200C5401D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0817B5CC147EC45200C5401D /* SenTestingKit.framework */; };
 		0817B5CE147EC45200C5401D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0817B5CC147EC45200C5401D /* SenTestingKit.framework */; };
 		081BEE631345979F003F846A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
@@ -257,7 +256,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		080D961C1527B16100EF14D2 /* fixCoverage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fixCoverage.c; path = TestSupport/fixCoverage.c; sourceTree = "<group>"; };
 		0817B5CC147EC45200C5401D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		081BEE621345979F003F846A /* libochamcrest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libochamcrest.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		081BEE6C1345979F003F846A /* libochamcrestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libochamcrestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -776,7 +774,6 @@
 				0876039113440BB0001B439B /* Tests-Info.plist */,
 				0876039013440BA7001B439B /* OCHamcrest-Prefix.pch */,
 				086C6D4B163C565100307026 /* Warnings.xcconfig */,
-				080D961C1527B16100EF14D2 /* fixCoverage.c */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1094,7 +1091,6 @@
 				0846B6D413EE5D8A00EA68E8 /* HCIsSame.m in Sources */,
 				77C7B87914293CC500DE60CC /* HCHasProperty.m in Sources */,
 				5F2773471436FA9D00B9683A /* HCConformsToProtocol.m in Sources */,
-				080D961D1527B16100EF14D2 /* fixCoverage.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
