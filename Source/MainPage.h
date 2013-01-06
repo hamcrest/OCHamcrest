@@ -172,7 +172,7 @@ otest[57510:203] *** NSTask: Task create for path '...' failed: 22, "Invalid arg
         <li>@ref hasItems - match if all given items appears in the collection, in any order</li>
         <li>@ref hasKey - match dictionary with a key</li>
         <li>@ref hasValue - match dictionary with a value</li>
-        <li>@ref onlyContains -  match if collections's items appear in given list</li>
+        <li>@ref onlyContains -  match if collection's items appear in given list</li>
         </ul>
     <li>Decorator</li>
         <ul>
