@@ -1015,7 +1015,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = TestSupport/exportenv.sh;
+			shellScript = XcodeCoverage/exportenv.sh;
 		};
 		08627FF81465CE1A00F80D7D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1028,7 +1028,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = TestSupport/exportenv.sh;
+			shellScript = XcodeCoverage/exportenv.sh;
 		};
 		087601F513440807001B439B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1269,8 +1269,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/libochamcrest.dst;
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				OTHER_LDFLAGS = "-ObjC";
@@ -1337,6 +1335,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OCHamcrest-Prefix.pch";
