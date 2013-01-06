@@ -28,9 +28,11 @@ How do I add OCHamcrest to my project?
 
 __Building:__
 
-If you want to build OCHamcrest yourself, cd to the Source folder, then
+If you want to build OCHamcrest yourself, clone the repo, then
 
 ```sh
+$ git submodule update --init
+$ cd Source
 $ ./MakeDistribution.sh
 ```
 
