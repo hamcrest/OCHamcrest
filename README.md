@@ -224,7 +224,7 @@ Here's the interface:
 
 @interface IsGivenDayOfWeek : HCBaseMatcher
 {
-    NSInteger day;      // 0 indicates Sunday
+    NSInteger day;      // Sunday is 0, Saturday is 6
 }
 
 + (id)isGivenDayOfWeek:(NSInteger)dayOfWeek;
@@ -232,7 +232,7 @@ Here's the interface:
 
 @end
 
-OBJC_EXPORT id<HCMatcher> onASaturday();
+OBJC_EXPORT id <HCMatcher> onASaturday();
 ```
 
 The interface consists of two parts: a class definition, and a factory function
@@ -252,7 +252,7 @@ The interface consists of two parts: a class definition, and a factory function
 - (id)initWithDay:(NSInteger)dayOfWeek
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         day = dayOfWeek;
     return self;
 }
@@ -267,17 +267,17 @@ The interface consists of two parts: a class definition, and a factory function
 }
 
 // Describe the matcher.
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     NSString* dayAsString[] =
-        {@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"};
+        { @"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday" };
     [[description appendText:@"calendar date falling on "] appendText:dayAsString[day]];
 }
 
 @end
 
 
-id<HCMatcher> onASaturday()
+id <HCMatcher> onASaturday()
 {
     return [IsGivenDayOfWeek isGivenDayOfWeek:6];
 }

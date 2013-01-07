@@ -11,7 +11,7 @@
 - (id)initWithDay:(NSInteger)dayOfWeek
 {
     self = [super init];
-    if (self != nil)
+    if (self)
         day = dayOfWeek;
     return self;
 }
@@ -26,17 +26,17 @@
 }
 
 // Describe the matcher.
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     NSString* dayAsString[] =
-        {@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"};
+        { @"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday" };
     [[description appendText:@"calendar date falling on "] appendText:dayAsString[day]];
 }
 
 @end
 
 
-id<HCMatcher> onASaturday()
+id <HCMatcher> onASaturday()
 {
     return [IsGivenDayOfWeek isGivenDayOfWeek:6];
 }
