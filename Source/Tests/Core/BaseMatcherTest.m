@@ -42,3 +42,45 @@
 }
 
 @end
+
+
+#pragma mark -
+
+@interface IncompleteBaseMatcher : HCBaseMatcher
+@end
+
+@implementation IncompleteBaseMatcher
+@end
+
+
+@interface IncompleteMatcherTest : AbstractMatcherTest
+@end
+
+@implementation IncompleteMatcherTest
+{
+    IncompleteBaseMatcher *matcher;
+}
+
+- (void)setUp
+{
+    [super setUp];
+    matcher = [[IncompleteBaseMatcher alloc] init];
+}
+
+- (void)tearDown
+{
+    matcher = nil;
+    [super tearDown];
+}
+
+- (void)testSubclassShouldBeRequiredToDefineMatchesMethod
+{
+    STAssertThrows([matcher matches:nil], nil);
+}
+
+- (void)testSubclassShouldBeRequiredToDefineDescribeToMethod
+{
+    STAssertThrows([matcher describeTo:nil], nil);
+}
+
+@end
