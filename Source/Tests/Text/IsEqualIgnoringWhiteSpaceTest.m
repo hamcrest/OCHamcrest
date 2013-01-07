@@ -16,12 +16,12 @@
 
 
 @interface IsEqualIgnoringWhiteSpaceTest : AbstractMatcherTest
-{
-    id<HCMatcher> matcher;
-}
 @end
 
 @implementation IsEqualIgnoringWhiteSpaceTest
+{
+    id <HCMatcher> matcher;
+}
 
 - (void)setUp
 {

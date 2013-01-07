@@ -63,12 +63,12 @@
 #pragma mark -
 
 @interface StringDescriptionTest : SenTestCase
-{
-    HCStringDescription *description;
-}
 @end
 
 @implementation StringDescriptionTest
+{
+    HCStringDescription *description;
+}
 
 - (void)setUp
 {

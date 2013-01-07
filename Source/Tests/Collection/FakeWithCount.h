@@ -15,7 +15,7 @@
     NSUInteger count;
 }
 
-@property (nonatomic, readonly) NSUInteger count;
+@property (readonly, nonatomic) NSUInteger count;
 
 + (id)fakeWithCount:(NSUInteger)fakeCount;
 - (id)initWithCount:(NSUInteger)fakeCount;

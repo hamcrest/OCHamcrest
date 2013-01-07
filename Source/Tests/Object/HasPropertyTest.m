@@ -19,34 +19,29 @@
 
 
 @interface Person : NSObject
-{
-    NSString *name;
-    NSNumber *shoeSize;
-}
-
-@property (nonatomic, copy) NSString *name;
+@property (copy, nonatomic) NSString *name;
 - (NSNumber *)shoeSize;
-
 @end
 
 @implementation Person
+{
+    NSNumber *_shoeSize;
+}
 
-@synthesize name;
-
-- (id) initWithName:(NSString *)aName shoeSize:(int)aShoeSize
+- (id) initWithName:(NSString *)name shoeSize:(int)shoeSize
 {
     self = [super init];
     if (self)
     {
-        name = aName;
-        shoeSize = [[NSNumber alloc] initWithInt:aShoeSize];
+        _name = name;
+        _shoeSize = [[NSNumber alloc] initWithInt:shoeSize];
     }
     return self;
 }
 
 - (NSNumber *)shoeSize
 {
-    return shoeSize;
+    return _shoeSize;
 }
 
 @end
@@ -55,13 +50,13 @@
 #pragma mark -
 
 @interface HasPropertyTest : AbstractMatcherTest
+@end
+
+@implementation HasPropertyTest
 {
     Person *joe;
     Person *nobody;
 }
-@end
-
-@implementation HasPropertyTest
 
 - (void)setUp
 {
@@ -140,66 +135,36 @@
 #pragma mark -
 
 @interface ValueHolder : NSObject
-{
-    BOOL boolValue;    
-    char charValue;
-    int intValue;
-    short shortValue;
-    long longValue;
-    long long longLongValue;
-    unsigned char unsignedCharValue;
-    unsigned int unsignedIntValue;
-    unsigned short unsignedShortValue;
-    unsigned long unsignedLongValue;
-    unsigned long long unsignedLongLongValue;
-    float floatValue;
-    double doubleValue;
-}
 
-@property (nonatomic, assign) BOOL boolValue;
-@property (nonatomic, assign) char charValue;
-@property (nonatomic, assign) int intValue;
-@property (nonatomic, assign) short shortValue;
-@property (nonatomic, assign) long longValue;
-@property (nonatomic, assign) long long longLongValue;
-@property (nonatomic, assign) unsigned char unsignedCharValue;
-@property (nonatomic, assign) unsigned int unsignedIntValue;
-@property (nonatomic, assign) unsigned short unsignedShortValue;
-@property (nonatomic, assign) unsigned long unsignedLongValue;
-@property (nonatomic, assign) unsigned long long unsignedLongLongValue;
-@property (nonatomic, assign) float floatValue;
-@property (nonatomic, assign) double doubleValue;
+@property (assign, nonatomic) BOOL boolValue;
+@property (assign, nonatomic) char charValue;
+@property (assign, nonatomic) int intValue;
+@property (assign, nonatomic) short shortValue;
+@property (assign, nonatomic) long longValue;
+@property (assign, nonatomic) long long longLongValue;
+@property (assign, nonatomic) unsigned char unsignedCharValue;
+@property (assign, nonatomic) unsigned int unsignedIntValue;
+@property (assign, nonatomic) unsigned short unsignedShortValue;
+@property (assign, nonatomic) unsigned long unsignedLongValue;
+@property (assign, nonatomic) unsigned long long unsignedLongLongValue;
+@property (assign, nonatomic) float floatValue;
+@property (assign, nonatomic) double doubleValue;
 
 @end
 
 @implementation ValueHolder
-
-@synthesize boolValue;
-@synthesize charValue;
-@synthesize intValue;
-@synthesize shortValue;
-@synthesize longValue;
-@synthesize longLongValue;
-@synthesize floatValue;
-@synthesize doubleValue;
-@synthesize unsignedCharValue;
-@synthesize unsignedIntValue;
-@synthesize unsignedShortValue;
-@synthesize unsignedLongValue;
-@synthesize unsignedLongLongValue;
-
 @end
 
 
 #pragma mark -
 
 @interface HasPropertyPrimitivesTest : AbstractMatcherTest
-{
-    ValueHolder *foo;
-}
 @end
 
 @implementation HasPropertyPrimitivesTest
+{
+    ValueHolder *foo;
+}
 
 - (void)setUp
 {

@@ -15,7 +15,6 @@
 #import "AbstractMatcherTest.h"
 
 
-
 @interface IsNilTest : AbstractMatcherTest
 @end
 

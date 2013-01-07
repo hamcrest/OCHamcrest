@@ -40,12 +40,12 @@
 #pragma mark -
 
 @interface Thingy : NSObject
-{
-    NSString *result;
-}
 @end
 
 @implementation Thingy
+{
+    NSString *result;
+}
 
 - (id)initWithResult:(NSString *)aResult
 {
@@ -91,12 +91,12 @@
 #pragma mark -
 
 @interface InvocationMatcherTest : AbstractMatcherTest
-{
-    HCInvocationMatcher *resultMatcher;
-}
 @end
 
 @implementation InvocationMatcherTest
+{
+    HCInvocationMatcher *resultMatcher;
+}
 
 - (void)setUp
 {

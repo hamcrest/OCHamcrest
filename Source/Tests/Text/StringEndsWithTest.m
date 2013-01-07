@@ -14,17 +14,16 @@
     // Test support
 #import "AbstractMatcherTest.h"
 
-
 static NSString *EXCERPT = @"EXCERPT";
 
 
 @interface StringEndsWithTest : AbstractMatcherTest
-{
-    id<HCMatcher> matcher;
-}
 @end
 
 @implementation StringEndsWithTest
+{
+    id <HCMatcher> matcher;
+}
 
 - (void)setUp
 {

@@ -16,12 +16,12 @@
 
 
 @interface IsEqualIgnoringCaseTest : AbstractMatcherTest
-{
-    id<HCMatcher> matcher;
-}
 @end
 
 @implementation IsEqualIgnoringCaseTest
+{
+    id <HCMatcher> matcher;
+}
 
 - (void)setUp
 {
