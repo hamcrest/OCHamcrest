@@ -13,6 +13,7 @@
 
     // Collaborators
 #import <OCHamcrest/HCIsEqual.h>
+#import <OCHamcrest/HCIsEqualToNumber.h>
 
     // Test support
 #import <SenTestingKit/SenTestingKit.h>
@@ -43,6 +44,20 @@
     @catch (NSException* exception)
     {
         STAssertEqualObjects([exception reason], @"Expected <0>, but was <1>", nil);
+        return;
+    }
+    STFail(@"should have failed");
+}
+
+- (void)testFailure_withBoolMoreExplicitDescription
+{
+    @try
+    {
+        assertThatBool(YES, equalToBool(NO));
+    }
+    @catch (NSException* exception)
+    {
+        STAssertEqualObjects([exception reason], @"Expected a BOOL with the value of <NO>, but was <YES>", nil);
         return;
     }
     STFail(@"should have failed");
