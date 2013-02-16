@@ -171,7 +171,6 @@
 		0876031313440A9F001B439B /* HCIsEmptyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E313440A9E001B439B /* HCIsEmptyCollection.m */; };
 		0876031413440A9F001B439B /* HCIsIn.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602E413440A9E001B439B /* HCIsIn.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876031513440A9F001B439B /* HCIsIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E513440A9E001B439B /* HCIsIn.m */; };
-		0876031613440A9F001B439B /* HCBoxNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602E713440A9E001B439B /* HCBoxNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876031713440A9F001B439B /* HCIsCloseTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602E813440A9F001B439B /* HCIsCloseTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876031813440A9F001B439B /* HCIsCloseTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602E913440A9F001B439B /* HCIsCloseTo.m */; };
 		0876031913440A9F001B439B /* HCIsEqualToNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 087602EA13440A9F001B439B /* HCIsEqualToNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -344,7 +343,6 @@
 		087602E313440A9E001B439B /* HCIsEmptyCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEmptyCollection.m; sourceTree = "<group>"; };
 		087602E413440A9E001B439B /* HCIsIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsIn.h; sourceTree = "<group>"; };
 		087602E513440A9E001B439B /* HCIsIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsIn.m; sourceTree = "<group>"; };
-		087602E713440A9E001B439B /* HCBoxNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBoxNumber.h; sourceTree = "<group>"; };
 		087602E813440A9F001B439B /* HCIsCloseTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCloseTo.h; sourceTree = "<group>"; };
 		087602E913440A9F001B439B /* HCIsCloseTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCloseTo.m; sourceTree = "<group>"; };
 		087602EA13440A9F001B439B /* HCIsEqualToNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualToNumber.h; sourceTree = "<group>"; };
@@ -637,7 +635,6 @@
 		087602E613440A9E001B439B /* Number */ = {
 			isa = PBXGroup;
 			children = (
-				087602E713440A9E001B439B /* HCBoxNumber.h */,
 				087602E813440A9F001B439B /* HCIsCloseTo.h */,
 				087602E913440A9F001B439B /* HCIsCloseTo.m */,
 				087602EA13440A9F001B439B /* HCIsEqualToNumber.h */,
@@ -827,7 +824,6 @@
 				0876031013440A9F001B439B /* HCIsDictionaryContainingValue.h in Headers */,
 				0876031213440A9F001B439B /* HCIsEmptyCollection.h in Headers */,
 				0876031413440A9F001B439B /* HCIsIn.h in Headers */,
-				0876031613440A9F001B439B /* HCBoxNumber.h in Headers */,
 				0876031713440A9F001B439B /* HCIsCloseTo.h in Headers */,
 				0876031913440A9F001B439B /* HCIsEqualToNumber.h in Headers */,
 				0876031B13440A9F001B439B /* HCNumberAssert.h in Headers */,
@@ -1292,7 +1288,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -1312,7 +1307,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -1404,7 +1398,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
@@ -1423,7 +1416,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

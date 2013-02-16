@@ -4,6 +4,9 @@
 * Fixed unit tests so they remain quiet when handling expected test failures.
 * Replaced older code coverage scripts with XcodeCoverage submodule.
 
+* Deleted following items deprecated in v1.8:
+  - C++ template function boxNumber
+
 
 == Version 1.9 ==
 
