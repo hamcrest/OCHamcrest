@@ -57,7 +57,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertEqualObjects([exception reason], @"Expected a BOOL with the value of <NO>, but was <YES>", nil);
+        STAssertEqualObjects([exception reason], @"Expected a BOOL with value <NO>, but was <YES>", nil);
         return;
     }
     STFail(@"should have failed");

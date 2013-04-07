@@ -1,5 +1,8 @@
 == NEXT VERSION IN PROGRESS
 
+* Improved matchers:
+  - equalToBool has a better description. Thanks to: Jonathan Crooke
+
 * Removed CocoaPods spec, since it's maintained at CocoaPods.
 * Fixed unit tests so they remain quiet when handling expected test failures.
 * Replaced older code coverage scripts with XcodeCoverage submodule.

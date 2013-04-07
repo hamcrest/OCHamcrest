@@ -39,22 +39,21 @@ OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value)
     return [[HCIsEqualToBool alloc] initWithValue:value];
 }
 
-@interface HCIsEqualToBool ()
-+ (NSString*) stringForBool:(BOOL)value;
-@end
-
 @implementation HCIsEqualToBool
+{
+    BOOL _value;
+}
 
 + (NSString*) stringForBool:(BOOL)value
 {
     return value ? @"<YES>" : @"<NO>";
 }
 
-- (id)initWithValue:(BOOL)aValue
+- (id)initWithValue:(BOOL)value
 {
-    if ((self = [super init])) {
-        value = aValue;
-    }
+    self = [super init];
+    if (self)
+        _value = value;
     return self;
 }
 
@@ -62,13 +61,13 @@ OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value)
 {
     if (![item isKindOfClass:[NSNumber class]])
         return NO;
-    return [item boolValue] == value;
+    return [item boolValue] == _value;
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [description appendText:@"a BOOL with the value of "];
-    [description appendText:[HCIsEqualToBool stringForBool:value]];
+    [description appendText:@"a BOOL with value "];
+    [description appendText:[HCIsEqualToBool stringForBool:_value]];
 }
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
@@ -76,6 +75,5 @@ OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value)
     [mismatchDescription appendText:@"was "];
     [mismatchDescription appendText:[HCIsEqualToBool stringForBool:[item boolValue]]];
 }
-
 
 @end
