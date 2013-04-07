@@ -30,6 +30,15 @@ OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value);
     #define equalToBool HC_equalToBool
 #endif
 
+@interface HCIsEqualToBool : HCBaseMatcher
+{
+    BOOL value;
+}
+
+- (id)initWithValue:(BOOL)aValue;
+
+@end
+
 
 OBJC_EXPORT id<HCMatcher> HC_equalToChar(char value);
 
