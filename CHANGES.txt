@@ -1,17 +1,20 @@
 == NEXT VERSION IN PROGRESS
 
+* Fixes:
+  - Fix GTM compatibility -- avoid shadowing conformsToProtocol:
+
 * Improved matchers:
   - equalToBool has a better description. Thanks to: Jonathan Crooke
+
+* Deleted following items deprecated in v1.8:
+  - C++ template function boxNumber
+  - HC_conformsToProtocol (which was renamed to "HC_conformsTo")
 
 * Project changes:
   - Update project settings to Xcode 4.6. Thanks to: Florian Buerger
   - Removed CocoaPods spec, since it's maintained at CocoaPods.
   - Fixed unit tests so they remain quiet when handling expected test failures.
   - Replaced older code coverage scripts with XcodeCoverage submodule.
-
-* Deleted following items deprecated in v1.8:
-  - C++ template function boxNumber
-  - HC_conformsToProtocol (which was renamed to "HC_conformsTo")
 
 
 == Version 1.9 ==
