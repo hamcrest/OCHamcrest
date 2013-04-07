@@ -48,8 +48,3 @@ id<HCMatcher> HC_conformsTo(Protocol *aProtocol)
 {
     return [HCConformsToProtocol conformsTo:aProtocol];
 }
-
-id<HCMatcher> HC_conformsToProtocol(Protocol *aProtocol)
-{
-    return HC_conformsTo(aProtocol);
-}

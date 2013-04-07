@@ -20,7 +20,6 @@
 
 
 OBJC_EXPORT id<HCMatcher> HC_conformsTo(Protocol *aProtocol);
-OBJC_EXPORT id<HCMatcher> HC_conformsToProtocol(Protocol *aProtocol)    __attribute__((deprecated));
 
 /**
     conformsTo(aProtocol) -

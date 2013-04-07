@@ -6,6 +6,7 @@
 
 * Deleted following items deprecated in v1.8:
   - C++ template function boxNumber
+  - HC_conformsToProtocol (which was renamed to "HC_conformsTo")
 
 
 == Version 1.9 ==
