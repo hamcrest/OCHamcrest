@@ -27,6 +27,7 @@
 #import <OCHamcrest/HCIsInstanceOf.h>
 #import <OCHamcrest/HCIsNil.h>
 #import <OCHamcrest/HCIsSame.h>
+#import <OCHamcrest/HCIsTypeOf.h>
 
 /**
     @defgroup collection_matchers Collection Matchers

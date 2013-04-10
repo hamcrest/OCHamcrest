@@ -1,5 +1,8 @@
 == NEXT VERSION IN PROGRESS
 
+* New matchers:
+  - "isA" matches objects that are instances of a given class, but not of any subclass.
+
 * Fixes:
   - Fix GTM compatibility -- avoid shadowing conformsToProtocol:
 

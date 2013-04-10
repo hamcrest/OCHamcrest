@@ -235,6 +235,11 @@
 		77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
 		77C7B87914293CC500DE60CC /* HCHasProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B86C14292D5100DE60CC /* HCHasProperty.m */; };
 		77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
+		BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */; };
+		BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */; };
+		BB3330F94E0ADAF09D41A922 /* HCIsTypeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333D652BE69E0B746F7770 /* HCIsTypeOf.m */; };
+		BB33323D0F9D992AE94980EE /* HCIsTypeOf.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3331FAF4BE7F6EAB92BB57 /* HCIsTypeOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB3336CE4A9F65ABD486550E /* HCIsTypeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333D652BE69E0B746F7770 /* HCIsTypeOf.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -409,6 +414,9 @@
 		77C7B86B14292D5100DE60CC /* HCHasProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHasProperty.h; sourceTree = "<group>"; };
 		77C7B86C14292D5100DE60CC /* HCHasProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHasProperty.m; sourceTree = "<group>"; };
 		77C7B8761429361200DE60CC /* HasPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasPropertyTest.m; sourceTree = "<group>"; };
+		BB3331FAF4BE7F6EAB92BB57 /* HCIsTypeOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsTypeOf.h; sourceTree = "<group>"; };
+		BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTypeOfTest.m; sourceTree = "<group>"; };
+		BB333D652BE69E0B746F7770 /* HCIsTypeOf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsTypeOf.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -666,6 +674,8 @@
 				0846B6C213EE5D8A00EA68E8 /* HCIsNil.m */,
 				0846B6C313EE5D8A00EA68E8 /* HCIsSame.h */,
 				0846B6C413EE5D8A00EA68E8 /* HCIsSame.m */,
+				BB3331FAF4BE7F6EAB92BB57 /* HCIsTypeOf.h */,
+				BB333D652BE69E0B746F7770 /* HCIsTypeOf.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -749,6 +759,7 @@
 				0846B6F413EE5FD200EA68E8 /* IsInstanceOfTest.m */,
 				0846B6F513EE5FD200EA68E8 /* IsNilTest.m */,
 				0846B6F613EE5FD200EA68E8 /* IsSameTest.m */,
+				BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -851,6 +862,7 @@
 				0846B6D113EE5D8A00EA68E8 /* HCIsSame.h in Headers */,
 				77C7B86D14292D5100DE60CC /* HCHasProperty.h in Headers */,
 				5F2773401436F50C00B9683A /* HCConformsToProtocol.h in Headers */,
+				BB33323D0F9D992AE94980EE /* HCIsTypeOf.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1089,6 +1101,7 @@
 				0846B6D413EE5D8A00EA68E8 /* HCIsSame.m in Sources */,
 				77C7B87914293CC500DE60CC /* HCHasProperty.m in Sources */,
 				5F2773471436FA9D00B9683A /* HCConformsToProtocol.m in Sources */,
+				BB3336CE4A9F65ABD486550E /* HCIsTypeOf.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1138,6 +1151,7 @@
 				082E7C3813FF676E004A22FE /* StringDescriptionTest.m in Sources */,
 				77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */,
 				5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */,
+				BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1189,6 +1203,7 @@
 				0846B6D313EE5D8A00EA68E8 /* HCIsSame.m in Sources */,
 				77C7B86E14292D5100DE60CC /* HCHasProperty.m in Sources */,
 				5F2773411436F50C00B9683A /* HCConformsToProtocol.m in Sources */,
+				BB3330F94E0ADAF09D41A922 /* HCIsTypeOf.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1238,6 +1253,7 @@
 				082E7C3713FF676E004A22FE /* StringDescriptionTest.m in Sources */,
 				77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */,
 				5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */,
+				BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
