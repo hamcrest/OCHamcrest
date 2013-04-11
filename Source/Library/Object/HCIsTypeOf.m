@@ -15,7 +15,7 @@
 
 @implementation HCIsTypeOf
 {
-    Class theClass;
+    Class _class;
 }
 
 + (id)isTypeOf:(Class)type
@@ -29,19 +29,19 @@
 
     self = [super init];
     if (self)
-        theClass = aClass;
+        _class = aClass;
     return self;
 }
 
 - (BOOL)matches:(id)item
 {
-    return [item isMemberOfClass:theClass];
+    return [item isMemberOfClass:_class];
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"an exact instance of "]
-                  appendText:NSStringFromClass(theClass)];
+                  appendText:NSStringFromClass(_class)];
 }
 
 @end
