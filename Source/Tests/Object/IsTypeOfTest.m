@@ -65,13 +65,13 @@
 
 - (void)testMismatchDescriptionShowsActualArgument
 {
-    assertMismatchDescription(@"was SomeSubclass instance <SOMESUBCLASS>",
+    assertMismatchDescription(@"was SomeSubclass instance <SOME_SUBCLASS>",
                               isA([SomeClass class]), [[SomeSubclass alloc] init]);
 }
 
 - (void)testDescribeMismatch
 {
-    assertDescribeMismatch(@"was SomeSubclass instance <SOMESUBCLASS>",
+    assertDescribeMismatch(@"was SomeSubclass instance <SOME_SUBCLASS>",
                            isA([SomeClass class]), [[SomeSubclass alloc] init]);
 }
 

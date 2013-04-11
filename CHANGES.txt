@@ -8,6 +8,7 @@
 
 * Improved matchers:
   - equalToBool has a better description. Thanks to: Jonathan Crooke
+  - instanceOf mismatch description now includes actual class.
 
 * Deleted following items deprecated in v1.8:
   - C++ template function boxNumber

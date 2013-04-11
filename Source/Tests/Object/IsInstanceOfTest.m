@@ -13,6 +13,7 @@
 
     // Test support
 #import "AbstractMatcherTest.h"
+#import "SomeClassAndSubclass.h"
 
 
 @interface IsInstanceOfTest : AbstractMatcherTest
@@ -22,17 +23,28 @@
 
 - (id<HCMatcher>)createMatcher
 {
-    return instanceOf([NSNumber class]);
+    return instanceOf([SomeClass class]);
 }
 
-- (void)testEvaluatesToTrueIfArgumentIsInstanceOfASpecificClass
+- (void)testEvaluatesToTrueIfArgumentIsInstanceOfGivenClass
 {
-    NSNumber *number = @1;
+    SomeClass *obj = [[SomeClass alloc] init];
+    assertMatches(@"same class", instanceOf([SomeClass class]), obj);
+}
 
-    assertMatches(@"same class", instanceOf([NSNumber class]), number);
-    assertMatches(@"subclass", instanceOf([NSValue class]), number);
+- (void)testEvaluatesToTrueIfArgumentIsSubclassOfGivenClass
+{
+    SomeSubclass *sub = [[SomeSubclass alloc] init];
+    assertMatches(@"subclass", instanceOf([SomeClass class]), sub);
+}
 
-    assertDoesNotMatch(@"different class", instanceOf([NSNumber class]), @"hi");
+- (void)testEvaluatesToFalseIfArgumentIsInstanceOfDifferentClass
+{
+    assertDoesNotMatch(@"different class", instanceOf([SomeClass class]), @"hi");
+}
+
+- (void)testEvaluatesToFalseIfArgumentIsNil
+{
     assertDoesNotMatch(@"nil", instanceOf([NSNumber class]), nil);
 }
 
@@ -43,22 +55,24 @@
 
 - (void)testHasAReadableDescription
 {
-    assertDescription(@"an instance of NSNumber", instanceOf([NSNumber class]));
+    assertDescription(@"an instance of SomeClass", instanceOf([SomeClass class]));
 }
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    assertNoMismatchDescription(instanceOf([NSString class]), @"hi");
+    assertNoMismatchDescription(instanceOf([SomeClass class]), [[SomeClass alloc] init]);
 }
 
 - (void)testMismatchDescriptionShowsActualArgument
 {
-    assertMismatchDescription(@"was \"bad\"", instanceOf([NSNumber class]), @"bad");
+    assertMismatchDescription(@"was SomeClass instance <SOME_CLASS>",
+                              instanceOf([NSValue class]), [[SomeClass alloc] init]);
 }
 
 - (void)testDescribeMismatch
 {
-    assertDescribeMismatch(@"was \"bad\"", instanceOf([NSNumber class]), @"bad");
+    assertDescribeMismatch(@"was SomeClass instance <SOME_CLASS>",
+                           instanceOf([NSValue class]), [[SomeClass alloc] init]);
 }
 
 @end

@@ -11,6 +11,12 @@
 
 
 @implementation SomeClass
+
+- (NSString *)description
+{
+    return @"SOME_CLASS";
+}
+
 @end
 
 
@@ -18,7 +24,7 @@
 
 - (NSString *)description
 {
-    return @"SOMESUBCLASS";
+    return @"SOME_SUBCLASS";
 }
 
 @end
