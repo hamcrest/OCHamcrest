@@ -26,6 +26,12 @@
 @end
 
 @implementation SomeSubclass
+
+- (NSString *)description
+{
+    return @"SOMESUBCLASS";
+}
+
 @end
 
 
@@ -80,12 +86,14 @@
 
 - (void)testMismatchDescriptionShowsActualArgument
 {
-    assertMismatchDescription(@"was \"bad\"", isA([SomeClass class]), @"bad");
+    assertMismatchDescription(@"was SomeSubclass instance <SOMESUBCLASS>",
+                              isA([SomeClass class]), [[SomeSubclass alloc] init]);
 }
 
 - (void)testDescribeMismatch
 {
-    assertDescribeMismatch(@"was \"bad\"", isA([SomeClass class]), @"bad");
+    assertDescribeMismatch(@"was SomeSubclass instance <SOMESUBCLASS>",
+                           isA([SomeClass class]), [[SomeSubclass alloc] init]);
 }
 
 @end
