@@ -20,33 +20,14 @@
     return [[self alloc] initWithType:type];
 }
 
-- (id)initWithType:(Class)aClass
-{
-    HCRequireNonNilObject(aClass);
-
-    self = [super init];
-    if (self)
-        theClass = aClass;
-    return self;
-}
-
 - (BOOL)matches:(id)item
 {
     return [item isKindOfClass:theClass];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (NSString *)expectation
 {
-    [[description appendText:@"an instance of "]
-                  appendText:NSStringFromClass(theClass)];
-}
-
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
-{
-    [[[[mismatchDescription appendText:@"was "]
-                            appendText:NSStringFromClass([item class])]
-                            appendText:@" instance "]
-                            appendDescriptionOf:item];
+    return @"an instance of ";
 }
 
 @end

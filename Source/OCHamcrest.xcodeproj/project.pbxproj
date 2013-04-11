@@ -108,6 +108,9 @@
 		0846B6FE13EE5FD200EA68E8 /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F613EE5FD200EA68E8 /* IsSameTest.m */; };
 		0850A44E17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */; };
 		0850A44F17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */; };
+		0850A4521716624B0019BBE0 /* HCClassMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0850A4501716624A0019BBE0 /* HCClassMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0850A4541716624B0019BBE0 /* HCClassMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0850A4511716624A0019BBE0 /* HCClassMatcher.m */; };
+		0850A4551716624B0019BBE0 /* HCClassMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0850A4511716624A0019BBE0 /* HCClassMatcher.m */; };
 		0859831013459CA400BE7892 /* FakeWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033613440AD8001B439B /* FakeWithCount.m */; };
 		0859831113459CA400BE7892 /* FakeWithoutCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033813440AD8001B439B /* FakeWithoutCount.m */; };
 		0859831213459CA400BE7892 /* HasCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033913440AD8001B439B /* HasCountTest.m */; };
@@ -305,6 +308,8 @@
 		0846B6F613EE5FD200EA68E8 /* IsSameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsSameTest.m; sourceTree = "<group>"; };
 		0850A44C17165D2A0019BBE0 /* SomeClassAndSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomeClassAndSubclass.h; sourceTree = "<group>"; };
 		0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomeClassAndSubclass.m; sourceTree = "<group>"; };
+		0850A4501716624A0019BBE0 /* HCClassMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCClassMatcher.h; sourceTree = "<group>"; };
+		0850A4511716624A0019BBE0 /* HCClassMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCClassMatcher.m; sourceTree = "<group>"; };
 		086C6D4B163C565100307026 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 		087601E213440806001B439B /* OCHamcrest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCHamcrest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		087601EA13440807001B439B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -664,6 +669,8 @@
 		087602F013440A9F001B439B /* Object */ = {
 			isa = PBXGroup;
 			children = (
+				0850A4501716624A0019BBE0 /* HCClassMatcher.h */,
+				0850A4511716624A0019BBE0 /* HCClassMatcher.m */,
 				5F27733E1436F50C00B9683A /* HCConformsToProtocol.h */,
 				5F27733F1436F50C00B9683A /* HCConformsToProtocol.m */,
 				087602F113440A9F001B439B /* HCHasDescription.h */,
@@ -869,6 +876,7 @@
 				77C7B86D14292D5100DE60CC /* HCHasProperty.h in Headers */,
 				5F2773401436F50C00B9683A /* HCConformsToProtocol.h in Headers */,
 				BB33323D0F9D992AE94980EE /* HCIsTypeOf.h in Headers */,
+				0850A4521716624B0019BBE0 /* HCClassMatcher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1108,6 +1116,7 @@
 				77C7B87914293CC500DE60CC /* HCHasProperty.m in Sources */,
 				5F2773471436FA9D00B9683A /* HCConformsToProtocol.m in Sources */,
 				BB3336CE4A9F65ABD486550E /* HCIsTypeOf.m in Sources */,
+				0850A4551716624B0019BBE0 /* HCClassMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1211,6 +1220,7 @@
 				77C7B86E14292D5100DE60CC /* HCHasProperty.m in Sources */,
 				5F2773411436F50C00B9683A /* HCConformsToProtocol.m in Sources */,
 				BB3330F94E0ADAF09D41A922 /* HCIsTypeOf.m in Sources */,
+				0850A4541716624B0019BBE0 /* HCClassMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,16 +7,12 @@
 //  Source: https://github.com/hamcrest/OCHamcrest
 //
 
-#import <OCHamcrest/HCBaseMatcher.h>
+#import <OCHamcrest/HCClassMatcher.h>
 
 
-@interface HCIsTypeOf : HCBaseMatcher
-{
-    Class theClass;
-}
+@interface HCIsTypeOf : HCClassMatcher
 
 + (id)isTypeOf:(Class)type;
-- (id)initWithType:(Class)type;
 
 @end
 
