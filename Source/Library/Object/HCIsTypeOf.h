@@ -11,6 +11,9 @@
 
 
 @interface HCIsTypeOf : HCBaseMatcher
+{
+    Class theClass;
+}
 
 + (id)isTypeOf:(Class)type;
 - (id)initWithType:(Class)type;
