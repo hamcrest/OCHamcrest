@@ -106,6 +106,8 @@
 		0846B6FC13EE5FD200EA68E8 /* IsNilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F513EE5FD200EA68E8 /* IsNilTest.m */; };
 		0846B6FD13EE5FD200EA68E8 /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F613EE5FD200EA68E8 /* IsSameTest.m */; };
 		0846B6FE13EE5FD200EA68E8 /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F613EE5FD200EA68E8 /* IsSameTest.m */; };
+		0850A44E17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */; };
+		0850A44F17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */; };
 		0859831013459CA400BE7892 /* FakeWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033613440AD8001B439B /* FakeWithCount.m */; };
 		0859831113459CA400BE7892 /* FakeWithoutCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033813440AD8001B439B /* FakeWithoutCount.m */; };
 		0859831213459CA400BE7892 /* HasCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033913440AD8001B439B /* HasCountTest.m */; };
@@ -301,6 +303,8 @@
 		0846B6F413EE5FD200EA68E8 /* IsInstanceOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsInstanceOfTest.m; sourceTree = "<group>"; };
 		0846B6F513EE5FD200EA68E8 /* IsNilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsNilTest.m; sourceTree = "<group>"; };
 		0846B6F613EE5FD200EA68E8 /* IsSameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsSameTest.m; sourceTree = "<group>"; };
+		0850A44C17165D2A0019BBE0 /* SomeClassAndSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomeClassAndSubclass.h; sourceTree = "<group>"; };
+		0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomeClassAndSubclass.m; sourceTree = "<group>"; };
 		086C6D4B163C565100307026 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 		087601E213440806001B439B /* OCHamcrest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCHamcrest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		087601EA13440807001B439B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -760,6 +764,8 @@
 				0846B6F513EE5FD200EA68E8 /* IsNilTest.m */,
 				0846B6F613EE5FD200EA68E8 /* IsSameTest.m */,
 				BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */,
+				0850A44C17165D2A0019BBE0 /* SomeClassAndSubclass.h */,
+				0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -1152,6 +1158,7 @@
 				77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */,
 				5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */,
 				BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */,
+				0850A44F17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1254,6 +1261,7 @@
 				77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */,
 				5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */,
 				BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */,
+				0850A44E17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

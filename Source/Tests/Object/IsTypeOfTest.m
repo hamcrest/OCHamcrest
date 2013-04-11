@@ -13,29 +13,8 @@
 
     // Test support
 #import "AbstractMatcherTest.h"
+#import "SomeClassAndSubclass.h"
 
-
-@interface SomeClass : NSObject
-@end
-
-@implementation SomeClass
-@end
-
-
-@interface SomeSubclass : SomeClass
-@end
-
-@implementation SomeSubclass
-
-- (NSString *)description
-{
-    return @"SOMESUBCLASS";
-}
-
-@end
-
-
-#pragma mark -
 
 @interface IsTypeOfTest : AbstractMatcherTest
 @end
