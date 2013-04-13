@@ -134,6 +134,7 @@ otest[57510:203] *** NSTask: Task create for path '...' failed: 22, "Invalid arg
         <li>@ref hasDescription - match object's @c -description</li>
 		<li>@ref hasProperty - match return value of method with given name</li>
         <li>@ref instanceOf - match object type</li>
+        <li>@ref isA - match object type precisely, no subclasses</li>
         <li>@ref nilValue, @ref notNilValue - match @c nil, or not @c nil</li>
         <li>@ref sameInstance - match same object</li>
         </ul>
