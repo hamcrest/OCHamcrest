@@ -13,12 +13,13 @@ Matchers are useful for a variety of purposes, such as UI validation. But
 they're most commonly used for writing unit tests that are expressive and
 flexible.
 
-OCHamcrest can be used for either iOS or OS X development with:
+OCHamcrest is used for both iOS or OS X development, and is compatible with:
 
-* OCUnit (SenTestingKit) built in to Xcode
-* Google Toolbox for Mac (GTM)
+* OCUnit (SenTestingKit)
+* Kiwi
+* Cedar
 * GHUnit
-* Cedar BDD framework
+* Google Toolbox for Mac (GTM)
 * OCMock
 * OCMockito
 
