@@ -122,6 +122,7 @@ OCHamcrest comes with a library of useful matchers:
   * ``hasDescription`` - match object's ``-description``
   * ``hasProperty`` - match return value of method with given name
   * ``instanceOf`` - match object type
+  * ``isA`` - match object type precisely, no subclasses
   * ``nilValue``, ``notNilValue`` - match ``nil``, or not ``nil``
   * ``sameInstance`` - match same object
 
