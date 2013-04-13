@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$interface_h_c_string_contains.html" title="HCStringContains" alt="" coords="4,326,139,357"/>
+<area shape="rect" id="node6" href="$interface_h_c_string_ends_with.html" title="HCStringEndsWith" alt="" coords="163,326,300,357"/>
+<area shape="rect" id="node7" href="$interface_h_c_string_starts_with.html" title="HCStringStartsWith" alt="" coords="325,326,468,357"/>
+<area shape="rect" id="node2" href="$interface_h_c_base_matcher.html" title="Base class for all HCMatcher implementations." alt="" coords="171,166,292,197"/>
+<area shape="rect" id="node3" href="$protocol_h_c_matcher-p.html" title="A matcher over acceptable values." alt="" coords="175,86,288,117"/>
+<area shape="rect" id="node4" href="$protocol_h_c_self_describing-p.html" title="The ability of an object to describe itself." alt="" coords="155,6,308,37"/>
+</map>

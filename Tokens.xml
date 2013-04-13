@@ -68,17 +68,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>boxNumber</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>func</Type>
-      <Scope>hamcrest</Scope>
-    </TokenIdentifier>
-    <Path>group__number__matchers.html</Path>
-    <Anchor>ga84d5d0312b2c97e1f33608369a34d233</Anchor>
-    <Abstract>Boxes a scalar value in an NSNumber, specialized per type.</Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>HCCollectMatchers</Name>
       <APILanguage>c</APILanguage>
       <Type>func</Type>
@@ -105,15 +94,6 @@
     </TokenIdentifier>
     <Path>_h_c_conforms_to_protocol_8h.html</Path>
     <Anchor>ab100a8ae0baab42061843429b3970452</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>HC_conformsToProtocol</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>_h_c_conforms_to_protocol_8h.html</Path>
-    <Anchor>af4a48cd8c85f8ac4ce870a5bb57ad472</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -934,6 +914,25 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>isA</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>macro</Type>
+    </TokenIdentifier>
+    <Path>group__object__matchers.html</Path>
+    <Anchor>gaf55953afbd4ec24eacbcff9a328de0b2</Anchor>
+    <Abstract>isA(aClass) - Matches if object is an instance of a given class (but not of a subclass).</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>HC_isA</Name>
+      <APILanguage>c</APILanguage>
+      <Type>func</Type>
+    </TokenIdentifier>
+    <Path>_h_c_is_type_of_8h.html</Path>
+    <Anchor>a50c79d78b8f898beafead3df64942071</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>HC_assertThatBool</Name>
       <APILanguage>unknown</APILanguage>
       <Type>macro</Type>
@@ -1639,6 +1638,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>isA</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>macro</Type>
+    </TokenIdentifier>
+    <Path>group__object__matchers.html</Path>
+    <Anchor>gaf55953afbd4ec24eacbcff9a328de0b2</Anchor>
+    <Abstract>isA(aClass) - Matches if object is an instance of a given class (but not of a subclass).</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>collection_matchers</Name>
       <APILanguage>c</APILanguage>
     </TokenIdentifier>
@@ -1832,17 +1841,6 @@
     <Path>group__number__matchers.html</Path>
     <Anchor>ga8e5afd70aaff19c9cbbcd8e10d664fb0</Anchor>
     <Abstract>lessThanOrEqualTo(aNumber) - Matches if object is less than or equal to a given number.</Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>boxNumber</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>func</Type>
-      <Scope>hamcrest</Scope>
-    </TokenIdentifier>
-    <Path>group__number__matchers.html</Path>
-    <Anchor>ga84d5d0312b2c97e1f33608369a34d233</Anchor>
-    <Abstract>Boxes a scalar value in an NSNumber, specialized per type.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2490,6 +2488,36 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>HCClassMatcher</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>HCClassMatcher</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_class_matcher.html</Path>
+    <DeclaredIn>HCClassMatcher.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>initWithType:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>HCClassMatcher</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_class_matcher.html</Path>
+    <Anchor>a164cb91071fa4cd8209431fd87a1f1bc</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>theClass</Name>
+      <APILanguage>cpp</APILanguage>
+      <Type>data</Type>
+      <Scope>HCClassMatcher</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_class_matcher.html</Path>
+    <Anchor>ab9f3342f3fc980c952093cb14dbb12cf</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>HCConformsToProtocol</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -2510,13 +2538,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>conformsToProtocol:</Name>
+      <Name>conformsTo:</Name>
       <APILanguage>occ</APILanguage>
       <Type>clm</Type>
       <Scope>HCConformsToProtocol</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_conforms_to_protocol.html</Path>
-    <Anchor>abb0f101be658032d406fb48045a8f2c4</Anchor>
+    <Anchor>a00062dd45dde08aa114968c3a2795f59</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3490,6 +3518,26 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>HCIsEqualToBool</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>HCIsEqualToBool</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_is_equal_to_bool.html</Path>
+    <DeclaredIn>HCIsEqualToNumber.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>initWithValue:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>HCIsEqualToBool</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_is_equal_to_bool.html</Path>
+    <Anchor>abc0fea38f6ac15e222fe3901aac6e730</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>HCIsIn</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -3540,16 +3588,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>initWithType:</Name>
-      <APILanguage>occ</APILanguage>
-      <Type>instm</Type>
-      <Scope>HCIsInstanceOf</Scope>
-    </TokenIdentifier>
-    <Path>interface_h_c_is_instance_of.html</Path>
-    <Anchor>ac06493761a2031fc8e52049b16b92b4e</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>isInstanceOf:</Name>
       <APILanguage>occ</APILanguage>
       <Type>clm</Type>
@@ -3557,16 +3595,6 @@
     </TokenIdentifier>
     <Path>interface_h_c_is_instance_of.html</Path>
     <Anchor>a1ad7a5a349a3cf06ed597c54ee1c0ac8</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>theClass</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>data</Type>
-      <Scope>HCIsInstanceOf</Scope>
-    </TokenIdentifier>
-    <Path>interface_h_c_is_instance_of.html</Path>
-    <Anchor>a0391d951b8be39216eac0bbe1b3d0cc4</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3667,6 +3695,26 @@
     </TokenIdentifier>
     <Path>interface_h_c_is_same.html</Path>
     <Anchor>a5a622ec126c4b89d4eb909deab82db62</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>HCIsTypeOf</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>HCIsTypeOf</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_is_type_of.html</Path>
+    <DeclaredIn>HCIsTypeOf.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>isTypeOf:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>clm</Type>
+      <Scope>HCIsTypeOf</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_is_type_of.html</Path>
+    <Anchor>ad1fbf574d9ce5bf6a8664aff84febddd</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3987,25 +4035,5 @@
     </TokenIdentifier>
     <Path>interface_h_c_substring_matcher.html</Path>
     <Anchor>ae27ec50c126d34b5faa346729c1b07d8</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>hamcrest</Name>
-      <APILanguage>c</APILanguage>
-      <Type>ns</Type>
-      <Scope>hamcrest</Scope>
-    </TokenIdentifier>
-    <Path>namespacehamcrest.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>boxNumber</Name>
-      <APILanguage>cpp</APILanguage>
-      <Type>func</Type>
-      <Scope>hamcrest</Scope>
-    </TokenIdentifier>
-    <Path>group__number__matchers.html</Path>
-    <Anchor>ga84d5d0312b2c97e1f33608369a34d233</Anchor>
-    <Abstract>Boxes a scalar value in an NSNumber, specialized per type.</Abstract>
   </Token>
 </Tokens>

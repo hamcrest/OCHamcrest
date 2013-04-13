@@ -41,7 +41,6 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -53,7 +52,7 @@
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>OCHamcrest comes bundled with lots of useful matchers, but you'll probably find that you need to create your own from time to time to fit your testing needs.</p>
-<p>This commonly occurs when you find a fragment of code that tests the same set of properties over and over again (and in different tests), and you want to bundle the fragment into a single assertion. By writing your own matcher you'll elimate code duplication and make your tests more readable!</p>
+<p>This commonly occurs when you find a fragment of code that tests the same set of properties over and over again (and in different tests), and you want to bundle the fragment into a single assertion. By writing your own matcher you'll eliminate code duplication and make your tests more readable!</p>
 <p>Let's write our own matcher for testing if a calendar date falls on a Saturday. This is the test we want to write:</p>
 <div class="fragment"><pre class="fragment">- (void)testDateIsOnASaturday
 {
@@ -74,7 +73,7 @@
 
 <span class="keyword">@end</span>
 
-OBJC_EXPORT id&lt;HCMatcher&gt; onASaturday();
+OBJC_EXPORT id &lt;HCMatcher&gt; onASaturday();
 </pre></div><p>The interface consists of two parts: a class definition, and a factory function (with C binding). Here's what the implementation looks like:</p>
 <div class="fragment"><pre class="fragment"><span class="preprocessor">#import &quot;IsGivenDayOfWeek.h&quot;</span>
 <span class="preprocessor">#import &lt;OCHamcrest/HCDescription.h&gt;</span>
@@ -104,17 +103,17 @@ OBJC_EXPORT id&lt;HCMatcher&gt; onASaturday();
 }
 
 <span class="comment">// Describe the matcher.</span>
-- (void)describeTo:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_h_c_description-p.html" title="A description of an HCMatcher.">HCDescription</a>&gt;)description
+- (void)describeTo:(<span class="keywordtype">id</span> &lt;<a class="code" href="protocol_h_c_description-p.html" title="A description of an HCMatcher.">HCDescription</a>&gt;)description
 {
     NSString *dayAsString[] =
-        {<span class="stringliteral">@&quot;Sunday&quot;</span>, <span class="stringliteral">@&quot;Monday&quot;</span>, <span class="stringliteral">@&quot;Tuesday&quot;</span>, <span class="stringliteral">@&quot;Wednesday&quot;</span>, <span class="stringliteral">@&quot;Thursday&quot;</span>, <span class="stringliteral">@&quot;Friday&quot;</span>, <span class="stringliteral">@&quot;Saturday&quot;</span>};
+        { <span class="stringliteral">@&quot;Sunday&quot;</span>, <span class="stringliteral">@&quot;Monday&quot;</span>, <span class="stringliteral">@&quot;Tuesday&quot;</span>, <span class="stringliteral">@&quot;Wednesday&quot;</span>, <span class="stringliteral">@&quot;Thursday&quot;</span>, <span class="stringliteral">@&quot;Friday&quot;</span>, <span class="stringliteral">@&quot;Saturday&quot;</span> };
     [[description <a class="code" href="protocol_h_c_description-p.html#ac10b708f1dbcf7537df8fea173916741" title="Appends some plain text to the description.">appendText</a>:@&quot;calendar date falling on &quot;] appendText:dayAsString[day]];
 }
 
 <span class="keyword">@end</span>
 
 
-id&lt;HCMatcher&gt; onASaturday()
+id &lt;HCMatcher&gt; onASaturday()
 {
     <span class="keywordflow">return</span> [IsGivenDayOfWeek isGivenDayOfWeek:6];
 }
@@ -129,7 +128,7 @@ id&lt;HCMatcher&gt; onASaturday()
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 23 2012 18:11:31 for OCHamcrest by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 13 2013 11:45:59 for OCHamcrest by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

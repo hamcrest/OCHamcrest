@@ -41,7 +41,6 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -76,6 +75,8 @@ Defines</h2></td></tr>
 <tr class="memdesc:ga9ffdd81537ca99784c8d81bd239f4942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matches if object is not <code>nil</code>.  <a href="#ga9ffdd81537ca99784c8d81bd239f4942"></a><br/></td></tr>
 <tr class="memitem:gae8cfe45f9aee662b08b823587aea8a34"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#gae8cfe45f9aee662b08b823587aea8a34">sameInstance</a>&#160;&#160;&#160;<a class="el" href="_h_c_is_same_8h.html#a5c40465d1c802417675362d451c89db7">HC_sameInstance</a></td></tr>
 <tr class="memdesc:gae8cfe45f9aee662b08b823587aea8a34"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__object__matchers.html#gae8cfe45f9aee662b08b823587aea8a34" title="sameInstance(anObject) - Matches if evaluated object is the same instance as a given object...">sameInstance(anObject)</a> - Matches if evaluated object is the same instance as a given object.  <a href="#gae8cfe45f9aee662b08b823587aea8a34"></a><br/></td></tr>
+<tr class="memitem:gaf55953afbd4ec24eacbcff9a328de0b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__object__matchers.html#gaf55953afbd4ec24eacbcff9a328de0b2">isA</a>&#160;&#160;&#160;<a class="el" href="_h_c_is_type_of_8h.html#a50c79d78b8f898beafead3df64942071">HC_isA</a></td></tr>
+<tr class="memdesc:gaf55953afbd4ec24eacbcff9a328de0b2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__object__matchers.html#gaf55953afbd4ec24eacbcff9a328de0b2" title="isA(aClass) - Matches if object is an instance of a given class (but not of a subclass).">isA(aClass)</a> - Matches if object is an instance of a given class (but not of a subclass).  <a href="#gaf55953afbd4ec24eacbcff9a328de0b2"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="fragment"><pre class="fragment">Matchers that inspect objects.</pre></div> <hr/><h2>Define Documentation</h2>
@@ -215,6 +216,33 @@ Defines</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="gaf55953afbd4ec24eacbcff9a328de0b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="group__object__matchers.html#gaf55953afbd4ec24eacbcff9a328de0b2">isA</a>&#160;&#160;&#160;<a class="el" href="_h_c_is_type_of_8h.html#a50c79d78b8f898beafead3df64942071">HC_isA</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><a class="el" href="group__object__matchers.html#gaf55953afbd4ec24eacbcff9a328de0b2" title="isA(aClass) - Matches if object is an instance of a given class (but not of a subclass).">isA(aClass)</a> - Matches if object is an instance of a given class (but not of a subclass). </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aClass</td><td>The class to compare against as the expected class.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This matcher checks whether the evaluated object is an instance of <em>aClass</em>.</p>
+<p>Example: </p>
+<ul>
+<li><a class="el" href="group__object__matchers.html#gaf55953afbd4ec24eacbcff9a328de0b2">isA([Foo class])</a></li>
+</ul>
+<p>(In the event of a name clash, don't #define <code>HC_SHORTHAND</code> and use the synonym <code>HC_isA</code> instead.) </p>
+
+</div>
+</div>
 <a class="anchor" id="ga5760ec0b6b3c0602d7063a7fc6dcaac9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -280,7 +308,7 @@ Defines</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 23 2012 18:11:31 for OCHamcrest by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 13 2013 11:45:59 for OCHamcrest by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
