@@ -1,5 +1,7 @@
-== NEXT VERSION IN PROGRESS
+== Version 2.0.0 ==
+This release adopts Semantic Versioning (http://semver.org). Since removal of deprecated items is a backwards incompatible change, the major version number is incremented. Thanks to: Jens Nerup
 
+13 Apr 2013
 * New matchers:
   - "isA" matches objects that are instances of a given class, but not of any subclass.
 
