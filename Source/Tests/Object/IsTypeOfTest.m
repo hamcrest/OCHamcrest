@@ -63,10 +63,15 @@
     assertNoMismatchDescription(isA([SomeClass class]), [[SomeClass alloc] init]);
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsClassOfActualArgument
 {
     assertMismatchDescription(@"was SomeSubclass instance <SOME_SUBCLASS>",
                               isA([SomeClass class]), [[SomeSubclass alloc] init]);
+}
+
+- (void)testMismatchDescriptionHandlesNilArgument
+{
+    assertMismatchDescription(@"was nil", isA([SomeClass class]), nil);
 }
 
 - (void)testDescribeMismatch

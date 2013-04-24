@@ -63,10 +63,15 @@
     assertNoMismatchDescription(instanceOf([SomeClass class]), [[SomeClass alloc] init]);
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescriptionShowsClassOfActualArgument
 {
     assertMismatchDescription(@"was SomeClass instance <SOME_CLASS>",
                               instanceOf([NSValue class]), [[SomeClass alloc] init]);
+}
+
+- (void)testMismatchDescriptionHandlesNilArgument
+{
+    assertMismatchDescription(@"was nil", instanceOf([NSValue class]), nil);
 }
 
 - (void)testDescribeMismatch

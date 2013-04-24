@@ -38,10 +38,13 @@
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
-    [[[[mismatchDescription appendText:@"was "]
-                            appendText:NSStringFromClass([item class])]
-                            appendText:@" instance "]
-                            appendDescriptionOf:item];
+    [mismatchDescription appendText:@"was "];
+    if (item != nil)
+    {
+        [[mismatchDescription appendText:NSStringFromClass([item class])]
+                              appendText:@" instance "];
+    }
+    [mismatchDescription appendDescriptionOf:item];
 }
 
 @end
