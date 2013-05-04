@@ -106,6 +106,25 @@
     STFail(@"should have failed");
 }
 
+- (void)testAssertionErrorShouldCorrectlyDescribeStringsWithPercentSymbols
+{
+    NSString *expected = @"%s";
+    NSString *actual = @"%d";
+    NSString *expectedMessage = @"Expected \"%s\", but was \"%d\"";
+
+    @try
+    {
+        [self raiseAfterFailure];
+        assertThat(actual, equalTo(expected));
+    }
+    @catch (NSException* exception)
+    {
+        STAssertTrue([[exception reason] rangeOfString:expectedMessage].location != NSNotFound, nil);
+        return;
+    }
+    STFail(@"should have failed");
+}
+
 - (void)testAssertionRecordingAllErrors
 {
     QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];

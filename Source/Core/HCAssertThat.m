@@ -32,7 +32,12 @@ static NSException *createOCUnitException(const char* fileName, int lineNumber, 
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     SEL selector = @selector(failureInFile:atLine:withDescription:);
 #pragma clang diagnostic pop
-    
+
+    // Description expects a format string, but NSInvocation does not support varargs.
+    // Mask % symbols in the string so they aren't treated as placeholders.
+    description = [description stringByReplacingOccurrencesOfString:@"%"
+                                                         withString:@"%%"];
+
     NSMethodSignature *signature = [[NSException class] methodSignatureForSelector:selector];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
     [invocation setTarget:[NSException class]];
