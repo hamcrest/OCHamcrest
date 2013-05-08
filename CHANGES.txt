@@ -1,6 +1,7 @@
 == VERSION IN PROGRESS
 
 * Fixes:
+  - Fixed crash in Mac version on assertion failure. (Code optimization problem)
   - Fixed crash in instanceOf and isA when argument was nil.
 
 
