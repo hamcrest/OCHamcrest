@@ -1,7 +1,8 @@
-== VERSION IN PROGRESS
+== Version 2.0.1 ==
+12 May 2013
 
 * Fixes:
-  - Fixed crash in Mac version on assertion failure. (Code optimization problem)
+  - Fixed crash in Mac version on assertion failure. (Problem with optimized code)
   - Fixed crash in instanceOf and isA when argument was nil.
 
 * Improvements:
