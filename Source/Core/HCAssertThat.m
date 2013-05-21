@@ -38,7 +38,7 @@ static NSException *createOCUnitException(const char* fileName, int lineNumber, 
     [invocation setTarget:[NSException class]];
     [invocation setSelector:selector];
     
-    __unsafe_unretained id fileArg = @(fileName);
+    id fileArg = @(fileName);
     [invocation setArgument:&fileArg atIndex:2];
     [invocation setArgument:&lineNumber atIndex:3];
     [invocation setArgument:&description atIndex:4];
