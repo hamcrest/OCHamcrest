@@ -77,6 +77,8 @@
                 inFile:(const char *)fileName atLine:(int)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
+    // Make sure matcher has been called before, like assertThat would have done.
+    [matcher matches:arg];
     BOOL result = [matcher matches:arg describingMismatchTo:description];
     if (result)
     {

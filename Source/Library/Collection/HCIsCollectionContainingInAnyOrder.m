@@ -24,13 +24,13 @@
 
 @implementation HCMatchingInAnyOrder
 
-- (id)initWithMatchers:(NSMutableArray *)itemMatchers
+- (id)initWithMatchers:(NSArray *)itemMatchers
    mismatchDescription:(id<HCDescription, NSObject>)description
 {
     self = [super init];
     if (self)
     {
-        matchers = itemMatchers;
+        matchers = [itemMatchers mutableCopy];
         mismatchDescription = description;        
     }
     return self;
@@ -71,16 +71,16 @@
 
 @implementation HCIsCollectionContainingInAnyOrder
 
-+ (id)isCollectionContainingInAnyOrder:(NSMutableArray *)itemMatchers
++ (id)isCollectionContainingInAnyOrder:(NSArray *)itemMatchers
 {
     return [[self alloc] initWithMatchers:itemMatchers];
 }
 
-- (id)initWithMatchers:(NSMutableArray *)itemMatchers
+- (id)initWithMatchers:(NSArray *)itemMatchers
 {
     self = [super init];
     if (self)
-        matchers = itemMatchers;
+        matchers = [itemMatchers copy];
     return self;
 }
 
