@@ -37,11 +37,10 @@ $ cd Source
 $ ./MakeDistribution.sh
 ```
 
-If you have doxygen installed somewhere other than the Applications folder use this instead:
+If you have doxygen installed somewhere other than the Applications folder --
+in /usr/local/bin, for example -- use this as the build step:
 
 ```sh
-$ git submodule update --init
-$ cd Source
 $ DOXYGEN=/usr/local/bin/doxygen ./MakeDistribution.sh
 ```
 
