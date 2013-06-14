@@ -29,10 +29,8 @@ static inline BOOL isLinkedToOCUnit()
 @endcode
     except we use an NSInvocation so that OCUnit (SenTestingKit) does not have to be linked.
  */
-static NSException *createOCUnitException(const char* fileName, int lineNumber, __unsafe_unretained NSString *description)
+static NSException *createOCUnitException(const char* fileName, int lineNumber, NSString *description)
 {
-    __unsafe_unretained NSException *result = nil;
-
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     SEL selector = @selector(failureInFile:atLine:withDescription:);
@@ -54,6 +52,7 @@ static NSException *createOCUnitException(const char* fileName, int lineNumber, 
     [invocation setArgument:&description atIndex:4];
     
     [invocation invoke];
+    __unsafe_unretained NSException *result = nil;
     [invocation getReturnValue:&result];
     return result;
 }
