@@ -4,7 +4,7 @@
   - Make build script flexible so that doxygen isn't required, or can be in a different location. Thanks to: Bennett Smith
   - Fix problem formatting percent symbols in assertion failures. Thanks to: Nikolaj Schumacher
   - Fix wrong descriptions in the unordered collection matcher. Thanks to: Nikolaj Schumacher
-  - Fix cause of crash in Mac version on assertion failure. Thanks to: Nikolaj Schumacher. With this fix, we could switch back to fully optimized code.
+  - Fix underlying cause of crash in Mac version on assertion failure. Thanks to: Nikolaj Schumacher. With this fix, we could switch back to optimized code.
 
 
 == Version 2.0.1 ==
