@@ -1,8 +1,8 @@
 == Version 2.1.0 ==
-13 Jun 2013
+23 Jun 2013
 
 * Features:
-  - Added support for XCTestCase.
+  - Added support for XCTest.
 
 * Project changes:
   - Increased deployment targets to Mac OS X 10.6, iOS 5.0.
