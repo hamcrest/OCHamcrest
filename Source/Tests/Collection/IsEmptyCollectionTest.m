@@ -25,37 +25,37 @@
 
 - (id<HCMatcher>)createMatcher
 {
-    return empty();
+    return isEmpty();
 }
 
 - (void)testMatchesEmptyCollection
 {
-    assertMatches(@"empty", empty(), [FakeWithCount fakeWithCount:0]);
+    assertMatches(@"empty", isEmpty(), [FakeWithCount fakeWithCount:0]);
 }
 
 - (void)testDoesNotMatchesNonEmptyCollection
 {
-    assertDoesNotMatch(@"non-empty", empty(), [FakeWithCount fakeWithCount:1]);
+    assertDoesNotMatch(@"non-empty", isEmpty(), [FakeWithCount fakeWithCount:1]);
 }
 
 - (void)testDoesNotMatchItemWithoutCount
 {
-    assertDoesNotMatch(@"no count", empty(), [FakeWithoutCount fake]);
+    assertDoesNotMatch(@"no count", isEmpty(), [FakeWithoutCount fake]);
 }
 
 - (void)testHasReadableDescription
 {
-    assertDescription(@"empty collection", empty());
+    assertDescription(@"empty collection", isEmpty());
 }
 
 - (void)testMismatchDescriptionShowsActualArgument
 {
-    assertMismatchDescription(@"was \"bad\"", empty(), @"bad");
+    assertMismatchDescription(@"was \"bad\"", isEmpty(), @"bad");
 }
 
 - (void)testDescribesMismatch
 {
-    assertDescribeMismatch(@"was <FakeWithCount>", empty(), [FakeWithCount fakeWithCount:1]);
+    assertDescribeMismatch(@"was <FakeWithCount>", isEmpty(), [FakeWithCount fakeWithCount:1]);
 }
 
 @end

@@ -14,6 +14,9 @@
   - Fix underlying cause of crash in Mac version on assertion failure. Thanks to: Nikolaj Schumacher. With this fix, we could switch back to optimized code.
   - Fixed MacExample so it finds OCHamcrest.
 
+* Deprecated:
+  - empty clashed with the C++ string method of the same name. It has been renamed to "isEmpty".
+
 
 == Version 2.0.1 ==
 12 May 2013
