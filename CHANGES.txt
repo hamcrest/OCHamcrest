@@ -1,4 +1,5 @@
-=== NEXT VERSION IN PROGRESS
+== Version 2.1.0 ==
+13 Jun 2013
 
 * Features:
   - Added support for XCTestCase.
@@ -11,6 +12,7 @@
   - Fix problem formatting percent symbols in assertion failures. Thanks to: Nikolaj Schumacher
   - Fix wrong descriptions in the unordered collection matcher. Thanks to: Nikolaj Schumacher
   - Fix underlying cause of crash in Mac version on assertion failure. Thanks to: Nikolaj Schumacher. With this fix, we could switch back to optimized code.
+  - Fixed MacExample so it finds OCHamcrest.
 
 
 == Version 2.0.1 ==
