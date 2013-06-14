@@ -15,6 +15,7 @@ flexible.
 
 OCHamcrest is used for both iOS or OS X development, and is compatible with:
 
+* XCTest
 * OCUnit (SenTestingKit)
 * Kiwi
 * Cedar

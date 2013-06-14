@@ -32,6 +32,7 @@
     used for writing unit tests that are expressive and flexible.
 
     OCHamcrest is used for both Mac and iOS development, and is compatible with:
+    @li XCTest
     @li OCUnit (SenTestingKit)
     @li Kiwi
     @li Cedar
