@@ -13,6 +13,11 @@
 #import "HCMatcher.h"
 
 
+static inline BOOL isLinkedToOCUnit()
+{
+    return NSClassFromString(@"XCTestCase") != Nil || NSClassFromString(@"SenTestCase") != Nil;
+}
+
 /**
     Create OCUnit failure
     
@@ -53,15 +58,19 @@ static NSException *createOCUnitException(const char* fileName, int lineNumber, 
     return result;
 }
 
+static NSException *createGenericException(const char *fileName, int lineNumber, NSString *description)
+{
+    NSString *failureReason = [NSString stringWithFormat:@"%s:%d: matcher error: %@",
+                               fileName, lineNumber, description];
+    return [NSException exceptionWithName:@"Hamcrest Error" reason:failureReason userInfo:nil];
+}
+
 static NSException *createAssertThatFailure(const char *fileName, int lineNumber, NSString *description)
 {
-    // If the Hamcrest client has linked to OCUnit, generate an OCUnit failure.
-    if (NSClassFromString(@"SenTestCase") != Nil)
+    if (isLinkedToOCUnit())
         return createOCUnitException(fileName, lineNumber, description);
-
-    NSString *failureReason = [NSString stringWithFormat:@"%s:%d: matcher error: %@",
-                                                        fileName, lineNumber, description];
-    return [NSException exceptionWithName:@"Hamcrest Error" reason:failureReason userInfo:nil];
+    else
+        return createGenericException(fileName, lineNumber, description);
 }
 
 

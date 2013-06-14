@@ -1,5 +1,8 @@
 === NEXT VERSION IN PROGRESS
 
+* Features:
+  - Added support for XCTestCase.
+
 * Project changes:
   - Increased deployment targets to Mac OS X 10.6, iOS 5.0.
 
