@@ -1,5 +1,8 @@
 === NEXT VERSION IN PROGRESS
 
+* Project changes:
+  - Increased deployment targets to Mac OS X 10.6, iOS 5.0.
+
 * Fixes:
   - Make build script flexible so that doxygen isn't required, or can be in a different location. Thanks to: Bennett Smith
   - Fix problem formatting percent symbols in assertion failures. Thanks to: Nikolaj Schumacher
