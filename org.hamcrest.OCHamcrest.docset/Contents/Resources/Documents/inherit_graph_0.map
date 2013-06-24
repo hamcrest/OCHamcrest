@@ -1,5 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1" href="$protocol_h_c_description-p.html" title="A description of an HCMatcher." alt="" coords="6,5,141,35"/>
-<area shape="rect" id="node2" href="$interface_h_c_base_description.html" title="Base class for all HCDescription implementations." alt="" coords="190,5,333,35"/>
-<area shape="rect" id="node3" href="$interface_h_c_string_description.html" title="An HCDescription that is stored as a string." alt="" coords="381,5,534,35"/>
-</map>

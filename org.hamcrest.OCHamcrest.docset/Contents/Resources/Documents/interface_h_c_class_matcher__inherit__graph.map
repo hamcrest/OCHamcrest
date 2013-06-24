@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node5" href="$interface_h_c_is_instance_of.html" title="HCIsInstanceOf" alt="" coords="5,326,125,357"/>
-<area shape="rect" id="node6" href="$interface_h_c_is_type_of.html" title="HCIsTypeOf" alt="" coords="150,326,247,357"/>
-<area shape="rect" id="node2" href="$interface_h_c_base_matcher.html" title="Base class for all HCMatcher implementations." alt="" coords="71,166,192,197"/>
-<area shape="rect" id="node3" href="$protocol_h_c_matcher-p.html" title="A matcher over acceptable values." alt="" coords="75,86,188,117"/>
-<area shape="rect" id="node4" href="$protocol_h_c_self_describing-p.html" title="The ability of an object to describe itself." alt="" coords="55,6,208,37"/>
-</map>
