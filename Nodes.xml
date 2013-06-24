@@ -132,6 +132,11 @@
               <Anchor>gaf141b74c5177da00f45c49b50f867e52</Anchor>
              </Node>
              <Node>
+              <Name>isEmpty</Name>
+              <Path>group__collection__matchers.html</Path>
+              <Anchor>ga784958d508db56700898ace5d6bb5e34</Anchor>
+             </Node>
+             <Node>
               <Name>isIn</Name>
               <Path>group__collection__matchers.html</Path>
               <Anchor>ga461b9aa2f6e1983ae9039cf5ca8e90c2</Anchor>
@@ -847,17 +852,17 @@
              <Node>
               <Name>initWithMatchers:</Name>
               <Path>interface_h_c_is_collection_containing_in_any_order.html</Path>
-              <Anchor>afcd9d95c190b7da55da7e6b6df15c6ff</Anchor>
+              <Anchor>ad7c4ced06da28bdae5a1f7f08463fc6d</Anchor>
              </Node>
              <Node>
               <Name>isCollectionContainingInAnyOrder:</Name>
               <Path>interface_h_c_is_collection_containing_in_any_order.html</Path>
-              <Anchor>aa4354191223c554f07796f761a155b46</Anchor>
+              <Anchor>af0e7ce951ba70b81a95b79ca3c1647bb</Anchor>
              </Node>
              <Node>
               <Name>matchers</Name>
               <Path>interface_h_c_is_collection_containing_in_any_order.html</Path>
-              <Anchor>a11a03324454941cfc60f19b4053083a2</Anchor>
+              <Anchor>a1d677ee9c02bd3fba3a68d51d7dc4622</Anchor>
              </Node>
             </Subnodes>
            </Node>
@@ -1962,9 +1967,19 @@
               <Anchor>gadafd520091b5ddf350fc4b2fedfdffa5</Anchor>
              </Node>
              <Node>
-              <Name>HC_empty</Name>
+              <Name>isEmpty</Name>
+              <Path>group__collection__matchers.html</Path>
+              <Anchor>ga784958d508db56700898ace5d6bb5e34</Anchor>
+             </Node>
+             <Node>
+              <Name>__attribute__</Name>
               <Path>_h_c_is_empty_collection_8h.html</Path>
-              <Anchor>a9db6fcd0939cd297e2c032fb999ca692</Anchor>
+              <Anchor>a3b8a668d6ba1939dcb9dc3e5b1ce9dfe</Anchor>
+             </Node>
+             <Node>
+              <Name>HC_isEmpty</Name>
+              <Path>_h_c_is_empty_collection_8h.html</Path>
+              <Anchor>a719efdfea2aab0b43812db1a2b6cd6f8</Anchor>
              </Node>
             </Subnodes>
            </Node>
