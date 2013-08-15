@@ -19,15 +19,15 @@ static inline BOOL isLinkedToOCUnit()
 }
 
 /**
-    Create OCUnit failure
-    
-    With OCUnit's extension to NSException, this is effectively the same as
-@code
-[NSException failureInFile: [NSString stringWithUTF8String:fileName]
-                    atLine: lineNumber
-           withDescription: description]
-@endcode
-    except we use an NSInvocation so that OCUnit (SenTestingKit) does not have to be linked.
+ Create OCUnit failure
+ 
+ With OCUnit's extension to NSException, this is effectively the same as
+ @code
+ [NSException failureInFile: [NSString stringWithUTF8String:fileName]
+ atLine: lineNumber
+ withDescription: description]
+ @endcode
+ except we use an NSInvocation so that OCUnit (SenTestingKit) does not have to be linked.
  */
 static NSException *createOCUnitException(const char* fileName, int lineNumber, NSString *description)
 {
@@ -35,25 +35,29 @@ static NSException *createOCUnitException(const char* fileName, int lineNumber, 
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     SEL selector = @selector(failureInFile:atLine:withDescription:);
 #pragma clang diagnostic pop
-
+    __unsafe_unretained NSException *result = nil;
+    
     // Description expects a format string, but NSInvocation does not support varargs.
     // Mask % symbols in the string so they aren't treated as placeholders.
     description = [description stringByReplacingOccurrencesOfString:@"%"
                                                          withString:@"%%"];
-
-    NSMethodSignature *signature = [[NSException class] methodSignatureForSelector:selector];
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-    [invocation setTarget:[NSException class]];
-    [invocation setSelector:selector];
-    
     id fileArg = @(fileName);
-    [invocation setArgument:&fileArg atIndex:2];
-    [invocation setArgument:&lineNumber atIndex:3];
-    [invocation setArgument:&description atIndex:4];
     
-    [invocation invoke];
-    __unsafe_unretained NSException *result = nil;
-    [invocation getReturnValue:&result];
+    NSMethodSignature *signature = [[NSException class] methodSignatureForSelector:selector];
+    if (nil != signature) {
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+        [invocation setTarget:[NSException class]];
+        [invocation setSelector:selector];
+        
+        BOOL expected = NO;
+        [invocation setArgument:&description atIndex:2];
+        [invocation setArgument:&fileArg atIndex:3];
+        [invocation setArgument:&lineNumber atIndex:4];
+        [invocation setArgument:&expected atIndex:5];
+        
+        [invocation invoke];
+        [invocation getReturnValue:&result];
+    }
     return result;
 }
 
@@ -82,21 +86,33 @@ static NSException *createAssertThatFailure(const char *fileName, int lineNumber
 // linking in OCUnit, we simply pretend it exists on NSObject.
 @interface NSObject (HCExceptionBugHack)
 - (void)failWithException:(NSException *)exception;
+- (void)recordFailureWithDescription:(NSString *) description inFile:(NSString *) filename atLine:(NSUInteger) lineNumber expected:(BOOL) expected;
+- (void)unexistsMetod;
 @end
 
 void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
-                                           const char *fileName, int lineNumber)
+                               const char *fileName, int lineNumber)
 {
     if (![matcher matches:actual])
     {
         HCStringDescription *description = [HCStringDescription stringDescription];
         [[[description appendText:@"Expected "]
-                       appendDescriptionOf:matcher]
-                       appendText:@", but "];
+          appendDescriptionOf:matcher]
+         appendText:@", but "];
         [matcher describeMismatchOf:actual to:description];
         
         NSException *assertThatFailure = createAssertThatFailure(fileName, lineNumber,
                                                                  [description description]);
-        [testCase failWithException:assertThatFailure];
+        if ([testCase respondsToSelector:@selector(failWithException:)]) {
+            [testCase failWithException:assertThatFailure];
+        } else if ([testCase respondsToSelector:@selector(recordFailureWithDescription:inFile:atLine:expected:)]) {
+            NSNumber *n = [NSNumber numberWithInt:lineNumber];
+            [testCase recordFailureWithDescription:[description description]
+                                            inFile:[NSString stringWithUTF8String:fileName]
+                                            atLine:[n unsignedIntegerValue]
+                                          expected:NO];
+        } else {
+            [testCase unexistsMetod];
+        }
     }
 }
