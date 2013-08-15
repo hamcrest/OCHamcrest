@@ -86,7 +86,7 @@ static NSException *createAssertThatFailure(const char *fileName, int lineNumber
 // linking in OCUnit, we simply pretend it exists on NSObject.
 @interface NSObject (HCExceptionBugHack)
 - (void)failWithException:(NSException *)exception;
-- (void) recordFailureWithDescription:(NSString *) description inFile:(NSString *) filename atLine:(NSUInteger) lineNumber expected:(BOOL) expected;
+- (void)recordFailureWithDescription:(NSString *) description inFile:(NSString *) filename atLine:(NSUInteger) lineNumber expected:(BOOL) expected;
 - (void)unexistsMetod;
 @end
 
@@ -106,7 +106,6 @@ void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
         if ([testCase respondsToSelector:@selector(failWithException:)]) {
             [testCase failWithException:assertThatFailure];
         } else if ([testCase respondsToSelector:@selector(recordFailureWithDescription:inFile:atLine:expected:)]) {
-            //            [testCase recordFailureWithDescription:inFile:atLine:expected:];
             NSNumber *n = [NSNumber numberWithInt:lineNumber];
             [testCase recordFailureWithDescription:[description description]
                                             inFile:[NSString stringWithUTF8String:fileName]
