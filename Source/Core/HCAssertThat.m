@@ -13,44 +13,42 @@
 #import "HCMatcher.h"
 
 
-static inline BOOL isLinkedToOCUnit()
-{
-    return NSClassFromString(@"XCTestCase") != Nil || NSClassFromString(@"SenTestCase") != Nil;
-}
+@interface NSObject (PretendMethodsExistOnNSObjectToAvoidLinkingFrameworks)
 
-/**
-    Create OCUnit failure
-    
-    With OCUnit's extension to NSException, this is effectively the same as
-@code
-[NSException failureInFile: [NSString stringWithUTF8String:fileName]
-                    atLine: lineNumber
-           withDescription: description]
-@endcode
-    except we use an NSInvocation so that OCUnit (SenTestingKit) does not have to be linked.
- */
+// From SenTestingKit
++ (NSException *)failureInFile:(NSString *)filename
+                        atLine:(int)lineNumber
+               withDescription:(NSString *)formatString, ...;
+
+- (void)failWithException:(NSException *)exception;
+
+// From XCTest
+- (void)recordFailureWithDescription:(NSString *)description
+                              inFile:(NSString *)filename
+                              atLine:(NSUInteger)lineNumber
+                            expected:(BOOL)expected;
+
+@end
+
+
 static NSException *createOCUnitException(const char* fileName, int lineNumber, NSString *description)
 {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-    SEL selector = @selector(failureInFile:atLine:withDescription:);
-#pragma clang diagnostic pop
-
     // Description expects a format string, but NSInvocation does not support varargs.
     // Mask % symbols in the string so they aren't treated as placeholders.
     description = [description stringByReplacingOccurrencesOfString:@"%"
                                                          withString:@"%%"];
 
+    SEL selector = @selector(failureInFile:atLine:withDescription:);
     NSMethodSignature *signature = [[NSException class] methodSignatureForSelector:selector];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
     [invocation setTarget:[NSException class]];
     [invocation setSelector:selector];
-    
+
     id fileArg = @(fileName);
     [invocation setArgument:&fileArg atIndex:2];
     [invocation setArgument:&lineNumber atIndex:3];
     [invocation setArgument:&description atIndex:4];
-    
+
     [invocation invoke];
     __unsafe_unretained NSException *result = nil;
     [invocation getReturnValue:&result];
@@ -73,23 +71,6 @@ static NSString *makeStringDescribingMismatch(id matcher, id actual)
     [matcher describeMismatchOf:actual to:description];
     return [description description];
 }
-
-// As of 2010-09-09, the iPhone simulator has a bug where you can't catch
-// exceptions when they are thrown across NSInvocation boundaries. (See
-// dmaclach's comment at http://openradar.appspot.com/8081169 ) So instead of
-// using an NSInvocation to call failWithException:assertThatFailure without
-// linking in OCUnit, we simply pretend it exists on NSObject.
-@interface NSObject (HCExceptionBugHack)
-
-- (void)failWithException:(NSException *)exception;
-
-- (void)recordFailureWithDescription:(NSString *)description
-                              inFile:(NSString *)filename
-                              atLine:(NSUInteger)lineNumber
-                            expected:(BOOL)expected;
-
-@end
-
 
 static BOOL isXCTestCase(id testCase)
 {
@@ -121,17 +102,23 @@ static void signalGenericTestFailure(id testCase, const char *fileName, int line
     [testCase failWithException:exception];
 }
 
+static void signalTestFailure(id testCase, char const *fileName, int lineNumber, NSString *description)
+{
+    if (isXCTestCase(testCase))
+        signalXCTestFailure(testCase, fileName, lineNumber, description);
+    else if (isSenTestCase(testCase))
+        signalOCUnitTestFailure(testCase, fileName, lineNumber, description);
+    else
+        signalGenericTestFailure(testCase, fileName, lineNumber, description);
+}
+
 void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
-                                           const char *fileName, int lineNumber)
+                               const char *fileName, int lineNumber)
 {
     if (![matcher matches:actual])
     {
         NSString *description = makeStringDescribingMismatch(matcher, actual);
-        if (isXCTestCase(testCase))
-            signalXCTestFailure(testCase, fileName, lineNumber, description);
-        else if (isSenTestCase(testCase))
-            signalOCUnitTestFailure(testCase, fileName, lineNumber, description);
-        else
-            signalGenericTestFailure(testCase, fileName, lineNumber, description);
+        signalTestFailure(testCase, fileName, lineNumber, description);
     }
 }
+
