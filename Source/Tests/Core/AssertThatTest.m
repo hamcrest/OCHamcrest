@@ -82,12 +82,17 @@
 
 @implementation AssertThatTest
 
-- (void)testShouldBeSilentOnSuccessfulMatch
+- (void)testSuccessfulMatch_ShouldBeSilent
 {
     assertThat(@"foo", equalTo(@"foo"));
 }
 
-- (void)testAssertionErrorShouldDescribeExpectedAndActual
+- (void)assertThatResultMessage:(NSString *)resultMessage containsExpectedMessage:(NSString *)expectedMessage
+{
+    STAssertTrue([resultMessage rangeOfString:expectedMessage].location != NSNotFound, nil);
+}
+
+- (void)testOCUnitAssertionError_ShouldDescribeExpectedAndActual
 {
     NSString *expected = @"EXPECTED";
     NSString *actual = @"ACTUAL";
@@ -100,13 +105,13 @@
     }
     @catch (NSException* exception)
     {
-        STAssertTrue([[exception reason] rangeOfString:expectedMessage].location != NSNotFound, nil);
+        [self assertThatResultMessage:[exception reason] containsExpectedMessage:expectedMessage];
         return;
     }
     STFail(@"should have failed");
 }
 
-- (void)testAssertionErrorShouldCorrectlyDescribeStringsWithPercentSymbols
+- (void)testOCUnitAssertionError_ShouldCorrectlyDescribeStringsWithPercentSymbols
 {
     NSString *expected = @"%s";
     NSString *actual = @"%d";
@@ -119,7 +124,7 @@
     }
     @catch (NSException* exception)
     {
-        STAssertTrue([[exception reason] rangeOfString:expectedMessage].location != NSNotFound, nil);
+        [self assertThatResultMessage:[exception reason] containsExpectedMessage:expectedMessage];
         return;
     }
     STFail(@"should have failed");
@@ -148,3 +153,49 @@
 }
 
 @end
+
+
+@interface MockXCTestCase : SenTestCase
+@property (nonatomic, copy) NSString *failureDescription;
+@property (nonatomic, copy) NSString *failureFile;
+@property (nonatomic) NSUInteger failureLine;
+@property (nonatomic) BOOL failureExpected;
+@end
+
+@implementation MockXCTestCase
+
+- (void)recordFailureWithDescription:(NSString *)description
+                              inFile:(NSString *)filename
+                              atLine:(NSUInteger)lineNumber
+                            expected:(BOOL)expected
+{
+    self.failureDescription = description;
+    self.failureFile = filename;
+    self.failureLine = lineNumber;
+    self.failureExpected = expected;
+}
+
+- (void)assertThatResultString:(NSString *)resultString containsExpectedString:(NSString *)expectedString
+{
+    STAssertTrue([resultString rangeOfString:expectedString].location != NSNotFound, nil);
+}
+
+- (void)testXCTestCase_ShouldCaptureAssertionFailure
+{
+    // given
+    NSString *expected = @"EXPECTED";
+    NSString *actual = @"ACTUAL";
+    NSString *expectedMessage = @"Expected \"EXPECTED\", but was \"ACTUAL\"";
+
+    // when
+    assertThat(actual, equalTo(expected));
+
+    // then
+    STAssertEqualObjects(expectedMessage, self.failureDescription, nil);
+    [self assertThatResultString:self.failureFile containsExpectedString:@"/AssertThatTest.m"];
+    STAssertTrue(self.failureLine > 0, nil);
+    STAssertTrue(self.failureExpected, nil);
+}
+
+@end
+

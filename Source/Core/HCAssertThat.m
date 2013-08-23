@@ -64,16 +64,15 @@ static NSException *createGenericException(const char *fileName, int lineNumber,
     return [NSException exceptionWithName:@"Hamcrest Error" reason:failureReason userInfo:nil];
 }
 
-static NSException *createAssertThatFailure(const char *fileName, int lineNumber, NSString *description)
+static NSString *makeStringDescribingMismatch(id matcher, id actual)
 {
-    if (isLinkedToOCUnit())
-        return createOCUnitException(fileName, lineNumber, description);
-    else
-        return createGenericException(fileName, lineNumber, description);
+    HCStringDescription *description = [HCStringDescription stringDescription];
+    [[[description appendText:@"Expected "]
+            appendDescriptionOf:matcher]
+            appendText:@", but "];
+    [matcher describeMismatchOf:actual to:description];
+    return [description description];
 }
-
-
-#pragma mark -
 
 // As of 2010-09-09, the iPhone simulator has a bug where you can't catch
 // exceptions when they are thrown across NSInvocation boundaries. (See
@@ -81,22 +80,58 @@ static NSException *createAssertThatFailure(const char *fileName, int lineNumber
 // using an NSInvocation to call failWithException:assertThatFailure without
 // linking in OCUnit, we simply pretend it exists on NSObject.
 @interface NSObject (HCExceptionBugHack)
+
 - (void)failWithException:(NSException *)exception;
+
+- (void)recordFailureWithDescription:(NSString *)description
+                              inFile:(NSString *)filename
+                              atLine:(NSUInteger)lineNumber
+                            expected:(BOOL)expected;
+
 @end
+
+
+static BOOL isXCTestCase(id testCase)
+{
+    return [testCase respondsToSelector:@selector(recordFailureWithDescription:inFile:atLine:expected:)];
+}
+
+static BOOL isSenTestCase(id testCase)
+{
+    return [testCase respondsToSelector:@selector(failWithException:)];
+}
+
+static void signalXCTestFailure(id testCase, char const *fileName, int lineNumber, NSString *description)
+{
+    [testCase recordFailureWithDescription:description
+                                    inFile:[NSString stringWithUTF8String:fileName]
+                                    atLine:(NSUInteger)lineNumber
+                                  expected:YES];
+}
+
+static void signalOCUnitTestFailure(id testCase, char const *fileName, int lineNumber, NSString *description)
+{
+    NSException *exception = createOCUnitException(fileName, lineNumber, description);
+    [testCase failWithException:exception];
+}
+
+static void signalGenericTestFailure(id testCase, const char *fileName, int lineNumber, NSString *description)
+{
+    NSException *exception = createGenericException(fileName, lineNumber, description);
+    [testCase failWithException:exception];
+}
 
 void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
                                            const char *fileName, int lineNumber)
 {
     if (![matcher matches:actual])
     {
-        HCStringDescription *description = [HCStringDescription stringDescription];
-        [[[description appendText:@"Expected "]
-                       appendDescriptionOf:matcher]
-                       appendText:@", but "];
-        [matcher describeMismatchOf:actual to:description];
-        
-        NSException *assertThatFailure = createAssertThatFailure(fileName, lineNumber,
-                                                                 [description description]);
-        [testCase failWithException:assertThatFailure];
+        NSString *description = makeStringDescribingMismatch(matcher, actual);
+        if (isXCTestCase(testCase))
+            signalXCTestFailure(testCase, fileName, lineNumber, description);
+        else if (isSenTestCase(testCase))
+            signalOCUnitTestFailure(testCase, fileName, lineNumber, description);
+        else
+            signalGenericTestFailure(testCase, fileName, lineNumber, description);
     }
 }
