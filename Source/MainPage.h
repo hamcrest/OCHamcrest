@@ -17,6 +17,7 @@
     @li @ref firsttest
     @li @ref predefined
     @li @ref sugar
+    @li @ref async
     @li @ref custom
     @li @ref resources
 
@@ -201,6 +202,27 @@ assertThat(theBiscuit, equalTo(myBiscuit));
 assertThat(theBiscuit, is(equalTo(myBiscuit)));
 assertThat(theBiscuit, is(myBiscuit));
     @endcode
+
+
+    @section async Asynchronous matchers
+
+    Besides the normal @ref assertThat function OCHamcrest provides @ref willAssertThat function.
+    This function waits for a short period of time evaluating the matcher until it satisfied, or
+    a timeout occurs.
+
+    @code
+__block Biscuit* theBiscuit = nil;
+[Biscuit biscuitNamed:@"Ginger" withCompletion:^(Biscuit *biscuit){
+  theBiscuit = biscuit;
+}];
+Biscuit* myBiscuit = [Biscuit biscuitNamed:@"Ginger"];
+willAssertThat(theBiscuit, equalTo(myBiscuit));
+@endcode
+
+    Default timeout is 1 second. You can change the default timeout calling
+    @ref HC_setWillDefaultTimeout. You can recover the actual timeout using
+    @ref HC_willDefaultTimeout. These two functions do not have equivalents without
+    the namespace even if @c HC_SHORTHAND is defined.
 
 
     @section custom Writing custom matchers
