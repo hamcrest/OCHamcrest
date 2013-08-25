@@ -9,6 +9,8 @@
 
 #import "HCAssertThat.h"
 
+#import <libkern/OSAtomic.h>
+
 #import "HCStringDescription.h"
 #import "HCMatcher.h"
 
@@ -84,19 +86,63 @@ static NSException *createAssertThatFailure(const char *fileName, int lineNumber
 - (void)failWithException:(NSException *)exception;
 @end
 
+static void failMatcher(id testCase, id actual, id<HCMatcher> matcher,
+                        const char *fileName, int lineNumber)
+{
+    HCStringDescription *description = [HCStringDescription stringDescription];
+    [[[description appendText:@"Expected "]
+                   appendDescriptionOf:matcher]
+                   appendText:@", but "];
+    [matcher describeMismatchOf:actual to:description];
+
+    NSException *assertThatFailure = createAssertThatFailure(fileName, lineNumber,
+                                                             [description description]);
+    [testCase failWithException:assertThatFailure];
+}
+
 void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
                                            const char *fileName, int lineNumber)
 {
     if (![matcher matches:actual])
     {
-        HCStringDescription *description = [HCStringDescription stringDescription];
-        [[[description appendText:@"Expected "]
-                       appendDescriptionOf:matcher]
-                       appendText:@", but "];
-        [matcher describeMismatchOf:actual to:description];
-        
-        NSException *assertThatFailure = createAssertThatFailure(fileName, lineNumber,
-                                                                 [description description]);
-        [testCase failWithException:assertThatFailure];
+        failMatcher(testCase, actual, matcher, fileName, lineNumber);
     }
+}
+
+void HC_willAssertThatWithLocation(id testCase, id (^actualBlock)(void), id<HCMatcher> matcher,
+                                   const char *fileName, int lineNumber)
+{
+    BOOL matchResult = NO;
+    NSTimeInterval timeout = HC_willDefaultTimeout();
+    NSDate *expiryDate = [NSDate dateWithTimeIntervalSinceNow:timeout];
+
+    id actual = actualBlock();
+    while (1)
+    {
+        matchResult = [matcher matches:actual];
+        if (matchResult || [(NSDate *)[NSDate date] compare:expiryDate] == NSOrderedDescending)
+            break;
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01]];
+        OSMemoryBarrier();
+        actual = actualBlock();
+    }
+
+    if (!matchResult)
+    {
+        failMatcher(testCase, actual, matcher, fileName, lineNumber);
+    }
+}
+
+
+
+static NSTimeInterval sWillDefaultTimeout = 1.0; // seconds
+
+NSTimeInterval HC_willDefaultTimeout()
+{
+    return sWillDefaultTimeout;
+}
+
+void HC_setWillDefaultTimeout(NSTimeInterval defaultTimeout)
+{
+    sWillDefaultTimeout = defaultTimeout;
 }

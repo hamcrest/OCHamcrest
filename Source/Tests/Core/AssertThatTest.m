@@ -148,3 +148,52 @@
 }
 
 @end
+
+#pragma mark -
+
+@interface WillAssertThatTest : SenTestCase
+@end
+
+@implementation WillAssertThatTest
+
+- (void)testShouldBehaveAsAssertThatForNonAsyncMatches
+{
+    willAssertThat(@"foo", equalTo(@"foo"));
+}
+
+- (void)testWaitForMatchesToSucceed
+{
+    __block NSString *foo = @"";
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 10*NSEC_PER_MSEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        foo = @"foo";
+    });
+
+    willAssertThat(foo, equalTo(@"foo"));
+}
+
+- (void)testTimeoutsWhenMatchesDoNotSucceed
+{
+    NSString *expected = @"EXPECTED";
+    __block NSString *actual = @"ACTUAL";
+    NSString *expectedMessage = @"Expected \"EXPECTED\", but was \"SOMETHING ELSE\"";
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 10*NSEC_PER_MSEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        actual = @"SOMETHING ELSE";
+    });
+
+    @try
+    {
+        [self raiseAfterFailure];
+        willAssertThat(actual, equalTo(expected));
+    }
+    @catch (NSException* exception)
+    {
+        NSLog(@"%@", [exception reason]);
+        STAssertTrue([[exception reason] rangeOfString:expectedMessage].location != NSNotFound, nil);
+        return;
+    }
+    STFail(@"should have failed");
+}
+
+@end

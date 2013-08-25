@@ -205,6 +205,28 @@ The last form is allowed since ``is`` wraps non-matcher arguments with
 shortcuts, wrapping non-matcher arguments in ``equalTo``.
 
 
+Asynchronous matchers
+=====================
+
+Besides the normal ``assertThat`` function OCHamcrest provides
+``willAssertThat`` function. This function waits for a short period of time
+evaluating the matcher until it satisfied, or a timeout occurs.
+
+```obj-c
+__block Biscuit* theBiscuit = nil;
+[Biscuit biscuitNamed:@"Ginger" withCompletion:^(Biscuit *biscuit){
+  theBiscuit = biscuit;
+}];
+Biscuit* myBiscuit = [Biscuit biscuitNamed:@"Ginger"];
+willAssertThat(theBiscuit, equalTo(myBiscuit));
+```
+
+Default timeout is 1 second. You can change the default timeout calling
+``HC_setWillDefaultTimeout(yourTimeout)`` where ``yourTimeout`` is your
+desidered timeout in seconds. You can recover the actual timeout using
+``HC_willDefaultTimeout``. These two functions do not have equivalents without
+the namespace even if ``HC_SHORTHAND`` is defined.
+
 Writing custom matchers
 =======================
 
