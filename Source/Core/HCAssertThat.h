@@ -34,6 +34,8 @@ OBJC_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher>
     
     In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
     @c HC_assertThat instead.
+ 
+    @c assertThat is a specific case of assertThatAfter with timeout 0.
     
     @ingroup integration
  */

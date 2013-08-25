@@ -230,6 +230,14 @@
 		088FB0B2136A70B800C191E1 /* HCStringContainsInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AE136A70B800C191E1 /* HCStringContainsInOrder.m */; };
 		08EE4340165FFE3F006AB8E1 /* HCAssertThat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022D13440A83001B439B /* HCAssertThat.m */; };
 		08EE4341165FFE47006AB8E1 /* HCBaseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022F13440A83001B439B /* HCBaseDescription.m */; };
+		4021356F17CA7F4A000A23E1 /* MockRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 4021356E17CA7F4A000A23E1 /* MockRun.m */; };
+		4021357017CA7F4A000A23E1 /* MockRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 4021356E17CA7F4A000A23E1 /* MockRun.m */; };
+		4021357317CA82F4000A23E1 /* AssertThatAfterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4021357217CA82F4000A23E1 /* AssertThatAfterTest.m */; };
+		4021357417CA82F4000A23E1 /* AssertThatAfterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4021357217CA82F4000A23E1 /* AssertThatAfterTest.m */; };
+		4021357817CA831B000A23E1 /* HCAssertThatAfter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4021357617CA831B000A23E1 /* HCAssertThatAfter.h */; };
+		4021357917CA831B000A23E1 /* HCAssertThatAfter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4021357617CA831B000A23E1 /* HCAssertThatAfter.h */; };
+		4021357A17CA831B000A23E1 /* HCAssertThatAfter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4021357717CA831B000A23E1 /* HCAssertThatAfter.m */; };
+		4021357B17CA831B000A23E1 /* HCAssertThatAfter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4021357717CA831B000A23E1 /* HCAssertThatAfter.m */; };
 		5F2773401436F50C00B9683A /* HCConformsToProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F27733E1436F50C00B9683A /* HCConformsToProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F2773411436F50C00B9683A /* HCConformsToProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F27733F1436F50C00B9683A /* HCConformsToProtocol.m */; };
 		5F2773471436FA9D00B9683A /* HCConformsToProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F27733F1436F50C00B9683A /* HCConformsToProtocol.m */; };
@@ -417,6 +425,11 @@
 		08C7868215843B7200A7FA46 /* MainPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPage.h; sourceTree = "<group>"; };
 		08C7868315843B7900A7FA46 /* CustomMatchers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomMatchers.h; sourceTree = "<group>"; };
 		08F39BAA1711426200745958 /* CHANGES.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = CHANGES.txt; path = ../CHANGES.txt; sourceTree = "<group>"; };
+		4021356D17CA7F4A000A23E1 /* MockRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockRun.h; sourceTree = "<group>"; };
+		4021356E17CA7F4A000A23E1 /* MockRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockRun.m; sourceTree = "<group>"; };
+		4021357217CA82F4000A23E1 /* AssertThatAfterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssertThatAfterTest.m; sourceTree = "<group>"; };
+		4021357617CA831B000A23E1 /* HCAssertThatAfter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAssertThatAfter.h; sourceTree = "<group>"; };
+		4021357717CA831B000A23E1 /* HCAssertThatAfter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAssertThatAfter.m; sourceTree = "<group>"; };
 		5F27733E1436F50C00B9683A /* HCConformsToProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCConformsToProtocol.h; sourceTree = "<group>"; };
 		5F27733F1436F50C00B9683A /* HCConformsToProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCConformsToProtocol.m; sourceTree = "<group>"; };
 		5F2773441436F81000B9683A /* ConformsToProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConformsToProtocolTest.m; sourceTree = "<group>"; };
@@ -471,12 +484,15 @@
 		082E7C2813FF676E004A22FE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				4021357117CA82F4000A23E1 /* Asynchronous */,
 				082E7C2913FF676E004A22FE /* AbstractMatcherTest.h */,
 				082E7C2A13FF676E004A22FE /* AbstractMatcherTest.m */,
 				082E7C2B13FF676E004A22FE /* AssertThatTest.m */,
 				082E7C2C13FF676E004A22FE /* BaseMatcherTest.m */,
 				082E7C2D13FF676E004A22FE /* InvocationMatcherTest.m */,
 				082E7C2E13FF676E004A22FE /* StringDescriptionTest.m */,
+				4021356D17CA7F4A000A23E1 /* MockRun.h */,
+				4021356E17CA7F4A000A23E1 /* MockRun.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -576,6 +592,7 @@
 		0876021613440A83001B439B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				4021357517CA831B000A23E1 /* Asynchronous */,
 				0876022C13440A83001B439B /* HCAssertThat.h */,
 				0876022D13440A83001B439B /* HCAssertThat.m */,
 				0876022E13440A83001B439B /* HCBaseDescription.h */,
@@ -813,6 +830,23 @@
 			name = "Scripts & Docs";
 			sourceTree = "<group>";
 		};
+		4021357117CA82F4000A23E1 /* Asynchronous */ = {
+			isa = PBXGroup;
+			children = (
+				4021357217CA82F4000A23E1 /* AssertThatAfterTest.m */,
+			);
+			path = Asynchronous;
+			sourceTree = "<group>";
+		};
+		4021357517CA831B000A23E1 /* Asynchronous */ = {
+			isa = PBXGroup;
+			children = (
+				4021357617CA831B000A23E1 /* HCAssertThatAfter.h */,
+				4021357717CA831B000A23E1 /* HCAssertThatAfter.m */,
+			);
+			path = Asynchronous;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -820,6 +854,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4021357917CA831B000A23E1 /* HCAssertThatAfter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -877,6 +912,7 @@
 				5F2773401436F50C00B9683A /* HCConformsToProtocol.h in Headers */,
 				BB33323D0F9D992AE94980EE /* HCIsTypeOf.h in Headers */,
 				0850A4521716624B0019BBE0 /* HCClassMatcher.h in Headers */,
+				4021357817CA831B000A23E1 /* HCAssertThatAfter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1117,6 +1153,7 @@
 				5F2773471436FA9D00B9683A /* HCConformsToProtocol.m in Sources */,
 				BB3336CE4A9F65ABD486550E /* HCIsTypeOf.m in Sources */,
 				0850A4551716624B0019BBE0 /* HCClassMatcher.m in Sources */,
+				4021357B17CA831B000A23E1 /* HCAssertThatAfter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1168,6 +1205,8 @@
 				5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */,
 				BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */,
 				0850A44F17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
+				4021357017CA7F4A000A23E1 /* MockRun.m in Sources */,
+				4021357417CA82F4000A23E1 /* AssertThatAfterTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1221,6 +1260,7 @@
 				5F2773411436F50C00B9683A /* HCConformsToProtocol.m in Sources */,
 				BB3330F94E0ADAF09D41A922 /* HCIsTypeOf.m in Sources */,
 				0850A4541716624B0019BBE0 /* HCClassMatcher.m in Sources */,
+				4021357A17CA831B000A23E1 /* HCAssertThatAfter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1272,6 +1312,8 @@
 				5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */,
 				BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */,
 				0850A44E17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
+				4021356F17CA7F4A000A23E1 /* MockRun.m in Sources */,
+				4021357317CA82F4000A23E1 /* AssertThatAfterTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
