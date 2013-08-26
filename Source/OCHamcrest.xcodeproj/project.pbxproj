@@ -243,11 +243,19 @@
 		BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */; };
 		BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */; };
 		BB33308E9050EF7A79EA21FB /* HCTestFailureRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3334CF8E8714138BA28B19 /* HCTestFailureRouter.h */; };
+		BB3330F0EB686F6BF0DBE31F /* HCTestFailureRouter_XCTest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3339F456D5A157E265B011 /* HCTestFailureRouter_XCTest.h */; };
 		BB3330F94E0ADAF09D41A922 /* HCIsTypeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333D652BE69E0B746F7770 /* HCIsTypeOf.m */; };
 		BB33323D0F9D992AE94980EE /* HCIsTypeOf.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3331FAF4BE7F6EAB92BB57 /* HCIsTypeOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB3332660D9860017F18A6A5 /* HCTestFailureRouter_OCUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333FBD2FE445F0453E391A /* HCTestFailureRouter_OCUnit.h */; };
+		BB3332A945020A5037AE0E33 /* HCTestFailureRouter_OCUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A2C23798C7957870BC3 /* HCTestFailureRouter_OCUnit.m */; };
+		BB33341B847B91E47A533E76 /* HCTestFailureRouter_XCTest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3339F456D5A157E265B011 /* HCTestFailureRouter_XCTest.h */; };
 		BB3334AD6AB2EEF6E2D58950 /* HCTestFailureRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3334CF8E8714138BA28B19 /* HCTestFailureRouter.h */; };
+		BB3335AD54969882C3ADC4C2 /* HCTestFailureRouter_OCUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A2C23798C7957870BC3 /* HCTestFailureRouter_OCUnit.m */; };
+		BB33366A7CD11F5048B0BCE1 /* HCTestFailureRouter_OCUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333FBD2FE445F0453E391A /* HCTestFailureRouter_OCUnit.h */; };
 		BB3336B02A1E78B343B063A4 /* HCTestFailureRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A2E255DB5CC139240D1 /* HCTestFailureRouter.m */; };
 		BB3336CE4A9F65ABD486550E /* HCIsTypeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333D652BE69E0B746F7770 /* HCIsTypeOf.m */; };
+		BB3337752DEE54978C3C993D /* HCTestFailureRouter_XCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33350FA23A29C7EF2446B3 /* HCTestFailureRouter_XCTest.m */; };
+		BB333C5ECAEE600BD9D12147 /* HCTestFailureRouter_XCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33350FA23A29C7EF2446B3 /* HCTestFailureRouter_XCTest.m */; };
 		BB333EC4C14491E3AA704A08 /* HCTestFailureRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A2E255DB5CC139240D1 /* HCTestFailureRouter.m */; };
 /* End PBXBuildFile section */
 
@@ -429,9 +437,13 @@
 		77C7B8761429361200DE60CC /* HasPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasPropertyTest.m; sourceTree = "<group>"; };
 		BB3331FAF4BE7F6EAB92BB57 /* HCIsTypeOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsTypeOf.h; sourceTree = "<group>"; };
 		BB3334CF8E8714138BA28B19 /* HCTestFailureRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailureRouter.h; sourceTree = "<group>"; };
+		BB33350FA23A29C7EF2446B3 /* HCTestFailureRouter_XCTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureRouter_XCTest.m; sourceTree = "<group>"; };
 		BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTypeOfTest.m; sourceTree = "<group>"; };
+		BB3339F456D5A157E265B011 /* HCTestFailureRouter_XCTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailureRouter_XCTest.h; sourceTree = "<group>"; };
+		BB333A2C23798C7957870BC3 /* HCTestFailureRouter_OCUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureRouter_OCUnit.m; sourceTree = "<group>"; };
 		BB333A2E255DB5CC139240D1 /* HCTestFailureRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureRouter.m; sourceTree = "<group>"; };
 		BB333D652BE69E0B746F7770 /* HCIsTypeOf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsTypeOf.m; sourceTree = "<group>"; };
+		BB333FBD2FE445F0453E391A /* HCTestFailureRouter_OCUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailureRouter_OCUnit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -595,6 +607,10 @@
 				0876023613440A83001B439B /* HCStringDescription.m */,
 				BB333A2E255DB5CC139240D1 /* HCTestFailureRouter.m */,
 				BB3334CF8E8714138BA28B19 /* HCTestFailureRouter.h */,
+				BB333A2C23798C7957870BC3 /* HCTestFailureRouter_OCUnit.m */,
+				BB333FBD2FE445F0453E391A /* HCTestFailureRouter_OCUnit.h */,
+				BB33350FA23A29C7EF2446B3 /* HCTestFailureRouter_XCTest.m */,
+				BB3339F456D5A157E265B011 /* HCTestFailureRouter_XCTest.h */,
 				0876023713440A83001B439B /* Helpers */,
 			);
 			path = Core;
@@ -829,6 +845,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB33308E9050EF7A79EA21FB /* HCTestFailureRouter.h in Headers */,
+				BB33366A7CD11F5048B0BCE1 /* HCTestFailureRouter_OCUnit.h in Headers */,
+				BB3330F0EB686F6BF0DBE31F /* HCTestFailureRouter_XCTest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,6 +905,8 @@
 				BB33323D0F9D992AE94980EE /* HCIsTypeOf.h in Headers */,
 				0850A4521716624B0019BBE0 /* HCClassMatcher.h in Headers */,
 				BB3334AD6AB2EEF6E2D58950 /* HCTestFailureRouter.h in Headers */,
+				BB3332660D9860017F18A6A5 /* HCTestFailureRouter_OCUnit.h in Headers */,
+				BB33341B847B91E47A533E76 /* HCTestFailureRouter_XCTest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1128,6 +1148,8 @@
 				BB3336CE4A9F65ABD486550E /* HCIsTypeOf.m in Sources */,
 				0850A4551716624B0019BBE0 /* HCClassMatcher.m in Sources */,
 				BB3336B02A1E78B343B063A4 /* HCTestFailureRouter.m in Sources */,
+				BB3335AD54969882C3ADC4C2 /* HCTestFailureRouter_OCUnit.m in Sources */,
+				BB333C5ECAEE600BD9D12147 /* HCTestFailureRouter_XCTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1233,6 +1255,8 @@
 				BB3330F94E0ADAF09D41A922 /* HCIsTypeOf.m in Sources */,
 				0850A4541716624B0019BBE0 /* HCClassMatcher.m in Sources */,
 				BB333EC4C14491E3AA704A08 /* HCTestFailureRouter.m in Sources */,
+				BB3332A945020A5037AE0E33 /* HCTestFailureRouter_OCUnit.m in Sources */,
+				BB3337752DEE54978C3C993D /* HCTestFailureRouter_XCTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
