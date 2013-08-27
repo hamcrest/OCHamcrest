@@ -4,6 +4,11 @@
 @protocol HCTestFailureRouter <NSObject>
 
 /**
+    Answer YES if this class will handle on error on the given test case.
+ */
++ (BOOL)willHandleTestCase:(id)testCase;
+
+/**
     Signal test failure at specific location.
  */
 - (void)signalFailureInTestCase:(id)testCase

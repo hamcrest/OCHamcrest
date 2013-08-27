@@ -3,7 +3,10 @@
 
 @implementation HCTestFailureRouter_Generic
 
-#pragma mark HCTestFailureRouter
++ (BOOL)willHandleTestCase:(id)testCase
+{
+    return YES;
+}
 
 - (void)signalFailureInTestCase:(id)testCase
                        fileName:(const char *)fileName
