@@ -11,8 +11,8 @@
 
 #import "HCStringDescription.h"
 #import "HCMatcher.h"
-#import "HCTestFailureRouter.h"
-#import "HCTestFailureRouterFactory.h"
+#import "HCTestFailureHandler.h"
+#import "HCTestFailureHandlerFactory.h"
 
 
 static NSString *makeStringDescribingMismatch(id matcher, id actual)
@@ -31,7 +31,7 @@ void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
     if (![matcher matches:actual])
     {
         NSString *description = makeStringDescribingMismatch(matcher, actual);
-        id <HCTestFailureRouter> failureRouter = [HCTestFailureRouterFactory routerForTestCaseType:testCase];
+        id <HCTestFailureHandler> failureRouter = [HCTestFailureHandlerFactory routerForTestCaseType:testCase];
         [failureRouter signalFailureInTestCase:testCase fileName:fileName lineNumber:lineNumber description:description];
     }
 }

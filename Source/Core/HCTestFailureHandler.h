@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 
-@protocol HCTestFailureRouter <NSObject>
+@protocol HCTestFailureHandler <NSObject>
 
 /**
     Answer YES if this class will handle on error on the given test case.

@@ -1,4 +1,4 @@
-#import "HCTestFailureRouter_OCUnit.h"
+#import "HCSenTestFailureHandler.h"
 
 
 @interface NSObject (PretendMethodsExistOnNSObjectToAvoidLinkingSenTestingKit)
@@ -12,7 +12,7 @@
 @end
 
 
-@implementation HCTestFailureRouter_OCUnit
+@implementation HCSenTestFailureHandler
 
 + (BOOL)willHandleTestCase:(id)testCase
 {

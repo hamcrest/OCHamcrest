@@ -1,4 +1,4 @@
-#import "HCTestFailureRouter_XCTest.h"
+#import "HCXCTestFailureHandler.h"
 
 
 @interface NSObject (PretendMethodExistsOnNSObjectToAvoidLinkingXCTest)
@@ -11,7 +11,7 @@
 @end
 
 
-@implementation HCTestFailureRouter_XCTest
+@implementation HCXCTestFailureHandler
 
 + (BOOL)willHandleTestCase:(id)testCase
 {

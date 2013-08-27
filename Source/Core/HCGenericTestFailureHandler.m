@@ -1,7 +1,7 @@
-#import "HCTestFailureRouter_Generic.h"
+#import "HCGenericTestFailureHandler.h"
 
 
-@implementation HCTestFailureRouter_Generic
+@implementation HCGenericTestFailureHandler
 
 + (BOOL)willHandleTestCase:(id)testCase
 {
