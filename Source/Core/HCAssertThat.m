@@ -17,16 +17,6 @@
 #import "HCTestFailure.h"
 
 
-static NSString *makeStringDescribingMismatch(id matcher, id actual)
-{
-    HCStringDescription *description = [HCStringDescription stringDescription];
-    [[[description appendText:@"Expected "]
-            appendDescriptionOf:matcher]
-            appendText:@", but "];
-    [matcher describeMismatchOf:actual to:description];
-    return [description description];
-}
-
 static id <HCTestFailureHandler> makeFailureHandlerChain()
 {
     HCXCTestFailureHandler *xctestHandler = [[HCXCTestFailureHandler alloc] init];
@@ -39,16 +29,28 @@ static id <HCTestFailureHandler> makeFailureHandlerChain()
     return xctestHandler;
 }
 
+static NSString *describeMismatch(id matcher, id actual)
+{
+    HCStringDescription *description = [HCStringDescription stringDescription];
+    [[[description appendText:@"Expected "]
+            appendDescriptionOf:matcher]
+            appendText:@", but "];
+    [matcher describeMismatchOf:actual to:description];
+    return [description description];
+}
+
 void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
                                const char *fileName, int lineNumber)
 {
     if (![matcher matches:actual])
     {
-        NSString *description = makeStringDescribingMismatch(matcher, actual);
         static id <HCTestFailureHandler> chain = nil;
         if (!chain)
             chain = makeFailureHandlerChain();
-        HCTestFailure *failure = [[HCTestFailure alloc] initWithTestCase:testCase fileName:[NSString stringWithUTF8String:fileName] lineNumber:(NSUInteger)lineNumber reason:description];
+        HCTestFailure *failure = [[HCTestFailure alloc] initWithTestCase:testCase
+                                                                fileName:[NSString stringWithUTF8String:fileName]
+                                                              lineNumber:(NSUInteger)lineNumber
+                                                                  reason:describeMismatch(matcher, actual)];
         [chain signalFailure:failure];
     }
 }
