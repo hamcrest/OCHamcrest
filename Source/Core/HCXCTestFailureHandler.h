@@ -2,7 +2,4 @@
 
 
 @interface HCXCTestFailureHandler : NSObject <HCTestFailureHandler>
-
-+ (BOOL)willHandleTestCase:(id)testCase;
-
 @end

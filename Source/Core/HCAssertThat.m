@@ -11,8 +11,9 @@
 
 #import "HCStringDescription.h"
 #import "HCMatcher.h"
-#import "HCTestFailureHandler.h"
-#import "HCTestFailureHandlerFactory.h"
+#import "HCGenericTestFailureHandler.h"
+#import "HCSenTestFailureHandler.h"
+#import "HCXCTestFailureHandler.h"
 
 
 static NSString *makeStringDescribingMismatch(id matcher, id actual)
@@ -25,14 +26,28 @@ static NSString *makeStringDescribingMismatch(id matcher, id actual)
     return [description description];
 }
 
+static id <HCTestFailureHandler> makeFailureHandlerChain()
+{
+    HCXCTestFailureHandler *xctestHandler = [[HCXCTestFailureHandler alloc] init];
+    HCSenTestFailureHandler *ocunitHandler = [[HCSenTestFailureHandler alloc] init];
+    HCGenericTestFailureHandler *genericHandler = [[HCGenericTestFailureHandler alloc] init];
+
+    xctestHandler.successor = ocunitHandler;
+    ocunitHandler.successor = genericHandler;
+
+    return xctestHandler;
+}
+
 void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
                                const char *fileName, int lineNumber)
 {
     if (![matcher matches:actual])
     {
         NSString *description = makeStringDescribingMismatch(matcher, actual);
-        id <HCTestFailureHandler> failureRouter = [HCTestFailureHandlerFactory routerForTestCaseType:testCase];
-        [failureRouter signalFailureInTestCase:testCase fileName:fileName lineNumber:lineNumber description:description];
+        static id <HCTestFailureHandler> chain = nil;
+        if (!chain)
+            chain = makeFailureHandlerChain();
+        [chain signalFailureInTestCase:testCase fileName:fileName lineNumber:lineNumber description:description];
     }
 }
 

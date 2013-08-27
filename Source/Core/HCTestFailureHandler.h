@@ -3,10 +3,7 @@
 
 @protocol HCTestFailureHandler <NSObject>
 
-/**
-    Answer YES if this class will handle on error on the given test case.
- */
-+ (BOOL)willHandleTestCase:(id)testCase;
+@property (nonatomic, strong) id <HCTestFailureHandler> successor;
 
 /**
     Signal test failure at specific location.

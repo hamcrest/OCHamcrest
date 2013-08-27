@@ -14,18 +14,27 @@
 
 @implementation HCSenTestFailureHandler
 
-+ (BOOL)willHandleTestCase:(id)testCase
-{
-    return [testCase respondsToSelector:@selector(failWithException:)];
-}
+@synthesize successor = _successor;
 
 - (void)signalFailureInTestCase:(id)testCase
                        fileName:(const char *)fileName
                      lineNumber:(int)lineNumber
                     description:(NSString *)description
 {
-    NSException *exception = [self createExceptionForFileName:fileName lineNumber:lineNumber description:description];
-    [testCase failWithException:exception];
+    if ([self willHandleTestCase:testCase])
+    {
+        NSException *exception = [self createExceptionForFileName:fileName lineNumber:lineNumber description:description];
+        [testCase failWithException:exception];
+    }
+    else
+    {
+        [self.successor signalFailureInTestCase:testCase fileName:fileName lineNumber:lineNumber description:description];
+    }
+}
+
+- (BOOL)willHandleTestCase:(id)testCase
+{
+    return [testCase respondsToSelector:@selector(failWithException:)];
 }
 
 - (NSException *)createExceptionForFileName:(const char *)fileName

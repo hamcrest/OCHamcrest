@@ -3,10 +3,7 @@
 
 @implementation HCGenericTestFailureHandler
 
-+ (BOOL)willHandleTestCase:(id)testCase
-{
-    return YES;
-}
+@synthesize successor = _successor;
 
 - (void)signalFailureInTestCase:(id)testCase
                        fileName:(const char *)fileName
@@ -25,4 +22,5 @@
                                                          fileName, lineNumber, description];
     return [NSException exceptionWithName:@"Hamcrest Error" reason:failureReason userInfo:nil];
 }
+
 @end
