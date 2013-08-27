@@ -1,20 +1,7 @@
 #import "HCTestFailureRouter.h"
 
-#import "HCTestFailureRouter_OCUnit.h"
-#import "HCTestFailureRouter_XCTest.h"
-
 
 @implementation HCTestFailureRouter
-
-+ (instancetype)routerForTestCaseType:(id)testCase
-{
-    if ([HCTestFailureRouter_XCTest willHandleTestCase:testCase])
-        return [[HCTestFailureRouter_XCTest alloc] init];
-    else if ([HCTestFailureRouter_OCUnit willHandleTestCase:testCase])
-        return [[HCTestFailureRouter_OCUnit alloc] init];
-    else
-        return [[self alloc] init];
-}
 
 - (void)signalFailureInTestCase:(id)testCase
                        fileName:(const char *)fileName
