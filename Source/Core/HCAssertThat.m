@@ -14,6 +14,7 @@
 #import "HCGenericTestFailureHandler.h"
 #import "HCSenTestFailureHandler.h"
 #import "HCXCTestFailureHandler.h"
+#import "HCTestFailure.h"
 
 
 static NSString *makeStringDescribingMismatch(id matcher, id actual)
@@ -47,7 +48,8 @@ void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
         static id <HCTestFailureHandler> chain = nil;
         if (!chain)
             chain = makeFailureHandlerChain();
-        [chain signalFailureInTestCase:testCase fileName:fileName lineNumber:lineNumber description:description];
+        HCTestFailure *failure = [[HCTestFailure alloc] initWithTestCase:testCase fileName:[NSString stringWithUTF8String:fileName] lineNumber:(NSUInteger)lineNumber reason:description];
+        [chain signalFailure:failure];
     }
 }
 

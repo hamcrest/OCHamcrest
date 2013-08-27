@@ -1,25 +1,21 @@
 #import "HCGenericTestFailureHandler.h"
+#import "HCTestFailure.h"
 
 
 @implementation HCGenericTestFailureHandler
 
 @synthesize successor = _successor;
 
-- (void)signalFailureInTestCase:(id)testCase
-                       fileName:(const char *)fileName
-                     lineNumber:(int)lineNumber
-                    description:(NSString *)description
+- (void)signalFailure:(HCTestFailure *)failure
 {
-    NSException *exception = [self createExceptionForFileName:fileName lineNumber:lineNumber description:description];
+    NSException *exception = [self createExceptionForFailure:failure];
     [exception raise];
 }
 
-- (NSException *)createExceptionForFileName:(const char *)fileName
-                                 lineNumber:(int)lineNumber
-                                description:(NSString *)description
+- (NSException *)createExceptionForFailure:(HCTestFailure *)failure
 {
-    NSString *failureReason = [NSString stringWithFormat:@"%s:%d: matcher error: %@",
-                                                         fileName, lineNumber, description];
+    NSString *failureReason = [NSString stringWithFormat:@"%@:%lu: matcher error: %@",
+                                                         failure.fileName, failure.lineNumber, failure.reason];
     return [NSException exceptionWithName:@"Hamcrest Error" reason:failureReason userInfo:nil];
 }
 

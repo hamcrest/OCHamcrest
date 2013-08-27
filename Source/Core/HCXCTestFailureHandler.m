@@ -1,4 +1,5 @@
 #import "HCXCTestFailureHandler.h"
+#import "HCTestFailure.h"
 
 
 @interface NSObject (PretendMethodExistsOnNSObjectToAvoidLinkingXCTest)
@@ -15,21 +16,18 @@
 
 @synthesize successor = _successor;
 
-- (void)signalFailureInTestCase:(id)testCase
-                       fileName:(const char *)fileName
-                     lineNumber:(int)lineNumber
-                    description:(NSString *)description
+- (void)signalFailure:(HCTestFailure *)failure
 {
-    if ([self willHandleTestCase:testCase])
+    if ([self willHandleTestCase:failure.testCase])
     {
-        [testCase recordFailureWithDescription:description
-                                        inFile:[NSString stringWithUTF8String:fileName]
-                                        atLine:(NSUInteger)lineNumber
-                                      expected:YES];
+        [failure.testCase recordFailureWithDescription:failure.reason
+                                                inFile:failure.fileName
+                                                atLine:failure.lineNumber
+                                              expected:YES];
     }
     else
     {
-        [self.successor signalFailureInTestCase:testCase fileName:fileName lineNumber:lineNumber description:description];
+        [self.successor signalFailure:failure];
     }
 }
 

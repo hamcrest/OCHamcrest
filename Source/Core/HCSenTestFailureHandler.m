@@ -1,4 +1,5 @@
 #import "HCSenTestFailureHandler.h"
+#import "HCTestFailure.h"
 
 
 @interface NSObject (PretendMethodsExistOnNSObjectToAvoidLinkingSenTestingKit)
@@ -16,19 +17,16 @@
 
 @synthesize successor = _successor;
 
-- (void)signalFailureInTestCase:(id)testCase
-                       fileName:(const char *)fileName
-                     lineNumber:(int)lineNumber
-                    description:(NSString *)description
+- (void)signalFailure:(HCTestFailure *)failure
 {
-    if ([self willHandleTestCase:testCase])
+    if ([self willHandleTestCase:failure.testCase])
     {
-        NSException *exception = [self createExceptionForFileName:fileName lineNumber:lineNumber description:description];
-        [testCase failWithException:exception];
+        NSException *exception = [self createExceptionForFailure:failure];
+        [failure.testCase failWithException:exception];
     }
     else
     {
-        [self.successor signalFailureInTestCase:testCase fileName:fileName lineNumber:lineNumber description:description];
+        [self.successor signalFailure:failure];
     }
 }
 
@@ -37,14 +35,15 @@
     return [testCase respondsToSelector:@selector(failWithException:)];
 }
 
-- (NSException *)createExceptionForFileName:(const char *)fileName
-                                 lineNumber:(int)lineNumber
-                                description:(NSString *)description
+- (NSException *)createExceptionForFailure:(HCTestFailure *)failure
 {
+    NSString *fileName = failure.fileName;
+    NSUInteger lineNumber = failure.lineNumber;
+
     // Description expects a format string, but NSInvocation does not support varargs.
     // Mask % symbols in the string so they aren't treated as placeholders.
-    description = [description stringByReplacingOccurrencesOfString:@"%"
-                                                         withString:@"%%"];
+    NSString *description = [failure.reason stringByReplacingOccurrencesOfString:@"%"
+                                                                      withString:@"%%"];
 
     SEL selector = @selector(failureInFile:atLine:withDescription:);
     NSMethodSignature *signature = [[NSException class] methodSignatureForSelector:selector];
@@ -52,8 +51,7 @@
     [invocation setTarget:[NSException class]];
     [invocation setSelector:selector];
 
-    id fileArg = @(fileName);
-    [invocation setArgument:&fileArg atIndex:2];
+    [invocation setArgument:&fileName atIndex:2];
     [invocation setArgument:&lineNumber atIndex:3];
     [invocation setArgument:&description atIndex:4];
 
