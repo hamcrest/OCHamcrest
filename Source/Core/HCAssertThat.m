@@ -31,7 +31,7 @@ void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
     if (![matcher matches:actual])
     {
         NSString *description = makeStringDescribingMismatch(matcher, actual);
-        HCTestFailureRouter *failureRouter = [HCTestFailureRouterFactory routerForTestCaseType:testCase];
+        id <HCTestFailureRouter> failureRouter = [HCTestFailureRouterFactory routerForTestCaseType:testCase];
         [failureRouter signalFailureInTestCase:testCase fileName:fileName lineNumber:lineNumber description:description];
     }
 }

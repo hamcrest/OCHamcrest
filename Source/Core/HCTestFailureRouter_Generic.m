@@ -1,7 +1,9 @@
-#import "HCTestFailureRouter.h"
+#import "HCTestFailureRouter_Generic.h"
 
 
-@implementation HCTestFailureRouter
+@implementation HCTestFailureRouter_Generic
+
+#pragma mark HCTestFailureRouter
 
 - (void)signalFailureInTestCase:(id)testCase
                        fileName:(const char *)fileName
@@ -20,5 +22,4 @@
                                                          fileName, lineNumber, description];
     return [NSException exceptionWithName:@"Hamcrest Error" reason:failureReason userInfo:nil];
 }
-
 @end

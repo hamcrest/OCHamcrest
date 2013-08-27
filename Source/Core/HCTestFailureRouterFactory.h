@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@class HCTestFailureRouter;
+@protocol HCTestFailureRouter;
 
 
 /**
@@ -11,12 +11,8 @@
 @interface HCTestFailureRouterFactory : NSObject
 
 /**
-    Return HCTestFailureRouter subclass appropriate for given test case.
- 
-    @param testCase  Test case for arbitrary test runner.
- 
-    @return HCTestFailureRouter subclass to use.
+    Return HCTestFailureRouter implementer appropriate for given test case.
  */
-+ (HCTestFailureRouter *)routerForTestCaseType:(id)testCase;
++ (id <HCTestFailureRouter>)routerForTestCaseType:(id)testCase;
 
 @end

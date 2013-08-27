@@ -1,12 +1,7 @@
 #import <Foundation/Foundation.h>
 
 
-/**
-    Base class for routing test failure to appropriate test framework.
- 
-    @ingroup integration
- */
-@interface HCTestFailureRouter : NSObject
+@protocol HCTestFailureRouter <NSObject>
 
 /**
     Signal test failure at specific location.

@@ -19,6 +19,8 @@
     return [testCase respondsToSelector:@selector(failWithException:)];
 }
 
+#pragma mark HCTestFailureRouter
+
 - (void)signalFailureInTestCase:(id)testCase
                        fileName:(const char *)fileName
                      lineNumber:(int)lineNumber
