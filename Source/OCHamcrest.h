@@ -107,6 +107,9 @@
     @defgroup integration Unit Test Integration
  */
 #import <OCHamcrest/HCAssertThat.h>
+#import <OCHamcrest/HCTestFailure.h>
+#import <OCHamcrest/HCTestFailureHandler.h>
+#import <OCHamcrest/HCTestFailureHandlerChain.h>
 
 /**
     @defgroup integration_numeric Unit Tests of Primitive Numbers
