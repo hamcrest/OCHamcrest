@@ -612,7 +612,7 @@
 				0876023513440A83001B439B /* HCStringDescription.h */,
 				0876023613440A83001B439B /* HCStringDescription.m */,
 				0876023713440A83001B439B /* Helpers */,
-				BB3339C5C80808088E07F792 /* Test Failure Handler */,
+				BB3339C5C80808088E07F792 /* Test Failure Handlers */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -838,9 +838,11 @@
 			name = "Scripts & Docs";
 			sourceTree = "<group>";
 		};
-		BB3339C5C80808088E07F792 /* Test Failure Handler */ = {
+		BB3339C5C80808088E07F792 /* Test Failure Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				BB3335C1980D713ECA921D0E /* HCTestFailure.h */,
+				BB3331A3519FB064573EA640 /* HCTestFailure.m */,
 				BB3334554E610A71AFCB015B /* HCTestFailureHandler.h */,
 				BB333083CA665C17A8B89BB8 /* HCGenericTestFailureHandler.h */,
 				BB333FE566B379546611BED0 /* HCGenericTestFailureHandler.m */,
@@ -848,10 +850,8 @@
 				BB3330BB2DF58238AB3DAE24 /* HCSenTestFailureHandler.m */,
 				BB333F8BE58BF55D84CB65DB /* HCXCTestFailureHandler.h */,
 				BB33327C165B6006F552D9EA /* HCXCTestFailureHandler.m */,
-				BB3331A3519FB064573EA640 /* HCTestFailure.m */,
-				BB3335C1980D713ECA921D0E /* HCTestFailure.h */,
 			);
-			name = "Test Failure Handler";
+			name = "Test Failure Handlers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
