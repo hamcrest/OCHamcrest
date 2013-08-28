@@ -1,6 +1,11 @@
 #import <Foundation/Foundation.h>
 
 
+/**
+    Test failure location and reason.
+ 
+    @ingroup integration
+ */
 @interface HCTestFailure : NSObject
 
 @property (nonatomic, readonly) id testCase;
