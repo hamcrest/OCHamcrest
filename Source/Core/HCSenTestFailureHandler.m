@@ -20,19 +20,20 @@
 - (void)handleFailure:(HCTestFailure *)failure
 {
     if ([self willHandleFailure:failure])
-    {
-        NSException *exception = [self createExceptionForFailure:failure];
-        [failure.testCase failWithException:exception];
-    }
+        [self executeHandlingOfFailure:failure];
     else
-    {
         [self.successor handleFailure:failure];
-    }
 }
 
 - (BOOL)willHandleFailure:(HCTestFailure *)failure
 {
     return [failure.testCase respondsToSelector:@selector(failWithException:)];
+}
+
+- (void)executeHandlingOfFailure:(HCTestFailure *)failure
+{
+    NSException *exception = [self createExceptionForFailure:failure];
+    [failure.testCase failWithException:exception];
 }
 
 - (NSException *)createExceptionForFailure:(HCTestFailure *)failure

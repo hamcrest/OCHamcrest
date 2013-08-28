@@ -19,21 +19,22 @@
 - (void)handleFailure:(HCTestFailure *)failure
 {
     if ([self willHandleFailure:failure])
-    {
-        [failure.testCase recordFailureWithDescription:failure.reason
-                                                inFile:failure.fileName
-                                                atLine:failure.lineNumber
-                                              expected:YES];
-    }
+        [self executeHandlingOfFailure:failure];
     else
-    {
         [self.successor handleFailure:failure];
-    }
 }
 
 - (BOOL)willHandleFailure:(HCTestFailure *)failure
 {
     return [failure.testCase respondsToSelector:@selector(recordFailureWithDescription:inFile:atLine:expected:)];
+}
+
+- (void)executeHandlingOfFailure:(HCTestFailure *)failure
+{
+    [failure.testCase recordFailureWithDescription:failure.reason
+                                            inFile:failure.fileName
+                                            atLine:failure.lineNumber
+                                          expected:YES];
 }
 
 @end
