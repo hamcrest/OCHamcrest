@@ -51,7 +51,7 @@ void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
                                                                 fileName:[NSString stringWithUTF8String:fileName]
                                                               lineNumber:(NSUInteger)lineNumber
                                                                   reason:describeMismatch(matcher, actual)];
-        [chain signalFailure:failure];
+        [chain handleFailure:failure];
     }
 }
 

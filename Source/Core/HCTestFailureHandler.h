@@ -8,8 +8,8 @@
 @property (nonatomic, strong) id <HCTestFailureHandler> successor;
 
 /**
-    Signal test failure at specific location.
+    Handle test failure at specific location.
  */
-- (void)signalFailure:(HCTestFailure *)failure;
+- (void)handleFailure:(HCTestFailure *)failure;
 
 @end

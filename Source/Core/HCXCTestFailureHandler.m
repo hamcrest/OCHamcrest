@@ -16,9 +16,9 @@
 
 @synthesize successor = _successor;
 
-- (void)signalFailure:(HCTestFailure *)failure
+- (void)handleFailure:(HCTestFailure *)failure
 {
-    if ([self willHandleTestCase:failure.testCase])
+    if ([self willHandleFailure:failure])
     {
         [failure.testCase recordFailureWithDescription:failure.reason
                                                 inFile:failure.fileName
@@ -27,13 +27,13 @@
     }
     else
     {
-        [self.successor signalFailure:failure];
+        [self.successor handleFailure:failure];
     }
 }
 
-- (BOOL)willHandleTestCase:(id)testCase
+- (BOOL)willHandleFailure:(HCTestFailure *)failure
 {
-    return [testCase respondsToSelector:@selector(recordFailureWithDescription:inFile:atLine:expected:)];
+    return [failure.testCase respondsToSelector:@selector(recordFailureWithDescription:inFile:atLine:expected:)];
 }
 
 @end

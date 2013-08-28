@@ -6,7 +6,7 @@
 
 @synthesize successor = _successor;
 
-- (void)signalFailure:(HCTestFailure *)failure
+- (void)handleFailure:(HCTestFailure *)failure
 {
     NSException *exception = [self createExceptionForFailure:failure];
     [exception raise];

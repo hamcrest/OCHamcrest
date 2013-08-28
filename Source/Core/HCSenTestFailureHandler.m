@@ -17,22 +17,22 @@
 
 @synthesize successor = _successor;
 
-- (void)signalFailure:(HCTestFailure *)failure
+- (void)handleFailure:(HCTestFailure *)failure
 {
-    if ([self willHandleTestCase:failure.testCase])
+    if ([self willHandleFailure:failure])
     {
         NSException *exception = [self createExceptionForFailure:failure];
         [failure.testCase failWithException:exception];
     }
     else
     {
-        [self.successor signalFailure:failure];
+        [self.successor handleFailure:failure];
     }
 }
 
-- (BOOL)willHandleTestCase:(id)testCase
+- (BOOL)willHandleFailure:(HCTestFailure *)failure
 {
-    return [testCase respondsToSelector:@selector(failWithException:)];
+    return [failure.testCase respondsToSelector:@selector(failWithException:)];
 }
 
 - (NSException *)createExceptionForFailure:(HCTestFailure *)failure
