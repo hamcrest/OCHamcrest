@@ -15,12 +15,12 @@
 
 @implementation HCAllOf
 
-+ (id)allOf:(NSArray *)theMatchers
++ (instancetype)allOf:(NSArray *)theMatchers
 {
     return [[self alloc] initWithMatchers:theMatchers];
 }
 
-- (id)initWithMatchers:(NSArray *)theMatchers
+- (instancetype)initWithMatchers:(NSArray *)theMatchers
 {
     self = [super init];
     if (self)

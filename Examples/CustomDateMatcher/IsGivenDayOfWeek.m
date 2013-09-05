@@ -3,12 +3,12 @@
 
 @implementation IsGivenDayOfWeek
 
-+ (id)isGivenDayOfWeek:(NSInteger)dayOfWeek
++ (instancetype)isGivenDayOfWeek:(NSInteger)dayOfWeek
 {
     return [[self alloc] initWithDay:dayOfWeek];
 }
 
-- (id)initWithDay:(NSInteger)dayOfWeek
+- (instancetype)initWithDay:(NSInteger)dayOfWeek
 {
     self = [super init];
     if (self)

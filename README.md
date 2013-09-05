@@ -237,8 +237,8 @@ Here's the interface:
     NSInteger day;      // Sunday is 0, Saturday is 6
 }
 
-+ (id)isGivenDayOfWeek:(NSInteger)dayOfWeek;
-- (id)initWithDay:(NSInteger)dayOfWeek;
++ (instancetype)isGivenDayOfWeek:(NSInteger)dayOfWeek;
+- (instancetype)initWithDay:(NSInteger)dayOfWeek;
 
 @end
 
@@ -254,12 +254,12 @@ The interface consists of two parts: a class definition, and a factory function
 
 @implementation IsGivenDayOfWeek
 
-+ (id)isGivenDayOfWeek:(NSInteger)dayOfWeek
++ (instancetype)isGivenDayOfWeek:(NSInteger)dayOfWeek
 {
     return [[self alloc] initWithDay:dayOfWeek];
 }
 
-- (id)initWithDay:(NSInteger)dayOfWeek
+- (instancetype)initWithDay:(NSInteger)dayOfWeek
 {
     self = [super init];
     if (self)

@@ -15,8 +15,8 @@
     id collection;
 }
 
-+ (id)isInCollection:(id)aCollection;
-- (id)initWithCollection:(id)aCollection;
++ (instancetype)isInCollection:(id)aCollection;
+- (instancetype)initWithCollection:(id)aCollection;
 
 @end
 

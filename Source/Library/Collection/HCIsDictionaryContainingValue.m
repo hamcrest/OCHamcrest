@@ -16,12 +16,12 @@
 
 @implementation HCIsDictionaryContainingValue
 
-+ (id)isDictionaryContainingValue:(id<HCMatcher>)theValueMatcher
++ (instancetype)isDictionaryContainingValue:(id<HCMatcher>)theValueMatcher
 {
     return [[self alloc] initWithValueMatcher:theValueMatcher];
 }
 
-- (id)initWithValueMatcher:(id<HCMatcher>)theValueMatcher
+- (instancetype)initWithValueMatcher:(id<HCMatcher>)theValueMatcher
 {
     self = [super init];
     if (self)

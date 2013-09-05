@@ -15,8 +15,8 @@
     id object;
 }
 
-+ (id)isEqualTo:(id)anObject;
-- (id)initEqualTo:(id)anObject;
++ (instancetype)isEqualTo:(id)anObject;
+- (instancetype)initEqualTo:(id)anObject;
 
 @end
 

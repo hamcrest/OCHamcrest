@@ -16,8 +16,8 @@
     NSString *strippedString;
 }
 
-+ (id)isEqualIgnoringWhiteSpace:(NSString *)aString;
-- (id)initWithString:(NSString *)aString;
++ (instancetype)isEqualIgnoringWhiteSpace:(NSString *)aString;
+- (instancetype)initWithString:(NSString *)aString;
 
 @end
 

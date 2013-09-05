@@ -12,8 +12,8 @@
 
 @interface HCIsEmptyCollection : HCHasCount
 
-+ (id)isEmptyCollection;
-- (id)init;
++ (instancetype)isEmptyCollection;
+- (instancetype)init;
 
 @end
 

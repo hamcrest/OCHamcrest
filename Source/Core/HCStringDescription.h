@@ -33,11 +33,11 @@
 /**
     Returns an empty description.
  */
-+ (HCStringDescription *)stringDescription;
++ (instancetype)stringDescription;
 
 /**
     Returns an initialized HCStringDescription object that is empty.
  */
-- (id)init;
+- (instancetype)init;
 
 @end

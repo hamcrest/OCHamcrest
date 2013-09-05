@@ -15,8 +15,8 @@
     id<HCMatcher> countMatcher;
 }
 
-+ (id)hasCount:(id<HCMatcher>)matcher;
-- (id)initWithCount:(id<HCMatcher>)matcher;
++ (instancetype)hasCount:(id<HCMatcher>)matcher;
+- (instancetype)initWithCount:(id<HCMatcher>)matcher;
 
 @end
 

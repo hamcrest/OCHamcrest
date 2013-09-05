@@ -18,15 +18,15 @@
     NSString *comparisonDescription;
 }
 
-+ (id)compare:(id)expectedValue
-   minCompare:(NSComparisonResult)min
-   maxCompare:(NSComparisonResult)max
-   comparisonDescription:(NSString *)comparisonDescription;
++ (instancetype)compare:(id)expectedValue
+             minCompare:(NSComparisonResult)min
+             maxCompare:(NSComparisonResult)max
+  comparisonDescription:(NSString *)comparisonDescription;
 
-- (id)initComparing:(id)expectedValue
-         minCompare:(NSComparisonResult)min
-         maxCompare:(NSComparisonResult)max
-         comparisonDescription:(NSString *)comparisonDescription;
+- (instancetype)initComparing:(id)expectedValue
+                   minCompare:(NSComparisonResult)min
+                   maxCompare:(NSComparisonResult)max
+        comparisonDescription:(NSString *)comparisonDescription;
 
 @end
 

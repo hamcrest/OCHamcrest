@@ -15,8 +15,8 @@
     id<HCMatcher> matcher;
 }
 
-+ (id)is:(id<HCMatcher>)aMatcher;
-- (id)initWithMatcher:(id<HCMatcher>)aMatcher;
++ (instancetype)is:(id<HCMatcher>)aMatcher;
+- (instancetype)initWithMatcher:(id<HCMatcher>)aMatcher;
 
 @end
 

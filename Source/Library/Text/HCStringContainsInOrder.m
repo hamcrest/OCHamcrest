@@ -14,12 +14,12 @@
 
 @implementation HCStringContainsInOrder
 
-+ (id)containsInOrder:(NSArray *)substringList
++ (instancetype)containsInOrder:(NSArray *)substringList
 {
     return [[self alloc] initWithSubstrings:substringList];
 }
 
-- (id)initWithSubstrings:(NSArray *)substringList
+- (instancetype)initWithSubstrings:(NSArray *)substringList
 {
     self = [super init];
     if (self)

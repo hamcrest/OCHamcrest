@@ -29,7 +29,8 @@
 
 @implementation HCMatchSequence
 
-- (id)initWithMatchers:(NSArray *)itemMatchers mismatchDescription:(id<HCDescription, NSObject>)description
+- (instancetype)initWithMatchers:(NSArray *)itemMatchers
+             mismatchDescription:(id<HCDescription, NSObject>)description
 {
     self = [super init];
     if (self)
@@ -91,12 +92,12 @@
 
 @implementation HCIsCollectionContainingInOrder
 
-+ (id)isCollectionContainingInOrder:(NSArray *)itemMatchers
++ (instancetype)isCollectionContainingInOrder:(NSArray *)itemMatchers
 {
     return [[self alloc] initWithMatchers:itemMatchers];
 }
 
-- (id)initWithMatchers:(NSArray *)itemMatchers
+- (instancetype)initWithMatchers:(NSArray *)itemMatchers
 {
     self = [super init];
     if (self)

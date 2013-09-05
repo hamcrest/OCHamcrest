@@ -15,6 +15,6 @@
     NSString *substring;
 }
 
-- (id)initWithSubstring:(NSString *)aString;
+- (instancetype)initWithSubstring:(NSString *)aString;
 
 @end

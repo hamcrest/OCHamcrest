@@ -15,8 +15,8 @@
     NSArray *substrings;
 }
 
-+ (id)containsInOrder:(NSArray *)substringList;
-- (id)initWithSubstrings:(NSArray *)substringList;
++ (instancetype)containsInOrder:(NSArray *)substringList;
+- (instancetype)initWithSubstrings:(NSArray *)substringList;
 
 @end
 

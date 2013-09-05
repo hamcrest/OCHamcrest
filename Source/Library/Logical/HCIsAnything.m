@@ -14,23 +14,23 @@
 
 @implementation HCIsAnything
 
-+ (id)isAnything
++ (instancetype)isAnything
 {
     return [[self alloc] init];
 }
 
-+ (id)isAnythingWithDescription:(NSString *)aDescription
++ (instancetype)isAnythingWithDescription:(NSString *)aDescription
 {
     return [[self alloc] initWithDescription:aDescription];
 }
 
-- (id)init
+- (instancetype)init
 {
     self = [self initWithDescription:@"ANYTHING"];
     return self;
 }
 
-- (id)initWithDescription:(NSString *)aDescription
+- (instancetype)initWithDescription:(NSString *)aDescription
 {
     self = [super init];
     if (self)

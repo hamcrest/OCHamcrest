@@ -15,8 +15,8 @@
     NSArray *matchers;
 }
 
-+ (id)allOf:(NSArray *)theMatchers;
-- (id)initWithMatchers:(NSArray *)theMatchers;
++ (instancetype)allOf:(NSArray *)theMatchers;
+- (instancetype)initWithMatchers:(NSArray *)theMatchers;
 
 @end
 

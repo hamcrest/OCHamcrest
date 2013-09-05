@@ -17,13 +17,13 @@
     NSArray *values;
 }
 
-+ (id)describedAs:(NSString *)description
-       forMatcher:(id<HCMatcher>)aMatcher
-       overValues:(NSArray *)templateValues;
++ (instancetype)describedAs:(NSString *)description
+                 forMatcher:(id<HCMatcher>)aMatcher
+                 overValues:(NSArray *)templateValues;
 
-- (id)initWithDescription:(NSString *)description
-               forMatcher:(id<HCMatcher>)aMatcher
-               overValues:(NSArray *)templateValues;
+- (instancetype)initWithDescription:(NSString *)description
+                         forMatcher:(id<HCMatcher>)aMatcher
+                         overValues:(NSArray *)templateValues;
 
 @end
 

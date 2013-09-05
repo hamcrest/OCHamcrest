@@ -15,7 +15,7 @@
 
 @implementation HCIsTypeOf
 
-+ (id)isTypeOf:(Class)type
++ (instancetype)isTypeOf:(Class)type
 {
     return [[self alloc] initWithType:type];
 }

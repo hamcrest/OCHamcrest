@@ -14,12 +14,12 @@
 
 @implementation HCIsSame
 
-+ (id)isSameAs:(id)anObject
++ (instancetype)isSameAs:(id)anObject
 {
     return [[self alloc] initSameAs:anObject];
 }
 
-- (id)initSameAs:(id)anObject
+- (instancetype)initSameAs:(id)anObject
 {
     self = [super init];
     if (self)

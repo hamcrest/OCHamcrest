@@ -21,12 +21,12 @@
     return [description description];
 }
 
-+ (HCStringDescription *)stringDescription
++ (instancetype)stringDescription
 {
     return [[HCStringDescription alloc] init];
 }
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self)

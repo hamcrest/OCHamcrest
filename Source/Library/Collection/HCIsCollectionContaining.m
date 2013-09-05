@@ -17,12 +17,12 @@
 
 @implementation HCIsCollectionContaining
 
-+ (id)isCollectionContaining:(id<HCMatcher>)anElementMatcher
++ (instancetype)isCollectionContaining:(id<HCMatcher>)anElementMatcher
 {
     return [[self alloc] initWithMatcher:anElementMatcher];
 }
 
-- (id)initWithMatcher:(id<HCMatcher>)anElementMatcher
+- (instancetype)initWithMatcher:(id<HCMatcher>)anElementMatcher
 {
     self = [super init];
     if (self)

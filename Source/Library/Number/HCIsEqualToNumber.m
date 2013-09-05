@@ -49,7 +49,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value)
     return value ? @"<YES>" : @"<NO>";
 }
 
-- (id)initWithValue:(BOOL)value
+- (instancetype)initWithValue:(BOOL)value
 {
     self = [super init];
     if (self)

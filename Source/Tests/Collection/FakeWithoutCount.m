@@ -12,7 +12,7 @@
 
 @implementation FakeWithoutCount
 
-+ (id)fake
++ (instancetype)fake
 {
     return [[self alloc] init];
 }

@@ -13,12 +13,12 @@
 
 @implementation HCConformsToProtocol
 
-+ (id)conformsTo:(Protocol *)protocol
++ (instancetype)conformsTo:(Protocol *)protocol
 {
     return [[self alloc] initWithProtocol:protocol];
 }
 
-- (id)initWithProtocol:(Protocol *)aProtocol
+- (instancetype)initWithProtocol:(Protocol *)aProtocol
 {
     HCRequireNonNilObject(aProtocol);
     

@@ -15,8 +15,8 @@
     id<HCMatcher> elementMatcher;
 }
 
-+ (id)isCollectionContaining:(id<HCMatcher>)anElementMatcher;
-- (id)initWithMatcher:(id<HCMatcher>)anElementMatcher;
++ (instancetype)isCollectionContaining:(id<HCMatcher>)anElementMatcher;
+- (instancetype)initWithMatcher:(id<HCMatcher>)anElementMatcher;
 
 @end
 

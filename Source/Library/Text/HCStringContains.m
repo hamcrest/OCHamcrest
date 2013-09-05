@@ -12,7 +12,7 @@
 
 @implementation HCStringContains
 
-+ (id)stringContains:(NSString *)aString
++ (instancetype)stringContains:(NSString *)aString
 {
     return [[self alloc] initWithSubstring:aString];
 }

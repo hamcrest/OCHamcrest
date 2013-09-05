@@ -15,14 +15,14 @@
 
 @implementation HCIsDictionaryContainingEntries
 
-+ (id)isDictionaryContainingKeys:(NSArray *)theKeys
-                   valueMatchers:(NSArray *)theValueMatchers
++ (instancetype)isDictionaryContainingKeys:(NSArray *)theKeys
+                             valueMatchers:(NSArray *)theValueMatchers
 {
     return [[self alloc] initWithKeys:theKeys valueMatchers:theValueMatchers];
 }
 
-- (id)initWithKeys:(NSArray *)theKeys
-     valueMatchers:(NSArray *)theValueMatchers
+- (instancetype)initWithKeys:(NSArray *)theKeys
+               valueMatchers:(NSArray *)theValueMatchers
 {
     self = [super init];
     if (self)

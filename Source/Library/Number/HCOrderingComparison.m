@@ -14,10 +14,10 @@
 
 @implementation HCOrderingComparison
 
-+ (id)compare:(id)expectedValue
-   minCompare:(NSComparisonResult)min
-   maxCompare:(NSComparisonResult)max
-   comparisonDescription:(NSString *)description
++ (instancetype)compare:(id)expectedValue
+             minCompare:(NSComparisonResult)min
+             maxCompare:(NSComparisonResult)max
+  comparisonDescription:(NSString *)description
 {
     return [[self alloc] initComparing:expectedValue
                              minCompare:min
@@ -25,10 +25,10 @@
                   comparisonDescription:description];
 }
 
-- (id)initComparing:(id)expectedValue
-         minCompare:(NSComparisonResult)min
-         maxCompare:(NSComparisonResult)max
-         comparisonDescription:(NSString *)description
+- (instancetype)initComparing:(id)expectedValue
+                   minCompare:(NSComparisonResult)min
+                   maxCompare:(NSComparisonResult)max
+        comparisonDescription:(NSString *)description
 {
     if (![expectedValue respondsToSelector:@selector(compare:)])
     {

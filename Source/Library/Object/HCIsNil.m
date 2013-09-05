@@ -15,7 +15,7 @@
 
 @implementation HCIsNil
 
-+ (id)isNil
++ (instancetype)isNil
 {
     return [[self alloc] init];
 }

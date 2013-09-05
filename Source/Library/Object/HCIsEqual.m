@@ -14,12 +14,12 @@
 
 @implementation HCIsEqual
 
-+ (id)isEqualTo:(id)anObject
++ (instancetype)isEqualTo:(id)anObject
 {
     return [[self alloc] initEqualTo:anObject];
 }
 
-- (id)initEqualTo:(id)anObject
+- (instancetype)initEqualTo:(id)anObject
 {
     self = [super init];
     if (self)

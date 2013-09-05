@@ -15,6 +15,6 @@
     Class theClass;
 }
 
-- (id)initWithType:(Class)type;
+- (instancetype)initWithType:(Class)type;
 
 @end

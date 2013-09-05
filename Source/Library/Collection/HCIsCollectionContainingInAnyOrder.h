@@ -15,8 +15,8 @@
     NSArray *matchers;
 }
 
-+ (id)isCollectionContainingInAnyOrder:(NSArray *)itemMatchers;
-- (id)initWithMatchers:(NSArray *)itemMatchers;
++ (instancetype)isCollectionContainingInAnyOrder:(NSArray *)itemMatchers;
+- (instancetype)initWithMatchers:(NSArray *)itemMatchers;
 
 @end
 

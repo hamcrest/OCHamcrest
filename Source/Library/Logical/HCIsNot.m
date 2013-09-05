@@ -15,12 +15,12 @@
 
 @implementation HCIsNot
 
-+ (id)isNot:(id<HCMatcher>)aMatcher
++ (instancetype)isNot:(id<HCMatcher>)aMatcher
 {
     return [[self alloc] initNot:aMatcher];
 }
 
-- (id)initNot:(id<HCMatcher>)aMatcher
+- (instancetype)initNot:(id<HCMatcher>)aMatcher
 {
     self = [super init];
     if (self)

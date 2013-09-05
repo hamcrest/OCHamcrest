@@ -49,18 +49,18 @@ static HCPairIntNSString separate(NSString *component)
 
 @implementation HCDescribedAs
 
-+ (id)describedAs:(NSString *)description
-       forMatcher:(id<HCMatcher>)aMatcher
-       overValues:(NSArray *)templateValues
++ (instancetype)describedAs:(NSString *)description
+                 forMatcher:(id<HCMatcher>)aMatcher
+                 overValues:(NSArray *)templateValues
 {
     return [[self alloc] initWithDescription:description
                                   forMatcher:aMatcher
                                   overValues:templateValues];
 }
 
-- (id)initWithDescription:(NSString *)description
-                forMatcher:(id<HCMatcher>)aMatcher
-                overValues:(NSArray *)templateValues
+- (instancetype)initWithDescription:(NSString *)description
+                         forMatcher:(id<HCMatcher>)aMatcher
+                         overValues:(NSArray *)templateValues
 {
     self = [super init];
     if (self)

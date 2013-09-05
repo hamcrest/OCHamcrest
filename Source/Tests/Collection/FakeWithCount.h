@@ -17,7 +17,7 @@
 
 @property (readonly, nonatomic) NSUInteger count;
 
-+ (id)fakeWithCount:(NSUInteger)fakeCount;
-- (id)initWithCount:(NSUInteger)fakeCount;
++ (instancetype)fakeWithCount:(NSUInteger)fakeCount;
+- (instancetype)initWithCount:(NSUInteger)fakeCount;
 
 @end

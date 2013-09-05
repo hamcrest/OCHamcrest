@@ -42,7 +42,7 @@
 /**
     Returns an HCInvocationMatcher object initialized with an invocation and a matcher.
  */
-- (id)initWithInvocation:(NSInvocation *)anInvocation matching:(id<HCMatcher>)aMatcher;
+- (instancetype)initWithInvocation:(NSInvocation *)anInvocation matching:(id<HCMatcher>)aMatcher;
 
 /**
     Invokes stored invocation on given item and returns the result.

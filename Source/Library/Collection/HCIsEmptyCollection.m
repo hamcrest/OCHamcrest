@@ -15,12 +15,12 @@
 
 @implementation HCIsEmptyCollection
 
-+ (id)isEmptyCollection
++ (instancetype)isEmptyCollection
 {
     return [[self alloc] init];
 }
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithCount:HC_equalToUnsignedInteger(0)];
     return self;

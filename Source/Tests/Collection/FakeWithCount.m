@@ -15,12 +15,12 @@
 @synthesize count;
 
 
-+ (id)fakeWithCount:(NSUInteger)fakeCount
++ (instancetype)fakeWithCount:(NSUInteger)fakeCount
 {
     return [[self alloc] initWithCount:fakeCount];
 }
 
-- (id)initWithCount:(NSUInteger)fakeCount
+- (instancetype)initWithCount:(NSUInteger)fakeCount
 {
     self = [super init];
     if (self)

@@ -15,8 +15,8 @@
     id<HCMatcher> matcher;
 }
 
-+ (id)isNot:(id<HCMatcher>)aMatcher;
-- (id)initNot:(id<HCMatcher>)aMatcher;
++ (instancetype)isNot:(id<HCMatcher>)aMatcher;
+- (instancetype)initNot:(id<HCMatcher>)aMatcher;
 
 @end
 

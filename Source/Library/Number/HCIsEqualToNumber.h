@@ -32,7 +32,7 @@ OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value);
 
 @interface HCIsEqualToBool : HCBaseMatcher
 
-- (id)initWithValue:(BOOL)value;
+- (instancetype)initWithValue:(BOOL)value;
 
 @end
 

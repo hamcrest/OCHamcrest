@@ -15,12 +15,12 @@
 
 @implementation HCHasCount
 
-+ (id)hasCount:(id<HCMatcher>)matcher
++ (instancetype)hasCount:(id<HCMatcher>)matcher
 {
     return [[self alloc] initWithCount:matcher];
 }
 
-- (id)initWithCount:(id<HCMatcher>)matcher
+- (instancetype)initWithCount:(id<HCMatcher>)matcher
 {
     self = [super init];
     if (self)

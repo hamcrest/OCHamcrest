@@ -12,7 +12,7 @@
 
 @implementation HCStringEndsWith
 
-+ (id)stringEndsWith:(NSString *)aString
++ (instancetype)stringEndsWith:(NSString *)aString
 {
     return [[self alloc] initWithSubstring:aString];
 }

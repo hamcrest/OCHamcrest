@@ -16,8 +16,8 @@
     double delta;
 }
 
-+ (id)isCloseTo:(double)aValue within:(double)aDelta;
-- (id)initWithValue:(double)aValue delta:(double)aDelta;
++ (instancetype)isCloseTo:(double)aValue within:(double)aDelta;
+- (instancetype)initWithValue:(double)aValue delta:(double)aDelta;
 
 @end
 

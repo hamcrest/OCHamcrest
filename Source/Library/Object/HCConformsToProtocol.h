@@ -13,8 +13,8 @@
     Protocol *theProtocol;
 }
 
-+ (id)conformsTo:(Protocol *)protocol;
-- (id)initWithProtocol:(Protocol *)protocol;
++ (instancetype)conformsTo:(Protocol *)protocol;
+- (instancetype)initWithProtocol:(Protocol *)protocol;
 
 @end
 

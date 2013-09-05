@@ -28,7 +28,7 @@
     NSNumber *_shoeSize;
 }
 
-- (id) initWithName:(NSString *)name shoeSize:(int)shoeSize
+- (instancetype)initWithName:(NSString *)name shoeSize:(int)shoeSize
 {
     self = [super init];
     if (self)

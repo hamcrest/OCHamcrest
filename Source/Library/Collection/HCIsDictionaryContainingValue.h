@@ -15,8 +15,8 @@
     id<HCMatcher> valueMatcher;
 }
 
-+ (id)isDictionaryContainingValue:(id<HCMatcher>)theValueMatcher;
-- (id)initWithValueMatcher:(id<HCMatcher>)theValueMatcher;
++ (instancetype)isDictionaryContainingValue:(id<HCMatcher>)theValueMatcher;
+- (instancetype)initWithValueMatcher:(id<HCMatcher>)theValueMatcher;
 
 @end
 

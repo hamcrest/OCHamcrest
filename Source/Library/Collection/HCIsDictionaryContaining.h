@@ -16,11 +16,11 @@
     id<HCMatcher> valueMatcher;
 }
 
-+ (id)isDictionaryContainingKey:(id<HCMatcher>)aKeyMatcher
-                          value:(id<HCMatcher>)aValueMatcher;
++ (instancetype)isDictionaryContainingKey:(id<HCMatcher>)aKeyMatcher
+                                    value:(id<HCMatcher>)aValueMatcher;
 
-- (id)initWithKeyMatcher:(id<HCMatcher>)aKeyMatcher
-            valueMatcher:(id<HCMatcher>)aValueMatcher;
+- (instancetype)initWithKeyMatcher:(id<HCMatcher>)aKeyMatcher
+                      valueMatcher:(id<HCMatcher>)aValueMatcher;
 
 @end
 

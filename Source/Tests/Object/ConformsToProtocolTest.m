@@ -21,7 +21,7 @@
 
 @implementation TestClass
 
-+ (TestClass *)testClass
++ (instancetype)testClass
 {
     return [[TestClass alloc] init];
 }

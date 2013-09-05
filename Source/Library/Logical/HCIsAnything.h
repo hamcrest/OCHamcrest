@@ -15,11 +15,11 @@
     NSString *description;
 }
 
-+ (id)isAnything;
-+ (id)isAnythingWithDescription:(NSString *)aDescription;
++ (instancetype)isAnything;
++ (instancetype)isAnythingWithDescription:(NSString *)aDescription;
 
-- (id)init;
-- (id)initWithDescription:(NSString *)aDescription;
+- (instancetype)init;
+- (instancetype)initWithDescription:(NSString *)aDescription;
 
 @end
 

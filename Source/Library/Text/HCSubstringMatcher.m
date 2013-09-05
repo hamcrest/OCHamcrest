@@ -20,7 +20,7 @@
 
 @implementation HCSubstringMatcher
 
-- (id)initWithSubstring:(NSString *)aString
+- (instancetype)initWithSubstring:(NSString *)aString
 {
     HCRequireNonNilObject(aString);
     

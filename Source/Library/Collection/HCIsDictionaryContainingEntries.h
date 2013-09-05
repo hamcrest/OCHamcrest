@@ -16,11 +16,11 @@
     NSArray *valueMatchers;
 }
 
-+ (id)isDictionaryContainingKeys:(NSArray *)theKeys
-                   valueMatchers:(NSArray *)theValueMatchers;
++ (instancetype)isDictionaryContainingKeys:(NSArray *)theKeys
+                             valueMatchers:(NSArray *)theValueMatchers;
 
-- (id)initWithKeys:(NSArray *)theKeys
-     valueMatchers:(NSArray *)theValueMatchers;
+- (instancetype)initWithKeys:(NSArray *)theKeys
+               valueMatchers:(NSArray *)theValueMatchers;
 
 @end
 

@@ -15,8 +15,8 @@
     id object;
 }
 
-+ (id)isSameAs:(id)anObject;
-- (id)initSameAs:(id)anObject;
++ (instancetype)isSameAs:(id)anObject;
+- (instancetype)initSameAs:(id)anObject;
 
 @end
 

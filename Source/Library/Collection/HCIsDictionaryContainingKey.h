@@ -15,8 +15,8 @@
     id<HCMatcher> keyMatcher;
 }
 
-+ (id)isDictionaryContainingKey:(id<HCMatcher>)theKeyMatcher;
-- (id)initWithKeyMatcher:(id<HCMatcher>)theKeyMatcher;
++ (instancetype)isDictionaryContainingKey:(id<HCMatcher>)theKeyMatcher;
+- (instancetype)initWithKeyMatcher:(id<HCMatcher>)theKeyMatcher;
 
 @end
 

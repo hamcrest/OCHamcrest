@@ -24,7 +24,7 @@
 
 @implementation Match
 
-+ (Match *)matches:(id)arg
++ (instancetype)matches:(id)arg
 {
     return [[Match alloc] initEqualTo:arg];
 }
@@ -47,7 +47,12 @@
     NSString *result;
 }
 
-- (id)initWithResult:(NSString *)aResult
++ (instancetype) thingyWithResult:(NSString *)result
+{
+    return [[Thingy alloc] initWithResult:result];
+}
+
+- (instancetype)initWithResult:(NSString *)aResult
 {
     self = [super init];
     if (self)
@@ -63,11 +68,6 @@
 - (NSString *)result
 {
     return result;
-}
-
-+ (Thingy*) thingyWithResult:(NSString *)result
-{
-    return [[Thingy alloc] initWithResult:result];
 }
 
 @end
