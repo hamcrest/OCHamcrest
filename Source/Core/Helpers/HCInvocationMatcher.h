@@ -30,7 +30,7 @@
     Default is long form, which describes the object, the name of the invocation, and the
     sub-matcher's mismatch diagnosis. Short form only has the sub-matcher's mismatch diagnosis.
  */
-@property (assign, nonatomic) BOOL shortMismatchDescription;
+@property (nonatomic, assign) BOOL shortMismatchDescription;
 
 /**
     Helper method for creating an invocation.

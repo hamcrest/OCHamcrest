@@ -14,9 +14,6 @@
 
 @implementation HCInvocationMatcher
 
-@synthesize shortMismatchDescription;
-
-
 + (NSInvocation *)invocationForSelector:(SEL)selector onClass:(Class)aClass
 {
     NSMethodSignature* signature = [aClass instanceMethodSignatureForSelector:selector];
@@ -63,7 +60,7 @@
         [super describeMismatchOf:item to:mismatchDescription];
     else
     {
-        if (!shortMismatchDescription)
+        if (!self.shortMismatchDescription)
         {
             [[[[mismatchDescription appendDescriptionOf:item]
                                     appendText:@" "]

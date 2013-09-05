@@ -12,9 +12,6 @@
 
 @implementation FakeWithCount
 
-@synthesize count;
-
-
 + (instancetype)fakeWithCount:(NSUInteger)fakeCount
 {
     return [[self alloc] initWithCount:fakeCount];
@@ -24,7 +21,7 @@
 {
     self = [super init];
     if (self)
-        count = fakeCount;
+        _count = fakeCount;
     return self;
 }
 

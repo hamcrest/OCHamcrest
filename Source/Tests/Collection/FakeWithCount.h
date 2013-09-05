@@ -11,11 +11,8 @@
 
 
 @interface FakeWithCount : NSObject
-{
-    NSUInteger count;
-}
 
-@property (readonly, nonatomic) NSUInteger count;
+@property (nonatomic, readonly) NSUInteger count;
 
 + (instancetype)fakeWithCount:(NSUInteger)fakeCount;
 - (instancetype)initWithCount:(NSUInteger)fakeCount;
