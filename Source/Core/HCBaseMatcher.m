@@ -52,4 +52,9 @@
                 format:@"-[%@  %@] not implemented", className, NSStringFromSelector(command)];
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
+
 @end
