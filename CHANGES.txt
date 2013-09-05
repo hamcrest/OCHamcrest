@@ -1,8 +1,20 @@
+=== NEXT VERSION
+
+* Features:
+  - Added support for XCTest. Special thanks to Jiajun "gaosboy" for pointing the way, and to Richard Clem for testing.
+  - Made unit test integration more flexible with HC_testFailureHandlerChain. It can be called from outside OCHamcrest to signal a test failure within the  current testing framework. (At present it tries XCTest, then SenTestCase, then falls back on raising a generic exception.)
+
+* Deleted following item deprecated in v1.2:
+  - HCRequireNonNilString.h
+* Deleted following item deprecated in v2.1.0:
+  - "empty" matcher
+
+
 == Version 2.1.0 ==
 23 Jun 2013
 
 * Features:
-  - Added support for XCTest.
+  - Added support for XCTest. (This was undone by subsequent updates to XCTest.)
 
 * Project changes:
   - Increased deployment targets to Mac OS X 10.6, iOS 5.0.
@@ -15,7 +27,7 @@
   - Fixed MacExample so it finds OCHamcrest.
 
 * Deprecated:
-  - empty clashed with the C++ string method of the same name. It has been renamed to "isEmpty".
+  - "empty" clashed with the C++ string method of the same name. It has been renamed to "isEmpty".
 
 
 == Version 2.0.1 ==
