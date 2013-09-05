@@ -24,17 +24,6 @@ OBJC_EXPORT id<HCMatcher> HC_isEmpty(void);
 /**
     Matches empty collection.
 
-    Deprecated; use isEmpty() instead.
-
-    @ingroup collection_matchers
- */
-#ifdef HC_SHORTHAND
-    #define empty() HC_empty()
-#endif
-
-/**
-    Matches empty collection.
-
     This matcher invokes @c -count on the evaluated object to determine if the number of elements it
     contains is zero.
 

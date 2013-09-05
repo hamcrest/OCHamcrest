@@ -41,11 +41,6 @@
 
 #pragma mark -
 
-OBJC_EXPORT id<HCMatcher> HC_empty()
-{
-    return HC_isEmpty();
-}
-
 OBJC_EXPORT id<HCMatcher> HC_isEmpty()
 {
     return [HCIsEmptyCollection isEmptyCollection];
