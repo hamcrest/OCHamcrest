@@ -109,7 +109,7 @@
 		0FC264780DA88EAA00B4CD6B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = 0FC2647B0DA88EAA00B4CD6B /* Build configuration list for PBXProject "MacExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -162,7 +162,6 @@
 		0FC264790DA88EAA00B4CD6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -172,7 +171,6 @@
 		0FC2647A0DA88EAA00B4CD6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
