@@ -1,4 +1,5 @@
-=== NEXT VERSION
+== Version 3.0.0 ==
+04 Sep 2013
 
 * Features:
   - Added support for XCTest. Special thanks to Jiajun "gaosboy" for pointing the way, and to Richard Clem for testing.
