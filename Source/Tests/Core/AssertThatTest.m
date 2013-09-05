@@ -13,6 +13,7 @@
 
     // Collaborators
 #import <OCHamcrest/HCIsEqual.h>
+#import <OCHamcrest/HCStringContains.h>
 
     // Test support
 #import <SenTestingKit/SenTestingKit.h>
@@ -198,4 +199,42 @@
 }
 
 @end
+
+
+@interface GenericTestCase : NSObject
+@end
+
+@implementation GenericTestCase
+@end
+
+
+@interface GenericTestCaseTest : SenTestCase
+@end
+
+@implementation GenericTestCaseTest
+
+- (void)testGenericTestCase_ShouldRaiseExceptionWithLocationAndReason
+{
+    // given
+    NSString *expected = @"EXPECTED";
+    NSString *actual = @"ACTUAL";
+    NSString *expectedMessage = @"Expected \"EXPECTED\", but was \"ACTUAL\"";
+    GenericTestCase *testCase = [[GenericTestCase alloc] init];
+    
+    // when
+    @try
+    {
+        HC_assertThatWithLocation(testCase, actual, equalTo(expected), "FILENAME", 123);
+        STFail(@"Expected exception");
+    }
+    @catch (NSException* exception)
+    {
+        NSString *reason = [exception reason];
+        assertThat(reason, containsString(@"FILENAME:123"));
+        assertThat(reason, containsString(expectedMessage));
+    }
+}
+
+@end
+
 
