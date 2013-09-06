@@ -1,14 +1,13 @@
 == Version 3.0.0 ==
-04 Sep 2013
+06 Sep 2013
 
 * Features:
   - Added support for XCTest. Special thanks to Jiajun "gaosboy" for pointing the way, and to Richard Clem for testing.
   - Made unit test integration more flexible with HC_testFailureHandlerChain. It can be called from outside OCHamcrest to signal a test failure within the  current testing framework. (At present it tries XCTest, then SenTestCase, then falls back on raising a generic exception.)
 
-* Deleted following item deprecated in v1.2:
-  - HCRequireNonNilString.h
-* Deleted following item deprecated in v2.1.0:
-  - "empty" matcher
+* Deleted:
+  - HCRequireNonNilString.h (deprecated in v1.2)
+  - "empty" matcher (deprecated in v2.1.0)
 
 
 == Version 2.1.0 ==
@@ -18,7 +17,7 @@
   - Added support for XCTest. (This was undone by subsequent updates to XCTest.)
 
 * Project changes:
-  - Increased deployment targets to Mac OS X 10.6, iOS 5.0.
+  - Increased deployment targets to Mac OS X 10.7, iOS 5.0.
 
 * Fixes:
   - Make build script flexible so that doxygen isn't required, or can be in a different location. Thanks to: Bennett Smith
@@ -62,7 +61,6 @@ This release adopts Semantic Versioning (http://semver.org). Since removal of de
 
 * Project changes:
   - Update project settings to Xcode 4.6. Thanks to: Florian Buerger
-  - Removed CocoaPods spec, since it's maintained at CocoaPods.
   - Fixed unit tests so they remain quiet when handling expected test failures.
   - Replaced older code coverage scripts with XcodeCoverage submodule.
 
