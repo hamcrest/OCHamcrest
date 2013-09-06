@@ -38,6 +38,10 @@
     [[description appendText:@"not "] appendDescriptionOf:matcher];
 }
 
+- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+{
+    [matcher describeMismatchOf:item to:mismatchDescription];
+}
 @end
 
 
