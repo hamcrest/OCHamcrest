@@ -14,6 +14,8 @@
 
 @implementation HCInvocationMatcher
 
+@synthesize shortMismatchDescription;
+
 + (NSInvocation *)invocationForSelector:(SEL)selector onClass:(Class)aClass
 {
     NSMethodSignature* signature = [aClass instanceMethodSignatureForSelector:selector];
