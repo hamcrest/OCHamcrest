@@ -68,8 +68,8 @@
     NSInteger day;      <span class="comment">// Sunday is 0, Saturday is 6</span>
 }
 
-+ (id)isGivenDayOfWeek:(NSInteger)dayOfWeek;
-- (id)initWithDay:(NSInteger)dayOfWeek;
++ (instancetype)isGivenDayOfWeek:(NSInteger)dayOfWeek;
+- (instancetype)initWithDay:(NSInteger)dayOfWeek;
 
 <span class="keyword">@end</span>
 
@@ -80,12 +80,12 @@ OBJC_EXPORT id &lt;HCMatcher&gt; onASaturday();
 
 <span class="keyword">@implementation </span>IsGivenDayOfWeek
 
-+ (id)isGivenDayOfWeek:(NSInteger)dayOfWeek
++ (instancetype)isGivenDayOfWeek:(NSInteger)dayOfWeek
 {
     <span class="keywordflow">return</span> [[<span class="keyword">self</span> alloc] initWithDay:dayOfWeek];
 }
 
-- (id)initWithDay:(NSInteger)dayOfWeek
+- (instancetype)initWithDay:(NSInteger)dayOfWeek
 {
     <span class="keyword">self</span> = [<span class="keyword">super</span> init];
     <span class="keywordflow">if</span> (<span class="keyword">self</span> != nil)
@@ -128,7 +128,7 @@ id &lt;HCMatcher&gt; onASaturday()
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 23 2013 22:07:21 for OCHamcrest by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 6 2013 09:50:14 for OCHamcrest by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

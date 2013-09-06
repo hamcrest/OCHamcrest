@@ -439,16 +439,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>empty</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>group__collection__matchers.html</Path>
-    <Anchor>gadafd520091b5ddf350fc4b2fedfdffa5</Anchor>
-    <Abstract>Matches empty collection.</Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>isEmpty</Name>
       <APILanguage>unknown</APILanguage>
       <Type>macro</Type>
@@ -1458,16 +1448,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>HCRequireNonNilString</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>group__helpers.html</Path>
-    <Anchor>ga75072995f2ee43c8311879a92841aa47</Anchor>
-    <Abstract>Throws an NSException if string is nil.</Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>containsString</Name>
       <APILanguage>unknown</APILanguage>
       <Type>macro</Type>
@@ -1541,6 +1521,16 @@
     </TokenIdentifier>
     <Path>_h_c_string_starts_with_8h.html</Path>
     <Anchor>a496eda52dd5ebfa0c8308a31d0cb827f</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>HC_testFailureHandlerChain</Name>
+      <APILanguage>c</APILanguage>
+      <Type>func</Type>
+    </TokenIdentifier>
+    <Path>group__integration.html</Path>
+    <Anchor>gafad78e6d4906ad6cfcf7a23b7853f873</Anchor>
+    <Abstract>Returns chain of test failure handlers.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1782,16 +1772,6 @@
     <Path>group__collection__matchers.html</Path>
     <Anchor>gaf141b74c5177da00f45c49b50f867e52</Anchor>
     <Abstract>hasValue(valueMatcher) - Matches if dictionary contains an entry whose value satisfies a given matche...</Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>empty</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>group__collection__matchers.html</Path>
-    <Anchor>gadafd520091b5ddf350fc4b2fedfdffa5</Anchor>
-    <Abstract>Matches empty collection.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2202,6 +2182,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>HC_testFailureHandlerChain</Name>
+      <APILanguage>c</APILanguage>
+      <Type>func</Type>
+    </TokenIdentifier>
+    <Path>group__integration.html</Path>
+    <Anchor>gafad78e6d4906ad6cfcf7a23b7853f873</Anchor>
+    <Abstract>Returns chain of test failure handlers.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>integration_numeric</Name>
       <APILanguage>c</APILanguage>
     </TokenIdentifier>
@@ -2395,16 +2385,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>HCRequireNonNilString</Name>
-      <APILanguage>c</APILanguage>
-      <Type>func</Type>
-    </TokenIdentifier>
-    <Path>group__helpers.html</Path>
-    <Anchor>ga75072995f2ee43c8311879a92841aa47</Anchor>
-    <Abstract>Throws an NSException if string is nil.</Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>HCWrapInMatcher</Name>
       <APILanguage>c</APILanguage>
       <Type>func</Type>
@@ -2431,7 +2411,7 @@
       <Scope>HCAllOf</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_all_of.html</Path>
-    <Anchor>aebd9d0f2a387cff0b7e3517e79ae7078</Anchor>
+    <Anchor>a5b55f5d03fa00a001683d55883b7e471</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2441,7 +2421,7 @@
       <Scope>HCAllOf</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_all_of.html</Path>
-    <Anchor>a7219462060fa932f1bbe79806b12e2aa</Anchor>
+    <Anchor>a23caf3304608a9484d300dc5fba04472</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2471,7 +2451,7 @@
       <Scope>HCAnyOf</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_any_of.html</Path>
-    <Anchor>ad07e354534066cc07e3eebef67840d43</Anchor>
+    <Anchor>a2f26b41e3e2646ae3266b36cc52d5ed0</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2481,7 +2461,7 @@
       <Scope>HCAnyOf</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_any_of.html</Path>
-    <Anchor>af150d29b61ea174f2adc7c4a4e63a9a4</Anchor>
+    <Anchor>ab3e1e37d58e3e0f5dbcf633baddf8cd3</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2533,7 +2513,7 @@
       <Scope>HCClassMatcher</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_class_matcher.html</Path>
-    <Anchor>a164cb91071fa4cd8209431fd87a1f1bc</Anchor>
+    <Anchor>acbb9cf8ca739da7bbe597e86d22c9339</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2563,7 +2543,7 @@
       <Scope>HCConformsToProtocol</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_conforms_to_protocol.html</Path>
-    <Anchor>a9b5e4c2e0bedce0b8db3631c26876da6</Anchor>
+    <Anchor>a4469477ec53f3a84848244c6bafbdc53</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2573,7 +2553,7 @@
       <Scope>HCConformsToProtocol</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_conforms_to_protocol.html</Path>
-    <Anchor>a00062dd45dde08aa114968c3a2795f59</Anchor>
+    <Anchor>a3cdda4c18f61efb2c3369eb9ba6c02ab</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2603,7 +2583,7 @@
       <Scope>HCDescribedAs</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_described_as.html</Path>
-    <Anchor>a78690c366bfe432a9e024126f62d7bee</Anchor>
+    <Anchor>acd8fb82e69c44b2ac72df7f08ccf69ff</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2613,7 +2593,7 @@
       <Scope>HCDescribedAs</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_described_as.html</Path>
-    <Anchor>aa0d76ba837101aaf790c1444c8c46962</Anchor>
+    <Anchor>a45e42dd09c8d71c3957b8ab1c4ab7c9f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2691,6 +2671,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>HCGenericTestFailureHandler</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>HCGenericTestFailureHandler</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_generic_test_failure_handler.html</Path>
+    <DeclaredIn>HCGenericTestFailureHandler.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>HCHasCount</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -2707,7 +2697,7 @@
       <Scope>HCHasCount</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_has_count.html</Path>
-    <Anchor>a8b9d351f676272af6fbfcec355f0568e</Anchor>
+    <Anchor>a65763c99e9b244c0272148f6016eb75c</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2717,7 +2707,7 @@
       <Scope>HCHasCount</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_has_count.html</Path>
-    <Anchor>a36b9f784c5e1f561e8264d960240672b</Anchor>
+    <Anchor>a7fc8787df2a8253b9385a34e0be724b2</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2747,7 +2737,7 @@
       <Scope>HCHasDescription</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_has_description.html</Path>
-    <Anchor>ab283bac08ee6ecfe2e0ce98f002e723f</Anchor>
+    <Anchor>a3f7829ab11390adba22557512cda15b7</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2757,7 +2747,7 @@
       <Scope>HCHasDescription</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_has_description.html</Path>
-    <Anchor>a7f8860f5ae46915d745c0c7efef4de3a</Anchor>
+    <Anchor>aabd3863777cc3d03d4faf19c4a0df743</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2777,7 +2767,7 @@
       <Scope>HCHasProperty</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_has_property.html</Path>
-    <Anchor>a7730a4a3e90e3645bc51d4d21e71f30d</Anchor>
+    <Anchor>a1f5784e43798bb9df45a025176fdc734</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2787,7 +2777,7 @@
       <Scope>HCHasProperty</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_has_property.html</Path>
-    <Anchor>a019414a3004babded7b164b7954d016c</Anchor>
+    <Anchor>ace1f2c482b37b57e56043f9e94dd3cad</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2828,7 +2818,7 @@
       <Scope>HCInvocationMatcher</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_invocation_matcher.html</Path>
-    <Anchor>a29602b42c3aad6f91675d0aba79fb361</Anchor>
+    <Anchor>a82b39aafc321c490d9c99c3b9bd379ec</Anchor>
     <Abstract>Returns an HCInvocationMatcher object initialized with an invocation and a matcher.</Abstract>
   </Token>
   <Token>
@@ -2913,7 +2903,7 @@
       <Scope>HCIs</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is.html</Path>
-    <Anchor>a6931e440684b2d1fe18ee5379e031a98</Anchor>
+    <Anchor>add1b2152f84457635155df28de83bdfa</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2923,7 +2913,7 @@
       <Scope>HCIs</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is.html</Path>
-    <Anchor>ab4949cc5596eef64f71efe2305369e22</Anchor>
+    <Anchor>afd22dc4700d48745349fadef0ac929fa</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2953,7 +2943,7 @@
       <Scope>HCIsAnything</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_anything.html</Path>
-    <Anchor>a580c362f0fbd5136ce53087980450a2c</Anchor>
+    <Anchor>aa66cb11a809c0c632435fdff1298181d</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2963,7 +2953,7 @@
       <Scope>HCIsAnything</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_anything.html</Path>
-    <Anchor>aefeec902cd56caf684952cd21f4de984</Anchor>
+    <Anchor>abbfae1bb090376a232483cb0c1024b34</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2973,7 +2963,7 @@
       <Scope>HCIsAnything</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_anything.html</Path>
-    <Anchor>a4e9698ef7cc72f8a20d381fa937d69aa</Anchor>
+    <Anchor>addf725cf283bdbe1d607491e7cda06ad</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2983,7 +2973,7 @@
       <Scope>HCIsAnything</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_anything.html</Path>
-    <Anchor>a189f58bd6a408823f65ed610aefe3f29</Anchor>
+    <Anchor>a4b991fd168a569c4dba413e729fe7535</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3013,7 +3003,7 @@
       <Scope>HCIsCloseTo</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_close_to.html</Path>
-    <Anchor>a2eeaf50ca822f260518ccc0524c0214d</Anchor>
+    <Anchor>accb4ff4c4aa490a317f727cd9e0a5c87</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3023,7 +3013,7 @@
       <Scope>HCIsCloseTo</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_close_to.html</Path>
-    <Anchor>a48e258a6dcb56fd7d78d190b08ccc066</Anchor>
+    <Anchor>ab596f7ac1e1d498df1846e8e18d3d06d</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3063,7 +3053,7 @@
       <Scope>HCIsCollectionContaining</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_collection_containing.html</Path>
-    <Anchor>a65cdaa9d7fde00f8d901a36a0344119f</Anchor>
+    <Anchor>a3d17267aed35e7e797be76d2cc8e98b2</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3073,7 +3063,7 @@
       <Scope>HCIsCollectionContaining</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_collection_containing.html</Path>
-    <Anchor>a6c559b67827cc3b79a9097bab3b935a5</Anchor>
+    <Anchor>a758eb7527db8b8ae6cff70a5518a1b56</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3103,7 +3093,7 @@
       <Scope>HCIsCollectionContainingInAnyOrder</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_collection_containing_in_any_order.html</Path>
-    <Anchor>ad7c4ced06da28bdae5a1f7f08463fc6d</Anchor>
+    <Anchor>a3cb280f2f5a4705dd56428681b45660e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3113,7 +3103,7 @@
       <Scope>HCIsCollectionContainingInAnyOrder</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_collection_containing_in_any_order.html</Path>
-    <Anchor>af0e7ce951ba70b81a95b79ca3c1647bb</Anchor>
+    <Anchor>aebb78df5d6184fda956390996cd6adc7</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3143,7 +3133,7 @@
       <Scope>HCIsCollectionContainingInOrder</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_collection_containing_in_order.html</Path>
-    <Anchor>a6a2813dd7bc556e3962b1483e93e450b</Anchor>
+    <Anchor>a3b9fdc13312fb167e8c471f4ad79860c</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3153,7 +3143,7 @@
       <Scope>HCIsCollectionContainingInOrder</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_collection_containing_in_order.html</Path>
-    <Anchor>a75accdd3bd9bf4221352e7ff3c34cc47</Anchor>
+    <Anchor>acc6fd21e113879fb8e60622640f4ac26</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3183,7 +3173,7 @@
       <Scope>HCIsCollectionOnlyContaining</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_collection_only_containing.html</Path>
-    <Anchor>a49f482c0a309565bbcf283c75706ca37</Anchor>
+    <Anchor>af4321332d4b77360e8954a1b74328cf0</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3193,7 +3183,7 @@
       <Scope>HCIsCollectionOnlyContaining</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_collection_only_containing.html</Path>
-    <Anchor>a206cb63a376ab74db93fccd06874d118</Anchor>
+    <Anchor>ab98753f2384c697e07a1b41f9d33ecc0</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3223,7 +3213,7 @@
       <Scope>HCIsDictionaryContaining</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_dictionary_containing.html</Path>
-    <Anchor>ad1a6593deeb059f3bdda45b558317f98</Anchor>
+    <Anchor>a08462cad45a5cf28530b81c8962fd6a3</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3233,7 +3223,7 @@
       <Scope>HCIsDictionaryContaining</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_dictionary_containing.html</Path>
-    <Anchor>abd23dd59af976e6e6a40f4e31419d032</Anchor>
+    <Anchor>afd6d51684f66538dab0a205bcdc20125</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3273,7 +3263,7 @@
       <Scope>HCIsDictionaryContainingEntries</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_dictionary_containing_entries.html</Path>
-    <Anchor>a1eccff41c48318396c0ff041048cddf8</Anchor>
+    <Anchor>a298820ef38a6c2795dd6cec0f3a66450</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3283,7 +3273,7 @@
       <Scope>HCIsDictionaryContainingEntries</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_dictionary_containing_entries.html</Path>
-    <Anchor>a8422dfca023299e3731410ce1b77788a</Anchor>
+    <Anchor>a46574ba761ff17fc29b236c9bca00a4c</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3323,7 +3313,7 @@
       <Scope>HCIsDictionaryContainingKey</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_dictionary_containing_key.html</Path>
-    <Anchor>a5e664bf70e80c7f0be99334c001d5cd0</Anchor>
+    <Anchor>a0b33c84286015d8538fc2816742f999f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3333,7 +3323,7 @@
       <Scope>HCIsDictionaryContainingKey</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_dictionary_containing_key.html</Path>
-    <Anchor>a859cd0d004eb71ecca602bdac699e391</Anchor>
+    <Anchor>aef526ffe7c999f3cdfaa94dd2b324f97</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3363,7 +3353,7 @@
       <Scope>HCIsDictionaryContainingValue</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_dictionary_containing_value.html</Path>
-    <Anchor>ad9310d9f44e1524b8b3d61fbe000852a</Anchor>
+    <Anchor>ad89f606adf84f6c01691591b321de59c</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3373,7 +3363,7 @@
       <Scope>HCIsDictionaryContainingValue</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_dictionary_containing_value.html</Path>
-    <Anchor>ae8fde5a760539b53adf9352d1580ed53</Anchor>
+    <Anchor>aba5d9c5b986a62feea6a897d484f8544</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3403,7 +3393,7 @@
       <Scope>HCIsEmptyCollection</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_empty_collection.html</Path>
-    <Anchor>a4318aca0e5c2c30217143f2e8705b94e</Anchor>
+    <Anchor>a5abe1000e5dd562eb7c50101554716f8</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3413,7 +3403,7 @@
       <Scope>HCIsEmptyCollection</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_empty_collection.html</Path>
-    <Anchor>a35d938369d424157e7a7fcc418192cb0</Anchor>
+    <Anchor>ab40858514aa4a8f3ea2c1e9f7ec27c64</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3433,7 +3423,7 @@
       <Scope>HCIsEqual</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_equal.html</Path>
-    <Anchor>a8b873de2e0837866bfd97393a3d2f809</Anchor>
+    <Anchor>a41648b378403272c729d7c1a659cfd87</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3443,7 +3433,7 @@
       <Scope>HCIsEqual</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_equal.html</Path>
-    <Anchor>a288b1e40ed2717828295bda02dd1064d</Anchor>
+    <Anchor>a4354e1325571b43dc49b0ce414cf7b34</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3473,7 +3463,7 @@
       <Scope>HCIsEqualIgnoringCase</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_equal_ignoring_case.html</Path>
-    <Anchor>adbf65480fbd70ea9c56704390912b698</Anchor>
+    <Anchor>a0102325db18d433a4a8b7d5ea6519665</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3483,7 +3473,7 @@
       <Scope>HCIsEqualIgnoringCase</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_equal_ignoring_case.html</Path>
-    <Anchor>a47cadbb6dab1d55f90a5fc968c53fa75</Anchor>
+    <Anchor>a883901d059bae39857630759bde0c104</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3513,7 +3503,7 @@
       <Scope>HCIsEqualIgnoringWhiteSpace</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_equal_ignoring_white_space.html</Path>
-    <Anchor>a1ab8c9c21a3d8ffbe1de7353ad38ec88</Anchor>
+    <Anchor>a8eb85903b2965cd989b2ef3d6615f373</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3523,7 +3513,7 @@
       <Scope>HCIsEqualIgnoringWhiteSpace</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_equal_ignoring_white_space.html</Path>
-    <Anchor>a82525f0186d73a62ef6826cb45b1c52c</Anchor>
+    <Anchor>a2b7ec4dff598cc1c16afeae6c44c838c</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3563,7 +3553,7 @@
       <Scope>HCIsEqualToBool</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_equal_to_bool.html</Path>
-    <Anchor>abc0fea38f6ac15e222fe3901aac6e730</Anchor>
+    <Anchor>a74fe1d251337a05c9342aa47b8039b53</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3583,7 +3573,7 @@
       <Scope>HCIsIn</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_in.html</Path>
-    <Anchor>aa88dc35617e76f26dea8c941e777b6ba</Anchor>
+    <Anchor>a96393f2563c0f434c0214c4c690810c7</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3593,7 +3583,7 @@
       <Scope>HCIsIn</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_in.html</Path>
-    <Anchor>abbf984a958b89192628e540ef973b5e0</Anchor>
+    <Anchor>a984c98f3a6ebf727bbcdf148994c0e97</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3663,7 +3653,7 @@
       <Scope>HCIsNot</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_not.html</Path>
-    <Anchor>aac6a867b61f80211e624ec6073f3e1f1</Anchor>
+    <Anchor>a0d054fc51a64b47cd5d84d9cf3b49d2c</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3673,7 +3663,7 @@
       <Scope>HCIsNot</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_not.html</Path>
-    <Anchor>af6f0c75f35818955eaa1fc84dd11b947</Anchor>
+    <Anchor>a31a6857a99552b7e84c06bbe41f0f83d</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3703,7 +3693,7 @@
       <Scope>HCIsSame</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_same.html</Path>
-    <Anchor>aca4a41b0b0d414ce7227c21d9ba5e8c8</Anchor>
+    <Anchor>a3394c2b751fde500312022d1ac1fbe2c</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3713,7 +3703,7 @@
       <Scope>HCIsSame</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_is_same.html</Path>
-    <Anchor>a712d4fe04b6241023fc2d9003c11a796</Anchor>
+    <Anchor>a5061974ec5a7860e295f7f5294a9700d</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3807,7 +3797,7 @@
       <Scope>HCOrderingComparison</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_ordering_comparison.html</Path>
-    <Anchor>ab83526c686c70c5d003bf1eed42737c5</Anchor>
+    <Anchor>ae058a387f2cc836535f389922405f8dc</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3817,7 +3807,7 @@
       <Scope>HCOrderingComparison</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_ordering_comparison.html</Path>
-    <Anchor>a0de48a388952154adcbd68b54604badd</Anchor>
+    <Anchor>a05dd13d3c107cab88ccd3d4a4c9343c0</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3883,6 +3873,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>HCSenTestFailureHandler</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>HCSenTestFailureHandler</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_sen_test_failure_handler.html</Path>
+    <DeclaredIn>HCSenTestFailureHandler.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>HCStringContains</Name>
       <APILanguage>c</APILanguage>
       <Type>cl</Type>
@@ -3919,7 +3919,7 @@
       <Scope>HCStringContainsInOrder</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_string_contains_in_order.html</Path>
-    <Anchor>af159fe8837f862645b69dcd5b262993d</Anchor>
+    <Anchor>a29142ea15143191b6d9f3449424fb1b8</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3929,7 +3929,7 @@
       <Scope>HCStringContainsInOrder</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_string_contains_in_order.html</Path>
-    <Anchor>a4f06ee5e6b6a62b23e41bc26b0fa33dc</Anchor>
+    <Anchor>a1f83dc37e2c0e812239d388eb42d0067</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3960,7 +3960,7 @@
       <Scope>HCStringDescription</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_string_description.html</Path>
-    <Anchor>a486b590537152d53ccb78275dffa5517</Anchor>
+    <Anchor>afc3046cd29bb91d37f137c0f5a89ec5d</Anchor>
     <Abstract>Returns an initialized HCStringDescription object that is empty.</Abstract>
   </Token>
   <Token>
@@ -3982,7 +3982,7 @@
       <Scope>HCStringDescription</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_string_description.html</Path>
-    <Anchor>a782024891828c6db7717d61190c33284</Anchor>
+    <Anchor>ac1112236fc6256b467812efc6ebc124d</Anchor>
     <Abstract>Returns an empty description.</Abstract>
   </Token>
   <Token>
@@ -4053,7 +4053,7 @@
       <Scope>HCSubstringMatcher</Scope>
     </TokenIdentifier>
     <Path>interface_h_c_substring_matcher.html</Path>
-    <Anchor>a09df3dc897aae4b7385c054130736673</Anchor>
+    <Anchor>aef5551f396f13d7d05f80d92f00dcec8</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4064,5 +4064,108 @@
     </TokenIdentifier>
     <Path>interface_h_c_substring_matcher.html</Path>
     <Anchor>ae27ec50c126d34b5faa346729c1b07d8</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>HCTestFailure</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>HCTestFailure</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_test_failure.html</Path>
+    <Abstract>Test failure location and reason.</Abstract>
+    <DeclaredIn>HCTestFailure.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>initWithTestCase:fileName:lineNumber:reason:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>HCTestFailure</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_test_failure.html</Path>
+    <Anchor>a9d70ce788be1f174f32330bef61df28b</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>testCase</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instp</Type>
+      <Scope>HCTestFailure</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_test_failure.html</Path>
+    <Anchor>a037c0d9df37a354fd74a26cc4380a6ad</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>fileName</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instp</Type>
+      <Scope>HCTestFailure</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_test_failure.html</Path>
+    <Anchor>a8276ac05ae5d7700c8fa9bc30c1c9355</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>lineNumber</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instp</Type>
+      <Scope>HCTestFailure</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_test_failure.html</Path>
+    <Anchor>a59170eb7078a9218f60b0110d26d8eb1</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reason</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instp</Type>
+      <Scope>HCTestFailure</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_test_failure.html</Path>
+    <Anchor>af6651c233475189664f7273fbd3562f0</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>HCTestFailureHandler</Name>
+      <APILanguage>c</APILanguage>
+      <Type>intf</Type>
+      <Scope>HCTestFailureHandler</Scope>
+    </TokenIdentifier>
+    <Path>protocol_h_c_test_failure_handler-p.html</Path>
+    <Abstract>Chain-of-responsibility for handling test failures.</Abstract>
+    <DeclaredIn>HCTestFailureHandler.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>handleFailure:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>intfm</Type>
+      <Scope>HCTestFailureHandler-p</Scope>
+    </TokenIdentifier>
+    <Path>protocol_h_c_test_failure_handler-p.html</Path>
+    <Anchor>a3c741ac2972fd7a900993d11e39611bf</Anchor>
+    <Abstract>Handle test failure at specific location, or pass to successor.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>successor</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>intfp</Type>
+      <Scope>HCTestFailureHandler-p</Scope>
+    </TokenIdentifier>
+    <Path>protocol_h_c_test_failure_handler-p.html</Path>
+    <Anchor>a90d5187e0499a007e83688b0c6440b7c</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>HCXCTestFailureHandler</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>HCXCTestFailureHandler</Scope>
+    </TokenIdentifier>
+    <Path>interface_h_c_x_c_test_failure_handler.html</Path>
+    <DeclaredIn>HCXCTestFailureHandler.h</DeclaredIn>
   </Token>
 </Tokens>

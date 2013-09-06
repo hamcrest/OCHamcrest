@@ -81,8 +81,6 @@ Defines</h2></td></tr>
 <tr class="memdesc:ga58754aa8b36ae52c05a03c140488a85f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__collection__matchers.html#ga58754aa8b36ae52c05a03c140488a85f" title="hasKey(keyMatcher) - Matches if dictionary contains an entry whose key satisfies a given matcher...">hasKey(keyMatcher)</a> - Matches if dictionary contains an entry whose key satisfies a given matcher.  <a href="#ga58754aa8b36ae52c05a03c140488a85f"></a><br/></td></tr>
 <tr class="memitem:gaf141b74c5177da00f45c49b50f867e52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gaf141b74c5177da00f45c49b50f867e52">hasValue</a>&#160;&#160;&#160;<a class="el" href="_h_c_is_dictionary_containing_value_8h.html#a46b9eaa6b5815b955a9d25a81bf7977f">HC_hasValue</a></td></tr>
 <tr class="memdesc:gaf141b74c5177da00f45c49b50f867e52"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__collection__matchers.html#gaf141b74c5177da00f45c49b50f867e52" title="hasValue(valueMatcher) - Matches if dictionary contains an entry whose value satisfies a given matche...">hasValue(valueMatcher)</a> - Matches if dictionary contains an entry whose value satisfies a given matcher.  <a href="#gaf141b74c5177da00f45c49b50f867e52"></a><br/></td></tr>
-<tr class="memitem:gadafd520091b5ddf350fc4b2fedfdffa5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#gadafd520091b5ddf350fc4b2fedfdffa5">empty</a>()&#160;&#160;&#160;HC_empty()</td></tr>
-<tr class="memdesc:gadafd520091b5ddf350fc4b2fedfdffa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matches empty collection.  <a href="#gadafd520091b5ddf350fc4b2fedfdffa5"></a><br/></td></tr>
 <tr class="memitem:ga784958d508db56700898ace5d6bb5e34"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga784958d508db56700898ace5d6bb5e34">isEmpty</a>()&#160;&#160;&#160;<a class="el" href="_h_c_is_empty_collection_8h.html#a719efdfea2aab0b43812db1a2b6cd6f8">HC_isEmpty</a>()</td></tr>
 <tr class="memdesc:ga784958d508db56700898ace5d6bb5e34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matches empty collection.  <a href="#ga784958d508db56700898ace5d6bb5e34"></a><br/></td></tr>
 <tr class="memitem:ga461b9aa2f6e1983ae9039cf5ca8e90c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__collection__matchers.html#ga461b9aa2f6e1983ae9039cf5ca8e90c2">isIn</a>&#160;&#160;&#160;<a class="el" href="_h_c_is_in_8h.html#afb758a625006309b7edb5bb303a09ed4">HC_isIn</a></td></tr>
@@ -135,25 +133,6 @@ Defines</h2></td></tr>
 <p>This matcher iterates the evaluated collection, seeing if each element satisfies any of the given matchers. The matchers are tried from left to right, and when a satisfied matcher is found, it is no longer a candidate for the remaining elements. If a one-to-one correspondence is established between elements and matchers, <code>containsInAnyOrder</code> is satisfied.</p>
 <p>Any argument that is not a matcher is implicitly wrapped in an <a class="el" href="group__object__matchers.html#gaed554671d587236694fbb3723fe2f8a4">equalTo</a> matcher to check for equality.</p>
 <p>(In the event of a name clash, don't #define <code>HC_SHORTHAND</code> and use the synonym <code>HC_containsInAnyOrder</code> instead.) </p>
-
-</div>
-</div>
-<a class="anchor" id="gadafd520091b5ddf350fc4b2fedfdffa5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define <a class="el" href="group__collection__matchers.html#gadafd520091b5ddf350fc4b2fedfdffa5">empty</a></td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;HC_empty()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Matches empty collection. </p>
-<p>Deprecated; use <a class="el" href="group__collection__matchers.html#ga784958d508db56700898ace5d6bb5e34" title="Matches empty collection.">isEmpty()</a> instead. </p>
 
 </div>
 </div>
@@ -442,7 +421,7 @@ Defines</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 23 2013 22:07:21 for OCHamcrest by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 6 2013 09:50:14 for OCHamcrest by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$interface_h_c_generic_test_failure_handler.html" title="HCGenericTestFailureHandler" alt="" coords="5,86,216,117"/>
+<area shape="rect" id="node3" href="$interface_h_c_sen_test_failure_handler.html" title="HCSenTestFailureHandler" alt="" coords="240,86,424,117"/>
+<area shape="rect" id="node4" href="$interface_h_c_x_c_test_failure_handler.html" title="HCXCTestFailureHandler" alt="" coords="449,86,628,117"/>
+</map>

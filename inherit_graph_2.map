@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$protocol_h_c_test_failure_handler-p.html" title="Chain&#45;of&#45;responsibility for handling test failures." alt="" coords="6,59,189,90"/>
+<area shape="rect" id="node2" href="$interface_h_c_generic_test_failure_handler.html" title="HCGenericTestFailureHandler" alt="" coords="237,5,448,35"/>
+<area shape="rect" id="node3" href="$interface_h_c_sen_test_failure_handler.html" title="HCSenTestFailureHandler" alt="" coords="250,59,435,90"/>
+<area shape="rect" id="node4" href="$interface_h_c_x_c_test_failure_handler.html" title="HCXCTestFailureHandler" alt="" coords="253,114,432,145"/>
+</map>
