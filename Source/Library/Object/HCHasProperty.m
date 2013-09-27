@@ -50,7 +50,7 @@
     [getterInvocation setSelector:selector];
     [getterInvocation invoke];
     
-    __unsafe_unretained id result = nil;
+    id result = nil;
     const char *argType = [getterSignature methodReturnType];
     if (strncmp(argType, @encode(char), 1) == 0)
     {
@@ -126,7 +126,9 @@
     }
     else if (strncmp(argType, @encode(id), 1) == 0)
     {
-        [getterInvocation getReturnValue:&result];
+        __unsafe_unretained id unretainedResult;
+        [getterInvocation getReturnValue:&unretainedResult];
+        result = unretainedResult;
     }
         
     return result;
