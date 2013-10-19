@@ -5,8 +5,8 @@
 
 
 /**
-    Returns chain of test failure handlers.
+ Returns chain of test failure handlers.
  
-    @ingroup integration
+ @ingroup integration
  */
 OBJC_EXPORT id <HCTestFailureHandler> HC_testFailureHandlerChain(void);

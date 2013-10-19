@@ -2,9 +2,9 @@
 
 
 /**
-    Test failure location and reason.
+ Test failure location and reason.
  
-    @ingroup integration
+ @ingroup integration
  */
 @interface HCTestFailure : NSObject
 

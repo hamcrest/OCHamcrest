@@ -13,10 +13,10 @@
 
 
 /**
-    Wraps argument in a matcher, if necessary.
-    
-    @return The argument as-if if it is already a matcher, otherwise wrapped in an @ref equalTo matcher.
-    
-    @ingroup helpers
+ Wraps argument in a matcher, if necessary.
+ 
+ @return The argument as-if if it is already a matcher, otherwise wrapped in an @ref equalTo matcher.
+ 
+ @ingroup helpers
  */
 OBJC_EXPORT id<HCMatcher> HCWrapInMatcher(id matcherOrValue);

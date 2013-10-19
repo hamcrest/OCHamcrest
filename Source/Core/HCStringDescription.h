@@ -13,9 +13,9 @@
 
 
 /**
-    An HCDescription that is stored as a string.
-
-    @ingroup core
+ An HCDescription that is stored as a string.
+ 
+ @ingroup core
  */
 @interface HCStringDescription : HCBaseDescription
 {
@@ -23,20 +23,20 @@
 }
 
 /**
-    Returns the description of an HCSelfDescribing object as a string.
-
-    @param selfDescribing  The object to be described.
-    @return The description of the object.
+ Returns the description of an HCSelfDescribing object as a string.
+ 
+ @param selfDescribing  The object to be described.
+ @return The description of the object.
  */
 + (NSString *)stringFrom:(id<HCSelfDescribing>)selfDescribing;
 
 /**
-    Returns an empty description.
+ Returns an empty description.
  */
 + (instancetype)stringDescription;
 
 /**
-    Returns an initialized HCStringDescription object that is empty.
+ Returns an initialized HCStringDescription object that is empty.
  */
 - (instancetype)init;
 

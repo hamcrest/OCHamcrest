@@ -27,15 +27,15 @@
 OBJC_EXPORT id<HCMatcher> HC_anything(void);
 
 /**
-    Matches anything.
-    
-    This matcher always evaluates to @c YES. Specify this in composite matchers when the value of a 
-    particular element is unimportant.
-    
-    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_anything instead.)
-
-    @ingroup logical_matchers
+ Matches anything.
+ 
+ This matcher always evaluates to @c YES. Specify this in composite matchers when the value of a
+ particular element is unimportant.
+ 
+ (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+ @c HC_anything instead.)
+ 
+ @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND
     #define anything() HC_anything()
@@ -45,18 +45,18 @@ OBJC_EXPORT id<HCMatcher> HC_anything(void);
 OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *aDescription);
 
 /**
-    anythingWithDescription(description) -
-    Matches anything.
-    
-    @param description  A string used to describe this matcher.
-    
-    This matcher always evaluates to @c YES. Specify this in collection matchers when the value of a 
-    particular element in a collection is unimportant.
-    
-    (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
-    @c HC_anything instead.)
-
-    @ingroup logical_matchers
+ anythingWithDescription(description) -
+ Matches anything.
+ 
+ @param description  A string used to describe this matcher.
+ 
+ This matcher always evaluates to @c YES. Specify this in collection matchers when the value of a
+ particular element in a collection is unimportant.
+ 
+ (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+ @c HC_anything instead.)
+ 
+ @ingroup logical_matchers
  */
 #ifdef HC_SHORTHAND
     #define anythingWithDescription HC_anythingWithDescription
