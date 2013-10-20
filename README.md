@@ -3,7 +3,7 @@
 What is OCHamcrest?
 ===================
 
-OCHamcrest is:
+OCHamcrest is an iOS and Mac OS X library providing:
 
 * a library of "matcher" objects that let you declare rules for whether a given
   object matches the criteria or not.
@@ -13,14 +13,12 @@ Matchers are useful for a variety of purposes, such as UI validation. But
 they're most commonly used for writing unit tests that are expressive and
 flexible.
 
-OCHamcrest is used for both iOS and Mac development.
-
 
 How do I add OCHamcrest to my project?
 ======================================
 
 The Examples folder shows projects using OCHamcrest either through CocoaPods or
-through the prebuilt frameworks, for iOS and Mac development.
+through the prebuilt frameworks, for iOS and Mac OS X development.
 
 CocoaPods
 ---------
@@ -44,7 +42,7 @@ Prebuilt Frameworks
 -------------------
 
 Prebuilt binaries are available on [GitHub](https://github.com/hamcrest/OCHamcrest/releases/).
-The binaries are packaged as frameworks: OCHamcrest.framework for Mac
+The binaries are packaged as frameworks: OCHamcrest.framework for Mac OS X
 development, OCHamcrestIOS.framework for iOS development. Drag the appropriate
 framework into your project, specifying "Copy items into destination group's
 folder".
@@ -56,7 +54,7 @@ Use the following import:
     #define HC_SHORTHAND
     #import <OCHamcrestIOS/OCHamcrestIOS.h>
 
-__Mac Development:__
+__Mac OS X Development:__
 
 Add a "Copy Files" build phase to copy OCHamcrest.framework to your Products
 Directory.
