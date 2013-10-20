@@ -146,7 +146,7 @@ OCHamcrest comes with a library of useful matchers:
 * Number
 
   * `closeTo` - match number close to a given value
-  * equalTo<TypeName> - match number equal to a primitive number (such as
+  * equalTo&lt;TypeName&gt; - match number equal to a primitive number (such as
   `equalToInt` for an `int`)
   * `greaterThan`, `greaterThanOrEqualTo`, `lessThan`,
   `lessThanOrEqualTo` - match numeric ordering
