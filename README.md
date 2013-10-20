@@ -47,14 +47,14 @@ development, OCHamcrestIOS.framework for iOS development. Drag the appropriate
 framework into your project, specifying "Copy items into destination group's
 folder".
 
-__iOS Development:__
+### iOS Development:
 
 Use the following import:
 
     #define HC_SHORTHAND
     #import <OCHamcrestIOS/OCHamcrestIOS.h>
 
-__Mac OS X Development:__
+### Mac OS X Development:
 
 Add a "Copy Files" build phase to copy OCHamcrest.framework to your Products
 Directory.
