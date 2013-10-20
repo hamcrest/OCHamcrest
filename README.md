@@ -1,7 +1,7 @@
 ![ochamcrest](http://hamcrest.org/images/logo.jpg)
 
 What is OCHamcrest?
-===================
+-------------------
 
 OCHamcrest is an iOS and Mac OS X library providing:
 
@@ -15,13 +15,12 @@ flexible.
 
 
 How do I add OCHamcrest to my project?
-======================================
+--------------------------------------
 
 The Examples folder shows projects using OCHamcrest either through CocoaPods or
 through the prebuilt frameworks, for iOS and Mac OS X development.
 
-CocoaPods
----------
+### CocoaPods
 
 If you want to add OCHamcrest using Cocoapods then add the following dependency
 to your Podfile. Most people will want OCHamcrest in their test targets, and not
@@ -38,8 +37,7 @@ Use the following import:
     #define HC_SHORTHAND
     #import <OCHamcrest/OCHamcrest.h>
 
-Prebuilt Frameworks
--------------------
+### Prebuilt Frameworks
 
 Prebuilt binaries are available on [GitHub](https://github.com/hamcrest/OCHamcrest/releases/).
 The binaries are packaged as frameworks:
@@ -50,14 +48,14 @@ The binaries are packaged as frameworks:
 Drag the appropriate framework into your project, specifying "Copy items into
 destination group's folder".
 
-### iOS Development:
+#### iOS Development:
 
 Use the following import:
 
     #define HC_SHORTHAND
     #import <OCHamcrestIOS/OCHamcrestIOS.h>
 
-### Mac OS X Development:
+#### Mac OS X Development:
 
 Add a "Copy Files" build phase to copy OCHamcrest.framework to your Products
 Directory.
@@ -67,8 +65,7 @@ Use the following import:
     #define HC_SHORTHAND
     #import <OCHamcrest/OCHamcrest.h>
 
-Build Your Own
---------------
+### Build Your Own
 
 If you want to build OCHamcrest yourself, clone the repo, then
 
@@ -87,7 +84,7 @@ $ DOXYGEN=/usr/local/bin/doxygen ./MakeDistribution.sh
 
 
 My first OCHamcrest test
-========================
+------------------------
 
 We'll start by writing a very simple Xcode unit test, but instead of using
 XCTest's `XCTAssertEqualObjects` function, we'll use OCHamcrest's `assertThat`
@@ -129,7 +126,7 @@ instead of writing `HC_assertThat`, simply write `assertThat`.
 
 
 Predefined matchers
-===================
+-------------------
 
 OCHamcrest comes with a library of useful matchers:
 
@@ -197,7 +194,7 @@ item is a string ending with period.
 
 
 Syntactic sugar
-===============
+---------------
 
 OCHamcrest strives to make your tests as readable as possible. For example, the
 `is` matcher is a wrapper that doesn't add any extra behavior to the underlying
@@ -215,7 +212,7 @@ wrapping non-matcher arguments in `equalTo`.
 
 
 Writing custom matchers
-=======================
+-----------------------
 
 OCHamcrest comes bundled with lots of useful matchers, but you'll probably find
 that you need to create your own from time to time to fit your testing needs.
