@@ -44,8 +44,8 @@ Prebuilt Frameworks
 Prebuilt binaries are available on [GitHub](https://github.com/hamcrest/OCHamcrest/releases/).
 The binaries are packaged as frameworks:
 
-* _OCHamcrestIOS.framework_ for iOS development
-* _OCHamcrest.framework_ for Mac OS X development
+* __OCHamcrestIOS.framework__ for iOS development
+* __OCHamcrest.framework__ for Mac OS X development
 
 Drag the appropriate framework into your project, specifying "Copy items into
 destination group's folder".
