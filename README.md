@@ -28,7 +28,60 @@ OCHamcrest is used for both iOS or OS X development, and is compatible with:
 How do I add OCHamcrest to my project?
 ======================================
 
-__Building:__
+The Examples folder shows projects using OCHamcrest either through CocoaPods or
+through the prebuilt frameworks, for iOS and Mac development.
+
+CocoaPods
+---------
+
+If you want to add OCHamcrest using Cocoapods then add the following dependency
+to your Podfile. Most people will want OCHamcrest in their test targets, and not
+include any pods from their main targets:
+
+```ruby
+target :MyTests, :exclusive => true do
+    pod 'OCHamcrest', '~> 3.0'
+end
+```
+
+Use the following import:
+
+    #define HC_SHORTHAND
+    #import <OCHamcrest/OCHamcrest.h>
+
+Prebuilt Frameworks
+-------------------
+
+Prebuilt binaries are available on [GitHub](https://github.com/hamcrest/OCHamcrest/releases/).
+The binaries are packaged as frameworks: OCHamcrest.framework for Mac
+development, OCHamcrestIOS.framework for iOS development. Drag the appropriate
+framework into your project, specifying "Copy items into destination group's
+folder".
+
+__iOS Development:__
+
+Use the following import:
+
+    #define HC_SHORTHAND
+    #import <OCHamcrestIOS/OCHamcrestIOS.h>
+
+__Mac Development:__
+
+Add a "Copy Files" build phase to copy OCHamcrest.framework to your Products
+Directory. For unit test bundles, make sure this Copy Files phase comes before
+the Run Script phase that executes tests. If your Console shows
+
+    otest[57510:203] *** NSTask: Task create for path '...' failed: 22, "Invalid argument".  Terminating temporary process.
+
+then double-check your Copy Files phase.
+
+Use the following import:
+
+    #define HC_SHORTHAND
+    #import <OCHamcrest/OCHamcrest.h>
+
+Build Your Own
+--------------
 
 If you want to build OCHamcrest yourself, clone the repo, then
 
@@ -38,43 +91,12 @@ $ cd Source
 $ ./MakeDistribution.sh
 ```
 
-If you have doxygen installed somewhere other than the Applications folder --
+If you have Doxygen installed somewhere other than the Applications folder --
 in /usr/local/bin, for example -- use this as the build step:
 
 ```sh
 $ DOXYGEN=/usr/local/bin/doxygen ./MakeDistribution.sh
 ```
-
-Or just use the pre-built release available at
-[QualityCoding.org](http://qualitycoding.org/resources/).
-
-__iOS Project Setup:__
-
-Add OCHamcrestIOS.framework to your project.
-
-Add:
-
-    #define HC_SHORTHAND
-    #import <OCHamcrestIOS/OCHamcrestIOS.h>
-
-__OS X Project Setup:__
-
-Add OCHamcrest.framework to your project.
-
-Add a Copy Files build phase to copy OCHamcrest.framework to your Products
-Directory. For unit test bundles, make sure this Copy Files phase comes before
-the Run Script phase that executes tests.
-
-Add:
-
-    #define HC_SHORTHAND
-    #import <OCHamcrest/OCHamcrest.h>
-
-Note: If your Console shows
-
-    otest[57510:203] *** NSTask: Task create for path '...' failed: 22, "Invalid argument".  Terminating temporary process.
-
-double-check your Copy Files phase.
 
 
 My first OCHamcrest test
