@@ -75,13 +75,6 @@ $ cd Source
 $ ./MakeDistribution.sh
 ```
 
-If you have Doxygen installed somewhere other than the Applications folder --
-in /usr/local/bin, for example -- use this as the build step:
-
-```sh
-$ DOXYGEN=/usr/local/bin/doxygen ./MakeDistribution.sh
-```
-
 
 My first OCHamcrest test
 ------------------------

@@ -2,7 +2,6 @@ VERSION=3.0.0
 DISTFILE=OCHamcrest-${VERSION}
 DISTPATH=build/${DISTFILE}
 PROJECTROOT=..
-DOCSET=build/Documentation/org.hamcrest.OCHamcrest.docset
 
 echo Preparing clean build
 rm -rf build
@@ -24,22 +23,15 @@ if [ "${OUT}" -ne "0" ]; then
     exit ${OUT}
 fi
 
-echo Building Documentation
-source MakeDocumentation.sh
-
 echo Assembling Distribution
 rm -rf "${DISTPATH}"
 mkdir "${DISTPATH}"
 cp -R "build/Release/OCHamcrest.framework" "${DISTPATH}"
 cp -R "build/Release/OCHamcrestIOS.framework" "${DISTPATH}"
 cp "${PROJECTROOT}/README.md" "${DISTPATH}"
-cp "${PROJECTROOT}/CHANGES.txt" "${DISTPATH}"
+cp "${PROJECTROOT}/CHANGES.md" "${DISTPATH}"
 cp "${PROJECTROOT}/LICENSE.txt" "${DISTPATH}"
 cp -R "${PROJECTROOT}/Examples" "${DISTPATH}"
-mkdir "${DISTPATH}/Documentation"
-cp -R "${DOCSET}" "${DISTPATH}/Documentation"
-cp "${PROJECTROOT}/Documentation/Makefile" "${DISTPATH}/Documentation"
-cp "${PROJECTROOT}/Documentation/README.txt" "${DISTPATH}/Documentation"
 
 find "${DISTPATH}/Examples" -type d \( -name 'build' -or -name 'xcuserdata' -or -name '.svn' -or -name '.git' \) | while read DIR
 do
