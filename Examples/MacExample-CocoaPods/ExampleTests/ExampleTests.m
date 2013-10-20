@@ -1,12 +1,12 @@
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
 
-@interface Example : SenTestCase
+@interface ExampleTests : XCTestCase
 @end
 
-@implementation Example
+@implementation ExampleTests
 
 - (void)testUsingAssertThat
 {

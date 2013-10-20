@@ -3,16 +3,11 @@
 
 @implementation IsGivenDayOfWeek
 
-+ (instancetype)isGivenDayOfWeek:(NSInteger)dayOfWeek
-{
-    return [[self alloc] initWithDay:dayOfWeek];
-}
-
-- (instancetype)initWithDay:(NSInteger)dayOfWeek
+- (instancetype)initWithDayOfWeek:(NSInteger)dayOfWeek
 {
     self = [super init];
     if (self)
-        day = dayOfWeek;
+        _dayOfWeek = dayOfWeek;
     return self;
 }
 
@@ -22,7 +17,7 @@
     if (![item respondsToSelector:@selector(dayOfWeek)])
         return NO;
 
-    return [item dayOfWeek] == day;
+    return [item dayOfWeek] == _dayOfWeek;
 }
 
 // Describe the matcher.
@@ -30,7 +25,7 @@
 {
     NSString* dayAsString[] =
         { @"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday" };
-    [[description appendText:@"calendar date falling on "] appendText:dayAsString[day]];
+    [[description appendText:@"calendar date falling on "] appendText:dayAsString[_dayOfWeek]];
 }
 
 @end
@@ -38,5 +33,5 @@
 
 id <HCMatcher> onASaturday()
 {
-    return [IsGivenDayOfWeek isGivenDayOfWeek:6];
+    return [[IsGivenDayOfWeek alloc] initWithDayOfWeek:6];
 }

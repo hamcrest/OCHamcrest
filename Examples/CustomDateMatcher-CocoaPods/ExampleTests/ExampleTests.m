@@ -1,14 +1,14 @@
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
 
 #import "IsGivenDayOfWeek.h"
 
-@interface SampleTest : SenTestCase
+@interface ExampleTests : XCTestCase
 @end
 
-@implementation SampleTest
+@implementation ExampleTests
 
 - (void)testDateIsOnASaturday
 {
