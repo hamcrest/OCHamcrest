@@ -13,6 +13,7 @@
 
     // Collaborators
 #import <OCHamcrest/HCIsEqual.h>
+#import <OCHamcrest/HCHasCount.h>
 
     // Test support
 #import "AbstractMatcherTest.h"
@@ -53,6 +54,13 @@
 - (void)testMismatchDescriptionShowsActualArgument
 {
     assertMismatchDescription(@"was \"A\"", isNot(@"A"), @"A");
+}
+
+- (void)testMismatchDescriptionShowsActualSubMatcherDescription
+{
+    NSArray *item = @[@"A", @"B"];
+    NSString *expected = [NSString stringWithFormat:@"was count of <2> with <%@>", item];
+    assertMismatchDescription(expected, isNot(hasCountOf(item.count)), item);
 }
 
 - (void)testDescribeMismatch
