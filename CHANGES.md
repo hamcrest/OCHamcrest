@@ -1,5 +1,5 @@
 Version 3.0.0
-=============
+-------------
 _06 Sep 2013_
 
 **Features:**
@@ -17,7 +17,7 @@ _06 Sep 2013_
 
 
 Version 2.1.0
-=============
+-------------
 _23 Jun 2013_
 
 **Features:**
@@ -44,7 +44,7 @@ _23 Jun 2013_
 
 
 Version 2.0.1
-=============
+-------------
 _12 May 2013_
 
 **Fixes:**
@@ -58,7 +58,7 @@ _12 May 2013_
 
 
 Version 2.0.0
-=============
+-------------
 _13 Apr 2013_
 
 This release adopts Semantic Versioning (http://semver.org). Since removal of deprecated items is a
@@ -90,7 +90,7 @@ backwards incompatible change, the major version number is incremented. _Thanks 
 
 
 Version 1.9
-===========
+-----------
 _23 Nov 2012_
 
 **Improved matchers:**
@@ -107,7 +107,7 @@ _23 Nov 2012_
 
 
 Version 1.8
-===========
+-----------
 _09 Jul 2012_
 
 The primary purpose of this release is to make it easier to add OCHamcrest to iOS projects. No more
@@ -137,7 +137,7 @@ Also, the repository has a new official home: https://github.com/hamcrest/OCHamc
 
 
 Version 1.7
-===========
+-----------
 _20 Feb 2012_
 
 **New matchers:**
@@ -155,7 +155,7 @@ _20 Feb 2012_
 
 
 Version 1.6
-===========
+-----------
 _27 Sep 2011_
 
 **New matchers:**
@@ -176,7 +176,7 @@ _27 Sep 2011_
 
 
 Version 1.5
-===========
+-----------
 _29 Apr 2011_
 
 **Fixes:**
@@ -202,7 +202,7 @@ _29 Apr 2011_
 
 
 Version 1.4
-===========
+-----------
 _13 Feb 2011_
 
 **New matchers:**
@@ -226,7 +226,7 @@ _13 Feb 2011_
 
 
 Version 1.3
-===========
+-----------
 _05 Jan 2011_
 
 **Improved descriptions:**
@@ -244,7 +244,7 @@ _05 Jan 2011_
 
 
 Version 1.2
-===========
+-----------
 _03 Jan 2011_
 
 **New matchers:**
@@ -279,7 +279,7 @@ _03 Jan 2011_
 
 
 Version 1.1.2
-=============
+-------------
 _28 Dec 2010_
 
 **New matchers:**
@@ -305,7 +305,7 @@ _28 Dec 2010_
 
 
 Version 1.0
-===========
+-----------
 _26 Oct 2010_
 
 First official release, including:
@@ -318,7 +318,7 @@ First official release, including:
 
 
 Before v1.0
-===========
+-----------
 
 _07 Oct 2010_
 
