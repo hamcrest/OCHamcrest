@@ -57,23 +57,23 @@
 
 #pragma mark -
 
-@interface QuietTest : SenTestCase
-@end
-
-@implementation QuietTest
-
-- (Class)testRunClass
-{
-    return [MockTestRun class];
-}
-
-- (void)twoFailingAssertions
-{
-    assertThat(@"1", equalTo(@"2"));
-    assertThat(@"3", equalTo(@"4"));
-}
-
-@end
+//@interface QuietTest : SenTestCase
+//@end
+//
+//@implementation QuietTest
+//
+//- (Class)testRunClass
+//{
+//    return [MockTestRun class];
+//}
+//
+//- (void)twoFailingAssertions
+//{
+//    assertThat(@"1", equalTo(@"2"));
+//    assertThat(@"3", equalTo(@"4"));
+//}
+//
+//@end
 
 
 #pragma mark -
@@ -131,27 +131,27 @@
     STFail(@"should have failed");
 }
 
-- (void)testAssertionRecordingAllErrors
-{
-    QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
-    [testCase continueAfterFailure];    // Default behavior of OCUnit
+//- (void)testAssertionRecordingAllErrors
+//{
+//    QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
+//    [testCase continueAfterFailure];    // Default behavior of OCUnit
+//
+//    MockTestRun *testRun = (MockTestRun *)[testCase run];
+//
+//    STAssertEquals([testRun failureCount], 2U, nil);
+//    STAssertEquals([testRun unexpectedExceptionCount], 0U, nil);
+//}
 
-    MockTestRun *testRun = (MockTestRun *)[testCase run];
-
-    STAssertEquals([testRun failureCount], 2U, nil);
-    STAssertEquals([testRun unexpectedExceptionCount], 0U, nil);
-}
-
-- (void)testAssertionStoppingAtFirstError
-{
-    QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
-    [testCase raiseAfterFailure];       // Change behavior
-
-    MockTestRun *testRun = (MockTestRun *)[testCase run];
-
-    STAssertEquals([testRun failureCount], 1U, nil);
-    STAssertEquals([testRun unexpectedExceptionCount], 0U, nil);
-}
+//- (void)testAssertionStoppingAtFirstError
+//{
+//    QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
+//    [testCase raiseAfterFailure];       // Change behavior
+//
+//    MockTestRun *testRun = (MockTestRun *)[testCase run];
+//
+//    STAssertEquals([testRun failureCount], 1U, nil);
+//    STAssertEquals([testRun unexpectedExceptionCount], 0U, nil);
+//}
 
 @end
 
