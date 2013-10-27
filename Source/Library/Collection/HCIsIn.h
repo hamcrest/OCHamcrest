@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_isIn(id aCollection);
+OBJC_EXPORT id HC_isIn(id aCollection);
 
 /**
  isIn(aCollection) -

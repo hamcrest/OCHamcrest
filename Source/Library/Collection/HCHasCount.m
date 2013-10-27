@@ -59,12 +59,12 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_hasCount(id<HCMatcher> matcher)
+id HC_hasCount(id<HCMatcher> matcher)
 {
     return [HCHasCount hasCount:matcher];
 }
 
-id<HCMatcher> HC_hasCountOf(NSUInteger value)
+id HC_hasCountOf(NSUInteger value)
 {
     return HC_hasCount(HC_equalToUnsignedInteger(value));
 }

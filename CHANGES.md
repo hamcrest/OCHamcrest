@@ -1,16 +1,18 @@
 Upcoming Release
 ----------------
 
-**Documentation:**
+**Examples & Documentation:**
 
 - Updated examples so they are based on Apple's templates for main target vs. test target. Added
   CocoaPods examples.
 - Eliminated DocSet. Documentation will be in the main README and in the OCHamcrest wiki,
   https://github.com/hamcrest/OCHamcrest/wiki/_pages
 
-**Project changes:**
+**Improvements:**
 
-- Add support for 64-bit iOS devices
+- Change matcher factory methods to return plain `id` so that matchers can be used without casting
+  to `(id)` for OCMockito arguments.
+- Add support for 64-bit iOS devices.
 
 **Fixes:**
 

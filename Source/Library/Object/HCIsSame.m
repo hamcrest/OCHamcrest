@@ -51,7 +51,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_sameInstance(id object)
+id HC_sameInstance(id object)
 {
     return [HCIsSame isSameAs:object];
 }

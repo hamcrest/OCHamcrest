@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasItem(id itemMatch);
+OBJC_EXPORT id HC_hasItem(id itemMatch);
 
 /**
  hasItem(aMatcher) -
@@ -45,7 +45,7 @@ OBJC_EXPORT id<HCMatcher> HC_hasItem(id itemMatch);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasItems(id itemMatch, ...) NS_REQUIRES_NIL_TERMINATION;
+OBJC_EXPORT id HC_hasItems(id itemMatch, ...) NS_REQUIRES_NIL_TERMINATION;
 
 /**
  hasItems(firstMatcher, ...) -

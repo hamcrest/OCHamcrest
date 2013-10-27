@@ -46,7 +46,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_anyOf(id match, ...)
+id HC_anyOf(id match, ...)
 {
     va_list args;
     va_start(args, match);

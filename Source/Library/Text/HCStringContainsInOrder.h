@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_stringContainsInOrder(NSString *substring, ...) NS_REQUIRES_NIL_TERMINATION;
+OBJC_EXPORT id HC_stringContainsInOrder(NSString *substring, ...) NS_REQUIRES_NIL_TERMINATION;
 
 /**
  stringContainsInOrder(firstString, ...) -

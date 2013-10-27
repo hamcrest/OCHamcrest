@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasKey(id keyMatch);
+OBJC_EXPORT id HC_hasKey(id keyMatch);
 
 /**
  hasKey(keyMatcher) -

@@ -146,7 +146,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_hasProperty(NSString *name, id valueMatch)
+id HC_hasProperty(NSString *name, id valueMatch)
 {
     return [HCHasProperty hasProperty:name value:HCWrapInMatcher(valueMatch)];
 }

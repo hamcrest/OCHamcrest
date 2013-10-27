@@ -52,7 +52,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_equalTo(id object)
+id HC_equalTo(id object)
 {
     return [HCIsEqual isEqualTo:object];
 }

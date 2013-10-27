@@ -22,7 +22,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_closeTo(double aValue, double aDelta);
+OBJC_EXPORT id HC_closeTo(double aValue, double aDelta);
 
 /**
  closeTo(aValue, aDelta) -

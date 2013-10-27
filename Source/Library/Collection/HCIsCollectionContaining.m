@@ -52,13 +52,13 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_hasItem(id itemMatch)
+id HC_hasItem(id itemMatch)
 {
     HCRequireNonNilObject(itemMatch);
     return [HCIsCollectionContaining isCollectionContaining:HCWrapInMatcher(itemMatch)];
 }
 
-id<HCMatcher> HC_hasItems(id itemMatch, ...)
+id HC_hasItems(id itemMatch, ...)
 {
     NSMutableArray *matchers = [NSMutableArray arrayWithObject:HC_hasItem(itemMatch)];
     

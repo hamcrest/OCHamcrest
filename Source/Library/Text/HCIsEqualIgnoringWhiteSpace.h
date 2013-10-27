@@ -22,7 +22,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString *aString);
+OBJC_EXPORT id HC_equalToIgnoringWhiteSpace(NSString *aString);
 
 /**
  equalToIgnoringWhiteSpace(aString) -

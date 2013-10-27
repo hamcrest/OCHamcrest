@@ -47,7 +47,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_isNot(id aMatcher)
+id HC_isNot(id aMatcher)
 {
     return [HCIsNot isNot:HCWrapInMatcher(aMatcher)];
 }

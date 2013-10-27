@@ -105,7 +105,7 @@ static NSArray *separate(NSString *component)
 
 #pragma mark -
 
-id<HCMatcher> HC_describedAs(NSString *description, id<HCMatcher> matcher, ...)
+id HC_describedAs(NSString *description, id<HCMatcher> matcher, ...)
 {
     NSMutableArray *valueList = [NSMutableArray array];
     

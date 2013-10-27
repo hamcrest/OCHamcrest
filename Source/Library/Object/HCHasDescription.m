@@ -33,7 +33,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_hasDescription(id match)
+id HC_hasDescription(id match)
 {
     return [HCHasDescription hasDescription:HCWrapInMatcher(match)];
 }

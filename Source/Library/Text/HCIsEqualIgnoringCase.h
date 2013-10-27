@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString *aString);
+OBJC_EXPORT id HC_equalToIgnoringCase(NSString *aString);
 
 /**
  equalToIgnoringCase(aString) -

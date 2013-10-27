@@ -62,7 +62,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_allOf(id match, ...)
+id HC_allOf(id match, ...)
 {
     va_list args;
     va_start(args, match);

@@ -54,7 +54,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_onlyContains(id itemMatch, ...)
+id HC_onlyContains(id itemMatch, ...)
 {
     NSMutableArray *matchers = [NSMutableArray arrayWithObject:HCWrapInMatcher(itemMatch)];
     

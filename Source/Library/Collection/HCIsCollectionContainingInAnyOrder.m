@@ -124,7 +124,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_containsInAnyOrder(id itemMatch, ...)
+id HC_containsInAnyOrder(id itemMatch, ...)
 {
     NSMutableArray *matchers = [NSMutableArray arrayWithObject:HCWrapInMatcher(itemMatch)];
     

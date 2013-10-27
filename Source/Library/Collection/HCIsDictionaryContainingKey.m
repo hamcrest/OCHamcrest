@@ -49,7 +49,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_hasKey(id keyMatch)
+id HC_hasKey(id keyMatch)
 {
     HCRequireNonNilObject(keyMatch);
     return [HCIsDictionaryContainingKey isDictionaryContainingKey:HCWrapInMatcher(keyMatch)];

@@ -24,7 +24,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_anything(void);
+OBJC_EXPORT id HC_anything(void);
 
 /**
  Matches anything.
@@ -42,7 +42,7 @@ OBJC_EXPORT id<HCMatcher> HC_anything(void);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *aDescription);
+OBJC_EXPORT id HC_anythingWithDescription(NSString *aDescription);
 
 /**
  anythingWithDescription(description) -

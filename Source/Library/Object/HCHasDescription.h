@@ -18,7 +18,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasDescription(id match);
+OBJC_EXPORT id HC_hasDescription(id match);
 
 /**
  hasDescription(aMatcher) -

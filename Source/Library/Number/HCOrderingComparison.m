@@ -70,7 +70,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_greaterThan(id aValue)
+id HC_greaterThan(id aValue)
 {
     return [HCOrderingComparison compare:aValue
                               minCompare:NSOrderedAscending
@@ -78,7 +78,7 @@ id<HCMatcher> HC_greaterThan(id aValue)
                    comparisonDescription:@"greater than"];
 }
 
-id<HCMatcher> HC_greaterThanOrEqualTo(id aValue)
+id HC_greaterThanOrEqualTo(id aValue)
 {
     return [HCOrderingComparison compare:aValue
                               minCompare:NSOrderedAscending
@@ -86,7 +86,7 @@ id<HCMatcher> HC_greaterThanOrEqualTo(id aValue)
                    comparisonDescription:@"greater than or equal to"];
 }
 
-id<HCMatcher> HC_lessThan(id aValue)
+id HC_lessThan(id aValue)
 {
     return [HCOrderingComparison compare:aValue
                               minCompare:NSOrderedDescending
@@ -94,7 +94,7 @@ id<HCMatcher> HC_lessThan(id aValue)
                    comparisonDescription:@"less than"];
 }
 
-id<HCMatcher> HC_lessThanOrEqualTo(id aValue)
+id HC_lessThanOrEqualTo(id aValue)
 {
     return [HCOrderingComparison compare:aValue
                               minCompare:NSOrderedSame

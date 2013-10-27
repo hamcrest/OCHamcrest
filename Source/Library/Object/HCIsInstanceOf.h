@@ -17,7 +17,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class aClass);
+OBJC_EXPORT id HC_instanceOf(Class aClass);
 
 /**
  instanceOf(aClass) -

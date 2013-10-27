@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
+OBJC_EXPORT id HC_equalTo(id object);
 
 /**
  equalTo(anObject) -

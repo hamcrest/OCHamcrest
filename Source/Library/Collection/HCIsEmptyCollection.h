@@ -18,8 +18,7 @@
 @end
 
 
-OBJC_EXPORT __attribute__((deprecated)) id<HCMatcher> HC_empty(void);
-OBJC_EXPORT id<HCMatcher> HC_isEmpty(void);
+OBJC_EXPORT id HC_isEmpty(void);
 
 /**
  Matches empty collection.

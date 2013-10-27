@@ -57,7 +57,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_hasEntry(id keyMatch, id valueMatch)
+id HC_hasEntry(id keyMatch, id valueMatch)
 {
     HCRequireNonNilObject(keyMatch);
     HCRequireNonNilObject(valueMatch);

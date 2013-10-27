@@ -14,7 +14,7 @@
 
 
 #define DEFINE_EQUAL_TO_NUMBER(name, type)                                  \
-    OBJC_EXPORT id<HCMatcher> HC_equalTo ## name(type value)                \
+    OBJC_EXPORT id HC_equalTo ## name(type value)                           \
     {                                                                       \
         return [HCIsEqual isEqualTo:[NSNumber numberWith ## name :value]];  \
     }
@@ -34,7 +34,7 @@ DEFINE_EQUAL_TO_NUMBER(UnsignedShort, unsigned short)
 DEFINE_EQUAL_TO_NUMBER(Integer, NSInteger)
 DEFINE_EQUAL_TO_NUMBER(UnsignedInteger, NSUInteger)
 
-OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value)
+OBJC_EXPORT id HC_equalToBool(BOOL value)
 {
     return [[HCIsEqualToBool alloc] initWithValue:value];
 }

@@ -48,7 +48,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_is(id match)
+id HC_is(id match)
 {
     return [HCIs is:HCWrapInMatcher(match)];
 }

@@ -91,7 +91,7 @@ static NSMutableString *stripSpace(NSString *string)
 
 #pragma mark -
 
-id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString *aString)
+id HC_equalToIgnoringWhiteSpace(NSString *aString)
 {
     return [HCIsEqualIgnoringWhiteSpace isEqualIgnoringWhiteSpace:aString];
 }

@@ -64,7 +64,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_closeTo(double value, double delta)
+id HC_closeTo(double value, double delta)
 {
     return [HCIsCloseTo isCloseTo:value within:delta];
 }

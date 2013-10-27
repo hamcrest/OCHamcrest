@@ -35,7 +35,7 @@
 
 #pragma mark -
 
-id<HCMatcher> HC_endsWith(NSString *aString)
+id HC_endsWith(NSString *aString)
 {
     return [HCStringEndsWith stringEndsWith:aString];
 }

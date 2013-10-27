@@ -17,7 +17,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_isA(Class aClass);
+OBJC_EXPORT id HC_isA(Class aClass);
 
 /**
  isA(aClass) -

@@ -19,7 +19,7 @@
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_conformsTo(Protocol *aProtocol);
+OBJC_EXPORT id HC_conformsTo(Protocol *aProtocol);
 
 /**
  conformsTo(aProtocol) -
