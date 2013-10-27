@@ -21,7 +21,7 @@
 
 @implementation IsInstanceOfTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return instanceOf([SomeClass class]);
 }

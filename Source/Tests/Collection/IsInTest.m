@@ -20,7 +20,7 @@
 
 @implementation IsInTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     NSArray *collection = @[@"a", @"b", @"c"];
     return isIn(collection);
@@ -29,7 +29,7 @@
 - (void)testReturnsTrueIfArgumentIsInCollection
 {
     NSArray *collection = @[@"a", @"b", @"c"];
-    id<HCMatcher> matcher = isIn(collection);
+    id matcher = isIn(collection);
     
     assertMatches(@"has a", matcher, @"a");
     assertMatches(@"has b", matcher, @"b");
@@ -51,7 +51,7 @@
 
 - (void)testHasReadableDescription
 {
-    id<HCMatcher> matcher = isIn(@[@"a", @"b", @"c"]);
+    id matcher = isIn(@[@"a", @"b", @"c"]);
     
     assertDescription(@"one of {\"a\", \"b\", \"c\"}", matcher);
 }

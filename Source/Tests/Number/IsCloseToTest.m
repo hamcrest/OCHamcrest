@@ -20,7 +20,7 @@
 
 @implementation IsCloseToTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     double irrelevant = 0.1;
     return closeTo(irrelevant, irrelevant);
@@ -28,7 +28,7 @@
 
 - (void)testEvaluatesToTrueIfArgumentIsEqualToADoubleValueWithinSomeError
 {
-    id<HCMatcher> matcher = closeTo(1.0, 0.5);
+    id matcher = closeTo(1.0, 0.5);
 
     assertMatches(@"equal", matcher, @1.0);
     assertMatches(@"less but within delta", matcher, @0.5);
@@ -40,7 +40,7 @@
 
 - (void)testFailsIfMatchingAgainstNonNumber
 {
-    id<HCMatcher> matcher = closeTo(1.0, 0.5);
+    id matcher = closeTo(1.0, 0.5);
 
     assertDoesNotMatch(@"not a number", matcher, @"a");
     assertDoesNotMatch(@"not a number", matcher, nil);

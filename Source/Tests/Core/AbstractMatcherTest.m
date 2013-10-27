@@ -37,7 +37,7 @@
     }
 }
 
-- (void)assertMatcher:(id<HCMatcher>)matcher hasTheDescription:(NSString *)expected
+- (void)assertMatcher:(id <HCMatcher>)matcher hasTheDescription:(NSString *)expected
                 inFile:(const char *)fileName atLine:(int)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
@@ -54,7 +54,7 @@
     }
 }
 
-- (void)assertMatcher:(id<HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
+- (void)assertMatcher:(id <HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
                 inFile:(const char *)fileName atLine:(int)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
@@ -73,7 +73,7 @@
     }
 }
 
-- (void)assertMatcher:(id<HCMatcher>)matcher matching:(id)arg yieldsMismatchDescription:(NSString *)expected
+- (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg yieldsMismatchDescription:(NSString *)expected
                 inFile:(const char *)fileName atLine:(int)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
@@ -98,7 +98,7 @@
     }
 }
 
-- (void)assertMatcher:(id<HCMatcher>)matcher matching:(id)arg describesMismatch:(NSString *)expected
+- (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg describesMismatch:(NSString *)expected
                 inFile:(const char *)fileName atLine:(int)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
@@ -115,7 +115,7 @@
     }
 }
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return nil;     // Override in subclass
 }
@@ -135,7 +135,7 @@
 - (void)testShouldSupportCopying_ToWorkAroundIOS7NSInvocationRetainArgumentsDoingCopyForBlockArgs
 {
     // Should not crash or throw exception.
-    NSObject <HCMatcher> *matcher = [self createMatcher];
+    id matcher = [self createMatcher];
     [matcher copy];
 }
 

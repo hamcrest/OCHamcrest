@@ -23,7 +23,7 @@
 
 @implementation IsCollectionContainingInOrderTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return contains(equalTo(@"irrelevant"), nil);
 }

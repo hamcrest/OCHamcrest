@@ -23,7 +23,7 @@
 
 @implementation IsEmptyCollectionTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return isEmpty();
 }

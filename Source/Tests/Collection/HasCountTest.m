@@ -26,7 +26,7 @@
 
 @implementation HasCountTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return hasCount(equalToUnsignedInteger(42));
 }
@@ -85,7 +85,7 @@
 
 @implementation HasCountOfTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return hasCountOf(42);
 }

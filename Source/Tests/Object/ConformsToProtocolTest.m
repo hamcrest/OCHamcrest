@@ -35,7 +35,7 @@
 
 @implementation ConformsToProtocolTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return conformsTo(@protocol(TestProtocol));
 }

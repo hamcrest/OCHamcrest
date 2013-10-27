@@ -24,7 +24,7 @@
 
 @implementation IsDictionaryContainingEntriesTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return hasEntries(@"irrelevant", @"irrelevant", nil);
 }

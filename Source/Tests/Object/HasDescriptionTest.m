@@ -36,7 +36,7 @@ static NSString *fakeDescription = @"DESCRIPTION";
 
 @implementation HasDescriptionTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return hasDescription(equalTo(@"irrelevant"));
 }

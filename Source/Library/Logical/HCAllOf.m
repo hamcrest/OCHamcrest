@@ -35,7 +35,7 @@
 
 - (BOOL)matches:(id)item describingMismatchTo:(id<HCDescription>)mismatchDescription
 {
-    for (id<HCMatcher> oneMatcher in matchers)
+    for (id <HCMatcher> oneMatcher in matchers)
     {
         if (![oneMatcher matches:item])
         {

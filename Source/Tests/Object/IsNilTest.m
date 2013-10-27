@@ -20,7 +20,7 @@
 
 @implementation IsNilTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return nilValue();
 }
@@ -67,7 +67,7 @@
 
 @implementation NotNilTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return notNilValue();
 }

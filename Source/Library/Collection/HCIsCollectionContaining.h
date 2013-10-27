@@ -12,11 +12,11 @@
 
 @interface HCIsCollectionContaining : HCBaseMatcher
 {
-    id<HCMatcher> elementMatcher;
+    id <HCMatcher> elementMatcher;
 }
 
-+ (instancetype)isCollectionContaining:(id<HCMatcher>)anElementMatcher;
-- (instancetype)initWithMatcher:(id<HCMatcher>)anElementMatcher;
++ (instancetype)isCollectionContaining:(id <HCMatcher>)anElementMatcher;
+- (instancetype)initWithMatcher:(id <HCMatcher>)anElementMatcher;
 
 @end
 

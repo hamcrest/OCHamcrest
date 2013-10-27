@@ -12,16 +12,16 @@
 
 @interface HCHasCount : HCBaseMatcher
 {
-    id<HCMatcher> countMatcher;
+    id <HCMatcher> countMatcher;
 }
 
-+ (instancetype)hasCount:(id<HCMatcher>)matcher;
-- (instancetype)initWithCount:(id<HCMatcher>)matcher;
++ (instancetype)hasCount:(id <HCMatcher>)matcher;
+- (instancetype)initWithCount:(id <HCMatcher>)matcher;
 
 @end
 
 
-OBJC_EXPORT id HC_hasCount(id<HCMatcher> matcher);
+OBJC_EXPORT id HC_hasCount(id <HCMatcher> matcher);
 
 /**
  hasCount(aMatcher) -

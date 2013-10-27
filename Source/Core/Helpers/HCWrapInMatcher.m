@@ -12,7 +12,7 @@
 #import "HCIsEqual.h"
 
 
-id<HCMatcher> HCWrapInMatcher(id matcherOrValue)
+id <HCMatcher> HCWrapInMatcher(id matcherOrValue)
 {
     if (!matcherOrValue)
         return nil;

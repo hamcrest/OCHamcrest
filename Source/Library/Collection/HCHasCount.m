@@ -15,12 +15,12 @@
 
 @implementation HCHasCount
 
-+ (instancetype)hasCount:(id<HCMatcher>)matcher
++ (instancetype)hasCount:(id <HCMatcher>)matcher
 {
     return [[self alloc] initWithCount:matcher];
 }
 
-- (instancetype)initWithCount:(id<HCMatcher>)matcher
+- (instancetype)initWithCount:(id <HCMatcher>)matcher
 {
     self = [super init];
     if (self)
@@ -59,7 +59,7 @@
 
 #pragma mark -
 
-id HC_hasCount(id<HCMatcher> matcher)
+id HC_hasCount(id <HCMatcher> matcher)
 {
     return [HCHasCount hasCount:matcher];
 }

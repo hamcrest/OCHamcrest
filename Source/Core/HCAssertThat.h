@@ -12,7 +12,7 @@
 @protocol HCMatcher;
 
 
-OBJC_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id<HCMatcher> matcher,
+OBJC_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCMatcher> matcher,
                                            const char *fileName, int lineNumber);
 
 #define HC_assertThat(actual, matcher)  \

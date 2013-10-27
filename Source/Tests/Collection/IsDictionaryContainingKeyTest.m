@@ -23,7 +23,7 @@
 
 @implementation IsDictionaryContainingKeyTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return hasKey(@"irrelevant");
 }

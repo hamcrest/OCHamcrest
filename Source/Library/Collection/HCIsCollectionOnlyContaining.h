@@ -12,11 +12,11 @@
 
 @interface HCIsCollectionOnlyContaining : HCBaseMatcher
 {
-    id<HCMatcher> matcher;
+    id <HCMatcher> matcher;
 }
 
-+ (instancetype)isCollectionOnlyContaining:(id<HCMatcher>)aMatcher;
-- (instancetype)initWithMatcher:(id<HCMatcher>)aMatcher;
++ (instancetype)isCollectionOnlyContaining:(id <HCMatcher>)aMatcher;
+- (instancetype)initWithMatcher:(id <HCMatcher>)aMatcher;
 
 @end
 

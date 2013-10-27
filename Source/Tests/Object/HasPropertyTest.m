@@ -72,7 +72,7 @@
     [super tearDown];
 }
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return hasProperty(@"irrelevant", @"irrelevant");
 }

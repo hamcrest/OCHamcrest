@@ -23,7 +23,7 @@
 
 @implementation IsCollectionContainingTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return hasItem(equalTo(@"irrelevant"));
 }

@@ -23,7 +23,7 @@
 
 @implementation IsDictionaryContainingValueTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return hasValue(@"irrelevant");
 }

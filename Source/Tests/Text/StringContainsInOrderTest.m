@@ -17,7 +17,7 @@
 
 @interface StringContainsInOrderTest : AbstractMatcherTest
 {
-    id<HCMatcher> matcher;
+    id <HCMatcher> matcher;
 }
 @end
 
@@ -35,7 +35,7 @@
     [super tearDown];
 }
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return matcher;
 }

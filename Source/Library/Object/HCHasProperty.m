@@ -14,12 +14,12 @@
 
 @implementation HCHasProperty
 
-+ (instancetype)hasProperty:(NSString *)property value:(id<HCMatcher>)aValueMatcher
++ (instancetype)hasProperty:(NSString *)property value:(id <HCMatcher>)aValueMatcher
 {
     return [[self alloc] initWithProperty:property value:aValueMatcher];
 }
 
-- (instancetype)initWithProperty:(NSString *)property value:(id<HCMatcher>)aValueMatcher
+- (instancetype)initWithProperty:(NSString *)property value:(id <HCMatcher>)aValueMatcher
 {
     HCRequireNonNilObject(property);
     

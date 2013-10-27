@@ -25,7 +25,7 @@
 
 @implementation IsSameTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return sameInstance(@"irrelevant");
 }
@@ -65,7 +65,7 @@
 
 - (void)testMismatchDescriptionShowsActualArgumentAddress
 {
-    id<HCMatcher> matcher = sameInstance(@"foo");
+    id matcher = sameInstance(@"foo");
     HCStringDescription *description = [HCStringDescription stringDescription];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES 'was 0x[0-9a-fA-F]+ \"hi\"'"];
@@ -82,7 +82,7 @@
 
 - (void)testDescribeMismatch
 {
-    id<HCMatcher> matcher = sameInstance(@"foo");
+    id matcher = sameInstance(@"foo");
     HCStringDescription *description = [HCStringDescription stringDescription];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
                              @"SELF MATCHES 'was 0x[0-9a-fA-F]+ \"hi\"'"];

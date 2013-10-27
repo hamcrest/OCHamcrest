@@ -39,7 +39,7 @@
 - (BOOL)matches:(id)item
 {
     NSUInteger index = 0;
-    for (id<HCMatcher> matcher in matchers)
+    for (id <HCMatcher> matcher in matchers)
     {
         if ([matcher matches:item])
         {

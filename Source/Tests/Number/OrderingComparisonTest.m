@@ -20,7 +20,7 @@
 
 @implementation OrderingComparisonTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return nil;     // Ignore the inherited tests; they don't work well for this class.
 }

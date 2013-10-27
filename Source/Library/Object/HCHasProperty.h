@@ -11,11 +11,11 @@
 @interface HCHasProperty : HCBaseMatcher
 {
     NSString *propertyName;
-    id<HCMatcher> valueMatcher;
+    id <HCMatcher> valueMatcher;
 }
 
-+ (instancetype)hasProperty:(NSString *)property value:(id<HCMatcher>)aValueMatcher;
-- (instancetype)initWithProperty:(NSString *)property value:(id<HCMatcher>)aValueMatcher;
++ (instancetype)hasProperty:(NSString *)property value:(id <HCMatcher>)aValueMatcher;
+- (instancetype)initWithProperty:(NSString *)property value:(id <HCMatcher>)aValueMatcher;
 
 @end
 

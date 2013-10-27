@@ -13,7 +13,7 @@
 
 
 #define DEFINE_NUMBER_ASSERT(name, type)                                                                            \
-    OBJC_EXPORT void HC_assertThat ## name ## WithLocation(id testCase, type actual, id<HCMatcher> matcher,         \
+    OBJC_EXPORT void HC_assertThat ## name ## WithLocation(id testCase, type actual, id <HCMatcher> matcher,         \
                                                            const char* fileName, int lineNumber)                    \
     {                                                                                                               \
         HC_assertThatWithLocation(testCase, [NSNumber numberWith ## name :actual], matcher, fileName, lineNumber);  \

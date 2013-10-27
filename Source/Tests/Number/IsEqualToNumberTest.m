@@ -20,7 +20,7 @@
 
 @implementation IsEqualToBoolTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     BOOL irrelevant = NO;
     return equalToBool(irrelevant);
@@ -45,7 +45,7 @@
 
 @implementation IsEqualToCharTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     char irrelevant = 0;
     return equalToChar(irrelevant);
@@ -70,7 +70,7 @@
 
 @implementation IsEqualToDoubleTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     double irrelevant = 0;
     return equalToDouble(irrelevant);
@@ -95,7 +95,7 @@
 
 @implementation IsEqualToFloatTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     float irrelevant = 0;
     return equalToFloat(irrelevant);
@@ -120,7 +120,7 @@
 
 @implementation IsEqualToIntTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     int irrelevant = 0;
     return equalToInt(irrelevant);
@@ -145,7 +145,7 @@
 
 @implementation IsEqualToLongTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     long irrelevant = 0;
     return equalToLong(irrelevant);
@@ -170,7 +170,7 @@
 
 @implementation IsEqualToLongLongTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     long long irrelevant = 0;
     return equalToLongLong(irrelevant);
@@ -195,7 +195,7 @@
 
 @implementation IsEqualToShortTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     short irrelevant = 0;
     return equalToShort(irrelevant);
@@ -220,7 +220,7 @@
 
 @implementation IsEqualToUnsignedCharTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     unsigned char irrelevant = 0;
     return equalToUnsignedChar(irrelevant);
@@ -245,7 +245,7 @@
 
 @implementation IsEqualToUnsignedIntTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     unsigned int irrelevant = 0;
     return equalToUnsignedInt(irrelevant);
@@ -270,7 +270,7 @@
 
 @implementation IsEqualToUnsignedLongTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     unsigned long irrelevant = 0;
     return equalToUnsignedLong(irrelevant);
@@ -295,7 +295,7 @@
 
 @implementation IsEqualToUnsignedLongLongTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     unsigned long long irrelevant = 0;
     return equalToUnsignedLongLong(irrelevant);
@@ -320,7 +320,7 @@
 
 @implementation IsEqualToUnsignedShortTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     unsigned short irrelevant = 0;
     return equalToUnsignedShort(irrelevant);
@@ -345,7 +345,7 @@
 
 @implementation IsEqualToIntegerTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     NSInteger irrelevant = 0;
     return equalToInteger(irrelevant);
@@ -370,7 +370,7 @@
 
 @implementation IsEqualToUnsignedIntegerTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     NSUInteger irrelevant = 0;
     return equalToUnsignedInteger(irrelevant);

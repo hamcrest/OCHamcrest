@@ -12,11 +12,11 @@
 
 @interface HCIsNot : HCBaseMatcher
 {
-    id<HCMatcher> matcher;
+    id <HCMatcher> matcher;
 }
 
-+ (instancetype)isNot:(id<HCMatcher>)aMatcher;
-- (instancetype)initNot:(id<HCMatcher>)aMatcher;
++ (instancetype)isNot:(id <HCMatcher>)aMatcher;
+- (instancetype)initNot:(id <HCMatcher>)aMatcher;
 
 @end
 

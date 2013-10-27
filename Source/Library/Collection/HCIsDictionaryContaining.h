@@ -12,15 +12,15 @@
 
 @interface HCIsDictionaryContaining : HCBaseMatcher
 {
-    id<HCMatcher> keyMatcher;
-    id<HCMatcher> valueMatcher;
+    id <HCMatcher> keyMatcher;
+    id <HCMatcher> valueMatcher;
 }
 
-+ (instancetype)isDictionaryContainingKey:(id<HCMatcher>)aKeyMatcher
-                                    value:(id<HCMatcher>)aValueMatcher;
++ (instancetype)isDictionaryContainingKey:(id <HCMatcher>)aKeyMatcher
+                                    value:(id <HCMatcher>)aValueMatcher;
 
-- (instancetype)initWithKeyMatcher:(id<HCMatcher>)aKeyMatcher
-                      valueMatcher:(id<HCMatcher>)aValueMatcher;
+- (instancetype)initWithKeyMatcher:(id <HCMatcher>)aKeyMatcher
+                      valueMatcher:(id <HCMatcher>)aValueMatcher;
 
 @end
 

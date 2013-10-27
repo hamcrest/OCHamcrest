@@ -16,12 +16,12 @@
 
 @implementation HCIsCollectionOnlyContaining
 
-+ (instancetype)isCollectionOnlyContaining:(id<HCMatcher>)aMatcher
++ (instancetype)isCollectionOnlyContaining:(id <HCMatcher>)aMatcher
 {
     return [[self alloc] initWithMatcher:aMatcher];
 }
 
-- (instancetype)initWithMatcher:(id<HCMatcher>)aMatcher
+- (instancetype)initWithMatcher:(id <HCMatcher>)aMatcher
 {
     self = [super init];
     if (self)

@@ -14,12 +14,12 @@
 
 @implementation HCHasDescription
 
-+ (instancetype)hasDescription:(id<HCMatcher>)descriptionMatcher
++ (instancetype)hasDescription:(id <HCMatcher>)descriptionMatcher
 {
     return [[self alloc] initWithDescription:descriptionMatcher];
 }
 
-- (instancetype)initWithDescription:(id<HCMatcher>)descriptionMatcher
+- (instancetype)initWithDescription:(id <HCMatcher>)descriptionMatcher
 {
     NSInvocation *anInvocation = [HCInvocationMatcher invocationForSelector:@selector(description)
                                                                     onClass:[NSObject class]];

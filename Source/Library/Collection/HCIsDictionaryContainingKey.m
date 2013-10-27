@@ -16,12 +16,12 @@
 
 @implementation HCIsDictionaryContainingKey
 
-+ (instancetype)isDictionaryContainingKey:(id<HCMatcher>)theKeyMatcher
++ (instancetype)isDictionaryContainingKey:(id <HCMatcher>)theKeyMatcher
 {
     return [[self alloc] initWithKeyMatcher:theKeyMatcher];
 }
 
-- (instancetype)initWithKeyMatcher:(id<HCMatcher>)theKeyMatcher
+- (instancetype)initWithKeyMatcher:(id <HCMatcher>)theKeyMatcher
 {
     self = [super init];
     if (self)

@@ -24,7 +24,7 @@
     return invocation;
 }
 
-- (instancetype)initWithInvocation:(NSInvocation *)anInvocation matching:(id<HCMatcher>)aMatcher
+- (instancetype)initWithInvocation:(NSInvocation *)anInvocation matching:(id <HCMatcher>)aMatcher
 {
     self = [super init];
     if (self)

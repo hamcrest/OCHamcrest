@@ -50,7 +50,7 @@
 
 @implementation IsEqualTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return equalTo(@"irrelevant");
 }

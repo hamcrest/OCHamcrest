@@ -20,7 +20,7 @@
 
 @implementation IsAnythingTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return anything();
 }

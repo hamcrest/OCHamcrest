@@ -42,7 +42,7 @@ static NSArray *separate(NSString *component)
 @implementation HCDescribedAs
 
 + (instancetype)describedAs:(NSString *)description
-                 forMatcher:(id<HCMatcher>)aMatcher
+                 forMatcher:(id <HCMatcher>)aMatcher
                  overValues:(NSArray *)templateValues
 {
     return [[self alloc] initWithDescription:description
@@ -51,7 +51,7 @@ static NSArray *separate(NSString *component)
 }
 
 - (instancetype)initWithDescription:(NSString *)description
-                         forMatcher:(id<HCMatcher>)aMatcher
+                         forMatcher:(id <HCMatcher>)aMatcher
                          overValues:(NSArray *)templateValues
 {
     self = [super init];
@@ -105,7 +105,7 @@ static NSArray *separate(NSString *component)
 
 #pragma mark -
 
-id HC_describedAs(NSString *description, id<HCMatcher> matcher, ...)
+id HC_describedAs(NSString *description, id <HCMatcher> matcher, ...)
 {
     NSMutableArray *valueList = [NSMutableArray array];
     

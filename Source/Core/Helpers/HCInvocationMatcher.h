@@ -20,7 +20,7 @@
 @interface HCInvocationMatcher : HCBaseMatcher
 {
     NSInvocation *invocation;
-    id<HCMatcher> subMatcher;
+    id <HCMatcher> subMatcher;
     BOOL shortMismatchDescription;
 }
 
@@ -42,7 +42,7 @@
 /**
  Returns an HCInvocationMatcher object initialized with an invocation and a matcher.
  */
-- (instancetype)initWithInvocation:(NSInvocation *)anInvocation matching:(id<HCMatcher>)aMatcher;
+- (instancetype)initWithInvocation:(NSInvocation *)anInvocation matching:(id <HCMatcher>)aMatcher;
 
 /**
  Invokes stored invocation on given item and returns the result.

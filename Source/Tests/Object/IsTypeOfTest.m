@@ -21,7 +21,7 @@
 
 @implementation IsTypeOfTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return isA([SomeClass class]);
 }

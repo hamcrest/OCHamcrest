@@ -23,7 +23,7 @@
 
 @implementation AnyOfTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return anyOf(equalTo(@"irrelevant"), nil);
 }

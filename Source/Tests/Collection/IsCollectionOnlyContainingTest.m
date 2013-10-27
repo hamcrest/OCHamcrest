@@ -24,7 +24,7 @@
 
 @implementation IsCollectionOnlyContainingTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return onlyContains(equalTo(@"irrelevant"), nil);
 }

@@ -24,7 +24,7 @@
 
 @implementation IsNotTest
 
-- (id<HCMatcher>)createMatcher
+- (id <HCMatcher>)createMatcher
 {
     return isNot(@"something");
 }
