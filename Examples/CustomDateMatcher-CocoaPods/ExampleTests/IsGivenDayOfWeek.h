@@ -12,4 +12,4 @@
 
 
 // Factory function to generate Saturday matcher.
-OBJC_EXPORT id <HCMatcher> onASaturday();
+OBJC_EXPORT id onASaturday();

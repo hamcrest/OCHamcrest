@@ -31,7 +31,7 @@
 @end
 
 
-id <HCMatcher> onASaturday()
+id onASaturday()
 {
     return [[IsGivenDayOfWeek alloc] initWithDayOfWeek:6];
 }
