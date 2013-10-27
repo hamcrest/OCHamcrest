@@ -48,8 +48,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_isIn(id aCollection)
 {
     return [HCIsIn isInCollection:aCollection];

@@ -23,8 +23,6 @@
 @end
 
 
-#pragma mark -
-
 @interface AlwaysEqual : NSObject
 @end
 
@@ -33,8 +31,6 @@
 @end
 
 
-#pragma mark -
-
 @interface NeverEqual : NSObject
 @end
 
@@ -42,8 +38,6 @@
 - (BOOL)isEqual:(id)anObject  { return NO; }
 @end
 
-
-#pragma mark -
 
 @interface IsEqualTest : AbstractMatcherTest
 @end

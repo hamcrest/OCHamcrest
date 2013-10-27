@@ -50,8 +50,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_hasItem(id itemMatch)
 {
     HCRequireNonNilObject(itemMatch);

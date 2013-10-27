@@ -55,8 +55,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_hasEntry(id keyMatch, id valueMatch)
 {
     HCRequireNonNilObject(keyMatch);

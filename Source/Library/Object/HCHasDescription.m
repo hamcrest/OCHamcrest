@@ -31,8 +31,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_hasDescription(id match)
 {
     return [HCHasDescription hasDescription:HCWrapInMatcher(match)];

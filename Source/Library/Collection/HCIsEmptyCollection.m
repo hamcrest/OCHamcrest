@@ -39,8 +39,6 @@
 @end
 
 
-#pragma mark -
-
 OBJC_EXPORT id HC_isEmpty()
 {
     return [HCIsEmptyCollection isEmptyCollection];

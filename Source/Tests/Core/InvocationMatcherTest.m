@@ -37,8 +37,6 @@
 @end
 
 
-#pragma mark -
-
 @interface Thingy : NSObject
 @end
 
@@ -73,8 +71,6 @@
 @end
 
 
-#pragma mark -
-
 @interface ShouldNotMatch : NSObject
 @end
 
@@ -87,8 +83,6 @@
 
 @end
 
-
-#pragma mark -
 
 @interface InvocationMatcherTest : AbstractMatcherTest
 @end

@@ -88,8 +88,6 @@
 @end
 
 
-#pragma mark -
-
 @implementation HCIsCollectionContainingInOrder
 
 + (instancetype)isCollectionContainingInOrder:(NSArray *)itemMatchers
@@ -141,8 +139,6 @@
 
 @end
 
-
-#pragma mark -
 
 id HC_contains(id itemMatch, ...)
 {

@@ -102,8 +102,6 @@
 @end
 
 
-#pragma mark -
-
 static void requirePairedObject(id obj)
 {
     if (obj == nil)

@@ -33,8 +33,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_nilValue()
 {
     return [HCIsNil isNil];

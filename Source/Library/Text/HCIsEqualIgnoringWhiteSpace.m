@@ -50,8 +50,6 @@ static NSMutableString *stripSpace(NSString *string)
 }
 
 
-#pragma mark -
-
 @implementation HCIsEqualIgnoringWhiteSpace
 
 + (instancetype)isEqualIgnoringWhiteSpace:(NSString *)aString
@@ -88,8 +86,6 @@ static NSMutableString *stripSpace(NSString *string)
 
 @end
 
-
-#pragma mark -
 
 id HC_equalToIgnoringWhiteSpace(NSString *aString)
 {

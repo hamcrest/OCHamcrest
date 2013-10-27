@@ -42,8 +42,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_conformsTo(Protocol *aProtocol)
 {
     return [HCConformsToProtocol conformsTo:aProtocol];

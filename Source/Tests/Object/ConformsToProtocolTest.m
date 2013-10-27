@@ -28,8 +28,6 @@
 
 @end
 
-#pragma mark -
-
 @interface ConformsToProtocolTest : AbstractMatcherTest
 @end
 

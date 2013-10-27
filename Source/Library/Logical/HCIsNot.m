@@ -45,8 +45,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_isNot(id aMatcher)
 {
     return [HCIsNot isNot:HCWrapInMatcher(aMatcher)];

@@ -33,8 +33,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_endsWith(NSString *aString)
 {
     return [HCStringEndsWith stringEndsWith:aString];

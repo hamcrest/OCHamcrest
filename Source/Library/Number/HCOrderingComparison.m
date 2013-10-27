@@ -68,8 +68,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_greaterThan(id aValue)
 {
     return [HCOrderingComparison compare:aValue

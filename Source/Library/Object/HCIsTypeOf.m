@@ -33,8 +33,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_isA(Class aClass)
 {
     return [HCIsTypeOf isTypeOf:aClass];

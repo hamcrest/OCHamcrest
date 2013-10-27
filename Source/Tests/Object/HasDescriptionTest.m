@@ -29,8 +29,6 @@ static NSString *fakeDescription = @"DESCRIPTION";
 @end
 
 
-#pragma mark -
-
 @interface HasDescriptionTest : AbstractMatcherTest
 @end
 

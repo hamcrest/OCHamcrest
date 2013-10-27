@@ -46,8 +46,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_is(id match)
 {
     return [HCIs is:HCWrapInMatcher(match)];

@@ -44,8 +44,6 @@
 @end
 
 
-#pragma mark -
-
 @interface IncompleteBaseMatcher : HCBaseMatcher
 @end
 

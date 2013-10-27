@@ -30,8 +30,6 @@
 @end
 
 
-#pragma mark -
-
 @interface ObjectDescriptionWithLessThan : NSObject
 @end
 
@@ -45,8 +43,6 @@
 @end
 
 
-#pragma mark -
-
 @interface ObjectWithNilDescription : NSObject
 @end
 
@@ -59,8 +55,6 @@
 
 @end
 
-
-#pragma mark -
 
 @interface StringDescriptionTest : SenTestCase
 @end

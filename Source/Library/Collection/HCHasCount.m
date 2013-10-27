@@ -57,8 +57,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_hasCount(id <HCMatcher> matcher)
 {
     return [HCHasCount hasCount:matcher];

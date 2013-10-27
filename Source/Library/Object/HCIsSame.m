@@ -49,8 +49,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_sameInstance(id object)
 {
     return [HCIsSame isSameAs:object];

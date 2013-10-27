@@ -47,8 +47,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_hasKey(id keyMatch)
 {
     HCRequireNonNilObject(keyMatch);

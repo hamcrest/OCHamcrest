@@ -47,8 +47,6 @@
 @end
 
 
-#pragma mark -
-
 @interface HasPropertyTest : AbstractMatcherTest
 @end
 
@@ -132,8 +130,6 @@
 @end
 
 
-#pragma mark -
-
 @interface ValueHolder : NSObject
 
 @property (nonatomic, assign) BOOL boolValue;
@@ -155,8 +151,6 @@
 @implementation ValueHolder
 @end
 
-
-#pragma mark -
 
 @interface HasPropertyPrimitivesTest : AbstractMatcherTest
 @end

@@ -47,8 +47,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_equalToIgnoringCase(NSString *aString)
 {
     return [HCIsEqualIgnoringCase isEqualIgnoringCase:aString];

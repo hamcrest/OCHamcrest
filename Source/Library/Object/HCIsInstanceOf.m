@@ -33,8 +33,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_instanceOf(Class aClass)
 {
     return [HCIsInstanceOf isInstanceOf:aClass];

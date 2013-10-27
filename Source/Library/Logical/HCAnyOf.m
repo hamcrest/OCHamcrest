@@ -44,8 +44,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_anyOf(id match, ...)
 {
     va_list args;

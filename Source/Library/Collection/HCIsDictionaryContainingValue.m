@@ -47,8 +47,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_hasValue(id valueMatch)
 {
     HCRequireNonNilObject(valueMatch);

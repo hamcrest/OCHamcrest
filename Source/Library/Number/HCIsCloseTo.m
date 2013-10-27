@@ -62,8 +62,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_closeTo(double value, double delta)
 {
     return [HCIsCloseTo isCloseTo:value within:delta];

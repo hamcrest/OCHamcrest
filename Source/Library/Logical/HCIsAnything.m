@@ -51,8 +51,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_anything()
 {
     return [HCIsAnything isAnything];

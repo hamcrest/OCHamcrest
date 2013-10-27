@@ -33,8 +33,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_startsWith(NSString *aString)
 {
     return [HCStringStartsWith stringStartsWith:aString];

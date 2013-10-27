@@ -78,8 +78,6 @@
 @end
 
 
-#pragma mark -
-
 @interface HasCountOfTest : AbstractMatcherTest
 @end
 

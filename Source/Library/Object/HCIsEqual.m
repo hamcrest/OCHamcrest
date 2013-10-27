@@ -50,8 +50,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_equalTo(id object)
 {
     return [HCIsEqual isEqualTo:object];

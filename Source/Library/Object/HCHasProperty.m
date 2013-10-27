@@ -144,8 +144,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_hasProperty(NSString *name, id valueMatch)
 {
     return [HCHasProperty hasProperty:name value:HCWrapInMatcher(valueMatch)];

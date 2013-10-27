@@ -88,8 +88,6 @@
 @end
 
 
-#pragma mark -
-
 @interface IsCollectionContainingItemsTest : AbstractMatcherTest
 @end
 

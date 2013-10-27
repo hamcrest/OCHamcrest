@@ -37,8 +37,6 @@ static NSArray *separate(NSString *component)
 }
 
 
-#pragma mark -
-
 @implementation HCDescribedAs
 
 + (instancetype)describedAs:(NSString *)description
@@ -102,8 +100,6 @@ static NSArray *separate(NSString *component)
 
 @end
 
-
-#pragma mark -
 
 id HC_describedAs(NSString *description, id <HCMatcher> matcher, ...)
 {

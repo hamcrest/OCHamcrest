@@ -55,8 +55,6 @@
 @end
 
 
-#pragma mark -
-
 //@interface QuietTest : SenTestCase
 //@end
 //
@@ -75,8 +73,6 @@
 //
 //@end
 
-
-#pragma mark -
 
 @interface AssertThatTest : SenTestCase
 @end

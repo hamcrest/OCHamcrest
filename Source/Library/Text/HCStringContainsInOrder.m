@@ -64,8 +64,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_stringContainsInOrder(NSString *substring, ...)
 {
     va_list args;

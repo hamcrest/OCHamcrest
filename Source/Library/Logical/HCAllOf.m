@@ -60,8 +60,6 @@
 @end
 
 
-#pragma mark -
-
 id HC_allOf(id match, ...)
 {
     va_list args;
