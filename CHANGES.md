@@ -8,6 +8,10 @@ Upcoming Release
 - Eliminated DocSet. Documentation will be in the main README and in the OCHamcrest wiki,
   https://github.com/hamcrest/OCHamcrest/wiki/_pages
 
+**Project changes:**
+
+- Add support for 64-bit iOS devices
+
 **Fixes:**
 
 - Fix problem where isNot did not ask the sub-matcher's mismatch description. _Thanks to: James

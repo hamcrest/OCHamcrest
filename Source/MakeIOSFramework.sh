@@ -38,7 +38,7 @@ DEVICE_LIB="build/Release-iphoneos/libochamcrest.a"
 SIMULATOR_LIB="build/Release-iphonesimulator/libochamcrest.a"
 OUTPUT_LIB="${IOS_FRAMEWORK}/Versions/Current/OCHamcrestIOS"
 
-lipo -create "${DEVICE_LIB}" -arch i386 "${SIMULATOR_LIB}" -o "${OUTPUT_LIB}"
+lipo -create "${DEVICE_LIB}" "${SIMULATOR_LIB}" -o "${OUTPUT_LIB}"
 
 # Add a symlink, as required by the framework.
 ln -s Versions/Current/OCHamcrestIOS "${IOS_FRAMEWORK}/OCHamcrestIOS"
