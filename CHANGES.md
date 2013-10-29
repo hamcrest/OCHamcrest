@@ -1,13 +1,6 @@
 Upcoming Release
 ----------------
 
-**Examples & Documentation:**
-
-- Updated examples so they are based on Apple's templates for main target vs. test target. Added
-  CocoaPods examples.
-- Eliminated DocSet. Documentation will be in the main README and in the OCHamcrest wiki,
-  https://github.com/hamcrest/OCHamcrest/wiki/_pages
-
 **Improvements:**
 
 - Change matcher factory methods to return plain `id` so that matchers can be used without casting
@@ -21,6 +14,13 @@ Upcoming Release
 - Fix crash in `describedAs` matcher . _Thanks to: Nikolaj Schumacher_
 - Fix crash in `hasProperty` matcher when the property is a primitive type. _Thanks to: Nikolaj
   Schumacher_
+
+**Examples & Documentation:**
+
+- Updated examples so they are based on Apple's templates for main target vs. test target. Added
+  CocoaPods examples.
+- Eliminated DocSet. Documentation will be in the main README and in the OCHamcrest wiki,
+  https://github.com/hamcrest/OCHamcrest/wiki/_pages
 
 
 Version 3.0.0
