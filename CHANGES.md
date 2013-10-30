@@ -1,5 +1,6 @@
-Upcoming Release
-----------------
+Version 3.0.1
+-------------
+_29 Oct 2013_
 
 **Improvements:**
 
