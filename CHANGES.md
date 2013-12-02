@@ -1,3 +1,11 @@
+Next version under development
+------------------------------
+
+**Fixes:**
+
+- Drop support for 64-bit because it requires targeting iOS 7. _Thanks to: César Estébanez Tascón_
+
+
 Version 3.0.1
 -------------
 _29 Oct 2013_
