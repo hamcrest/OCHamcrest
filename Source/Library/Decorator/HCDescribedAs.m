@@ -10,30 +10,41 @@
 #import "HCDescribedAs.h"
 
 
-/**
-    Splits string into decimal number (-1 if not found) and remaining string.
- */
-static NSArray *separate(NSString *component)
+@interface NSString (OCHamcrest)
+@end
+
+@implementation NSString (OCHamcrest)
+
+// Parse decimal number (-1 if not found) and return remaining string.
+- (NSString *)och_getDecimalNumber:(int *)number
 {
-    int index = 0;
-    BOOL gotIndex = NO;
-    
-    NSUInteger length = [component length];
-    NSUInteger charIndex;
-    for (charIndex = 0; charIndex < length; ++charIndex)
+    int decimal = 0;
+    BOOL readDigit = NO;
+
+    NSUInteger length = [self length];
+    NSUInteger index;
+    for (index = 0; index < length; ++index)
     {
-        unichar character = [component characterAtIndex:charIndex];
+        unichar character = [self characterAtIndex:index];
         if (!isdigit(character))
             break;
-        index = index * 10 + character - '0';
-        gotIndex = YES;
+        decimal = decimal * 10 + character - '0';
+        readDigit = YES;
     }
-    
-    if (!gotIndex)
-        return @[@-1, component];
+
+    if (readDigit)
+    {
+        *number = decimal;
+        return [self substringFromIndex:index];
+    }
     else
-        return @[@(index), [component substringFromIndex:charIndex]];
+    {
+        *number = -1;
+        return self;
+    }
 }
+
+@end
 
 
 @implementation HCDescribedAs
@@ -74,26 +85,31 @@ static NSArray *separate(NSString *component)
 - (void)describeTo:(id<HCDescription>)description
 {
     NSArray *components = [descriptionTemplate componentsSeparatedByString:@"%"];
-    BOOL firstTime = YES;
-    for (NSString *oneComponent in components)
+    BOOL firstComponent = YES;
+    for (NSString *component in components)
     {
-        if (firstTime)
+        if (firstComponent)
         {
-            firstTime = NO;
-            [description appendText:oneComponent];
+            firstComponent = NO;
+            [description appendText:component];
         }
         else
         {
-            NSArray *parseIndex = separate(oneComponent);
-            int index = [parseIndex[0] intValue];
-            if (index < 0)
-                [[description appendText:@"%"] appendText:oneComponent];
-            else
-            {
-                [description appendDescriptionOf:values[index]];
-                [description appendText:parseIndex[1]];
-            }
+            [self appendTemplateForComponent:component toDescription:description];
         }
+    }
+}
+
+- (void)appendTemplateForComponent:(NSString *)component toDescription:(id <HCDescription>)description
+{
+    int index;
+    NSString *remainder = [component och_getDecimalNumber:&index];
+    if (index < 0)
+        [[description appendText:@"%"] appendText:component];
+    else
+    {
+        [description appendDescriptionOf:values[index]];
+        [description appendText:remainder];
     }
 }
 
