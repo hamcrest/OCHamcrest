@@ -9,8 +9,6 @@
 
 #import "HCIsCloseTo.h"
 
-#import "HCDescription.h"
-
 
 @implementation HCIsCloseTo
 

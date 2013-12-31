@@ -10,7 +10,6 @@
 #import "HCAllOf.h"
 
 #import "HCCollect.h"
-#import "HCDescription.h"
 
 
 @implementation HCAllOf

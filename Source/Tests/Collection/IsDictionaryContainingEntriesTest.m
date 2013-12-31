@@ -12,7 +12,6 @@
 #import <OCHamcrest/HCIsDictionaryContainingEntries.h>
 
     // Collaborators
-#import <OCHamcrest/HCIsAnything.h>
 #import <OCHamcrest/HCIsEqual.h>
 
     // Test support

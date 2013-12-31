@@ -9,8 +9,6 @@
 
 #import "HCOrderingComparison.h"
 
-#import "HCDescription.h"
-
 
 @implementation HCOrderingComparison
 

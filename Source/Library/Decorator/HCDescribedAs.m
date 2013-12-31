@@ -9,7 +9,6 @@
 
 #import "HCDescribedAs.h"
 
-#import "HCDescription.h"
 
 /**
     Splits string into decimal number (-1 if not found) and remaining string.

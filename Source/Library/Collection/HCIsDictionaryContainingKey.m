@@ -9,7 +9,6 @@
 
 #import "HCIsDictionaryContainingKey.h"
 
-#import "HCDescription.h"
 #import "HCRequireNonNilObject.h"
 #import "HCWrapInMatcher.h"
 

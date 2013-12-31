@@ -9,8 +9,6 @@
 
 #import "HCIsSame.h"
 
-#import "HCDescription.h"
-
 
 @implementation HCIsSame
 

@@ -10,9 +10,6 @@
     // Class under test
 #import <OCHamcrest/HCBaseMatcher.h>
 
-    // Collaborators
-#import <OCHamcrest/HCDescription.h>
-
     // Test support
 #import "AbstractMatcherTest.h"
 

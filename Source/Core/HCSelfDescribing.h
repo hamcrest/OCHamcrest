@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "HCDescription.h"
+#import "HCDescription.h"   // Convenience header
 
 
 /**
@@ -24,7 +24,7 @@
  
  The description may be part of a description of a larger object of which this is just a
  component, so it should be worded appropriately.
- 
+
  @param description  The description to be built or appended to.
  */
 - (void)describeTo:(id<HCDescription>)description;

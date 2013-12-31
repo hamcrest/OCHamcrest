@@ -9,8 +9,6 @@
 
 #import "HCIsIn.h"
 
-#import "HCDescription.h"
-
 
 @implementation HCIsIn
 

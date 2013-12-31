@@ -9,7 +9,6 @@
 
 #import "HCHasCount.h"
 
-#import "HCDescription.h"
 #import "HCIsEqualToNumber.h"
 
 

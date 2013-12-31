@@ -9,8 +9,6 @@
 
 #import "HCIsAnything.h"
 
-#import "HCDescription.h"
-
 
 @implementation HCIsAnything
 

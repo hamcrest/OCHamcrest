@@ -12,7 +12,6 @@
 #import <OCHamcrest/HCInvocationMatcher.h>
 
     // Collaborators
-#import <OCHamcrest/HCDescription.h>
 #import <OCHamcrest/HCIsEqual.h>
 
     // Test support

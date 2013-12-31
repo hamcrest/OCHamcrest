@@ -9,7 +9,6 @@
 
 #import "HCIsEqualIgnoringCase.h"
 
-#import "HCDescription.h"
 #import "HCRequireNonNilObject.h"
 
 

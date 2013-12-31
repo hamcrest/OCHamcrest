@@ -9,7 +9,6 @@
 
 #import "HCIsNil.h"
 
-#import "HCDescription.h"
 #import "HCIsNot.h"
 
 

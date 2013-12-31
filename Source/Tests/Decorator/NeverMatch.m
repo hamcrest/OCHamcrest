@@ -9,8 +9,6 @@
 
 #import "NeverMatch.h"
 
-#import "HCDescription.h"
-
 
 @implementation NeverMatch
 

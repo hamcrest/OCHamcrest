@@ -9,7 +9,6 @@
 
 #import "HCIsDictionaryContainingEntries.h"
 
-#import "HCDescription.h"
 #import "HCWrapInMatcher.h"
 
 

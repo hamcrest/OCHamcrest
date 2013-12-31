@@ -9,7 +9,6 @@
 
 #import "HCIsEqualIgnoringWhiteSpace.h"
 
-#import "HCDescription.h"
 #import "HCRequireNonNilObject.h"
 
 

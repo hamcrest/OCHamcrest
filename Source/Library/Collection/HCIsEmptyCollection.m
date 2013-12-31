@@ -9,7 +9,6 @@
 
 #import "HCIsEmptyCollection.h"
 
-#import "HCDescription.h"
 #import "HCIsEqualToNumber.h"
 
 

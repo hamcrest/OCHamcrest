@@ -9,7 +9,6 @@
 
 #import "HCIsNot.h"
 
-#import "HCDescription.h"
 #import "HCWrapInMatcher.h"
 
 

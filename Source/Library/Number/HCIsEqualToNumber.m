@@ -10,7 +10,6 @@
 #import "HCIsEqualToNumber.h"
 
 #import "HCIsEqual.h"
-#import "HCDescription.h"
 
 
 #define DEFINE_EQUAL_TO_NUMBER(name, type)                                  \

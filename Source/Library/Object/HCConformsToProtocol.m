@@ -7,7 +7,6 @@
 
 #import "HCConformsToProtocol.h"
 
-#import "HCDescription.h"
 #import "HCRequireNonNilObject.h"
 
 

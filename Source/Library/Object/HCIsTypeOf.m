@@ -9,9 +9,6 @@
 
 #import "HCIsTypeOf.h"
 
-#import "HCDescription.h"
-#import "HCRequireNonNilObject.h"
-
 
 @implementation HCIsTypeOf
 

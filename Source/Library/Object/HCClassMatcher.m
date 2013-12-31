@@ -9,7 +9,6 @@
 
 #import "HCClassMatcher.h"
 
-#import "HCDescription.h"
 #import "HCRequireNonNilObject.h"
 
 

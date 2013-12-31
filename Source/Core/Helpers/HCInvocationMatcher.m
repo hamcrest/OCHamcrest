@@ -9,8 +9,6 @@
 
 #import "HCInvocationMatcher.h"
 
-#import "HCDescription.h"
-
 
 @implementation HCInvocationMatcher
 
