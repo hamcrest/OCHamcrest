@@ -16,7 +16,7 @@
 static NSArray *separate(NSString *component)
 {
     int index = 0;
-    bool gotIndex = false;
+    BOOL gotIndex = NO;
     
     NSUInteger length = [component length];
     NSUInteger charIndex;
@@ -26,7 +26,7 @@ static NSArray *separate(NSString *component)
         if (!isdigit(character))
             break;
         index = index * 10 + character - '0';
-        gotIndex = true;
+        gotIndex = YES;
     }
     
     if (!gotIndex)
@@ -74,12 +74,12 @@ static NSArray *separate(NSString *component)
 - (void)describeTo:(id<HCDescription>)description
 {
     NSArray *components = [descriptionTemplate componentsSeparatedByString:@"%"];
-    bool firstTime = true;
+    BOOL firstTime = YES;
     for (NSString *oneComponent in components)
     {
         if (firstTime)
         {
-            firstTime = false;
+            firstTime = NO;
             [description appendText:oneComponent];
         }
         else
