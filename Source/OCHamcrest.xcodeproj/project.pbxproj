@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		08F1B0D5187275F2001D28B2 /* OCLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 08F1B0D8187275F2001D28B2 /* Build configuration list for PBXAggregateTarget "OCLint" */;
+			buildPhases = (
+				08F1B0D918727611001D28B2 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = OCLint;
+			productName = OCLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		08026528134597C000A8DCCA /* HCAssertThat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022D13440A83001B439B /* HCAssertThat.m */; };
 		08026529134597C000A8DCCA /* HCBaseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022F13440A83001B439B /* HCBaseDescription.m */; };
@@ -1009,6 +1023,7 @@
 				087601F613440807001B439B /* OCHamcrestTests */,
 				081BEE611345979F003F846A /* libochamcrest */,
 				081BEE6B1345979F003F846A /* libochamcrestTests */,
+				08F1B0D5187275F2001D28B2 /* OCLint */,
 			);
 		};
 /* End PBXProject section */
@@ -1089,6 +1104,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		08F1B0D918727611001D28B2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "source ~/.bash_profile\ncd ${SRCROOT}\n~/Development/xctool/xctool.sh -project OCHamcrest.xcodeproj -scheme OCHamcrest clean > /dev/null\n~/Development/xctool/xctool.sh -project OCHamcrest.xcodeproj -scheme OCHamcrest -reporter json-compilation-database:compile_commands.json build\noclint-json-compilation-database -- -rc=LONG_LINE=150 -rc=SHORT_VARIABLE_NAME=0 | sed 's/\\(.*\\.\\m\\{1,2\\}:[0-9]*:[0-9]*:\\)/\\1 warning:/'\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1501,6 +1529,20 @@
 			};
 			name = Release;
 		};
+		08F1B0D6187275F2001D28B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		08F1B0D7187275F2001D28B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1548,6 +1590,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		08F1B0D8187275F2001D28B2 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08F1B0D6187275F2001D28B2 /* Debug */,
+				08F1B0D7187275F2001D28B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
