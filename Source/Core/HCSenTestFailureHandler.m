@@ -15,6 +15,31 @@
 @end
 
 
+@interface NSInvocation (OCHamcrest_SenTestingKit)
+@end
+
+@implementation NSInvocation (OCHamcrest_SenTestingKit)
+
++ (NSInvocation *)och_SenTestFailureInFile:(NSString *)fileName
+                                    atLine:(NSUInteger)lineNumber
+                               description:(NSString *)description
+{
+    // SenTestingKit expects a format string, but NSInvocation does not support varargs.
+    // Mask % symbols in the string so they aren't treated as placeholders.
+    NSString *massagedDescription = [description stringByReplacingOccurrencesOfString:@"%"
+                                                                           withString:@"%%"];
+
+    NSInvocation *invocation = [NSInvocation och_invocationWithTarget:[NSException class]
+                                                             selector:@selector(failureInFile:atLine:withDescription:)];
+    [invocation setArgument:&fileName atIndex:2];
+    [invocation setArgument:&lineNumber atIndex:3];
+    [invocation setArgument:&massagedDescription atIndex:4];
+    return invocation;
+}
+
+@end
+
+
 @implementation HCSenTestFailureHandler
 
 @synthesize successor = _successor;
@@ -40,20 +65,9 @@
 
 - (NSException *)createExceptionForFailure:(HCTestFailure *)failure
 {
-    NSString *fileName = failure.fileName;
-    NSUInteger lineNumber = failure.lineNumber;
-
-    // Description expects a format string, but NSInvocation does not support varargs.
-    // Mask % symbols in the string so they aren't treated as placeholders.
-    NSString *description = [failure.reason stringByReplacingOccurrencesOfString:@"%"
-                                                                      withString:@"%%"];
-
-    NSInvocation *invocation = [NSInvocation och_invocationWithTarget:[NSException class]
-                                                             selector:@selector(failureInFile:atLine:withDescription:)];
-    [invocation setArgument:&fileName atIndex:2];
-    [invocation setArgument:&lineNumber atIndex:3];
-    [invocation setArgument:&description atIndex:4];
-
+    NSInvocation *invocation = [NSInvocation och_SenTestFailureInFile:failure.fileName
+                                                               atLine:failure.lineNumber
+                                                          description:failure.reason];
     [invocation invoke];
     __unsafe_unretained NSException *result = nil;
     [invocation getReturnValue:&result];
