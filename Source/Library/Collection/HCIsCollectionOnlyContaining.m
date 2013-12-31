@@ -10,8 +10,7 @@
 #import "HCIsCollectionOnlyContaining.h"
 
 #import "HCAnyOf.h"
-#import "HCDescription.h"
-#import "HCWrapInMatcher.h"
+#import "HCCollect.h"
 
 
 @implementation HCIsCollectionOnlyContaining
@@ -54,17 +53,10 @@
 
 id HC_onlyContains(id itemMatch, ...)
 {
-    NSMutableArray *matchers = [NSMutableArray arrayWithObject:HCWrapInMatcher(itemMatch)];
-    
     va_list args;
     va_start(args, itemMatch);
-    itemMatch = va_arg(args, id);
-    while (itemMatch != nil)
-    {
-        [matchers addObject:HCWrapInMatcher(itemMatch)];
-        itemMatch = va_arg(args, id);
-    }
+    NSArray *matchers = HCCollectMatchers(itemMatch, args);
     va_end(args);
-    
+
     return [HCIsCollectionOnlyContaining isCollectionOnlyContaining:[HCAnyOf anyOf:matchers]];
 }

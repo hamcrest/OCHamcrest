@@ -10,7 +10,7 @@
 #import "HCIsCollectionContaining.h"
 
 #import "HCAllOf.h"
-#import "HCDescription.h"
+#import "HCCollect.h"
 #import "HCRequireNonNilObject.h"
 #import "HCWrapInMatcher.h"
 
@@ -58,17 +58,10 @@ id HC_hasItem(id itemMatch)
 
 id HC_hasItems(id itemMatch, ...)
 {
-    NSMutableArray *matchers = [NSMutableArray arrayWithObject:HC_hasItem(itemMatch)];
-    
     va_list args;
     va_start(args, itemMatch);
-    itemMatch = va_arg(args, id);
-    while (itemMatch != nil)
-    {
-        [matchers addObject:HC_hasItem(itemMatch)];
-        itemMatch = va_arg(args, id);
-    }
+    NSArray *matchers = HCCollectWrappedItems(itemMatch, args, HC_hasItem);
     va_end(args);
-    
+
     return [HCAllOf allOf:matchers];
 }

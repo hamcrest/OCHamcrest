@@ -9,7 +9,7 @@
 
 #import "HCStringContainsInOrder.h"
 
-#import "HCDescription.h"
+#import "HCCollect.h"
 
 
 @implementation HCStringContainsInOrder
@@ -63,21 +63,12 @@
 
 @end
 
-
 id HC_stringContainsInOrder(NSString *substring, ...)
 {
     va_list args;
     va_start(args, substring);
-    NSMutableArray *substringList = [NSMutableArray arrayWithObject:substring];
-    
-    substring = va_arg(args, NSString *);
-    while (substring != nil)
-    {
-        [substringList addObject:substring];
-        substring = va_arg(args, NSString *);
-    }
-    
+    NSArray *substrings = HCCollectItems(substring, args);
     va_end(args);
-    
-    return [HCStringContainsInOrder containsInOrder:substringList];
+
+    return [HCStringContainsInOrder containsInOrder:substrings];
 }

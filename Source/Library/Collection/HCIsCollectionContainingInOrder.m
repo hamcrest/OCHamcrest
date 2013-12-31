@@ -9,9 +9,7 @@
 
 #import "HCIsCollectionContainingInOrder.h"
 
-#import "HCAllOf.h"
-#import "HCDescription.h"
-#import "HCWrapInMatcher.h"
+#import "HCCollect.h"
 
 
 @interface HCMatchSequence : NSObject
@@ -142,17 +140,10 @@
 
 id HC_contains(id itemMatch, ...)
 {
-    NSMutableArray *matchers = [NSMutableArray arrayWithObject:HCWrapInMatcher(itemMatch)];
-    
     va_list args;
     va_start(args, itemMatch);
-    itemMatch = va_arg(args, id);
-    while (itemMatch != nil)
-    {
-        [matchers addObject:HCWrapInMatcher(itemMatch)];
-        itemMatch = va_arg(args, id);
-    }
+    NSArray *matchers = HCCollectMatchers(itemMatch, args);
     va_end(args);
-    
+
     return [HCIsCollectionContainingInOrder isCollectionContainingInOrder:matchers];
 }

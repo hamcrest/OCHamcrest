@@ -9,7 +9,7 @@
 
 #import "HCAnyOf.h"
 
-#import "HCCollectMatchers.h"
+#import "HCCollect.h"
 #import "HCDescription.h"
 
 

@@ -24,7 +24,7 @@
 		08026528134597C000A8DCCA /* HCAssertThat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022D13440A83001B439B /* HCAssertThat.m */; };
 		08026529134597C000A8DCCA /* HCBaseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876022F13440A83001B439B /* HCBaseDescription.m */; };
 		0802652A134597C000A8DCCA /* HCBaseMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023113440A83001B439B /* HCBaseMatcher.m */; };
-		0802652B134597C000A8DCCA /* HCCollectMatchers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023913440A83001B439B /* HCCollectMatchers.m */; };
+		0802652B134597C000A8DCCA /* HCCollect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023913440A83001B439B /* HCCollect.m */; };
 		0802652D134597C000A8DCCA /* HCHasCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602D113440A9E001B439B /* HCHasCount.m */; };
 		0802652E134597C000A8DCCA /* HCHasDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 087602F213440A9F001B439B /* HCHasDescription.m */; };
 		0802652F134597C000A8DCCA /* HCInvocationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023B13440A83001B439B /* HCInvocationMatcher.m */; };
@@ -157,8 +157,8 @@
 		0876026013440A83001B439B /* HCSelfDescribing.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023413440A83001B439B /* HCSelfDescribing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876026113440A83001B439B /* HCStringDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023513440A83001B439B /* HCStringDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876026213440A83001B439B /* HCStringDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023613440A83001B439B /* HCStringDescription.m */; };
-		0876026313440A83001B439B /* HCCollectMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023813440A83001B439B /* HCCollectMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0876026413440A83001B439B /* HCCollectMatchers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023913440A83001B439B /* HCCollectMatchers.m */; };
+		0876026313440A83001B439B /* HCCollect.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023813440A83001B439B /* HCCollect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0876026413440A83001B439B /* HCCollect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023913440A83001B439B /* HCCollect.m */; };
 		0876026513440A83001B439B /* HCInvocationMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023A13440A83001B439B /* HCInvocationMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876026613440A83001B439B /* HCInvocationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876023B13440A83001B439B /* HCInvocationMatcher.m */; };
 		0876026713440A83001B439B /* HCRequireNonNilObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0876023C13440A83001B439B /* HCRequireNonNilObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -352,8 +352,8 @@
 		0876023413440A83001B439B /* HCSelfDescribing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSelfDescribing.h; sourceTree = "<group>"; };
 		0876023513440A83001B439B /* HCStringDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringDescription.h; sourceTree = "<group>"; };
 		0876023613440A83001B439B /* HCStringDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringDescription.m; sourceTree = "<group>"; };
-		0876023813440A83001B439B /* HCCollectMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCollectMatchers.h; sourceTree = "<group>"; };
-		0876023913440A83001B439B /* HCCollectMatchers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCollectMatchers.m; sourceTree = "<group>"; };
+		0876023813440A83001B439B /* HCCollect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCollect.h; sourceTree = "<group>"; };
+		0876023913440A83001B439B /* HCCollect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCollect.m; sourceTree = "<group>"; };
 		0876023A13440A83001B439B /* HCInvocationMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCInvocationMatcher.h; sourceTree = "<group>"; };
 		0876023B13440A83001B439B /* HCInvocationMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCInvocationMatcher.m; sourceTree = "<group>"; };
 		0876023C13440A83001B439B /* HCRequireNonNilObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilObject.h; sourceTree = "<group>"; };
@@ -626,8 +626,8 @@
 		0876023713440A83001B439B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0876023813440A83001B439B /* HCCollectMatchers.h */,
-				0876023913440A83001B439B /* HCCollectMatchers.m */,
+				0876023813440A83001B439B /* HCCollect.h */,
+				0876023913440A83001B439B /* HCCollect.m */,
 				0876023A13440A83001B439B /* HCInvocationMatcher.h */,
 				0876023B13440A83001B439B /* HCInvocationMatcher.m */,
 				0876023C13440A83001B439B /* HCRequireNonNilObject.h */,
@@ -869,7 +869,7 @@
 				0876025F13440A83001B439B /* HCMatcher.h in Headers */,
 				0876026013440A83001B439B /* HCSelfDescribing.h in Headers */,
 				0876026113440A83001B439B /* HCStringDescription.h in Headers */,
-				0876026313440A83001B439B /* HCCollectMatchers.h in Headers */,
+				0876026313440A83001B439B /* HCCollect.h in Headers */,
 				0876026513440A83001B439B /* HCInvocationMatcher.h in Headers */,
 				0876026713440A83001B439B /* HCRequireNonNilObject.h in Headers */,
 				0876026B13440A83001B439B /* HCWrapInMatcher.h in Headers */,
@@ -1128,7 +1128,7 @@
 				08026528134597C000A8DCCA /* HCAssertThat.m in Sources */,
 				08026529134597C000A8DCCA /* HCBaseDescription.m in Sources */,
 				0802652A134597C000A8DCCA /* HCBaseMatcher.m in Sources */,
-				0802652B134597C000A8DCCA /* HCCollectMatchers.m in Sources */,
+				0802652B134597C000A8DCCA /* HCCollect.m in Sources */,
 				0802652D134597C000A8DCCA /* HCHasCount.m in Sources */,
 				0802652E134597C000A8DCCA /* HCHasDescription.m in Sources */,
 				0802652F134597C000A8DCCA /* HCInvocationMatcher.m in Sources */,
@@ -1237,7 +1237,7 @@
 				08EE4341165FFE47006AB8E1 /* HCBaseDescription.m in Sources */,
 				0876025D13440A83001B439B /* HCBaseMatcher.m in Sources */,
 				0876026213440A83001B439B /* HCStringDescription.m in Sources */,
-				0876026413440A83001B439B /* HCCollectMatchers.m in Sources */,
+				0876026413440A83001B439B /* HCCollect.m in Sources */,
 				0876026613440A83001B439B /* HCInvocationMatcher.m in Sources */,
 				0876026813440A83001B439B /* HCRequireNonNilObject.m in Sources */,
 				0876026C13440A83001B439B /* HCWrapInMatcher.m in Sources */,
