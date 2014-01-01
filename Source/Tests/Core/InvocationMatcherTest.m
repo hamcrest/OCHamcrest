@@ -94,9 +94,11 @@
 - (void)setUp
 {
     [super setUp];
-    NSInvocation *invocation = [HCInvocationMatcher invocationForSelector:@selector(result)
-                                                                  onClass:[Thingy class]];
-    
+    Class aClass = [Thingy class];
+    NSMethodSignature *signature = [aClass instanceMethodSignatureForSelector:@selector(result)];
+    NSInvocation *invocation = [[[NSInvocation class] class] invocationWithMethodSignature:signature];
+    [invocation setSelector:@selector(result)];
+
     resultMatcher = [[HCInvocationMatcher alloc] initWithInvocation:invocation
                                                            matching:[Match matches:@"bar"]];
 }

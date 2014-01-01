@@ -9,6 +9,7 @@
 
 #import "HCRequireNonNilObject.h"
 #import "HCWrapInMatcher.h"
+#import "NSInvocation+OCHamcrest.h"
 
 
 @implementation HCHasProperty
@@ -37,100 +38,9 @@
     if (![item respondsToSelector:propertyGetter])
         return NO;
 
-    id propertyValue = [self objectFromInvokingSelector:propertyGetter onObject:item];
+    NSInvocation *getterInvocation = [NSInvocation och_invocationWithTarget:item selector:propertyGetter];
+    id propertyValue = [getterInvocation och_invoke];
     return [valueMatcher matches:propertyValue];
-}
-
-- (id)objectFromInvokingSelector:(SEL)selector onObject:(id)object
-{
-    NSMethodSignature *getterSignature = [object methodSignatureForSelector:selector];
-    NSInvocation *getterInvocation = [NSInvocation invocationWithMethodSignature:getterSignature];
-    [getterInvocation setTarget:object];
-    [getterInvocation setSelector:selector];
-    [getterInvocation invoke];
-    
-    id result = nil;
-    const char *argType = [getterSignature methodReturnType];
-    if (strncmp(argType, @encode(char), 1) == 0)
-    {
-        char charValue;
-        [getterInvocation getReturnValue:&charValue];
-        result = @(charValue);
-    }
-    else if (strncmp(argType, @encode(int), 1) == 0)
-    {
-        int intValue;
-        [getterInvocation getReturnValue:&intValue];
-        result = @(intValue);
-    }
-    else if (strncmp(argType, @encode(short), 1) == 0)
-    {
-        short shortValue;
-        [getterInvocation getReturnValue:&shortValue];
-        result = @(shortValue);
-    }
-    else if (strncmp(argType, @encode(long), 1) == 0)
-    {
-        long longValue;
-        [getterInvocation getReturnValue:&longValue];
-        result = @(longValue);
-    }
-    else if (strncmp(argType, @encode(long long), 1) == 0)
-    {
-        long long longLongValue;
-        [getterInvocation getReturnValue:&longLongValue];
-        result = @(longLongValue);
-    }
-    else if (strncmp(argType, @encode(unsigned char), 1) == 0)
-    {
-        unsigned char unsignedCharValue;
-        [getterInvocation getReturnValue:&unsignedCharValue];
-        result = @(unsignedCharValue);
-    }
-    else if (strncmp(argType, @encode(unsigned int), 1) == 0)
-    {
-        unsigned int unsignedIntValue;
-        [getterInvocation getReturnValue:&unsignedIntValue];
-        result = @(unsignedIntValue);
-    }
-    else if (strncmp(argType, @encode(unsigned short), 1) == 0)
-    {
-        unsigned short unsignedShortValue;
-        [getterInvocation getReturnValue:&unsignedShortValue];
-        result = @(unsignedShortValue);
-    }
-    else if (strncmp(argType, @encode(unsigned long), 1) == 0)
-    {
-        unsigned long unsignedLongValue;
-        [getterInvocation getReturnValue:&unsignedLongValue];
-        result = @(unsignedLongValue);
-    }
-    else if (strncmp(argType, @encode(unsigned long long), 1) == 0)
-    {
-        unsigned long long unsignedLongLongValue;
-        [getterInvocation getReturnValue:&unsignedLongLongValue];
-        result = @(unsignedLongLongValue);
-    }
-    else if (strncmp(argType, @encode(float), 1) == 0)
-    {
-        float floatValue;
-        [getterInvocation getReturnValue:&floatValue];
-        result = @(floatValue);
-    }
-    else if (strncmp(argType, @encode(double), 1) == 0)
-    {
-        double doubleValue;
-        [getterInvocation getReturnValue:&doubleValue];
-        result = @(doubleValue);
-    }
-    else if (strncmp(argType, @encode(id), 1) == 0)
-    {
-        __unsafe_unretained id unretainedResult;
-        [getterInvocation getReturnValue:&unretainedResult];
-        result = unretainedResult;
-    }
-        
-    return result;
 }
 
 - (void)describeTo:(id<HCDescription>)description

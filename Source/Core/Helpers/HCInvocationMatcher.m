@@ -14,14 +14,6 @@
 
 @synthesize shortMismatchDescription;
 
-+ (NSInvocation *)invocationForSelector:(SEL)selector onClass:(Class)aClass
-{
-    NSMethodSignature* signature = [aClass instanceMethodSignatureForSelector:selector];
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-    [invocation setSelector:selector];
-    return invocation;
-}
-
 - (instancetype)initWithInvocation:(NSInvocation *)anInvocation matching:(id <HCMatcher>)aMatcher
 {
     self = [super init];

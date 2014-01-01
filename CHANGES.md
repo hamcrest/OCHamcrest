@@ -1,9 +1,8 @@
 Next version under development
 ------------------------------
 
-**Fixes:**
-
-- Drop support for 64-bit iOS because it requires targeting iOS 7. _Thanks to: César Estébanez Tascón_
+- If you're not using CocoaPods, specify `-ObjC` in your "Other Linker Flags".
+- If you import HCCollectMatchers.h for a custom matcher, change this to import HCCollect.h.
 
 
 Version 3.0.1

@@ -1,6 +1,7 @@
 #import "HCSenTestFailureHandler.h"
 
 #import "HCTestFailure.h"
+#import "NSInvocation+OCHamcrest.h"
 
 
 @interface NSObject (PretendMethodsExistOnNSObjectToAvoidLinkingSenTestingKit)
@@ -47,12 +48,8 @@
     NSString *description = [failure.reason stringByReplacingOccurrencesOfString:@"%"
                                                                       withString:@"%%"];
 
-    SEL selector = @selector(failureInFile:atLine:withDescription:);
-    NSMethodSignature *signature = [[NSException class] methodSignatureForSelector:selector];
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-    [invocation setTarget:[NSException class]];
-    [invocation setSelector:selector];
-
+    NSInvocation *invocation = [NSInvocation och_invocationWithTarget:[NSException class]
+                                                             selector:@selector(failureInFile:atLine:withDescription:)];
     [invocation setArgument:&fileName atIndex:2];
     [invocation setArgument:&lineNumber atIndex:3];
     [invocation setArgument:&description atIndex:4];

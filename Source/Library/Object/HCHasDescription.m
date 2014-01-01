@@ -10,6 +10,7 @@
 #import "HCHasDescription.h"
 
 #import "HCWrapInMatcher.h"
+#import "NSInvocation+OCHamcrest.h"
 
 
 @implementation HCHasDescription
@@ -21,8 +22,8 @@
 
 - (instancetype)initWithDescription:(id <HCMatcher>)descriptionMatcher
 {
-    NSInvocation *anInvocation = [HCInvocationMatcher invocationForSelector:@selector(description)
-                                                                    onClass:[NSObject class]];
+    Class aClass = [NSObject class];
+    NSInvocation *anInvocation = [NSInvocation och_invocationOnObjectOfType:aClass selector:@selector(description)];
     self = [super initWithInvocation:anInvocation matching:descriptionMatcher];
     self.shortMismatchDescription = YES;
     return self;

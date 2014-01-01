@@ -33,13 +33,6 @@
 @property (nonatomic, assign) BOOL shortMismatchDescription;
 
 /**
- Helper method for creating an invocation.
- 
- A class is specified only so we can determine the method signature.
- */
-+ (NSInvocation *)invocationForSelector:(SEL)selector onClass:(Class)aClass;
-
-/**
  Returns an HCInvocationMatcher object initialized with an invocation and a matcher.
  */
 - (instancetype)initWithInvocation:(NSInvocation *)anInvocation matching:(id <HCMatcher>)aMatcher;

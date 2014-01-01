@@ -263,10 +263,13 @@
 		BB3334F57A77AB2CEB3A756D /* HCGenericTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333FE566B379546611BED0 /* HCGenericTestFailureHandler.m */; };
 		BB3335851A451A7F2FB7D7B1 /* HCXCTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33327C165B6006F552D9EA /* HCXCTestFailureHandler.m */; };
 		BB33360811CA1BBE96F2411D /* HCTestFailureHandlerChain.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333987FB285B8C15AFB59F /* HCTestFailureHandlerChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB3336A1AE68081028EBB702 /* NSInvocation+OCHamcrest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3333E0D6B721409C8C88AC /* NSInvocation+OCHamcrest.m */; };
 		BB3336CE4A9F65ABD486550E /* HCIsTypeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333D652BE69E0B746F7770 /* HCIsTypeOf.m */; };
 		BB333720E374D65134AFB605 /* HCTestFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3335C1980D713ECA921D0E /* HCTestFailure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB33378F5EF79061026B4B62 /* NSInvocation+OCHamcrest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3333E0D6B721409C8C88AC /* NSInvocation+OCHamcrest.m */; };
 		BB333A0BDFBEE9FC4F0F15F2 /* HCTestFailureHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3332DF97AC2524BF03AE48 /* HCTestFailureHandlerChain.m */; };
 		BB333BC9E761F4285DD44E3E /* HCTestFailureHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3334554E610A71AFCB015B /* HCTestFailureHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB333BD006E230BAD6FDBE0C /* NSInvocation+OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333867E9993F3B3848DB97 /* NSInvocation+OCHamcrest.h */; };
 		BB333C079C9F955240C40371 /* HCGenericTestFailureHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333083CA665C17A8B89BB8 /* HCGenericTestFailureHandler.h */; };
 		BB333C74A14F8A7690072D8A /* HCTestFailure.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3331A3519FB064573EA640 /* HCTestFailure.m */; };
 		BB333E6FB3D75BF97764A8F8 /* HCSenTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3330BB2DF58238AB3DAE24 /* HCSenTestFailureHandler.m */; };
@@ -450,9 +453,11 @@
 		BB33327C165B6006F552D9EA /* HCXCTestFailureHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCXCTestFailureHandler.m; sourceTree = "<group>"; };
 		BB3332DF97AC2524BF03AE48 /* HCTestFailureHandlerChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureHandlerChain.m; sourceTree = "<group>"; };
 		BB33332A83DF96D0D565F8AE /* HCSenTestFailureHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSenTestFailureHandler.h; sourceTree = "<group>"; };
+		BB3333E0D6B721409C8C88AC /* NSInvocation+OCHamcrest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+OCHamcrest.m"; sourceTree = "<group>"; };
 		BB3334554E610A71AFCB015B /* HCTestFailureHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailureHandler.h; sourceTree = "<group>"; };
 		BB3335C1980D713ECA921D0E /* HCTestFailure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailure.h; sourceTree = "<group>"; };
 		BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTypeOfTest.m; sourceTree = "<group>"; };
+		BB333867E9993F3B3848DB97 /* NSInvocation+OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+OCHamcrest.h"; sourceTree = "<group>"; };
 		BB333987FB285B8C15AFB59F /* HCTestFailureHandlerChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailureHandlerChain.h; sourceTree = "<group>"; };
 		BB333D652BE69E0B746F7770 /* HCIsTypeOf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsTypeOf.m; sourceTree = "<group>"; };
 		BB333F8BE58BF55D84CB65DB /* HCXCTestFailureHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCXCTestFailureHandler.h; sourceTree = "<group>"; };
@@ -634,6 +639,8 @@
 				0876023D13440A83001B439B /* HCRequireNonNilObject.m */,
 				0876024013440A83001B439B /* HCWrapInMatcher.h */,
 				0876024113440A83001B439B /* HCWrapInMatcher.m */,
+				BB333867E9993F3B3848DB97 /* NSInvocation+OCHamcrest.h */,
+				BB3333E0D6B721409C8C88AC /* NSInvocation+OCHamcrest.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -917,6 +924,7 @@
 				BB333C079C9F955240C40371 /* HCGenericTestFailureHandler.h in Headers */,
 				BB333720E374D65134AFB605 /* HCTestFailure.h in Headers */,
 				BB33360811CA1BBE96F2411D /* HCTestFailureHandlerChain.h in Headers */,
+				BB333BD006E230BAD6FDBE0C /* NSInvocation+OCHamcrest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1175,6 +1183,7 @@
 				BB333FF546893E73E28F9935 /* HCGenericTestFailureHandler.m in Sources */,
 				BB33310BFEFBC0BFEC8F3C32 /* HCTestFailure.m in Sources */,
 				BB333A0BDFBEE9FC4F0F15F2 /* HCTestFailureHandlerChain.m in Sources */,
+				BB3336A1AE68081028EBB702 /* NSInvocation+OCHamcrest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1283,6 +1292,7 @@
 				BB3334F57A77AB2CEB3A756D /* HCGenericTestFailureHandler.m in Sources */,
 				BB333C74A14F8A7690072D8A /* HCTestFailure.m in Sources */,
 				BB3331C07C6239D96C5AEFFE /* HCTestFailureHandlerChain.m in Sources */,
+				BB33378F5EF79061026B4B62 /* NSInvocation+OCHamcrest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1357,12 +1367,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/libochamcrest.dst;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-fobjc-arc-exceptions";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ochamcrest;
 				SDKROOT = iphoneos;
 			};
@@ -1372,12 +1381,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/libochamcrest.dst;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-fobjc-arc-exceptions";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ochamcrest;
 				SDKROOT = iphoneos;
 			};
@@ -1397,6 +1405,7 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = "Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
@@ -1415,6 +1424,7 @@
 				);
 				INFOPLIST_FILE = "Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
@@ -1598,6 +1608,7 @@
 				08F1B0D7187275F2001D28B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
