@@ -14,9 +14,9 @@
 #import "HCXCTestFailureHandler.h"
 
 
-id <HCTestFailureHandler> HC_testFailureHandlerChain(void)
+HCTestFailureHandler *HC_testFailureHandlerChain(void)
 {
-    static id <HCTestFailureHandler> chain = nil;
+    static HCTestFailureHandler *chain = nil;
     if (!chain)
     {
         HCXCTestFailureHandler *xctestHandler = [[HCXCTestFailureHandler alloc] init];

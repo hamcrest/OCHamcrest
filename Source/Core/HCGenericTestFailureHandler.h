@@ -10,5 +10,5 @@
 #import "HCTestFailureHandler.h"
 
 
-@interface HCGenericTestFailureHandler : NSObject <HCTestFailureHandler>
+@interface HCGenericTestFailureHandler : HCTestFailureHandler
 @end

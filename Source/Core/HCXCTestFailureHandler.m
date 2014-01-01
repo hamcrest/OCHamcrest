@@ -24,16 +24,6 @@
 
 @implementation HCXCTestFailureHandler
 
-@synthesize successor = _successor;
-
-- (void)handleFailure:(HCTestFailure *)failure
-{
-    if ([self willHandleFailure:failure])
-        [self executeHandlingOfFailure:failure];
-    else
-        [self.successor handleFailure:failure];
-}
-
 - (BOOL)willHandleFailure:(HCTestFailure *)failure
 {
     return [failure.testCase respondsToSelector:@selector(recordFailureWithDescription:inFile:atLine:expected:)];

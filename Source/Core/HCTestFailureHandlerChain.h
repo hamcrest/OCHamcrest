@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <objc/objc-api.h>
 
-@protocol HCTestFailureHandler;
+@class HCTestFailureHandler;
 
 
 /**
@@ -18,4 +18,4 @@
  
  @ingroup integration
  */
-OBJC_EXPORT id <HCTestFailureHandler> HC_testFailureHandlerChain(void);
+OBJC_EXPORT HCTestFailureHandler *HC_testFailureHandlerChain(void);

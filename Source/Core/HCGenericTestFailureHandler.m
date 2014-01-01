@@ -14,9 +14,12 @@
 
 @implementation HCGenericTestFailureHandler
 
-@synthesize successor = _successor;
+- (BOOL)willHandleFailure:(HCTestFailure *)failure
+{
+    return YES;
+}
 
-- (void)handleFailure:(HCTestFailure *)failure
+- (void)executeHandlingOfFailure:(HCTestFailure *)failure;
 {
     NSException *exception = [self createExceptionForFailure:failure];
     [exception raise];

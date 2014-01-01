@@ -17,9 +17,9 @@
  
  @ingroup integration
  */
-@protocol HCTestFailureHandler <NSObject>
+@interface HCTestFailureHandler : NSObject
 
-@property (nonatomic, strong) id <HCTestFailureHandler> successor;
+@property (nonatomic, strong) HCTestFailureHandler *successor;
 
 /**
  Handle test failure at specific location, or pass to successor.
