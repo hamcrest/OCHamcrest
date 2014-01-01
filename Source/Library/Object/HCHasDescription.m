@@ -22,10 +22,11 @@
 
 - (instancetype)initWithDescription:(id <HCMatcher>)descriptionMatcher
 {
-    Class aClass = [NSObject class];
-    NSInvocation *anInvocation = [NSInvocation och_invocationOnObjectOfType:aClass selector:@selector(description)];
+    NSInvocation *anInvocation = [NSInvocation och_invocationOnObjectOfType:[NSObject class]
+                                                                   selector:@selector(description)];
     self = [super initWithInvocation:anInvocation matching:descriptionMatcher];
-    self.shortMismatchDescription = YES;
+    if (self)
+        self.shortMismatchDescription = YES;
     return self;
 }
 
