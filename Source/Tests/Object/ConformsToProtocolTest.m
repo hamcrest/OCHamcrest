@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - ConformsToProtocolTest.m
-//  Copyright 2013 hamcrest.org. See LICENSE.txt
+//  Copyright 2014 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Todd Farrell
 //
