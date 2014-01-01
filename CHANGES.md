@@ -11,16 +11,16 @@ _29 Oct 2013_
 
 **Improvements:**
 
-- Change matcher factory methods to return plain `id` so that matchers can be used without casting
+- Changed matcher factory methods to return plain `id` so that matchers can be used without casting
   to `(id)` for OCMockito arguments.
-- Add support for 64-bit iOS devices.
+- Added support for 64-bit iOS devices.
 
 **Fixes:**
 
-- Fix problem where isNot did not ask the sub-matcher's mismatch description. _Thanks to: James
+- Fixed problem where isNot did not ask the sub-matcher's mismatch description. _Thanks to: James
   Richard and Jonathan Barnes_
-- Fix crash in `describedAs` matcher . _Thanks to: Nikolaj Schumacher_
-- Fix crash in `hasProperty` matcher when the property is a primitive type. _Thanks to: Nikolaj
+- Fixed crash in `describedAs` matcher . _Thanks to: Nikolaj Schumacher_
+- Fixed crash in `hasProperty` matcher when the property is a primitive type. _Thanks to: Nikolaj
   Schumacher_
 
 **Examples & Documentation:**
@@ -63,11 +63,11 @@ _23 Jun 2013_
 
 **Fixes:**
 
-- Make build script flexible so that doxygen isn't required, or can be in a different location.
+- Made build script flexible so that doxygen isn't required, or can be in a different location.
   _Thanks to: Bennett Smith_
-- Fix problem formatting percent symbols in assertion failures. _Thanks to: Nikolaj Schumacher_
-- Fix wrong descriptions in the unordered collection matcher. _Thanks to: Nikolaj Schumacher_
-- Fix underlying cause of crash in Mac version on assertion failure. With this fix, we could switch
+- Fixed problem formatting percent symbols in assertion failures. _Thanks to: Nikolaj Schumacher_
+- Fixed wrong descriptions in the unordered collection matcher. _Thanks to: Nikolaj Schumacher_
+- Fixed underlying cause of crash in Mac version on assertion failure. With this fix, we could switch
   back to optimized code. _Thanks to: Nikolaj Schumacher_
 - Fixed MacExample so it finds OCHamcrest.
 
@@ -103,7 +103,7 @@ backwards incompatible change, the major version number is incremented. _Thanks 
 
 **Fixes:**
 
-- Fix GTM compatibility -- avoid shadowing `conformsToProtocol:`
+- Fixed GTM compatibility -- avoid shadowing `conformsToProtocol:`
 
 **Improved matchers:**
 
@@ -117,7 +117,7 @@ backwards incompatible change, the major version number is incremented. _Thanks 
 
 **Project changes:**
 
-- Update project settings to Xcode 4.6. _Thanks to: Florian Buerger_
+- Updated project settings to Xcode 4.6. _Thanks to: Florian Buerger_
 - Fixed unit tests so they remain quiet when handling expected test failures.
 - Replaced older code coverage scripts with XcodeCoverage submodule.
 
