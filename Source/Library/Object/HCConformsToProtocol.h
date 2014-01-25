@@ -19,7 +19,7 @@
 @end
 
 
-OBJC_EXPORT id HC_conformsTo(Protocol *aProtocol);
+FOUNDATION_EXPORT id HC_conformsTo(Protocol *aProtocol);
 
 /**
  conformsTo(aProtocol) -

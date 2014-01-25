@@ -10,8 +10,6 @@
 #import <Foundation/Foundation.h>
 #import <OCHamcrest/HCMatcher.h>
 
-#import <objc/objc-api.h>   // Convenience header, to provide OBJC_EXPORT
-
 
 /**
  Base class for all HCMatcher implementations.

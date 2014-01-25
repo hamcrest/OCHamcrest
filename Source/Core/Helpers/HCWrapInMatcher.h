@@ -19,4 +19,4 @@
  
  @ingroup helpers
  */
-OBJC_EXPORT id <HCMatcher> HCWrapInMatcher(id matcherOrValue);
+FOUNDATION_EXPORT id <HCMatcher> HCWrapInMatcher(id matcherOrValue);

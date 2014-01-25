@@ -17,7 +17,7 @@
 @end
 
 
-OBJC_EXPORT id HC_endsWith(NSString *aSubstring);
+FOUNDATION_EXPORT id HC_endsWith(NSString *aSubstring);
 
 /**
  endsWith(aString) -

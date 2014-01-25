@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id HC_containsInAnyOrder(id itemMatch, ...) NS_REQUIRES_NIL_TERMINATION;
+FOUNDATION_EXPORT id HC_containsInAnyOrder(id itemMatch, ...) NS_REQUIRES_NIL_TERMINATION;
 
 /**
  containsInAnyOrder(firstMatcher, ...) -

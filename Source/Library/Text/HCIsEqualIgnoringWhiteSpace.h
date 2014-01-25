@@ -22,7 +22,7 @@
 @end
 
 
-OBJC_EXPORT id HC_equalToIgnoringWhiteSpace(NSString *aString);
+FOUNDATION_EXPORT id HC_equalToIgnoringWhiteSpace(NSString *aString);
 
 /**
  equalToIgnoringWhiteSpace(aString) -

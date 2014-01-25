@@ -17,7 +17,7 @@
 @end
 
 
-OBJC_EXPORT id HC_containsString(NSString *aSubstring);
+FOUNDATION_EXPORT id HC_containsString(NSString *aSubstring);
 
 /**
 containsString(aString) -

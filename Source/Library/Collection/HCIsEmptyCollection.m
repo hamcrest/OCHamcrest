@@ -38,7 +38,7 @@
 @end
 
 
-OBJC_EXPORT id HC_isEmpty()
+FOUNDATION_EXPORT id HC_isEmpty()
 {
     return [HCIsEmptyCollection isEmptyCollection];
 }

@@ -31,7 +31,7 @@
 @end
 
 
-OBJC_EXPORT id HC_greaterThan(id expected);
+FOUNDATION_EXPORT id HC_greaterThan(id expected);
 
 /**
  greaterThan(aNumber) -
@@ -52,7 +52,7 @@ OBJC_EXPORT id HC_greaterThan(id expected);
 #endif
 
 
-OBJC_EXPORT id HC_greaterThanOrEqualTo(id expected);
+FOUNDATION_EXPORT id HC_greaterThanOrEqualTo(id expected);
 
 /**
  greaterThanOrEqualTo(aNumber) -
@@ -73,7 +73,7 @@ OBJC_EXPORT id HC_greaterThanOrEqualTo(id expected);
 #endif
 
 
-OBJC_EXPORT id HC_lessThan(id expected);
+FOUNDATION_EXPORT id HC_lessThan(id expected);
 
 /**
  lessThan(aNumber) -
@@ -94,7 +94,7 @@ OBJC_EXPORT id HC_lessThan(id expected);
 #endif
 
 
-OBJC_EXPORT id HC_lessThanOrEqualTo(id expected);
+FOUNDATION_EXPORT id HC_lessThanOrEqualTo(id expected);
 
 /**
  lessThanOrEqualTo(aNumber) -

@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id HC_isNot(id aMatcher);
+FOUNDATION_EXPORT id HC_isNot(id aMatcher);
 
 /**
  isNot(aMatcher) -

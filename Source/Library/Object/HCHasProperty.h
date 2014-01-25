@@ -20,7 +20,7 @@
 @end
 
 
-OBJC_EXPORT id HC_hasProperty(NSString *name, id valueMatch);
+FOUNDATION_EXPORT id HC_hasProperty(NSString *name, id valueMatch);
 
 /**
  hasProperty(name, valueMatcher) -

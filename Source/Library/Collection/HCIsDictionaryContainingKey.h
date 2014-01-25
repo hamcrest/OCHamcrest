@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id HC_hasKey(id keyMatch);
+FOUNDATION_EXPORT id HC_hasKey(id keyMatch);
 
 /**
  hasKey(keyMatcher) -

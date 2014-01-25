@@ -17,7 +17,7 @@
 @end
 
 
-OBJC_EXPORT id HC_startsWith(NSString *aSubstring);
+FOUNDATION_EXPORT id HC_startsWith(NSString *aSubstring);
 
 /**
  startsWith(aString) -

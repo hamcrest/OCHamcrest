@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id HC_equalToIgnoringCase(NSString *aString);
+FOUNDATION_EXPORT id HC_equalToIgnoringCase(NSString *aString);
 
 /**
  equalToIgnoringCase(aString) -

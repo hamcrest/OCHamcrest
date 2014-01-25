@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id HC_anyOf(id match, ...) NS_REQUIRES_NIL_TERMINATION;
+FOUNDATION_EXPORT id HC_anyOf(id match, ...) NS_REQUIRES_NIL_TERMINATION;
 
 /**
  anyOf(firstMatcher, ...) -

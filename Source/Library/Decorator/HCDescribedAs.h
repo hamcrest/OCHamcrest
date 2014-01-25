@@ -28,7 +28,7 @@
 @end
 
 
-OBJC_EXPORT id HC_describedAs(NSString *description, id <HCMatcher> matcher, ...) NS_REQUIRES_NIL_TERMINATION;
+FOUNDATION_EXPORT id HC_describedAs(NSString *description, id <HCMatcher> matcher, ...) NS_REQUIRES_NIL_TERMINATION;
 
 /**
  describedAs(description, matcher, ...) -

@@ -17,7 +17,7 @@
 @end
 
 
-OBJC_EXPORT id HC_isA(Class aClass);
+FOUNDATION_EXPORT id HC_isA(Class aClass);
 
 /**
  isA(aClass) -

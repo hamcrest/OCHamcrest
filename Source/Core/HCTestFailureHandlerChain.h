@@ -18,4 +18,4 @@
  
  @ingroup integration
  */
-OBJC_EXPORT HCTestFailureHandler *HC_testFailureHandlerChain(void);
+FOUNDATION_EXPORT HCTestFailureHandler *HC_testFailureHandlerChain(void);

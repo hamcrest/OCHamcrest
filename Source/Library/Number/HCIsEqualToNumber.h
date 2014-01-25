@@ -10,7 +10,7 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-OBJC_EXPORT id HC_equalToBool(BOOL value);
+FOUNDATION_EXPORT id HC_equalToBool(BOOL value);
 
 /**
  equalToBool(value) -
@@ -37,7 +37,7 @@ OBJC_EXPORT id HC_equalToBool(BOOL value);
 @end
 
 
-OBJC_EXPORT id HC_equalToChar(char value);
+FOUNDATION_EXPORT id HC_equalToChar(char value);
 
 /**
  equalToChar(value) -
@@ -58,7 +58,7 @@ OBJC_EXPORT id HC_equalToChar(char value);
 #endif
 
 
-OBJC_EXPORT id HC_equalToDouble(double value);
+FOUNDATION_EXPORT id HC_equalToDouble(double value);
 
 /**
  equalToDouble(value) -
@@ -79,7 +79,7 @@ OBJC_EXPORT id HC_equalToDouble(double value);
 #endif
 
 
-OBJC_EXPORT id HC_equalToFloat(float value);
+FOUNDATION_EXPORT id HC_equalToFloat(float value);
 
 /**
  equalToFloat(value) -
@@ -100,7 +100,7 @@ OBJC_EXPORT id HC_equalToFloat(float value);
 #endif
 
 
-OBJC_EXPORT id HC_equalToInt(int value);
+FOUNDATION_EXPORT id HC_equalToInt(int value);
 
 /**
  equalToInt(value) -
@@ -121,7 +121,7 @@ OBJC_EXPORT id HC_equalToInt(int value);
 #endif
 
 
-OBJC_EXPORT id HC_equalToLong(long value);
+FOUNDATION_EXPORT id HC_equalToLong(long value);
 
 /**
  equalToLong(value) -
@@ -142,7 +142,7 @@ OBJC_EXPORT id HC_equalToLong(long value);
 #endif
 
 
-OBJC_EXPORT id HC_equalToLongLong(long long value);
+FOUNDATION_EXPORT id HC_equalToLongLong(long long value);
 
 /**
  equalToLongLong(value) -
@@ -163,7 +163,7 @@ OBJC_EXPORT id HC_equalToLongLong(long long value);
 #endif
 
 
-OBJC_EXPORT id HC_equalToShort(short value);
+FOUNDATION_EXPORT id HC_equalToShort(short value);
 
 /**
  equalToShort(value) -
@@ -184,7 +184,7 @@ OBJC_EXPORT id HC_equalToShort(short value);
 #endif
 
 
-OBJC_EXPORT id HC_equalToUnsignedChar(unsigned char value);
+FOUNDATION_EXPORT id HC_equalToUnsignedChar(unsigned char value);
 
 /**
  equalToUnsignedChar(value) -
@@ -205,7 +205,7 @@ OBJC_EXPORT id HC_equalToUnsignedChar(unsigned char value);
 #endif
 
 
-OBJC_EXPORT id HC_equalToUnsignedInt(unsigned int value);
+FOUNDATION_EXPORT id HC_equalToUnsignedInt(unsigned int value);
 
 /**
  equalToUnsignedInt(value) -
@@ -226,7 +226,7 @@ OBJC_EXPORT id HC_equalToUnsignedInt(unsigned int value);
 #endif
 
 
-OBJC_EXPORT id HC_equalToUnsignedLong(unsigned long value);
+FOUNDATION_EXPORT id HC_equalToUnsignedLong(unsigned long value);
 
 /**
  equalToUnsignedLong(value) -
@@ -247,7 +247,7 @@ OBJC_EXPORT id HC_equalToUnsignedLong(unsigned long value);
 #endif
 
 
-OBJC_EXPORT id HC_equalToUnsignedLongLong(unsigned long long value);
+FOUNDATION_EXPORT id HC_equalToUnsignedLongLong(unsigned long long value);
 
 /**
  equalToUnsignedLongLong(value) -
@@ -268,7 +268,7 @@ OBJC_EXPORT id HC_equalToUnsignedLongLong(unsigned long long value);
 #endif
 
 
-OBJC_EXPORT id HC_equalToUnsignedShort(unsigned short value);
+FOUNDATION_EXPORT id HC_equalToUnsignedShort(unsigned short value);
 
 /**
  equalToUnsignedShort(value) -
@@ -289,7 +289,7 @@ OBJC_EXPORT id HC_equalToUnsignedShort(unsigned short value);
 #endif
 
 
-OBJC_EXPORT id HC_equalToInteger(NSInteger value);
+FOUNDATION_EXPORT id HC_equalToInteger(NSInteger value);
 
 /**
  equalToInteger(value) -
@@ -310,7 +310,7 @@ OBJC_EXPORT id HC_equalToInteger(NSInteger value);
 #endif
 
 
-OBJC_EXPORT id HC_equalToUnsignedInteger(NSUInteger value);
+FOUNDATION_EXPORT id HC_equalToUnsignedInteger(NSUInteger value);
 
 /**
  equalToUnsignedInteger(value) -

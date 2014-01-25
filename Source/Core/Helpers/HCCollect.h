@@ -20,7 +20,7 @@
 
  @ingroup helpers
 */
-OBJC_EXPORT NSMutableArray *HCCollectItems(id item, va_list args);
+FOUNDATION_EXPORT NSMutableArray *HCCollectItems(id item, va_list args);
 
 /**
  Returns an array of matchers from a variable-length comma-separated list terminated by @c nil.
@@ -29,7 +29,7 @@ OBJC_EXPORT NSMutableArray *HCCollectItems(id item, va_list args);
  
  @ingroup helpers
 */
-OBJC_EXPORT NSMutableArray *HCCollectMatchers(id item, va_list args);
+FOUNDATION_EXPORT NSMutableArray *HCCollectMatchers(id item, va_list args);
 
 /**
  Returns an array of wrapped items from a variable-length comma-separated list terminated by @c nil.
@@ -38,4 +38,4 @@ OBJC_EXPORT NSMutableArray *HCCollectMatchers(id item, va_list args);
 
  @ingroup helpers
 */
-OBJC_EXPORT NSMutableArray *HCCollectWrappedItems(id item, va_list args, id (*wrap)(id));
+FOUNDATION_EXPORT NSMutableArray *HCCollectWrappedItems(id item, va_list args, id (*wrap)(id));

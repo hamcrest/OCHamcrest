@@ -17,7 +17,7 @@
 @end
 
 
-OBJC_EXPORT id HC_instanceOf(Class aClass);
+FOUNDATION_EXPORT id HC_instanceOf(Class aClass);
 
 /**
  instanceOf(aClass) -

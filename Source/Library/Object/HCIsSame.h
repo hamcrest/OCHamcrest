@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id HC_sameInstance(id object);
+FOUNDATION_EXPORT id HC_sameInstance(id object);
 
 /**
  sameInstance(anObject) -

@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id HC_isIn(id aCollection);
+FOUNDATION_EXPORT id HC_isIn(id aCollection);
 
 /**
  isIn(aCollection) -

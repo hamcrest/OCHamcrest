@@ -17,7 +17,7 @@
 @end
 
 
-OBJC_EXPORT id HC_nilValue(void);
+FOUNDATION_EXPORT id HC_nilValue(void);
 
 /**
  Matches if object is @c nil.
@@ -32,7 +32,7 @@ OBJC_EXPORT id HC_nilValue(void);
 #endif
 
 
-OBJC_EXPORT id HC_notNilValue(void);
+FOUNDATION_EXPORT id HC_notNilValue(void);
 
 /**
  Matches if object is not @c nil.

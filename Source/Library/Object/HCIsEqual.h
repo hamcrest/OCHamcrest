@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id HC_equalTo(id object);
+FOUNDATION_EXPORT id HC_equalTo(id object);
 
 /**
  equalTo(anObject) -

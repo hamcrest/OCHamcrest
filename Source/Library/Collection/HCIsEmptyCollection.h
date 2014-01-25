@@ -18,7 +18,7 @@
 @end
 
 
-OBJC_EXPORT id HC_isEmpty(void);
+FOUNDATION_EXPORT id HC_isEmpty(void);
 
 /**
  Matches empty collection.

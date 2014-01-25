@@ -21,7 +21,7 @@
 @end
 
 
-OBJC_EXPORT id HC_hasValue(id valueMatch);
+FOUNDATION_EXPORT id HC_hasValue(id valueMatch);
 
 /**
  hasValue(valueMatcher) -
