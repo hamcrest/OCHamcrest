@@ -1,5 +1,5 @@
 //
-//  OCHamcrest - HCTestFailureHandlerChain.h
+//  OCHamcrest - HCReturnTypeHandlerChain.h
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid, http://qualitycoding.org/
@@ -9,12 +9,10 @@
 
 #import <Foundation/Foundation.h>
 
-@class HCTestFailureHandler;
+@class HCReturnTypeHandler;
 
 
 /**
- Returns chain of test failure handlers.
- 
- @ingroup integration
+ Returns chain of return type handlers.
  */
-FOUNDATION_EXPORT HCTestFailureHandler *HC_testFailureHandlerChain(void);
+FOUNDATION_EXPORT HCReturnTypeHandler *HC_returnTypeHandlerChain(void);
