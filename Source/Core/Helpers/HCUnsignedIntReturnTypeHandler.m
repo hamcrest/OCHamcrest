@@ -12,7 +12,7 @@
 
 @implementation HCUnsignedIntReturnTypeHandler
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithType:@encode(unsigned int)];
     return self;

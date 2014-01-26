@@ -12,7 +12,7 @@
 
 @implementation HCFloatReturnTypeHandler
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithType:@encode(float)];
     return self;

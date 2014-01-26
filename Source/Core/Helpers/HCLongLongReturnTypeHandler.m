@@ -12,7 +12,7 @@
 
 @implementation HCLongLongReturnTypeHandler
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithType:@encode(long long)];
     return self;

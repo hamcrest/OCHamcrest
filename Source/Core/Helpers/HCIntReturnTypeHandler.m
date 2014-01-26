@@ -12,7 +12,7 @@
 
 @implementation HCIntReturnTypeHandler
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithType:@encode(int)];
     return self;

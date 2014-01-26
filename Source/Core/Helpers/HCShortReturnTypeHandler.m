@@ -12,7 +12,7 @@
 
 @implementation HCShortReturnTypeHandler
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithType:@encode(short)];
     return self;

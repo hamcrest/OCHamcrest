@@ -12,7 +12,7 @@
 
 @implementation HCDoubleReturnTypeHandler
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithType:@encode(double)];
     return self;

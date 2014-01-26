@@ -12,7 +12,7 @@
 
 @implementation HCUnsignedCharReturnTypeHandler
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithType:@encode(unsigned char)];
     return self;

@@ -12,7 +12,7 @@
 
 @implementation HCBoolReturnTypeHandler
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithType:@encode(BOOL)];
     return self;

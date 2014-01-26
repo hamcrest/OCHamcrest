@@ -12,7 +12,7 @@
 
 @implementation HCCharReturnTypeHandler
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithType:@encode(char)];
     return self;

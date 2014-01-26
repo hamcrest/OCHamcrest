@@ -12,7 +12,7 @@
 
 @implementation HCUnsignedLongLongReturnTypeHandler
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithType:@encode(unsigned long long)];
     return self;
