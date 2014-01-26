@@ -722,8 +722,6 @@
 				0876023513440A83001B439B /* HCStringDescription.h */,
 				0876023613440A83001B439B /* HCStringDescription.m */,
 				0876023713440A83001B439B /* Helpers */,
-				BB3337F20469A297890515BF /* Return Type Handlers */,
-				BB3339C5C80808088E07F792 /* Test Failure Handlers */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -731,6 +729,8 @@
 		0876023713440A83001B439B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BB3337F20469A297890515BF /* Return Type Handlers */,
+				BB3339C5C80808088E07F792 /* Test Failure Handlers */,
 				0876023813440A83001B439B /* HCCollect.h */,
 				0876023913440A83001B439B /* HCCollect.m */,
 				0876023A13440A83001B439B /* HCInvocationMatcher.h */,
@@ -982,6 +982,7 @@
 				BB3335C1980D713ECA921D0E /* HCTestFailure.h */,
 				BB3331A3519FB064573EA640 /* HCTestFailure.m */,
 				BB3334554E610A71AFCB015B /* HCTestFailureHandler.h */,
+				BB333CB8D22CBB1F05D40B4A /* HCTestFailureHandler.m */,
 				BB333987FB285B8C15AFB59F /* HCTestFailureHandlerChain.h */,
 				BB3332DF97AC2524BF03AE48 /* HCTestFailureHandlerChain.m */,
 				BB333083CA665C17A8B89BB8 /* HCGenericTestFailureHandler.h */,
@@ -990,7 +991,6 @@
 				BB3330BB2DF58238AB3DAE24 /* HCSenTestFailureHandler.m */,
 				BB333F8BE58BF55D84CB65DB /* HCXCTestFailureHandler.h */,
 				BB33327C165B6006F552D9EA /* HCXCTestFailureHandler.m */,
-				BB333CB8D22CBB1F05D40B4A /* HCTestFailureHandler.m */,
 			);
 			name = "Test Failure Handlers";
 			sourceTree = "<group>";
