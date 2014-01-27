@@ -10,6 +10,9 @@
 #import <Foundation/Foundation.h>
 
 
+/**
+ Chain-of-responsibility for handling NSInvocation return types.
+ */
 @interface HCReturnTypeHandler : NSObject
 
 @property (nonatomic, strong) HCReturnTypeHandler *successor;
