@@ -12,25 +12,92 @@
 #import "HCAssertThat.h"
 
 
-#define DEFINE_NUMBER_ASSERT(name, type)                                                                            \
-    FOUNDATION_EXPORT void HC_assertThat ## name ## WithLocation(id testCase, type actual, id <HCMatcher> matcher,  \
-                                                                 const char* fileName, int lineNumber)              \
-    {                                                                                                               \
-        HC_assertThatWithLocation(testCase, [NSNumber numberWith ## name :actual], matcher, fileName, lineNumber);  \
-    }
+FOUNDATION_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
 
-DEFINE_NUMBER_ASSERT(Bool, BOOL)
-DEFINE_NUMBER_ASSERT(Char, char)
-DEFINE_NUMBER_ASSERT(Double, double)
-DEFINE_NUMBER_ASSERT(Float, float)
-DEFINE_NUMBER_ASSERT(Int, int)
-DEFINE_NUMBER_ASSERT(Long, long)
-DEFINE_NUMBER_ASSERT(LongLong, long long)
-DEFINE_NUMBER_ASSERT(Short, short)
-DEFINE_NUMBER_ASSERT(UnsignedChar, unsigned char)
-DEFINE_NUMBER_ASSERT(UnsignedInt, unsigned int)
-DEFINE_NUMBER_ASSERT(UnsignedLong, unsigned long)
-DEFINE_NUMBER_ASSERT(UnsignedLongLong, unsigned long long)
-DEFINE_NUMBER_ASSERT(UnsignedShort, unsigned short)
-DEFINE_NUMBER_ASSERT(Integer, NSInteger)
-DEFINE_NUMBER_ASSERT(UnsignedInteger, NSUInteger)
+FOUNDATION_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
+
+FOUNDATION_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
+
+FOUNDATION_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
+
+FOUNDATION_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
+
+FOUNDATION_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
+
+FOUNDATION_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
+
+FOUNDATION_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
+
+FOUNDATION_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsigned char actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
+
+FOUNDATION_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigned int actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
+
+FOUNDATION_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsigned long actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
+
+FOUNDATION_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, unsigned long long actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
+
+FOUNDATION_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsigned short actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
+
+FOUNDATION_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
+
+FOUNDATION_EXPORT void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSUInteger actual,
+        id <HCMatcher> matcher, char const * fileName, int lineNumber)
+{
+    HC_assertThatWithLocation(testCase, @(actual), matcher, fileName, lineNumber);
+}
