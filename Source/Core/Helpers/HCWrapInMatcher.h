@@ -7,7 +7,7 @@
 //  Source: https://github.com/hamcrest/OCHamcrest
 //
 
-#import <objc/objc-api.h>
+#import <Foundation/Foundation.h>
 
 @protocol HCMatcher;
 

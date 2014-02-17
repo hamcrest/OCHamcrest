@@ -10,7 +10,6 @@
 #import "HCAnyOf.h"
 
 #import "HCCollect.h"
-#import "HCDescription.h"
 
 
 @implementation HCAnyOf
