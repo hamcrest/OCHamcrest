@@ -25,9 +25,12 @@
     return self;
 }
 
-- (NSString *)stringFromSelector
+- (BOOL)matches:(id)item
 {
-    return NSStringFromSelector([invocation selector]);
+    if (![item respondsToSelector:[invocation selector]])
+        return NO;
+
+    return [subMatcher matches:[self invokeOn:item]];
 }
 
 - (id)invokeOn:(id)item
@@ -36,14 +39,6 @@
     [invocation invokeWithTarget:item];
     [invocation getReturnValue:&result];
     return result;
-}
-
-- (BOOL)matches:(id)item
-{
-    if (![item respondsToSelector:[invocation selector]])
-        return NO;
-    
-    return [subMatcher matches:[self invokeOn:item]];
 }
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
@@ -69,6 +64,11 @@
                     appendText:[self stringFromSelector]]
                     appendText:@" "]
                     appendDescriptionOf:subMatcher];
+}
+
+- (NSString *)stringFromSelector
+{
+    return NSStringFromSelector([invocation selector]);
 }
 
 @end
