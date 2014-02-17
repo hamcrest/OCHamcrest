@@ -12,26 +12,77 @@
 #import "HCIsEqual.h"
 
 
-#define DEFINE_EQUAL_TO_NUMBER(name, type)                                  \
-    FOUNDATION_EXPORT id HC_equalTo ## name(type value)                     \
-    {                                                                       \
-        return [HCIsEqual isEqualTo:[NSNumber numberWith ## name :value]];  \
-    }
+FOUNDATION_EXPORT id HC_equalToChar(char value)
+{
+    return HC_equalTo(@(value));
+}
 
-DEFINE_EQUAL_TO_NUMBER(Char, char)
-DEFINE_EQUAL_TO_NUMBER(Double, double)
-DEFINE_EQUAL_TO_NUMBER(Float, float)
-DEFINE_EQUAL_TO_NUMBER(Int, int)
-DEFINE_EQUAL_TO_NUMBER(Long, long)
-DEFINE_EQUAL_TO_NUMBER(LongLong, long long)
-DEFINE_EQUAL_TO_NUMBER(Short, short)
-DEFINE_EQUAL_TO_NUMBER(UnsignedChar, unsigned char)
-DEFINE_EQUAL_TO_NUMBER(UnsignedInt, unsigned int)
-DEFINE_EQUAL_TO_NUMBER(UnsignedLong, unsigned long)
-DEFINE_EQUAL_TO_NUMBER(UnsignedLongLong, unsigned long long)
-DEFINE_EQUAL_TO_NUMBER(UnsignedShort, unsigned short)
-DEFINE_EQUAL_TO_NUMBER(Integer, NSInteger)
-DEFINE_EQUAL_TO_NUMBER(UnsignedInteger, NSUInteger)
+FOUNDATION_EXPORT id HC_equalToDouble(double value)
+{
+    return HC_equalTo(@(value));
+}
+
+FOUNDATION_EXPORT id HC_equalToFloat(float value)
+{
+    return HC_equalTo(@(value));
+}
+
+FOUNDATION_EXPORT id HC_equalToInt(int value)
+{
+    return HC_equalTo(@(value));
+}
+
+FOUNDATION_EXPORT id HC_equalToLong(long value)
+{
+    return HC_equalTo(@(value));
+}
+
+FOUNDATION_EXPORT id HC_equalToLongLong(long long value)
+{
+    return HC_equalTo(@(value));
+}
+
+FOUNDATION_EXPORT id HC_equalToShort(short value)
+{
+    return HC_equalTo(@(value));
+}
+
+FOUNDATION_EXPORT id HC_equalToUnsignedChar(unsigned char value)
+{
+    return HC_equalTo(@(value));
+}
+
+FOUNDATION_EXPORT id HC_equalToUnsignedInt(unsigned int value)
+{
+    return HC_equalTo(@(value));
+}
+
+FOUNDATION_EXPORT id HC_equalToUnsignedLong(unsigned long value)
+{
+    return HC_equalTo(@(value));
+}
+
+FOUNDATION_EXPORT id HC_equalToUnsignedLongLong(unsigned long long value)
+{
+    return HC_equalTo(@(value));
+}
+
+FOUNDATION_EXPORT id HC_equalToUnsignedShort(unsigned short value)
+{
+    return HC_equalTo(@(value));
+}
+
+FOUNDATION_EXPORT id HC_equalToInteger(NSInteger value)
+{
+    return HC_equalTo(@(value));
+}
+
+FOUNDATION_EXPORT id HC_equalToUnsignedInteger(NSUInteger value)
+{
+    return HC_equalTo(@(value));
+}
+
+#pragma mark -
 
 FOUNDATION_EXPORT id HC_equalToBool(BOOL value)
 {
