@@ -3,7 +3,7 @@
 What is OCHamcrest?
 -------------------
 
-[![Build Status](https://travis-ci.org/hamcrest/OCHamcrest.png?branch=master)](https://travis-ci.org/hamcrest/OCHamcrest)
+[![Build Status](https://travis-ci.org/hamcrest/OCHamcrest.png?branch=master)](https://travis-ci.org/hamcrest/OCHamcrest) [![Coverage Status](https://coveralls.io/repos/hamcrest/OCHamcrest/badge.png)](https://coveralls.io/r/hamcrest/OCHamcrest)
 
 OCHamcrest is an iOS and Mac OS X library providing:
 
