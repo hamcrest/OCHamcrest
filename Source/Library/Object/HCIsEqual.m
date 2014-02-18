@@ -29,8 +29,7 @@
 {
     if (item == nil)
         return object == nil;
-    else
-        return [item isEqual:object];
+    return [item isEqual:object];
 }
 
 - (void)describeTo:(id<HCDescription>)description

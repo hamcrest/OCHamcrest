@@ -19,6 +19,5 @@ id <HCMatcher> HCWrapInMatcher(id matcherOrValue)
     
     if ([matcherOrValue conformsToProtocol:@protocol(HCMatcher)])
         return matcherOrValue;
-    else
-        return HC_equalTo(matcherOrValue);
+    return HC_equalTo(matcherOrValue);
 }
