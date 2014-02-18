@@ -3,6 +3,8 @@
 What is OCHamcrest?
 -------------------
 
+[![Build Status](https://travis-ci.org/hamcrest/OCHamcrest.png?branch=master)](https://travis-ci.org/hamcrest/OCHamcrest)
+
 OCHamcrest is an iOS and Mac OS X library providing:
 
 * a library of "matcher" objects that let you declare rules for whether a given
