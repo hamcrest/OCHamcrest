@@ -1,1 +1,3 @@
 language: objective-c
+script:
+  - xctool test -project Source/OCHamcrest.xcodeproj -scheme OCHamcrest -sdk macosx10.9
