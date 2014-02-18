@@ -25,10 +25,15 @@
 
 - (BOOL)matches:(id)item
 {
-    if (![item respondsToSelector:[_invocation selector]])
+    if ([self invocationNotSupportedForItem:item])
         return NO;
 
     return [_subMatcher matches:[self invokeOn:item]];
+}
+
+- (BOOL)invocationNotSupportedForItem:(id)item
+{
+    return ![item respondsToSelector:[_invocation selector]];
 }
 
 - (id)invokeOn:(id)item
@@ -41,18 +46,23 @@
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
-    if (![item respondsToSelector:[_invocation selector]])
+    if ([self invocationNotSupportedForItem:item])
         [super describeMismatchOf:item to:mismatchDescription];
     else
     {
-        if (!self.shortMismatchDescription)
-        {
-            [[[[mismatchDescription appendDescriptionOf:item]
-                                    appendText:@" "]
-                                    appendText:[self stringFromSelector]]
-                                    appendText:@" "];
-        }
+        [self describeLongMismatchDescriptionOf:item to:mismatchDescription];
         [_subMatcher describeMismatchOf:[self invokeOn:item] to:mismatchDescription];
+    }
+}
+
+- (void)describeLongMismatchDescriptionOf:(id)item to:(id <HCDescription>)mismatchDescription
+{
+    if (!self.shortMismatchDescription)
+    {
+        [[[[mismatchDescription appendDescriptionOf:item]
+                                appendText:@" "]
+                                appendText:[self stringFromSelector]]
+                                appendText:@" "];
     }
 }
 

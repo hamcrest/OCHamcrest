@@ -30,15 +30,20 @@
 
 - (BOOL)matches:(id)item
 {
-    if (![item isKindOfClass:[NSNumber class]])
+    if ([self itemIsNotNumber:item])
         return NO;
     
     return fabs([item doubleValue] - value) <= delta;
 }
 
+- (BOOL)itemIsNotNumber:(id)item
+{
+    return ![item isKindOfClass:[NSNumber class]];
+}
+
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
-    if (![item isKindOfClass:[NSNumber class]])
+    if ([self itemIsNotNumber:item])
         [super describeMismatchOf:item to:mismatchDescription];
     else
     {

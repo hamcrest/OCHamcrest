@@ -29,17 +29,22 @@
 
 - (BOOL)matches:(id)item
 {
-    if (![item respondsToSelector:@selector(count)])
+    if (![self itemHasCount:item])
         return NO;
     
     NSNumber *count = @([item count]);
     return [countMatcher matches:count];
 }
 
+- (BOOL)itemHasCount:(id)item
+{
+    return [item respondsToSelector:@selector(count)];
+}
+
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     [mismatchDescription appendText:@"was "];
-    if ([item respondsToSelector:@selector(count)])
+    if ([self itemHasCount:item])
     {
         [[[mismatchDescription appendText:@"count of "]
                                appendDescriptionOf:@([item count])]
