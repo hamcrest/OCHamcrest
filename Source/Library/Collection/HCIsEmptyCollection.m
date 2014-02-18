@@ -9,7 +9,7 @@
 
 #import "HCIsEmptyCollection.h"
 
-#import "HCIsEqualToNumber.h"
+#import "HCIsEqual.h"
 
 
 @implementation HCIsEmptyCollection
@@ -21,7 +21,7 @@
 
 - (instancetype)init
 {
-    self = [super initWithCount:HC_equalToUnsignedInteger(0)];
+    self = [super initWithCount:HC_equalTo(@0)];
     return self;
 }
 
