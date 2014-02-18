@@ -19,9 +19,8 @@
  */
 @interface HCInvocationMatcher : HCBaseMatcher
 {
-    NSInvocation *invocation;
-    id <HCMatcher> subMatcher;
-    BOOL shortMismatchDescription;
+    NSInvocation *_invocation;
+    id <HCMatcher> _subMatcher;
 }
 
 /**

@@ -12,38 +12,36 @@
 
 @implementation HCInvocationMatcher
 
-@synthesize shortMismatchDescription;
-
 - (instancetype)initWithInvocation:(NSInvocation *)anInvocation matching:(id <HCMatcher>)aMatcher
 {
     self = [super init];
     if (self)
     {
-        invocation = anInvocation;
-        subMatcher = aMatcher;
+        _invocation = anInvocation;
+        _subMatcher = aMatcher;
     }
     return self;
 }
 
 - (BOOL)matches:(id)item
 {
-    if (![item respondsToSelector:[invocation selector]])
+    if (![item respondsToSelector:[_invocation selector]])
         return NO;
 
-    return [subMatcher matches:[self invokeOn:item]];
+    return [_subMatcher matches:[self invokeOn:item]];
 }
 
 - (id)invokeOn:(id)item
 {
     __unsafe_unretained id result = nil;
-    [invocation invokeWithTarget:item];
-    [invocation getReturnValue:&result];
+    [_invocation invokeWithTarget:item];
+    [_invocation getReturnValue:&result];
     return result;
 }
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
-    if (![item respondsToSelector:[invocation selector]])
+    if (![item respondsToSelector:[_invocation selector]])
         [super describeMismatchOf:item to:mismatchDescription];
     else
     {
@@ -54,21 +52,21 @@
                                     appendText:[self stringFromSelector]]
                                     appendText:@" "];
         }
-        [subMatcher describeMismatchOf:[self invokeOn:item] to:mismatchDescription];
+        [_subMatcher describeMismatchOf:[self invokeOn:item] to:mismatchDescription];
     }
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
     [[[[description appendText:@"an object with "]
-                    appendText:[self stringFromSelector]]
-                    appendText:@" "]
-                    appendDescriptionOf:subMatcher];
+            appendText:[self stringFromSelector]]
+            appendText:@" "]
+            appendDescriptionOf:_subMatcher];
 }
 
 - (NSString *)stringFromSelector
 {
-    return NSStringFromSelector([invocation selector]);
+    return NSStringFromSelector([_invocation selector]);
 }
 
 @end

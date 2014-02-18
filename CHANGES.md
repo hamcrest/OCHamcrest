@@ -1,8 +1,9 @@
 Next version under development
 ------------------------------
 
-- If you're not using CocoaPods, specify `-ObjC` in your "Other Linker Flags".
+- If you subclass HCInvocationMatcher for a custom matcher, the ivars have been renamed.
 - If you import HCCollectMatchers.h for a custom matcher, change this to import HCCollect.h.
+- If you're not using CocoaPods, specify `-ObjC` in your "Other Linker Flags".
 
 
 Version 3.0.1
