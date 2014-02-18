@@ -1,7 +1,7 @@
 language: objective-c
 
 before_install:
-  - easy_install cpp-coveralls
+  - sudo easy_install cpp-coveralls
 script:
   - xctool test -project Source/OCHamcrest.xcodeproj -scheme OCHamcrest -sdk macosx10.9
 after_success:
