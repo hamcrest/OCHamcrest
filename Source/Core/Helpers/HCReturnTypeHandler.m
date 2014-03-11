@@ -11,7 +11,7 @@
 
 
 @interface HCReturnTypeHandler (SubclassResponsibility)
-- (id)invocationReturnValue:(NSInvocation *)invocation;
+- (id)returnValueFromInvocation:(NSInvocation *)invocation;
 @end
 
 
@@ -28,17 +28,17 @@
     return self;
 }
 
-- (BOOL)willHandleReturnType:(char const *)returnType
+- (BOOL)handlesReturnType:(char const *)returnType
 {
     return strcmp(returnType, _handlerType) == 0;
 }
 
-- (id)valueForReturnType:(char const *)type fromInvocation:(NSInvocation *)invocation
+- (id)returnValueOfType:(char const *)type fromInvocation:(NSInvocation *)invocation
 {
-    if ([self willHandleReturnType:type])
-        return [self invocationReturnValue:invocation];
+    if ([self handlesReturnType:type])
+        return [self returnValueFromInvocation:invocation];
     else
-        return [self.successor valueForReturnType:type fromInvocation:invocation];
+        return [self.successor returnValueOfType:type fromInvocation:invocation];
 }
 
 @end

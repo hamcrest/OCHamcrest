@@ -18,7 +18,7 @@
     return self;
 }
 
-- (id)invocationReturnValue:(NSInvocation *)invocation
+- (id)returnValueFromInvocation:(NSInvocation *)invocation
 {
     float value;
     [invocation getReturnValue:&value];

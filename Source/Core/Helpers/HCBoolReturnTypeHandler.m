@@ -18,7 +18,7 @@
     return self;
 }
 
-- (id)invocationReturnValue:(NSInvocation *)invocation
+- (id)returnValueFromInvocation:(NSInvocation *)invocation
 {
     BOOL value;
     [invocation getReturnValue:&value];

@@ -18,7 +18,7 @@
     return self;
 }
 
-- (id)invocationReturnValue:(NSInvocation *)invocation
+- (id)returnValueFromInvocation:(NSInvocation *)invocation
 {
     __unsafe_unretained id value;
     [invocation getReturnValue:&value];

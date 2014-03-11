@@ -18,6 +18,6 @@
 @property (nonatomic, strong) HCReturnTypeHandler *successor;
 
 - (instancetype)initWithType:(char const *)handlerType;
-- (id)valueForReturnType:(char const *)type fromInvocation:(NSInvocation *)invocation;
+- (id)returnValueOfType:(char const *)type fromInvocation:(NSInvocation *)invocation;
 
 @end

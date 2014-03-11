@@ -46,7 +46,7 @@
 {
     HCReturnTypeHandler *chain = HC_returnTypeHandlerChain();
     char const *returnType = [[self methodSignature] methodReturnType];
-    return [chain valueForReturnType:returnType fromInvocation:self];
+    return [chain returnValueOfType:returnType fromInvocation:self];
 }
 
 @end
