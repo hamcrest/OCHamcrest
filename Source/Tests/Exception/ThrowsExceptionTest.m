@@ -74,7 +74,10 @@
     assertDescription(@"will throw exception", willThrowException());
 }
 
-//~ testHasAReadableDescriptionForNotExpected
+- (void)testHasAReadableDescriptionForNotExpected
+{
+    assertDescription(@"will not throw exception", willNotThrowException());
+}
 
 //~ testExceptionOfNonStandardTypeWillBeCaught
 
