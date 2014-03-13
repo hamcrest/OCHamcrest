@@ -8,6 +8,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HCDidThrowException.h"
 
 @protocol HCMatcher;
 
@@ -21,7 +22,7 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
             return expression; \
         } \
         @catch (NSException *__exception) { \
-            return __exception; \
+            return [[HCDidThrowException alloc] initWithException:__exception]; \
         } \
     }
 

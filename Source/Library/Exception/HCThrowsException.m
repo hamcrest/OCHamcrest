@@ -6,6 +6,7 @@
 //
 
 #import "HCThrowsException.h"
+#import "HCDidThrowException.h"
 
 
 @implementation HCThrowsException
@@ -27,10 +28,10 @@
 - (BOOL)matches:(id)item
 {
     if(self.expected) {
-        return [item isKindOfClass:[NSException class]];
+        return [item isKindOfClass:[HCDidThrowException class]];
     }
     else {
-        return ![item isKindOfClass:[NSException class]];
+        return ![item isKindOfClass:[HCDidThrowException class]];
     }
 }
 

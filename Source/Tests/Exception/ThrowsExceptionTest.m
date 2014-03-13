@@ -16,6 +16,7 @@
 
 @interface ThrowsExceptionTest : AbstractMatcherTest
 
+- (id)returnInvalidArgumentException;
 - (id)throwInvalidArgumentException;
 - (id)doNotThrowException;
 
@@ -23,9 +24,14 @@
 
 @implementation ThrowsExceptionTest
 
+- (id)returnInvalidArgumentException
+{
+    return [NSException exceptionWithName:NSInvalidArgumentException reason:@"For fun." userInfo:nil];
+}
+
 - (id)throwInvalidArgumentException
 {
-    @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"For fun." userInfo:nil];
+    @throw [self returnInvalidArgumentException];
 }
 
 - (id)doNotThrowException
@@ -54,6 +60,12 @@
 - (void)testEvaluatesToFalseIfArgumentDoesNotThrowExceptionWhenExpected
 {
     id (^exceptionCatcher)() = HC_buildExceptionCatcher([self doNotThrowException]);
+    assertDoesNotMatch(@"", willThrowException(), exceptionCatcher());
+}
+
+- (void)testReturningAnExceptionWillNotTriggerExceptionCatch
+{
+    id (^exceptionCatcher)() = HC_buildExceptionCatcher([self returnInvalidArgumentException]);
     assertDoesNotMatch(@"", willThrowException(), exceptionCatcher());
 }
 

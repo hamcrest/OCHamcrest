@@ -111,6 +111,12 @@
 		0876039213440E28001B439B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
 		088FB0AB136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */; };
 		088FB0AC136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */; };
+		4D6455F818D2697400E5E4EB /* HCDidThrowException.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6455F618D2697400E5E4EB /* HCDidThrowException.h */; };
+		4D6455F918D2697400E5E4EB /* HCDidThrowException.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6455F618D2697400E5E4EB /* HCDidThrowException.h */; };
+		4D6455FA18D2697400E5E4EB /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6455F718D2697400E5E4EB /* HCDidThrowException.m */; };
+		4D6455FB18D2697400E5E4EB /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6455F718D2697400E5E4EB /* HCDidThrowException.m */; };
+		4D6455FC18D2697400E5E4EB /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6455F718D2697400E5E4EB /* HCDidThrowException.m */; };
+		4D6455FD18D2697400E5E4EB /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6455F718D2697400E5E4EB /* HCDidThrowException.m */; };
 		5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
 		5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
 		77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
@@ -426,6 +432,8 @@
 		0876039113440BB0001B439B /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringContainsInOrderTest.m; sourceTree = "<group>"; };
 		08F39BAA1711426200745958 /* CHANGES.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = CHANGES.md; path = ../CHANGES.md; sourceTree = "<group>"; };
+		4D6455F618D2697400E5E4EB /* HCDidThrowException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCDidThrowException.h; path = Exception/HCDidThrowException.h; sourceTree = "<group>"; };
+		4D6455F718D2697400E5E4EB /* HCDidThrowException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCDidThrowException.m; path = Exception/HCDidThrowException.m; sourceTree = "<group>"; };
 		5F2773441436F81000B9683A /* ConformsToProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConformsToProtocolTest.m; sourceTree = "<group>"; };
 		77C7B8761429361200DE60CC /* HasPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasPropertyTest.m; sourceTree = "<group>"; };
 		BB333034CD6A38647E176A9A /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
@@ -960,6 +968,8 @@
 		8B27442618D1CC0A0068997C /* Exception */ = {
 			isa = PBXGroup;
 			children = (
+				4D6455F618D2697400E5E4EB /* HCDidThrowException.h */,
+				4D6455F718D2697400E5E4EB /* HCDidThrowException.m */,
 				8B27442718D1CC4A0068997C /* HCThrowsException.h */,
 				8B27442818D1CC4A0068997C /* HCThrowsException.m */,
 			);
@@ -1040,6 +1050,7 @@
 				BB333625D9CC6652DA94FF09 /* HCUnsignedLongReturnGetter.h in Headers */,
 				BB333A10646B1A68ACCDC472 /* HCUnsignedShortReturnGetter.h in Headers */,
 				8B27442A18D1CC4A0068997C /* HCThrowsException.h in Headers */,
+				4D6455F918D2697400E5E4EB /* HCDidThrowException.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1119,6 +1130,7 @@
 				BB333C793CAFFF7E4FB5BA2D /* HCCollect.h in Headers */,
 				BB333020F5ED4E3979BA1714 /* NSInvocation+OCHamcrest.h in Headers */,
 				BB3338B40D8EA4F74C514153 /* HCWrapInMatcher.h in Headers */,
+				4D6455F818D2697400E5E4EB /* HCDidThrowException.h in Headers */,
 				8B27442918D1CC4A0068997C /* HCThrowsException.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1171,7 +1183,6 @@
 				087601DE13440806001B439B /* Frameworks */,
 				087601DF13440806001B439B /* Headers */,
 				087601E013440806001B439B /* Resources */,
-				08502324166051B8004B3EA5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1269,19 +1280,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-		08502324166051B8004B3EA5 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = XcodeCoverage/exportenv.sh;
 		};
 		08627FF81465CE1A00F80D7D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1397,6 +1395,7 @@
 				BB333D2770D5C4DD8E4D7633 /* HCWrapInMatcher.m in Sources */,
 				BB3338485B4DA85A777544B3 /* HCCollect.m in Sources */,
 				BB33387D94ADA6748B02A289 /* HCInvocationMatcher.m in Sources */,
+				4D6455FC18D2697400E5E4EB /* HCDidThrowException.m in Sources */,
 				8B27442D18D1CC4A0068997C /* HCThrowsException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1410,6 +1409,7 @@
 				0859831213459CA400BE7892 /* HasCountTest.m in Sources */,
 				0859831313459CA400BE7892 /* HasDescriptionTest.m in Sources */,
 				0859831613459CA400BE7892 /* IsCloseToTest.m in Sources */,
+				4D6455FD18D2697400E5E4EB /* HCDidThrowException.m in Sources */,
 				0859831713459CA400BE7892 /* IsCollectionContainingInAnyOrderTest.m in Sources */,
 				0859831813459CA400BE7892 /* IsCollectionContainingInOrderTest.m in Sources */,
 				0859831913459CA400BE7892 /* IsCollectionContainingTest.m in Sources */,
@@ -1526,6 +1526,7 @@
 				BB333BE5AC86690747041C24 /* HCWrapInMatcher.m in Sources */,
 				BB3332D945BB26BEF3E37662 /* HCCollect.m in Sources */,
 				BB33306BE19806EB64EEC358 /* HCInvocationMatcher.m in Sources */,
+				4D6455FA18D2697400E5E4EB /* HCDidThrowException.m in Sources */,
 				8B27442B18D1CC4A0068997C /* HCThrowsException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1539,6 +1540,7 @@
 				0876036513440AD8001B439B /* HasCountTest.m in Sources */,
 				0876036613440AD8001B439B /* IsCollectionContainingInAnyOrderTest.m in Sources */,
 				0876036713440AD8001B439B /* IsCollectionContainingInOrderTest.m in Sources */,
+				4D6455FB18D2697400E5E4EB /* HCDidThrowException.m in Sources */,
 				0876036813440AD8001B439B /* IsCollectionContainingTest.m in Sources */,
 				0876036913440AD8001B439B /* IsCollectionOnlyContainingTest.m in Sources */,
 				0876036A13440AD8001B439B /* IsDictionaryContainingEntriesTest.m in Sources */,
