@@ -10,25 +10,48 @@
 
 @implementation HCThrowsException
 
-+ (instancetype)throwsException
+- (id)initWithExpected:(BOOL)expected
 {
-    return [[self alloc] init];
+    self = [super init];
+    if(self) {
+        self.expected = expected;
+    }
+    return self;
+}
+
++ (instancetype)willThrowException:(BOOL)expected
+{
+    return [[self alloc] initWithExpected:expected];
 }
 
 - (BOOL)matches:(id)item
 {
-    return item == nil;
+    if(self.expected) {
+        return [item isKindOfClass:[NSException class]];
+    }
+    else {
+        return ![item isKindOfClass:[NSException class]];
+    }
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [description appendText:@"throws exception"];
+    if(self.expected) {
+        [description appendText:@"will throw exception"];
+    }
+    else {
+        [description appendText:@"will not throw exception"];
+    }
 }
 
 @end
 
 
-id HC_throwsException()
+id HC_willThrowException()
 {
-    return [HCThrowsException throwsException];
+    return [HCThrowsException willThrowException:YES];
+}
+id HC_willNotThrowException()
+{
+    return [HCThrowsException willThrowException:NO];
 }

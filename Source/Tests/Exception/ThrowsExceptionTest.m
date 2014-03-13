@@ -17,6 +17,7 @@
 @interface ThrowsExceptionTest : AbstractMatcherTest
 
 - (id)throwInvalidArgumentException;
+- (id)doNotThrowException;
 
 @end
 
@@ -27,9 +28,19 @@
     @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"For fun." userInfo:nil];
 }
 
-- (void)testEvaluatesToTrueIfArgumentThrowsAnyException
+- (id)doNotThrowException
 {
-    assertThat([self throwInvalidArgumentException], throwsException());
+    return nil;
+}
+
+- (void)testAssertsCorrectlyIfArgumentThrowsAnyExceptionWhenExpected
+{
+    assertThat([self throwInvalidArgumentException], willThrowException());
+}
+
+- (void)testAssertsCorrectlyIfArgumentDoesNotThrowExceptionWhenNotExpected
+{
+    assertThat([self doNotThrowException], willNotThrowException());
 }
 
 @end
