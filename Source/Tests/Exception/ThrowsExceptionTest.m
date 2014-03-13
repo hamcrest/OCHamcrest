@@ -69,4 +69,23 @@
     assertDoesNotMatch(@"", willThrowException(), exceptionCatcher());
 }
 
+- (void)testHasAReadableDescriptionForExpected
+{
+    assertDescription(@"will throw exception", willThrowException());
+}
+
+//~ testHasAReadableDescriptionForNotExpected
+
+//~ testExceptionOfNonStandardTypeWillBeCaught
+
+//~ testEvaluatesToTrueIfArgumentThrowsExceptionOfSpecificExpectedType
+
+//~ testEvaluatesToFalseIfArgumentThrowsExceptionOfSpecificTypeThatDiffersFromExpected
+
+//~ testSuccessfulMatchDoesNotGenerateMismatchDescription
+
+//~ testMismatchDescriptionShowsActualArgument
+
+//~ testDescribeMismatch
+
 @end
