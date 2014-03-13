@@ -15,8 +15,18 @@
 FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCMatcher> matcher,
                                                  const char *fileName, int lineNumber);
 
-#define HC_assertThat(actual, matcher)  \
-    HC_assertThatWithLocation(self, actual, matcher, __FILE__, __LINE__)
+#define HC_assertThat(expression, matcher)  \
+    { \
+        id (^exceptionCatcher)() = ^id() { \
+            @try { \
+                return expression; \
+            } \
+            @catch (NSException *__exception) { \
+                return __exception; \
+            } \
+        }; \
+        HC_assertThatWithLocation(self, exceptionCatcher(), matcher, __FILE__, __LINE__); \
+    }
 
 /**
  assertThat(actual, matcher) -
