@@ -51,4 +51,10 @@
     assertDoesNotMatch(@"", willNotThrowException(), exceptionCatcher());
 }
 
+- (void)testEvaluatesToFalseIfArgumentDoesNotThrowExceptionWhenExpected
+{
+    id (^exceptionCatcher)() = HC_buildExceptionCatcher([self doNotThrowException]);
+    assertDoesNotMatch(@"", willThrowException(), exceptionCatcher());
+}
+
 @end
