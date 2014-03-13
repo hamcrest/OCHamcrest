@@ -30,17 +30,25 @@
 
 - (id)doNotThrowException
 {
-    return nil;
+    return @"abc";
 }
 
-- (void)testAssertsCorrectlyIfArgumentThrowsAnyExceptionWhenExpected
+- (void)testEvaluatesToTrueIfArgumentThrowsAnyExceptionWhenExpected
 {
-    assertThat([self throwInvalidArgumentException], willThrowException());
+    id (^exceptionCatcher)() = HC_buildExceptionCatcher([self throwInvalidArgumentException]);
+    assertMatches(@"", willThrowException(), exceptionCatcher());
 }
 
-- (void)testAssertsCorrectlyIfArgumentDoesNotThrowExceptionWhenNotExpected
+- (void)testEvaluatesToTrueIfArgumentDoesNotThrowExceptionWhenNotExpected
 {
-    assertThat([self doNotThrowException], willNotThrowException());
+    id (^exceptionCatcher)() = HC_buildExceptionCatcher([self doNotThrowException]);
+    assertMatches(@"", willNotThrowException(), exceptionCatcher());
+}
+
+- (void)testEvaluatesToFalseIfArgumentThrowsAnyExceptionWhenNotExpected
+{
+    id (^exceptionCatcher)() = HC_buildExceptionCatcher([self throwInvalidArgumentException]);
+    assertDoesNotMatch(@"", willNotThrowException(), exceptionCatcher());
 }
 
 @end
