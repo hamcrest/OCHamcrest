@@ -79,7 +79,11 @@
     assertDescription(@"will not throw exception", willNotThrowException());
 }
 
-//~ testExceptionOfNonStandardTypeWillBeCaught
+- (void)testDescribeMismatch
+{
+    id (^exceptionCatcher)() = HC_buildExceptionCatcher([self throwInvalidArgumentException]);
+    assertDescribeMismatch(@"was <NSInvalidArgumentException thrown>", willThrowException(), exceptionCatcher());
+}
 
 //~ testEvaluatesToTrueIfArgumentThrowsExceptionOfSpecificExpectedType
 
@@ -88,7 +92,5 @@
 //~ testSuccessfulMatchDoesNotGenerateMismatchDescription
 
 //~ testMismatchDescriptionShowsActualArgument
-
-//~ testDescribeMismatch
 
 @end

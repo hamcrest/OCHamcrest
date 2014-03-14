@@ -12,8 +12,8 @@
  */
 @interface HCDidThrowException : NSObject
 
-@property (atomic) id exception;
+@property (atomic) NSException *exception;
 
-- (id)initWithException:(id)exception;
+- (id)initWithException:(NSException *)exception;
 
 @end
