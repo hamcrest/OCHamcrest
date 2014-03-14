@@ -181,6 +181,12 @@ OCHamcrest comes with a library of useful matchers:
 
   * `describedAs` - give the matcher a custom failure description
   * `is` - decorator to improve readability - see "Syntactic sugar" below
+  
+* Exception
+
+  * `willThrowException` - assert that any NSException is thrown
+  * `willNotThrowException` - assert that no exception is thrown
+
 
 The arguments for many of these matchers accept not just a matching value, but
 another matcher, so matchers can be composed for greater flexibility. For
