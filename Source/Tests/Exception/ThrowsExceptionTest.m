@@ -79,10 +79,16 @@
     assertDescription(@"will not throw exception", willNotThrowException());
 }
 
-- (void)testDescribeMismatch
+- (void)testDescribeMismatchOfThrowExpected
 {
     id (^exceptionCatcher)() = HC_buildExceptionCatcher([self throwInvalidArgumentException]);
     assertDescribeMismatch(@"was <NSInvalidArgumentException thrown>", willThrowException(), exceptionCatcher());
+}
+
+- (void)testDescribeMismatchOfThrowNotExpected
+{
+    id (^exceptionCatcher)() = HC_buildExceptionCatcher([self throwInvalidArgumentException]);
+    assertDescribeMismatch(@"was <NSInvalidArgumentException thrown>", willNotThrowException(), exceptionCatcher());
 }
 
 - (void)testMismatchDescriptionShowsActualArgument
