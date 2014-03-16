@@ -44,7 +44,12 @@
 - (void)describeTo:(id<HCDescription>)description
 {
     if(self.expected) {
-        [description appendText:@"will throw exception"];
+        if(nil != self.exceptionName) {
+            [description appendText:[NSString stringWithFormat:@"will throw %@", self.exceptionName]];
+        }
+        else {
+            [description appendText:@"will throw exception"];
+        }
     }
     else {
         [description appendText:@"will not throw exception"];

@@ -88,6 +88,11 @@
     assertDescription(@"will not throw exception", willNotThrowException());
 }
 
+- (void)testHasAReadableDescriptionSpecificExpectedException
+{
+    assertDescription(@"will throw NSInvalidArgumentException", willThrow(NSInvalidArgumentException));
+}
+
 - (void)testDescribeMismatchOfThrowExpected
 {
     id (^exceptionCatcher)() = HC_buildExceptionCatcher([self throwInvalidArgumentException]);
@@ -132,7 +137,5 @@
 {
     assertThat(ignoringReturnValue([self throwInvalidArgumentExceptionAsVoid]), containsString(@"fun"));
 }
-
-//~ testEvaluatesToFalseIfArgumentThrowsExceptionOfSpecificTypeThatDiffersFromExpected
 
 @end
