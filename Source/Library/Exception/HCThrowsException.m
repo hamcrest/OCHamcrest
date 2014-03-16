@@ -29,7 +29,12 @@
 - (BOOL)matches:(id)item
 {
     if(self.expected) {
-        return [item isKindOfClass:[HCDidThrowException class]];
+        BOOL match = [item isKindOfClass:[HCDidThrowException class]];
+        if(nil != self.exceptionName) {
+            HCDidThrowException *e = (HCDidThrowException*) item;
+            match &= [[e.exception name] isEqualToString:self.exceptionName];
+        }
+        return match;
     }
     else {
         return ![item isKindOfClass:[HCDidThrowException class]];
