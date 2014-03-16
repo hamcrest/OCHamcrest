@@ -33,4 +33,12 @@
     return [[self description] rangeOfString:aString];
 }
 
+/**
+ * @brief For equality matchers.
+ */
+- (BOOL)isEqual:(id)anObject
+{
+    return [[self description] isEqual:anObject];
+}
+
 @end

@@ -11,6 +11,7 @@
 #import "HCAssertThat.h"
 #import "HCAllOf.h"
 #import "HCStringContains.h"
+#import "HCIsEqual.h"
 
     // Test support
 #import "AbstractMatcherTest.h"
@@ -102,6 +103,11 @@
 - (void)testExceptionMessageCanBeUsedInConjunctionWithStringMatchers
 {
     assertThat([self throwInvalidArgumentException], containsString(@"fun"));
+}
+
+- (void)testExceptionWithMessageCanBeUsedInConjunctionWithEqualityMatchers
+{
+    assertThat([self throwInvalidArgumentException], equalTo(@"NSInvalidArgumentException: For fun."));
 }
 
 //~ testEvaluatesToTrueIfArgumentThrowsExceptionOfSpecificExpectedType

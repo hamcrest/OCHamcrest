@@ -15,5 +15,6 @@
 @property (atomic, retain) NSException *exception;
 
 - (id)initWithException:(NSException *)exception;
+- (NSRange)rangeOfString:(NSString *)aString;
 
 @end
