@@ -12,7 +12,7 @@
  */
 @interface HCDidThrowException : NSObject
 
-@property (atomic) NSException *exception;
+@property (atomic, retain) NSException *exception;
 
 - (id)initWithException:(NSException *)exception;
 

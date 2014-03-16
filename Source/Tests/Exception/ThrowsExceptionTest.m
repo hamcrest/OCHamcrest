@@ -9,6 +9,8 @@
 #define HC_SHORTHAND
 #import "HCThrowsException.h"
 #import "HCAssertThat.h"
+#import "HCAllOf.h"
+#import "HCStringContains.h"
 
     // Test support
 #import "AbstractMatcherTest.h"
@@ -82,19 +84,24 @@
 - (void)testDescribeMismatchOfThrowExpected
 {
     id (^exceptionCatcher)() = HC_buildExceptionCatcher([self throwInvalidArgumentException]);
-    assertDescribeMismatch(@"was <NSInvalidArgumentException thrown>", willThrowException(), exceptionCatcher());
+    assertDescribeMismatch(@"was <NSInvalidArgumentException: For fun.>", willThrowException(), exceptionCatcher());
 }
 
 - (void)testDescribeMismatchOfThrowNotExpected
 {
     id (^exceptionCatcher)() = HC_buildExceptionCatcher([self throwInvalidArgumentException]);
-    assertDescribeMismatch(@"was <NSInvalidArgumentException thrown>", willNotThrowException(), exceptionCatcher());
+    assertDescribeMismatch(@"was <NSInvalidArgumentException: For fun.>", willNotThrowException(), exceptionCatcher());
 }
 
 - (void)testMismatchDescriptionShowsActualArgument
 {
     id (^exceptionCatcher)() = HC_buildExceptionCatcher([self throwInvalidArgumentException]);
-    assertMismatchDescription(@"was <NSInvalidArgumentException thrown>", willNotThrowException(), exceptionCatcher());
+    assertMismatchDescription(@"was <NSInvalidArgumentException: For fun.>", willNotThrowException(), exceptionCatcher());
+}
+
+- (void)testExceptionMessageCanBeUsedInConjunctionWithStringMatchers
+{
+    assertThat([self throwInvalidArgumentException], containsString(@"fun"));
 }
 
 //~ testEvaluatesToTrueIfArgumentThrowsExceptionOfSpecificExpectedType
@@ -102,5 +109,7 @@
 //~ testEvaluatesToFalseIfArgumentThrowsExceptionOfSpecificTypeThatDiffersFromExpected
 
 //~ testSuccessfulMatchDoesNotGenerateMismatchDescription
+
+//~ testExceptionCatcherWhenMethodReturnsVoid
 
 @end

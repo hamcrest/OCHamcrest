@@ -21,7 +21,16 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@ thrown", [self.exception name]];
+    return [NSString stringWithFormat:@"%@: %@", [self.exception name], [self.exception reason]];
+}
+
+/**
+ * @brief This must be implemented for string matchers.
+ * OCHamcrest tests if the object will repond to this selector before allowing string comparisons on it.
+ */
+- (NSRange)rangeOfString:(NSString *)aString
+{
+    return [[self description] rangeOfString:aString];
 }
 
 @end
