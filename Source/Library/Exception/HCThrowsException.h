@@ -24,6 +24,21 @@ FOUNDATION_EXPORT id HC_willNotThrowException(void);
 FOUNDATION_EXPORT id HC_willThrow(NSString *exceptionName);
 
 /**
+ This can be used when testing if exceptions are thrown from arbitrary code block
+ that do not return an @c id value - since the return type is irrelevant anyway.
+ */
+#define ignoringReturnValue(expression) \
+    ^id() { \
+        @try { \
+            expression; \
+            return nil; \
+        } \
+        @catch (NSException *__exception) { \
+            return [[HCDidThrowException alloc] initWithException:__exception]; \
+        } \
+    }()
+
+/**
  Matches if the call/code block throws an exception.
  
  (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym

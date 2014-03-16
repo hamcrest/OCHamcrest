@@ -22,6 +22,7 @@
 - (id)returnInvalidArgumentException;
 - (id)throwInvalidArgumentException;
 - (id)doNotThrowException;
+- (void)throwInvalidArgumentExceptionAsVoid;
 
 @end
 
@@ -40,6 +41,11 @@
 - (id)doNotThrowException
 {
     return @"abc";
+}
+
+- (void)throwInvalidArgumentExceptionAsVoid
+{
+    @throw [self returnInvalidArgumentException];
 }
 
 - (void)testEvaluatesToTrueIfArgumentThrowsAnyExceptionWhenExpected
@@ -122,8 +128,11 @@
     assertDoesNotMatch(@"", willThrow(NSInvalidSendPortException), exceptionCatcher());
 }
 
-//~ testEvaluatesToFalseIfArgumentThrowsExceptionOfSpecificTypeThatDiffersFromExpected
+- (void)testIgnoringReturnValueWhenMethodReturnsVoid
+{
+    assertThat(ignoringReturnValue([self throwInvalidArgumentExceptionAsVoid]), containsString(@"fun"));
+}
 
-//~ testExceptionCatcherWhenMethodReturnsVoid
+//~ testEvaluatesToFalseIfArgumentThrowsExceptionOfSpecificTypeThatDiffersFromExpected
 
 @end
