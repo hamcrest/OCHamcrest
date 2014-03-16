@@ -13,16 +13,17 @@
 
 - (id)initWithExpected:(BOOL)expected
 {
+    return [self initWithExpected:expected name:nil];
+}
+
+- (id)initWithExpected:(BOOL)expected name:(NSString *)exceptionName
+{
     self = [super init];
     if(self) {
         self.expected = expected;
+        self.exceptionName = exceptionName;
     }
     return self;
-}
-
-+ (instancetype)willThrowException:(BOOL)expected
-{
-    return [[self alloc] initWithExpected:expected];
 }
 
 - (BOOL)matches:(id)item
@@ -50,9 +51,13 @@
 
 id HC_willThrowException()
 {
-    return [HCThrowsException willThrowException:YES];
+    return [[HCThrowsException alloc] initWithExpected:YES];
 }
 id HC_willNotThrowException()
 {
-    return [HCThrowsException willThrowException:NO];
+    return [[HCThrowsException alloc] initWithExpected:NO];
+}
+id HC_willThrow(NSString *exceptionName)
+{
+    return [[HCThrowsException alloc] initWithExpected:YES name:exceptionName];
 }

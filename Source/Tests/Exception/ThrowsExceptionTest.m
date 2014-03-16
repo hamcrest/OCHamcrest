@@ -110,11 +110,13 @@
     assertThat([self throwInvalidArgumentException], equalTo(@"NSInvalidArgumentException: For fun."));
 }
 
-//~ testEvaluatesToTrueIfArgumentThrowsExceptionOfSpecificExpectedType
+- (void)testEvaluatesToTrueIfArgumentThrowsExceptionOfSpecificExpectedType
+{
+    id (^exceptionCatcher)() = HC_buildExceptionCatcher([self throwInvalidArgumentException]);
+    assertMatches(@"", willThrow(@"NSInvalidArgumentException"), exceptionCatcher());
+}
 
 //~ testEvaluatesToFalseIfArgumentThrowsExceptionOfSpecificTypeThatDiffersFromExpected
-
-//~ testSuccessfulMatchDoesNotGenerateMismatchDescription
 
 //~ testExceptionCatcherWhenMethodReturnsVoid
 
