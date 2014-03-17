@@ -44,7 +44,7 @@
 
 - (id)och_returnValue
 {
-    HCReturnTypeHandler *chain = HC_returnTypeHandlerChain();
+    HCReturnTypeHandler *chain = HCReturnTypeHandlerChain();
     char const *returnType = [[self methodSignature] methodReturnType];
     return [chain returnValueOfType:returnType fromInvocation:self];
 }

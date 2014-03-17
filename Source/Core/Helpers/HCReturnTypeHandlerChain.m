@@ -25,7 +25,7 @@
 #import "HCDoubleReturnTypeHandler.h"
 
 
-HCReturnTypeHandler *HC_returnTypeHandlerChain(void)
+HCReturnTypeHandler *HCReturnTypeHandlerChain(void)
 {
     static HCReturnTypeHandler *chain = nil;
     if (!chain)

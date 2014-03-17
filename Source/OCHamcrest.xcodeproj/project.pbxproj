@@ -966,12 +966,12 @@
 				BB333FC587BC3FE9F9A541B4 /* HCUnsignedCharReturnTypeHandler.m */,
 				BB333C9EF65591D1203D56DB /* HCUnsignedIntReturnTypeHandler.h */,
 				BB333830E1B0C6BF0D881D9E /* HCUnsignedIntReturnTypeHandler.m */,
-				BB3335C5A94DDFDE50E9C1CC /* HCUnsignedShortReturnTypeHandler.h */,
-				BB3330182DA45FCB6FADC064 /* HCUnsignedShortReturnTypeHandler.m */,
 				BB333414912561D7E5E7D02A /* HCUnsignedLongReturnTypeHandler.h */,
 				BB333811E24C143B146A882A /* HCUnsignedLongReturnTypeHandler.m */,
 				BB33345784A49B9F8DFEA01E /* HCUnsignedLongLongReturnTypeHandler.h */,
 				BB333BB04F824018F0F218A3 /* HCUnsignedLongLongReturnTypeHandler.m */,
+				BB3335C5A94DDFDE50E9C1CC /* HCUnsignedShortReturnTypeHandler.h */,
+				BB3330182DA45FCB6FADC064 /* HCUnsignedShortReturnTypeHandler.m */,
 			);
 			name = "Return Type Handlers";
 			sourceTree = "<group>";

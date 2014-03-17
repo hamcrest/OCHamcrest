@@ -15,4 +15,4 @@
 /**
  Returns chain of return type handlers.
  */
-FOUNDATION_EXPORT HCReturnTypeHandler *HC_returnTypeHandlerChain(void);
+FOUNDATION_EXPORT HCReturnTypeHandler *HCReturnTypeHandlerChain(void);
