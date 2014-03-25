@@ -1,6 +1,6 @@
 //
 //  OCHamcrest - NSInvocation+OCHamcrest.m
-//  Code patterned after NSInvocation+Simple.m by Karl Stenerud (Copyright 2011 KarlStenerud). See LICENSE.txt
+//  Copyright 2014 hamcrest.org. See LICENSE.txt
 //
 //  Created by: Jon Reid, http://qualitycoding.org/
 //  Docs: http://hamcrest.github.com/OCHamcrest/
