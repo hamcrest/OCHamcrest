@@ -9,7 +9,7 @@
 
 #import "NSInvocation+OCHamcrest.h"
 
-#import "HCReturnTypeHandler.h"
+#import "HCReturnValueGetter.h"
 #import "HCReturnTypeHandlerChain.h"
 
 
@@ -44,9 +44,8 @@
 
 - (id)och_returnValue
 {
-    HCReturnTypeHandler *chain = HCReturnTypeHandlerChain();
     char const *returnType = [[self methodSignature] methodReturnType];
-    return [chain returnValueOfType:returnType fromInvocation:self];
+    return [HCReturnValueGetterChain() returnValueOfType:returnType fromInvocation:self];
 }
 
 @end

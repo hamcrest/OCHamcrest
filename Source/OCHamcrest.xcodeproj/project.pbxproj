@@ -118,13 +118,13 @@
 		BB33301A68F74D210C803FEA /* HCIsNil.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335CC804D0A774E5F1041 /* HCIsNil.m */; };
 		BB333020F5ED4E3979BA1714 /* NSInvocation+OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3339BE4C0ECEAB7169772A /* NSInvocation+OCHamcrest.h */; };
 		BB33302772CACC61A1B4DB74 /* HCTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333528C8E2ED8489ACB161 /* HCTestFailureHandler.m */; };
-		BB333031608DFFD2E76CD745 /* HCDoubleReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333F67A18EA568D7683A58 /* HCDoubleReturnTypeHandler.h */; };
+		BB333031608DFFD2E76CD745 /* HCDoubleReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333F67A18EA568D7683A58 /* HCDoubleReturnGetter.h */; };
 		BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */; };
 		BB3330504048A30E7C190A19 /* HCReturnTypeHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333BD87164C606AE0BE027 /* HCReturnTypeHandlerChain.m */; };
 		BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */; };
 		BB33306BE19806EB64EEC358 /* HCInvocationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3337B908D229FD08452B2D /* HCInvocationMatcher.m */; };
 		BB333083DABBB403F4E3A935 /* HCIsCollectionContainingInAnyOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3332CD4593BA0B619AE30C /* HCIsCollectionContainingInAnyOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB33309748583DA78A7C98ED /* HCCharReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333FED5158848B95B043F1 /* HCCharReturnTypeHandler.m */; };
+		BB33309748583DA78A7C98ED /* HCCharReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333FED5158848B95B043F1 /* HCCharReturnGetter.m */; };
 		BB3330B6F8137019671EBC0C /* HCIsEqualIgnoringWhiteSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33338462C2743FF78AA51B /* HCIsEqualIgnoringWhiteSpace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB3330B79DF7A5A15B7182E8 /* HCReturnTypeHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333BD87164C606AE0BE027 /* HCReturnTypeHandlerChain.m */; };
 		BB3330C8507C35031D255243 /* HCNumberAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A801AD666BCC23ED955 /* HCNumberAssert.m */; };
@@ -139,20 +139,20 @@
 		BB33315FDFFBAC0E1DB10869 /* HCStringDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333D43717AD7243D63A4AB /* HCStringDescription.m */; };
 		BB33317BFCB5DC5993AA5C91 /* HCRequireNonNilObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333C88565D58DE2AAAAD15 /* HCRequireNonNilObject.m */; };
 		BB333181C1BD36B166BDCABB /* HCIsDictionaryContainingKey.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333393BDEDD21E2CB1A2FF /* HCIsDictionaryContainingKey.m */; };
-		BB33318EE99C688C6076DEBE /* HCUnsignedLongLongReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33312F8485C256B14867AF /* HCUnsignedLongLongReturnTypeHandler.h */; };
+		BB33318EE99C688C6076DEBE /* HCUnsignedLongLongReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33312F8485C256B14867AF /* HCUnsignedLongLongReturnGetter.h */; };
 		BB3331A2CC8B05A72A0E3E8B /* HCStringDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333215A6C1406E57ED34C4 /* HCStringDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB3331A77D7C99A487A89434 /* HCBoolReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3331B99B691F7BFEF48591 /* HCBoolReturnTypeHandler.m */; };
+		BB3331A77D7C99A487A89434 /* HCBoolReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3331B99B691F7BFEF48591 /* HCBoolReturnGetter.m */; };
 		BB3331D1B77DB4D834A7FDF5 /* HCOrderingComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3336E4FAD686F2CFFF91B0 /* HCOrderingComparison.m */; };
-		BB3331D8A9949686B47D2203 /* HCUnsignedShortReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A5C3A9A42E4521010F1 /* HCUnsignedShortReturnTypeHandler.m */; };
+		BB3331D8A9949686B47D2203 /* HCUnsignedShortReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A5C3A9A42E4521010F1 /* HCUnsignedShortReturnGetter.m */; };
 		BB3331E9AEEC3D10110E90ED /* HCIsEqualToNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333DC21DC44C0F76ED3DB6 /* HCIsEqualToNumber.m */; };
 		BB3332098FC93350263E39FF /* HCIsEmptyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33328F1CBC78AC3D9B6E78 /* HCIsEmptyCollection.m */; };
 		BB333210C6DF7BB6238B7747 /* HCIsEqualIgnoringCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A9273EFADF46D908BC4 /* HCIsEqualIgnoringCase.m */; };
-		BB33321509F1659FB29AD59E /* HCIntReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3339614DAE31258BA73352 /* HCIntReturnTypeHandler.m */; };
-		BB3332191B1A602F69B8CC77 /* HCLongReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333C3F40A01E4269FA22BE /* HCLongReturnTypeHandler.h */; };
+		BB33321509F1659FB29AD59E /* HCIntReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3339614DAE31258BA73352 /* HCIntReturnGetter.m */; };
+		BB3332191B1A602F69B8CC77 /* HCLongReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333C3F40A01E4269FA22BE /* HCLongReturnGetter.h */; };
 		BB33322D2EF1C40E940F38B2 /* HCHasCount.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333E594CE94324024C2E19 /* HCHasCount.m */; };
 		BB33323968557EF5235B3AFE /* HCIsInstanceOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333830B0D43E7B79BB537C /* HCIsInstanceOf.m */; };
-		BB3332440D6C92F1E9650F9A /* HCUnsignedLongLongReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33312F8485C256B14867AF /* HCUnsignedLongLongReturnTypeHandler.h */; };
-		BB333260BA38F45B4864A846 /* HCLongLongReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3332508DE228EEA28B7324 /* HCLongLongReturnTypeHandler.h */; };
+		BB3332440D6C92F1E9650F9A /* HCUnsignedLongLongReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33312F8485C256B14867AF /* HCUnsignedLongLongReturnGetter.h */; };
+		BB333260BA38F45B4864A846 /* HCLongLongReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3332508DE228EEA28B7324 /* HCLongLongReturnGetter.h */; };
 		BB3332673485E95D8599222E /* HCAllOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3336446380772E9629E08E /* HCAllOf.m */; };
 		BB33327669EF4A7B5889DBAD /* HCClassMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333C70DFAD4A867B769381 /* HCClassMatcher.m */; };
 		BB333280BE085A371ABECECA /* HCIsDictionaryContainingEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3331619B45E4E82B0FE72A /* HCIsDictionaryContainingEntries.m */; };
@@ -160,15 +160,15 @@
 		BB33328AC0BB3E658B1BB14F /* HCHasCount.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3331C8CBB96396DDA74467 /* HCHasCount.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB33328F6BBE1FF834BA90EC /* HCIsInstanceOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333830B0D43E7B79BB537C /* HCIsInstanceOf.m */; };
 		BB33329CF0CDD9545D3FFCEC /* HCAssertThat.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333CF8C391D5A08F331B45 /* HCAssertThat.m */; };
-		BB3332C8A3C41D9A4A4211AC /* HCUnsignedLongLongReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33347A9E4365F763632850 /* HCUnsignedLongLongReturnTypeHandler.m */; };
+		BB3332C8A3C41D9A4A4211AC /* HCUnsignedLongLongReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33347A9E4365F763632850 /* HCUnsignedLongLongReturnGetter.m */; };
 		BB3332D67329789E3971E2C3 /* HCIsCollectionContainingInAnyOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333FE413C7E8FA9C811BF1 /* HCIsCollectionContainingInAnyOrder.m */; };
 		BB3332D945BB26BEF3E37662 /* HCCollect.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3333FD5A8D6F4A718D5D98 /* HCCollect.m */; };
 		BB3332DB2D2CA8A11AF95DA7 /* HCDescribedAs.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3334C2039E9686ABB73AE2 /* HCDescribedAs.m */; };
-		BB3332EA9B7B56B9364B4023 /* HCUnsignedCharReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333BE1D8EFF4596D019A40 /* HCUnsignedCharReturnTypeHandler.h */; };
-		BB333328EA1EFCED9C811321 /* HCFloatReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333C975A48CD4BC2EA4ED3 /* HCFloatReturnTypeHandler.m */; };
+		BB3332EA9B7B56B9364B4023 /* HCUnsignedCharReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333BE1D8EFF4596D019A40 /* HCUnsignedCharReturnGetter.h */; };
+		BB333328EA1EFCED9C811321 /* HCFloatReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333C975A48CD4BC2EA4ED3 /* HCFloatReturnGetter.m */; };
 		BB3333346B22FC64994ED11E /* HCTestFailureHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3337085D9BEFA6D52E7EB0 /* HCTestFailureHandlerChain.m */; };
 		BB33333C0F1EED12D79C5845 /* HCConformsToProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3334410C93469CF325AA1D /* HCConformsToProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB3333502C76D73346A73631 /* HCLongReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333334135CAFF20A0E19FF /* HCLongReturnTypeHandler.m */; };
+		BB3333502C76D73346A73631 /* HCLongReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333334135CAFF20A0E19FF /* HCLongReturnGetter.m */; };
 		BB33335138021752A7522E67 /* HCIsCollectionOnlyContaining.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33380693E900C743EDF861 /* HCIsCollectionOnlyContaining.m */; };
 		BB333352385755A59DEC95BD /* HCIsDictionaryContaining.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333FDE3455183AB9302310 /* HCIsDictionaryContaining.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333375251766FC537D86BC /* HCAllOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3336446380772E9629E08E /* HCAllOf.m */; };
@@ -179,64 +179,64 @@
 		BB33339CC090FAA28495D835 /* HCTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333528C8E2ED8489ACB161 /* HCTestFailureHandler.m */; };
 		BB3333AADA8EEF37F45AF012 /* HCConformsToProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3334EF9BFFB721161BB23F /* HCConformsToProtocol.m */; };
 		BB3333B08155109232BEBD15 /* HCStringContainsInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3339B2CAF2C82161ED14F8 /* HCStringContainsInOrder.m */; };
-		BB3333BCD2E3A2D26AA15D40 /* HCBoolReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3331B99B691F7BFEF48591 /* HCBoolReturnTypeHandler.m */; };
-		BB3333CBF2F94416D6F3E265 /* HCUnsignedLongReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33333B48A97B0771A3C256 /* HCUnsignedLongReturnTypeHandler.m */; };
+		BB3333BCD2E3A2D26AA15D40 /* HCBoolReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3331B99B691F7BFEF48591 /* HCBoolReturnGetter.m */; };
+		BB3333CBF2F94416D6F3E265 /* HCUnsignedLongReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33333B48A97B0771A3C256 /* HCUnsignedLongReturnGetter.m */; };
 		BB3333CF7706F55C9F5C7C83 /* HCIsCollectionContainingInAnyOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333FE413C7E8FA9C811BF1 /* HCIsCollectionContainingInAnyOrder.m */; };
 		BB3333FFD04D52C9DC48644E /* HCStringEndsWith.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3333AF4B760A982CF9F9E3 /* HCStringEndsWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB3334311D89D9395F45A48D /* HCHasProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33343C9B176C5DE07DE003 /* HCHasProperty.m */; };
 		BB33343CA2ADA0E7E367E8F9 /* HCAnyOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333BF1C94AD91D6F5F5A95 /* HCAnyOf.m */; };
-		BB3334425297552B3C06F861 /* HCObjectReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333FACCFA7D57857673665 /* HCObjectReturnTypeHandler.h */; };
+		BB3334425297552B3C06F861 /* HCObjectReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333FACCFA7D57857673665 /* HCObjectReturnGetter.h */; };
 		BB333451E989F24386136004 /* HCXCTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333ABD683BCE8C8E9028C5 /* HCXCTestFailureHandler.m */; };
 		BB33345773AB590845EB68D6 /* HCStringStartsWith.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A7430335F388E6DCF71 /* HCStringStartsWith.m */; };
 		BB3334612BBBB6871530AB79 /* HCIsSame.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333594FB0AC2DAC3B73077 /* HCIsSame.m */; };
 		BB33346AFA507C00FA481E8D /* HCIsCollectionContainingInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333986B013CA09B71D376B /* HCIsCollectionContainingInOrder.m */; };
-		BB333494B740EF5FC786BB56 /* HCIntReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333725B2814AE9CF044B5B /* HCIntReturnTypeHandler.h */; };
+		BB333494B740EF5FC786BB56 /* HCIntReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333725B2814AE9CF044B5B /* HCIntReturnGetter.h */; };
 		BB3334B153329F550E1EFEBD /* HCIsNil.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33359133039118AE88E2A8 /* HCIsNil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB3334B9AE78134252D2CBC7 /* HCSenTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333F6051CD0B739527337A /* HCSenTestFailureHandler.m */; };
-		BB3334CE1D4AE1517BD55CC5 /* HCUnsignedShortReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A5C3A9A42E4521010F1 /* HCUnsignedShortReturnTypeHandler.m */; };
+		BB3334CE1D4AE1517BD55CC5 /* HCUnsignedShortReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A5C3A9A42E4521010F1 /* HCUnsignedShortReturnGetter.m */; };
 		BB3334E55A7868E28215B693 /* OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33356A6185FA4F1B6E240F /* OCHamcrest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB3335190594259F5D74CAE1 /* HCIsTypeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33322097042E108614BDAD /* HCIsTypeOf.m */; };
-		BB333523DC58D4FD4797B9C7 /* HCLongLongReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3332508DE228EEA28B7324 /* HCLongLongReturnTypeHandler.h */; };
+		BB333523DC58D4FD4797B9C7 /* HCLongLongReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3332508DE228EEA28B7324 /* HCLongLongReturnGetter.h */; };
 		BB33356A7CF5DC030AAE9CCB /* HCIsDictionaryContaining.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333049BE335209B4207B2A /* HCIsDictionaryContaining.m */; };
 		BB33357C5F1F3BC687DDF54C /* HCStringEndsWith.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335974ADA5C5408FE0F69 /* HCStringEndsWith.m */; };
 		BB333597D5BACF80DB73F49C /* HCIsCloseTo.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3331EECFE91DCA05C34EFD /* HCIsCloseTo.m */; };
 		BB3335B51CB6C13C046E7C94 /* HCIs.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33334930C42DF9114F9D34 /* HCIs.m */; };
 		BB3335B708E6AB9321294A1C /* HCIsEqual.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333503A24A236A19B8A468 /* HCIsEqual.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB3335C23B645B2E01C1DD95 /* HCLongReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333C3F40A01E4269FA22BE /* HCLongReturnTypeHandler.h */; };
-		BB3335CF33C2945D68DF426D /* HCShortReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3335A8FE1E47B0F4407027 /* HCShortReturnTypeHandler.h */; };
-		BB3335EAC1E9E47F87D50EDF /* HCReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3331AAA2AB993E60458B6B /* HCReturnTypeHandler.m */; };
-		BB3335FB367CC6AD40BF6BA7 /* HCDoubleReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33303898210A59268030C8 /* HCDoubleReturnTypeHandler.m */; };
-		BB3336121208AAC5B1DDE8E9 /* HCUnsignedIntReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3331B51251AD3B252636B5 /* HCUnsignedIntReturnTypeHandler.h */; };
-		BB333625D9CC6652DA94FF09 /* HCUnsignedLongReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3338DE3E5C649EB399B649 /* HCUnsignedLongReturnTypeHandler.h */; };
-		BB33362FA587A9B15E5C0D9B /* HCShortReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33363375E9DE829A8AD41D /* HCShortReturnTypeHandler.m */; };
+		BB3335C23B645B2E01C1DD95 /* HCLongReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333C3F40A01E4269FA22BE /* HCLongReturnGetter.h */; };
+		BB3335CF33C2945D68DF426D /* HCShortReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3335A8FE1E47B0F4407027 /* HCShortReturnGetter.h */; };
+		BB3335EAC1E9E47F87D50EDF /* HCReturnValueGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3331AAA2AB993E60458B6B /* HCReturnValueGetter.m */; };
+		BB3335FB367CC6AD40BF6BA7 /* HCDoubleReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33303898210A59268030C8 /* HCDoubleReturnGetter.m */; };
+		BB3336121208AAC5B1DDE8E9 /* HCUnsignedIntReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3331B51251AD3B252636B5 /* HCUnsignedIntReturnGetter.h */; };
+		BB333625D9CC6652DA94FF09 /* HCUnsignedLongReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3338DE3E5C649EB399B649 /* HCUnsignedLongReturnGetter.h */; };
+		BB33362FA587A9B15E5C0D9B /* HCShortReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33363375E9DE829A8AD41D /* HCShortReturnGetter.m */; };
 		BB333637DDB74BF66C729C62 /* HCIsNot.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33347EC840056B268877BF /* HCIsNot.m */; };
 		BB333643284129107CAD7AB8 /* HCIsDictionaryContainingKey.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333E412026940E16FEC9C0 /* HCIsDictionaryContainingKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB33365B91A88641580F886E /* HCCharReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333C5BD261A2F9861F78A4 /* HCCharReturnTypeHandler.h */; };
+		BB33365B91A88641580F886E /* HCCharReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333C5BD261A2F9861F78A4 /* HCCharReturnGetter.h */; };
 		BB33366E651777BD9B2A98FD /* HCIsNot.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33317270E4A854112BCCEA /* HCIsNot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB33367DD8C7A4D5F5F96E81 /* HCIsCollectionContainingInOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33312A13BF3686BE841AD7 /* HCIsCollectionContainingInOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB33369C21D2B44C72195326 /* HCTestFailure.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333F6535F43C37CBF517FA /* HCTestFailure.m */; };
 		BB3336AD40784CC4673DB87F /* HCStringEndsWith.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335974ADA5C5408FE0F69 /* HCStringEndsWith.m */; };
-		BB3336B101EC9615B113A6D5 /* HCUnsignedCharReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333F5AFEB5565130751633 /* HCUnsignedCharReturnTypeHandler.m */; };
-		BB3336E5733952CCFE8A6BBC /* HCUnsignedCharReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333F5AFEB5565130751633 /* HCUnsignedCharReturnTypeHandler.m */; };
+		BB3336B101EC9615B113A6D5 /* HCUnsignedCharReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333F5AFEB5565130751633 /* HCUnsignedCharReturnGetter.m */; };
+		BB3336E5733952CCFE8A6BBC /* HCUnsignedCharReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333F5AFEB5565130751633 /* HCUnsignedCharReturnGetter.m */; };
 		BB3336E5FCF909801BB0D103 /* HCStringContainsInOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3331C74ACFA7AB0675A7FE /* HCStringContainsInOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB3336F96B099B5EFE2E670E /* HCIs.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33334930C42DF9114F9D34 /* HCIs.m */; };
-		BB33370D6F5B9B4978104E4B /* HCIntReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333725B2814AE9CF044B5B /* HCIntReturnTypeHandler.h */; };
+		BB33370D6F5B9B4978104E4B /* HCIntReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333725B2814AE9CF044B5B /* HCIntReturnGetter.h */; };
 		BB33371F6028F465B81A4E5F /* HCReturnTypeHandlerChain.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333191F9604EA23746459E /* HCReturnTypeHandlerChain.h */; };
-		BB3337267CA4ACA9E3EB6896 /* HCCharReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333C5BD261A2F9861F78A4 /* HCCharReturnTypeHandler.h */; };
+		BB3337267CA4ACA9E3EB6896 /* HCCharReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333C5BD261A2F9861F78A4 /* HCCharReturnGetter.h */; };
 		BB3337466031638452E372CC /* HCHasDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3334125896535BFB7DBBA7 /* HCHasDescription.m */; };
 		BB333788D86B329768056FCB /* HCHasProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333B2A6FFEC019E0678999 /* HCHasProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB3337895E6D085546B857EC /* HCObjectReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33355AD08369793188986F /* HCObjectReturnTypeHandler.m */; };
+		BB3337895E6D085546B857EC /* HCObjectReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33355AD08369793188986F /* HCObjectReturnGetter.m */; };
 		BB33379125D73946A16F7B0D /* HCHasProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33343C9B176C5DE07DE003 /* HCHasProperty.m */; };
 		BB3337947E2E43605545E743 /* HCStringContains.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333EA4C4546D46CF8A4044 /* HCStringContains.m */; };
 		BB33379F2611DE99B3B43A90 /* HCStringContains.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333EA4C4546D46CF8A4044 /* HCStringContains.m */; };
-		BB3337AB405029A86CDF3FAD /* HCDoubleReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333F67A18EA568D7683A58 /* HCDoubleReturnTypeHandler.h */; };
+		BB3337AB405029A86CDF3FAD /* HCDoubleReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333F67A18EA568D7683A58 /* HCDoubleReturnGetter.h */; };
 		BB3337B4866BAF4A120919CF /* HCXCTestFailureHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33394F75CEE379A525320B /* HCXCTestFailureHandler.h */; };
 		BB3337BBAAC8E23B9A74CBF1 /* HCSelfDescribing.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333B7F19A5645CF7FC3E7E /* HCSelfDescribing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB3337CC95C9FD768019495D /* HCUnsignedIntReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333CA45EE4CF9D260DD50D /* HCUnsignedIntReturnTypeHandler.m */; };
-		BB3337DBEBED3443E8DB7A52 /* HCFloatReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333C975A48CD4BC2EA4ED3 /* HCFloatReturnTypeHandler.m */; };
+		BB3337CC95C9FD768019495D /* HCUnsignedIntReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333CA45EE4CF9D260DD50D /* HCUnsignedIntReturnGetter.m */; };
+		BB3337DBEBED3443E8DB7A52 /* HCFloatReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333C975A48CD4BC2EA4ED3 /* HCFloatReturnGetter.m */; };
 		BB3337E931781280D48FB372 /* HCXCTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333ABD683BCE8C8E9028C5 /* HCXCTestFailureHandler.m */; };
 		BB3337F52BA7EAA5CFCAE142 /* HCIsEmptyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33328F1CBC78AC3D9B6E78 /* HCIsEmptyCollection.m */; };
-		BB3338179D48057215091538 /* HCReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333CC6471D7E5CB41558EF /* HCReturnTypeHandler.h */; };
+		BB3338179D48057215091538 /* HCReturnValueGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333CC6471D7E5CB41558EF /* HCReturnValueGetter.h */; };
 		BB3338188B4D09D845A55E00 /* HCAssertThat.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333792C123FE94F1A3D447 /* HCAssertThat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333839A36AEC819CDABEBF /* HCNumberAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333EEBE8C48A68933572E9 /* HCNumberAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333842914F0FF2E8F70FAA /* HCIsEqualIgnoringCase.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33371136854FB7CAF2A5F7 /* HCIsEqualIgnoringCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -246,41 +246,41 @@
 		BB3338A5F9D50886A7A82129 /* HCIs.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33384895217507C28D0896 /* HCIs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB3338B40D8EA4F74C514153 /* HCWrapInMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333D5C9BD053542A0530EB /* HCWrapInMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB3338D75677FE93976B1D6E /* HCIsCollectionContainingInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333986B013CA09B71D376B /* HCIsCollectionContainingInOrder.m */; };
-		BB3338E155E644CFB619CFEF /* HCObjectReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33355AD08369793188986F /* HCObjectReturnTypeHandler.m */; };
+		BB3338E155E644CFB619CFEF /* HCObjectReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33355AD08369793188986F /* HCObjectReturnGetter.m */; };
 		BB3338FF145C0BCE0B1A6C33 /* HCIsIn.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3336DDA8D0B1E91E937FD4 /* HCIsIn.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB33390F0791F299C712BAF5 /* HCIsIn.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333522A78D6A7D1A8414B3 /* HCIsIn.m */; };
 		BB33392916E29A808728FF91 /* HCStringDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333D43717AD7243D63A4AB /* HCStringDescription.m */; };
 		BB33395D7C71ECDB178C10F9 /* HCMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3334F31A5AB57A69174ECB /* HCMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333987DAE91CFE7D31B8B4 /* HCIsSame.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333C93865B64F27B2639FE /* HCIsSame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333995C1E6476B0C239FB9 /* HCIsNil.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335CC804D0A774E5F1041 /* HCIsNil.m */; };
-		BB3339A4AEEDCDF3C4E96491 /* HCBoolReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333EDC6C01648EEBC00D5E /* HCBoolReturnTypeHandler.h */; };
+		BB3339A4AEEDCDF3C4E96491 /* HCBoolReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333EDC6C01648EEBC00D5E /* HCBoolReturnGetter.h */; };
 		BB3339A5133E437AFDDE7B15 /* HCIsDictionaryContainingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3339100D7159DBF2387893 /* HCIsDictionaryContainingValue.m */; };
 		BB3339BE48FB5782E8F9A9F5 /* HCClassMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33365155F84099730C9B56 /* HCClassMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB3339C714B5E796538B65F1 /* NSInvocation+OCHamcrest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33309F9D72ED2CF53532A8 /* NSInvocation+OCHamcrest.m */; };
 		BB3339CC63BCC9186973C491 /* HCTestFailure.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333F6535F43C37CBF517FA /* HCTestFailure.m */; };
-		BB3339D3E0792F98EE3F7D07 /* HCShortReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33363375E9DE829A8AD41D /* HCShortReturnTypeHandler.m */; };
+		BB3339D3E0792F98EE3F7D07 /* HCShortReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33363375E9DE829A8AD41D /* HCShortReturnGetter.m */; };
 		BB3339D5C07EC353A46EFEFE /* HCTestFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333930FE07807045EEE866 /* HCTestFailure.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB3339D6DAC64560919B4B71 /* HCUnsignedShortReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333A258B9C1CDFB1B184C3 /* HCUnsignedShortReturnTypeHandler.h */; };
-		BB3339D8979DFFEBB1AEB26D /* HCLongReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333334135CAFF20A0E19FF /* HCLongReturnTypeHandler.m */; };
+		BB3339D6DAC64560919B4B71 /* HCUnsignedShortReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333A258B9C1CDFB1B184C3 /* HCUnsignedShortReturnGetter.h */; };
+		BB3339D8979DFFEBB1AEB26D /* HCLongReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333334135CAFF20A0E19FF /* HCLongReturnGetter.m */; };
 		BB3339F396185713397718B5 /* HCIsCloseTo.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33346362D58A13AA1BA54B /* HCIsCloseTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB3339F4D9293AA86914FB66 /* HCIsDictionaryContainingEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3331619B45E4E82B0FE72A /* HCIsDictionaryContainingEntries.m */; };
 		BB333A0391F4B076785DEBA9 /* HCIsAnything.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333AF2F081FE96420F97C0 /* HCIsAnything.m */; };
-		BB333A10646B1A68ACCDC472 /* HCUnsignedShortReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333A258B9C1CDFB1B184C3 /* HCUnsignedShortReturnTypeHandler.h */; };
+		BB333A10646B1A68ACCDC472 /* HCUnsignedShortReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333A258B9C1CDFB1B184C3 /* HCUnsignedShortReturnGetter.h */; };
 		BB333A11937F03ABF822AFA7 /* HCDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333D2D401EA09BE78BF7E9 /* HCDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333A358C42850FD4C55B3D /* HCBaseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333785CDF67F8F0284B9CA /* HCBaseDescription.m */; };
 		BB333A3F01C18400B5A131C6 /* HCIsCollectionContaining.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3338AB92DDE4ACF56D7C1B /* HCIsCollectionContaining.m */; };
-		BB333A62F20EA2AE048FC857 /* HCObjectReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333FACCFA7D57857673665 /* HCObjectReturnTypeHandler.h */; };
+		BB333A62F20EA2AE048FC857 /* HCObjectReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333FACCFA7D57857673665 /* HCObjectReturnGetter.h */; };
 		BB333A663782157FB25A5E45 /* HCAssertThat.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333CF8C391D5A08F331B45 /* HCAssertThat.m */; };
 		BB333A7CCC7A2BD01898722C /* HCStringStartsWith.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A7430335F388E6DCF71 /* HCStringStartsWith.m */; };
 		BB333A7CCE8A0DF95052F67C /* HCInvocationMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333D00EB0E21D420A7B22B /* HCInvocationMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333AB8B39B203DF15C9445 /* HCIsSame.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333594FB0AC2DAC3B73077 /* HCIsSame.m */; };
 		BB333ABCAF8D67405B9C023D /* HCIsInstanceOf.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33386A5E683DD0DC1AACE2 /* HCIsInstanceOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB333ACAD45079E5160B4B2D /* HCLongLongReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33330C459CF68E13DDD1D6 /* HCLongLongReturnTypeHandler.m */; };
-		BB333ADE67DDD25C6E6EF058 /* HCFloatReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333FF31E6FD6CB3A0DC45E /* HCFloatReturnTypeHandler.h */; };
+		BB333ACAD45079E5160B4B2D /* HCLongLongReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33330C459CF68E13DDD1D6 /* HCLongLongReturnGetter.m */; };
+		BB333ADE67DDD25C6E6EF058 /* HCFloatReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333FF31E6FD6CB3A0DC45E /* HCFloatReturnGetter.h */; };
 		BB333AFA559C22D92650E91C /* HCIsEqualIgnoringWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33377384F2BF4EA9694DA7 /* HCIsEqualIgnoringWhiteSpace.m */; };
 		BB333B08E01B2E88828DA51C /* HCAnyOf.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333034CD6A38647E176A9A /* HCAnyOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB333B4AB9E7656A98D0D172 /* HCUnsignedLongLongReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33347A9E4365F763632850 /* HCUnsignedLongLongReturnTypeHandler.m */; };
-		BB333B4B561F53C31972B9D9 /* HCFloatReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333FF31E6FD6CB3A0DC45E /* HCFloatReturnTypeHandler.h */; };
+		BB333B4AB9E7656A98D0D172 /* HCUnsignedLongLongReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33347A9E4365F763632850 /* HCUnsignedLongLongReturnGetter.m */; };
+		BB333B4B561F53C31972B9D9 /* HCFloatReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333FF31E6FD6CB3A0DC45E /* HCFloatReturnGetter.h */; };
 		BB333B9914086A169E24347E /* HCIsEqualToNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3330701E28789385EAB1C9 /* HCIsEqualToNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333BA6882190C2BDCABECC /* HCAllOf.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333255C8855929B9264684 /* HCAllOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333BBD9153A5B7C1DD0F86 /* HCHasCount.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333E594CE94324024C2E19 /* HCHasCount.m */; };
@@ -293,7 +293,7 @@
 		BB333C372274619E93D2D9E8 /* HCGenericTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3331E3E2C324F3D4618E9D /* HCGenericTestFailureHandler.m */; };
 		BB333C48F0B219D8132548B4 /* HCIsEqualToNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333DC21DC44C0F76ED3DB6 /* HCIsEqualToNumber.m */; };
 		BB333C6E35F2398771CEA2C3 /* HCIsEqualIgnoringCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A9273EFADF46D908BC4 /* HCIsEqualIgnoringCase.m */; };
-		BB333C78E5F9DB528838CA5A /* HCIntReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3339614DAE31258BA73352 /* HCIntReturnTypeHandler.m */; };
+		BB333C78E5F9DB528838CA5A /* HCIntReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3339614DAE31258BA73352 /* HCIntReturnGetter.m */; };
 		BB333C793CAFFF7E4FB5BA2D /* HCCollect.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333C7DFDB2404398E9E6C5 /* HCCollect.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333C8BC4684992F0A533CE /* HCHasDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33387896CF4C830AAE4633 /* HCHasDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333C8FF5557126F41B7291 /* HCIsCollectionContaining.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3331A34E31C49FE230D9BE /* HCIsCollectionContaining.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -306,38 +306,38 @@
 		BB333D6CD37B858BD8F989F1 /* HCClassMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333C70DFAD4A867B769381 /* HCClassMatcher.m */; };
 		BB333D6DC563CDDEDF3B6DC9 /* HCIsDictionaryContainingKey.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333393BDEDD21E2CB1A2FF /* HCIsDictionaryContainingKey.m */; };
 		BB333D81687E3E6481265818 /* HCIsTypeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33322097042E108614BDAD /* HCIsTypeOf.m */; };
-		BB333D83E68045BBEA3B3796 /* HCShortReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3335A8FE1E47B0F4407027 /* HCShortReturnTypeHandler.h */; };
+		BB333D83E68045BBEA3B3796 /* HCShortReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3335A8FE1E47B0F4407027 /* HCShortReturnGetter.h */; };
 		BB333D94082F074BB61E233C /* HCBaseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333785CDF67F8F0284B9CA /* HCBaseDescription.m */; };
 		BB333DB953FACB91AFC1A5C2 /* HCIsCollectionContaining.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3338AB92DDE4ACF56D7C1B /* HCIsCollectionContaining.m */; };
 		BB333DD97E87592CF49128AD /* HCSubstringMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3338B60F3A83AE527E91A7 /* HCSubstringMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB333DE89A2F8557B268A355 /* HCReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333CC6471D7E5CB41558EF /* HCReturnTypeHandler.h */; };
+		BB333DE89A2F8557B268A355 /* HCReturnValueGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333CC6471D7E5CB41558EF /* HCReturnValueGetter.h */; };
 		BB333DEC51AFB20AADBB68D6 /* HCDescribedAs.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3334C2039E9686ABB73AE2 /* HCDescribedAs.m */; };
 		BB333DF4A40F8816030C14DE /* HCIsAnything.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333EC183D2675A9DF05F67 /* HCIsAnything.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB333DFB6E6D7C86888EC7AA /* HCUnsignedIntReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333CA45EE4CF9D260DD50D /* HCUnsignedIntReturnTypeHandler.m */; };
-		BB333E360A90374209909E7E /* HCUnsignedLongReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33333B48A97B0771A3C256 /* HCUnsignedLongReturnTypeHandler.m */; };
+		BB333DFB6E6D7C86888EC7AA /* HCUnsignedIntReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333CA45EE4CF9D260DD50D /* HCUnsignedIntReturnGetter.m */; };
+		BB333E360A90374209909E7E /* HCUnsignedLongReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33333B48A97B0771A3C256 /* HCUnsignedLongReturnGetter.m */; };
 		BB333E4BEBC363D5F315B27F /* HCIsDictionaryContainingValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333A5C2975038FF06BDCBA /* HCIsDictionaryContainingValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333E7F416B46CE6777D695 /* HCStringStartsWith.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3336FA0B545673BD3630E2 /* HCStringStartsWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333E8BB98FF2089077826D /* HCIsTypeOf.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33334CF68184328CD67F30 /* HCIsTypeOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333E932D2D03A14B886055 /* HCNumberAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A801AD666BCC23ED955 /* HCNumberAssert.m */; };
 		BB333EA439826DB6B82DDE54 /* HCGenericTestFailureHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33391EC19272E15C3D2E1A /* HCGenericTestFailureHandler.h */; };
-		BB333EA74F069D831202108E /* HCReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3331AAA2AB993E60458B6B /* HCReturnTypeHandler.m */; };
+		BB333EA74F069D831202108E /* HCReturnValueGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3331AAA2AB993E60458B6B /* HCReturnValueGetter.m */; };
 		BB333EB3405CFA5A54AB30CE /* HCIsEqual.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333DFF0305457C0CD69303 /* HCIsEqual.m */; };
 		BB333EB3C38A3D9EEAEC842A /* HCOrderingComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3337CE41E8621958EAE8BF /* HCOrderingComparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333EBAF352F0961A83E1A6 /* HCIsEqual.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333DFF0305457C0CD69303 /* HCIsEqual.m */; };
-		BB333EDC3E3320C65FB854B5 /* HCBoolReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333EDC6C01648EEBC00D5E /* HCBoolReturnTypeHandler.h */; };
+		BB333EDC3E3320C65FB854B5 /* HCBoolReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333EDC6C01648EEBC00D5E /* HCBoolReturnGetter.h */; };
 		BB333EECA8B5D2C68CC8EF72 /* NSInvocation+OCHamcrest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33309F9D72ED2CF53532A8 /* NSInvocation+OCHamcrest.m */; };
-		BB333EEEAF4355DA0CCB64D4 /* HCUnsignedCharReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333BE1D8EFF4596D019A40 /* HCUnsignedCharReturnTypeHandler.h */; };
-		BB333EF9E0C14539AE686528 /* HCCharReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333FED5158848B95B043F1 /* HCCharReturnTypeHandler.m */; };
+		BB333EEEAF4355DA0CCB64D4 /* HCUnsignedCharReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333BE1D8EFF4596D019A40 /* HCUnsignedCharReturnGetter.h */; };
+		BB333EF9E0C14539AE686528 /* HCCharReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333FED5158848B95B043F1 /* HCCharReturnGetter.m */; };
 		BB333F22130C3E2815EB3CE4 /* HCIsEqualIgnoringWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33377384F2BF4EA9694DA7 /* HCIsEqualIgnoringWhiteSpace.m */; };
 		BB333F5B324A75A04610D267 /* HCTestFailureHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3337F8ADEA5FCE59018962 /* HCTestFailureHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333F7FB7BA3AF26A162752 /* HCStringContainsInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3339B2CAF2C82161ED14F8 /* HCStringContainsInOrder.m */; };
-		BB333F8CC565D8068C47B3FE /* HCDoubleReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33303898210A59268030C8 /* HCDoubleReturnTypeHandler.m */; };
+		BB333F8CC565D8068C47B3FE /* HCDoubleReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33303898210A59268030C8 /* HCDoubleReturnGetter.m */; };
 		BB333F9085EBAAC25CDC41EA /* HCTestFailureHandlerChain.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3336D2152CF1F88C8FF743 /* HCTestFailureHandlerChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB333F90C371ADB4443F7CB0 /* HCUnsignedIntReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3331B51251AD3B252636B5 /* HCUnsignedIntReturnTypeHandler.h */; };
+		BB333F90C371ADB4443F7CB0 /* HCUnsignedIntReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3331B51251AD3B252636B5 /* HCUnsignedIntReturnGetter.h */; };
 		BB333FC3961C09A902683A7F /* HCSenTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333F6051CD0B739527337A /* HCSenTestFailureHandler.m */; };
-		BB333FD5A85510AE5AA9B519 /* HCLongLongReturnTypeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33330C459CF68E13DDD1D6 /* HCLongLongReturnTypeHandler.m */; };
+		BB333FD5A85510AE5AA9B519 /* HCLongLongReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33330C459CF68E13DDD1D6 /* HCLongLongReturnGetter.m */; };
 		BB333FE2E6441F4ADFE460AC /* HCIsIn.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333522A78D6A7D1A8414B3 /* HCIsIn.m */; };
-		BB333FE3A9E3E2083DCDE4AF /* HCUnsignedLongReturnTypeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3338DE3E5C649EB399B649 /* HCUnsignedLongReturnTypeHandler.h */; };
+		BB333FE3A9E3E2083DCDE4AF /* HCUnsignedLongReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3338DE3E5C649EB399B649 /* HCUnsignedLongReturnGetter.h */; };
 		BB333FEC8B49B249E92B3671 /* HCStringContains.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333144F9FA03AC04F8027D /* HCStringContains.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333FF1353091B71E6A3B33 /* HCTestFailureHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3337085D9BEFA6D52E7EB0 /* HCTestFailureHandlerChain.m */; };
 		BB333FFD6EAB7828C98E11EE /* HCConformsToProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3334EF9BFFB721161BB23F /* HCConformsToProtocol.m */; };
@@ -421,21 +421,21 @@
 		5F2773441436F81000B9683A /* ConformsToProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConformsToProtocolTest.m; sourceTree = "<group>"; };
 		77C7B8761429361200DE60CC /* HasPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasPropertyTest.m; sourceTree = "<group>"; };
 		BB333034CD6A38647E176A9A /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
-		BB33303898210A59268030C8 /* HCDoubleReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDoubleReturnTypeHandler.m; sourceTree = "<group>"; };
+		BB33303898210A59268030C8 /* HCDoubleReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDoubleReturnGetter.m; sourceTree = "<group>"; };
 		BB333049BE335209B4207B2A /* HCIsDictionaryContaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContaining.m; sourceTree = "<group>"; };
 		BB3330701E28789385EAB1C9 /* HCIsEqualToNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualToNumber.h; sourceTree = "<group>"; };
 		BB33309F9D72ED2CF53532A8 /* NSInvocation+OCHamcrest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+OCHamcrest.m"; sourceTree = "<group>"; };
 		BB3331127524965C9BCAD83A /* HCRequireNonNilObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilObject.h; sourceTree = "<group>"; };
 		BB33312A13BF3686BE841AD7 /* HCIsCollectionContainingInOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContainingInOrder.h; sourceTree = "<group>"; };
-		BB33312F8485C256B14867AF /* HCUnsignedLongLongReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUnsignedLongLongReturnTypeHandler.h; sourceTree = "<group>"; };
+		BB33312F8485C256B14867AF /* HCUnsignedLongLongReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUnsignedLongLongReturnGetter.h; sourceTree = "<group>"; };
 		BB333144F9FA03AC04F8027D /* HCStringContains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringContains.h; sourceTree = "<group>"; };
 		BB3331619B45E4E82B0FE72A /* HCIsDictionaryContainingEntries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContainingEntries.m; sourceTree = "<group>"; };
 		BB33317270E4A854112BCCEA /* HCIsNot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNot.h; sourceTree = "<group>"; };
 		BB333191F9604EA23746459E /* HCReturnTypeHandlerChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCReturnTypeHandlerChain.h; sourceTree = "<group>"; };
 		BB3331A34E31C49FE230D9BE /* HCIsCollectionContaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContaining.h; sourceTree = "<group>"; };
-		BB3331AAA2AB993E60458B6B /* HCReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCReturnTypeHandler.m; sourceTree = "<group>"; };
-		BB3331B51251AD3B252636B5 /* HCUnsignedIntReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUnsignedIntReturnTypeHandler.h; sourceTree = "<group>"; };
-		BB3331B99B691F7BFEF48591 /* HCBoolReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBoolReturnTypeHandler.m; sourceTree = "<group>"; };
+		BB3331AAA2AB993E60458B6B /* HCReturnValueGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCReturnValueGetter.m; sourceTree = "<group>"; };
+		BB3331B51251AD3B252636B5 /* HCUnsignedIntReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUnsignedIntReturnGetter.h; sourceTree = "<group>"; };
+		BB3331B99B691F7BFEF48591 /* HCBoolReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBoolReturnGetter.m; sourceTree = "<group>"; };
 		BB3331C74ACFA7AB0675A7FE /* HCStringContainsInOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringContainsInOrder.h; sourceTree = "<group>"; };
 		BB3331C8CBB96396DDA74467 /* HCHasCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHasCount.h; sourceTree = "<group>"; };
 		BB3331D467F6B759BE9C3246 /* HCDescribedAs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDescribedAs.h; sourceTree = "<group>"; };
@@ -443,14 +443,14 @@
 		BB3331EECFE91DCA05C34EFD /* HCIsCloseTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCloseTo.m; sourceTree = "<group>"; };
 		BB333215A6C1406E57ED34C4 /* HCStringDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringDescription.h; sourceTree = "<group>"; };
 		BB33322097042E108614BDAD /* HCIsTypeOf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsTypeOf.m; sourceTree = "<group>"; };
-		BB3332508DE228EEA28B7324 /* HCLongLongReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCLongLongReturnTypeHandler.h; sourceTree = "<group>"; };
+		BB3332508DE228EEA28B7324 /* HCLongLongReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCLongLongReturnGetter.h; sourceTree = "<group>"; };
 		BB333255C8855929B9264684 /* HCAllOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAllOf.h; sourceTree = "<group>"; };
 		BB33328F1CBC78AC3D9B6E78 /* HCIsEmptyCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEmptyCollection.m; sourceTree = "<group>"; };
 		BB3332CD4593BA0B619AE30C /* HCIsCollectionContainingInAnyOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContainingInAnyOrder.h; sourceTree = "<group>"; };
-		BB33330C459CF68E13DDD1D6 /* HCLongLongReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCLongLongReturnTypeHandler.m; sourceTree = "<group>"; };
+		BB33330C459CF68E13DDD1D6 /* HCLongLongReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCLongLongReturnGetter.m; sourceTree = "<group>"; };
 		BB33331178EE64329AB6A6DA /* HCSubstringMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSubstringMatcher.m; sourceTree = "<group>"; };
-		BB333334135CAFF20A0E19FF /* HCLongReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCLongReturnTypeHandler.m; sourceTree = "<group>"; };
-		BB33333B48A97B0771A3C256 /* HCUnsignedLongReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUnsignedLongReturnTypeHandler.m; sourceTree = "<group>"; };
+		BB333334135CAFF20A0E19FF /* HCLongReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCLongReturnGetter.m; sourceTree = "<group>"; };
+		BB33333B48A97B0771A3C256 /* HCUnsignedLongReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUnsignedLongReturnGetter.m; sourceTree = "<group>"; };
 		BB33334930C42DF9114F9D34 /* HCIs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIs.m; sourceTree = "<group>"; };
 		BB33334CF68184328CD67F30 /* HCIsTypeOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsTypeOf.h; sourceTree = "<group>"; };
 		BB33338462C2743FF78AA51B /* HCIsEqualIgnoringWhiteSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualIgnoringWhiteSpace.h; sourceTree = "<group>"; };
@@ -462,7 +462,7 @@
 		BB33343C9B176C5DE07DE003 /* HCHasProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHasProperty.m; sourceTree = "<group>"; };
 		BB3334410C93469CF325AA1D /* HCConformsToProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCConformsToProtocol.h; sourceTree = "<group>"; };
 		BB33346362D58A13AA1BA54B /* HCIsCloseTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCloseTo.h; sourceTree = "<group>"; };
-		BB33347A9E4365F763632850 /* HCUnsignedLongLongReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUnsignedLongLongReturnTypeHandler.m; sourceTree = "<group>"; };
+		BB33347A9E4365F763632850 /* HCUnsignedLongLongReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUnsignedLongLongReturnGetter.m; sourceTree = "<group>"; };
 		BB33347EC840056B268877BF /* HCIsNot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsNot.m; sourceTree = "<group>"; };
 		BB3334C2039E9686ABB73AE2 /* HCDescribedAs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDescribedAs.m; sourceTree = "<group>"; };
 		BB3334EF9BFFB721161BB23F /* HCConformsToProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCConformsToProtocol.m; sourceTree = "<group>"; };
@@ -470,15 +470,15 @@
 		BB333503A24A236A19B8A468 /* HCIsEqual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqual.h; sourceTree = "<group>"; };
 		BB333522A78D6A7D1A8414B3 /* HCIsIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsIn.m; sourceTree = "<group>"; };
 		BB333528C8E2ED8489ACB161 /* HCTestFailureHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureHandler.m; sourceTree = "<group>"; };
-		BB33355AD08369793188986F /* HCObjectReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCObjectReturnTypeHandler.m; sourceTree = "<group>"; };
+		BB33355AD08369793188986F /* HCObjectReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCObjectReturnGetter.m; sourceTree = "<group>"; };
 		BB33356A6185FA4F1B6E240F /* OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHamcrest.h; sourceTree = "<group>"; };
 		BB33359133039118AE88E2A8 /* HCIsNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNil.h; sourceTree = "<group>"; };
 		BB333594FB0AC2DAC3B73077 /* HCIsSame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsSame.m; sourceTree = "<group>"; };
 		BB3335974ADA5C5408FE0F69 /* HCStringEndsWith.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringEndsWith.m; sourceTree = "<group>"; };
-		BB3335A8FE1E47B0F4407027 /* HCShortReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCShortReturnTypeHandler.h; sourceTree = "<group>"; };
+		BB3335A8FE1E47B0F4407027 /* HCShortReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCShortReturnGetter.h; sourceTree = "<group>"; };
 		BB3335CC804D0A774E5F1041 /* HCIsNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsNil.m; sourceTree = "<group>"; };
 		BB3335EC3CC47489B4C5395E /* HCWrapInMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCWrapInMatcher.m; sourceTree = "<group>"; };
-		BB33363375E9DE829A8AD41D /* HCShortReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCShortReturnTypeHandler.m; sourceTree = "<group>"; };
+		BB33363375E9DE829A8AD41D /* HCShortReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCShortReturnGetter.m; sourceTree = "<group>"; };
 		BB3336446380772E9629E08E /* HCAllOf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAllOf.m; sourceTree = "<group>"; };
 		BB33365155F84099730C9B56 /* HCClassMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCClassMatcher.h; sourceTree = "<group>"; };
 		BB3336D2152CF1F88C8FF743 /* HCTestFailureHandlerChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailureHandlerChain.h; sourceTree = "<group>"; };
@@ -487,7 +487,7 @@
 		BB3336FA0B545673BD3630E2 /* HCStringStartsWith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringStartsWith.h; sourceTree = "<group>"; };
 		BB3337085D9BEFA6D52E7EB0 /* HCTestFailureHandlerChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureHandlerChain.m; sourceTree = "<group>"; };
 		BB33371136854FB7CAF2A5F7 /* HCIsEqualIgnoringCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualIgnoringCase.h; sourceTree = "<group>"; };
-		BB333725B2814AE9CF044B5B /* HCIntReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIntReturnTypeHandler.h; sourceTree = "<group>"; };
+		BB333725B2814AE9CF044B5B /* HCIntReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIntReturnGetter.h; sourceTree = "<group>"; };
 		BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTypeOfTest.m; sourceTree = "<group>"; };
 		BB33377384F2BF4EA9694DA7 /* HCIsEqualIgnoringWhiteSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualIgnoringWhiteSpace.m; sourceTree = "<group>"; };
 		BB333785CDF67F8F0284B9CA /* HCBaseDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBaseDescription.m; sourceTree = "<group>"; };
@@ -503,19 +503,19 @@
 		BB3338AB92DDE4ACF56D7C1B /* HCIsCollectionContaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionContaining.m; sourceTree = "<group>"; };
 		BB3338B60F3A83AE527E91A7 /* HCSubstringMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSubstringMatcher.h; sourceTree = "<group>"; };
 		BB3338BCBEA080BE71CA0C9D /* HCBaseMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBaseMatcher.m; sourceTree = "<group>"; };
-		BB3338DE3E5C649EB399B649 /* HCUnsignedLongReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUnsignedLongReturnTypeHandler.h; sourceTree = "<group>"; };
+		BB3338DE3E5C649EB399B649 /* HCUnsignedLongReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUnsignedLongReturnGetter.h; sourceTree = "<group>"; };
 		BB3338EDDD9B8C82083DD7FB /* HCIsEmptyCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEmptyCollection.h; sourceTree = "<group>"; };
 		BB3339100D7159DBF2387893 /* HCIsDictionaryContainingValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContainingValue.m; sourceTree = "<group>"; };
 		BB33391EC19272E15C3D2E1A /* HCGenericTestFailureHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCGenericTestFailureHandler.h; sourceTree = "<group>"; };
 		BB333930FE07807045EEE866 /* HCTestFailure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailure.h; sourceTree = "<group>"; };
 		BB33394F75CEE379A525320B /* HCXCTestFailureHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCXCTestFailureHandler.h; sourceTree = "<group>"; };
-		BB3339614DAE31258BA73352 /* HCIntReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIntReturnTypeHandler.m; sourceTree = "<group>"; };
+		BB3339614DAE31258BA73352 /* HCIntReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIntReturnGetter.m; sourceTree = "<group>"; };
 		BB333986B013CA09B71D376B /* HCIsCollectionContainingInOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionContainingInOrder.m; sourceTree = "<group>"; };
 		BB3339B2CAF2C82161ED14F8 /* HCStringContainsInOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringContainsInOrder.m; sourceTree = "<group>"; };
 		BB3339BE4C0ECEAB7169772A /* NSInvocation+OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+OCHamcrest.h"; sourceTree = "<group>"; };
-		BB333A258B9C1CDFB1B184C3 /* HCUnsignedShortReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUnsignedShortReturnTypeHandler.h; sourceTree = "<group>"; };
+		BB333A258B9C1CDFB1B184C3 /* HCUnsignedShortReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUnsignedShortReturnGetter.h; sourceTree = "<group>"; };
 		BB333A5C2975038FF06BDCBA /* HCIsDictionaryContainingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingValue.h; sourceTree = "<group>"; };
-		BB333A5C3A9A42E4521010F1 /* HCUnsignedShortReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUnsignedShortReturnTypeHandler.m; sourceTree = "<group>"; };
+		BB333A5C3A9A42E4521010F1 /* HCUnsignedShortReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUnsignedShortReturnGetter.m; sourceTree = "<group>"; };
 		BB333A7430335F388E6DCF71 /* HCStringStartsWith.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringStartsWith.m; sourceTree = "<group>"; };
 		BB333A801AD666BCC23ED955 /* HCNumberAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCNumberAssert.m; sourceTree = "<group>"; };
 		BB333A9273EFADF46D908BC4 /* HCIsEqualIgnoringCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualIgnoringCase.m; sourceTree = "<group>"; };
@@ -525,17 +525,17 @@
 		BB333B7F19A5645CF7FC3E7E /* HCSelfDescribing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSelfDescribing.h; sourceTree = "<group>"; };
 		BB333BC37F9AB8BFAB79AE16 /* HCIsCollectionOnlyContaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionOnlyContaining.h; sourceTree = "<group>"; };
 		BB333BD87164C606AE0BE027 /* HCReturnTypeHandlerChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCReturnTypeHandlerChain.m; sourceTree = "<group>"; };
-		BB333BE1D8EFF4596D019A40 /* HCUnsignedCharReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUnsignedCharReturnTypeHandler.h; sourceTree = "<group>"; };
+		BB333BE1D8EFF4596D019A40 /* HCUnsignedCharReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUnsignedCharReturnGetter.h; sourceTree = "<group>"; };
 		BB333BF1C94AD91D6F5F5A95 /* HCAnyOf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAnyOf.m; sourceTree = "<group>"; };
-		BB333C3F40A01E4269FA22BE /* HCLongReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCLongReturnTypeHandler.h; sourceTree = "<group>"; };
-		BB333C5BD261A2F9861F78A4 /* HCCharReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCharReturnTypeHandler.h; sourceTree = "<group>"; };
+		BB333C3F40A01E4269FA22BE /* HCLongReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCLongReturnGetter.h; sourceTree = "<group>"; };
+		BB333C5BD261A2F9861F78A4 /* HCCharReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCharReturnGetter.h; sourceTree = "<group>"; };
 		BB333C70DFAD4A867B769381 /* HCClassMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCClassMatcher.m; sourceTree = "<group>"; };
 		BB333C7DFDB2404398E9E6C5 /* HCCollect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCollect.h; sourceTree = "<group>"; };
 		BB333C88565D58DE2AAAAD15 /* HCRequireNonNilObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCRequireNonNilObject.m; sourceTree = "<group>"; };
 		BB333C93865B64F27B2639FE /* HCIsSame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsSame.h; sourceTree = "<group>"; };
-		BB333C975A48CD4BC2EA4ED3 /* HCFloatReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCFloatReturnTypeHandler.m; sourceTree = "<group>"; };
-		BB333CA45EE4CF9D260DD50D /* HCUnsignedIntReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUnsignedIntReturnTypeHandler.m; sourceTree = "<group>"; };
-		BB333CC6471D7E5CB41558EF /* HCReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCReturnTypeHandler.h; sourceTree = "<group>"; };
+		BB333C975A48CD4BC2EA4ED3 /* HCFloatReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCFloatReturnGetter.m; sourceTree = "<group>"; };
+		BB333CA45EE4CF9D260DD50D /* HCUnsignedIntReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUnsignedIntReturnGetter.m; sourceTree = "<group>"; };
+		BB333CC6471D7E5CB41558EF /* HCReturnValueGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCReturnValueGetter.h; sourceTree = "<group>"; };
 		BB333CF8C391D5A08F331B45 /* HCAssertThat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAssertThat.m; sourceTree = "<group>"; };
 		BB333D00EB0E21D420A7B22B /* HCInvocationMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCInvocationMatcher.h; sourceTree = "<group>"; };
 		BB333D2D401EA09BE78BF7E9 /* HCDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDescription.h; sourceTree = "<group>"; };
@@ -549,18 +549,18 @@
 		BB333E594CE94324024C2E19 /* HCHasCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHasCount.m; sourceTree = "<group>"; };
 		BB333EA4C4546D46CF8A4044 /* HCStringContains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringContains.m; sourceTree = "<group>"; };
 		BB333EC183D2675A9DF05F67 /* HCIsAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsAnything.h; sourceTree = "<group>"; };
-		BB333EDC6C01648EEBC00D5E /* HCBoolReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBoolReturnTypeHandler.h; sourceTree = "<group>"; };
+		BB333EDC6C01648EEBC00D5E /* HCBoolReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBoolReturnGetter.h; sourceTree = "<group>"; };
 		BB333EEBE8C48A68933572E9 /* HCNumberAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNumberAssert.h; sourceTree = "<group>"; };
-		BB333F5AFEB5565130751633 /* HCUnsignedCharReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUnsignedCharReturnTypeHandler.m; sourceTree = "<group>"; };
+		BB333F5AFEB5565130751633 /* HCUnsignedCharReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUnsignedCharReturnGetter.m; sourceTree = "<group>"; };
 		BB333F6051CD0B739527337A /* HCSenTestFailureHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSenTestFailureHandler.m; sourceTree = "<group>"; };
 		BB333F6535F43C37CBF517FA /* HCTestFailure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailure.m; sourceTree = "<group>"; };
-		BB333F67A18EA568D7683A58 /* HCDoubleReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDoubleReturnTypeHandler.h; sourceTree = "<group>"; };
+		BB333F67A18EA568D7683A58 /* HCDoubleReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDoubleReturnGetter.h; sourceTree = "<group>"; };
 		BB333F8E4CF5AD791C99B6FA /* HCIsDictionaryContainingEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingEntries.h; sourceTree = "<group>"; };
-		BB333FACCFA7D57857673665 /* HCObjectReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCObjectReturnTypeHandler.h; sourceTree = "<group>"; };
+		BB333FACCFA7D57857673665 /* HCObjectReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCObjectReturnGetter.h; sourceTree = "<group>"; };
 		BB333FDE3455183AB9302310 /* HCIsDictionaryContaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContaining.h; sourceTree = "<group>"; };
 		BB333FE413C7E8FA9C811BF1 /* HCIsCollectionContainingInAnyOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionContainingInAnyOrder.m; sourceTree = "<group>"; };
-		BB333FED5158848B95B043F1 /* HCCharReturnTypeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCharReturnTypeHandler.m; sourceTree = "<group>"; };
-		BB333FF31E6FD6CB3A0DC45E /* HCFloatReturnTypeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCFloatReturnTypeHandler.h; sourceTree = "<group>"; };
+		BB333FED5158848B95B043F1 /* HCCharReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCharReturnGetter.m; sourceTree = "<group>"; };
+		BB333FF31E6FD6CB3A0DC45E /* HCFloatReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCFloatReturnGetter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -828,7 +828,7 @@
 		BB33378F4CD8AE4C7EFC1CF0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				BB333B223BB1036A1090E089 /* ReturnTypeHandlers */,
+				BB333B223BB1036A1090E089 /* ReturnValueGetters */,
 				BB3332B119BE5F32E3F02CE3 /* TestFailureHandlers */,
 				BB333C7DFDB2404398E9E6C5 /* HCCollect.h */,
 				BB3333FD5A8D6F4A718D5D98 /* HCCollect.m */,
@@ -859,43 +859,43 @@
 			path = Logical;
 			sourceTree = "<group>";
 		};
-		BB333B223BB1036A1090E089 /* ReturnTypeHandlers */ = {
+		BB333B223BB1036A1090E089 /* ReturnValueGetters */ = {
 			isa = PBXGroup;
 			children = (
-				BB333EDC6C01648EEBC00D5E /* HCBoolReturnTypeHandler.h */,
-				BB3331B99B691F7BFEF48591 /* HCBoolReturnTypeHandler.m */,
-				BB333C5BD261A2F9861F78A4 /* HCCharReturnTypeHandler.h */,
-				BB333FED5158848B95B043F1 /* HCCharReturnTypeHandler.m */,
-				BB333F67A18EA568D7683A58 /* HCDoubleReturnTypeHandler.h */,
-				BB33303898210A59268030C8 /* HCDoubleReturnTypeHandler.m */,
-				BB333FF31E6FD6CB3A0DC45E /* HCFloatReturnTypeHandler.h */,
-				BB333C975A48CD4BC2EA4ED3 /* HCFloatReturnTypeHandler.m */,
-				BB333725B2814AE9CF044B5B /* HCIntReturnTypeHandler.h */,
-				BB3339614DAE31258BA73352 /* HCIntReturnTypeHandler.m */,
-				BB3332508DE228EEA28B7324 /* HCLongLongReturnTypeHandler.h */,
-				BB33330C459CF68E13DDD1D6 /* HCLongLongReturnTypeHandler.m */,
-				BB333C3F40A01E4269FA22BE /* HCLongReturnTypeHandler.h */,
-				BB333334135CAFF20A0E19FF /* HCLongReturnTypeHandler.m */,
-				BB333FACCFA7D57857673665 /* HCObjectReturnTypeHandler.h */,
-				BB33355AD08369793188986F /* HCObjectReturnTypeHandler.m */,
-				BB333CC6471D7E5CB41558EF /* HCReturnTypeHandler.h */,
-				BB3331AAA2AB993E60458B6B /* HCReturnTypeHandler.m */,
+				BB333EDC6C01648EEBC00D5E /* HCBoolReturnGetter.h */,
+				BB3331B99B691F7BFEF48591 /* HCBoolReturnGetter.m */,
+				BB333C5BD261A2F9861F78A4 /* HCCharReturnGetter.h */,
+				BB333FED5158848B95B043F1 /* HCCharReturnGetter.m */,
+				BB333F67A18EA568D7683A58 /* HCDoubleReturnGetter.h */,
+				BB33303898210A59268030C8 /* HCDoubleReturnGetter.m */,
+				BB333FF31E6FD6CB3A0DC45E /* HCFloatReturnGetter.h */,
+				BB333C975A48CD4BC2EA4ED3 /* HCFloatReturnGetter.m */,
+				BB333725B2814AE9CF044B5B /* HCIntReturnGetter.h */,
+				BB3339614DAE31258BA73352 /* HCIntReturnGetter.m */,
+				BB3332508DE228EEA28B7324 /* HCLongLongReturnGetter.h */,
+				BB33330C459CF68E13DDD1D6 /* HCLongLongReturnGetter.m */,
+				BB333C3F40A01E4269FA22BE /* HCLongReturnGetter.h */,
+				BB333334135CAFF20A0E19FF /* HCLongReturnGetter.m */,
+				BB333FACCFA7D57857673665 /* HCObjectReturnGetter.h */,
+				BB33355AD08369793188986F /* HCObjectReturnGetter.m */,
+				BB333CC6471D7E5CB41558EF /* HCReturnValueGetter.h */,
+				BB3331AAA2AB993E60458B6B /* HCReturnValueGetter.m */,
 				BB333191F9604EA23746459E /* HCReturnTypeHandlerChain.h */,
 				BB333BD87164C606AE0BE027 /* HCReturnTypeHandlerChain.m */,
-				BB3335A8FE1E47B0F4407027 /* HCShortReturnTypeHandler.h */,
-				BB33363375E9DE829A8AD41D /* HCShortReturnTypeHandler.m */,
-				BB333BE1D8EFF4596D019A40 /* HCUnsignedCharReturnTypeHandler.h */,
-				BB333F5AFEB5565130751633 /* HCUnsignedCharReturnTypeHandler.m */,
-				BB3331B51251AD3B252636B5 /* HCUnsignedIntReturnTypeHandler.h */,
-				BB333CA45EE4CF9D260DD50D /* HCUnsignedIntReturnTypeHandler.m */,
-				BB33312F8485C256B14867AF /* HCUnsignedLongLongReturnTypeHandler.h */,
-				BB33347A9E4365F763632850 /* HCUnsignedLongLongReturnTypeHandler.m */,
-				BB3338DE3E5C649EB399B649 /* HCUnsignedLongReturnTypeHandler.h */,
-				BB33333B48A97B0771A3C256 /* HCUnsignedLongReturnTypeHandler.m */,
-				BB333A258B9C1CDFB1B184C3 /* HCUnsignedShortReturnTypeHandler.h */,
-				BB333A5C3A9A42E4521010F1 /* HCUnsignedShortReturnTypeHandler.m */,
+				BB3335A8FE1E47B0F4407027 /* HCShortReturnGetter.h */,
+				BB33363375E9DE829A8AD41D /* HCShortReturnGetter.m */,
+				BB333BE1D8EFF4596D019A40 /* HCUnsignedCharReturnGetter.h */,
+				BB333F5AFEB5565130751633 /* HCUnsignedCharReturnGetter.m */,
+				BB3331B51251AD3B252636B5 /* HCUnsignedIntReturnGetter.h */,
+				BB333CA45EE4CF9D260DD50D /* HCUnsignedIntReturnGetter.m */,
+				BB33312F8485C256B14867AF /* HCUnsignedLongLongReturnGetter.h */,
+				BB33347A9E4365F763632850 /* HCUnsignedLongLongReturnGetter.m */,
+				BB3338DE3E5C649EB399B649 /* HCUnsignedLongReturnGetter.h */,
+				BB33333B48A97B0771A3C256 /* HCUnsignedLongReturnGetter.m */,
+				BB333A258B9C1CDFB1B184C3 /* HCUnsignedShortReturnGetter.h */,
+				BB333A5C3A9A42E4521010F1 /* HCUnsignedShortReturnGetter.m */,
 			);
-			path = ReturnTypeHandlers;
+			path = ReturnValueGetters;
 			sourceTree = "<group>";
 		};
 		BB333BCFCFCA269190F9F148 /* Number */ = {
@@ -994,22 +994,22 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB3339A4AEEDCDF3C4E96491 /* HCBoolReturnTypeHandler.h in Headers */,
-				BB33365B91A88641580F886E /* HCCharReturnTypeHandler.h in Headers */,
-				BB333031608DFFD2E76CD745 /* HCDoubleReturnTypeHandler.h in Headers */,
-				BB333B4B561F53C31972B9D9 /* HCFloatReturnTypeHandler.h in Headers */,
-				BB333494B740EF5FC786BB56 /* HCIntReturnTypeHandler.h in Headers */,
-				BB333523DC58D4FD4797B9C7 /* HCLongLongReturnTypeHandler.h in Headers */,
-				BB3332191B1A602F69B8CC77 /* HCLongReturnTypeHandler.h in Headers */,
-				BB3334425297552B3C06F861 /* HCObjectReturnTypeHandler.h in Headers */,
-				BB3338179D48057215091538 /* HCReturnTypeHandler.h in Headers */,
+				BB3339A4AEEDCDF3C4E96491 /* HCBoolReturnGetter.h in Headers */,
+				BB33365B91A88641580F886E /* HCCharReturnGetter.h in Headers */,
+				BB333031608DFFD2E76CD745 /* HCDoubleReturnGetter.h in Headers */,
+				BB333B4B561F53C31972B9D9 /* HCFloatReturnGetter.h in Headers */,
+				BB333494B740EF5FC786BB56 /* HCIntReturnGetter.h in Headers */,
+				BB333523DC58D4FD4797B9C7 /* HCLongLongReturnGetter.h in Headers */,
+				BB3332191B1A602F69B8CC77 /* HCLongReturnGetter.h in Headers */,
+				BB3334425297552B3C06F861 /* HCObjectReturnGetter.h in Headers */,
+				BB3338179D48057215091538 /* HCReturnValueGetter.h in Headers */,
 				BB333BE50C075D306EDA2E98 /* HCReturnTypeHandlerChain.h in Headers */,
-				BB333D83E68045BBEA3B3796 /* HCShortReturnTypeHandler.h in Headers */,
-				BB3332EA9B7B56B9364B4023 /* HCUnsignedCharReturnTypeHandler.h in Headers */,
-				BB333F90C371ADB4443F7CB0 /* HCUnsignedIntReturnTypeHandler.h in Headers */,
-				BB33318EE99C688C6076DEBE /* HCUnsignedLongLongReturnTypeHandler.h in Headers */,
-				BB333625D9CC6652DA94FF09 /* HCUnsignedLongReturnTypeHandler.h in Headers */,
-				BB333A10646B1A68ACCDC472 /* HCUnsignedShortReturnTypeHandler.h in Headers */,
+				BB333D83E68045BBEA3B3796 /* HCShortReturnGetter.h in Headers */,
+				BB3332EA9B7B56B9364B4023 /* HCUnsignedCharReturnGetter.h in Headers */,
+				BB333F90C371ADB4443F7CB0 /* HCUnsignedIntReturnGetter.h in Headers */,
+				BB33318EE99C688C6076DEBE /* HCUnsignedLongLongReturnGetter.h in Headers */,
+				BB333625D9CC6652DA94FF09 /* HCUnsignedLongReturnGetter.h in Headers */,
+				BB333A10646B1A68ACCDC472 /* HCUnsignedShortReturnGetter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1068,22 +1068,22 @@
 				BB333F5B324A75A04610D267 /* HCTestFailureHandler.h in Headers */,
 				BB333F9085EBAAC25CDC41EA /* HCTestFailureHandlerChain.h in Headers */,
 				BB3337B4866BAF4A120919CF /* HCXCTestFailureHandler.h in Headers */,
-				BB333EDC3E3320C65FB854B5 /* HCBoolReturnTypeHandler.h in Headers */,
-				BB3337267CA4ACA9E3EB6896 /* HCCharReturnTypeHandler.h in Headers */,
-				BB3337AB405029A86CDF3FAD /* HCDoubleReturnTypeHandler.h in Headers */,
-				BB333ADE67DDD25C6E6EF058 /* HCFloatReturnTypeHandler.h in Headers */,
-				BB33370D6F5B9B4978104E4B /* HCIntReturnTypeHandler.h in Headers */,
-				BB333260BA38F45B4864A846 /* HCLongLongReturnTypeHandler.h in Headers */,
-				BB3335C23B645B2E01C1DD95 /* HCLongReturnTypeHandler.h in Headers */,
-				BB333A62F20EA2AE048FC857 /* HCObjectReturnTypeHandler.h in Headers */,
-				BB333DE89A2F8557B268A355 /* HCReturnTypeHandler.h in Headers */,
+				BB333EDC3E3320C65FB854B5 /* HCBoolReturnGetter.h in Headers */,
+				BB3337267CA4ACA9E3EB6896 /* HCCharReturnGetter.h in Headers */,
+				BB3337AB405029A86CDF3FAD /* HCDoubleReturnGetter.h in Headers */,
+				BB333ADE67DDD25C6E6EF058 /* HCFloatReturnGetter.h in Headers */,
+				BB33370D6F5B9B4978104E4B /* HCIntReturnGetter.h in Headers */,
+				BB333260BA38F45B4864A846 /* HCLongLongReturnGetter.h in Headers */,
+				BB3335C23B645B2E01C1DD95 /* HCLongReturnGetter.h in Headers */,
+				BB333A62F20EA2AE048FC857 /* HCObjectReturnGetter.h in Headers */,
+				BB333DE89A2F8557B268A355 /* HCReturnValueGetter.h in Headers */,
 				BB33371F6028F465B81A4E5F /* HCReturnTypeHandlerChain.h in Headers */,
-				BB3335CF33C2945D68DF426D /* HCShortReturnTypeHandler.h in Headers */,
-				BB333EEEAF4355DA0CCB64D4 /* HCUnsignedCharReturnTypeHandler.h in Headers */,
-				BB3336121208AAC5B1DDE8E9 /* HCUnsignedIntReturnTypeHandler.h in Headers */,
-				BB3332440D6C92F1E9650F9A /* HCUnsignedLongLongReturnTypeHandler.h in Headers */,
-				BB333FE3A9E3E2083DCDE4AF /* HCUnsignedLongReturnTypeHandler.h in Headers */,
-				BB3339D6DAC64560919B4B71 /* HCUnsignedShortReturnTypeHandler.h in Headers */,
+				BB3335CF33C2945D68DF426D /* HCShortReturnGetter.h in Headers */,
+				BB333EEEAF4355DA0CCB64D4 /* HCUnsignedCharReturnGetter.h in Headers */,
+				BB3336121208AAC5B1DDE8E9 /* HCUnsignedIntReturnGetter.h in Headers */,
+				BB3332440D6C92F1E9650F9A /* HCUnsignedLongLongReturnGetter.h in Headers */,
+				BB333FE3A9E3E2083DCDE4AF /* HCUnsignedLongReturnGetter.h in Headers */,
+				BB3339D6DAC64560919B4B71 /* HCUnsignedShortReturnGetter.h in Headers */,
 				BB333BCE07B55ED523B267F7 /* HCRequireNonNilObject.h in Headers */,
 				BB333A7CCE8A0DF95052F67C /* HCInvocationMatcher.h in Headers */,
 				BB333C793CAFFF7E4FB5BA2D /* HCCollect.h in Headers */,
@@ -1345,22 +1345,22 @@
 				BB33302772CACC61A1B4DB74 /* HCTestFailureHandler.m in Sources */,
 				BB3333346B22FC64994ED11E /* HCTestFailureHandlerChain.m in Sources */,
 				BB3337E931781280D48FB372 /* HCXCTestFailureHandler.m in Sources */,
-				BB3331A77D7C99A487A89434 /* HCBoolReturnTypeHandler.m in Sources */,
-				BB333EF9E0C14539AE686528 /* HCCharReturnTypeHandler.m in Sources */,
-				BB333F8CC565D8068C47B3FE /* HCDoubleReturnTypeHandler.m in Sources */,
-				BB333328EA1EFCED9C811321 /* HCFloatReturnTypeHandler.m in Sources */,
-				BB33321509F1659FB29AD59E /* HCIntReturnTypeHandler.m in Sources */,
-				BB333ACAD45079E5160B4B2D /* HCLongLongReturnTypeHandler.m in Sources */,
-				BB3339D8979DFFEBB1AEB26D /* HCLongReturnTypeHandler.m in Sources */,
-				BB3337895E6D085546B857EC /* HCObjectReturnTypeHandler.m in Sources */,
-				BB333EA74F069D831202108E /* HCReturnTypeHandler.m in Sources */,
+				BB3331A77D7C99A487A89434 /* HCBoolReturnGetter.m in Sources */,
+				BB333EF9E0C14539AE686528 /* HCCharReturnGetter.m in Sources */,
+				BB333F8CC565D8068C47B3FE /* HCDoubleReturnGetter.m in Sources */,
+				BB333328EA1EFCED9C811321 /* HCFloatReturnGetter.m in Sources */,
+				BB33321509F1659FB29AD59E /* HCIntReturnGetter.m in Sources */,
+				BB333ACAD45079E5160B4B2D /* HCLongLongReturnGetter.m in Sources */,
+				BB3339D8979DFFEBB1AEB26D /* HCLongReturnGetter.m in Sources */,
+				BB3337895E6D085546B857EC /* HCObjectReturnGetter.m in Sources */,
+				BB333EA74F069D831202108E /* HCReturnValueGetter.m in Sources */,
 				BB3330B79DF7A5A15B7182E8 /* HCReturnTypeHandlerChain.m in Sources */,
-				BB3339D3E0792F98EE3F7D07 /* HCShortReturnTypeHandler.m in Sources */,
-				BB3336E5733952CCFE8A6BBC /* HCUnsignedCharReturnTypeHandler.m in Sources */,
-				BB333DFB6E6D7C86888EC7AA /* HCUnsignedIntReturnTypeHandler.m in Sources */,
-				BB333B4AB9E7656A98D0D172 /* HCUnsignedLongLongReturnTypeHandler.m in Sources */,
-				BB333E360A90374209909E7E /* HCUnsignedLongReturnTypeHandler.m in Sources */,
-				BB3334CE1D4AE1517BD55CC5 /* HCUnsignedShortReturnTypeHandler.m in Sources */,
+				BB3339D3E0792F98EE3F7D07 /* HCShortReturnGetter.m in Sources */,
+				BB3336E5733952CCFE8A6BBC /* HCUnsignedCharReturnGetter.m in Sources */,
+				BB333DFB6E6D7C86888EC7AA /* HCUnsignedIntReturnGetter.m in Sources */,
+				BB333B4AB9E7656A98D0D172 /* HCUnsignedLongLongReturnGetter.m in Sources */,
+				BB333E360A90374209909E7E /* HCUnsignedLongReturnGetter.m in Sources */,
+				BB3334CE1D4AE1517BD55CC5 /* HCUnsignedShortReturnGetter.m in Sources */,
 				BB333EECA8B5D2C68CC8EF72 /* NSInvocation+OCHamcrest.m in Sources */,
 				BB33313D3DCEF8B438964913 /* HCRequireNonNilObject.m in Sources */,
 				BB333D2770D5C4DD8E4D7633 /* HCWrapInMatcher.m in Sources */,
@@ -1471,22 +1471,22 @@
 				BB33339CC090FAA28495D835 /* HCTestFailureHandler.m in Sources */,
 				BB333FF1353091B71E6A3B33 /* HCTestFailureHandlerChain.m in Sources */,
 				BB333451E989F24386136004 /* HCXCTestFailureHandler.m in Sources */,
-				BB3333BCD2E3A2D26AA15D40 /* HCBoolReturnTypeHandler.m in Sources */,
-				BB33309748583DA78A7C98ED /* HCCharReturnTypeHandler.m in Sources */,
-				BB3335FB367CC6AD40BF6BA7 /* HCDoubleReturnTypeHandler.m in Sources */,
-				BB3337DBEBED3443E8DB7A52 /* HCFloatReturnTypeHandler.m in Sources */,
-				BB333C78E5F9DB528838CA5A /* HCIntReturnTypeHandler.m in Sources */,
-				BB333FD5A85510AE5AA9B519 /* HCLongLongReturnTypeHandler.m in Sources */,
-				BB3333502C76D73346A73631 /* HCLongReturnTypeHandler.m in Sources */,
-				BB3338E155E644CFB619CFEF /* HCObjectReturnTypeHandler.m in Sources */,
-				BB3335EAC1E9E47F87D50EDF /* HCReturnTypeHandler.m in Sources */,
+				BB3333BCD2E3A2D26AA15D40 /* HCBoolReturnGetter.m in Sources */,
+				BB33309748583DA78A7C98ED /* HCCharReturnGetter.m in Sources */,
+				BB3335FB367CC6AD40BF6BA7 /* HCDoubleReturnGetter.m in Sources */,
+				BB3337DBEBED3443E8DB7A52 /* HCFloatReturnGetter.m in Sources */,
+				BB333C78E5F9DB528838CA5A /* HCIntReturnGetter.m in Sources */,
+				BB333FD5A85510AE5AA9B519 /* HCLongLongReturnGetter.m in Sources */,
+				BB3333502C76D73346A73631 /* HCLongReturnGetter.m in Sources */,
+				BB3338E155E644CFB619CFEF /* HCObjectReturnGetter.m in Sources */,
+				BB3335EAC1E9E47F87D50EDF /* HCReturnValueGetter.m in Sources */,
 				BB3330504048A30E7C190A19 /* HCReturnTypeHandlerChain.m in Sources */,
-				BB33362FA587A9B15E5C0D9B /* HCShortReturnTypeHandler.m in Sources */,
-				BB3336B101EC9615B113A6D5 /* HCUnsignedCharReturnTypeHandler.m in Sources */,
-				BB3337CC95C9FD768019495D /* HCUnsignedIntReturnTypeHandler.m in Sources */,
-				BB3332C8A3C41D9A4A4211AC /* HCUnsignedLongLongReturnTypeHandler.m in Sources */,
-				BB3333CBF2F94416D6F3E265 /* HCUnsignedLongReturnTypeHandler.m in Sources */,
-				BB3331D8A9949686B47D2203 /* HCUnsignedShortReturnTypeHandler.m in Sources */,
+				BB33362FA587A9B15E5C0D9B /* HCShortReturnGetter.m in Sources */,
+				BB3336B101EC9615B113A6D5 /* HCUnsignedCharReturnGetter.m in Sources */,
+				BB3337CC95C9FD768019495D /* HCUnsignedIntReturnGetter.m in Sources */,
+				BB3332C8A3C41D9A4A4211AC /* HCUnsignedLongLongReturnGetter.m in Sources */,
+				BB3333CBF2F94416D6F3E265 /* HCUnsignedLongReturnGetter.m in Sources */,
+				BB3331D8A9949686B47D2203 /* HCUnsignedShortReturnGetter.m in Sources */,
 				BB3339C714B5E796538B65F1 /* NSInvocation+OCHamcrest.m in Sources */,
 				BB33317BFCB5DC5993AA5C91 /* HCRequireNonNilObject.m in Sources */,
 				BB333BE5AC86690747041C24 /* HCWrapInMatcher.m in Sources */,
