@@ -12,9 +12,9 @@
 
 @implementation HCObjectReturnTypeHandler
 
-- (instancetype)init
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor
 {
-    self = [super initWithType:@encode(id)];
+    self = [super initWithType:@encode(id) successor:successor];
     return self;
 }
 

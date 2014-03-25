@@ -11,4 +11,7 @@
 
 
 @interface HCDoubleReturnTypeHandler : HCReturnTypeHandler
+
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor;
+
 @end

@@ -12,9 +12,9 @@
 
 @implementation HCFloatReturnTypeHandler
 
-- (instancetype)init
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor
 {
-    self = [super initWithType:@encode(float)];
+    self = [super initWithType:@encode(float) successor:successor];
     return self;
 }
 

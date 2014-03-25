@@ -12,9 +12,9 @@
 
 @implementation HCLongReturnTypeHandler
 
-- (instancetype)init
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor
 {
-    self = [super initWithType:@encode(long)];
+    self = [super initWithType:@encode(long) successor:successor];
     return self;
 }
 

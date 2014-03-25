@@ -15,9 +15,7 @@
  */
 @interface HCReturnTypeHandler : NSObject
 
-@property (nonatomic, strong) HCReturnTypeHandler *successor;
-
-- (instancetype)initWithType:(char const *)handlerType;
+- (instancetype)initWithType:(char const *)handlerType successor:(HCReturnTypeHandler *)successor;
 - (id)returnValueOfType:(char const *)type fromInvocation:(NSInvocation *)invocation;
 
 @end

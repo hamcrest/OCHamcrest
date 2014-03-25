@@ -11,4 +11,7 @@
 
 
 @interface HCObjectReturnTypeHandler : HCReturnTypeHandler
+
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor;
+
 @end

@@ -14,23 +14,28 @@
 - (id)returnValueFromInvocation:(NSInvocation *)invocation;
 @end
 
+@interface HCReturnTypeHandler ()
+@property (nonatomic) char const *handlerType;
+@property (nonatomic, strong) HCReturnTypeHandler *successor;
+@end
+
 
 @implementation HCReturnTypeHandler
-{
-    char const *_handlerType;
-}
 
-- (instancetype)initWithType:(char const *)handlerType
+- (instancetype)initWithType:(char const *)handlerType successor:(HCReturnTypeHandler *)successor
 {
     self = [super init];
     if (self)
+    {
         _handlerType = handlerType;
+        _successor = successor;
+    }
     return self;
 }
 
 - (BOOL)handlesReturnType:(char const *)returnType
 {
-    return strcmp(returnType, _handlerType) == 0;
+    return strcmp(returnType, self.handlerType) == 0;
 }
 
 - (id)returnValueOfType:(char const *)type fromInvocation:(NSInvocation *)invocation

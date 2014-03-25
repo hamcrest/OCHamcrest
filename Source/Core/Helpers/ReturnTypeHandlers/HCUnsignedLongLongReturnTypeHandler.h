@@ -11,4 +11,7 @@
 
 
 @interface HCUnsignedLongLongReturnTypeHandler : HCReturnTypeHandler
+
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor;
+
 @end

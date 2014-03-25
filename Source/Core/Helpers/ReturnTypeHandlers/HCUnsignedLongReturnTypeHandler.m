@@ -12,9 +12,9 @@
 
 @implementation HCUnsignedLongReturnTypeHandler
 
-- (instancetype)init
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor
 {
-    self = [super initWithType:@encode(unsigned long)];
+    self = [super initWithType:@encode(unsigned long) successor:successor];
     return self;
 }
 

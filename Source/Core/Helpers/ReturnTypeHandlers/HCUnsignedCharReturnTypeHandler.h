@@ -11,4 +11,7 @@
 
 
 @interface HCUnsignedCharReturnTypeHandler : HCReturnTypeHandler
+
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor;
+
 @end

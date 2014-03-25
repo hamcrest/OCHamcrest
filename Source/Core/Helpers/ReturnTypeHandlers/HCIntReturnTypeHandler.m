@@ -12,9 +12,9 @@
 
 @implementation HCIntReturnTypeHandler
 
-- (instancetype)init
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor
 {
-    self = [super initWithType:@encode(int)];
+    self = [super initWithType:@encode(int) successor:successor];
     return self;
 }
 

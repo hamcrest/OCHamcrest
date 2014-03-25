@@ -12,9 +12,9 @@
 
 @implementation HCDoubleReturnTypeHandler
 
-- (instancetype)init
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor
 {
-    self = [super initWithType:@encode(double)];
+    self = [super initWithType:@encode(double) successor:successor];
     return self;
 }
 

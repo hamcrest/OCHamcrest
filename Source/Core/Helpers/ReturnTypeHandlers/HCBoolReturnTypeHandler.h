@@ -11,4 +11,7 @@
 
 
 @interface HCBoolReturnTypeHandler : HCReturnTypeHandler
+
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor;
+
 @end

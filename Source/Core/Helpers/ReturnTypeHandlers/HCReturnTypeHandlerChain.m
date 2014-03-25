@@ -30,35 +30,21 @@ HCReturnTypeHandler *HCReturnTypeHandlerChain(void)
     static HCReturnTypeHandler *chain = nil;
     if (!chain)
     {
-        HCReturnTypeHandler *objectHandler = [[HCObjectReturnTypeHandler alloc] init];
-        HCReturnTypeHandler *charHandler = [[HCCharReturnTypeHandler alloc] init];
-        HCReturnTypeHandler *boolHandler = [[HCBoolReturnTypeHandler alloc] init];
-        HCReturnTypeHandler *intHandler = [[HCIntReturnTypeHandler alloc] init];
-        HCReturnTypeHandler *shortHandler = [[HCShortReturnTypeHandler alloc] init];
-        HCReturnTypeHandler *longHandler = [[HCLongReturnTypeHandler alloc] init];
-        HCReturnTypeHandler *longLongHandler = [[HCLongLongReturnTypeHandler alloc] init];
-        HCReturnTypeHandler *unsignedCharHandler = [[HCUnsignedCharReturnTypeHandler alloc] init];
-        HCReturnTypeHandler *unsignedIntHandler = [[HCUnsignedIntReturnTypeHandler alloc] init];
-        HCReturnTypeHandler *unsignedShortHandler = [[HCUnsignedShortReturnTypeHandler alloc] init];
-        HCReturnTypeHandler *unsignedLongHandler = [[HCUnsignedLongReturnTypeHandler alloc] init];
-        HCReturnTypeHandler *unsignedLongLongHandler = [[HCUnsignedLongLongReturnTypeHandler alloc] init];
-        HCReturnTypeHandler *floatHandler = [[HCFloatReturnTypeHandler alloc] init];
-        HCReturnTypeHandler *doubleHandler = [[HCDoubleReturnTypeHandler alloc] init];
-
+        HCReturnTypeHandler *doubleHandler = [[HCDoubleReturnTypeHandler alloc] initWithSuccessor:nil];
+        HCReturnTypeHandler *floatHandler = [[HCFloatReturnTypeHandler alloc] initWithSuccessor:doubleHandler];
+        HCReturnTypeHandler *unsignedLongLongHandler = [[HCUnsignedLongLongReturnTypeHandler alloc] initWithSuccessor:floatHandler];
+        HCReturnTypeHandler *unsignedLongHandler = [[HCUnsignedLongReturnTypeHandler alloc] initWithSuccessor:unsignedLongLongHandler];
+        HCReturnTypeHandler *unsignedShortHandler = [[HCUnsignedShortReturnTypeHandler alloc] initWithSuccessor:unsignedLongHandler];
+        HCReturnTypeHandler *unsignedIntHandler = [[HCUnsignedIntReturnTypeHandler alloc] initWithSuccessor:unsignedShortHandler];
+        HCReturnTypeHandler *unsignedCharHandler = [[HCUnsignedCharReturnTypeHandler alloc] initWithSuccessor:unsignedIntHandler];
+        HCReturnTypeHandler *longLongHandler = [[HCLongLongReturnTypeHandler alloc] initWithSuccessor:unsignedCharHandler];
+        HCReturnTypeHandler *longHandler = [[HCLongReturnTypeHandler alloc] initWithSuccessor:longLongHandler];
+        HCReturnTypeHandler *shortHandler = [[HCShortReturnTypeHandler alloc] initWithSuccessor:longHandler];
+        HCReturnTypeHandler *intHandler = [[HCIntReturnTypeHandler alloc] initWithSuccessor:shortHandler];
+        HCReturnTypeHandler *boolHandler = [[HCBoolReturnTypeHandler alloc] initWithSuccessor:intHandler];
+        HCReturnTypeHandler *charHandler = [[HCCharReturnTypeHandler alloc] initWithSuccessor:boolHandler];
+        HCReturnTypeHandler *objectHandler = [[HCObjectReturnTypeHandler alloc] initWithSuccessor:charHandler];
         chain = objectHandler;
-        objectHandler.successor = charHandler;
-        charHandler.successor = boolHandler;
-        boolHandler.successor = intHandler;
-        intHandler.successor = shortHandler;
-        shortHandler.successor = longHandler;
-        longHandler.successor = longLongHandler;
-        longLongHandler.successor = unsignedCharHandler;
-        unsignedCharHandler.successor = unsignedIntHandler;
-        unsignedIntHandler.successor = unsignedShortHandler;
-        unsignedShortHandler.successor = unsignedLongHandler;
-        unsignedLongHandler.successor = unsignedLongLongHandler;
-        unsignedLongLongHandler.successor = floatHandler;
-        floatHandler.successor = doubleHandler;
     }
     return chain;
 }

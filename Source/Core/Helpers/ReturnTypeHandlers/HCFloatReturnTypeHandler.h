@@ -11,4 +11,7 @@
 
 
 @interface HCFloatReturnTypeHandler : HCReturnTypeHandler
+
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor;
+
 @end

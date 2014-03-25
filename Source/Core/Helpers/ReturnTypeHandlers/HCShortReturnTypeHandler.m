@@ -12,9 +12,9 @@
 
 @implementation HCShortReturnTypeHandler
 
-- (instancetype)init
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor
 {
-    self = [super initWithType:@encode(short)];
+    self = [super initWithType:@encode(short) successor:successor];
     return self;
 }
 

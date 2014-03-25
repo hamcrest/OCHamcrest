@@ -12,9 +12,9 @@
 
 @implementation HCUnsignedCharReturnTypeHandler
 
-- (instancetype)init
+- (instancetype)initWithSuccessor:(HCReturnTypeHandler *)successor
 {
-    self = [super initWithType:@encode(unsigned char)];
+    self = [super initWithType:@encode(unsigned char) successor:successor];
     return self;
 }
 
