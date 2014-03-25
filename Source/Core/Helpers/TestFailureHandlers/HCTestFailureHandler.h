@@ -19,7 +19,7 @@
  */
 @interface HCTestFailureHandler : NSObject
 
-@property (nonatomic, strong) HCTestFailureHandler *successor;
+- (instancetype)initWithSuccessor:(HCTestFailureHandler *)successor;
 
 /**
  Handle test failure at specific location, or pass to successor.

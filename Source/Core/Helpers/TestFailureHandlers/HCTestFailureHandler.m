@@ -15,8 +15,20 @@
 - (void)executeHandlingOfFailure:(HCTestFailure *)failure;
 @end
 
+@interface HCTestFailureHandler ()
+@property (nonatomic, strong) HCTestFailureHandler *successor;
+@end
+
 
 @implementation HCTestFailureHandler
+
+- (instancetype)initWithSuccessor:(HCTestFailureHandler *)successor
+{
+    self = [super init];
+    if (self)
+        _successor = successor;
+    return self;
+}
 
 - (void)handleFailure:(HCTestFailure *)failure
 {

@@ -19,13 +19,10 @@ HCTestFailureHandler *HC_testFailureHandlerChain(void)
     static HCTestFailureHandler *chain = nil;
     if (!chain)
     {
-        HCTestFailureHandler *xctestHandler = [[HCXCTestFailureHandler alloc] init];
-        HCTestFailureHandler *ocunitHandler = [[HCSenTestFailureHandler alloc] init];
-        HCTestFailureHandler *genericHandler = [[HCGenericTestFailureHandler alloc] init];
-
+        HCTestFailureHandler *genericHandler = [[HCGenericTestFailureHandler alloc] initWithSuccessor:nil];
+        HCTestFailureHandler *ocunitHandler = [[HCSenTestFailureHandler alloc] initWithSuccessor:genericHandler];
+        HCTestFailureHandler *xctestHandler = [[HCXCTestFailureHandler alloc] initWithSuccessor:ocunitHandler];
         chain =  xctestHandler;
-        xctestHandler.successor = ocunitHandler;
-        ocunitHandler.successor = genericHandler;
     }
     return chain;
 }
