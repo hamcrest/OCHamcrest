@@ -1,5 +1,9 @@
-Next version under development
-------------------------------
+Version 4.0.0
+-------------
+_26 Mar 2014_
+
+This is a refactoring release with potential backwards compatibility issues for writers of custom
+matchers:
 
 - If you subclass HCInvocationMatcher for a custom matcher, the ivars have been renamed.
 - If you import HCCollectMatchers.h for a custom matcher, change this to import HCCollect.h.
