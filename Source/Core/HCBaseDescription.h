@@ -23,7 +23,7 @@
 /**
  Methods that must be provided by subclasses of HCBaseDescription.
  */
-@interface HCBaseDescription (SubclassMustImplement)
+@interface HCBaseDescription (SubclassResponsibility)
 
 /**
  Append the string @a str to the description.
