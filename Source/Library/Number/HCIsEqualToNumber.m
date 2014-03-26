@@ -111,6 +111,7 @@ FOUNDATION_EXPORT id HC_equalToBool(BOOL value)
 {
     if (![item isKindOfClass:[NSNumber class]])
         return NO;
+
     return [item boolValue] == _value;
 }
 
