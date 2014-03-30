@@ -28,6 +28,11 @@
     return isEmpty();
 }
 
+- (void)testShouldNotMatchNonCollection
+{
+    assertDoesNotMatch(@"Non collection", [self createMatcher], [[NSObject alloc] init]);
+}
+
 - (void)testMatchesEmptyCollection
 {
     assertMatches(@"empty", isEmpty(), [FakeWithCount fakeWithCount:0]);

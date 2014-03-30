@@ -29,6 +29,11 @@
     return onlyContains(equalTo(@"irrelevant"), nil);
 }
 
+- (void)testShouldNotMatchNonCollection
+{
+    assertDoesNotMatch(@"Non collection", [self createMatcher], [[NSObject alloc] init]);
+}
+
 - (void)testMatchesSingletonCollection
 {
     assertMatches(@"singleton collection",

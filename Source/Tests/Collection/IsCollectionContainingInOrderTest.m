@@ -28,6 +28,11 @@
     return contains(equalTo(@"irrelevant"), nil);
 }
 
+- (void)testShouldNotMatchNonCollection
+{
+    assertDoesNotMatch(@"Non collection", [self createMatcher], [[NSObject alloc] init]);
+}
+
 - (void)testMatchingSingleItemCollection
 {
     assertMatches(@"Single item collection",
