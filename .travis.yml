@@ -4,8 +4,9 @@ before_install:
   - sudo easy_install cpp-coveralls
 
 script:
-  - xcodebuild test  -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator7.0
   - xctool test -project Source/OCHamcrest.xcodeproj -scheme OCHamcrest -sdk macosx10.9
+  - xctool test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator7.1 -destination "name=iPhone Retina (4-inch)"
+  - xctool test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator7.1 -destination "name=iPhone Retina (4-inch 64-bit)"
 
 after_success:
   - ./coveralls.rb --exclude-folder Source/Tests
