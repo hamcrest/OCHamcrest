@@ -37,6 +37,11 @@
     assertDoesNotMatch(@"Different", equalToBool(YES), [NSNumber numberWithBool:NO]);
 }
 
+- (void)testMismatchesNonNumber
+{
+    assertDoesNotMatch(@"Not a number", equalToBool(NO), @"STRING");
+}
+
 @end
 
 
