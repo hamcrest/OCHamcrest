@@ -21,5 +21,5 @@
  
  @ingroup core
  */
-@interface HCBaseMatcher : NSObject <HCMatcher>
+@interface HCBaseMatcher : NSObject <HCMatcher, NSCopying>
 @end

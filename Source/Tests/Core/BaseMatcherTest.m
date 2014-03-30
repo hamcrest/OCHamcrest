@@ -14,10 +14,10 @@
 #import "AbstractMatcherTest.h"
 
 
-@interface TestingBaseMatcher : HCBaseMatcher
+@interface BaseMatcherWithDescription : HCBaseMatcher
 @end
 
-@implementation TestingBaseMatcher
+@implementation BaseMatcherWithDescription
 
 - (void)describeTo:(id<HCDescription>)description
 {
@@ -31,11 +31,31 @@
 @end
 
 @implementation BaseMatcherTest
+{
+    BaseMatcherWithDescription *matcher;
+}
+
+- (void)setUp
+{
+    [super setUp];
+    matcher = [[BaseMatcherWithDescription alloc] init];
+}
+
+- (void)tearDown
+{
+    matcher = nil;
+    [super tearDown];
+}
 
 - (void)testDescriptionShouldDescribeMatcher
 {
-    TestingBaseMatcher *matcher = [[TestingBaseMatcher alloc] init];
     STAssertEqualObjects([matcher description], @"SOME DESCRIPTION", nil);
+}
+
+- (void)testShouldSupportImmutableCopying
+{
+    BaseMatcherWithDescription *matcherCopy = [matcher copy];
+    STAssertEquals(matcherCopy, matcher, nil);
 }
 
 @end

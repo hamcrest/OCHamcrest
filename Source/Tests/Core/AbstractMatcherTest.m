@@ -132,11 +132,4 @@
     [[self createMatcher] matches:[[NSObject alloc] init]];
 }
 
-- (void)testShouldSupportCopying_ToWorkAroundIOS7NSInvocationRetainArgumentsDoingCopyForBlockArgs
-{
-    // Should not crash or throw exception.
-    id matcher = [self createMatcher];
-    [matcher copy];
-}
-
 @end
