@@ -12,6 +12,10 @@
 #import "HCIsEqualToNumber.h"
 
 
+@interface HCHasCount ()
+@property (nonatomic, readonly) id <HCMatcher> countMatcher;
+@end
+
 @implementation HCHasCount
 
 + (instancetype)hasCount:(id <HCMatcher>)matcher
@@ -23,7 +27,7 @@
 {
     self = [super init];
     if (self)
-        countMatcher = matcher;
+        _countMatcher = matcher;
     return self;
 }
 
@@ -33,7 +37,7 @@
         return NO;
     
     NSNumber *count = @([item count]);
-    return [countMatcher matches:count];
+    return [self.countMatcher matches:count];
 }
 
 - (BOOL)itemHasCount:(id)item
@@ -55,7 +59,7 @@
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [[description appendText:@"a collection with count of "] appendDescriptionOf:countMatcher];
+    [[description appendText:@"a collection with count of "] appendDescriptionOf:self.countMatcher];
 }
 
 @end

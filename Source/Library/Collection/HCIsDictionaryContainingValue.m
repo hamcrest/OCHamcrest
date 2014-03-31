@@ -13,18 +13,23 @@
 #import "HCWrapInMatcher.h"
 
 
+@interface HCIsDictionaryContainingValue ()
+@property (nonatomic, readonly) id <HCMatcher> valueMatcher;
+@end
+
+
 @implementation HCIsDictionaryContainingValue
 
-+ (instancetype)isDictionaryContainingValue:(id <HCMatcher>)theValueMatcher
++ (instancetype)isDictionaryContainingValue:(id <HCMatcher>)valueMatcher
 {
-    return [[self alloc] initWithValueMatcher:theValueMatcher];
+    return [[self alloc] initWithValueMatcher:valueMatcher];
 }
 
-- (instancetype)initWithValueMatcher:(id <HCMatcher>)theValueMatcher
+- (instancetype)initWithValueMatcher:(id <HCMatcher>)valueMatcher
 {
     self = [super init];
     if (self)
-        valueMatcher = theValueMatcher;
+        _valueMatcher = valueMatcher;
     return self;
 }
 
@@ -32,7 +37,7 @@
 {
     if ([dict respondsToSelector:@selector(allValues)])
         for (id oneValue in [dict allValues])
-            if ([valueMatcher matches:oneValue])
+            if ([self.valueMatcher matches:oneValue])
                 return YES;
     return NO;
 }
@@ -40,7 +45,7 @@
 - (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"a dictionary containing value "]
-                  appendDescriptionOf:valueMatcher];
+                  appendDescriptionOf:self.valueMatcher];
 }
 
 @end

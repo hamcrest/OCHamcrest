@@ -47,44 +47,51 @@
 @end
 
 
+@interface HCDescribedAs ()
+@property (nonatomic, readonly) NSString *descriptionTemplate;
+@property (nonatomic, readonly) id <HCMatcher> matcher;
+@property (nonatomic, readonly) NSArray *values;
+@end
+
+
 @implementation HCDescribedAs
 
 + (instancetype)describedAs:(NSString *)description
-                 forMatcher:(id <HCMatcher>)aMatcher
+                 forMatcher:(id <HCMatcher>)matcher
                  overValues:(NSArray *)templateValues
 {
     return [[self alloc] initWithDescription:description
-                                  forMatcher:aMatcher
+                                  forMatcher:matcher
                                   overValues:templateValues];
 }
 
 - (instancetype)initWithDescription:(NSString *)description
-                         forMatcher:(id <HCMatcher>)aMatcher
+                         forMatcher:(id <HCMatcher>)matcher
                          overValues:(NSArray *)templateValues
 {
     self = [super init];
     if (self)
     {
-        descriptionTemplate = [description copy];
-        matcher = aMatcher;
-        values = templateValues;
+        _descriptionTemplate = [description copy];
+        _matcher = matcher;
+        _values = [templateValues copy];
     }
     return self;
 }
 
 - (BOOL)matches:(id)item
 {
-    return [matcher matches:item];
+    return [self.matcher matches:item];
 }
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
-    [matcher describeMismatchOf:item to:mismatchDescription];
+    [self.matcher describeMismatchOf:item to:mismatchDescription];
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    NSArray *components = [descriptionTemplate componentsSeparatedByString:@"%"];
+    NSArray *components = [self.descriptionTemplate componentsSeparatedByString:@"%"];
     BOOL firstComponent = YES;
     for (NSString *component in components)
     {
@@ -107,10 +114,7 @@
     if (index < 0)
         [[description appendText:@"%"] appendText:component];
     else
-    {
-        [description appendDescriptionOf:values[index]];
-        [description appendText:remainder];
-    }
+        [[description appendDescriptionOf:self.values[index]] appendText:remainder];
 }
 
 @end

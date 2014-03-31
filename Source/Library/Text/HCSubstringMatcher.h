@@ -11,9 +11,8 @@
 
 
 @interface HCSubstringMatcher : HCBaseMatcher
-{
-    NSString *substring;
-}
+
+@property (nonatomic, readonly) NSString *substring;
 
 - (instancetype)initWithSubstring:(NSString *)aString;
 

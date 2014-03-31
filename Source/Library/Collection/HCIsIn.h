@@ -11,12 +11,9 @@
 
 
 @interface HCIsIn : HCBaseMatcher
-{
-    id collection;
-}
 
-+ (instancetype)isInCollection:(id)aCollection;
-- (instancetype)initWithCollection:(id)aCollection;
++ (instancetype)isInCollection:(id)collection;
+- (instancetype)initWithCollection:(id)collection;
 
 @end
 

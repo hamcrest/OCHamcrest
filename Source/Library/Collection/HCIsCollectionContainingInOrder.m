@@ -13,16 +13,9 @@
 
 
 @interface HCMatchSequence : NSObject
-{
-    NSArray *matchers;
-    id<HCDescription, NSObject> mismatchDescription;
-    NSUInteger nextMatchIndex;
-}
-
-- (BOOL)isMatched:(id)item;
-- (BOOL)isNotSurplus:(id)item;
-- (void)describeMismatchOfMatcher:(id <HCMatcher>)matcher item:(id)item;
-
+@property (nonatomic, readonly) NSArray *matchers;
+@property (nonatomic, readonly) id <HCDescription, NSObject> mismatchDescription;
+@property (nonatomic) NSUInteger nextMatchIndex;
 @end
 
 @implementation HCMatchSequence
@@ -33,8 +26,8 @@
     self = [super init];
     if (self)
     {
-        matchers = itemMatchers;
-        mismatchDescription = description;        
+        _matchers = [itemMatchers copy];
+        _mismatchDescription = description;        
     }
     return self;
 }
@@ -46,10 +39,10 @@
 
 - (BOOL)isFinished
 {
-    if (nextMatchIndex < [matchers count])
+    if (self.nextMatchIndex < [self.matchers count])
     {
-        [[mismatchDescription appendText:@"no item matched: "]
-                              appendDescriptionOf:matchers[nextMatchIndex]];
+        [[self.mismatchDescription appendText:@"no item matched: "]
+                              appendDescriptionOf:self.matchers[self.nextMatchIndex]];
         return NO;
     }
     return YES;
@@ -57,21 +50,21 @@
 
 - (BOOL)isMatched:(id)item
 {
-    id <HCMatcher> matcher = matchers[nextMatchIndex];
+    id <HCMatcher> matcher = self.matchers[self.nextMatchIndex];
     if (![matcher matches:item])
     {
         [self describeMismatchOfMatcher:matcher item:item];
         return NO;
     }
-    ++nextMatchIndex;
+    ++self.nextMatchIndex;
     return YES;
 }
 
 - (BOOL)isNotSurplus:(id)item
 {
-    if ([matchers count] <= nextMatchIndex)
+    if ([self.matchers count] <= self.nextMatchIndex)
     {
-        [[mismatchDescription appendText:@"not matched: "] appendDescriptionOf:item];
+        [[self.mismatchDescription appendText:@"not matched: "] appendDescriptionOf:item];
         return NO;
     }
     return YES;
@@ -79,12 +72,16 @@
 
 - (void)describeMismatchOfMatcher:(id <HCMatcher>)matcher item:(id)item
 {
-    [mismatchDescription appendText:[NSString stringWithFormat:@"item %zi: ", nextMatchIndex]];
-    [matcher describeMismatchOf:item to:mismatchDescription];
+    [self.mismatchDescription appendText:[NSString stringWithFormat:@"item %zi: ", self.nextMatchIndex]];
+    [matcher describeMismatchOf:item to:self.mismatchDescription];
 }
 
 @end
 
+
+@interface HCIsCollectionContainingInOrder ()
+@property (nonatomic, readonly) NSArray *matchers;
+@end
 
 @implementation HCIsCollectionContainingInOrder
 
@@ -97,7 +94,7 @@
 {
     self = [super init];
     if (self)
-        matchers = itemMatchers;
+        _matchers = [itemMatchers copy];
     return self;
 }
 
@@ -115,7 +112,7 @@
     }
     
     HCMatchSequence *matchSequence =
-        [[HCMatchSequence alloc] initWithMatchers:matchers
+        [[HCMatchSequence alloc] initWithMatchers:self.matchers
                               mismatchDescription:mismatchDescription];
     for (id item in collection)
         if (![matchSequence matches:item])
@@ -132,7 +129,7 @@
 - (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"a collection containing "]
-                    appendList:matchers start:@"[" separator:@", " end:@"]"];
+                  appendList:self.matchers start:@"[" separator:@", " end:@"]"];
 }
 
 @end

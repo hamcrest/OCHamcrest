@@ -11,12 +11,9 @@
 
 
 @interface HCIs : HCBaseMatcher
-{
-    id <HCMatcher> matcher;
-}
 
-+ (instancetype)is:(id <HCMatcher>)aMatcher;
-- (instancetype)initWithMatcher:(id <HCMatcher>)aMatcher;
++ (instancetype)is:(id <HCMatcher>)matcher;
+- (instancetype)initWithMatcher:(id <HCMatcher>)matcher;
 
 @end
 

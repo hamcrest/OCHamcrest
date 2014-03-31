@@ -11,13 +11,9 @@
 
 
 @interface HCIsEqualIgnoringWhiteSpace : HCBaseMatcher
-{
-    NSString *originalString;
-    NSString *strippedString;
-}
 
-+ (instancetype)isEqualIgnoringWhiteSpace:(NSString *)aString;
-- (instancetype)initWithString:(NSString *)aString;
++ (instancetype)isEqualIgnoringWhiteSpace:(NSString *)string;
+- (instancetype)initWithString:(NSString *)string;
 
 @end
 

@@ -25,14 +25,14 @@
     
     self = [super init];
     if (self)
-        theClass = aClass;
+        _theClass = aClass;
     return self;
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:[self expectation]]
-     appendText:NSStringFromClass(theClass)];
+                  appendText:NSStringFromClass(self.theClass)];
 }
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription

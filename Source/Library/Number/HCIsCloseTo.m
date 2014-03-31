@@ -10,20 +10,27 @@
 #import "HCIsCloseTo.h"
 
 
+@interface HCIsCloseTo ()
+
+@property (nonatomic, readonly) double value;
+@property (nonatomic, readonly) double delta;
+@end
+
+
 @implementation HCIsCloseTo
 
-+ (id)isCloseTo:(double)aValue within:(double)aDelta
++ (id)isCloseTo:(double)value within:(double)delta
 {
-    return [[self alloc] initWithValue:aValue delta:aDelta];
+    return [[self alloc] initWithValue:value delta:delta];
 }
 
-- (id)initWithValue:(double)aValue delta:(double)aDelta
+- (id)initWithValue:(double)value delta:(double)delta
 {
     self = [super init];
     if (self)
     {
-        value = aValue;
-        delta = aDelta;
+        _value = value;
+        _delta = delta;
     }
     return self;
 }
@@ -33,7 +40,7 @@
     if ([self itemIsNotNumber:item])
         return NO;
     
-    return fabs([item doubleValue] - value) <= delta;
+    return fabs([item doubleValue] - self.value) <= self.delta;
 }
 
 - (BOOL)itemIsNotNumber:(id)item
@@ -47,7 +54,7 @@
         [super describeMismatchOf:item to:mismatchDescription];
     else
     {
-        double actualDelta = fabs([item doubleValue] - value);
+        double actualDelta = fabs([item doubleValue] - self.value);
         [[[mismatchDescription appendDescriptionOf:item]
                                appendText:@" differed by "]
                                appendDescriptionOf:@(actualDelta)];
@@ -57,9 +64,9 @@
 - (void)describeTo:(id<HCDescription>)description
 {
     [[[[description appendText:@"a numeric value within "]
-                    appendDescriptionOf:@(delta)]
+                    appendDescriptionOf:@(self.delta)]
                     appendText:@" of "]
-                    appendDescriptionOf:@(value)];
+                    appendDescriptionOf:@(self.value)];
 }
 
 @end

@@ -9,9 +9,6 @@
 
 
 @interface HCConformsToProtocol : HCBaseMatcher
-{
-    Protocol *theProtocol;
-}
 
 + (instancetype)conformsTo:(Protocol *)protocol;
 - (instancetype)initWithProtocol:(Protocol *)protocol;

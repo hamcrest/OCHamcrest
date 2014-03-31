@@ -12,22 +12,28 @@
 #import "HCWrapInMatcher.h"
 
 
+@interface HCIsDictionaryContainingEntries ()
+@property (nonatomic, readonly) NSArray *keys;
+@property (nonatomic, readonly) NSArray *valueMatchers;
+@end
+
+
 @implementation HCIsDictionaryContainingEntries
 
-+ (instancetype)isDictionaryContainingKeys:(NSArray *)theKeys
-                             valueMatchers:(NSArray *)theValueMatchers
++ (instancetype)isDictionaryContainingKeys:(NSArray *)keys
+                             valueMatchers:(NSArray *)valueMatchers
 {
-    return [[self alloc] initWithKeys:theKeys valueMatchers:theValueMatchers];
+    return [[self alloc] initWithKeys:keys valueMatchers:valueMatchers];
 }
 
-- (instancetype)initWithKeys:(NSArray *)theKeys
-               valueMatchers:(NSArray *)theValueMatchers
+- (instancetype)initWithKeys:(NSArray *)keys
+               valueMatchers:(NSArray *)valueMatchers
 {
     self = [super init];
     if (self)
     {
-        keys = theKeys;
-        valueMatchers = theValueMatchers;
+        _keys = [keys copy];
+        _valueMatchers = [valueMatchers copy];
     }
     return self;
 }
@@ -45,10 +51,10 @@
         return NO;
     }
     
-    NSUInteger count = [keys count];
+    NSUInteger count = [self.keys count];
     for (NSUInteger index = 0; index < count; ++index)
     {
-        id key = keys[index];
+        id key = self.keys[index];
         if (dict[key] == nil)
         {
             [[[[mismatchDescription appendText:@"no "]
@@ -58,7 +64,7 @@
             return NO;
         }
 
-        id valueMatcher = valueMatchers[index];
+        id valueMatcher = self.valueMatchers[index];
         id actualValue = dict[key];
         
         if (![valueMatcher matches:actualValue])
@@ -81,16 +87,16 @@
 
 - (void)describeKeyValueAtIndex:(NSUInteger)index to:(id<HCDescription>)description
 {
-    [[[[description appendDescriptionOf:keys[index]]
+    [[[[description appendDescriptionOf:self.keys[index]]
                     appendText:@" = "]
-                    appendDescriptionOf:valueMatchers[index]]
+                    appendDescriptionOf:self.valueMatchers[index]]
                     appendText:@"; "];
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
     [description appendText:@"a dictionary containing { "];
-    NSUInteger count = [keys count];
+    NSUInteger count = [self.keys count];
     NSUInteger index = 0;
     for (; index < count - 1; ++index)
         [self describeKeyValueAtIndex:index to:description];

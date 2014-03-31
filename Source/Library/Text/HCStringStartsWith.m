@@ -22,7 +22,7 @@
     if (![item respondsToSelector:@selector(hasPrefix:)])
         return NO;
     
-    return [item hasPrefix:substring];
+    return [item hasPrefix:self.substring];
 }
 
 - (NSString *)relationship

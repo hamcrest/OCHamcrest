@@ -11,12 +11,6 @@
 
 
 @interface HCOrderingComparison : HCBaseMatcher
-{
-    id expected;
-    NSComparisonResult minCompare;
-    NSComparisonResult maxCompare;
-    NSString *comparisonDescription;
-}
 
 + (instancetype)compare:(id)expectedValue
              minCompare:(NSComparisonResult)min

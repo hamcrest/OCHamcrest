@@ -15,18 +15,23 @@
 #import "HCWrapInMatcher.h"
 
 
+@interface HCIsCollectionContaining ()
+@property (nonatomic, readonly) id <HCMatcher> elementMatcher;
+@end
+
 @implementation HCIsCollectionContaining
 
-+ (instancetype)isCollectionContaining:(id <HCMatcher>)anElementMatcher
+
++ (instancetype)isCollectionContaining:(id <HCMatcher>)elementMatcher
 {
-    return [[self alloc] initWithMatcher:anElementMatcher];
+    return [[self alloc] initWithMatcher:elementMatcher];
 }
 
-- (instancetype)initWithMatcher:(id <HCMatcher>)anElementMatcher
+- (instancetype)initWithMatcher:(id <HCMatcher>)elementMatcher
 {
     self = [super init];
     if (self)
-        elementMatcher = anElementMatcher;
+        _elementMatcher = elementMatcher;
     return self;
 }
 
@@ -36,7 +41,7 @@
         return NO;
         
     for (id item in collection)
-        if ([elementMatcher matches:item])
+        if ([self.elementMatcher matches:item])
             return YES;
     return NO;
 }
@@ -44,7 +49,7 @@
 - (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"a collection containing "]
-                  appendDescriptionOf:elementMatcher];
+                  appendDescriptionOf:self.elementMatcher];
 }
 
 @end

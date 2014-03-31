@@ -12,43 +12,48 @@
 #import "NSInvocation+OCHamcrest.h"
 
 
+@interface HCHasProperty ()
+@property (nonatomic, readonly) NSString *propertyName;
+@property (nonatomic, readonly) id <HCMatcher> valueMatcher;
+@end
+
 @implementation HCHasProperty
 
-+ (instancetype)hasProperty:(NSString *)property value:(id <HCMatcher>)aValueMatcher
++ (instancetype)hasProperty:(NSString *)property value:(id <HCMatcher>)valueMatcher
 {
-    return [[self alloc] initWithProperty:property value:aValueMatcher];
+    return [[self alloc] initWithProperty:property value:valueMatcher];
 }
 
-- (instancetype)initWithProperty:(NSString *)property value:(id <HCMatcher>)aValueMatcher
+- (instancetype)initWithProperty:(NSString *)property value:(id <HCMatcher>)valueMatcher
 {
     HCRequireNonNilObject(property);
     
     self = [super init];
     if (self != nil)
     {
-        propertyName = [property copy];
-        valueMatcher = aValueMatcher;
+        _propertyName = [property copy];
+        _valueMatcher = valueMatcher;
     }
     return self;
 }
 
 - (BOOL)matches:(id)item
 {
-    SEL propertyGetter = NSSelectorFromString(propertyName);
+    SEL propertyGetter = NSSelectorFromString(self.propertyName);
     if (![item respondsToSelector:propertyGetter])
         return NO;
 
     NSInvocation *getterInvocation = [NSInvocation och_invocationWithTarget:item selector:propertyGetter];
     id propertyValue = [getterInvocation och_invoke];
-    return [valueMatcher matches:propertyValue];
+    return [self.valueMatcher matches:propertyValue];
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
     [[[[description appendText:@"an object with "]
-                    appendText:propertyName]
+                    appendText:self.propertyName]
                     appendText:@" "]
-                    appendDescriptionOf:valueMatcher];
+                    appendDescriptionOf:self.valueMatcher];
 }
 @end
 

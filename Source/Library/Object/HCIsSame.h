@@ -11,12 +11,9 @@
 
 
 @interface HCIsSame : HCBaseMatcher
-{
-    id object;
-}
 
-+ (instancetype)isSameAs:(id)anObject;
-- (instancetype)initSameAs:(id)anObject;
++ (instancetype)isSameAs:(id)object;
+- (instancetype)initSameAs:(id)object;
 
 @end
 

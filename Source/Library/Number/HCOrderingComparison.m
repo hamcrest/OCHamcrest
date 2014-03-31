@@ -10,6 +10,13 @@
 #import "HCOrderingComparison.h"
 
 
+@interface HCOrderingComparison ()
+@property (nonatomic, readonly) id expected;
+@property (nonatomic, readonly) NSComparisonResult minCompare;
+@property (nonatomic, readonly) NSComparisonResult maxCompare;
+@property (nonatomic, readonly) NSString *comparisonDescription;
+@end
+
 @implementation HCOrderingComparison
 
 + (instancetype)compare:(id)expectedValue
@@ -18,9 +25,9 @@
   comparisonDescription:(NSString *)description
 {
     return [[self alloc] initComparing:expectedValue
-                             minCompare:min
-                             maxCompare:max
-                  comparisonDescription:description];
+                            minCompare:min
+                            maxCompare:max
+                 comparisonDescription:description];
 }
 
 - (instancetype)initComparing:(id)expectedValue
@@ -38,10 +45,10 @@
     self = [super init];
     if (self)
     {
-        expected = expectedValue;
-        minCompare = min;
-        maxCompare = max;
-        comparisonDescription = [description copy];
+        _expected = expectedValue;
+        _minCompare = min;
+        _maxCompare = max;
+        _comparisonDescription = [description copy];
     }
     return self;
 }
@@ -51,16 +58,16 @@
     if (item == nil)
         return NO;
     
-    NSComparisonResult compare = [expected compare:item];
-    return minCompare <= compare && compare <= maxCompare;
+    NSComparisonResult compare = [self.expected compare:item];
+    return self.minCompare <= compare && compare <= self.maxCompare;
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
     [[[[description appendText:@"a value "]
-                    appendText:comparisonDescription]
+                    appendText:self.comparisonDescription]
                     appendText:@" "]
-                    appendDescriptionOf:expected];
+                    appendDescriptionOf:self.expected];
 }
 
 @end

@@ -11,13 +11,9 @@
 
 
 @interface HCIsCloseTo : HCBaseMatcher
-{
-    double value;
-    double delta;
-}
 
-+ (instancetype)isCloseTo:(double)aValue within:(double)aDelta;
-- (instancetype)initWithValue:(double)aValue delta:(double)aDelta;
++ (instancetype)isCloseTo:(double)value within:(double)delta;
+- (instancetype)initWithValue:(double)value delta:(double)delta;
 
 @end
 

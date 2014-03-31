@@ -11,9 +11,6 @@
 
 
 @interface HCHasCount : HCBaseMatcher
-{
-    id <HCMatcher> countMatcher;
-}
 
 + (instancetype)hasCount:(id <HCMatcher>)matcher;
 - (instancetype)initWithCount:(id <HCMatcher>)matcher;

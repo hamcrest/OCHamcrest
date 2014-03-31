@@ -11,12 +11,9 @@
 
 
 @interface HCIsEqual : HCBaseMatcher
-{
-    id object;
-}
 
-+ (instancetype)isEqualTo:(id)anObject;
-- (instancetype)initEqualTo:(id)anObject;
++ (instancetype)isEqualTo:(id)object;
+- (instancetype)initEqualTo:(id)object;
 
 @end
 

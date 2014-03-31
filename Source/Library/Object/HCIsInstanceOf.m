@@ -19,7 +19,7 @@
 
 - (BOOL)matches:(id)item
 {
-    return [item isKindOfClass:theClass];
+    return [item isKindOfClass:self.theClass];
 }
 
 - (NSString *)expectation

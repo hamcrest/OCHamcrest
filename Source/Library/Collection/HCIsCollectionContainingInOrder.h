@@ -11,9 +11,6 @@
 
 
 @interface HCIsCollectionContainingInOrder : HCBaseMatcher
-{
-    NSArray *matchers;
-}
 
 + (instancetype)isCollectionContainingInOrder:(NSArray *)itemMatchers;
 - (instancetype)initWithMatchers:(NSArray *)itemMatchers;

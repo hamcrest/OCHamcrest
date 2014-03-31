@@ -11,18 +11,13 @@
 
 
 @interface HCDescribedAs : HCBaseMatcher
-{
-    NSString *descriptionTemplate;
-    id <HCMatcher> matcher;
-    NSArray *values;
-}
 
 + (instancetype)describedAs:(NSString *)description
-                 forMatcher:(id <HCMatcher>)aMatcher
+                 forMatcher:(id <HCMatcher>)matcher
                  overValues:(NSArray *)templateValues;
 
 - (instancetype)initWithDescription:(NSString *)description
-                         forMatcher:(id <HCMatcher>)aMatcher
+                         forMatcher:(id <HCMatcher>)matcher
                          overValues:(NSArray *)templateValues;
 
 @end

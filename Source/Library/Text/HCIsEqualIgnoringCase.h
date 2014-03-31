@@ -11,12 +11,9 @@
 
 
 @interface HCIsEqualIgnoringCase : HCBaseMatcher
-{
-    NSString *string;
-}
 
-+ (instancetype)isEqualIgnoringCase:(NSString *)aString;
-- (instancetype)initWithString:(NSString *)aString;
++ (instancetype)isEqualIgnoringCase:(NSString *)string;
+- (instancetype)initWithString:(NSString *)string;
 
 @end
 
@@ -24,7 +21,7 @@
 FOUNDATION_EXPORT id HC_equalToIgnoringCase(NSString *aString);
 
 /**
- equalToIgnoringCase(aString) -
+ equalToIgnoringCase(string) -
  Matches if object is a string equal to a given string, ignoring case differences.
  
  @param aString  The string to compare against as the expected value. This value must not be @c nil.

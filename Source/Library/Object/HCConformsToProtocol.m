@@ -10,6 +10,10 @@
 #import "HCRequireNonNilObject.h"
 
 
+@interface HCConformsToProtocol ()
+@property (nonatomic, readonly) Protocol *protocol;
+@end
+
 @implementation HCConformsToProtocol
 
 + (instancetype)conformsTo:(Protocol *)protocol
@@ -17,25 +21,25 @@
     return [[self alloc] initWithProtocol:protocol];
 }
 
-- (instancetype)initWithProtocol:(Protocol *)aProtocol
+- (instancetype)initWithProtocol:(Protocol *)protocol
 {
-    HCRequireNonNilObject(aProtocol);
+    HCRequireNonNilObject(protocol);
     
     self = [super init];
     if (self)
-        theProtocol = aProtocol;
+        _protocol = protocol;
     return self;
 }
 
 - (BOOL)matches:(id)item
 {
-    return [item conformsToProtocol:theProtocol];
+    return [item conformsToProtocol:self.protocol];
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
     [[description appendText:@"an object that conforms to "]
-                  appendText:NSStringFromProtocol(theProtocol)];
+                  appendText:NSStringFromProtocol(self.protocol)];
 }
 
 @end

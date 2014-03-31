@@ -11,12 +11,9 @@
 
 
 @interface HCAllOf : HCBaseMatcher
-{
-    NSArray *matchers;
-}
 
-+ (instancetype)allOf:(NSArray *)theMatchers;
-- (instancetype)initWithMatchers:(NSArray *)theMatchers;
++ (instancetype)allOf:(NSArray *)matchers;
+- (instancetype)initWithMatchers:(NSArray *)matchers;
 
 @end
 

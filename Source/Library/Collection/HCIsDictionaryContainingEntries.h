@@ -11,16 +11,13 @@
 
 
 @interface HCIsDictionaryContainingEntries : HCBaseMatcher
-{
-    NSArray *keys;
-    NSArray *valueMatchers;
-}
 
-+ (instancetype)isDictionaryContainingKeys:(NSArray *)theKeys
-                             valueMatchers:(NSArray *)theValueMatchers;
 
-- (instancetype)initWithKeys:(NSArray *)theKeys
-               valueMatchers:(NSArray *)theValueMatchers;
++ (instancetype)isDictionaryContainingKeys:(NSArray *)keys
+                             valueMatchers:(NSArray *)valueMatchers;
+
+- (instancetype)initWithKeys:(NSArray *)keys
+               valueMatchers:(NSArray *)valueMatchers;
 
 @end
 

@@ -12,20 +12,24 @@
 #import "HCRequireNonNilObject.h"
 
 
+@interface HCIsEqualIgnoringCase ()
+@property (nonatomic, readonly) NSString *string;
+@end
+
 @implementation HCIsEqualIgnoringCase
 
-+ (instancetype)isEqualIgnoringCase:(NSString *)aString
++ (instancetype)isEqualIgnoringCase:(NSString *)string
 {
-    return [[self alloc] initWithString:aString];
+    return [[self alloc] initWithString:string];
 }
 
-- (instancetype)initWithString:(NSString *)aString
+- (instancetype)initWithString:(NSString *)string
 {
-    HCRequireNonNilObject(aString);
+    HCRequireNonNilObject(string);
     
     self = [super init];
     if (self)
-        string = [aString copy];
+        _string = [string copy];
     return self;
 }
 
@@ -34,12 +38,12 @@
     if (![item isKindOfClass:[NSString class]])
         return NO;
     
-    return [string caseInsensitiveCompare:item] == NSOrderedSame;
+    return [self.string caseInsensitiveCompare:item] == NSOrderedSame;
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [[description appendDescriptionOf:string]
+    [[description appendDescriptionOf:self.string]
                   appendText:@" ignoring case"];
 }
 
