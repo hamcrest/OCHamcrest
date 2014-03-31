@@ -1,6 +1,6 @@
 Version 4.0.0
 -------------
-_26 Mar 2014_
+_Coming Soon_
 
 This is a refactoring release with potential backwards compatibility issues for writers of custom
 matchers:
