@@ -30,7 +30,7 @@ include any pods from their main targets:
 
 ```ruby
 target :MyTests, :exclusive => true do
-  pod 'OCHamcrest', '~> 4.0'
+  pod 'OCHamcrest', '~> 3.0'
 end
 ```
 
