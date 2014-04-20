@@ -1,6 +1,8 @@
 What is OCHamcrestExtensions?
 -----------------------------
 
+[![Build Status](https://travis-ci.org/elliotchance/OCHamcrestExtensions.svg?branch=master)](https://travis-ci.org/elliotchance/OCHamcrestExtensions)
+
 OCHamcrestExtensions is built on top of [OCHamcrest](https://github.com/hamcrest/OCHamcrest). It adds several more features, including:
 
 * Support for exception assertions.
