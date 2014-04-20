@@ -16,4 +16,9 @@
     assertYes(YES);
 }
 
+- (void)testAssertNo
+{
+    assertNo(NO);
+}
+
 @end
