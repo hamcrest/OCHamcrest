@@ -131,6 +131,12 @@
 		8B49631A19036F7D00E9E7BE /* HCAssertBoolean.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B49631819036F7D00E9E7BE /* HCAssertBoolean.h */; };
 		8B49631D190370F000E9E7BE /* AssertBooleanTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49631C190370F000E9E7BE /* AssertBooleanTest.m */; };
 		8B49631E190370F000E9E7BE /* AssertBooleanTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49631C190370F000E9E7BE /* AssertBooleanTest.m */; };
+		8B4963201903784F00E9E7BE /* EmptyStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49631F1903784F00E9E7BE /* EmptyStringTest.m */; };
+		8B4963211903784F00E9E7BE /* EmptyStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49631F1903784F00E9E7BE /* EmptyStringTest.m */; };
+		8B4963241903789F00E9E7BE /* HCEmptyString.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4963221903789F00E9E7BE /* HCEmptyString.h */; };
+		8B4963251903789F00E9E7BE /* HCEmptyString.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4963221903789F00E9E7BE /* HCEmptyString.h */; };
+		8B4963261903789F00E9E7BE /* HCEmptyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4963231903789F00E9E7BE /* HCEmptyString.m */; };
+		8B4963271903789F00E9E7BE /* HCEmptyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4963231903789F00E9E7BE /* HCEmptyString.m */; };
 		BB33301A68F74D210C803FEA /* HCIsNil.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335CC804D0A774E5F1041 /* HCIsNil.m */; };
 		BB333020F5ED4E3979BA1714 /* NSInvocation+OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3339BE4C0ECEAB7169772A /* NSInvocation+OCHamcrest.h */; };
 		BB33302772CACC61A1B4DB74 /* HCTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333528C8E2ED8489ACB161 /* HCTestFailureHandler.m */; };
@@ -443,6 +449,9 @@
 		8B49630A190359FA00E9E7BE /* HCThrowsException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCThrowsException.m; sourceTree = "<group>"; };
 		8B49631819036F7D00E9E7BE /* HCAssertBoolean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAssertBoolean.h; sourceTree = "<group>"; };
 		8B49631C190370F000E9E7BE /* AssertBooleanTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssertBooleanTest.m; sourceTree = "<group>"; };
+		8B49631F1903784F00E9E7BE /* EmptyStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyStringTest.m; sourceTree = "<group>"; };
+		8B4963221903789F00E9E7BE /* HCEmptyString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEmptyString.h; sourceTree = "<group>"; };
+		8B4963231903789F00E9E7BE /* HCEmptyString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEmptyString.m; sourceTree = "<group>"; };
 		BB333034CD6A38647E176A9A /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
 		BB33303898210A59268030C8 /* HCDoubleReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDoubleReturnGetter.m; sourceTree = "<group>"; };
 		BB333049BE335209B4207B2A /* HCIsDictionaryContaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContaining.m; sourceTree = "<group>"; };
@@ -768,9 +777,10 @@
 			children = (
 				0876035B13440AD8001B439B /* IsEqualIgnoringCaseTest.m */,
 				0876035C13440AD8001B439B /* IsEqualIgnoringWhiteSpaceTest.m */,
-				0876035D13440AD8001B439B /* StringContainsTest.m */,
 				088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */,
+				0876035D13440AD8001B439B /* StringContainsTest.m */,
 				0876035E13440AD8001B439B /* StringEndsWithTest.m */,
+				8B49631F1903784F00E9E7BE /* EmptyStringTest.m */,
 				0876035F13440AD8001B439B /* StringStartsWithTest.m */,
 			);
 			path = Text;
@@ -1002,6 +1012,8 @@
 		BB333EA5543B2EAB4E34B3CF /* Text */ = {
 			isa = PBXGroup;
 			children = (
+				8B4963221903789F00E9E7BE /* HCEmptyString.h */,
+				8B4963231903789F00E9E7BE /* HCEmptyString.m */,
 				BB33371136854FB7CAF2A5F7 /* HCIsEqualIgnoringCase.h */,
 				BB333A9273EFADF46D908BC4 /* HCIsEqualIgnoringCase.m */,
 				BB33338462C2743FF78AA51B /* HCIsEqualIgnoringWhiteSpace.h */,
@@ -1068,6 +1080,7 @@
 				BB3334425297552B3C06F861 /* HCObjectReturnGetter.h in Headers */,
 				BB3338179D48057215091538 /* HCReturnValueGetter.h in Headers */,
 				8B49630C190359FA00E9E7BE /* HCDidThrowException.h in Headers */,
+				8B4963251903789F00E9E7BE /* HCEmptyString.h in Headers */,
 				BB333BE50C075D306EDA2E98 /* HCReturnTypeHandlerChain.h in Headers */,
 				BB333D83E68045BBEA3B3796 /* HCShortReturnGetter.h in Headers */,
 				BB3332EA9B7B56B9364B4023 /* HCUnsignedCharReturnGetter.h in Headers */,
@@ -1086,6 +1099,7 @@
 				BB333D3CAC82C5DFD2D18F2D /* HCBaseDescription.h in Headers */,
 				8B496311190359FA00E9E7BE /* HCThrowsException.h in Headers */,
 				BB3333754B75C34B2EF2B4E1 /* HCBaseMatcher.h in Headers */,
+				8B4963241903789F00E9E7BE /* HCEmptyString.h in Headers */,
 				BB333A11937F03ABF822AFA7 /* HCDescription.h in Headers */,
 				BB33395D7C71ECDB178C10F9 /* HCMatcher.h in Headers */,
 				BB3337BBAAC8E23B9A74CBF1 /* HCSelfDescribing.h in Headers */,
@@ -1393,6 +1407,7 @@
 				BB3331D1B77DB4D834A7FDF5 /* HCOrderingComparison.m in Sources */,
 				BB33327669EF4A7B5889DBAD /* HCClassMatcher.m in Sources */,
 				BB333FFD6EAB7828C98E11EE /* HCConformsToProtocol.m in Sources */,
+				8B4963271903789F00E9E7BE /* HCEmptyString.m in Sources */,
 				BB333D632775553288FEA2FE /* HCHasDescription.m in Sources */,
 				BB33379125D73946A16F7B0D /* HCHasProperty.m in Sources */,
 				BB333EB3405CFA5A54AB30CE /* HCIsEqual.m in Sources */,
@@ -1467,6 +1482,7 @@
 				0859832D13459CA400BE7892 /* StringContainsTest.m in Sources */,
 				0859832F13459CA400BE7892 /* StringEndsWithTest.m in Sources */,
 				0859833013459CA400BE7892 /* StringStartsWithTest.m in Sources */,
+				8B4963211903784F00E9E7BE /* EmptyStringTest.m in Sources */,
 				088FB0AC136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */,
 				0846B6E113EE5F9D00EA68E8 /* DescribedAsTest.m in Sources */,
 				0846B6E313EE5F9D00EA68E8 /* IsTest.m in Sources */,
@@ -1523,6 +1539,7 @@
 				BB333C23AD2D7D8BF49032C1 /* HCOrderingComparison.m in Sources */,
 				BB333D6CD37B858BD8F989F1 /* HCClassMatcher.m in Sources */,
 				BB3333AADA8EEF37F45AF012 /* HCConformsToProtocol.m in Sources */,
+				8B4963261903789F00E9E7BE /* HCEmptyString.m in Sources */,
 				BB3337466031638452E372CC /* HCHasDescription.m in Sources */,
 				BB3334311D89D9395F45A48D /* HCHasProperty.m in Sources */,
 				BB333EBAF352F0961A83E1A6 /* HCIsEqual.m in Sources */,
@@ -1591,6 +1608,7 @@
 				0876037C13440AD8001B439B /* IsCloseToTest.m in Sources */,
 				0876037D13440AD8001B439B /* IsEqualToNumberTest.m in Sources */,
 				0876037E13440AD8001B439B /* NumberAssertTest.m in Sources */,
+				8B4963201903784F00E9E7BE /* EmptyStringTest.m in Sources */,
 				0876037F13440AD8001B439B /* OrderingComparisonTest.m in Sources */,
 				0876038013440AD8001B439B /* HasDescriptionTest.m in Sources */,
 				0876038213440AD8001B439B /* IsEqualIgnoringCaseTest.m in Sources */,
