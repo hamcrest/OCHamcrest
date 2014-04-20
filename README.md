@@ -44,10 +44,6 @@ OCHamcrest comes with a library of useful matchers. This list contains only the 
   * `assertNo` - convienience method for `assertThatBool(x, equalToBool(NO))`
   * `assertTrue` - same as `assertYes`
   * `assertFalse` - same as `assertNo`
-
-* Collection
-
-  * `lacksKey` - match if a key does not exist in a collection
   
 * Exception
 
