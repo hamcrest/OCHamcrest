@@ -129,6 +129,15 @@
 #import <OCHamcrest/HCNumberAssert.h>
 
 /**
+ @defgroup boolean_matchers Boolean Matchers
+ 
+ Matchers that handle boolean expressions.
+ 
+ @ingroup library
+ */
+#import "HCAssertBoolean.h"
+
+/**
  @defgroup core Core API
  */
 
