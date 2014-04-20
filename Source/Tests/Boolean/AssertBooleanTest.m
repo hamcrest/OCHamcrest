@@ -11,14 +11,32 @@
 
 @implementation AssertBooleanTest
 
-- (void)testAssertYes
+- (void)setUp
+{
+    [super setUp];
+    [self raiseAfterFailure];
+}
+
+- (void)testAssertYesWithYesSucceeds
 {
     assertYes(YES);
 }
 
-- (void)testAssertNo
+- (void)testAssertNoWithNoSucceeds
 {
     assertNo(NO);
+}
+
+- (void)testAssertYesWithNoFails
+{
+    @try {
+        assertYes(NO);
+    }
+    @catch (NSException *exception) {
+        STAssertEqualObjects([exception reason], @"Expected a BOOL with value <YES>, but was <NO>", nil);
+        return;
+    }
+    STFail(@"should have failed");
 }
 
 @end
