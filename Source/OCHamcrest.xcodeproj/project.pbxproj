@@ -111,28 +111,30 @@
 		0876039213440E28001B439B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
 		088FB0AB136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */; };
 		088FB0AC136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */; };
-		4D6455F818D2697400E5E4EB /* HCDidThrowException.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6455F618D2697400E5E4EB /* HCDidThrowException.h */; };
 		4D6455F918D2697400E5E4EB /* HCDidThrowException.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6455F618D2697400E5E4EB /* HCDidThrowException.h */; };
-		4D6455FA18D2697400E5E4EB /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6455F718D2697400E5E4EB /* HCDidThrowException.m */; };
-		4D6455FB18D2697400E5E4EB /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6455F718D2697400E5E4EB /* HCDidThrowException.m */; };
-		4D6455FC18D2697400E5E4EB /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6455F718D2697400E5E4EB /* HCDidThrowException.m */; };
-		4D6455FD18D2697400E5E4EB /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6455F718D2697400E5E4EB /* HCDidThrowException.m */; };
 		5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
 		5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
 		77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
 		77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
+		8B27442418D1CB7D0068997C /* ThrowsExceptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B27442318D1CB7D0068997C /* ThrowsExceptionTest.m */; };
+		8B27442518D1CB7D0068997C /* ThrowsExceptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B27442318D1CB7D0068997C /* ThrowsExceptionTest.m */; };
+		8B27442A18D1CC4A0068997C /* HCThrowsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B27442718D1CC4A0068997C /* HCThrowsException.h */; };
+		8B49630B190359FA00E9E7BE /* HCDidThrowException.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B496307190359FA00E9E7BE /* HCDidThrowException.h */; };
+		8B49630C190359FA00E9E7BE /* HCDidThrowException.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B496307190359FA00E9E7BE /* HCDidThrowException.h */; };
+		8B49630D190359FA00E9E7BE /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B496308190359FA00E9E7BE /* HCDidThrowException.m */; };
+		8B49630E190359FA00E9E7BE /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B496308190359FA00E9E7BE /* HCDidThrowException.m */; };
+		8B49630F190359FA00E9E7BE /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B496308190359FA00E9E7BE /* HCDidThrowException.m */; };
+		8B496310190359FA00E9E7BE /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B496308190359FA00E9E7BE /* HCDidThrowException.m */; };
+		8B496311190359FA00E9E7BE /* HCThrowsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B496309190359FA00E9E7BE /* HCThrowsException.h */; };
+		8B496312190359FA00E9E7BE /* HCThrowsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B496309190359FA00E9E7BE /* HCThrowsException.h */; };
+		8B496313190359FA00E9E7BE /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49630A190359FA00E9E7BE /* HCThrowsException.m */; };
+		8B496314190359FA00E9E7BE /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49630A190359FA00E9E7BE /* HCThrowsException.m */; };
+		8B496315190359FA00E9E7BE /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49630A190359FA00E9E7BE /* HCThrowsException.m */; };
+		8B496316190359FA00E9E7BE /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49630A190359FA00E9E7BE /* HCThrowsException.m */; };
 		BB33301A68F74D210C803FEA /* HCIsNil.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335CC804D0A774E5F1041 /* HCIsNil.m */; };
 		BB333020F5ED4E3979BA1714 /* NSInvocation+OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3339BE4C0ECEAB7169772A /* NSInvocation+OCHamcrest.h */; };
 		BB33302772CACC61A1B4DB74 /* HCTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333528C8E2ED8489ACB161 /* HCTestFailureHandler.m */; };
 		BB333031608DFFD2E76CD745 /* HCDoubleReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333F67A18EA568D7683A58 /* HCDoubleReturnGetter.h */; };
-		8B27442418D1CB7D0068997C /* ThrowsExceptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B27442318D1CB7D0068997C /* ThrowsExceptionTest.m */; };
-		8B27442518D1CB7D0068997C /* ThrowsExceptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B27442318D1CB7D0068997C /* ThrowsExceptionTest.m */; };
-		8B27442918D1CC4A0068997C /* HCThrowsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B27442718D1CC4A0068997C /* HCThrowsException.h */; };
-		8B27442A18D1CC4A0068997C /* HCThrowsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B27442718D1CC4A0068997C /* HCThrowsException.h */; };
-		8B27442B18D1CC4A0068997C /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B27442818D1CC4A0068997C /* HCThrowsException.m */; };
-		8B27442C18D1CC4A0068997C /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B27442818D1CC4A0068997C /* HCThrowsException.m */; };
-		8B27442D18D1CC4A0068997C /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B27442818D1CC4A0068997C /* HCThrowsException.m */; };
-		8B27442E18D1CC4A0068997C /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B27442818D1CC4A0068997C /* HCThrowsException.m */; };
 		BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */; };
 		BB3330504048A30E7C190A19 /* HCReturnTypeHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333BD87164C606AE0BE027 /* HCReturnTypeHandlerChain.m */; };
 		BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */; };
@@ -433,9 +435,14 @@
 		088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringContainsInOrderTest.m; sourceTree = "<group>"; };
 		08F39BAA1711426200745958 /* CHANGES.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = CHANGES.md; path = ../CHANGES.md; sourceTree = "<group>"; };
 		4D6455F618D2697400E5E4EB /* HCDidThrowException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCDidThrowException.h; path = Exception/HCDidThrowException.h; sourceTree = "<group>"; };
-		4D6455F718D2697400E5E4EB /* HCDidThrowException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCDidThrowException.m; path = Exception/HCDidThrowException.m; sourceTree = "<group>"; };
 		5F2773441436F81000B9683A /* ConformsToProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConformsToProtocolTest.m; sourceTree = "<group>"; };
 		77C7B8761429361200DE60CC /* HasPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasPropertyTest.m; sourceTree = "<group>"; };
+		8B27442318D1CB7D0068997C /* ThrowsExceptionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThrowsExceptionTest.m; path = Exception/ThrowsExceptionTest.m; sourceTree = "<group>"; };
+		8B27442718D1CC4A0068997C /* HCThrowsException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCThrowsException.h; path = Exception/HCThrowsException.h; sourceTree = "<group>"; };
+		8B496307190359FA00E9E7BE /* HCDidThrowException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDidThrowException.h; sourceTree = "<group>"; };
+		8B496308190359FA00E9E7BE /* HCDidThrowException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDidThrowException.m; sourceTree = "<group>"; };
+		8B496309190359FA00E9E7BE /* HCThrowsException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCThrowsException.h; sourceTree = "<group>"; };
+		8B49630A190359FA00E9E7BE /* HCThrowsException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCThrowsException.m; sourceTree = "<group>"; };
 		BB333034CD6A38647E176A9A /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
 		BB33303898210A59268030C8 /* HCDoubleReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDoubleReturnGetter.m; sourceTree = "<group>"; };
 		BB333049BE335209B4207B2A /* HCIsDictionaryContaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContaining.m; sourceTree = "<group>"; };
@@ -504,9 +511,6 @@
 		BB3337085D9BEFA6D52E7EB0 /* HCTestFailureHandlerChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureHandlerChain.m; sourceTree = "<group>"; };
 		BB33371136854FB7CAF2A5F7 /* HCIsEqualIgnoringCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualIgnoringCase.h; sourceTree = "<group>"; };
 		BB333725B2814AE9CF044B5B /* HCIntReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIntReturnGetter.h; sourceTree = "<group>"; };
-		8B27442318D1CB7D0068997C /* ThrowsExceptionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThrowsExceptionTest.m; path = Exception/ThrowsExceptionTest.m; sourceTree = "<group>"; };
-		8B27442718D1CC4A0068997C /* HCThrowsException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCThrowsException.h; path = Exception/HCThrowsException.h; sourceTree = "<group>"; };
-		8B27442818D1CC4A0068997C /* HCThrowsException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCThrowsException.m; path = Exception/HCThrowsException.m; sourceTree = "<group>"; };
 		BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTypeOfTest.m; sourceTree = "<group>"; };
 		BB33377384F2BF4EA9694DA7 /* HCIsEqualIgnoringWhiteSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualIgnoringWhiteSpace.m; sourceTree = "<group>"; };
 		BB333785CDF67F8F0284B9CA /* HCBaseDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBaseDescription.m; sourceTree = "<group>"; };
@@ -782,6 +786,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8B27442218D1CB4E0068997C /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				8B27442318D1CB7D0068997C /* ThrowsExceptionTest.m */,
+			);
+			name = Exception;
+			sourceTree = "<group>";
+		};
+		8B496306190359FA00E9E7BE /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				8B496307190359FA00E9E7BE /* HCDidThrowException.h */,
+				8B496308190359FA00E9E7BE /* HCDidThrowException.m */,
+				8B496309190359FA00E9E7BE /* HCThrowsException.h */,
+				8B49630A190359FA00E9E7BE /* HCThrowsException.m */,
+			);
+			path = Exception;
+			sourceTree = "<group>";
+		};
 		BB333072EBF64C385754421B /* Object */ = {
 			isa = PBXGroup;
 			children = (
@@ -953,27 +976,9 @@
 				BB333BCFCFCA269190F9F148 /* Number */,
 				BB333072EBF64C385754421B /* Object */,
 				BB333EA5543B2EAB4E34B3CF /* Text */,
+				8B496306190359FA00E9E7BE /* Exception */,
 			);
 			path = Library;
-			sourceTree = "<group>";
-		};
-		8B27442218D1CB4E0068997C /* Exception */ = {
-			isa = PBXGroup;
-			children = (
-				8B27442318D1CB7D0068997C /* ThrowsExceptionTest.m */,
-			);
-			name = Exception;
-			sourceTree = "<group>";
-		};
-		8B27442618D1CC0A0068997C /* Exception */ = {
-			isa = PBXGroup;
-			children = (
-				4D6455F618D2697400E5E4EB /* HCDidThrowException.h */,
-				4D6455F718D2697400E5E4EB /* HCDidThrowException.m */,
-				8B27442718D1CC4A0068997C /* HCThrowsException.h */,
-				8B27442818D1CC4A0068997C /* HCThrowsException.m */,
-			);
-			name = Exception;
 			sourceTree = "<group>";
 		};
 		BB333EA5543B2EAB4E34B3CF /* Text */ = {
@@ -1035,6 +1040,7 @@
 			files = (
 				BB3339A4AEEDCDF3C4E96491 /* HCBoolReturnGetter.h in Headers */,
 				BB33365B91A88641580F886E /* HCCharReturnGetter.h in Headers */,
+				8B496312190359FA00E9E7BE /* HCThrowsException.h in Headers */,
 				BB333031608DFFD2E76CD745 /* HCDoubleReturnGetter.h in Headers */,
 				BB333B4B561F53C31972B9D9 /* HCFloatReturnGetter.h in Headers */,
 				BB333494B740EF5FC786BB56 /* HCIntReturnGetter.h in Headers */,
@@ -1042,6 +1048,7 @@
 				BB3332191B1A602F69B8CC77 /* HCLongReturnGetter.h in Headers */,
 				BB3334425297552B3C06F861 /* HCObjectReturnGetter.h in Headers */,
 				BB3338179D48057215091538 /* HCReturnValueGetter.h in Headers */,
+				8B49630C190359FA00E9E7BE /* HCDidThrowException.h in Headers */,
 				BB333BE50C075D306EDA2E98 /* HCReturnTypeHandlerChain.h in Headers */,
 				BB333D83E68045BBEA3B3796 /* HCShortReturnGetter.h in Headers */,
 				BB3332EA9B7B56B9364B4023 /* HCUnsignedCharReturnGetter.h in Headers */,
@@ -1060,6 +1067,7 @@
 			files = (
 				BB3338188B4D09D845A55E00 /* HCAssertThat.h in Headers */,
 				BB333D3CAC82C5DFD2D18F2D /* HCBaseDescription.h in Headers */,
+				8B496311190359FA00E9E7BE /* HCThrowsException.h in Headers */,
 				BB3333754B75C34B2EF2B4E1 /* HCBaseMatcher.h in Headers */,
 				BB333A11937F03ABF822AFA7 /* HCDescription.h in Headers */,
 				BB33395D7C71ECDB178C10F9 /* HCMatcher.h in Headers */,
@@ -1126,12 +1134,11 @@
 				BB333FE3A9E3E2083DCDE4AF /* HCUnsignedLongReturnGetter.h in Headers */,
 				BB3339D6DAC64560919B4B71 /* HCUnsignedShortReturnGetter.h in Headers */,
 				BB333BCE07B55ED523B267F7 /* HCRequireNonNilObject.h in Headers */,
+				8B49630B190359FA00E9E7BE /* HCDidThrowException.h in Headers */,
 				BB333A7CCE8A0DF95052F67C /* HCInvocationMatcher.h in Headers */,
 				BB333C793CAFFF7E4FB5BA2D /* HCCollect.h in Headers */,
 				BB333020F5ED4E3979BA1714 /* NSInvocation+OCHamcrest.h in Headers */,
 				BB3338B40D8EA4F74C514153 /* HCWrapInMatcher.h in Headers */,
-				4D6455F818D2697400E5E4EB /* HCDidThrowException.h in Headers */,
-				8B27442918D1CC4A0068997C /* HCThrowsException.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1404,13 +1411,13 @@
 				BB333B4AB9E7656A98D0D172 /* HCUnsignedLongLongReturnGetter.m in Sources */,
 				BB333E360A90374209909E7E /* HCUnsignedLongReturnGetter.m in Sources */,
 				BB3334CE1D4AE1517BD55CC5 /* HCUnsignedShortReturnGetter.m in Sources */,
+				8B496315190359FA00E9E7BE /* HCThrowsException.m in Sources */,
 				BB333EECA8B5D2C68CC8EF72 /* NSInvocation+OCHamcrest.m in Sources */,
 				BB33313D3DCEF8B438964913 /* HCRequireNonNilObject.m in Sources */,
 				BB333D2770D5C4DD8E4D7633 /* HCWrapInMatcher.m in Sources */,
+				8B49630F190359FA00E9E7BE /* HCDidThrowException.m in Sources */,
 				BB3338485B4DA85A777544B3 /* HCCollect.m in Sources */,
 				BB33387D94ADA6748B02A289 /* HCInvocationMatcher.m in Sources */,
-				4D6455FC18D2697400E5E4EB /* HCDidThrowException.m in Sources */,
-				8B27442D18D1CC4A0068997C /* HCThrowsException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1423,7 +1430,6 @@
 				0859831213459CA400BE7892 /* HasCountTest.m in Sources */,
 				0859831313459CA400BE7892 /* HasDescriptionTest.m in Sources */,
 				0859831613459CA400BE7892 /* IsCloseToTest.m in Sources */,
-				4D6455FD18D2697400E5E4EB /* HCDidThrowException.m in Sources */,
 				0859831713459CA400BE7892 /* IsCollectionContainingInAnyOrderTest.m in Sources */,
 				0859831813459CA400BE7892 /* IsCollectionContainingInOrderTest.m in Sources */,
 				0859831913459CA400BE7892 /* IsCollectionContainingTest.m in Sources */,
@@ -1453,6 +1459,7 @@
 				0846B6F213EE5FB400EA68E8 /* IsNotTest.m in Sources */,
 				0846B6F813EE5FD200EA68E8 /* IsEqualTest.m in Sources */,
 				0846B6FA13EE5FD200EA68E8 /* IsInstanceOfTest.m in Sources */,
+				8B496316190359FA00E9E7BE /* HCThrowsException.m in Sources */,
 				0846B6FC13EE5FD200EA68E8 /* IsNilTest.m in Sources */,
 				0846B6FE13EE5FD200EA68E8 /* IsSameTest.m in Sources */,
 				082E7C3013FF676E004A22FE /* AbstractMatcherTest.m in Sources */,
@@ -1462,9 +1469,9 @@
 				082E7C3813FF676E004A22FE /* StringDescriptionTest.m in Sources */,
 				77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */,
 				5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */,
-				8B27442E18D1CC4A0068997C /* HCThrowsException.m in Sources */,
 				BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */,
 				0850A44F17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
+				8B496310190359FA00E9E7BE /* HCDidThrowException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1535,13 +1542,13 @@
 				BB3332C8A3C41D9A4A4211AC /* HCUnsignedLongLongReturnGetter.m in Sources */,
 				BB3333CBF2F94416D6F3E265 /* HCUnsignedLongReturnGetter.m in Sources */,
 				BB3331D8A9949686B47D2203 /* HCUnsignedShortReturnGetter.m in Sources */,
+				8B496313190359FA00E9E7BE /* HCThrowsException.m in Sources */,
 				BB3339C714B5E796538B65F1 /* NSInvocation+OCHamcrest.m in Sources */,
 				BB33317BFCB5DC5993AA5C91 /* HCRequireNonNilObject.m in Sources */,
 				BB333BE5AC86690747041C24 /* HCWrapInMatcher.m in Sources */,
+				8B49630D190359FA00E9E7BE /* HCDidThrowException.m in Sources */,
 				BB3332D945BB26BEF3E37662 /* HCCollect.m in Sources */,
 				BB33306BE19806EB64EEC358 /* HCInvocationMatcher.m in Sources */,
-				4D6455FA18D2697400E5E4EB /* HCDidThrowException.m in Sources */,
-				8B27442B18D1CC4A0068997C /* HCThrowsException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1554,7 +1561,6 @@
 				0876036513440AD8001B439B /* HasCountTest.m in Sources */,
 				0876036613440AD8001B439B /* IsCollectionContainingInAnyOrderTest.m in Sources */,
 				0876036713440AD8001B439B /* IsCollectionContainingInOrderTest.m in Sources */,
-				4D6455FB18D2697400E5E4EB /* HCDidThrowException.m in Sources */,
 				0876036813440AD8001B439B /* IsCollectionContainingTest.m in Sources */,
 				0876036913440AD8001B439B /* IsCollectionOnlyContainingTest.m in Sources */,
 				0876036A13440AD8001B439B /* IsDictionaryContainingEntriesTest.m in Sources */,
@@ -1584,6 +1590,7 @@
 				0846B6F113EE5FB400EA68E8 /* IsNotTest.m in Sources */,
 				0846B6F713EE5FD200EA68E8 /* IsEqualTest.m in Sources */,
 				0846B6F913EE5FD200EA68E8 /* IsInstanceOfTest.m in Sources */,
+				8B496314190359FA00E9E7BE /* HCThrowsException.m in Sources */,
 				0846B6FB13EE5FD200EA68E8 /* IsNilTest.m in Sources */,
 				0846B6FD13EE5FD200EA68E8 /* IsSameTest.m in Sources */,
 				082E7C2F13FF676E004A22FE /* AbstractMatcherTest.m in Sources */,
@@ -1593,9 +1600,9 @@
 				082E7C3713FF676E004A22FE /* StringDescriptionTest.m in Sources */,
 				77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */,
 				5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */,
-				8B27442C18D1CC4A0068997C /* HCThrowsException.m in Sources */,
 				BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */,
 				0850A44E17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
+				8B49630E190359FA00E9E7BE /* HCDidThrowException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
