@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name        = 'OCHamcrestExtensions'
   s.version     = '1.0'
-  s.summary     = 'Added functionality onto OCHamcrest'
+  s.summary     = 'OCHamcrest with support for exceptions and more matchers.'
   s.description = <<-DESC
                       OCHamcrestExtensions is built on top of [OCHamcrest](https://github.com/hamcrest/OCHamcrest). It adds several more features, including:
 
