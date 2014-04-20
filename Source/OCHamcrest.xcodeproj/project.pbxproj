@@ -122,13 +122,11 @@
 		8B49630D190359FA00E9E7BE /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B496308190359FA00E9E7BE /* HCDidThrowException.m */; };
 		8B49630E190359FA00E9E7BE /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B496308190359FA00E9E7BE /* HCDidThrowException.m */; };
 		8B49630F190359FA00E9E7BE /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B496308190359FA00E9E7BE /* HCDidThrowException.m */; };
-		8B496310190359FA00E9E7BE /* HCDidThrowException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B496308190359FA00E9E7BE /* HCDidThrowException.m */; };
 		8B496311190359FA00E9E7BE /* HCThrowsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B496309190359FA00E9E7BE /* HCThrowsException.h */; };
 		8B496312190359FA00E9E7BE /* HCThrowsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B496309190359FA00E9E7BE /* HCThrowsException.h */; };
 		8B496313190359FA00E9E7BE /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49630A190359FA00E9E7BE /* HCThrowsException.m */; };
 		8B496314190359FA00E9E7BE /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49630A190359FA00E9E7BE /* HCThrowsException.m */; };
 		8B496315190359FA00E9E7BE /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49630A190359FA00E9E7BE /* HCThrowsException.m */; };
-		8B496316190359FA00E9E7BE /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49630A190359FA00E9E7BE /* HCThrowsException.m */; };
 		BB33301A68F74D210C803FEA /* HCIsNil.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335CC804D0A774E5F1041 /* HCIsNil.m */; };
 		BB333020F5ED4E3979BA1714 /* NSInvocation+OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3339BE4C0ECEAB7169772A /* NSInvocation+OCHamcrest.h */; };
 		BB33302772CACC61A1B4DB74 /* HCTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333528C8E2ED8489ACB161 /* HCTestFailureHandler.m */; };
@@ -1453,7 +1451,6 @@
 				0846B6F213EE5FB400EA68E8 /* IsNotTest.m in Sources */,
 				0846B6F813EE5FD200EA68E8 /* IsEqualTest.m in Sources */,
 				0846B6FA13EE5FD200EA68E8 /* IsInstanceOfTest.m in Sources */,
-				8B496316190359FA00E9E7BE /* HCThrowsException.m in Sources */,
 				0846B6FC13EE5FD200EA68E8 /* IsNilTest.m in Sources */,
 				0846B6FE13EE5FD200EA68E8 /* IsSameTest.m in Sources */,
 				082E7C3013FF676E004A22FE /* AbstractMatcherTest.m in Sources */,
@@ -1465,7 +1462,6 @@
 				5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */,
 				BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */,
 				0850A44F17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
-				8B496310190359FA00E9E7BE /* HCDidThrowException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
