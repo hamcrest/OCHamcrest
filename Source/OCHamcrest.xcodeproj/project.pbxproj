@@ -127,6 +127,10 @@
 		8B496313190359FA00E9E7BE /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49630A190359FA00E9E7BE /* HCThrowsException.m */; };
 		8B496314190359FA00E9E7BE /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49630A190359FA00E9E7BE /* HCThrowsException.m */; };
 		8B496315190359FA00E9E7BE /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49630A190359FA00E9E7BE /* HCThrowsException.m */; };
+		8B49631919036F7D00E9E7BE /* HCAssertBoolean.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B49631819036F7D00E9E7BE /* HCAssertBoolean.h */; };
+		8B49631A19036F7D00E9E7BE /* HCAssertBoolean.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B49631819036F7D00E9E7BE /* HCAssertBoolean.h */; };
+		8B49631D190370F000E9E7BE /* AssertBooleanTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49631C190370F000E9E7BE /* AssertBooleanTest.m */; };
+		8B49631E190370F000E9E7BE /* AssertBooleanTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B49631C190370F000E9E7BE /* AssertBooleanTest.m */; };
 		BB33301A68F74D210C803FEA /* HCIsNil.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335CC804D0A774E5F1041 /* HCIsNil.m */; };
 		BB333020F5ED4E3979BA1714 /* NSInvocation+OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3339BE4C0ECEAB7169772A /* NSInvocation+OCHamcrest.h */; };
 		BB33302772CACC61A1B4DB74 /* HCTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333528C8E2ED8489ACB161 /* HCTestFailureHandler.m */; };
@@ -437,6 +441,8 @@
 		8B496308190359FA00E9E7BE /* HCDidThrowException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDidThrowException.m; sourceTree = "<group>"; };
 		8B496309190359FA00E9E7BE /* HCThrowsException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCThrowsException.h; sourceTree = "<group>"; };
 		8B49630A190359FA00E9E7BE /* HCThrowsException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCThrowsException.m; sourceTree = "<group>"; };
+		8B49631819036F7D00E9E7BE /* HCAssertBoolean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAssertBoolean.h; sourceTree = "<group>"; };
+		8B49631C190370F000E9E7BE /* AssertBooleanTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssertBooleanTest.m; sourceTree = "<group>"; };
 		BB333034CD6A38647E176A9A /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
 		BB33303898210A59268030C8 /* HCDoubleReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDoubleReturnGetter.m; sourceTree = "<group>"; };
 		BB333049BE335209B4207B2A /* HCIsDictionaryContaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContaining.m; sourceTree = "<group>"; };
@@ -693,6 +699,7 @@
 		0876032F13440AD8001B439B /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				8B49631B19036FF700E9E7BE /* Boolean */,
 				0876033413440AD8001B439B /* Collection */,
 				082E7C2813FF676E004A22FE /* Core */,
 				0846B6DB13EE5F9D00EA68E8 /* Decorator */,
@@ -797,6 +804,22 @@
 				8B49630A190359FA00E9E7BE /* HCThrowsException.m */,
 			);
 			path = Exception;
+			sourceTree = "<group>";
+		};
+		8B49631719036F7D00E9E7BE /* Boolean */ = {
+			isa = PBXGroup;
+			children = (
+				8B49631819036F7D00E9E7BE /* HCAssertBoolean.h */,
+			);
+			path = Boolean;
+			sourceTree = "<group>";
+		};
+		8B49631B19036FF700E9E7BE /* Boolean */ = {
+			isa = PBXGroup;
+			children = (
+				8B49631C190370F000E9E7BE /* AssertBooleanTest.m */,
+			);
+			path = Boolean;
 			sourceTree = "<group>";
 		};
 		BB333072EBF64C385754421B /* Object */ = {
@@ -964,13 +987,14 @@
 		BB333E40286A981A2343E031 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				8B49631719036F7D00E9E7BE /* Boolean */,
 				BB333F0D2EFE975002ABB45C /* Collection */,
 				BB333D13C0B32471699C8E7F /* Decorator */,
+				8B496306190359FA00E9E7BE /* Exception */,
 				BB3338CCF66D717444E7C679 /* Logical */,
 				BB333BCFCFCA269190F9F148 /* Number */,
 				BB333072EBF64C385754421B /* Object */,
 				BB333EA5543B2EAB4E34B3CF /* Text */,
-				8B496306190359FA00E9E7BE /* Exception */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -1034,6 +1058,7 @@
 			files = (
 				BB3339A4AEEDCDF3C4E96491 /* HCBoolReturnGetter.h in Headers */,
 				BB33365B91A88641580F886E /* HCCharReturnGetter.h in Headers */,
+				8B49631A19036F7D00E9E7BE /* HCAssertBoolean.h in Headers */,
 				8B496312190359FA00E9E7BE /* HCThrowsException.h in Headers */,
 				BB333031608DFFD2E76CD745 /* HCDoubleReturnGetter.h in Headers */,
 				BB333B4B561F53C31972B9D9 /* HCFloatReturnGetter.h in Headers */,
@@ -1116,6 +1141,7 @@
 				BB33370D6F5B9B4978104E4B /* HCIntReturnGetter.h in Headers */,
 				BB333260BA38F45B4864A846 /* HCLongLongReturnGetter.h in Headers */,
 				BB3335C23B645B2E01C1DD95 /* HCLongReturnGetter.h in Headers */,
+				8B49631919036F7D00E9E7BE /* HCAssertBoolean.h in Headers */,
 				BB333A62F20EA2AE048FC857 /* HCObjectReturnGetter.h in Headers */,
 				BB333DE89A2F8557B268A355 /* HCReturnValueGetter.h in Headers */,
 				BB33371F6028F465B81A4E5F /* HCReturnTypeHandlerChain.h in Headers */,
@@ -1461,6 +1487,7 @@
 				77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */,
 				5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */,
 				BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */,
+				8B49631E190370F000E9E7BE /* AssertBooleanTest.m in Sources */,
 				0850A44F17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1546,6 +1573,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B49631D190370F000E9E7BE /* AssertBooleanTest.m in Sources */,
 				0876036313440AD8001B439B /* FakeWithCount.m in Sources */,
 				0876036413440AD8001B439B /* FakeWithoutCount.m in Sources */,
 				0876036513440AD8001B439B /* HasCountTest.m in Sources */,
