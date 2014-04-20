@@ -8,6 +8,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HCDidThrowException.h"
 
 @protocol HCMatcher;
 
@@ -15,8 +16,21 @@
 FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCMatcher> matcher,
                                                  const char *fileName, int lineNumber);
 
-#define HC_assertThat(actual, matcher)  \
-    HC_assertThatWithLocation(self, actual, matcher, __FILE__, __LINE__)
+#define HC_buildExceptionCatcher(expression) \
+    ^id() { \
+        @try { \
+            return expression; \
+        } \
+        @catch (NSException *__exception) { \
+            return [[HCDidThrowException alloc] initWithException:__exception]; \
+        } \
+    }
+
+#define HC_assertThat(expression, matcher)  \
+    { \
+        id (^exceptionCatcher)() = HC_buildExceptionCatcher(expression); \
+        HC_assertThatWithLocation(self, exceptionCatcher(), matcher, __FILE__, __LINE__); \
+    }
 
 /**
  assertThat(actual, matcher) -

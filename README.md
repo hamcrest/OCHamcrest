@@ -181,12 +181,67 @@ OCHamcrest comes with a library of useful matchers:
 
   * `describedAs` - give the matcher a custom failure description
   * `is` - decorator to improve readability - see "Syntactic sugar" below
+  
+* Exception
+
+  * `ignoringReturnValue` - used to wrap expressions of non-`id` return type
+  * `willThrow` - assert that a specific NSException is thrown is thrown
+  * `willThrowException` - assert that any NSException is thrown
+  * `willNotThrowException` - assert that no exception is thrown
+
 
 The arguments for many of these matchers accept not just a matching value, but
 another matcher, so matchers can be composed for greater flexibility. For
 example, `only_contains(endsWith(@"."))` will match any collection where every
 item is a string ending with period.
 
+
+Exceptions
+----------
+
+Checking if an exception was thrown (or not thrown) works much the same way as general assertions:
+
+```obj-c
+assertThat([myObject mightThrowException], willThrowException());
+assertThat([myObject mightThrowException], willNotThrowException());
+```
+
+Asserting specific names:
+
+```obj-c
+assertThat([myObject mightThrowException], willThrow(NSInvalidArgumentException));
+```
+
+Dealing with void and other non-`id` related expressions:
+
+```obj-c
+assertThat(ignoringReturnValue(1 + 1), willNotThrowException());
+```
+
+Using string matchers against the exception reason:
+
+```obj-c
+NSException *e = [NSException exceptionWithName:NSInvalidArgumentException
+                                         reason:@"For fun."
+                                       userInfo:nil];
+assertThat(ignoringReturnValue(@throw e), allOf(
+    willThrow(NSInvalidArgumentException),
+    containsString(@"fun."),
+    nil
+));
+```
+
+You do not have to specify the exception assertion, so the above could be written shorter - however if the expression returned a string containing "fun." and did not throw then this would be a false-positive:
+
+```obj-c
+assertThat(ignoringReturnValue(@throw e), containsString(@"fun."));
+```
+
+A safer way and easier way to assert the precise exception with message is to use equality since it contains both:
+
+```obj-c
+assertThat(ignoringReturnValue(@throw e), equalTo(@"NSInvalidArgumentException: For fun."));
+```
 
 Syntactic sugar
 ---------------
