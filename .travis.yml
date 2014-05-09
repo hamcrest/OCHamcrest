@@ -5,8 +5,8 @@ before_install:
 
 script:
   - xctool test -project Source/OCHamcrest.xcodeproj -scheme OCHamcrest -sdk macosx10.9
-  - xcodebuild test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator7.0 -destination "name=iPhone Retina (4-inch)"
-  - xcodebuild test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator7.0 -destination "name=iPhone Retina (4-inch 64-bit)"
+  - xctool test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator7.1 -destination "name=iPhone Retina (4-inch)"
+  - xctool test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator7.1 -destination "name=iPhone Retina (4-inch 64-bit)"
 
 after_success:
   - ./coveralls.rb --exclude-folder Source/Tests --exclude-folder Examples
