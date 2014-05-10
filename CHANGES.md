@@ -1,13 +1,15 @@
 Version 4.0.0
 -------------
-_Coming Soon_
+_10 May 2014_
 
 This is a refactoring release with potential backwards compatibility issues for writers of custom
 matchers:
 
+- Almost all ivars have been converted to hidden properties. Let me know if this trips you up.
 - If you subclass HCInvocationMatcher for a custom matcher, the ivars have been renamed.
 - If you import HCCollectMatchers.h for a custom matcher, change this to import HCCollect.h.
-- If you're not using CocoaPods, specify `-ObjC` in your "Other Linker Flags".
+
+Also, if you're not using CocoaPods, specify `-ObjC` in your "Other Linker Flags".
 
 
 Version 3.0.1

@@ -7,8 +7,8 @@ What is OCHamcrest?
 
 OCHamcrest is an iOS and Mac OS X library providing:
 
-* a library of "matcher" objects that let you declare rules for whether a given
-  object matches the criteria or not.
+* a library of "matcher" objects for declaring rules to check whether a given
+  object matches those rules.
 * a framework for writing your own matchers.
 
 Matchers are useful for a variety of purposes, such as UI validation. But
@@ -30,7 +30,7 @@ include any pods from their main targets:
 
 ```ruby
 target :MyTests, :exclusive => true do
-  pod 'OCHamcrest', '~> 3.0'
+  pod 'OCHamcrest', '~> 4.0'
 end
 ```
 
