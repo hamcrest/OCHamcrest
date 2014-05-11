@@ -8,6 +8,7 @@ matchers:
 - Almost all ivars have been converted to hidden properties. Let me know if this trips you up.
 - If you subclass HCInvocationMatcher for a custom matcher, the ivars have been renamed.
 - If you import HCCollectMatchers.h for a custom matcher, change this to import HCCollect.h.
+- HCTestFailureHandler has changed from a protocol to a class.
 
 Also, if you're not using CocoaPods, specify `-ObjC` in your "Other Linker Flags".
 
