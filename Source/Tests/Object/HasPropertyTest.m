@@ -91,9 +91,9 @@
 
 - (void)testCanMatchNumberPropertyValues
 {
-    assertMatches(@"equal int property values", hasProperty(@"shoeSize", equalToInt(13)), joe);
-    assertDoesNotMatch(@"unequal int property values", hasProperty(@"shoeSize", equalToInt(3)), joe);
-    assertDoesNotMatch(@"unequal int property values", hasProperty(@"shoeSize", equalToInt(-3)), joe);
+    assertMatches(@"equal int property values", hasProperty(@"shoeSize", equalTo(@13)), joe);
+    assertDoesNotMatch(@"unequal int property values", hasProperty(@"shoeSize", equalTo(@3)), joe);
+    assertDoesNotMatch(@"unequal int property values", hasProperty(@"shoeSize", equalTo(@-3)), joe);
 }
 
 - (void)testNilPropertyValues
@@ -189,15 +189,15 @@
 - (void)testCanMatchPrimitiveIntValues 
 {
     foo.intValue = INT_MIN;
-    assertMatches(@"int should match", hasProperty(@"intValue", equalToInt(INT_MIN)), foo);
-    assertDoesNotMatch(@"int should not match", hasProperty(@"intValue", equalToInt(-2)), foo);
+    assertMatches(@"int should match", hasProperty(@"intValue", equalTo(@INT_MIN)), foo);
+    assertDoesNotMatch(@"int should not match", hasProperty(@"intValue", equalTo(@-2)), foo);
 }
 
 - (void)testCanMatchPrimitiveShortValues 
 {
     foo.shortValue = -2;
-    assertMatches(@"short should match", hasProperty(@"shortValue", equalToShort(-2)), foo);
-    assertDoesNotMatch(@"short should not match", hasProperty(@"shortValue", equalToShort(-1)), foo);
+    assertMatches(@"short should match", hasProperty(@"shortValue", equalTo(@-2)), foo);
+    assertDoesNotMatch(@"short should not match", hasProperty(@"shortValue", equalTo(@-1)), foo);
 }
 
 - (void)testCanMatchPrimitiveLongValues 
@@ -205,7 +205,7 @@
     foo.longValue = LONG_MIN;
     assertMatches(@"long should match", hasProperty(@"longValue", equalToLong(LONG_MIN)), foo);
     assertDoesNotMatch(@"long should not match",
-                       hasProperty(@"longValue", equalToLong(LONG_MIN + 1)),
+                       hasProperty(@"longValue", equalTo(@(LONG_MIN + 1))),
                        foo);
 }
 
