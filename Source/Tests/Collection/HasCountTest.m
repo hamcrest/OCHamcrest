@@ -12,7 +12,7 @@
 #import <OCHamcrest/HCHasCount.h>
 
     // Collaborators
-#import <OCHamcrest/HCIsEqualToNumber.h>
+#import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCOrderingComparison.h>
 
     // Test support
@@ -28,15 +28,15 @@
 
 - (id <HCMatcher>)createMatcher
 {
-    return hasCount(equalToUnsignedInteger(42));
+    return hasCount(equalTo(@42));
 }
 
 - (void)testConvertsCountToNSNumberAndPassesToNestedMatcher
 {
     FakeWithCount *fakeWithCount = [FakeWithCount fakeWithCount:5];
     
-    assertMatches(@"same number", hasCount(equalToUnsignedInteger(5)), fakeWithCount);
-    assertDoesNotMatch(@"different number", hasCount(equalToUnsignedInteger(6)), fakeWithCount);
+    assertMatches(@"same number", hasCount(equalTo(@5)), fakeWithCount);
+    assertDoesNotMatch(@"different number", hasCount(equalTo(@6)), fakeWithCount);
 }
 
 - (void)testHasReadableDescription
@@ -53,26 +53,25 @@
 - (void)testMismatchDescriptionForItemWithWrongCount
 {
     assertMismatchDescription(@"was count of <42> with <FakeWithCount>",
-                              hasCount(equalToUnsignedInteger(1)),
-                              [FakeWithCount fakeWithCount:42]);
+                              hasCount(equalTo(@1)), [FakeWithCount fakeWithCount:42]);
 }
 
 - (void)testMismatchDescriptionForItemWithoutCount
 {
     assertMismatchDescription(@"was <FakeWithoutCount>",
-                              hasCount(equalToUnsignedInteger(1)), [FakeWithoutCount fake]);
+                              hasCount(equalTo(@1)), [FakeWithoutCount fake]);
 }
 
 - (void)testDescribesMismatchForItemWithWrongCount
 {
     assertDescribeMismatch(@"was count of <42> with <FakeWithCount>",
-                           hasCount(equalToUnsignedInteger(1)), [FakeWithCount fakeWithCount:42]);
+                           hasCount(equalTo(@1)), [FakeWithCount fakeWithCount:42]);
 }
 
 - (void)testDescribesMismatchForItemWithoutCount
 {
     assertDescribeMismatch(@"was <FakeWithoutCount>",
-                           hasCount(equalToUnsignedInteger(1)), [FakeWithoutCount fake]);
+                           hasCount(equalTo(@1)), [FakeWithoutCount fake]);
 }
 
 @end

@@ -175,15 +175,15 @@
 - (void)testCanMatchPrimitiveBoolValues 
 {
     foo.boolValue = YES;
-    assertMatches(@"BOOL should match", hasProperty(@"boolValue", equalToBool(YES)), foo);
-    assertDoesNotMatch(@"BOOL should not match", hasProperty(@"boolValue", equalToBool(NO)), foo);
+    assertMatches(@"BOOL should match", hasProperty(@"boolValue", equalTo(@YES)), foo);
+    assertDoesNotMatch(@"BOOL should not match", hasProperty(@"boolValue", equalTo(@NO)), foo);
 }
 
 - (void)testCanMatchPrimitiveCharValues 
 {
     foo.charValue = 'a';
-    assertMatches(@"char should match", hasProperty(@"charValue", equalToChar('a')), foo);
-    assertDoesNotMatch(@"char should not match", hasProperty(@"charValue", equalToChar('b')), foo);
+    assertMatches(@"char should match", hasProperty(@"charValue", equalTo(@'a')), foo);
+    assertDoesNotMatch(@"char should not match", hasProperty(@"charValue", equalTo(@'b')), foo);
 }
 
 - (void)testCanMatchPrimitiveIntValues 
@@ -203,7 +203,7 @@
 - (void)testCanMatchPrimitiveLongValues 
 {
     foo.longValue = LONG_MIN;
-    assertMatches(@"long should match", hasProperty(@"longValue", equalToLong(LONG_MIN)), foo);
+    assertMatches(@"long should match", hasProperty(@"longValue", equalTo(@LONG_MIN)), foo);
     assertDoesNotMatch(@"long should not match",
                        hasProperty(@"longValue", equalTo(@(LONG_MIN + 1))),
                        foo);
@@ -213,10 +213,10 @@
 {
     foo.longLongValue = LONG_MIN - 1;
     assertMatches(@"long long should match",
-                  hasProperty(@"longLongValue", equalToLongLong(LONG_MIN - 1)),
+                  hasProperty(@"longLongValue", equalTo(@(LONG_MIN - 1))),
                   foo);
     assertDoesNotMatch(@"long long should not match",
-                       hasProperty(@"longLongValue", equalToLongLong(LONG_MIN)),
+                       hasProperty(@"longLongValue", equalTo(@LONG_MIN)),
                        foo);
 }
 
@@ -224,10 +224,10 @@
 {
     foo.unsignedCharValue = 'b';
     assertMatches(@"unsigned char should match",
-                  hasProperty(@"unsignedCharValue", equalToUnsignedChar('b')),
+                  hasProperty(@"unsignedCharValue", equalTo(@'b')),
                   foo);
     assertDoesNotMatch(@"unsigned char should not match",
-                       hasProperty(@"unsignedCharValue", equalToUnsignedChar('c')),
+                       hasProperty(@"unsignedCharValue", equalTo(@'c')),
                        foo);
 }
 
@@ -235,10 +235,10 @@
 {
     foo.unsignedIntValue = UINT_MAX;
     assertMatches(@"unsigned int should match",
-                  hasProperty(@"unsignedIntValue", equalToUnsignedInt(UINT_MAX)),
+                  hasProperty(@"unsignedIntValue", equalTo(@UINT_MAX)),
                   foo);
     assertDoesNotMatch(@"unsigned int should not match",
-                       hasProperty(@"unsignedIntValue", equalToUnsignedInt(UINT_MAX - 1)),
+                       hasProperty(@"unsignedIntValue", equalTo(@(UINT_MAX - 1))),
                        foo);
 }
 
@@ -246,10 +246,10 @@
 {
     foo.unsignedShortValue = 2;
     assertMatches(@"unsigned short should match",
-                  hasProperty(@"unsignedShortValue", equalToUnsignedShort(2)),
+                  hasProperty(@"unsignedShortValue", equalTo(@2)),
                   foo);
     assertDoesNotMatch(@"unsigned short should not match",
-                       hasProperty(@"unsignedShortValue", equalToUnsignedShort(3)),
+                       hasProperty(@"unsignedShortValue", equalTo(@3)),
                        foo);
 }
 
@@ -257,10 +257,10 @@
 {
     foo.unsignedLongValue = ULONG_MAX;
     assertMatches(@"unsigned long should match",
-                  hasProperty(@"unsignedLongValue", equalToUnsignedLong(ULONG_MAX)),
+                  hasProperty(@"unsignedLongValue", equalTo(@ULONG_MAX)),
                   foo);
     assertDoesNotMatch(@"unsigned long should not match",
-                       hasProperty(@"unsignedLongValue", equalToUnsignedLong(ULONG_MAX - 1)),
+                       hasProperty(@"unsignedLongValue", equalTo(@(ULONG_MAX - 1))),
                        foo);
 }
 
@@ -268,26 +268,26 @@
 {
     foo.unsignedLongLongValue = ULLONG_MAX;
     assertMatches(@"unsigned long long should match",
-                  hasProperty(@"unsignedLongLongValue", equalToUnsignedLongLong(ULLONG_MAX)),
+                  hasProperty(@"unsignedLongLongValue", equalTo(@ULLONG_MAX)),
                   foo);
     assertDoesNotMatch(@"unsigned long long should not match",
-                       hasProperty(@"unsignedLongLongValue", equalToUnsignedLongLong(ULLONG_MAX - 1)),
+                       hasProperty(@"unsignedLongLongValue", equalTo(@(ULLONG_MAX - 1))),
                        foo);
 }
 
 - (void)testCanMatchPrimitiveFloatValues 
 {
     foo.floatValue = 1.2f;
-    assertMatches(@"float should match", hasProperty(@"floatValue", equalToFloat(1.2f)), foo);
-    assertDoesNotMatch(@"float should not match", hasProperty(@"floatValue", equalToFloat(1.3f)), foo);
+    assertMatches(@"float should match", hasProperty(@"floatValue", equalTo(@1.2f)), foo);
+    assertDoesNotMatch(@"float should not match", hasProperty(@"floatValue", equalTo(@1.3f)), foo);
 }
 
 - (void)testCanMatchPrimitiveDoubleValues 
 {
     foo.doubleValue = DBL_MAX;
-    assertMatches(@"double should match", hasProperty(@"doubleValue", equalToDouble(DBL_MAX)), foo);
+    assertMatches(@"double should match", hasProperty(@"doubleValue", equalTo(@DBL_MAX)), foo);
     assertDoesNotMatch(@"double should not match",
-                       hasProperty(@"doubleValue", equalToDouble(3.14)),
+                       hasProperty(@"doubleValue", equalTo(@3.14)),
                        foo);
 }
 

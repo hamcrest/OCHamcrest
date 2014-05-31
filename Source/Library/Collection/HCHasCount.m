@@ -9,7 +9,7 @@
 
 #import "HCHasCount.h"
 
-#import "HCIsEqualToNumber.h"
+#import "HCIsEqual.h"
 
 
 @interface HCHasCount ()
@@ -72,5 +72,5 @@ id HC_hasCount(id <HCMatcher> matcher)
 
 id HC_hasCountOf(NSUInteger value)
 {
-    return HC_hasCount(HC_equalToUnsignedInteger(value));
+    return HC_hasCount(HC_equalTo(@(value)));
 }
