@@ -1,3 +1,12 @@
+Version 4.0.1
+-------------
+_04 Jun 2014_
+
+**Project changes:**
+
+- Increased deployment targets to OS X 10.8, iOS 6.0.
+
+
 Version 4.0.0
 -------------
 _10 May 2014_
