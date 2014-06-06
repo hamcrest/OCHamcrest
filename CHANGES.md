@@ -26,12 +26,6 @@ Version 3.0.1
 -------------
 _29 Oct 2013_
 
-**Improvements:**
-
-- Changed matcher factory methods to return plain `id` so that matchers can be used without casting
-  to `(id)` for OCMockito arguments.
-- Added support for 64-bit iOS devices.
-
 **Fixes:**
 
 - Fixed problem where isNot did not ask the sub-matcher's mismatch description. _Thanks to: James
@@ -39,6 +33,12 @@ _29 Oct 2013_
 - Fixed crash in `describedAs` matcher . _Thanks to: Nikolaj Schumacher_
 - Fixed crash in `hasProperty` matcher when the property is a primitive type. _Thanks to: Nikolaj
   Schumacher_
+
+**Improvements:**
+
+- Changed matcher factory methods to return plain `id` so that matchers can be used without casting
+  to `(id)` for OCMockito arguments.
+- Added support for 64-bit iOS devices.
 
 **Examples & Documentation:**
 
@@ -70,14 +70,6 @@ Version 2.1.0
 -------------
 _23 Jun 2013_
 
-**Features:**
-
-- Added support for XCTest. (This was undone by subsequent updates to XCTest.)
-
-**Project changes:**
-
-- Increased deployment targets to Mac OS X 10.7, iOS 5.0.
-
 **Fixes:**
 
 - Made build script flexible so that doxygen isn't required, or can be in a different location.
@@ -88,9 +80,17 @@ _23 Jun 2013_
   back to optimized code. _Thanks to: Nikolaj Schumacher_
 - Fixed MacExample so it finds OCHamcrest.
 
+**Features:**
+
+- Added support for XCTest. (This was undone by subsequent updates to XCTest.)
+
 **Deprecated:**
 
 - `empty` clashed with the C++ string method of the same name. It has been renamed to `isEmpty`.
+
+**Project changes:**
+
+- Increased deployment targets to Mac OS X 10.7, iOS 5.0.
 
 
 Version 2.0.1
@@ -114,13 +114,13 @@ _13 Apr 2013_
 This release adopts Semantic Versioning (http://semver.org). Since removal of deprecated items is a
 backwards incompatible change, the major version number is incremented. _Thanks to: Jens Nerup_
 
-**New matchers:**
-
-- `isA` matches objects that are instances of a given class, but not of any subclass.
-
 **Fixes:**
 
 - Fixed GTM compatibility -- avoid shadowing `conformsToProtocol:`
+
+**New matchers:**
+
+- `isA` matches objects that are instances of a given class, but not of any subclass.
 
 **Improved matchers:**
 
@@ -208,6 +208,10 @@ Version 1.6
 -----------
 _27 Sep 2011_
 
+**Fixes:**
+
+- `stringContainsInOrder` was missing from the master header; now it's there.
+
 **New matchers:**
 
 - `hasProperty` matches the return value of a method with a given name. (It could be a property,
@@ -219,10 +223,6 @@ _27 Sep 2011_
 - Rewrote documentation.
 - Matchers that require a nil-terminated list now generate a compiler error if you don't have
   `nil` at the end.
-
-**Fixes:**
-
-- `stringContainsInOrder` was missing from the master header; now it's there.
 
 
 Version 1.5
@@ -297,15 +297,15 @@ Version 1.2
 -----------
 _03 Jan 2011_
 
+**Fixes:**
+
+- Fixed assertThat to describe the diagnosis of the mismatch, not just the mismatched value.
+
 **New matchers:**
 
 - `hasCount` matches collections for which `-count` satisfies a given matcher.
 - `hasCountOf` matches collections for which `-count` equals a given count.
 - `empty` matches empty collection.
-
-**Fixes:**
-
-- Fixed assertThat to describe the diagnosis of the mismatch, not just the mismatched value.
 
 **Improvements:**
 
@@ -332,11 +332,6 @@ Version 1.1.2
 -------------
 _28 Dec 2010_
 
-**New matchers:**
-
-- `contains` matches collection containing matching items in order.
-- `containsInAnyOrder` matches collection containing matching items in any order.
-
 **Fixes:**
 
 - Fixed crash that occurred when trying to describe the matchers `allOf`, `anyOf` and `isIn`
@@ -344,6 +339,11 @@ _28 Dec 2010_
 - Fix problems introduced in broken release v1.1:
   * Added the new matchers to the master header and to the iOS target.
   * Fixed distribution zip file to preserve symlinks in frameworks.
+
+**New matchers:**
+
+- `contains` matches collection containing matching items in order.
+- `containsInAnyOrder` matches collection containing matching items in any order.
 
 **Improvements:**
 
