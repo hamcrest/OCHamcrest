@@ -32,16 +32,13 @@
         readDigit = YES;
     }
 
-    if (readDigit)
-    {
-        *number = decimal;
-        return [self substringFromIndex:index];
-    }
-    else
+    if (!readDigit)
     {
         *number = -1;
         return self;
     }
+    *number = decimal;
+    return [self substringFromIndex:index];
 }
 
 @end
@@ -123,7 +120,7 @@
 id HC_describedAs(NSString *description, id <HCMatcher> matcher, ...)
 {
     NSMutableArray *valueList = [NSMutableArray array];
-    
+
     va_list args;
     va_start(args, matcher);
     id value = va_arg(args, id);
@@ -133,6 +130,6 @@ id HC_describedAs(NSString *description, id <HCMatcher> matcher, ...)
         value = va_arg(args, id);
     }
     va_end(args);
-    
+
     return [HCDescribedAs describedAs:description forMatcher:matcher overValues:valueList];
 }

@@ -42,8 +42,8 @@
 {
     if ([self handlesReturnType:type])
         return [self returnValueFromInvocation:invocation];
-    else
-        return [self.successor returnValueOfType:type fromInvocation:invocation];
+
+    return [self.successor returnValueOfType:type fromInvocation:invocation];
 }
 
 @end
