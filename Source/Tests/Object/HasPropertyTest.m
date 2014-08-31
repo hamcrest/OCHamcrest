@@ -11,7 +11,6 @@
 
     // Collaborators
 #import <OCHamcrest/HCIsEqual.h>
-#import <OCHamcrest/HCIsEqualToNumber.h>
 #import <OCHamcrest/HCIsNil.h>
 
     // Test support
@@ -103,7 +102,7 @@
 }
 
 - (void)testMatcherCreationRequiresNonNilPropertyName
-{    
+{
     STAssertThrows(hasProperty(nil, nil), @"Should require non-nil property name");
 }
 
@@ -172,35 +171,35 @@
     [super tearDown];
 }
 
-- (void)testCanMatchPrimitiveBoolValues 
+- (void)testCanMatchPrimitiveBoolValues
 {
     foo.boolValue = YES;
     assertMatches(@"BOOL should match", hasProperty(@"boolValue", equalTo(@YES)), foo);
     assertDoesNotMatch(@"BOOL should not match", hasProperty(@"boolValue", equalTo(@NO)), foo);
 }
 
-- (void)testCanMatchPrimitiveCharValues 
+- (void)testCanMatchPrimitiveCharValues
 {
     foo.charValue = 'a';
     assertMatches(@"char should match", hasProperty(@"charValue", equalTo(@'a')), foo);
     assertDoesNotMatch(@"char should not match", hasProperty(@"charValue", equalTo(@'b')), foo);
 }
 
-- (void)testCanMatchPrimitiveIntValues 
+- (void)testCanMatchPrimitiveIntValues
 {
     foo.intValue = INT_MIN;
     assertMatches(@"int should match", hasProperty(@"intValue", equalTo(@INT_MIN)), foo);
     assertDoesNotMatch(@"int should not match", hasProperty(@"intValue", equalTo(@-2)), foo);
 }
 
-- (void)testCanMatchPrimitiveShortValues 
+- (void)testCanMatchPrimitiveShortValues
 {
     foo.shortValue = -2;
     assertMatches(@"short should match", hasProperty(@"shortValue", equalTo(@-2)), foo);
     assertDoesNotMatch(@"short should not match", hasProperty(@"shortValue", equalTo(@-1)), foo);
 }
 
-- (void)testCanMatchPrimitiveLongValues 
+- (void)testCanMatchPrimitiveLongValues
 {
     foo.longValue = LONG_MIN;
     assertMatches(@"long should match", hasProperty(@"longValue", equalTo(@LONG_MIN)), foo);
@@ -209,7 +208,7 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveLongLongValues 
+- (void)testCanMatchPrimitiveLongLongValues
 {
     foo.longLongValue = LONG_MIN - 1;
     assertMatches(@"long long should match",
@@ -220,7 +219,7 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveUnsignedCharValues 
+- (void)testCanMatchPrimitiveUnsignedCharValues
 {
     foo.unsignedCharValue = 'b';
     assertMatches(@"unsigned char should match",
@@ -231,7 +230,7 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveUnsignedIntValues 
+- (void)testCanMatchPrimitiveUnsignedIntValues
 {
     foo.unsignedIntValue = UINT_MAX;
     assertMatches(@"unsigned int should match",
@@ -242,7 +241,7 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveUnsignedShortValues 
+- (void)testCanMatchPrimitiveUnsignedShortValues
 {
     foo.unsignedShortValue = 2;
     assertMatches(@"unsigned short should match",
@@ -253,7 +252,7 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveUnsignedLongValues 
+- (void)testCanMatchPrimitiveUnsignedLongValues
 {
     foo.unsignedLongValue = ULONG_MAX;
     assertMatches(@"unsigned long should match",
@@ -264,7 +263,7 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveUnsignedLongLongValues 
+- (void)testCanMatchPrimitiveUnsignedLongLongValues
 {
     foo.unsignedLongLongValue = ULLONG_MAX;
     assertMatches(@"unsigned long long should match",
@@ -275,14 +274,14 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveFloatValues 
+- (void)testCanMatchPrimitiveFloatValues
 {
     foo.floatValue = 1.2f;
     assertMatches(@"float should match", hasProperty(@"floatValue", equalTo(@1.2f)), foo);
     assertDoesNotMatch(@"float should not match", hasProperty(@"floatValue", equalTo(@1.3f)), foo);
 }
 
-- (void)testCanMatchPrimitiveDoubleValues 
+- (void)testCanMatchPrimitiveDoubleValues
 {
     foo.doubleValue = DBL_MAX;
     assertMatches(@"double should match", hasProperty(@"doubleValue", equalTo(@DBL_MAX)), foo);
