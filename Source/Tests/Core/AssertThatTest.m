@@ -19,61 +19,6 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 
-@interface MockTestRun : SenTestCaseRun
-{
-    // Can't use original attributes because they're declared @private.
-    unsigned int myFailureCount;
-    unsigned int myUnexpectedExceptionCount;
-}
-@end
-
-@implementation MockTestRun
-
-- (void)addException:(NSException *) anException
-{
-    if ([[anException name] isEqualToString:SenTestFailureException])
-        ++myFailureCount;
-    else
-        ++myUnexpectedExceptionCount;
-}
-
-- (unsigned int)failureCount
-{
-    return myFailureCount;
-}
-
-- (unsigned int)unexpectedExceptionCount
-{
-    return myUnexpectedExceptionCount;
-}
-
-- (void)stop
-{
-    // Override to avoid posting notification.
-}
-
-@end
-
-
-//@interface QuietTest : SenTestCase
-//@end
-//
-//@implementation QuietTest
-//
-//- (Class)testRunClass
-//{
-//    return [MockTestRun class];
-//}
-//
-//- (void)twoFailingAssertions
-//{
-//    assertThat(@"1", equalTo(@"2"));
-//    assertThat(@"3", equalTo(@"4"));
-//}
-//
-//@end
-
-
 @interface AssertThatTest : SenTestCase
 @end
 
@@ -126,28 +71,6 @@
     }
     STFail(@"should have failed");
 }
-
-//- (void)testAssertionRecordingAllErrors
-//{
-//    QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
-//    [testCase continueAfterFailure];    // Default behavior of OCUnit
-//
-//    MockTestRun *testRun = (MockTestRun *)[testCase run];
-//
-//    STAssertEquals([testRun failureCount], 2U, nil);
-//    STAssertEquals([testRun unexpectedExceptionCount], 0U, nil);
-//}
-//
-//- (void)testAssertionStoppingAtFirstError
-//{
-//    QuietTest *testCase = [QuietTest testCaseWithSelector:@selector(twoFailingAssertions)];
-//    [testCase raiseAfterFailure];       // Change behavior
-//
-//    MockTestRun *testRun = (MockTestRun *)[testCase run];
-//
-//    STAssertEquals([testRun failureCount], 1U, nil);
-//    STAssertEquals([testRun unexpectedExceptionCount], 0U, nil);
-//}
 
 @end
 
