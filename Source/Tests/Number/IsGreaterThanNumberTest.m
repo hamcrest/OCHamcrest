@@ -307,13 +307,13 @@
 
 - (void)testComparesWithNSNumber
 {
-    assertMatches(@"Large NSInteger", greaterThanInteger(0), [NSNumber numberWithInteger:INT_MAX]);
-    assertMatches(@"Small NSInteger", greaterThanInteger(INT_MIN), [NSNumber numberWithInteger:0]);
+    assertMatches(@"Large NSInteger", greaterThanInteger(0), [NSNumber numberWithInteger:NSIntegerMax]);
+    assertMatches(@"Small NSInteger", greaterThanInteger(NSIntegerMin), [NSNumber numberWithInteger:0]);
 }
 
 - (void)testMismatchesDifferentNumber
 {
-    assertDoesNotMatch(@"Different", greaterThanInteger(INT_MAX), [NSNumber numberWithInteger:INT_MIN]);
+    assertDoesNotMatch(@"Different", greaterThanInteger(NSIntegerMax), [NSNumber numberWithInteger:NSIntegerMin]);
 }
 
 @end
@@ -331,12 +331,12 @@
 
 - (void)testComparesWithNSNumber
 {
-    assertMatches(@"NSUInteger", greaterThanUnsignedInteger(0), [NSNumber numberWithUnsignedInteger:UINT_MAX]);
+    assertMatches(@"NSUInteger", greaterThanUnsignedInteger(0), [NSNumber numberWithUnsignedInteger:NSUIntegerMax]);
 }
 
 - (void)testMismatchesDifferentNumber
 {
-    assertDoesNotMatch(@"Different", greaterThanUnsignedInteger(INT_MAX), [NSNumber numberWithUnsignedInteger:0]);
+    assertDoesNotMatch(@"Different", greaterThanUnsignedInteger(NSUIntegerMax), [NSNumber numberWithUnsignedInteger:0]);
 }
 
 @end

@@ -129,6 +129,12 @@
 		7966BA0519FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966BA0119FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.m */; };
 		7966BA0719FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966BA0619FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m */; };
 		7966BA0819FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966BA0619FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m */; };
+		7966BA0A19FD662700B70BE4 /* IsGreaterThanOrEqualToNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966BA0919FD662700B70BE4 /* IsGreaterThanOrEqualToNumberTest.m */; };
+		7966BA0B19FD662700B70BE4 /* IsGreaterThanOrEqualToNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966BA0919FD662700B70BE4 /* IsGreaterThanOrEqualToNumberTest.m */; };
+		7966BA0D19FD6AA400B70BE4 /* IsLessThanNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966BA0C19FD6AA400B70BE4 /* IsLessThanNumberTest.m */; };
+		7966BA0E19FD6AA400B70BE4 /* IsLessThanNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966BA0C19FD6AA400B70BE4 /* IsLessThanNumberTest.m */; };
+		7966BA1019FD6D5D00B70BE4 /* IsLessThanOrEqualToNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966BA0F19FD6D5D00B70BE4 /* IsLessThanOrEqualToNumberTest.m */; };
+		7966BA1119FD6D5D00B70BE4 /* IsLessThanOrEqualToNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966BA0F19FD6D5D00B70BE4 /* IsLessThanOrEqualToNumberTest.m */; };
 		BB33301A68F74D210C803FEA /* HCIsNil.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335CC804D0A774E5F1041 /* HCIsNil.m */; };
 		BB333020F5ED4E3979BA1714 /* NSInvocation+OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3339BE4C0ECEAB7169772A /* NSInvocation+OCHamcrest.h */; };
 		BB33302772CACC61A1B4DB74 /* HCTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333528C8E2ED8489ACB161 /* HCTestFailureHandler.m */; };
@@ -443,6 +449,9 @@
 		7966BA0019FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsLessThanOrEqualToNumber.h; sourceTree = "<group>"; };
 		7966BA0119FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsLessThanOrEqualToNumber.m; sourceTree = "<group>"; };
 		7966BA0619FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsGreaterThanNumberTest.m; sourceTree = "<group>"; };
+		7966BA0919FD662700B70BE4 /* IsGreaterThanOrEqualToNumberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsGreaterThanOrEqualToNumberTest.m; sourceTree = "<group>"; };
+		7966BA0C19FD6AA400B70BE4 /* IsLessThanNumberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsLessThanNumberTest.m; sourceTree = "<group>"; };
+		7966BA0F19FD6D5D00B70BE4 /* IsLessThanOrEqualToNumberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsLessThanOrEqualToNumberTest.m; sourceTree = "<group>"; };
 		BB333034CD6A38647E176A9A /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
 		BB33303898210A59268030C8 /* HCDoubleReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDoubleReturnGetter.m; sourceTree = "<group>"; };
 		BB333049BE335209B4207B2A /* HCIsDictionaryContaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContaining.m; sourceTree = "<group>"; };
@@ -741,6 +750,9 @@
 				0876035513440AD8001B439B /* NumberAssertTest.m */,
 				0876035613440AD8001B439B /* OrderingComparisonTest.m */,
 				7966BA0619FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m */,
+				7966BA0919FD662700B70BE4 /* IsGreaterThanOrEqualToNumberTest.m */,
+				7966BA0C19FD6AA400B70BE4 /* IsLessThanNumberTest.m */,
+				7966BA0F19FD6D5D00B70BE4 /* IsLessThanOrEqualToNumberTest.m */,
 			);
 			path = Number;
 			sourceTree = "<group>";
@@ -1428,6 +1440,7 @@
 				0859831E13459CA400BE7892 /* IsDictionaryContainingValueTest.m in Sources */,
 				0859831F13459CA400BE7892 /* IsEmptyCollectionTest.m in Sources */,
 				0859832013459CA400BE7892 /* IsEqualIgnoringCaseTest.m in Sources */,
+				7966BA0B19FD662700B70BE4 /* IsGreaterThanOrEqualToNumberTest.m in Sources */,
 				0859832113459CA400BE7892 /* IsEqualIgnoringWhiteSpaceTest.m in Sources */,
 				0859832313459CA400BE7892 /* IsEqualToNumberTest.m in Sources */,
 				0859832513459CA400BE7892 /* IsInTest.m in Sources */,
@@ -1441,6 +1454,7 @@
 				0846B6E313EE5F9D00EA68E8 /* IsTest.m in Sources */,
 				0846B6E513EE5F9D00EA68E8 /* NeverMatch.m in Sources */,
 				0846B6EC13EE5FB400EA68E8 /* AllOfTest.m in Sources */,
+				7966BA0E19FD6AA400B70BE4 /* IsLessThanNumberTest.m in Sources */,
 				0846B6EE13EE5FB400EA68E8 /* AnyOfTest.m in Sources */,
 				0846B6F013EE5FB400EA68E8 /* IsAnythingTest.m in Sources */,
 				0846B6F213EE5FB400EA68E8 /* IsNotTest.m in Sources */,
@@ -1456,6 +1470,7 @@
 				77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */,
 				5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */,
 				BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */,
+				7966BA1119FD6D5D00B70BE4 /* IsLessThanOrEqualToNumberTest.m in Sources */,
 				7966BA0819FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m in Sources */,
 				0850A44F17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
 			);
@@ -1559,6 +1574,7 @@
 				0876036F13440AD8001B439B /* IsInTest.m in Sources */,
 				0876037C13440AD8001B439B /* IsCloseToTest.m in Sources */,
 				0876037D13440AD8001B439B /* IsEqualToNumberTest.m in Sources */,
+				7966BA0A19FD662700B70BE4 /* IsGreaterThanOrEqualToNumberTest.m in Sources */,
 				0876037E13440AD8001B439B /* NumberAssertTest.m in Sources */,
 				0876037F13440AD8001B439B /* OrderingComparisonTest.m in Sources */,
 				0876038013440AD8001B439B /* HasDescriptionTest.m in Sources */,
@@ -1572,6 +1588,7 @@
 				0846B6E213EE5F9D00EA68E8 /* IsTest.m in Sources */,
 				0846B6E413EE5F9D00EA68E8 /* NeverMatch.m in Sources */,
 				0846B6EB13EE5FB400EA68E8 /* AllOfTest.m in Sources */,
+				7966BA0D19FD6AA400B70BE4 /* IsLessThanNumberTest.m in Sources */,
 				0846B6ED13EE5FB400EA68E8 /* AnyOfTest.m in Sources */,
 				0846B6EF13EE5FB400EA68E8 /* IsAnythingTest.m in Sources */,
 				0846B6F113EE5FB400EA68E8 /* IsNotTest.m in Sources */,
@@ -1587,6 +1604,7 @@
 				77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */,
 				5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */,
 				BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */,
+				7966BA1019FD6D5D00B70BE4 /* IsLessThanOrEqualToNumberTest.m in Sources */,
 				7966BA0719FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m in Sources */,
 				0850A44E17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
 			);
