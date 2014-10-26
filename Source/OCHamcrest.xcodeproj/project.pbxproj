@@ -115,6 +115,20 @@
 		5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
 		77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
 		77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
+		7966B9EC19FC9A1600B70BE4 /* HCIsGreaterThanNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 7966B9E819FC9A1600B70BE4 /* HCIsGreaterThanNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7966B9EE19FC9A1600B70BE4 /* HCIsGreaterThanNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966B9E919FC9A1600B70BE4 /* HCIsGreaterThanNumber.m */; };
+		7966B9EF19FC9A1600B70BE4 /* HCIsGreaterThanNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966B9E919FC9A1600B70BE4 /* HCIsGreaterThanNumber.m */; };
+		7966B9F619FC9A6300B70BE4 /* HCIsGreaterThanOrEqualToNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 7966B9F419FC9A6300B70BE4 /* HCIsGreaterThanOrEqualToNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7966B9F819FC9A6300B70BE4 /* HCIsGreaterThanOrEqualToNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966B9F519FC9A6300B70BE4 /* HCIsGreaterThanOrEqualToNumber.m */; };
+		7966B9F919FC9A6300B70BE4 /* HCIsGreaterThanOrEqualToNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966B9F519FC9A6300B70BE4 /* HCIsGreaterThanOrEqualToNumber.m */; };
+		7966B9FC19FC9B0000B70BE4 /* HCIsLessThanNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 7966B9FA19FC9B0000B70BE4 /* HCIsLessThanNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7966B9FE19FC9B0000B70BE4 /* HCIsLessThanNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966B9FB19FC9B0000B70BE4 /* HCIsLessThanNumber.m */; };
+		7966B9FF19FC9B0000B70BE4 /* HCIsLessThanNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966B9FB19FC9B0000B70BE4 /* HCIsLessThanNumber.m */; };
+		7966BA0219FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 7966BA0019FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7966BA0419FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966BA0119FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.m */; };
+		7966BA0519FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966BA0119FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.m */; };
+		7966BA0719FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966BA0619FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m */; };
+		7966BA0819FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7966BA0619FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m */; };
 		BB33301A68F74D210C803FEA /* HCIsNil.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335CC804D0A774E5F1041 /* HCIsNil.m */; };
 		BB333020F5ED4E3979BA1714 /* NSInvocation+OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3339BE4C0ECEAB7169772A /* NSInvocation+OCHamcrest.h */; };
 		BB33302772CACC61A1B4DB74 /* HCTestFailureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333528C8E2ED8489ACB161 /* HCTestFailureHandler.m */; };
@@ -420,6 +434,15 @@
 		08F39BAA1711426200745958 /* CHANGES.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = CHANGES.md; path = ../CHANGES.md; sourceTree = "<group>"; };
 		5F2773441436F81000B9683A /* ConformsToProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConformsToProtocolTest.m; sourceTree = "<group>"; };
 		77C7B8761429361200DE60CC /* HasPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasPropertyTest.m; sourceTree = "<group>"; };
+		7966B9E819FC9A1600B70BE4 /* HCIsGreaterThanNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsGreaterThanNumber.h; sourceTree = "<group>"; };
+		7966B9E919FC9A1600B70BE4 /* HCIsGreaterThanNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsGreaterThanNumber.m; sourceTree = "<group>"; };
+		7966B9F419FC9A6300B70BE4 /* HCIsGreaterThanOrEqualToNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsGreaterThanOrEqualToNumber.h; sourceTree = "<group>"; };
+		7966B9F519FC9A6300B70BE4 /* HCIsGreaterThanOrEqualToNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsGreaterThanOrEqualToNumber.m; sourceTree = "<group>"; };
+		7966B9FA19FC9B0000B70BE4 /* HCIsLessThanNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsLessThanNumber.h; sourceTree = "<group>"; };
+		7966B9FB19FC9B0000B70BE4 /* HCIsLessThanNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsLessThanNumber.m; sourceTree = "<group>"; };
+		7966BA0019FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsLessThanOrEqualToNumber.h; sourceTree = "<group>"; };
+		7966BA0119FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsLessThanOrEqualToNumber.m; sourceTree = "<group>"; };
+		7966BA0619FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsGreaterThanNumberTest.m; sourceTree = "<group>"; };
 		BB333034CD6A38647E176A9A /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
 		BB33303898210A59268030C8 /* HCDoubleReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDoubleReturnGetter.m; sourceTree = "<group>"; };
 		BB333049BE335209B4207B2A /* HCIsDictionaryContaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContaining.m; sourceTree = "<group>"; };
@@ -717,6 +740,7 @@
 				0876035413440AD8001B439B /* IsEqualToNumberTest.m */,
 				0876035513440AD8001B439B /* NumberAssertTest.m */,
 				0876035613440AD8001B439B /* OrderingComparisonTest.m */,
+				7966BA0619FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m */,
 			);
 			path = Number;
 			sourceTree = "<group>";
@@ -901,6 +925,8 @@
 		BB333BCFCFCA269190F9F148 /* Number */ = {
 			isa = PBXGroup;
 			children = (
+				7966B9E819FC9A1600B70BE4 /* HCIsGreaterThanNumber.h */,
+				7966B9E919FC9A1600B70BE4 /* HCIsGreaterThanNumber.m */,
 				BB33346362D58A13AA1BA54B /* HCIsCloseTo.h */,
 				BB3331EECFE91DCA05C34EFD /* HCIsCloseTo.m */,
 				BB3330701E28789385EAB1C9 /* HCIsEqualToNumber.h */,
@@ -909,6 +935,12 @@
 				BB333A801AD666BCC23ED955 /* HCNumberAssert.m */,
 				BB3337CE41E8621958EAE8BF /* HCOrderingComparison.h */,
 				BB3336E4FAD686F2CFFF91B0 /* HCOrderingComparison.m */,
+				7966B9F419FC9A6300B70BE4 /* HCIsGreaterThanOrEqualToNumber.h */,
+				7966B9F519FC9A6300B70BE4 /* HCIsGreaterThanOrEqualToNumber.m */,
+				7966B9FA19FC9B0000B70BE4 /* HCIsLessThanNumber.h */,
+				7966B9FB19FC9B0000B70BE4 /* HCIsLessThanNumber.m */,
+				7966BA0019FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.h */,
+				7966BA0119FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.m */,
 			);
 			path = Number;
 			sourceTree = "<group>";
@@ -1038,14 +1070,17 @@
 				BB33311F075C5E807D23AF38 /* HCDescribedAs.h in Headers */,
 				BB3338A5F9D50886A7A82129 /* HCIs.h in Headers */,
 				BB333BA6882190C2BDCABECC /* HCAllOf.h in Headers */,
+				7966B9F619FC9A6300B70BE4 /* HCIsGreaterThanOrEqualToNumber.h in Headers */,
 				BB333B08E01B2E88828DA51C /* HCAnyOf.h in Headers */,
 				BB333DF4A40F8816030C14DE /* HCIsAnything.h in Headers */,
 				BB33366E651777BD9B2A98FD /* HCIsNot.h in Headers */,
 				BB3339F396185713397718B5 /* HCIsCloseTo.h in Headers */,
 				BB333B9914086A169E24347E /* HCIsEqualToNumber.h in Headers */,
 				BB333839A36AEC819CDABEBF /* HCNumberAssert.h in Headers */,
+				7966B9FC19FC9B0000B70BE4 /* HCIsLessThanNumber.h in Headers */,
 				BB333EB3C38A3D9EEAEC842A /* HCOrderingComparison.h in Headers */,
 				BB3339BE48FB5782E8F9A9F5 /* HCClassMatcher.h in Headers */,
+				7966BA0219FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.h in Headers */,
 				BB33333C0F1EED12D79C5845 /* HCConformsToProtocol.h in Headers */,
 				BB333C8BC4684992F0A533CE /* HCHasDescription.h in Headers */,
 				BB333788D86B329768056FCB /* HCHasProperty.h in Headers */,
@@ -1089,6 +1124,7 @@
 				BB333C793CAFFF7E4FB5BA2D /* HCCollect.h in Headers */,
 				BB333020F5ED4E3979BA1714 /* NSInvocation+OCHamcrest.h in Headers */,
 				BB3338B40D8EA4F74C514153 /* HCWrapInMatcher.h in Headers */,
+				7966B9EC19FC9A1600B70BE4 /* HCIsGreaterThanNumber.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1130,7 +1166,7 @@
 			name = libochamcrestTests;
 			productName = libochamcrestTests;
 			productReference = 081BEE6C1345979F003F846A /* libochamcrestTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		087601E113440806001B439B /* OCHamcrest */ = {
 			isa = PBXNativeTarget;
@@ -1168,7 +1204,7 @@
 			name = OCHamcrestTests;
 			productName = OCHamcrestTests;
 			productReference = 087601F713440807001B439B /* OCHamcrestTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -1176,7 +1212,7 @@
 		087601D813440806001B439B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastTestingUpgradeCheck = 0510;
+				LastTestingUpgradeCheck = 0610;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = hamcrest.org;
 			};
@@ -1314,6 +1350,7 @@
 				BB3332098FC93350263E39FF /* HCIsEmptyCollection.m in Sources */,
 				BB333FE2E6441F4ADFE460AC /* HCIsIn.m in Sources */,
 				BB333DEC51AFB20AADBB68D6 /* HCDescribedAs.m in Sources */,
+				7966B9EF19FC9A1600B70BE4 /* HCIsGreaterThanNumber.m in Sources */,
 				BB3336F96B099B5EFE2E670E /* HCIs.m in Sources */,
 				BB333375251766FC537D86BC /* HCAllOf.m in Sources */,
 				BB33343CA2ADA0E7E367E8F9 /* HCAnyOf.m in Sources */,
@@ -1337,9 +1374,11 @@
 				BB3337947E2E43605545E743 /* HCStringContains.m in Sources */,
 				BB333F7FB7BA3AF26A162752 /* HCStringContainsInOrder.m in Sources */,
 				BB3336AD40784CC4673DB87F /* HCStringEndsWith.m in Sources */,
+				7966B9FF19FC9B0000B70BE4 /* HCIsLessThanNumber.m in Sources */,
 				BB333A7CCC7A2BD01898722C /* HCStringStartsWith.m in Sources */,
 				BB333D2C925DC2010C1B25FA /* HCSubstringMatcher.m in Sources */,
 				BB333C372274619E93D2D9E8 /* HCGenericTestFailureHandler.m in Sources */,
+				7966BA0519FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.m in Sources */,
 				BB3334B9AE78134252D2CBC7 /* HCSenTestFailureHandler.m in Sources */,
 				BB33369C21D2B44C72195326 /* HCTestFailure.m in Sources */,
 				BB33302772CACC61A1B4DB74 /* HCTestFailureHandler.m in Sources */,
@@ -1351,6 +1390,7 @@
 				BB333328EA1EFCED9C811321 /* HCFloatReturnGetter.m in Sources */,
 				BB33321509F1659FB29AD59E /* HCIntReturnGetter.m in Sources */,
 				BB333ACAD45079E5160B4B2D /* HCLongLongReturnGetter.m in Sources */,
+				7966B9F919FC9A6300B70BE4 /* HCIsGreaterThanOrEqualToNumber.m in Sources */,
 				BB3339D8979DFFEBB1AEB26D /* HCLongReturnGetter.m in Sources */,
 				BB3337895E6D085546B857EC /* HCObjectReturnGetter.m in Sources */,
 				BB333EA74F069D831202108E /* HCReturnValueGetter.m in Sources */,
@@ -1416,6 +1456,7 @@
 				77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */,
 				5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */,
 				BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */,
+				7966BA0819FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m in Sources */,
 				0850A44F17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1440,6 +1481,7 @@
 				BB3337F52BA7EAA5CFCAE142 /* HCIsEmptyCollection.m in Sources */,
 				BB33390F0791F299C712BAF5 /* HCIsIn.m in Sources */,
 				BB3332DB2D2CA8A11AF95DA7 /* HCDescribedAs.m in Sources */,
+				7966B9EE19FC9A1600B70BE4 /* HCIsGreaterThanNumber.m in Sources */,
 				BB3335B51CB6C13C046E7C94 /* HCIs.m in Sources */,
 				BB3332673485E95D8599222E /* HCAllOf.m in Sources */,
 				BB333D17BEC11419274E2D8F /* HCAnyOf.m in Sources */,
@@ -1463,9 +1505,11 @@
 				BB33379F2611DE99B3B43A90 /* HCStringContains.m in Sources */,
 				BB3333B08155109232BEBD15 /* HCStringContainsInOrder.m in Sources */,
 				BB33357C5F1F3BC687DDF54C /* HCStringEndsWith.m in Sources */,
+				7966B9FE19FC9B0000B70BE4 /* HCIsLessThanNumber.m in Sources */,
 				BB33345773AB590845EB68D6 /* HCStringStartsWith.m in Sources */,
 				BB3330D4CB9195C81B32E5AB /* HCSubstringMatcher.m in Sources */,
 				BB3333818CFAC6A68AEBC72E /* HCGenericTestFailureHandler.m in Sources */,
+				7966BA0419FC9BB400B70BE4 /* HCIsLessThanOrEqualToNumber.m in Sources */,
 				BB333FC3961C09A902683A7F /* HCSenTestFailureHandler.m in Sources */,
 				BB3339CC63BCC9186973C491 /* HCTestFailure.m in Sources */,
 				BB33339CC090FAA28495D835 /* HCTestFailureHandler.m in Sources */,
@@ -1477,6 +1521,7 @@
 				BB3337DBEBED3443E8DB7A52 /* HCFloatReturnGetter.m in Sources */,
 				BB333C78E5F9DB528838CA5A /* HCIntReturnGetter.m in Sources */,
 				BB333FD5A85510AE5AA9B519 /* HCLongLongReturnGetter.m in Sources */,
+				7966B9F819FC9A6300B70BE4 /* HCIsGreaterThanOrEqualToNumber.m in Sources */,
 				BB3333502C76D73346A73631 /* HCLongReturnGetter.m in Sources */,
 				BB3338E155E644CFB619CFEF /* HCObjectReturnGetter.m in Sources */,
 				BB3335EAC1E9E47F87D50EDF /* HCReturnValueGetter.m in Sources */,
@@ -1542,6 +1587,7 @@
 				77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */,
 				5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */,
 				BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */,
+				7966BA0719FC9CFB00B70BE4 /* IsGreaterThanNumberTest.m in Sources */,
 				0850A44E17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
