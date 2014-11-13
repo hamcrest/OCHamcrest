@@ -30,11 +30,15 @@
 {
     assertMatches(@"Large BOOL", equalToBool(YES), [NSNumber numberWithBool:YES]);
     assertMatches(@"Small BOOL", equalToBool(NO), [NSNumber numberWithBool:NO]);
+    assertMatches(@"Large BOOL", yesValue(), [NSNumber numberWithBool:YES]);
+    assertMatches(@"Small BOOL", noValue(), [NSNumber numberWithBool:NO]);
 }
 
 - (void)testMismatchesDifferentNumber
 {
     assertDoesNotMatch(@"Different", equalToBool(YES), [NSNumber numberWithBool:NO]);
+    assertDoesNotMatch(@"Not YES", yesValue(), [NSNumber numberWithBool:NO]);
+    assertDoesNotMatch(@"Not NO", noValue(), [NSNumber numberWithBool:YES]);
 }
 
 - (void)testMismatchesNonNumber
