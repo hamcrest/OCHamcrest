@@ -213,3 +213,9 @@ OCHamcrest comes bundled with lots of useful matchers, but you'll probably find
 that you need to create your own from time to time to fit your testing needs.
 See the ["Writing Custom Matchers" guide for more information](https://github.com/hamcrest/OCHamcrest/wiki/Writing-Custom-Matchers
 ).
+
+
+What about Swift?
+-----------------
+
+Try the [native Swift implementation of Hamcrest](https://github.com/nschum/SwiftHamcrest).
