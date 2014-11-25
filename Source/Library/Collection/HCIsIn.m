@@ -11,7 +11,7 @@
 
 
 @interface HCIsIn ()
-@property (nonatomic, readonly) id collection;
+@property (readonly, nonatomic, strong) id collection;
 @end
 
 @implementation HCIsIn

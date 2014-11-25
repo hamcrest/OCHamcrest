@@ -13,7 +13,7 @@
 
 
 @interface HCAnyOf ()
-@property (nonatomic, readonly) NSArray *matchers;
+@property (readonly, nonatomic, copy) NSArray *matchers;
 @end
 
 @implementation HCAnyOf

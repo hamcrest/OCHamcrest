@@ -78,8 +78,8 @@
 @interface MockXCTestCase : SenTestCase
 @property (nonatomic, copy) NSString *failureDescription;
 @property (nonatomic, copy) NSString *failureFile;
-@property (nonatomic) NSUInteger failureLine;
-@property (nonatomic) BOOL failureExpected;
+@property (nonatomic, assign) NSUInteger failureLine;
+@property (nonatomic, assign) BOOL failureExpected;
 @end
 
 @implementation MockXCTestCase

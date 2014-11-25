@@ -11,7 +11,7 @@
 
 
 @interface HCIsSame ()
-@property (nonatomic, readonly) id object;
+@property (readonly, nonatomic, strong) id object;
 @end
 
 @implementation HCIsSame

@@ -13,7 +13,7 @@
 
 
 @interface HCIsNot ()
-@property (nonatomic, readonly) id <HCMatcher> matcher;
+@property (readonly, nonatomic, strong) id <HCMatcher> matcher;
 @end
 
 @implementation HCIsNot

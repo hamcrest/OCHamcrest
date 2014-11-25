@@ -12,7 +12,7 @@
 
 @interface HCSubstringMatcher : HCBaseMatcher
 
-@property (nonatomic, readonly) NSString *substring;
+@property (readonly, nonatomic, copy) NSString *substring;
 
 - (instancetype)initWithSubstring:(NSString *)aString;
 

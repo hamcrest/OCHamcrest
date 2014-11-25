@@ -13,8 +13,8 @@
 
 
 @interface HCIsDictionaryContainingEntries ()
-@property (nonatomic, readonly) NSArray *keys;
-@property (nonatomic, readonly) NSArray *valueMatchers;
+@property (readonly, nonatomic, copy) NSArray *keys;
+@property (readonly, nonatomic, copy) NSArray *valueMatchers;
 @end
 
 

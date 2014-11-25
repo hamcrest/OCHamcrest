@@ -16,7 +16,7 @@
 @end
 
 @interface HCTestFailureHandler ()
-@property (nonatomic, readonly) HCTestFailureHandler *successor;
+@property (readonly, nonatomic, strong) HCTestFailureHandler *successor;
 @end
 
 

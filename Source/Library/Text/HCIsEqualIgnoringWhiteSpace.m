@@ -50,8 +50,8 @@ static NSMutableString *stripSpace(NSString *string)
 
 
 @interface HCIsEqualIgnoringWhiteSpace ()
-@property (nonatomic, readonly) NSString *originalString;
-@property (nonatomic, readonly) NSString *strippedString;
+@property (readonly, nonatomic, copy) NSString *originalString;
+@property (readonly, nonatomic, copy) NSString *strippedString;
 @end
 
 @implementation HCIsEqualIgnoringWhiteSpace
@@ -69,7 +69,7 @@ static NSMutableString *stripSpace(NSString *string)
     if (self)
     {
         _originalString = [string copy];
-        _strippedString = stripSpace(string);
+        _strippedString = [stripSpace(string) copy];
     }
     return self;
 }

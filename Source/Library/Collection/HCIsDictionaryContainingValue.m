@@ -14,7 +14,7 @@
 
 
 @interface HCIsDictionaryContainingValue ()
-@property (nonatomic, readonly) id <HCMatcher> valueMatcher;
+@property (readonly, nonatomic, strong) id <HCMatcher> valueMatcher;
 @end
 
 

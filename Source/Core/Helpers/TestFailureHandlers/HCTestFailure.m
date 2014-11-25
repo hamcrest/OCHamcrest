@@ -21,9 +21,9 @@
     if (self)
     {
         _testCase = testCase;
-        _fileName = fileName;
+        _fileName = [fileName copy];
         _lineNumber = lineNumber;
-        _reason = reason;
+        _reason = [reason copy];
     }
     return self;
 }

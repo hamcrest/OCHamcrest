@@ -11,10 +11,10 @@
 
 
 @interface HCOrderingComparison ()
-@property (nonatomic, readonly) id expected;
-@property (nonatomic, readonly) NSComparisonResult minCompare;
-@property (nonatomic, readonly) NSComparisonResult maxCompare;
-@property (nonatomic, readonly) NSString *comparisonDescription;
+@property (readonly, nonatomic, strong) id expected;
+@property (readonly, nonatomic, assign) NSComparisonResult minCompare;
+@property (readonly, nonatomic, assign) NSComparisonResult maxCompare;
+@property (readonly, nonatomic, copy) NSString *comparisonDescription;
 @end
 
 @implementation HCOrderingComparison

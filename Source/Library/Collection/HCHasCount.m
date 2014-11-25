@@ -13,7 +13,7 @@
 
 
 @interface HCHasCount ()
-@property (nonatomic, readonly) id <HCMatcher> countMatcher;
+@property (readonly, nonatomic, strong) id <HCMatcher> countMatcher;
 @end
 
 @implementation HCHasCount

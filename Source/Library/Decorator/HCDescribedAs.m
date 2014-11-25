@@ -45,9 +45,9 @@
 
 
 @interface HCDescribedAs ()
-@property (nonatomic, readonly) NSString *descriptionTemplate;
-@property (nonatomic, readonly) id <HCMatcher> matcher;
-@property (nonatomic, readonly) NSArray *values;
+@property (readonly, nonatomic, copy) NSString *descriptionTemplate;
+@property (readonly, nonatomic, strong) id <HCMatcher> matcher;
+@property (readonly, nonatomic, copy) NSArray *values;
 @end
 
 
