@@ -650,7 +650,9 @@
 				087601E413440806001B439B /* Frameworks */,
 				087601E313440806001B439B /* Products */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
 			usesTabs = 0;
 		};
 		087601E313440806001B439B /* Products */ = {
