@@ -33,6 +33,6 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.8'
   s.source = { :git => 'https://github.com/hamcrest/OCHamcrest.git', :tag => 'v4.0.1' }
   s.source_files = 'Source/OCHamcrest.h', 'Source/Core/**/*.{h,m}', 'Source/Library/**/*.{h,m}'
-  s.private_header_files = 'Source/Core/HCGenericTestFailureHandler.h', 'Source/Core/HCSenTestFailureHandler.h' 'Source/Core/HCXCTestFailureHandler.h'
+  s.private_header_files = 'Source/Core/Helpers/NSInvocation+OCHamcrest.h', 'Source/Core/Helpers/ReturnValueGetters/*.h' 'Source/Core/Helpers/TestFailureHandlers/*.h'
   s.requires_arc = true
 end
