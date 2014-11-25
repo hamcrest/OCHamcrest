@@ -27,7 +27,7 @@
     if (self)
     {
         _matchers = [itemMatchers copy];
-        _mismatchDescription = description;        
+        _mismatchDescription = description;
     }
     return self;
 }
