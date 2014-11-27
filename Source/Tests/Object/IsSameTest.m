@@ -30,6 +30,13 @@
     return sameInstance(@"irrelevant");
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = sameInstance(@"irrelevant");
+
+    assertNilSafe(matcher);
+}
+
 - (void)testEvaluatesToTrueIfArgumentIsReferenceToASpecifiedObject
 {
     id o1 = [[NSObject alloc] init];

@@ -40,12 +40,17 @@
     return matcher;
 }
 
+- (void)testCopesWithNils
+{
+    assertNilSafe(matcher);
+}
+
 - (void)testIgnoresCaseOfCharsInString
 {
     assertMatches(@"all upper", matcher, @"HELLO");
     assertMatches(@"all lower", matcher, @"hello");
     assertMatches(@"mixed up", matcher, @"HelLo");
-    
+
     assertDoesNotMatch(@"no match", matcher, @"bye");
 }
 

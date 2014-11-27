@@ -14,6 +14,8 @@
 
 @interface AbstractMatcherTest : SenTestCase
 
+- (void)assertMatcherSafeWithNil:(id <HCMatcher>)matcher
+                inFile:(const char *)fileName atLine:(int)lineNumber;
 - (void)assertTrue:(BOOL)condition message:(NSString *)message
                 inFile:(const char *)fileName atLine:(int)lineNumber;
 - (void)assertFalse:(BOOL)condition message:(NSString *)message
@@ -31,6 +33,8 @@
 
 @end
 
+#define assertNilSafe(matcher)  \
+    [self assertMatcherSafeWithNil:matcher inFile:__FILE__ atLine:__LINE__]
 
 #define assertMatches(aMessage, matcher, arg)    \
     [self assertTrue:[matcher matches:arg] message:aMessage inFile:__FILE__ atLine:__LINE__]

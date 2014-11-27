@@ -29,6 +29,13 @@
     return is(@"something");
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = is(@"irrelevant");
+
+    assertNilSafe(matcher);
+}
+
 - (void)testDelegatesMatchingToNestedMatcher
 {
     assertMatches(@"should match", is(equalTo(@"A")), @"A");

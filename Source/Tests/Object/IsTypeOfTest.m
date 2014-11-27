@@ -26,6 +26,13 @@
     return isA([SomeClass class]);
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = isA([SomeClass class]);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testEvaluatesToTrueIfArgumentIsInstanceOfGivenClass
 {
     SomeClass *obj = [[SomeClass alloc] init];

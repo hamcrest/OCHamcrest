@@ -74,6 +74,13 @@
     return hasProperty(@"irrelevant", @"irrelevant");
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = hasProperty(@"irrelevant", @"irrelevant");
+
+    assertNilSafe(matcher);
+}
+
 - (void)testCanMatchStringPropertyValues
 {
     assertMatches(@"equal string property values", hasProperty(@"name", @"Joe"), joe);

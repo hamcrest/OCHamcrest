@@ -28,6 +28,13 @@
     return hasEntries(@"irrelevant", @"irrelevant", nil);
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = hasEntries(@"irrelevant", @"irrelevant", nil);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testMatcherCreationRequiresEvenNumberOfArgs
 {
     STAssertThrows(hasEntries(@"a", nil), @"Should require pairs of arguments");
@@ -43,7 +50,7 @@
 {
     NSDictionary *dict = @{@"a": @"1",
                           @"b": @"2"};
-    
+
     assertMatches(@"has a:1", hasEntries(@"a", equalTo(@"1"), nil), dict);
     assertMatches(@"has b:2", hasEntries(@"b", equalTo(@"2"), nil), dict);
     assertDoesNotMatch(@"no b:3", hasEntries(@"b", equalTo(@"3"), nil), dict);
@@ -55,7 +62,7 @@
     NSDictionary *dict = @{@"a": @"1",
                           @"b": @"2",
                           @"c": @"3"};
-    
+
     assertMatches(@"has a & b", hasEntries(@"a", equalTo(@"1"), @"b", equalTo(@"2"), nil), dict);
     assertMatches(@"has c & a", hasEntries(@"c", equalTo(@"3"), @"a", equalTo(@"1"), nil), dict);
     assertDoesNotMatch(@"no d:3", hasEntries(@"d", equalTo(@"3"), nil), dict);
@@ -66,7 +73,7 @@
     NSDictionary *dict = @{@"a": @"1",
                           @"b": @"2",
                           @"c": @"3"};
-    
+
     assertMatches(@"has a & b", hasEntries(@"a", @"1", @"b", @"2", nil), dict);
     assertMatches(@"has c & a", hasEntries(@"c", @"3", @"a", @"1", nil), dict);
     assertDoesNotMatch(@"no d:3", hasEntries(@"d", @"3", nil), dict);
@@ -78,7 +85,7 @@
 }
 
 - (void)testMatcherCreationRequiresNonNilArguments
-{    
+{
     STAssertThrows(hasEntries(nil, @"value", nil), @"Should require non-nil argument");
     STAssertThrows(hasEntries(@"key", nil, nil), @"Should require non-nil argument");
 }

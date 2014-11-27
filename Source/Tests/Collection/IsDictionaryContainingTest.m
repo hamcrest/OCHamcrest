@@ -29,6 +29,13 @@
     return hasEntry(@"irrelevant", @"irrelevant");
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = hasEntry(@"irrelevant", @"irrelevant");
+
+    assertNilSafe(matcher);
+}
+
 - (void)testMatchesDictionaryContainingMatchingKeyAndValue
 {
     NSDictionary *dict = @{@"a": @"1",
@@ -55,7 +62,7 @@
 }
 
 - (void)testMatcherCreationRequiresNonNilArguments
-{    
+{
     STAssertThrows(hasEntry(nil, @"value"), @"Should require non-nil argument");
     STAssertThrows(hasEntry(@"key", nil), @"Should require non-nil argument");
 }

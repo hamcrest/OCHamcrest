@@ -29,6 +29,13 @@
     return onlyContains(equalTo(@"irrelevant"), nil);
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = onlyContains(equalTo(@"irrelevant"), nil);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testShouldNotMatchNonCollection
 {
     assertDoesNotMatch(@"Non collection", [self createMatcher], [[NSObject alloc] init]);
@@ -75,7 +82,7 @@
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
-{    
+{
     STAssertThrows(onlyContains(nil), @"Should require non-nil list");
 }
 

@@ -28,6 +28,13 @@
     return contains(equalTo(@"irrelevant"), nil);
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = contains(equalTo(@"irrelevant"), nil);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testShouldNotMatchNonCollection
 {
     assertDoesNotMatch(@"Non collection", [self createMatcher], [[NSObject alloc] init]);

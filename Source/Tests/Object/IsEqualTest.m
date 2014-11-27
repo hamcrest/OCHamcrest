@@ -49,6 +49,13 @@
     return equalTo(@"irrelevant");
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = equalTo(@"irrelevant");
+
+    assertNilSafe(matcher);
+}
+
 - (void)testComparesObjectsUsingIsEqualMethod
 {
     assertMatches(@"equal strings", equalTo(@"hi"), @"hi");

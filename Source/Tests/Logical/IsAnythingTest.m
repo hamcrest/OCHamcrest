@@ -25,6 +25,13 @@
     return anything();
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = anything();
+
+    assertNilSafe(matcher);
+}
+
 - (void)testAlwaysEvaluatesToTrue
 {
     assertMatches(@"nil", anything(), nil);

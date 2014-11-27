@@ -28,6 +28,13 @@
     return allOf(equalTo(@"irrelevant"), equalTo(@"irrelevant"), nil);
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = allOf(equalTo(@"irrelevant"), equalTo(@"irrelevant"), nil);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testMatchesIfArgumentSatisfiesBothOfTwoOtherMatchers
 {
     assertMatches(@"both matchers", allOf(equalTo(@"good"), equalTo(@"good"), nil), @"good");
@@ -96,7 +103,7 @@
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
-{    
+{
     STAssertThrows(allOf(nil), @"Should require non-nil list");
 }
 

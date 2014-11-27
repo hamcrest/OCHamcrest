@@ -40,6 +40,11 @@
     return matcher;
 }
 
+- (void)testCopesWithNils
+{
+    assertNilSafe(matcher);
+}
+
 - (void)testMatchesIfOrderIsCorrect
 {
     assertMatches(@"correct order", matcher, @"string one then string two followed by string three");
@@ -58,12 +63,12 @@
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
-{    
+{
     STAssertThrows(stringContainsInOrder(nil), @"Should require non-nil argument");
 }
 
 - (void)testMatcherCreationRequiresStringArguments
-{    
+{
     STAssertThrows(stringContainsInOrder(@"one", @2, nil), @"Should require strings");
 }
 

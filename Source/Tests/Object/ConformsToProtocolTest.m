@@ -38,6 +38,13 @@
     return conformsTo(@protocol(TestProtocol));
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = conformsTo(@protocol(TestProtocol));
+
+    assertNilSafe(matcher);
+}
+
 - (void)testEvaluatesToTrueIfArgumentConformsToASpecificProtocol
 {
     TestClass *instance = [TestClass testClass];

@@ -26,11 +26,19 @@
     return isIn(collection);
 }
 
+- (void)testCopesWithNils
+{
+    NSArray *collection = @[@"a", @"b", @"c"];
+    id matcher = isIn(collection);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testReturnsTrueIfArgumentIsInCollection
 {
     NSArray *collection = @[@"a", @"b", @"c"];
     id matcher = isIn(collection);
-    
+
     assertMatches(@"has a", matcher, @"a");
     assertMatches(@"has b", matcher, @"b");
     assertMatches(@"has c", matcher, @"c");
@@ -40,19 +48,19 @@
 - (void)testMatcherCreationRequiresObjectWithContainsObjectMethod
 {
     id object = [[NSObject alloc] init];
-    
+
     STAssertThrows(isIn(object), @"object does not have -containsObject: method");
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
-{    
+{
     STAssertThrows(isIn(nil), @"Should require non-nil argument");
 }
 
 - (void)testHasReadableDescription
 {
     id matcher = isIn(@[@"a", @"b", @"c"]);
-    
+
     assertDescription(@"one of {\"a\", \"b\", \"c\"}", matcher);
 }
 

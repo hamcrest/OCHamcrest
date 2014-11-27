@@ -29,6 +29,13 @@
     return isNot(@"something");
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = isNot(@"irrelevant");
+
+    assertNilSafe(matcher);
+}
+
 - (void)testEvaluatesToTheTheLogicalNegationOfAnotherMatcher
 {
     assertMatches(@"invert mismatch", isNot(equalTo(@"A")), @"B");

@@ -28,6 +28,13 @@
     return isEmpty();
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = isEmpty();
+
+    assertNilSafe(matcher);
+}
+
 - (void)testShouldNotMatchNonCollection
 {
     assertDoesNotMatch(@"Non collection", [self createMatcher], [[NSObject alloc] init]);

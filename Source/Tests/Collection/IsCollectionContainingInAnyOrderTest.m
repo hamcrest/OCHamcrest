@@ -28,6 +28,13 @@
     return containsInAnyOrder(equalTo(@"irrelevant"), nil);
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = containsInAnyOrder(equalTo(@"irrelevant"), nil);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testShouldNotMatchNonCollection
 {
     assertDoesNotMatch(@"Non collection", [self createMatcher], [[NSObject alloc] init]);

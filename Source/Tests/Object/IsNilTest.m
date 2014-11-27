@@ -25,6 +25,13 @@
     return nilValue();
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = nilValue();
+
+    assertNilSafe(matcher);
+}
+
 - (void)testEvaluatesToTrueIfArgumentIsNil
 {
     assertMatches(@"nil", nilValue(), nil);
@@ -68,6 +75,13 @@
 - (id <HCMatcher>)createMatcher
 {
     return notNilValue();
+}
+
+- (void)testCopesWithNils
+{
+    id matcher = notNilValue();
+
+    assertNilSafe(matcher);
 }
 
 - (void)testEvaluatesToTrueIfArgumentIsNotNil

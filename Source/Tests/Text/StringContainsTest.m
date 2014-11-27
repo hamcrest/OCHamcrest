@@ -42,6 +42,11 @@ static NSString *EXCERPT = @"EXCERPT";
     return matcher;
 }
 
+- (void)testCopesWithNils
+{
+    assertNilSafe(matcher);
+}
+
 - (void)testEvaluatesToTrueIfArgumentContainsSpecifiedSubstring
 {
     assertMatches(@"excerpt at beginning", matcher, [EXCERPT stringByAppendingString:@"END"]);
@@ -49,7 +54,7 @@ static NSString *EXCERPT = @"EXCERPT";
     assertMatches(@"excerpt in middle", matcher,
                   [[@"START" stringByAppendingString:EXCERPT] stringByAppendingString:@"END"]);
     assertMatches(@"excerpt repeated", matcher, [EXCERPT stringByAppendingString:EXCERPT]);
-    
+
     assertDoesNotMatch(@"excerpt not in string", matcher, @"whatever");
     assertDoesNotMatch(@"only part of excerpt", matcher, [EXCERPT substringFromIndex:1]);
 }
@@ -60,7 +65,7 @@ static NSString *EXCERPT = @"EXCERPT";
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
-{    
+{
     STAssertThrows(containsString(nil), @"Should require non-nil argument");
 }
 

@@ -28,6 +28,13 @@
     return hasItem(equalTo(@"irrelevant"));
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = hasItem(equalTo(@"irrelevant"));
+
+    assertNilSafe(matcher);
+}
+
 - (void)testMatchesACollectionThatContainsAnElementMatchingTheGivenMatcher
 {
     assertMatches(@"list contains 'a'",
@@ -37,7 +44,7 @@
 - (void)testNoMatchIfCollectionDoesNotContainAnElementMatchingTheGivenMatcher
 {
     assertDoesNotMatch(@"list without 'a'",
-                       hasItem(equalTo(@"a")), ([NSArray arrayWithObjects:@"b", @"c", nil]));    
+                       hasItem(equalTo(@"a")), ([NSArray arrayWithObjects:@"b", @"c", nil]));
     assertDoesNotMatch(@"empty", hasItem(equalTo(@"a")), @[]);
 }
 
@@ -61,7 +68,7 @@
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
-{    
+{
     STAssertThrows(hasItem(nil), @"Should require non-nil argument");
 }
 
@@ -129,7 +136,7 @@
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
-{    
+{
     STAssertThrows(hasItems(nil), @"Should require non-nil list");
 }
 

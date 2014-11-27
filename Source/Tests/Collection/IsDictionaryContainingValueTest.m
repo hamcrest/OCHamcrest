@@ -28,10 +28,17 @@
     return hasValue(@"irrelevant");
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = hasValue(@"irrelevant");
+
+    assertNilSafe(matcher);
+}
+
 - (void)testMatchesSingletonDictionaryContainingValue
 {
     NSDictionary *dict = @{@"a": @"1"};
-    
+
     assertMatches(@"same single key", hasValue(equalTo(@"1")), dict);
 }
 
@@ -40,7 +47,7 @@
     NSDictionary *dict = @{@"a": @"1",
                                             @"b": @"2",
                                             @"c": @"3"};
-    
+
     assertMatches(@"Matches 1", hasValue(equalTo(@"1")), dict);
     assertMatches(@"Matches 3", hasValue(equalTo(@"3")), dict);
 }
@@ -64,12 +71,12 @@
     NSDictionary *dict = @{@"a": @"1",
                                             @"b": @"2",
                                             @"c": @"3"};
-    
+
     assertDoesNotMatch(@"no matching value", hasValue(@"4"), dict);
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
-{    
+{
     STAssertThrows(hasValue(nil), @"Should require non-nil argument");
 }
 

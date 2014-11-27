@@ -40,6 +40,11 @@
     return matcher;
 }
 
+- (void)testCopesWithNils
+{
+    assertNilSafe(matcher);
+}
+
 - (void)testPassesIfWordsAreSameButWhitespaceDiffers
 {
     assertMatches(@"less whitespace", matcher, @"Hello World how are we?");
@@ -61,7 +66,7 @@
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
-{    
+{
     STAssertThrows(equalToIgnoringWhiteSpace(nil), @"Should require non-nil argument");
 }
 

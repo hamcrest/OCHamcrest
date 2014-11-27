@@ -26,6 +26,14 @@
     return equalToBool(irrelevant);
 }
 
+- (void)testCopesWithNils
+{
+    BOOL irrelevant = NO;
+    id matcher = equalToBool(irrelevant);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testComparesWithNSNumber
 {
     assertMatches(@"Large BOOL", equalToBool(YES), [NSNumber numberWithBool:YES]);
@@ -56,6 +64,14 @@
     return equalToChar(irrelevant);
 }
 
+- (void)testCopesWithNils
+{
+    char irrelevant = 0;
+    id matcher = equalToChar(irrelevant);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testComparesWithNSNumber
 {
     assertMatches(@"Large char", equalToChar(CHAR_MAX), [NSNumber numberWithChar:CHAR_MAX]);
@@ -79,6 +95,14 @@
 {
     double irrelevant = 0;
     return equalToDouble(irrelevant);
+}
+
+- (void)testCopesWithNils
+{
+    double irrelevant = 0;
+    id matcher = equalToDouble(irrelevant);
+
+    assertNilSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -106,6 +130,14 @@
     return equalToFloat(irrelevant);
 }
 
+- (void)testCopesWithNils
+{
+    float irrelevant = 0;
+    id matcher = equalToFloat(irrelevant);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testComparesWithNSNumber
 {
     assertMatches(@"Large float", equalToFloat(FLT_MAX), [NSNumber numberWithFloat:FLT_MAX]);
@@ -129,6 +161,14 @@
 {
     int irrelevant = 0;
     return equalToInt(irrelevant);
+}
+
+- (void)testCopesWithNils
+{
+    int irrelevant = 0;
+    id matcher = equalToInt(irrelevant);
+
+    assertNilSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -156,6 +196,14 @@
     return equalToLong(irrelevant);
 }
 
+- (void)testCopesWithNils
+{
+    long irrelevant = 0;
+    id matcher = equalToLong(irrelevant);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testComparesWithNSNumber
 {
     assertMatches(@"Large long", equalToLong(LONG_MAX), [NSNumber numberWithLong:LONG_MAX]);
@@ -179,6 +227,14 @@
 {
     long long irrelevant = 0;
     return equalToLongLong(irrelevant);
+}
+
+- (void)testCopesWithNils
+{
+    long long irrelevant = 0;
+    id matcher = equalToLongLong(irrelevant);
+
+    assertNilSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -206,6 +262,14 @@
     return equalToShort(irrelevant);
 }
 
+- (void)testCopesWithNils
+{
+    short irrelevant = 0;
+    id matcher = equalToShort(irrelevant);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testComparesWithNSNumber
 {
     assertMatches(@"Large short", equalToShort(SHRT_MAX), [NSNumber numberWithShort:SHRT_MAX]);
@@ -229,6 +293,14 @@
 {
     unsigned char irrelevant = 0;
     return equalToUnsignedChar(irrelevant);
+}
+
+- (void)testCopesWithNils
+{
+    unsigned char irrelevant = 0;
+    id matcher = equalToUnsignedChar(irrelevant);
+
+    assertNilSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -256,6 +328,14 @@
     return equalToUnsignedInt(irrelevant);
 }
 
+- (void)testCopesWithNils
+{
+    unsigned int irrelevant = 0;
+    id matcher = equalToUnsignedInt(irrelevant);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testComparesWithNSNumber
 {
     assertMatches(@"Large unsigned int", equalToUnsignedInt(UINT_MAX), [NSNumber numberWithUnsignedInt:UINT_MAX]);
@@ -279,6 +359,14 @@
 {
     unsigned long irrelevant = 0;
     return equalToUnsignedLong(irrelevant);
+}
+
+- (void)testCopesWithNils
+{
+    unsigned long irrelevant = 0;
+    id matcher = equalToUnsignedLong(irrelevant);
+
+    assertNilSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -306,6 +394,14 @@
     return equalToUnsignedLongLong(irrelevant);
 }
 
+- (void)testCopesWithNils
+{
+    unsigned long long irrelevant = 0;
+    id matcher = equalToUnsignedLongLong(irrelevant);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testComparesWithNSNumber
 {
     assertMatches(@"Large unsigned long long", equalToUnsignedLongLong(ULLONG_MAX), [NSNumber numberWithUnsignedLongLong:ULLONG_MAX]);
@@ -329,6 +425,14 @@
 {
     unsigned short irrelevant = 0;
     return equalToUnsignedShort(irrelevant);
+}
+
+- (void)testCopesWithNils
+{
+    unsigned short irrelevant = 0;
+    id matcher = equalToUnsignedShort(irrelevant);
+
+    assertNilSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -356,6 +460,14 @@
     return equalToInteger(irrelevant);
 }
 
+- (void)testCopesWithNils
+{
+    NSInteger irrelevant = 0;
+    id matcher = equalToInteger(irrelevant);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testComparesWithNSNumber
 {
     assertMatches(@"Large NSInteger", equalToInteger(INT_MAX), [NSNumber numberWithInteger:INT_MAX]);
@@ -379,6 +491,14 @@
 {
     NSUInteger irrelevant = 0;
     return equalToUnsignedInteger(irrelevant);
+}
+
+- (void)testCopesWithNils
+{
+    NSUInteger irrelevant = 0;
+    id matcher = equalToUnsignedInteger(irrelevant);
+
+    assertNilSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber

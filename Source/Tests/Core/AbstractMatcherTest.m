@@ -15,6 +15,22 @@
 
 @implementation AbstractMatcherTest
 
+- (void)assertMatcherSafeWithNil:(id <HCMatcher>)matcher
+                inFile:(const char *)fileName atLine:(int)lineNumber
+{
+    @try
+    {
+        [matcher matches:nil];
+    }
+    @catch (NSException *e)
+    {
+        [self failWithException:[NSException failureInFile:@(fileName)
+                                                    atLine:lineNumber
+                                           withDescription:@"Matcher was not nil safe"]];
+
+    }
+}
+
 - (void)assertTrue:(BOOL)condition message:(NSString *)message
                 inFile:(const char *)fileName atLine:(int)lineNumber
 {

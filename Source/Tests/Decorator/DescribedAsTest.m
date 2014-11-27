@@ -29,6 +29,13 @@
     return describedAs(@"irrelevant", anything(), nil);
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = describedAs(@"irrelevant", anything(), nil);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testOverridesDescriptionOfNestedMatcherInitializerArgument
 {
     id m1 = describedAs(@"m1 description", anything(), nil);
@@ -45,7 +52,7 @@
                        @33,
                        @97,
                        nil);
-    
+
     assertDescription(@"value 1 = <33>, value 2 = <97>", m);
 }
 
@@ -55,7 +62,7 @@
                        anything(),
                        @33,
                        nil);
-    
+
     assertDescription(@"<33>ok", m);
 }
 
@@ -65,14 +72,14 @@
                        anything(),
                        @33,
                        nil);
-    
+
     assertDescription(@"ok<33>", m);
 }
 
 - (void)testDoesNotProcessPercentFollowedByNonDigit
 {
     id m = describedAs(@"With 33% remaining", anything(), nil);
-    
+
     assertDescription(@"With 33% remaining", m);
 }
 

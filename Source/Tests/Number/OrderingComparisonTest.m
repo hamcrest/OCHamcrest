@@ -25,6 +25,13 @@
     return nil;     // Ignore the inherited tests; they don't work well for this class.
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = greaterThan(@1);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testComparesObjectsForGreaterThan
 {
     assertMatches(@"match", greaterThan(@1), @2);
@@ -71,7 +78,7 @@
 - (void)testHasAReadableDescription
 {
     id one = @1;
-    
+
     assertDescription(@"a value greater than <1>", greaterThan(one));
     assertDescription(@"a value greater than or equal to <1>", greaterThanOrEqualTo(one));
     assertDescription(@"a value less than <1>", lessThan(one));
@@ -91,7 +98,7 @@
 - (void)testMismatchDescription
 {
     id one = @1;
-    
+
     assertMismatchDescription(@"was <0>", greaterThan(one), @0);
     assertMismatchDescription(@"was <2>", lessThan(one), @2);
     assertMismatchDescription(@"was <0>", greaterThanOrEqualTo(one), @0);
@@ -101,7 +108,7 @@
 - (void)testDescribeMismatch
 {
     id one = @1;
-    
+
     assertDescribeMismatch(@"was <0>", greaterThan(one), @0);
     assertDescribeMismatch(@"was <2>", lessThan(one), @2);
     assertDescribeMismatch(@"was <0>", greaterThanOrEqualTo(one), @0);

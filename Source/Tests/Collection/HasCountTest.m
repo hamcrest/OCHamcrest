@@ -31,10 +31,17 @@
     return hasCount(equalTo(@42));
 }
 
+- (void)testCopesWithNils
+{
+    id matcher = hasCount(equalTo(@42));
+
+    assertNilSafe(matcher);
+}
+
 - (void)testConvertsCountToNSNumberAndPassesToNestedMatcher
 {
     FakeWithCount *fakeWithCount = [FakeWithCount fakeWithCount:5];
-    
+
     assertMatches(@"same number", hasCount(equalTo(@5)), fakeWithCount);
     assertDoesNotMatch(@"different number", hasCount(equalTo(@6)), fakeWithCount);
 }
@@ -87,10 +94,18 @@
     return hasCountOf(42);
 }
 
+
+- (void)testCopesWithNils
+{
+    id matcher = hasCountOf(42);
+
+    assertNilSafe(matcher);
+}
+
 - (void)testHasCountOfIsShortcutForEqualToUnsignedInteger
 {
     FakeWithCount *fakeWithCount = [FakeWithCount fakeWithCount:5];
-    
+
     assertMatches(@"same number", hasCountOf(5), fakeWithCount);
     assertDoesNotMatch(@"different number", hasCountOf(6), fakeWithCount);
 }
