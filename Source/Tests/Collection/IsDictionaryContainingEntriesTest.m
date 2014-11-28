@@ -23,11 +23,6 @@
 
 @implementation IsDictionaryContainingEntriesTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return hasEntries(@"irrelevant", @"irrelevant", nil);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasEntries(@"irrelevant", @"irrelevant", nil);

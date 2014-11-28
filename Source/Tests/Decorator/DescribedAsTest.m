@@ -24,11 +24,6 @@
 
 @implementation DescribedAsTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return describedAs(@"irrelevant", anything(), nil);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = describedAs(@"irrelevant", anything(), nil);

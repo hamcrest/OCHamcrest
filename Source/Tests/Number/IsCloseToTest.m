@@ -20,12 +20,6 @@
 
 @implementation IsCloseToTest
 
-- (id <HCMatcher>)createMatcher
-{
-    double irrelevant = 0.1;
-    return closeTo(irrelevant, irrelevant);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     double irrelevant = 0.1;

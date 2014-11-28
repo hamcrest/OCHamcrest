@@ -44,11 +44,6 @@
 
 @implementation IsEqualTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return equalTo(@"irrelevant");
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = equalTo(@"irrelevant");

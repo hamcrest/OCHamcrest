@@ -25,11 +25,6 @@
 
 @implementation IsSameTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return sameInstance(@"irrelevant");
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = sameInstance(@"irrelevant");

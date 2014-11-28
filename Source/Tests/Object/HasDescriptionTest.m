@@ -34,11 +34,6 @@ static NSString *fakeDescription = @"DESCRIPTION";
 
 @implementation HasDescriptionTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return hasDescription(equalTo(@"irrelevant"));
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasDescription(equalTo(@"irrelevant"));

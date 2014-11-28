@@ -20,11 +20,6 @@
 
 @implementation IsNilTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return nilValue();
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = nilValue();
@@ -72,11 +67,6 @@
 @end
 
 @implementation NotNilTest
-
-- (id <HCMatcher>)createMatcher
-{
-    return notNilValue();
-}
 
 - (void)testCopesWithNilsAndUnknownTypes
 {

@@ -23,11 +23,6 @@
 
 @implementation IsDictionaryContainingValueTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return hasValue(@"irrelevant");
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasValue(@"irrelevant");

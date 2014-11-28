@@ -69,11 +69,6 @@
     [super tearDown];
 }
 
-- (id <HCMatcher>)createMatcher
-{
-    return hasProperty(@"irrelevant", @"irrelevant");
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasProperty(@"irrelevant", @"irrelevant");

@@ -23,11 +23,6 @@
 
 @implementation AnyOfTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return anyOf(equalTo(@"irrelevant"), nil);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = anyOf(equalTo(@"irrelevant"), nil);

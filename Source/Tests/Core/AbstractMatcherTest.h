@@ -31,8 +31,6 @@
 - (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg describesMismatch:(NSString *)expected
                 inFile:(const char *)fileName atLine:(int)lineNumber;
 
-- (id <HCMatcher>)createMatcher;
-
 @end
 
 #define assertNilSafe(matcher)  \

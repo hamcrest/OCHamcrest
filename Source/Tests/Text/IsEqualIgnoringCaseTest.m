@@ -35,11 +35,6 @@
     [super tearDown];
 }
 
-- (id <HCMatcher>)createMatcher
-{
-    return matcher;
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     assertNilSafe(matcher);

@@ -23,11 +23,6 @@
 
 @implementation IsEmptyCollectionTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return isEmpty();
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = isEmpty();
@@ -38,7 +33,7 @@
 
 - (void)testShouldNotMatchNonCollection
 {
-    assertDoesNotMatch(@"Non collection", [self createMatcher], [[NSObject alloc] init]);
+    assertDoesNotMatch(@"Non collection", isEmpty(), [[NSObject alloc] init]);
 }
 
 - (void)testMatchesEmptyCollection

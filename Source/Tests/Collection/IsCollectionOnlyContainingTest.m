@@ -24,11 +24,6 @@
 
 @implementation IsCollectionOnlyContainingTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return onlyContains(equalTo(@"irrelevant"), nil);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = onlyContains(equalTo(@"irrelevant"), nil);
@@ -39,7 +34,9 @@
 
 - (void)testShouldNotMatchNonCollection
 {
-    assertDoesNotMatch(@"Non collection", [self createMatcher], [[NSObject alloc] init]);
+    id matcher = onlyContains(equalTo(@"irrelevant"), nil);
+
+    assertDoesNotMatch(@"Non collection", matcher, [[NSObject alloc] init]);
 }
 
 - (void)testMatchesSingletonCollection

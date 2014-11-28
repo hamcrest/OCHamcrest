@@ -20,11 +20,6 @@
 
 @implementation IsAnythingTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return anything();
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = anything();

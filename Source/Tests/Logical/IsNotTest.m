@@ -24,11 +24,6 @@
 
 @implementation IsNotTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return isNot(@"something");
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = isNot(@"irrelevant");

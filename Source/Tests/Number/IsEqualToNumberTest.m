@@ -20,12 +20,6 @@
 
 @implementation IsEqualToBoolTest
 
-- (id <HCMatcher>)createMatcher
-{
-    BOOL irrelevant = NO;
-    return equalToBool(irrelevant);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     BOOL irrelevant = NO;
@@ -59,12 +53,6 @@
 
 @implementation IsEqualToCharTest
 
-- (id <HCMatcher>)createMatcher
-{
-    char irrelevant = 0;
-    return equalToChar(irrelevant);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     char irrelevant = 0;
@@ -92,12 +80,6 @@
 @end
 
 @implementation IsEqualToDoubleTest
-
-- (id <HCMatcher>)createMatcher
-{
-    double irrelevant = 0;
-    return equalToDouble(irrelevant);
-}
 
 - (void)testCopesWithNilsAndUnknownTypes
 {
@@ -127,12 +109,6 @@
 
 @implementation IsEqualToFloatTest
 
-- (id <HCMatcher>)createMatcher
-{
-    float irrelevant = 0;
-    return equalToFloat(irrelevant);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     float irrelevant = 0;
@@ -160,12 +136,6 @@
 @end
 
 @implementation IsEqualToIntTest
-
-- (id <HCMatcher>)createMatcher
-{
-    int irrelevant = 0;
-    return equalToInt(irrelevant);
-}
 
 - (void)testCopesWithNilsAndUnknownTypes
 {
@@ -195,12 +165,6 @@
 
 @implementation IsEqualToLongTest
 
-- (id <HCMatcher>)createMatcher
-{
-    long irrelevant = 0;
-    return equalToLong(irrelevant);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     long irrelevant = 0;
@@ -228,12 +192,6 @@
 @end
 
 @implementation IsEqualToLongLongTest
-
-- (id <HCMatcher>)createMatcher
-{
-    long long irrelevant = 0;
-    return equalToLongLong(irrelevant);
-}
 
 - (void)testCopesWithNilsAndUnknownTypes
 {
@@ -263,12 +221,6 @@
 
 @implementation IsEqualToShortTest
 
-- (id <HCMatcher>)createMatcher
-{
-    short irrelevant = 0;
-    return equalToShort(irrelevant);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     short irrelevant = 0;
@@ -296,12 +248,6 @@
 @end
 
 @implementation IsEqualToUnsignedCharTest
-
-- (id <HCMatcher>)createMatcher
-{
-    unsigned char irrelevant = 0;
-    return equalToUnsignedChar(irrelevant);
-}
 
 - (void)testCopesWithNilsAndUnknownTypes
 {
@@ -331,12 +277,6 @@
 
 @implementation IsEqualToUnsignedIntTest
 
-- (id <HCMatcher>)createMatcher
-{
-    unsigned int irrelevant = 0;
-    return equalToUnsignedInt(irrelevant);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     unsigned int irrelevant = 0;
@@ -364,12 +304,6 @@
 @end
 
 @implementation IsEqualToUnsignedLongTest
-
-- (id <HCMatcher>)createMatcher
-{
-    unsigned long irrelevant = 0;
-    return equalToUnsignedLong(irrelevant);
-}
 
 - (void)testCopesWithNilsAndUnknownTypes
 {
@@ -399,12 +333,6 @@
 
 @implementation IsEqualToUnsignedLongLongTest
 
-- (id <HCMatcher>)createMatcher
-{
-    unsigned long long irrelevant = 0;
-    return equalToUnsignedLongLong(irrelevant);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     unsigned long long irrelevant = 0;
@@ -432,12 +360,6 @@
 @end
 
 @implementation IsEqualToUnsignedShortTest
-
-- (id <HCMatcher>)createMatcher
-{
-    unsigned short irrelevant = 0;
-    return equalToUnsignedShort(irrelevant);
-}
 
 - (void)testCopesWithNilsAndUnknownTypes
 {
@@ -467,12 +389,6 @@
 
 @implementation IsEqualToIntegerTest
 
-- (id <HCMatcher>)createMatcher
-{
-    NSInteger irrelevant = 0;
-    return equalToInteger(irrelevant);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     NSInteger irrelevant = 0;
@@ -500,12 +416,6 @@
 @end
 
 @implementation IsEqualToUnsignedIntegerTest
-
-- (id <HCMatcher>)createMatcher
-{
-    NSUInteger irrelevant = 0;
-    return equalToUnsignedInteger(irrelevant);
-}
 
 - (void)testCopesWithNilsAndUnknownTypes
 {

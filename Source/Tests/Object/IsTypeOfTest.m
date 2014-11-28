@@ -21,11 +21,6 @@
 
 @implementation IsTypeOfTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return isA([SomeClass class]);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = isA([SomeClass class]);

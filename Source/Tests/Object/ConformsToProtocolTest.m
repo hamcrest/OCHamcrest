@@ -33,11 +33,6 @@
 
 @implementation ConformsToProtocolTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return conformsTo(@protocol(TestProtocol));
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = conformsTo(@protocol(TestProtocol));

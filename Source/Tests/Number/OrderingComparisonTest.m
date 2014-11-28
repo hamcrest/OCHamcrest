@@ -20,11 +20,6 @@
 
 @implementation OrderingComparisonTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return nil;     // Ignore the inherited tests; they don't work well for this class.
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = greaterThan(@1);

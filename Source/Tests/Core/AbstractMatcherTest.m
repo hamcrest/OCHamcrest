@@ -146,21 +146,4 @@
     }
 }
 
-- (id <HCMatcher>)createMatcher
-{
-    return nil;     // Override in subclass
-}
-
-- (void)testIsNilSafe
-{
-    // Should not crash or throw exception.
-    [[self createMatcher] matches:nil];
-}
-
-- (void)testCopesWithUnknownTypes
-{
-    // Should not crash or throw exception.
-    [[self createMatcher] matches:[[NSObject alloc] init]];
-}
-
 @end

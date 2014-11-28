@@ -23,11 +23,6 @@
 
 @implementation IsCollectionContainingInAnyOrderTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return containsInAnyOrder(equalTo(@"irrelevant"), nil);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = containsInAnyOrder(equalTo(@"irrelevant"), nil);
@@ -38,7 +33,9 @@
 
 - (void)testShouldNotMatchNonCollection
 {
-    assertDoesNotMatch(@"Non collection", [self createMatcher], [[NSObject alloc] init]);
+    id matcher = containsInAnyOrder(equalTo(@"irrelevant"), nil);
+
+    assertDoesNotMatch(@"Non collection", matcher, [[NSObject alloc] init]);
 }
 
 - (void)testMatchingSingleItemCollection

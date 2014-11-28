@@ -21,11 +21,6 @@
 
 @implementation IsInstanceOfTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return instanceOf([SomeClass class]);
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = instanceOf([SomeClass class]);

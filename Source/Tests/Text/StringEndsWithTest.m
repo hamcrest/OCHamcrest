@@ -37,11 +37,6 @@ static NSString *EXCERPT = @"EXCERPT";
     [super tearDown];
 }
 
-- (id <HCMatcher>)createMatcher
-{
-    return matcher;
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     assertNilSafe(matcher);

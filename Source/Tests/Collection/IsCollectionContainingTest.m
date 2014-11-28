@@ -23,11 +23,6 @@
 
 @implementation IsCollectionContainingTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return hasItem(equalTo(@"irrelevant"));
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasItem(equalTo(@"irrelevant"));

@@ -20,11 +20,6 @@
 
 @implementation IsInTest
 
-- (id <HCMatcher>)createMatcher
-{
-    NSArray *collection = @[@"a", @"b", @"c"];
-    return isIn(collection);
-}
 
 - (void)testCopesWithNilsAndUnknownTypes
 {

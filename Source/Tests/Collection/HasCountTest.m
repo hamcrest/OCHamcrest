@@ -26,11 +26,6 @@
 
 @implementation HasCountTest
 
-- (id <HCMatcher>)createMatcher
-{
-    return hasCount(equalTo(@42));
-}
-
 - (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasCount(equalTo(@42));
@@ -89,12 +84,6 @@
 @end
 
 @implementation HasCountOfTest
-
-- (id <HCMatcher>)createMatcher
-{
-    return hasCountOf(42);
-}
-
 
 - (void)testCopesWithNilsAndUnknownTypes
 {
