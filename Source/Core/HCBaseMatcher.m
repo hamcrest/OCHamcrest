@@ -11,8 +11,6 @@
 
 #import "HCStringDescription.h"
 
-#define ABSTRACT_METHOD [self subclassResponsibility:_cmd]
-
 
 @implementation HCBaseMatcher
 
@@ -23,7 +21,7 @@
 
 - (BOOL)matches:(id)item
 {
-    ABSTRACT_METHOD;
+    HC_ABSTRACT_METHOD;
     return NO;
 }
 
@@ -42,7 +40,7 @@
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    ABSTRACT_METHOD;
+    HC_ABSTRACT_METHOD;
 }
 
 - (void)subclassResponsibility:(SEL)command

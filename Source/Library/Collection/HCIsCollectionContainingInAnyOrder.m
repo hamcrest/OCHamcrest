@@ -52,7 +52,7 @@
 {
     if ([self.matchers count] == 0)
         return YES;
-    
+
     [[[[self.mismatchDescription appendText:@"no item matches: "]
                                  appendList:self.matchers start:@"" separator:@", " end:@""]
                                  appendText:@" in "]
@@ -82,32 +82,22 @@
     return self;
 }
 
-- (BOOL)matches:(id)collection
-{
-    return [self matches:collection describingMismatchTo:nil];
-}
-
 - (BOOL)matches:(id)collection describingMismatchTo:(id<HCDescription>)mismatchDescription
 {
     if (![collection conformsToProtocol:@protocol(NSFastEnumeration)])
     {
-        [super describeMismatchOf:collection to:mismatchDescription];
+        [[mismatchDescription appendText:@"was non-collection "] appendDescriptionOf:collection];
         return NO;
     }
-    
+
     HCMatchingInAnyOrder *matchSequence =
         [[HCMatchingInAnyOrder alloc] initWithMatchers:self.matchers
                                    mismatchDescription:mismatchDescription];
     for (id item in collection)
         if (![matchSequence matches:item])
             return NO;
-    
-    return [matchSequence isFinishedWith:collection];
-}
 
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
-{
-    [self matches:item describingMismatchTo:mismatchDescription];
+    return [matchSequence isFinishedWith:collection];
 }
 
 - (void)describeTo:(id<HCDescription>)description

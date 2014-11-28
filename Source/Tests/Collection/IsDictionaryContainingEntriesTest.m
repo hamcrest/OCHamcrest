@@ -100,7 +100,7 @@
 
 - (void)testMismatchDescriptionOfNonDictionaryShowsActualArgument
 {
-    assertMismatchDescription(@"was \"bad\"", hasEntries(@"a", @"1", nil), @"bad");
+    assertMismatchDescription(@"was non-dictionary \"bad\"", hasEntries(@"a", @"1", nil), @"bad");
 }
 
 - (void)testMismatchDescriptionOfDictionaryWithoutKey
@@ -118,7 +118,7 @@
 
 - (void)testDescribeMismatchOfNonDictionaryShowsActualArgument
 {
-    assertDescribeMismatch(@"was \"bad\"", hasEntries(@"a", @"1", nil), @"bad");
+    assertDescribeMismatch(@"was non-dictionary \"bad\"", hasEntries(@"a", @"1", nil), @"bad");
 }
 
 - (void)testDescribeMismatchOfDictionaryWithoutKey

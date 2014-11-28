@@ -98,32 +98,22 @@
     return self;
 }
 
-- (BOOL)matches:(id)collection
-{
-    return [self matches:collection describingMismatchTo:nil];
-}
-
 - (BOOL)matches:(id)collection describingMismatchTo:(id<HCDescription, NSObject>)mismatchDescription
 {
     if (![collection conformsToProtocol:@protocol(NSFastEnumeration)])
     {
-        [super describeMismatchOf:collection to:mismatchDescription];
+        [[mismatchDescription appendText:@"was non-collection "] appendDescriptionOf:collection];
         return NO;
     }
-    
+
     HCMatchSequence *matchSequence =
         [[HCMatchSequence alloc] initWithMatchers:self.matchers
                               mismatchDescription:mismatchDescription];
     for (id item in collection)
         if (![matchSequence matches:item])
             return NO;
-    
-    return [matchSequence isFinished];
-}
 
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
-{
-    [self matches:item describingMismatchTo:mismatchDescription];
+    return [matchSequence isFinished];
 }
 
 - (void)describeTo:(id<HCDescription>)description

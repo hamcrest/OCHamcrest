@@ -118,7 +118,7 @@
 
 - (void)testDescribeMismatchOfNonCollection
 {
-    assertDescribeMismatch(@"was nil", (containsInAnyOrder(@"a", @"b", nil)), nil);
+    assertDescribeMismatch(@"was non-collection nil", (containsInAnyOrder(@"a", @"b", nil)), nil);
 }
 
 @end

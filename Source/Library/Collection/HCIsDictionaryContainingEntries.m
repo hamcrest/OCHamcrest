@@ -38,19 +38,14 @@
     return self;
 }
 
-- (BOOL)matches:(id)item
-{
-    return [self matches:item describingMismatchTo:nil];
-}
-
 - (BOOL)matches:(id)dict describingMismatchTo:(id<HCDescription>)mismatchDescription
 {
     if (![dict isKindOfClass:[NSDictionary class]])
     {
-        [super describeMismatchOf:dict to:mismatchDescription];
+        [[mismatchDescription appendText:@"was non-dictionary "] appendDescriptionOf:dict];
         return NO;
     }
-    
+
     NSUInteger count = [self.keys count];
     for (NSUInteger index = 0; index < count; ++index)
     {
@@ -66,7 +61,7 @@
 
         id valueMatcher = self.valueMatchers[index];
         id actualValue = dict[key];
-        
+
         if (![valueMatcher matches:actualValue])
         {
             [[[[mismatchDescription appendText:@"value for "]
@@ -75,14 +70,9 @@
                                     appendDescriptionOf:actualValue];
             return NO;
         }
-    }    
-    
-    return YES;
-}
+    }
 
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
-{
-    [self matches:item describingMismatchTo:mismatchDescription];
+    return YES;
 }
 
 - (void)describeKeyValueAtIndex:(NSUInteger)index to:(id<HCDescription>)description
@@ -122,7 +112,7 @@ id HC_hasEntries(id keysAndValueMatch, ...)
 {
     va_list args;
     va_start(args, keysAndValueMatch);
-    
+
     id key = keysAndValueMatch;
     id valueMatcher = va_arg(args, id);
     requirePairedObject(valueMatcher);
@@ -138,7 +128,7 @@ id HC_hasEntries(id keysAndValueMatch, ...)
         [valueMatchers addObject:HCWrapInMatcher(valueMatcher)];
         key = va_arg(args, id);
     }
-    
+
     return [HCIsDictionaryContainingEntries isDictionaryContainingKeys:keys
                                                          valueMatchers:valueMatchers];
 }

@@ -98,7 +98,7 @@
 
 - (void)testDoesNotMatchObjectWithoutEnumerator
 {
-    assertMismatchDescription(@"was non-collection \"bad\"", hasItem(equalTo(@"a")), @"bad");
+    assertMismatchDescription(@"was non-collection nil", hasItem(equalTo(@"a")), nil);
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
@@ -118,7 +118,7 @@
 
 - (void)testDescribeMismatch
 {
-    assertDescribeMismatch(@"was \"bad\"", hasItem(@"a"), @"bad");
+    assertDescribeMismatch(@"was non-collection \"bad\"", hasItem(@"a"), @"bad");
 }
 
 - (void)testMatchesMultipleItemsInCollection
@@ -143,7 +143,7 @@
 {
     id matcher = hasItems(@3, @4, nil);
 
-    assertMismatchDescription(@"a collection containing <4> was <(\n    1,\n    2,\n    3\n)>",
+    assertMismatchDescription(@"a collection containing <4> mismatches were: [was <1>, was <2>, was <3>]",
             matcher, (@[@1, @2, @3]));
 }
 
