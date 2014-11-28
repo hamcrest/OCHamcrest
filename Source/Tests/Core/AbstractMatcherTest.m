@@ -15,6 +15,25 @@
 
 @implementation AbstractMatcherTest
 
+- (void)failWithMessage:(NSString *)message inFile:(char const *)fileName atLine:(int)lineNumber
+{
+    [self failWithException:[NSException failureInFile:@(fileName)
+                                                atLine:lineNumber
+                                       withDescription:message]];
+}
+
+- (void)failEqualityBetweenObject:(id)left andObject:(id)right withMessage:(NSString *)message
+                inFile:(char const *)fileName atLine:(int)lineNumber
+{
+    [self failWithException:
+            [NSException failureInEqualityBetweenObject:left
+                                              andObject:right
+                                                 inFile:@(fileName)
+                                                 atLine:lineNumber
+                                        withDescription:message]];
+
+}
+
 - (void)assertMatcherSafeWithNil:(id <HCMatcher>)matcher
                 inFile:(const char *)fileName atLine:(int)lineNumber
 {
@@ -24,10 +43,8 @@
     }
     @catch (NSException *e)
     {
-        [self failWithException:[NSException failureInFile:@(fileName)
-                                                    atLine:lineNumber
-                                           withDescription:@"Matcher was not nil safe"]];
-
+        [self failWithMessage:@"Matcher was not nil safe"
+                       inFile:fileName atLine:lineNumber];
     }
 }
 
@@ -36,9 +53,7 @@
 {
     if (!condition)
     {
-        [self failWithException:[NSException failureInFile:@(fileName)
-                                                    atLine:lineNumber
-                                           withDescription:message]];
+        [self failWithMessage:message inFile:fileName atLine:lineNumber];
     }
 }
 
@@ -47,9 +62,7 @@
 {
     if (condition)
     {
-        [self failWithException:[NSException failureInFile:@(fileName)
-                                                    atLine:lineNumber
-                                           withDescription:message]];
+        [self failWithMessage:message inFile:fileName atLine:lineNumber];
     }
 }
 
@@ -61,12 +74,9 @@
     NSString *actual = [description description];
     if (![actual isEqualToString:expected])
     {
-        [self failWithException:
-                [NSException failureInEqualityBetweenObject:actual
-                                                  andObject:expected
-                                                     inFile:@(fileName)
-                                                     atLine:lineNumber
-                                            withDescription:@"Expected description"]];
+        [self failEqualityBetweenObject:actual andObject:expected
+                            withMessage:@"Expected description"
+                                 inFile:fileName atLine:lineNumber];
     }
 }
 
@@ -77,15 +87,13 @@
     BOOL result = [matcher matches:arg];
     if (!result)
     {
-        [self failWithException:[NSException failureInFile:@(fileName)
-                                                    atLine:lineNumber
-                                           withDescription:@"Precondition: Matcher should match item"]];
+        [self failWithMessage:@"Precondition: Matcher should match item"
+                       inFile:fileName atLine:lineNumber];
     }
     if ([[description description] length] != 0)
     {
-        [self failWithException:[NSException failureInFile:@(fileName)
-                                                    atLine:lineNumber
-                                           withDescription:@"Expected no mismatch description"]];
+        [self failWithMessage:@"Expected no mismatch description"
+                       inFile:fileName atLine:lineNumber];
     }
 }
 
@@ -98,19 +106,15 @@
     BOOL result = [matcher matches:arg describingMismatchTo:description];
     if (result)
     {
-        [self failWithException:[NSException failureInFile:@(fileName)
-                                                    atLine:lineNumber
-                                           withDescription:@"Precondition: Matcher should not match item"]];
+        [self failWithMessage:@"Precondition: Matcher should not match item"
+                       inFile:fileName atLine:lineNumber];
     }
     NSString *actual = [description description];
     if (![actual isEqualToString:expected])
     {
-        [self failWithException:
-                [NSException failureInEqualityBetweenObject:actual
-                                                  andObject:expected
-                                                     inFile:@(fileName)
-                                                     atLine:lineNumber
-                                            withDescription:@"Expected mismatch description"]];
+        [self failEqualityBetweenObject:actual andObject:expected
+                            withMessage:@"Expected mismatch description"
+                                 inFile:fileName atLine:lineNumber];
     }
 }
 
@@ -122,12 +126,9 @@
     NSString *actual = [description description];
     if (![actual isEqualToString:expected])
     {
-        [self failWithException:
-                [NSException failureInEqualityBetweenObject:actual
-                                                  andObject:expected
-                                                     inFile:@(fileName)
-                                                     atLine:lineNumber
-                                            withDescription:@"Expected mismatch description"]];
+        [self failEqualityBetweenObject:actual andObject:expected
+                            withMessage:@"Expected mismatch description"
+                                 inFile:fileName atLine:lineNumber];
     }
 }
 
