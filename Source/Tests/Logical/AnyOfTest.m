@@ -13,6 +13,8 @@
 
     // Collaborators
 #import <OCHamcrest/HCIsEqual.h>
+#import <OCHamcrest/HCStringEndsWith.h>
+#import <OCHamcrest/HCStringStartsWith.h>
 
     // Test support
 #import "AbstractMatcherTest.h"
@@ -31,47 +33,29 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testMatchesIfArgumentSatisfiesEitherOrBothOfTwoOtherMatchers
+- (void)testEvaluatesToTheTheLogicalDisjunctionOfTwoOtherMatchers
 {
-    assertMatches(@"first matcher", anyOf(equalTo(@"good"), equalTo(@"bad"), nil), @"good");
-    assertMatches(@"second matcher", anyOf(equalTo(@"bad"), equalTo(@"good"), nil), @"good");
-    assertMatches(@"both matchers", anyOf(equalTo(@"good"), equalTo(@"good"), nil), @"good");
+    id matcher = anyOf(startsWith(@"goo"), endsWith(@"ood"), nil);
+
+    assertMatches(@"didn't pass both sub-matchers", matcher, @"good");
+    assertMatches(@"didn't pass second sub-matcher", matcher, @"mood");
+    assertMatches(@"didn't pass first sub-matcher", matcher, @"goon");
+    assertDoesNotMatch(@"didn't fail both sub-matchers", matcher, @"flan");
 }
 
+- (void)testEvaluatesToTheTheLogicalDisjunctionOfManyOtherMatchers
+{
+    id matcher = anyOf(startsWith(@"g"), startsWith(@"go"), endsWith(@"d"), startsWith(@"go"), startsWith(@"goo"), nil);
+
+    assertMatches(@"didn't pass middle sub-matcher", matcher, @"vlad");
+    assertDoesNotMatch(@"didn't fail all sub-matchers", matcher, @"flan");
+
+}
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"first matcher", anyOf(@"good", @"bad", nil), @"good");
     assertMatches(@"second matcher", anyOf(@"bad", @"good", nil), @"good");
     assertMatches(@"both matchers", anyOf(@"good", @"good", nil), @"good");
-}
-
-- (void)testNoMatchIfArgumentFailsToSatisfyEitherOfTwoOtherMatchers
-{
-    assertDoesNotMatch(@"first matcher", anyOf(equalTo(@"bad"), equalTo(@"bad"), nil), @"good");
-}
-
-- (void)testMatchesIfArgumentSatisfiesAnyOfManyOtherMatchers
-{
-    assertMatches(@"matcher in the middle",
-                  anyOf(equalTo(@"bad"),
-                        equalTo(@"bad"),
-                        equalTo(@"good"),
-                        equalTo(@"bad"),
-                        equalTo(@"bad"),
-                        nil),
-                  @"good");
-}
-
-- (void)testNoMatchIfArgumentFailsToSatisfyAnyOfManyOtherMatchers
-{
-    assertDoesNotMatch(@"all matchers",
-                       anyOf(equalTo(@"bad"),
-                             equalTo(@"bad"),
-                             equalTo(@"bad"),
-                             equalTo(@"bad"),
-                             equalTo(@"bad"),
-                             nil),
-                       @"good");
 }
 
 - (void)testHasAReadableDescription
