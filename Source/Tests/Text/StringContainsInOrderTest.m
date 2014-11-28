@@ -40,9 +40,10 @@
     return matcher;
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testMatchesIfOrderIsCorrect

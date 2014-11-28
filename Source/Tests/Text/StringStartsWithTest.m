@@ -42,9 +42,10 @@ static NSString *EXCERPT = @"EXCERPT";
     return matcher;
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testEvaluatesToTrueIfArgumentContainsSpecifiedSubstring

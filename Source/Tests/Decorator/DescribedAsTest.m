@@ -29,11 +29,12 @@
     return describedAs(@"irrelevant", anything(), nil);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = describedAs(@"irrelevant", anything(), nil);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testOverridesDescriptionOfNestedMatcherInitializerArgument

@@ -28,11 +28,12 @@
     return contains(equalTo(@"irrelevant"), nil);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = contains(equalTo(@"irrelevant"), nil);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testShouldNotMatchNonCollection

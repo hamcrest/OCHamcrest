@@ -26,11 +26,12 @@
     return instanceOf([SomeClass class]);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = instanceOf([SomeClass class]);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testEvaluatesToTrueIfArgumentIsInstanceOfGivenClass

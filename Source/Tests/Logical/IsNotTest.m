@@ -29,11 +29,12 @@
     return isNot(@"something");
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = isNot(@"irrelevant");
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testEvaluatesToTheTheLogicalNegationOfAnotherMatcher

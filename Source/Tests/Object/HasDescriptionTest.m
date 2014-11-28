@@ -39,11 +39,12 @@ static NSString *fakeDescription = @"DESCRIPTION";
     return hasDescription(equalTo(@"irrelevant"));
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasDescription(equalTo(@"irrelevant"));
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testPassesResultOfDescriptionToNestedMatcher

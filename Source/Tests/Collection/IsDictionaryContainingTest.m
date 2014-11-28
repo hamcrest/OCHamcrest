@@ -29,11 +29,12 @@
     return hasEntry(@"irrelevant", @"irrelevant");
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasEntry(@"irrelevant", @"irrelevant");
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testMatchesDictionaryContainingMatchingKeyAndValue

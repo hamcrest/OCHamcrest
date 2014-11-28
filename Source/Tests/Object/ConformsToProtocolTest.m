@@ -38,11 +38,12 @@
     return conformsTo(@protocol(TestProtocol));
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = conformsTo(@protocol(TestProtocol));
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testEvaluatesToTrueIfArgumentConformsToASpecificProtocol

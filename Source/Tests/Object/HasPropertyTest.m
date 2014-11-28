@@ -74,11 +74,12 @@
     return hasProperty(@"irrelevant", @"irrelevant");
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasProperty(@"irrelevant", @"irrelevant");
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testCanMatchStringPropertyValues

@@ -28,11 +28,12 @@
     return hasEntries(@"irrelevant", @"irrelevant", nil);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasEntries(@"irrelevant", @"irrelevant", nil);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testMatcherCreationRequiresEvenNumberOfArgs

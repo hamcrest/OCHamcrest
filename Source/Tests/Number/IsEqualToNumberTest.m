@@ -26,12 +26,13 @@
     return equalToBool(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     BOOL irrelevant = NO;
     id matcher = equalToBool(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -64,12 +65,13 @@
     return equalToChar(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     char irrelevant = 0;
     id matcher = equalToChar(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -97,12 +99,13 @@
     return equalToDouble(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     double irrelevant = 0;
     id matcher = equalToDouble(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -130,12 +133,13 @@
     return equalToFloat(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     float irrelevant = 0;
     id matcher = equalToFloat(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -163,12 +167,13 @@
     return equalToInt(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     int irrelevant = 0;
     id matcher = equalToInt(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -196,12 +201,13 @@
     return equalToLong(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     long irrelevant = 0;
     id matcher = equalToLong(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -229,12 +235,13 @@
     return equalToLongLong(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     long long irrelevant = 0;
     id matcher = equalToLongLong(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -262,12 +269,13 @@
     return equalToShort(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     short irrelevant = 0;
     id matcher = equalToShort(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -295,12 +303,13 @@
     return equalToUnsignedChar(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     unsigned char irrelevant = 0;
     id matcher = equalToUnsignedChar(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -328,12 +337,13 @@
     return equalToUnsignedInt(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     unsigned int irrelevant = 0;
     id matcher = equalToUnsignedInt(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -361,12 +371,13 @@
     return equalToUnsignedLong(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     unsigned long irrelevant = 0;
     id matcher = equalToUnsignedLong(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -394,12 +405,13 @@
     return equalToUnsignedLongLong(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     unsigned long long irrelevant = 0;
     id matcher = equalToUnsignedLongLong(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -427,12 +439,13 @@
     return equalToUnsignedShort(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     unsigned short irrelevant = 0;
     id matcher = equalToUnsignedShort(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -460,12 +473,13 @@
     return equalToInteger(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     NSInteger irrelevant = 0;
     id matcher = equalToInteger(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber
@@ -493,12 +507,13 @@
     return equalToUnsignedInteger(irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     NSUInteger irrelevant = 0;
     id matcher = equalToUnsignedInteger(irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesWithNSNumber

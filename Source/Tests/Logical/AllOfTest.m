@@ -28,11 +28,12 @@
     return allOf(equalTo(@"irrelevant"), equalTo(@"irrelevant"), nil);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = allOf(equalTo(@"irrelevant"), equalTo(@"irrelevant"), nil);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testMatchesIfArgumentSatisfiesBothOfTwoOtherMatchers

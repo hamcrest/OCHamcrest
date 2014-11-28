@@ -26,12 +26,13 @@
     return isIn(collection);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     NSArray *collection = @[@"a", @"b", @"c"];
     id matcher = isIn(collection);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testReturnsTrueIfArgumentIsInCollection

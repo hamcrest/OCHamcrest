@@ -26,12 +26,13 @@
     return closeTo(irrelevant, irrelevant);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     double irrelevant = 0.1;
     id matcher = closeTo(irrelevant, irrelevant);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testEvaluatesToTrueIfArgumentIsEqualToADoubleValueWithinSomeError

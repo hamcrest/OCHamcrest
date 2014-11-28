@@ -28,11 +28,12 @@
     return hasValue(@"irrelevant");
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasValue(@"irrelevant");
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testMatchesSingletonDictionaryContainingValue

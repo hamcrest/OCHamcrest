@@ -28,11 +28,12 @@
     return anyOf(equalTo(@"irrelevant"), nil);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = anyOf(equalTo(@"irrelevant"), nil);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testMatchesIfArgumentSatisfiesEitherOrBothOfTwoOtherMatchers

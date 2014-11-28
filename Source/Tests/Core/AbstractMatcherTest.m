@@ -48,6 +48,20 @@
     }
 }
 
+- (void)assertMatcherSafeWithUnknownType:(id <HCMatcher>)matcher
+                inFile:(const char *)fileName atLine:(int)lineNumber
+{
+    @try
+    {
+        [matcher matches:[[NSObject alloc] init]];
+    }
+    @catch (NSException *e)
+    {
+        [self failWithMessage:@"Matcher was not unknown type safe"
+                       inFile:fileName atLine:lineNumber];
+    }
+}
+
 - (void)assertTrue:(BOOL)condition message:(NSString *)message
                 inFile:(const char *)fileName atLine:(int)lineNumber
 {

@@ -28,11 +28,12 @@
     return hasItem(equalTo(@"irrelevant"));
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasItem(equalTo(@"irrelevant"));
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testMatchesACollectionThatContainsAnElementMatchingTheGivenMatcher

@@ -28,11 +28,12 @@
     return containsInAnyOrder(equalTo(@"irrelevant"), nil);
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = containsInAnyOrder(equalTo(@"irrelevant"), nil);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testShouldNotMatchNonCollection

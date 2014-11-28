@@ -31,11 +31,12 @@
     return hasCount(equalTo(@42));
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasCount(equalTo(@42));
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testConvertsCountToNSNumberAndPassesToNestedMatcher
@@ -95,11 +96,12 @@
 }
 
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasCountOf(42);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testHasCountOfIsShortcutForEqualToUnsignedInteger

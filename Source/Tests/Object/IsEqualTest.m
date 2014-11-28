@@ -49,11 +49,12 @@
     return equalTo(@"irrelevant");
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = equalTo(@"irrelevant");
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesObjectsUsingIsEqualMethod

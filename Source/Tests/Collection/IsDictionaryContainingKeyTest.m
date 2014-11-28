@@ -28,11 +28,12 @@
     return hasKey(@"irrelevant");
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = hasKey(@"irrelevant");
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testMatchesSingletonDictionaryContainingKey

@@ -7,6 +7,7 @@
 //  Source: https://github.com/hamcrest/OCHamcrest
 //
 
+#import <Foundation/Foundation.h>
 #import "HCOrderingComparison.h"
 
 
@@ -41,7 +42,7 @@
                                        reason: @"Object must respond to compare:"
                                      userInfo: nil];
     }
-    
+
     self = [super init];
     if (self)
     {
@@ -57,7 +58,7 @@
 {
     if (item == nil)
         return NO;
-    
+
     NSComparisonResult compare = [self.expected compare:item];
     return self.minCompare <= compare && compare <= self.maxCompare;
 }

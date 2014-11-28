@@ -26,7 +26,7 @@
 - (instancetype)initWithString:(NSString *)string
 {
     HCRequireNonNilObject(string);
-    
+
     self = [super init];
     if (self)
         _string = [string copy];
@@ -37,7 +37,7 @@
 {
     if (![item isKindOfClass:[NSString class]])
         return NO;
-    
+
     return [self.string caseInsensitiveCompare:item] == NSOrderedSame;
 }
 

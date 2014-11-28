@@ -28,11 +28,12 @@
     return isEmpty();
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = isEmpty();
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testShouldNotMatchNonCollection
