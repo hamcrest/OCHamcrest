@@ -1,3 +1,10 @@
+NEXT VERSION
+------------
+
+- Fixed ordered comparison matchers (`greaterThan`, etc.) to return NO if given object can't be
+  compared, instead of throwing exception.
+
+
 Version 4.0.1
 -------------
 _04 Jun 2014_

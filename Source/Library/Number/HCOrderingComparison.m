@@ -59,7 +59,15 @@
     if (item == nil)
         return NO;
 
-    NSComparisonResult compare = [self.expected compare:item];
+    NSComparisonResult compare;
+    @try
+    {
+        compare = [self.expected compare:item];
+    }
+    @catch (NSException *e)
+    {
+        return NO;
+    }
     return self.minCompare <= compare && compare <= self.maxCompare;
 }
 

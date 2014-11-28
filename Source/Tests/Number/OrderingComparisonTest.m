@@ -25,11 +25,12 @@
     return nil;     // Ignore the inherited tests; they don't work well for this class.
 }
 
-- (void)testCopesWithNils
+- (void)testCopesWithNilsAndUnknownTypes
 {
     id matcher = greaterThan(@1);
 
     assertNilSafe(matcher);
+    assertUnknownTypeSafe(matcher);
 }
 
 - (void)testComparesObjectsForGreaterThan
@@ -67,6 +68,12 @@
 {
     assertMatches(@"strings", greaterThan(@"bb"), @"cc");
     assertMatches(@"dates", lessThan([NSDate date]), [NSDate distantPast]);
+}
+
+- (void)testDoesNotMatchObjectThatDoesNotCompare
+{
+    assertDoesNotMatch(@"can't compare", lessThan(@1), [NSDate date]);
+    assertDoesNotMatch(@"can't compare", greaterThan(@1), [NSDate date]);
 }
 
 - (void)testMatcherCreationRequiresObjectWithCompareMethod
