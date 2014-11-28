@@ -1,8 +1,9 @@
 NEXT VERSION
 ------------
 
-- Fixed ordered comparison matchers (`greaterThan`, etc.) to return NO if given object can't be
-  compared, instead of throwing exception.
+- Improved ordered comparison matchers (`greaterThan`, etc.) so that when the given object can't be
+  compared, the matchers return NO instead of throwing an exception.
+- Improved mismatch descriptions for `hasItem`.
 
 
 Version 4.0.1

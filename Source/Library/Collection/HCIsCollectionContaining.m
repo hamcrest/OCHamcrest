@@ -37,12 +37,37 @@
 
 - (BOOL)matches:(id)collection
 {
+    return [self matches:collection describingMismatchTo:nil];
+}
+
+- (BOOL)matches:(id)collection describingMismatchTo:(id <HCDescription>)mismatchDescription
+{
     if (![collection conformsToProtocol:@protocol(NSFastEnumeration)])
+    {
+        [[mismatchDescription appendText:@"was non-collection "] appendDescriptionOf:collection];
         return NO;
-        
+    }
+
+    if ([collection count] == 0)
+    {
+        [mismatchDescription appendText:@"was empty"];
+        return NO;
+    }
+
     for (id item in collection)
         if ([self.elementMatcher matches:item])
             return YES;
+
+    [mismatchDescription appendText:@"mismatches were: ["];
+    BOOL isPastFirst = NO;
+    for (id item in collection)
+    {
+        if (isPastFirst)
+            [mismatchDescription appendText:@", "];
+        [self.elementMatcher describeMismatchOf:item to:mismatchDescription];
+        isPastFirst = YES;
+    }
+    [mismatchDescription appendText:@"]"];
     return NO;
 }
 
