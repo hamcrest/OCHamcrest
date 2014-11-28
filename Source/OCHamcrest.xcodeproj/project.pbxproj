@@ -111,8 +111,10 @@
 		0876039213440E28001B439B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
 		088FB0AB136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */; };
 		088FB0AC136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */; };
+		31DDC19066E25E0DB52E3441 /* Mismatchable.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DDCC467D6EFFC559012D61 /* Mismatchable.m */; };
 		31DDC972FA9B967EC328D4F3 /* HCDiagnosingMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 31DDCE62F97F2042F0A8BDAE /* HCDiagnosingMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31DDC99BB130EC06BA6BFBEC /* HCDiagnosingMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DDCB570769099D33C22810 /* HCDiagnosingMatcher.m */; };
+		31DDCC204A3D141D7AC6FC02 /* Mismatchable.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DDCC467D6EFFC559012D61 /* Mismatchable.m */; };
 		31DDCDCEAABD4CB0D7580AFE /* HCDiagnosingMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 31DDCE62F97F2042F0A8BDAE /* HCDiagnosingMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31DDCEC51963ADABADBC576B /* HCDiagnosingMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DDCB570769099D33C22810 /* HCDiagnosingMatcher.m */; };
 		5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
@@ -423,6 +425,8 @@
 		088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringContainsInOrderTest.m; sourceTree = "<group>"; };
 		08F39BAA1711426200745958 /* CHANGES.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = CHANGES.md; path = ../CHANGES.md; sourceTree = "<group>"; };
 		31DDCB570769099D33C22810 /* HCDiagnosingMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDiagnosingMatcher.m; sourceTree = "<group>"; };
+		31DDCC467D6EFFC559012D61 /* Mismatchable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mismatchable.m; sourceTree = "<group>"; };
+		31DDCCF46E1766AF4AC97BA5 /* Mismatchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mismatchable.h; sourceTree = "<group>"; };
 		31DDCE62F97F2042F0A8BDAE /* HCDiagnosingMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDiagnosingMatcher.h; sourceTree = "<group>"; };
 		5F2773441436F81000B9683A /* ConformsToProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConformsToProtocolTest.m; sourceTree = "<group>"; };
 		77C7B8761429361200DE60CC /* HasPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasPropertyTest.m; sourceTree = "<group>"; };
@@ -714,6 +718,8 @@
 				0876034113440AD8001B439B /* IsDictionaryContainingValueTest.m */,
 				0876034213440AD8001B439B /* IsEmptyCollectionTest.m */,
 				0876034313440AD8001B439B /* IsInTest.m */,
+				31DDCCF46E1766AF4AC97BA5 /* Mismatchable.h */,
+				31DDCC467D6EFFC559012D61 /* Mismatchable.m */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -1430,6 +1436,7 @@
 				5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */,
 				BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */,
 				0850A44F17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
+				31DDC19066E25E0DB52E3441 /* Mismatchable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1557,6 +1564,7 @@
 				5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */,
 				BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */,
 				0850A44E17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
+				31DDCC204A3D141D7AC6FC02 /* Mismatchable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

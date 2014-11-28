@@ -16,43 +16,7 @@
 
     // Test support
 #import "AbstractMatcherTest.h"
-
-
-@interface Mismatchable : HCBaseMatcher
-@property (nonatomic, copy, readonly) NSString *string;
-@end
-
-@implementation Mismatchable
-
-+ (instancetype)mismatchable:(NSString *)string
-{
-    return [[self alloc] initMismatchableString:string];
-}
-
-- (instancetype)initMismatchableString:(NSString *)string
-{
-    self = [super init];
-    if (self)
-        _string = [string copy];
-    return self;
-}
-
-- (BOOL)matches:(id)item
-{
-    return [self.string isEqualTo:item];
-}
-
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
-{
-    [[mismatchDescription appendText:@"mismatched: "] appendText:item];
-}
-
-- (void)describeTo:(id <HCDescription>)description
-{
-    [[description appendText:@"mismatchable: "] appendText:self.string];
-}
-
-@end
+#import "Mismatchable.h"
 
 
 @interface IsCollectionContainingTest : AbstractMatcherTest
@@ -96,7 +60,7 @@
                        hasItem(@"a"), ([NSSet setWithObjects:@"b", @"c", nil]));
 }
 
-- (void)testDoesNotMatchObjectWithoutEnumerator
+- (void)testDoesNotMatchNonCollection
 {
     assertMismatchDescription(@"was non-collection nil", hasItem(equalTo(@"a")), nil);
 }

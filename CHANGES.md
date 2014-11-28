@@ -3,6 +3,8 @@ NEXT VERSION
 
 - Added new base class HCDiagnosingMatcher to simplify complex matchers.
 - Improved mismatch descriptions for `hasItem`.
+- Improved mismatch descriptions for `onlyContains`, especially in reporting all elements that don't
+  match.
 - Improved ordered comparison matchers (`greaterThan`, etc.) so that when the given object can't be
   compared, the matchers return NO instead of throwing an exception.
 

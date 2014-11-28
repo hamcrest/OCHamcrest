@@ -17,6 +17,7 @@
 
     // Test support
 #import "AbstractMatcherTest.h"
+#import "Mismatchable.h"
 
 
 @interface IsCollectionOnlyContainingTest : AbstractMatcherTest
@@ -32,51 +33,60 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testShouldNotMatchNonCollection
+- (void)testDoesNotMatchEmptyCollection
 {
     id matcher = onlyContains(equalTo(@"irrelevant"), nil);
 
-    assertDoesNotMatch(@"Non collection", matcher, [[NSObject alloc] init]);
+    assertMismatchDescription(@"was empty", matcher, @[]);
+}
+
+- (void)testReportAllElementsThatDoNotMatch
+{
+    id matcher = onlyContains([Mismatchable mismatchable:@"a"], nil);
+
+    assertMismatchDescription(@"mismatches were: [was \"b\", was \"c\"]", matcher, (@[@"b", @"a", @"c"]));
+}
+
+- (void)testDoesNotMatchNonCollection
+{
+    id matcher = onlyContains(equalTo(@"irrelevant"), nil);
+
+    assertMismatchDescription(@"was non-collection nil", matcher, nil);
 }
 
 - (void)testMatchesSingletonCollection
 {
     assertMatches(@"singleton collection",
                   onlyContains(equalTo(@"a"), nil),
-                  ([NSSet setWithObject:@"a"]));
+                  [NSSet setWithObject:@"a"]);
 }
 
 - (void)testMatchesAllItemsWithOneMatcher
 {
     assertMatches(@"one matcher",
                   onlyContains(lessThan(@"d"), nil),
-                  ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
+                  (@[@"a", @"b", @"c"]));
 }
 
 - (void)testMatchesAllItemsWithMultipleMatchers
 {
     assertMatches(@"multiple matcher",
                   onlyContains(lessThan(@"d"), equalTo(@"hi"), nil),
-                  ([NSArray arrayWithObjects:@"a", @"hi", @"b", @"c", nil]));
+                  (@[@"a", @"hi", @"b", @"c"]));
 }
 
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"Values automatically wrapped with equal_to",
                   onlyContains(lessThan(@"d"), @"hi", nil),
-                  ([NSArray arrayWithObjects:@"a", @"hi", @"b", @"c", nil]));
+                  (@[@"a", @"hi", @"b", @"c"]));
 }
 
 - (void)testDoesNotMatchCollectionWithMismatchingItem
 {
     assertDoesNotMatch(@"d is not less than d",
                        onlyContains(lessThan(@"d"), nil),
-                       ([NSArray arrayWithObjects:@"b", @"c", @"d", nil]));
-}
-
-- (void)testDoesNotMatchEmptyCollection
-{
-    assertDoesNotMatch(@"empty collection", onlyContains(equalTo(@"foo"), nil), (@[]));
+                       (@[@"b", @"c", @"d"]));
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
@@ -89,16 +99,6 @@
     assertDescription(@"a collection containing items matching (\"a\" or \"b\")",
                         onlyContains(@"a", @"b", nil));
 
-}
-
-- (void)testDescribeMismatch
-{
-    assertDescribeMismatch(@"was \"bad\"", (onlyContains(@"a", @"b", nil)), @"bad");
-}
-
-- (void)testDescribeMismatchOfNonCollection
-{
-    assertDescribeMismatch(@"was nil", (onlyContains(@"a", @"b", nil)), nil);
 }
 
 @end
