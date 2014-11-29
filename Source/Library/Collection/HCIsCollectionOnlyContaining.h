@@ -7,13 +7,12 @@
 //  Source: https://github.com/hamcrest/OCHamcrest
 //
 
-#import <OCHamcrest/HCDiagnosingMatcher.h>
+#import <OCHamcrest/HCEvery.h>
 
 
-@interface HCIsCollectionOnlyContaining : HCDiagnosingMatcher
+@interface HCIsCollectionOnlyContaining : HCEvery
 
 + (instancetype)isCollectionOnlyContaining:(id <HCMatcher>)matcher;
-- (instancetype)initWithMatcher:(id <HCMatcher>)matcher;
 
 @end
 

@@ -12,10 +12,6 @@
 #import "HCRequireNonNilObject.h"
 
 
-@interface HCEvery ()
-@property (readonly, nonatomic, strong) id <HCMatcher> matcher;
-@end
-
 @implementation HCEvery
 
 - (instancetype)initWithMatcher:(id <HCMatcher>)matcher
