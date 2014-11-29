@@ -7,6 +7,7 @@
 //  Source: https://github.com/hamcrest/OCHamcrest
 //
 
+#import <Foundation/Foundation.h>
 #import "Mismatchable.h"
 
 
@@ -31,7 +32,7 @@
 
 - (BOOL)matches:(id)item
 {
-    return [self.string isEqualTo:item];
+    return [self.string isEqualToString:item];
 }
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
