@@ -57,36 +57,36 @@
 - (void)testMatchesSingletonCollection
 {
     assertMatches(@"singleton collection",
-                  onlyContains(equalTo(@"a"), nil),
-                  [NSSet setWithObject:@"a"]);
+                  onlyContains(equalTo(@1), nil),
+                  [NSSet setWithObject:@1]);
 }
 
 - (void)testMatchesAllItemsWithOneMatcher
 {
     assertMatches(@"one matcher",
-                  onlyContains(lessThan(@"d"), nil),
-                  (@[@"a", @"b", @"c"]));
+                  onlyContains(lessThan(@4), nil),
+                  (@[@1, @2, @3]));
 }
 
 - (void)testMatchesAllItemsWithMultipleMatchers
 {
     assertMatches(@"multiple matcher",
-                  onlyContains(lessThan(@"d"), equalTo(@"hi"), nil),
-                  (@[@"a", @"hi", @"b", @"c"]));
+                  onlyContains(lessThan(@4), equalTo(@"hi"), nil),
+                  (@[@1, @"hi", @2, @3]));
 }
 
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"Values automatically wrapped with equal_to",
-                  onlyContains(lessThan(@"d"), @"hi", nil),
-                  (@[@"a", @"hi", @"b", @"c"]));
+                  onlyContains(lessThan(@4), @"hi", nil),
+                  (@[@1, @"hi", @2, @3]));
 }
 
 - (void)testDoesNotMatchCollectionWithMismatchingItem
 {
-    assertDoesNotMatch(@"d is not less than d",
-                       onlyContains(lessThan(@"d"), nil),
-                       (@[@"b", @"c", @"d"]));
+    assertDoesNotMatch(@"4 is not less than 4",
+                       onlyContains(lessThan(@4), nil),
+                       (@[@2, @3, @4]));
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
@@ -96,8 +96,8 @@
 
 - (void)testHasAReadableDescription
 {
-    assertDescription(@"a collection containing items matching (\"a\" or \"b\")",
-                        onlyContains(@"a", @"b", nil));
+    assertDescription(@"a collection containing items matching (<1> or <2>)",
+                        onlyContains(@1, @2, nil));
 
 }
 

@@ -40,82 +40,84 @@
 
 - (void)testMatchingSingleItemCollection
 {
-    assertMatches(@"Single item collection",
-                  (contains(equalTo(@"a"), nil)), ([NSArray arrayWithObjects:@"a", nil]));
+    id matcher = contains(equalTo(@1), nil);
+
+    assertMatches(@"Single item collection", matcher, @[@1]);
 }
 
 - (void)testMatchingMultipleItemSequence
 {
-    assertMatches(@"Multiple item sequence",
-                  (contains(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil)),
-                  ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
+    id matcher = contains(equalTo(@1), equalTo(@2), equalTo(@3), nil);
+
+    assertMatches(@"Multiple item sequence", matcher, (@[@1, @2, @3]));
 }
 
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
-    assertMatches(@"Values automatically wrapped with equalTo",
-                  (contains(@"a", @"b", @"c", nil)),
-                  ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
+    id matcher = contains(@1, @2, @3, nil);
+
+    assertMatches(@"Values automatically wrapped with equalTo", matcher, (@[@1, @2, @3]));
 }
 
 - (void)testDoesNotMatchWithMoreElementsThanExpected
 {
-    assertMismatchDescription(@"not matched: \"d\"",
-                              (contains(@"a", @"b", @"c", nil)),
-                              ([NSArray arrayWithObjects:@"a", @"b", @"c", @"d", nil]));
+    id matcher = contains(@1, @2, @3, nil);
+
+    assertMismatchDescription(@"not matched: <4>", matcher, (@[@1, @2, @3, @4]));
 }
 
 - (void)testDoesNotMatchWithFewerElementsThanExpected
 {
-    assertMismatchDescription(@"no item matched: \"c\"",
-                              (contains(@"a", @"b", @"c", nil)),
-                              ([NSArray arrayWithObjects:@"a", @"b", nil]));
+    id matcher = contains(@1, @2, @3, nil);
+
+    assertMismatchDescription(@"no item was <3>", matcher, (@[@1, @2]));
 }
 
 - (void)testDoesNotMatchIfSingleItemMismatches
 {
-    assertMismatchDescription(@"item 0: was \"c\"",
-                              (contains(@"d", nil)), @[@"c"]);
+    id matcher = contains(@4, nil);
+
+    assertMismatchDescription(@"item 0: was <3>", matcher, @[@3]);
 }
 
 - (void)testDoesNotMatchIfOneOfMultipleItemsMismatch
 {
-    assertMismatchDescription(@"item 2: was \"d\"",
-                              (contains(@"a", @"b", @"c", nil)),
-                              ([NSArray arrayWithObjects:@"a", @"b", @"d", nil]));
+    id matcher = contains(@1, @2, @3, nil);
+
+    assertMismatchDescription(@"item 2: was <4>", matcher, (@[@1, @2, @4]));
 }
 
 - (void)testDoesNotMatchNil
 {
-    assertDoesNotMatch(@"Should not match nil", contains(@"a", nil), nil);
+    assertDoesNotMatch(@"Should not match nil", contains(@1, nil), nil);
 }
 
 - (void)testDoesNotMatchEmptyCollection
 {
-    assertMismatchDescription(@"no item matched: \"d\"", (contains(@"d", nil)), @[]);
+    assertMismatchDescription(@"no item was <4>", (contains(@4, nil)), @[]);
 }
 
 - (void)testDoesNotMatchObjectWithoutEnumerator
 {
     assertDoesNotMatch(@"should not match object without enumerator",
-                       contains(@"a", nil), [[NSObject alloc] init]);
+                       contains(@1, nil), [[NSObject alloc] init]);
 }
 
 - (void)testHasAReadableDescription
 {
-    assertDescription(@"a collection containing [\"a\", \"b\"]", contains(@"a", @"b", nil));
+    assertDescription(@"a collection containing [<1>, <2>]", contains(@1, @2, nil));
 }
 
 - (void)testDescribeMismatch
 {
-    assertDescribeMismatch(@"item 1: was \"c\"",
-                           (contains(@"a", @"b", nil)),
-                           ([NSArray arrayWithObjects:@"a", @"c", nil]));
+    assertDescribeMismatch(@"item 1: was <3>",
+                           (contains(@1, @2, nil)),
+                           (@[@1, @3]));
 }
 
 - (void)testDescribeMismatchOfNonCollection
 {
-    assertDescribeMismatch(@"was non-collection nil", (contains(@"a", @"b", nil)), nil);
+    assertDescribeMismatch(@"was non-collection nil", (contains(@1, @2, nil)), nil);
 }
 
 @end

@@ -13,10 +13,10 @@
 
     // Collaborators
 #import <OCHamcrest/HCIsAnything.h>
+#import <OCHamcrest/HCIsEqual.h>
 
     // Test support
 #import "AbstractMatcherTest.h"
-#import "NeverMatch.h"
 
 
 @interface DescribedAsTest : AbstractMatcherTest
@@ -32,60 +32,57 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testOverridesDescriptionOfNestedMatcherInitializerArgument
+- (void)testOverridesDescriptionOfOtherMatcherWithThatPassedToInitializer
 {
-    id m1 = describedAs(@"m1 description", anything(), nil);
-    id m2 = describedAs(@"m2 description", [NeverMatch neverMatch], nil);
+    id matcher = describedAs(@"my description", anything(), nil);
 
-    assertDescription(@"m1 description", m1);
-    assertDescription(@"m2 description", m2);
+    assertDescription(@"my description", matcher);
 }
 
 - (void)testAppendsValuesToDescription
 {
-    id m = describedAs(@"value 1 = %0, value 2 = %1",
-                       anything(),
-                       @33,
-                       @97,
-                       nil);
+    id matcher = describedAs(@"value 1 = %0, value 2 = %1",
+                            anything(),
+                            @33,
+                            @97,
+                            nil);
 
-    assertDescription(@"value 1 = <33>, value 2 = <97>", m);
+    assertDescription(@"value 1 = <33>, value 2 = <97>", matcher);
 }
 
 - (void)testHandlesSubstitutionAtBeginning
 {
-    id m = describedAs(@"%0ok",
-                       anything(),
-                       @33,
-                       nil);
+    id matcher = describedAs(@"%0ok",
+                            anything(),
+                            @33,
+                            nil);
 
-    assertDescription(@"<33>ok", m);
+    assertDescription(@"<33>ok", matcher);
 }
 
 - (void)testHandlesSubstitutionAtEnd
 {
-    id m = describedAs(@"ok%0",
-                       anything(),
-                       @33,
-                       nil);
+    id matcher = describedAs(@"ok%0",
+                            anything(),
+                            @33,
+                            nil);
 
-    assertDescription(@"ok<33>", m);
+    assertDescription(@"ok<33>", matcher);
 }
 
 - (void)testDoesNotProcessPercentFollowedByNonDigit
 {
-    id m = describedAs(@"With 33% remaining", anything(), nil);
+    id matcher = describedAs(@"With 33% remaining", anything(), nil);
 
-    assertDescription(@"With 33% remaining", m);
+    assertDescription(@"With 33% remaining", matcher);
 }
 
 - (void)testDelegatesMatchingToNestedMatcher
 {
-    id m1 = describedAs(@"m1 description", anything(), nil);
-    id m2 = describedAs(@"m2 description", [NeverMatch neverMatch], nil);
+    id matcher = describedAs(@"m1 description", equalTo(@"hi"), nil);
 
-    STAssertTrue([m1 matches:@"hi"], @"");
-    STAssertFalse([m2 matches:@"hi"], @"");
+    assertMatches(@"should match", matcher, @"hi");
+    assertDoesNotMatch(@"should not match", matcher, @"oi");
 }
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
@@ -95,16 +92,16 @@
 
 - (void)testDelegatesMismatchDescriptionToNestedMatcher
 {
-    assertMismatchDescription([NeverMatch mismatchDescription],
-                              describedAs(@"irrelevant", [NeverMatch neverMatch], nil),
-                              @"hi");
+    id matcher = describedAs(@"irrelevant", equalTo(@2), nil);
+
+    assertMismatchDescription(@"was <1>", matcher, @1);
 }
 
 - (void)testDelegatesDescribeMismatchToNestedMatcher
 {
-    assertDescribeMismatch([NeverMatch mismatchDescription],
-                           describedAs(@"irrelevant", [NeverMatch neverMatch], nil),
-                           @"hi");
+    id matcher = describedAs(@"irrelevant", equalTo(@2), nil);
+
+    assertDescribeMismatch(@"was <1>", matcher, @1);
 }
 
 @end

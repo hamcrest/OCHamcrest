@@ -23,8 +23,7 @@
 
 - (void)testCopesWithNilsAndUnknownTypes
 {
-    NSArray *collection = @[@"a", @"b", @"c"];
-    id matcher = isIn(collection);
+    id matcher = isIn(@[@1, @2, @3]);
 
     assertNilSafe(matcher);
     assertUnknownTypeSafe(matcher);
@@ -32,13 +31,12 @@
 
 - (void)testReturnsTrueIfArgumentIsInCollection
 {
-    NSArray *collection = @[@"a", @"b", @"c"];
-    id matcher = isIn(collection);
+    id matcher = isIn(@[@1, @2, @3]);
 
-    assertMatches(@"has a", matcher, @"a");
-    assertMatches(@"has b", matcher, @"b");
-    assertMatches(@"has c", matcher, @"c");
-    assertDoesNotMatch(@"no d", matcher, @"d");
+    assertMatches(@"has 1", matcher, @1);
+    assertMatches(@"has 2", matcher, @2);
+    assertMatches(@"has 3", matcher, @3);
+    assertDoesNotMatch(@"no 4", matcher, @4);
 }
 
 - (void)testMatcherCreationRequiresObjectWithContainsObjectMethod
@@ -55,19 +53,19 @@
 
 - (void)testHasReadableDescription
 {
-    id matcher = isIn(@[@"a", @"b", @"c"]);
+    id matcher = isIn(@[@1, @2, @3]);
 
-    assertDescription(@"one of {\"a\", \"b\", \"c\"}", matcher);
+    assertDescription(@"one of {<1>, <2>, <3>}", matcher);
 }
 
 - (void)testMismatchDescriptionShowsActualArgument
 {
-    assertMismatchDescription(@"was \"bad\"", isIn(@[@"a"]), @"bad");
+    assertMismatchDescription(@"was \"bad\"", isIn(@[@1]), @"bad");
 }
 
 - (void)testDescribesMismatch
 {
-    assertDescribeMismatch(@"was \"bad\"", isIn(@[@"a"]), @"bad");
+    assertDescribeMismatch(@"was \"bad\"", isIn(@[@1]), @"bad");
 }
 
 @end

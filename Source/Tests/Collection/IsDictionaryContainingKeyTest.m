@@ -33,16 +33,16 @@
 
 - (void)testMatchesSingletonDictionaryContainingKey
 {
-    NSDictionary *dict = @{@"a": @"1"};
+    NSDictionary *dict = @{@"a": @1};
 
     assertMatches(@"Matches single key", hasKey(equalTo(@"a")), dict);
 }
 
 - (void)testMatchesDictionaryContainingKey
 {
-    NSDictionary *dict = @{@"a": @"1",
-                                            @"b": @"2",
-                                            @"c": @"3"};
+    NSDictionary *dict = @{@"a": @1,
+                           @"b": @2,
+                           @"c": @3};
 
     assertMatches(@"Matches a", hasKey(equalTo(@"a")), dict);
     assertMatches(@"Matches c", hasKey(equalTo(@"c")), dict);
@@ -50,9 +50,9 @@
 
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
-    NSDictionary *dict = @{@"a": @"1",
-                                            @"b": @"2",
-                                            @"c": @"3"};
+    NSDictionary *dict = @{@"a": @1,
+                           @"b": @2,
+                           @"c": @3};
 
     assertMatches(@"Matches c", hasKey(@"c"), dict);
 }
@@ -64,9 +64,9 @@
 
 - (void)testDoesNotMatchDictionaryMissingKey
 {
-    NSDictionary *dict = @{@"a": @"1",
-                                            @"b": @"2",
-                                            @"c": @"3"};
+    NSDictionary *dict = @{@"a": @1,
+                           @"b": @2,
+                           @"c": @3};
 
     assertDoesNotMatch(@"no matching key", hasKey(@"d"), dict);
 }
@@ -83,7 +83,7 @@
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    NSDictionary *dict = @{@"a": @"1"};
+    NSDictionary *dict = @{@"a": @1};
     assertNoMismatchDescription(hasKey(@"a"), dict);
 }
 

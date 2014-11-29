@@ -34,22 +34,22 @@
 
 - (void)testMatchesDictionaryContainingMatchingKeyAndValue
 {
-    NSDictionary *dict = @{@"a": @"1",
-                                            @"b": @"2"};
+    NSDictionary *dict = @{@"a": @1,
+                           @"b": @2};
 
-    assertMatches(@"has a:1", hasEntry(equalTo(@"a"), equalTo(@"1")), dict);
-    assertMatches(@"has b:2", hasEntry(equalTo(@"b"), equalTo(@"2")), dict);
-    assertDoesNotMatch(@"no c:3", hasEntry(equalTo(@"c"), equalTo(@"3")), dict);
+    assertMatches(@"has a:1", hasEntry(equalTo(@"a"), equalTo(@1)), dict);
+    assertMatches(@"has b:2", hasEntry(equalTo(@"b"), equalTo(@2)), dict);
+    assertDoesNotMatch(@"no c:3", hasEntry(equalTo(@"c"), equalTo(@3)), dict);
 }
 
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
-    NSDictionary *dict = @{@"a": @"1",
-                                            @"b": @"2"};
+    NSDictionary *dict = @{@"a": @1,
+                           @"b": @2};
 
-    assertMatches(@"has a:1", hasEntry(@"a", equalTo(@"1")), dict);
-    assertMatches(@"has b:2", hasEntry(equalTo(@"b"), @"2"), dict);
-    assertDoesNotMatch(@"no c:3", hasEntry(@"c", @"3"), dict);
+    assertMatches(@"has a:1", hasEntry(@"a", equalTo(@1)), dict);
+    assertMatches(@"has b:2", hasEntry(equalTo(@"b"), @2), dict);
+    assertDoesNotMatch(@"no c:3", hasEntry(@"c", @3), dict);
 }
 
 - (void)testShouldNotMatchNil
@@ -65,23 +65,23 @@
 
 - (void)testHasReadableDescription
 {
-    assertDescription(@"a dictionary containing { \"a\" = \"1\"; }", hasEntry(@"a", @"1"));
+    assertDescription(@"a dictionary containing { \"a\" = <1>; }", hasEntry(@"a", @1));
 }
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    NSDictionary *dict = @{@"a": @"1"};
-    assertNoMismatchDescription(hasEntry(@"a", @"1"), dict);
+    NSDictionary *dict = @{@"a": @1};
+    assertNoMismatchDescription(hasEntry(@"a", @1), dict);
 }
 
 - (void)testMismatchDescriptionShowsActualArgument
 {
-    assertMismatchDescription(@"was \"bad\"", hasEntry(@"a", @"1"), @"bad");
+    assertMismatchDescription(@"was \"bad\"", hasEntry(@"a", @1), @"bad");
 }
 
 - (void)testDescribeMismatch
 {
-    assertDescribeMismatch(@"was \"bad\"", hasEntry(@"a", @"1"), @"bad");
+    assertDescribeMismatch(@"was \"bad\"", hasEntry(@"a", @1), @"bad");
 }
 
 @end

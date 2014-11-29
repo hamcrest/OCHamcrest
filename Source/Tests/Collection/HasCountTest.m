@@ -50,7 +50,7 @@
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    assertNoMismatchDescription(hasCountOf(2), ([NSSet setWithObjects:@"a", @"b", nil]));
+    assertNoMismatchDescription(hasCountOf(2), ([NSSet setWithObjects:@1, @2, nil]));
 }
 
 - (void)testMismatchDescriptionForItemWithWrongCount

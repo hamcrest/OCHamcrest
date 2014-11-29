@@ -34,9 +34,9 @@
 
 - (void)testMatchesACollectionThatContainsAnElementForTheGivenMatcher
 {
-    id matcher = hasItem(equalTo(@"a"));
+    id matcher = hasItem(equalTo(@1));
 
-    assertMatches(@"list containing 'a'", matcher, (@[@"a", @"b", @"c"]));
+    assertMatches(@"list containing 1", matcher, (@[@1, @2, @3]));
 }
 
 - (void)testDoesNotMatchCollectionWithoutAnElementForGivenMatcher
@@ -49,20 +49,18 @@
 
 - (void)testDoesNotMatchNil
 {
-    assertDoesNotMatch(@"doesn't match nil", hasItem(equalTo(@"a")), nil);
+    assertDoesNotMatch(@"doesn't match nil", hasItem(equalTo(@1)), nil);
 }
 
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
-    assertMatches(@"list contains 'a'",
-                  hasItem(@"a"), ([NSSet setWithObjects:@"a", @"b", @"c", nil]));
-    assertDoesNotMatch(@"list without 'a'",
-                       hasItem(@"a"), ([NSSet setWithObjects:@"b", @"c", nil]));
+    assertMatches(@"list contains '1'", hasItem(@1), ([NSSet setWithObjects:@1, @2, @3, nil]));
+    assertDoesNotMatch(@"list without '1'", hasItem(@1), ([NSSet setWithObjects:@2, @3, nil]));
 }
 
 - (void)testDoesNotMatchNonCollection
 {
-    assertMismatchDescription(@"was non-collection nil", hasItem(equalTo(@"a")), nil);
+    assertMismatchDescription(@"was non-collection nil", hasItem(equalTo(@1)), nil);
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
@@ -72,35 +70,35 @@
 
 - (void)testHasAReadableDescription
 {
-    assertDescription(@"a collection containing \"a\"", hasItem(@"a"));
+    assertDescription(@"a collection containing <1>", hasItem(@1));
 }
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    assertNoMismatchDescription(hasItem(@"a"), ([NSSet setWithObjects:@"a", @"b", nil]));
+    assertNoMismatchDescription(hasItem(@1), ([NSSet setWithObjects:@1, @2, nil]));
 }
 
 - (void)testDescribeMismatch
 {
-    assertDescribeMismatch(@"was non-collection \"bad\"", hasItem(@"a"), @"bad");
+    assertDescribeMismatch(@"was non-collection \"bad\"", hasItem(@1), @"bad");
 }
 
 - (void)testMatchesMultipleItemsInCollection
 {
-    id matcher1 = hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil);
-    assertMatches(@"list containing all items", matcher1, (@[@"a", @"b", @"c"]));
+    id matcher1 = hasItems(equalTo(@1), equalTo(@2), equalTo(@3), nil);
+    assertMatches(@"list containing all items", matcher1, (@[@1, @2, @3]));
 
-    id matcher2 = hasItems(@"a", @"b", @"c", nil);
-    assertMatches(@"list containing all items (without matchers)", matcher2, (@[@"a", @"b", @"c"]));
+    id matcher2 = hasItems(@1, @2, @3, nil);
+    assertMatches(@"list containing all items (without matchers)", matcher2, (@[@1, @2, @3]));
 
-    id matcher3 = hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil);
-    assertMatches(@"list containing all items in any order", matcher3, (@[@"c", @"b", @"a"]));
+    id matcher3 = hasItems(equalTo(@1), equalTo(@2), equalTo(@3), nil);
+    assertMatches(@"list containing all items in any order", matcher3, (@[@3, @2, @1]));
 
-    id matcher4 = hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil);
-    assertMatches(@"list containing all items plus others", matcher4, (@[@"e", @"c", @"b", @"a", @"d"]));
+    id matcher4 = hasItems(equalTo(@1), equalTo(@2), equalTo(@3), nil);
+    assertMatches(@"list containing all items plus others", matcher4, (@[@5, @3, @2, @1, @4]));
 
-    id matcher5 = hasItems(equalTo(@"a"), equalTo(@"b"), equalTo(@"c"), nil);
-    assertDoesNotMatch(@"not match list unless it contains all items", matcher5, (@[@"e", @"c", @"b", @"d"])); // 'a' missing
+    id matcher5 = hasItems(equalTo(@1), equalTo(@2), equalTo(@3), nil);
+    assertDoesNotMatch(@"not match list unless it contains all items", matcher5, (@[@5, @3, @2, @4])); // '1' missing
 }
 
 - (void)testReportsMismatchWithAReadableDescriptionForMultipleItems

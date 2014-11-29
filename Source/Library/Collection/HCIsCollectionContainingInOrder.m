@@ -41,7 +41,7 @@
 {
     if (self.nextMatchIndex < [self.matchers count])
     {
-        [[self.mismatchDescription appendText:@"no item matched: "]
+        [[self.mismatchDescription appendText:@"no item was "]
                               appendDescriptionOf:self.matchers[self.nextMatchIndex]];
         return NO;
     }

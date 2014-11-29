@@ -40,85 +40,76 @@
 
 - (void)testMatchingSingleItemCollection
 {
-    assertMatches(@"Single item collection",
-                  (containsInAnyOrder(equalTo(@"a"), nil)), ([NSArray arrayWithObjects:@"a", nil]));
+    assertMatches(@"single item", (containsInAnyOrder(equalTo(@1), nil)), @[@1]);
 }
 
-- (void)testMatchesCollectionInOfOrder
+- (void)testDoesNotMatchEmpty
 {
-    assertMatches(@"In order",
-                  (containsInAnyOrder(equalTo(@"a"), equalTo(@"b"), nil)),
-                  ([NSArray arrayWithObjects:@"a", @"b", nil]));
+    id matcher = containsInAnyOrder(equalTo(@1), equalTo(@2), nil);
+
+    assertMismatchDescription(@"no item matches: <1>, <2> in []", matcher, @[]);
 }
 
 - (void)testMatchesCollectionOutOfOrder
 {
-    assertMatches(@"Out of order",
-                  (containsInAnyOrder(equalTo(@"a"), equalTo(@"b"), nil)),
-                  ([NSArray arrayWithObjects:@"b", @"a", nil]));
+    id matcher = containsInAnyOrder(equalTo(@1), equalTo(@2), nil);
+
+    assertMatches(@"Out of order", matcher, (@[@2, @1]));
+}
+
+- (void)testMatchesCollectionInOfOrder
+{
+    id matcher = containsInAnyOrder(equalTo(@1), equalTo(@2), nil);
+
+    assertMatches(@"In order", matcher, (@[@1, @2]));
 }
 
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
-    assertMatches(@"Values automatically wrapped with equalTo",
-                  (containsInAnyOrder(@"a", @"b", nil)),
-                  ([NSArray arrayWithObjects:@"b", @"a", nil]));
-}
+    id matcher = containsInAnyOrder(@1, @2, nil);
 
-- (void)testDoesNotMatchEmptyCollection
-{
-    assertMismatchDescription(@"no item matches: \"a\", \"b\" in []",
-                              (containsInAnyOrder(@"a", @"b", nil)), @[]);
+    assertMatches(@"Values automatically wrapped with equalTo", matcher, (@[@2, @1]));
 }
 
 - (void)testDoesNotMatchNil
 {
-    assertDoesNotMatch(@"Should not match nil", containsInAnyOrder(@"a", nil), nil);
+    id matcher = containsInAnyOrder(@1, nil);
+
+    assertMismatchDescription(@"was non-collection nil", matcher, nil);
 }
 
 - (void)testDoesNotMatchIfOneOfMultipleItemsMismatch
 {
-    assertMismatchDescription(@"not matched: \"d\"",
-                              (containsInAnyOrder(@"a", @"b", @"c", nil)),
-                              ([NSArray arrayWithObjects:@"a", @"b", @"d", nil]));
+    id matcher = containsInAnyOrder(@1, @2, @3, nil);
+
+    assertMismatchDescription(@"not matched: <4>", matcher, (@[@1, @2, @4]));
 }
 
-- (void)testDoesNotMatchWithMoreElementsThanExpected
+- (void)testDoesNotMatchIfThereAreMoreElementsThanMatchers
 {
-    assertMismatchDescription(@"not matched: \"b\"",
-                              (containsInAnyOrder(@"a", @"c", nil)),
-                              ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
+    id matcher = containsInAnyOrder(@1, @3, nil);
+
+    assertMismatchDescription(@"not matched: <2>", matcher, (@[@1, @2, @3]));
 }
 
-- (void)testDoesNotMatchWithFewerElementsThanExpected
+- (void)testDoesNotMatchIfThereAreMoreMatchersThanElements
 {
-    assertMismatchDescription(@"no item matches: \"d\" in [\"a\", \"b\", \"c\"]",
-                              (containsInAnyOrder(@"a", @"b", @"c", @"d", nil)),
-                              ([NSArray arrayWithObjects:@"a", @"b", @"c", nil]));
-}
+    id matcher = containsInAnyOrder(@1, @2, @3, @4, nil);
 
-- (void)testDoesNotMatchObjectWithoutEnumerator
-{
-    assertDoesNotMatch(@"no enumerator",
-                       containsInAnyOrder(@"a", nil), [[NSObject alloc] init]);
+    assertMismatchDescription(@"no item matches: <4> in [<1>, <2>, <3>]", matcher, (@[@1, @2, @3]));
 }
 
 - (void)testHasAReadableDescription
 {
-    assertDescription(@"a collection over [\"a\", \"b\"] in any order",
-                      containsInAnyOrder(@"a", @"b", nil));
+    assertDescription(@"a collection over [<1>, <2>] in any order",
+                      containsInAnyOrder(@1, @2, nil));
 }
 
 - (void)testDescribeMismatch
 {
-    assertDescribeMismatch(@"not matched: \"c\"",
-                           (containsInAnyOrder(@"a", @"b", nil)),
-                           ([NSArray arrayWithObjects:@"a", @"c", nil]));
-}
-
-- (void)testDescribeMismatchOfNonCollection
-{
-    assertDescribeMismatch(@"was non-collection nil", (containsInAnyOrder(@"a", @"b", nil)), nil);
+    assertDescribeMismatch(@"not matched: <3>",
+                           (containsInAnyOrder(@1, @2, nil)),
+                           (@[@1, @3]));
 }
 
 @end

@@ -33,28 +33,28 @@
 
 - (void)testMatchesSingletonDictionaryContainingValue
 {
-    NSDictionary *dict = @{@"a": @"1"};
+    NSDictionary *dict = @{@"a": @1};
 
-    assertMatches(@"same single key", hasValue(equalTo(@"1")), dict);
+    assertMatches(@"same single value", hasValue(equalTo(@1)), dict);
 }
 
 - (void)testMatchesDictionaryContainingValue
 {
-    NSDictionary *dict = @{@"a": @"1",
-                                            @"b": @"2",
-                                            @"c": @"3"};
+    NSDictionary *dict = @{@"a": @1,
+                           @"b": @2,
+                           @"c": @3};
 
-    assertMatches(@"Matches 1", hasValue(equalTo(@"1")), dict);
-    assertMatches(@"Matches 3", hasValue(equalTo(@"3")), dict);
+    assertMatches(@"Matches 1", hasValue(equalTo(@1)), dict);
+    assertMatches(@"Matches 3", hasValue(equalTo(@3)), dict);
 }
 
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
-    NSDictionary *dict = @{@"a": @"1",
-                                            @"b": @"2",
-                                            @"c": @"3"};
+    NSDictionary *dict = @{@"a": @1,
+                           @"b": @2,
+                           @"c": @3};
 
-    assertMatches(@"Matches 3", hasValue(@"3"), dict);
+    assertMatches(@"Matches 3", hasValue(@3), dict);
 }
 
 - (void)testDoesNotMatchEmptyDictionary
@@ -64,11 +64,11 @@
 
 - (void)testDoesNotMatchDictionaryMissingValue
 {
-    NSDictionary *dict = @{@"a": @"1",
-                                            @"b": @"2",
-                                            @"c": @"3"};
+    NSDictionary *dict = @{@"a": @1,
+                           @"b": @2,
+                           @"c": @3};
 
-    assertDoesNotMatch(@"no matching value", hasValue(@"4"), dict);
+    assertDoesNotMatch(@"no matching value", hasValue(@4), dict);
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
@@ -78,23 +78,23 @@
 
 - (void)testHasReadableDescription
 {
-    assertDescription(@"a dictionary containing value \"a\"", hasValue(@"a"));
+    assertDescription(@"a dictionary containing value <1>", hasValue(@1));
 }
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    NSDictionary *dict = @{@"a": @"1"};
-    assertNoMismatchDescription(hasValue(@"1"), dict);
+    NSDictionary *dict = @{@"a": @1};
+    assertNoMismatchDescription(hasValue(@1), dict);
 }
 
 - (void)testMismatchDescriptionShowsActualArgument
 {
-    assertMismatchDescription(@"was \"bad\"", hasValue(@"1"), @"bad");
+    assertMismatchDescription(@"was \"bad\"", hasValue(@1), @"bad");
 }
 
 - (void)testDescribeMismatch
 {
-    assertDescribeMismatch(@"was \"bad\"", hasValue(@"1"), @"bad");
+    assertDescribeMismatch(@"was \"bad\"", hasValue(@1), @"bad");
 }
 
 @end
