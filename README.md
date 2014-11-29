@@ -166,6 +166,7 @@ OCHamcrest comes with a library of useful matchers:
 
   * `contains` - exactly match the entire collection
   * `containsInAnyOrder` - match the entire collection, but in any order
+  * `everyItem` - match if every item in a collection satisfies a given matcher
   * `hasCount` - match number of elements against another matcher
   * `hasCountOf` - match collection with given number of elements
   * `hasEntries` - match dictionary with list of key-value pairs

@@ -1,6 +1,12 @@
 NEXT VERSION
 ------------
 
+**New matchers:**
+
+- `everyItem` matches collections if every item satisfies a given matcher.
+
+**Improvements:**
+
 - Added new base class HCDiagnosingMatcher to simplify complex matchers.
 - Improved mismatch descriptions for `hasItem`.
 - Improved mismatch descriptions for `onlyContains`, especially in reporting all elements that don't
@@ -353,8 +359,8 @@ _28 Dec 2010_
 
 **New matchers:**
 
-- `contains` matches collection containing matching items in order.
-- `containsInAnyOrder` matches collection containing matching items in any order.
+- `contains` matches collections with matching items in order.
+- `containsInAnyOrder` matches collections with matching items in any order.
 
 **Improvements:**
 
