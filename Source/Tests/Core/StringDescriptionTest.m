@@ -56,6 +56,35 @@
 @end
 
 
+@interface ProxyObjectSuchAsMock : NSProxy
+@property (readonly, nonatomic, copy) NSString *descriptionText;
+@end
+
+@implementation ProxyObjectSuchAsMock
+
+- (instancetype)initWithDescription:(NSString *)description
+{
+    _descriptionText = [description copy];
+    return self;
+}
+
+- (NSString *)description
+{
+    return self.descriptionText;
+}
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
+{
+    return [[NSObject class] methodSignatureForSelector:aSelector];
+}
+
+- (void)forwardInvocation:(NSInvocation *)invocation
+{
+}
+
+@end
+
+
 @interface StringDescriptionTest : SenTestCase
 @end
 
@@ -79,56 +108,56 @@
 - (void)testDescribesNil
 {
     [description appendDescriptionOf:nil];
-    
+
     STAssertEqualObjects([description description], @"nil", nil);
 }
 
 - (void)testLetsSelfDescribingObjectDescribeItself
 {
     [description appendDescriptionOf:[[FakeSelfDescribing alloc] init]];
-    
+
     STAssertEqualObjects([description description], @"DESCRIPTION", nil);
 }
 
 - (void)testDescribesStringInQuotes
-{    
+{
     [description appendDescriptionOf:@"FOO"];
-    
+
     STAssertEqualObjects([description description], @"\"FOO\"", nil);
 }
 
 - (void)testDescriptionOfStringWithQuotesShouldExpandToCSyntax
-{    
+{
     [description appendDescriptionOf:@"a\"b"];
-    
+
     STAssertEqualObjects([description description], @"\"a\\\"b\"", nil);
 }
 
 - (void)testDescriptionOfStringWithNewlineShouldExpandToCSyntax
-{    
+{
     [description appendDescriptionOf:@"a\nb"];
-    
+
     STAssertEqualObjects([description description], @"\"a\\nb\"", nil);
 }
 
 - (void)testDescriptionOfStringWithCarriageReturnShouldExpandToCSyntax
-{    
+{
     [description appendDescriptionOf:@"a\rb"];
-    
+
     STAssertEqualObjects([description description], @"\"a\\rb\"", nil);
 }
 
 - (void)testDescriptionOfStringWithTabShouldExpandToCSyntax
-{    
+{
     [description appendDescriptionOf:@"a\tb"];
-    
+
     STAssertEqualObjects([description description], @"\"a\\tb\"", nil);
 }
 
 - (void)testWrapsNonSelfDescribingObjectInAngleBrackets
-{    
+{
     [description appendDescriptionOf:@42];
-    
+
     STAssertEqualObjects([description description], @"<42>", nil);
 }
 
@@ -144,7 +173,7 @@
 {
     ObjectDescriptionWithLessThan *lessThanDescription = [[ObjectDescriptionWithLessThan alloc] init];
     [description appendDescriptionOf:lessThanDescription];
-    
+
     STAssertEqualObjects([description description], @"<< is less than>", nil);
 }
 
@@ -162,7 +191,7 @@
                       start:@"["
                   separator:@","
                         end:@"]"];
-    
+
     STAssertEqualObjects([description description], @"[]", nil);
 }
 
@@ -172,7 +201,7 @@
                       start:@"["
                   separator:@","
                         end:@"]"];
-    
+
     STAssertEqualObjects([description description], @"[\"a\"]", nil);
 }
 
@@ -182,8 +211,17 @@
                       start:@"["
                   separator:@","
                         end:@"]"];
-    
+
     STAssertEqualObjects([description description], @"[\"a\",\"b\"]", nil);
+}
+
+- (void)testAbleToDescribeProxyObject
+{
+    id proxy = [[ProxyObjectSuchAsMock alloc] initWithDescription:@"DESCRIPTION"];
+
+    [description appendDescriptionOf:proxy];
+
+    STAssertEqualObjects([description description], @"<DESCRIPTION>", nil);
 }
 
 @end

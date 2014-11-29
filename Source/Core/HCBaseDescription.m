@@ -26,11 +26,11 @@
         [self append:@"nil"];
     else if ([value conformsToProtocol:@protocol(HCSelfDescribing)])
         [value describeTo:self];
-    else if ([value isKindOfClass:[NSString class]])
+    else if ([value respondsToSelector:@selector(isKindOfClass:)] && [value isKindOfClass:[NSString class]])
         [self toCSyntaxString:value];
     else
         [self appendObjectDescriptionOf:value];
-    
+
     return self;
 }
 
@@ -60,7 +60,7 @@
                             end:(NSString *)end
 {
     BOOL separate = NO;
-    
+
     [self append:start];
     for (id item in values)
     {

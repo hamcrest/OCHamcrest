@@ -1,6 +1,10 @@
 NEXT VERSION
 ------------
 
+**Fixes:**
+
+- Fix crash when OCHamcrest tries to describe an OCMockito mock object. _Thanks to: Michael Seghers_
+
 **New matchers:**
 
 - `everyItem` matches collections if every item satisfies a given matcher.
