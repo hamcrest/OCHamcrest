@@ -7,7 +7,6 @@
 //  Source: https://github.com/hamcrest/OCHamcrest
 //
 
-#import <Foundation/Foundation.h>
 #import "HCOrderingComparison.h"
 
 
