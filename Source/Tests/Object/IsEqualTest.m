@@ -80,8 +80,8 @@
 - (void)testReturnsAnObviousDescriptionIfCreatedWithANestedMatcherByMistake
 {
     id innerMatcher = equalTo(@"NestedMatcher");
-    assertDescription(([[NSArray arrayWithObjects:@"<", [innerMatcher description], @">", nil]
-                            componentsJoinedByString:@""]),
+    assertDescription(([@[@"<", [innerMatcher description], @">"]
+                      componentsJoinedByString:@""]),
                       equalTo(innerMatcher));
 }
 

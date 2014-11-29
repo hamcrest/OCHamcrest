@@ -17,6 +17,7 @@
 
     // Test support
 #import "AbstractMatcherTest.h"
+#import "HCIsInstanceOf.h"
 
 
 @interface IsNotTest : AbstractMatcherTest
@@ -34,18 +35,23 @@
 
 - (void)testEvaluatesToTheTheLogicalNegationOfAnotherMatcher
 {
-    assertMatches(@"invert mismatch", isNot(equalTo(@"A")), @"B");
-    assertDoesNotMatch(@"invert match", isNot(equalTo(@"A")), @"A");
+    id matcher = isNot(equalTo(@"A"));
+
+    assertMatches(@"invert mismatch", matcher, @"B");
+    assertDoesNotMatch(@"invert match", matcher, @"A");
 }
 
 - (void)testProvidesConvenientShortcutForNotEqualTo
 {
-    assertMatches(@"invert mismatch", isNot(@"A"), @"B");
-    assertDoesNotMatch(@"invert match", isNot(@"A"), @"A");
+    id matcher = isNot(@"A");
+
+    assertMatches(@"invert mismatch", matcher, @"B");
+    assertDoesNotMatch(@"invert match", matcher, @"A");
 }
 
-- (void)testHasAReadableDescription
+- (void)testUsesDescriptionOfNegatedMatcherWithPrefix
 {
+    assertDescription(@"not an instance of NSString", isNot(instanceOf([NSString class])));
     assertDescription(@"not \"A\"", isNot(@"A"));
 }
 
