@@ -56,23 +56,17 @@
 
 - (void)testMatchesSingletonCollection
 {
-    assertMatches(@"singleton collection",
-                  everyItem(equalTo(@1)),
-                  [NSSet setWithObject:@1]);
+    assertMatches(@"singleton collection", everyItem(equalTo(@1)), [NSSet setWithObject:@1]);
 }
 
 - (void)testMatchesAllItemsWithOneMatcher
 {
-    assertMatches(@"one matcher",
-                  everyItem(lessThan(@4)),
-                  (@[@1, @2, @3]));
+    assertMatches(@"one matcher", everyItem(lessThan(@4)), (@[@1, @2, @3]));
 }
 
 - (void)testDoesNotMatchCollectionWithMismatchingItem
 {
-    assertDoesNotMatch(@"4 is not less than 4",
-                       everyItem(lessThan(@4)),
-                       (@[@2, @3, @4]));
+    assertDoesNotMatch(@"4 is not less than 4", everyItem(lessThan(@4)), (@[@2, @3, @4]));
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
@@ -82,8 +76,7 @@
 
 - (void)testHasAReadableDescription
 {
-    assertDescription(@"every item is a value less than <4>",
-                      everyItem(lessThan(@4)));
+    assertDescription(@"every item is a value less than <4>", everyItem(lessThan(@4)));
 
 }
 
