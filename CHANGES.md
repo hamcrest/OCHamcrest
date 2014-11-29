@@ -17,6 +17,7 @@ NEXT VERSION
   match.
 - Improved ordered comparison matchers (`greaterThan`, etc.) so that when the given object can't be
   compared, the matchers return NO instead of throwing an exception.
+- Updated project to make it run-path dependent. _Thanks to: csano_
 
 
 Version 4.0.1
