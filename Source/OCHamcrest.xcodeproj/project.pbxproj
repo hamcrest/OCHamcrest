@@ -119,6 +119,8 @@
 		31DDCEC51963ADABADBC576B /* HCDiagnosingMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DDCB570769099D33C22810 /* HCDiagnosingMatcher.m */; };
 		5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
 		5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
+		7458920F1A2AAD2C00BAAC76 /* AssertThatAfterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7458920E1A2AAD2C00BAAC76 /* AssertThatAfterTest.m */; };
+		745892101A2AAD2C00BAAC76 /* AssertThatAfterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7458920E1A2AAD2C00BAAC76 /* AssertThatAfterTest.m */; };
 		746045671A29625E00196267 /* HCEvery.h in Headers */ = {isa = PBXBuildFile; fileRef = 746045651A29625E00196267 /* HCEvery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746045681A29625E00196267 /* HCEvery.h in Headers */ = {isa = PBXBuildFile; fileRef = 746045651A29625E00196267 /* HCEvery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746045691A29625E00196267 /* HCEvery.m in Sources */ = {isa = PBXBuildFile; fileRef = 746045661A29625E00196267 /* HCEvery.m */; };
@@ -435,6 +437,7 @@
 		31DDCCF46E1766AF4AC97BA5 /* Mismatchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mismatchable.h; sourceTree = "<group>"; };
 		31DDCE62F97F2042F0A8BDAE /* HCDiagnosingMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDiagnosingMatcher.h; sourceTree = "<group>"; };
 		5F2773441436F81000B9683A /* ConformsToProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConformsToProtocolTest.m; sourceTree = "<group>"; };
+		7458920E1A2AAD2C00BAAC76 /* AssertThatAfterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssertThatAfterTest.m; sourceTree = "<group>"; };
 		746045651A29625E00196267 /* HCEvery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEvery.h; sourceTree = "<group>"; };
 		746045661A29625E00196267 /* HCEvery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEvery.m; sourceTree = "<group>"; };
 		7460456B1A2964AF00196267 /* EveryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EveryTest.m; sourceTree = "<group>"; };
@@ -628,6 +631,7 @@
 				082E7C2913FF676E004A22FE /* AbstractMatcherTest.h */,
 				082E7C2A13FF676E004A22FE /* AbstractMatcherTest.m */,
 				082E7C2B13FF676E004A22FE /* AssertThatTest.m */,
+				7458920E1A2AAD2C00BAAC76 /* AssertThatAfterTest.m */,
 				082E7C2C13FF676E004A22FE /* BaseMatcherTest.m */,
 				082E7C2D13FF676E004A22FE /* InvocationMatcherTest.m */,
 				082E7C2E13FF676E004A22FE /* StringDescriptionTest.m */,
@@ -1437,6 +1441,7 @@
 				0846B6E513EE5F9D00EA68E8 /* NeverMatch.m in Sources */,
 				0846B6EC13EE5FB400EA68E8 /* AllOfTest.m in Sources */,
 				0846B6EE13EE5FB400EA68E8 /* AnyOfTest.m in Sources */,
+				745892101A2AAD2C00BAAC76 /* AssertThatAfterTest.m in Sources */,
 				0846B6F013EE5FB400EA68E8 /* IsAnythingTest.m in Sources */,
 				0846B6F213EE5FB400EA68E8 /* IsNotTest.m in Sources */,
 				0846B6F813EE5FD200EA68E8 /* IsEqualTest.m in Sources */,
@@ -1567,6 +1572,7 @@
 				0846B6E413EE5F9D00EA68E8 /* NeverMatch.m in Sources */,
 				0846B6EB13EE5FB400EA68E8 /* AllOfTest.m in Sources */,
 				0846B6ED13EE5FB400EA68E8 /* AnyOfTest.m in Sources */,
+				7458920F1A2AAD2C00BAAC76 /* AssertThatAfterTest.m in Sources */,
 				0846B6EF13EE5FB400EA68E8 /* IsAnythingTest.m in Sources */,
 				0846B6F113EE5FB400EA68E8 /* IsNotTest.m in Sources */,
 				0846B6F713EE5FD200EA68E8 /* IsEqualTest.m in Sources */,

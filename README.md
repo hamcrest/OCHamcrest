@@ -207,6 +207,20 @@ Other matchers that take matchers as arguments provide similar shortcuts,
 wrapping non-matcher arguments in `equalTo`.
 
 
+How can I assert on an asynchronous call?
+-----------------------------------------
+
+`assertThatAfter` will keep trying to evaluate an expression until the matcher
+is satisfied or a timeout is reached. For example,
+
+```obj-c
+assertThatAfter(5, futureValueOf(self.someString), is(equalTo(@"expected")));
+```
+
+This checks several times for this string to be @"expected" before timing out
+after 5 seconds. `futureValueOf` is a convenience function to create a block.
+
+
 Writing custom matchers
 -----------------------
 
