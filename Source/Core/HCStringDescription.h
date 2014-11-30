@@ -1,11 +1,5 @@
-//
-//  OCHamcrest - HCStringDescription.h
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
-//
-//  Created by: Jon Reid, http://qualitycoding.org/
-//  Docs: http://hamcrest.github.com/OCHamcrest/
-//  Source: https://github.com/hamcrest/OCHamcrest
-//
+//  Created by: Jon Reid, http://qualitycoding.org/about/
 
 #import <OCHamcrest/HCBaseDescription.h>
 
@@ -14,7 +8,7 @@
 
 /**
  An HCDescription that is stored as a string.
- 
+
  @ingroup core
  */
 @interface HCStringDescription : HCBaseDescription
@@ -24,7 +18,7 @@
 
 /**
  Returns the description of an HCSelfDescribing object as a string.
- 
+
  @param selfDescribing  The object to be described.
  @return The description of the object.
  */

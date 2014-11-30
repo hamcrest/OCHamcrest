@@ -1,9 +1,6 @@
-//
-//  OCHamcrest - HCHasProperty.h
+//  OCHamcrest created by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
-//
-//  Created by: Justin Shacklette
-//
+//  Contribution by Justin Shacklette
 
 #import <OCHamcrest/HCDiagnosingMatcher.h>
 

@@ -1,11 +1,5 @@
-//
-//  OCHamcrest - HCBaseDescription.h
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
-//
-//  Created by: Jon Reid, http://qualitycoding.org/
-//  Docs: http://hamcrest.github.com/OCHamcrest/
-//  Source: https://github.com/hamcrest/OCHamcrest
-//
+//  Created by: Jon Reid, http://qualitycoding.org/about/
 
 #import <Foundation/Foundation.h>
 #import <OCHamcrest/HCDescription.h>
@@ -13,7 +7,7 @@
 
 /**
  Base class for all HCDescription implementations.
- 
+
  @ingroup core
  */
 @interface HCBaseDescription : NSObject <HCDescription>

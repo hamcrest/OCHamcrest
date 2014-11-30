@@ -1,8 +1,6 @@
-//
-//  OCHamcrest - HCConformsToProtocol.m
+//  OCHamcrest created by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
-//
-//  Created by: Todd Farrell
+//  Contribution by Todd Farrell
 //
 
 #import "HCConformsToProtocol.h"
@@ -24,7 +22,7 @@
 - (instancetype)initWithProtocol:(Protocol *)protocol
 {
     HCRequireNonNilObject(protocol);
-    
+
     self = [super init];
     if (self)
         _protocol = protocol;

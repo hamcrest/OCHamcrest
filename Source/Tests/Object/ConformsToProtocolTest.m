@@ -1,9 +1,6 @@
-//
-//  OCHamcrest - ConformsToProtocolTest.m
+//  OCHamcrest created by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
-//
-//  Created by: Todd Farrell
-//
+//  Contribution by Todd Farrell
 
     // Class under test
 #define HC_SHORTHAND

@@ -1,11 +1,6 @@
-//
-//  OCHamcrest - AbstractMatcherTest.h
+//  OCHamcrest created by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
-//
-//  Created by: Sergio Padrino
-//  Docs: http://hamcrest.github.com/OCHamcrest/
-//  Source: https://github.com/hamcrest/OCHamcrest
-//
+//  Contribution by Sergio Padrino
 
     // Class under test
 #define HC_SHORTHAND

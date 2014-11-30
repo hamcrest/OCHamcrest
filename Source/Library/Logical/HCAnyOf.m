@@ -1,11 +1,5 @@
-//
-//  OCHamcrest - HCAnyOf.m
 //  Copyright 2014 hamcrest.org. See LICENSE.txt
-//
-//  Created by: Jon Reid, http://qualitycoding.org/
-//  Docs: http://hamcrest.github.com/OCHamcrest/
-//  Source: https://github.com/hamcrest/OCHamcrest
-//
+//  Created by: Jon Reid, http://qualitycoding.org/about/
 
 #import "HCAnyOf.h"
 
@@ -53,6 +47,6 @@ id HC_anyOf(id match, ...)
     va_start(args, match);
     NSArray *matcherList = HCCollectMatchers(match, args);
     va_end(args);
-    
+
     return [HCAnyOf anyOf:matcherList];
 }
