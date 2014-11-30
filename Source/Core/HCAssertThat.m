@@ -49,10 +49,9 @@ void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxTime,
                                     HCAssertThatAfterActualBlock actualBlock, id<HCMatcher> matcher,
                                     const char *fileName, int lineNumber)
 {
-    BOOL match = NO;
-    id actual = nil;
-    NSTimeInterval timeOut = maxTime;
-    NSDate *expiryDate = [NSDate dateWithTimeIntervalSinceNow:timeOut];
+    BOOL match;
+    id actual;
+    NSDate *expiryDate = [NSDate dateWithTimeIntervalSinceNow:maxTime];
     while (1)
     {
         actual = actualBlock();
