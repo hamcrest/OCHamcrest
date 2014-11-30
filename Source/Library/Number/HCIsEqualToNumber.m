@@ -99,8 +99,20 @@ FOUNDATION_EXPORT id HC_equalToBool(BOOL value)
     return value ? @"<YES>" : @"<NO>";
 }
 
+static void HCRequireYesOrNo(BOOL value)
+{
+    if (value != YES && value != NO)
+    {
+        @throw [NSException exceptionWithName:@"BoolValue"
+                                       reason:@"Must be YES or NO"
+                                     userInfo:nil];
+    }
+}
+
 - (instancetype)initWithValue:(BOOL)value
 {
+    HCRequireYesOrNo(value);
+
     self = [super init];
     if (self)
         _value = value;

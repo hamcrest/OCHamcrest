@@ -45,6 +45,12 @@
     assertDoesNotMatch(@"Not a number", equalToBool(NO), @"STRING");
 }
 
+- (void)testMatcherCreationRequiresYesOrNo
+{
+    STAssertThrows(equalToBool(3), @"Should require YES or NO");
+    STAssertThrows(equalToBool(@YES), @"Should require YES or NO");
+}
+
 @end
 
 

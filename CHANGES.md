@@ -12,6 +12,8 @@ NEXT VERSION
 **Improvements:**
 
 - Added new base class HCDiagnosingMatcher to simplify complex matchers.
+- `equalToBool` matcher can no longer be created with a value other than YES or NO. This especially
+  avoids the accidental @YES.
 - Improved ordered comparison matchers (`greaterThan`, etc.) so that when the given object can't be
   compared, the matchers return NO instead of throwing an exception.
 - Improved mismatch descriptions for `hasItem`.
