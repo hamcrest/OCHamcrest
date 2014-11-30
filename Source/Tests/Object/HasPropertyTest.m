@@ -142,21 +142,21 @@
     id matcher = hasProperty(@"name", @"Joe");
     NotAPerson *noProperty = [[NotAPerson alloc] init];
 
-    assertMismatchDescription(@"no property \"name\" on <NotAPerson>", matcher, noProperty);
+    assertMismatchDescription(@"no name on <NotAPerson>", matcher, noProperty);
 }
 
 - (void)testMismatchDescription_OnObjectWithProperty_ShouldShowActualValue
 {
     id matcher = hasProperty(@"name", @"Bob");
 
-    assertMismatchDescription(@"property \"name\" was \"Joe\" on <Person>", matcher, joe);
+    assertMismatchDescription(@"name was \"Joe\" on <Person>", matcher, joe);
 }
 
 - (void)testDescribeMismatch
 {
     id matcher = hasProperty(@"name", @"Bob");
 
-    assertDescribeMismatch(@"property \"name\" was \"Joe\" on <Person>", matcher, joe);
+    assertDescribeMismatch(@"name was \"Joe\" on <Person>", matcher, joe);
 }
 
 @end

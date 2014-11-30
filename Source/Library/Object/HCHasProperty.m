@@ -42,9 +42,9 @@
     SEL propertyGetter = NSSelectorFromString(self.propertyName);
     if (![item respondsToSelector:propertyGetter])
     {
-        [[[[mismatchDescription appendText:@"no property \""]
+        [[[[mismatchDescription appendText:@"no "]
                                 appendText:self.propertyName]
-                                appendText:@"\" on "]
+                                appendText:@" on "]
                                 appendDescriptionOf:item];
         return NO;
     }
@@ -54,12 +54,11 @@
     BOOL match =  [self.valueMatcher matches:propertyValue];
     if (!match)
     {
-        [[[[[[mismatchDescription appendText:@"property \""]
-                                  appendText:self.propertyName]
-                                  appendText:@"\" was "]
-                                  appendDescriptionOf:propertyValue]
-                                  appendText:@" on "]
-                                  appendDescriptionOf:item];
+        [[[[[mismatchDescription appendText:self.propertyName]
+                                 appendText:@" was "]
+                                 appendDescriptionOf:propertyValue]
+                                 appendText:@" on "]
+                                 appendDescriptionOf:item];
     }
     return match;
 }
