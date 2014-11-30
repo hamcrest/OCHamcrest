@@ -12,11 +12,12 @@ NEXT VERSION
 **Improvements:**
 
 - Added new base class HCDiagnosingMatcher to simplify complex matchers.
-- Improved mismatch descriptions for `hasItem`.
-- Improved mismatch descriptions for `onlyContains`, especially in reporting all elements that don't
-  match.
 - Improved ordered comparison matchers (`greaterThan`, etc.) so that when the given object can't be
   compared, the matchers return NO instead of throwing an exception.
+- Improved mismatch descriptions for `hasItem`.
+- Improved mismatch descriptions for `hasProperty` to show actual property value or "no property".
+- Improved mismatch descriptions for `onlyContains`, especially in reporting all elements that don't
+  match.
 - Updated project to make it run-path dependent. _Thanks to: csano_
 
 

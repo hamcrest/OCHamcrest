@@ -43,6 +43,24 @@
     return _shoeSize;
 }
 
+- (NSString *)description
+{
+    return @"Person";
+}
+
+@end
+
+
+@interface NotAPerson : NSObject
+@end
+
+@implementation NotAPerson
+
+- (NSString *)description
+{
+    return @"NotAPerson";
+}
+
 @end
 
 
@@ -119,14 +137,26 @@
     assertNoMismatchDescription(hasProperty(@"name", @"Joe"), joe);
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)testMismatchDescription_OnObjectWithoutProperty_ShouldSayNoProperty
 {
-    assertMismatchDescription(@"was \"bad\"", hasProperty(@"foo", @"foo"), @"bad");
+    id matcher = hasProperty(@"name", @"Joe");
+    NotAPerson *noProperty = [[NotAPerson alloc] init];
+
+    assertMismatchDescription(@"no property \"name\" on <NotAPerson>", matcher, noProperty);
+}
+
+- (void)testMismatchDescription_OnObjectWithProperty_ShouldShowActualValue
+{
+    id matcher = hasProperty(@"name", @"Bob");
+
+    assertMismatchDescription(@"property \"name\" was \"Joe\" on <Person>", matcher, joe);
 }
 
 - (void)testDescribeMismatch
 {
-    assertDescribeMismatch(@"was \"bad\"", hasProperty(@"foo", @"foo"), @"bad");
+    id matcher = hasProperty(@"name", @"Bob");
+
+    assertDescribeMismatch(@"property \"name\" was \"Joe\" on <Person>", matcher, joe);
 }
 
 @end

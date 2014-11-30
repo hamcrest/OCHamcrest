@@ -27,7 +27,7 @@
 - (instancetype)initWithProperty:(NSString *)property value:(id <HCMatcher>)valueMatcher
 {
     HCRequireNonNilObject(property);
-    
+
     self = [super init];
     if (self != nil)
     {
@@ -37,15 +37,31 @@
     return self;
 }
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(id)item describingMismatchTo:(id <HCDescription>)mismatchDescription
 {
     SEL propertyGetter = NSSelectorFromString(self.propertyName);
     if (![item respondsToSelector:propertyGetter])
+    {
+        [[[[mismatchDescription appendText:@"no property \""]
+                                appendText:self.propertyName]
+                                appendText:@"\" on "]
+                                appendDescriptionOf:item];
         return NO;
+    }
 
     NSInvocation *getterInvocation = [NSInvocation och_invocationWithTarget:item selector:propertyGetter];
     id propertyValue = [getterInvocation och_invoke];
-    return [self.valueMatcher matches:propertyValue];
+    BOOL match =  [self.valueMatcher matches:propertyValue];
+    if (!match)
+    {
+        [[[[[[mismatchDescription appendText:@"property \""]
+                                  appendText:self.propertyName]
+                                  appendText:@"\" was "]
+                                  appendDescriptionOf:propertyValue]
+                                  appendText:@" on "]
+                                  appendDescriptionOf:item];
+    }
+    return match;
 }
 
 - (void)describeTo:(id<HCDescription>)description
