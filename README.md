@@ -135,6 +135,7 @@ OCHamcrest comes with a library of useful matchers:
   * `isA` - match object type precisely, no subclasses
   * `nilValue`, `notNilValue` - match `nil`, or not `nil`
   * `sameInstance` - match same object
+  * `throwsException` - match block that throws an exception
 
 * Number
 

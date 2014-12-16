@@ -127,8 +127,13 @@
 		7460456A1A29625E00196267 /* HCEvery.m in Sources */ = {isa = PBXBuildFile; fileRef = 746045661A29625E00196267 /* HCEvery.m */; };
 		7460456C1A2964AF00196267 /* EveryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7460456B1A2964AF00196267 /* EveryTest.m */; };
 		7460456D1A2964AF00196267 /* EveryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7460456B1A2964AF00196267 /* EveryTest.m */; };
+		747776C71A3F5060000A6E1D /* ThrowsExceptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 747776C61A3F5060000A6E1D /* ThrowsExceptionTest.m */; };
+		747776C81A3F5060000A6E1D /* ThrowsExceptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 747776C61A3F5060000A6E1D /* ThrowsExceptionTest.m */; };
 		74D7A7B51A2B902F00CD6CC0 /* DiagnosingMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D7A7B41A2B902F00CD6CC0 /* DiagnosingMatcherTest.m */; };
 		74D7A7B61A2B902F00CD6CC0 /* DiagnosingMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D7A7B41A2B902F00CD6CC0 /* DiagnosingMatcherTest.m */; };
+		74FDDD151A3FF39900177999 /* HCThrowsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FDDD131A3FF39900177999 /* HCThrowsException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FDDD171A3FF39900177999 /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDDD141A3FF39900177999 /* HCThrowsException.m */; };
+		74FDDD181A3FF39900177999 /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDDD141A3FF39900177999 /* HCThrowsException.m */; };
 		77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
 		77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
 		BB33301A68F74D210C803FEA /* HCIsNil.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335CC804D0A774E5F1041 /* HCIsNil.m */; };
@@ -443,7 +448,10 @@
 		746045651A29625E00196267 /* HCEvery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEvery.h; sourceTree = "<group>"; };
 		746045661A29625E00196267 /* HCEvery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEvery.m; sourceTree = "<group>"; };
 		7460456B1A2964AF00196267 /* EveryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EveryTest.m; sourceTree = "<group>"; };
+		747776C61A3F5060000A6E1D /* ThrowsExceptionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThrowsExceptionTest.m; sourceTree = "<group>"; };
 		74D7A7B41A2B902F00CD6CC0 /* DiagnosingMatcherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiagnosingMatcherTest.m; sourceTree = "<group>"; };
+		74FDDD131A3FF39900177999 /* HCThrowsException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCThrowsException.h; sourceTree = "<group>"; };
+		74FDDD141A3FF39900177999 /* HCThrowsException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCThrowsException.m; sourceTree = "<group>"; };
 		77C7B8761429361200DE60CC /* HasPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasPropertyTest.m; sourceTree = "<group>"; };
 		BB333034CD6A38647E176A9A /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
 		BB33303898210A59268030C8 /* HCDoubleReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDoubleReturnGetter.m; sourceTree = "<group>"; };
@@ -766,6 +774,7 @@
 				BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */,
 				0850A44C17165D2A0019BBE0 /* SomeClassAndSubclass.h */,
 				0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */,
+				747776C61A3F5060000A6E1D /* ThrowsExceptionTest.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -815,6 +824,8 @@
 				BB333594FB0AC2DAC3B73077 /* HCIsSame.m */,
 				BB33334CF68184328CD67F30 /* HCIsTypeOf.h */,
 				BB33322097042E108614BDAD /* HCIsTypeOf.m */,
+				74FDDD131A3FF39900177999 /* HCThrowsException.h */,
+				74FDDD141A3FF39900177999 /* HCThrowsException.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -1067,6 +1078,7 @@
 				BB333083DABBB403F4E3A935 /* HCIsCollectionContainingInAnyOrder.h in Headers */,
 				BB33367DD8C7A4D5F5F96E81 /* HCIsCollectionContainingInOrder.h in Headers */,
 				BB3331012E23C3795F3A1280 /* HCIsCollectionOnlyContaining.h in Headers */,
+				74FDDD151A3FF39900177999 /* HCThrowsException.h in Headers */,
 				BB333352385755A59DEC95BD /* HCIsDictionaryContaining.h in Headers */,
 				BB33311A38FFA6C158C5F9B3 /* HCIsDictionaryContainingEntries.h in Headers */,
 				BB333643284129107CAD7AB8 /* HCIsDictionaryContainingKey.h in Headers */,
@@ -1371,6 +1383,7 @@
 				7460456A1A29625E00196267 /* HCEvery.m in Sources */,
 				BB33323968557EF5235B3AFE /* HCIsInstanceOf.m in Sources */,
 				BB33301A68F74D210C803FEA /* HCIsNil.m in Sources */,
+				74FDDD181A3FF39900177999 /* HCThrowsException.m in Sources */,
 				BB3334612BBBB6871530AB79 /* HCIsSame.m in Sources */,
 				BB3335190594259F5D74CAE1 /* HCIsTypeOf.m in Sources */,
 				BB333210C6DF7BB6238B7747 /* HCIsEqualIgnoringCase.m in Sources */,
@@ -1448,6 +1461,7 @@
 				0846B6EE13EE5FB400EA68E8 /* AnyOfTest.m in Sources */,
 				745892101A2AAD2C00BAAC76 /* AssertThatAfterTest.m in Sources */,
 				0846B6F013EE5FB400EA68E8 /* IsAnythingTest.m in Sources */,
+				747776C81A3F5060000A6E1D /* ThrowsExceptionTest.m in Sources */,
 				0846B6F213EE5FB400EA68E8 /* IsNotTest.m in Sources */,
 				0846B6F813EE5FD200EA68E8 /* IsEqualTest.m in Sources */,
 				0846B6FA13EE5FD200EA68E8 /* IsInstanceOfTest.m in Sources */,
@@ -1503,6 +1517,7 @@
 				746045691A29625E00196267 /* HCEvery.m in Sources */,
 				BB33328F6BBE1FF834BA90EC /* HCIsInstanceOf.m in Sources */,
 				BB333995C1E6476B0C239FB9 /* HCIsNil.m in Sources */,
+				74FDDD171A3FF39900177999 /* HCThrowsException.m in Sources */,
 				BB333AB8B39B203DF15C9445 /* HCIsSame.m in Sources */,
 				BB333D81687E3E6481265818 /* HCIsTypeOf.m in Sources */,
 				BB333C6E35F2398771CEA2C3 /* HCIsEqualIgnoringCase.m in Sources */,
@@ -1580,6 +1595,7 @@
 				0846B6ED13EE5FB400EA68E8 /* AnyOfTest.m in Sources */,
 				7458920F1A2AAD2C00BAAC76 /* AssertThatAfterTest.m in Sources */,
 				0846B6EF13EE5FB400EA68E8 /* IsAnythingTest.m in Sources */,
+				747776C71A3F5060000A6E1D /* ThrowsExceptionTest.m in Sources */,
 				0846B6F113EE5FB400EA68E8 /* IsNotTest.m in Sources */,
 				0846B6F713EE5FD200EA68E8 /* IsEqualTest.m in Sources */,
 				0846B6F913EE5FD200EA68E8 /* IsInstanceOfTest.m in Sources */,

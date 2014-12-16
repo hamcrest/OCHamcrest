@@ -22,6 +22,9 @@
                 inFile:(const char *)fileName atLine:(int)lineNumber;
 - (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg yieldsMismatchDescription:(NSString *)expected
                 inFile:(const char *)fileName atLine:(int)lineNumber;
+- (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg
+            yieldsMismatchDescriptionPrefix:(NSString *)expectedPrefix
+                inFile:(const char *)fileName atLine:(int)lineNumber;
 - (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg describesMismatch:(NSString *)expected
                 inFile:(const char *)fileName atLine:(int)lineNumber;
 
@@ -47,6 +50,9 @@
 
 #define assertMismatchDescription(expected, matcher, arg)   \
     [self assertMatcher:matcher matching:arg yieldsMismatchDescription:expected inFile:__FILE__ atLine:__LINE__]
+
+#define assertMismatchDescriptionPrefix(expectedPrefix, matcher, arg)   \
+    [self assertMatcher:matcher matching:arg yieldsMismatchDescriptionPrefix:expectedPrefix inFile:__FILE__ atLine:__LINE__]
 
 #define assertDescribeMismatch(expected, matcher, arg)  \
     [self assertMatcher:matcher matching:arg describesMismatch:expected inFile:__FILE__ atLine:__LINE__]

@@ -10,6 +10,8 @@ NEXT VERSION
 - `assertThatAfter` tests asynchronous code, retrying the assertion until a given timeout.
   Wrap the code you want to evaluate in `futureValueOf`. _Thanks to: Sergio Padrino_
 - New matcher `everyItem` matches collections if every item satisfies a given matcher.
+- New matcher `throwsException` matches a block if it throws an exception satisfying a given
+  matcher.
 
 **Improvements:**
 
