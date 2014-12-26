@@ -39,7 +39,7 @@ static void HCRequireMatcher(id obj)
         return NO;
     }
 
-    typedef id (^HCThrowsExceptionBlock)();
+    typedef void (^HCThrowsExceptionBlock)();
     HCThrowsExceptionBlock block = item;
     @try
     {
