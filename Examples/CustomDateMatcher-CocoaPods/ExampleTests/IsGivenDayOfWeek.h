@@ -2,9 +2,8 @@
 
 // Matches dates that fall on a given day of the week.
 @interface IsGivenDayOfWeek : HCBaseMatcher
-{
-    NSInteger _dayOfWeek;      // Sunday is 0, Saturday is 6
-}
+
+@property (nonatomic, readonly, assign) NSInteger dayOfWeek;  // Sunday is 0, Saturday is 6
 
 - (instancetype)initWithDayOfWeek:(NSInteger)dayOfWeek;
 

@@ -1,6 +1,6 @@
 To set up this example:
 
-1. Terminal: sudo install cocoapods
+1. Terminal: sudo gem install cocoapods
 2. Terminal: pod install
 3. Open the generated Example.xcworkspace
 

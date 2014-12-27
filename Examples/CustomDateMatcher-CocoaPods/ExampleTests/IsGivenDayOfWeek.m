@@ -1,5 +1,7 @@
 #import "IsGivenDayOfWeek.h"
-#import <OCHamcrest/HCDescription.h>
+
+static NSString* const dayAsString[] =
+        { @"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday" };
 
 @implementation IsGivenDayOfWeek
 
@@ -17,15 +19,13 @@
     if (![item respondsToSelector:@selector(dayOfWeek)])
         return NO;
 
-    return [item dayOfWeek] == _dayOfWeek;
+    return [item dayOfWeek] == self.dayOfWeek;
 }
 
 // Describe the matcher.
 - (void)describeTo:(id <HCDescription>)description
 {
-    NSString* dayAsString[] =
-        { @"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday" };
-    [[description appendText:@"calendar date falling on "] appendText:dayAsString[_dayOfWeek]];
+    [[description appendText:@"calendar date falling on "] appendText:dayAsString[self.dayOfWeek]];
 }
 
 @end
