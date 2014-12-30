@@ -78,18 +78,17 @@ FOUNDATION_EXPORT id HC_equalToUnsignedInteger(NSUInteger value)
 
 #pragma mark -
 
+static NSString *stringForBool(BOOL value)
+{
+    return value ? @"<YES>" : @"<NO>";
+}
+
 FOUNDATION_EXPORT id HC_equalToBool(BOOL value)
 {
     return [[HCIsEqualToBool alloc] initWithValue:value];
 }
 
 @implementation HCIsEqualToBool
-
-
-+ (NSString*) stringForBool:(BOOL)value
-{
-    return value ? @"<YES>" : @"<NO>";
-}
 
 static void HCRequireYesOrNo(BOOL value)
 {
@@ -121,14 +120,17 @@ static void HCRequireYesOrNo(BOOL value)
 
 - (void)describeTo:(id<HCDescription>)description
 {
-    [description appendText:@"a BOOL with value "];
-    [description appendText:[HCIsEqualToBool stringForBool:self.value]];
+    [[description appendText:@"a BOOL with value "]
+                  appendText:stringForBool(self.value)];
 }
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
 {
     [mismatchDescription appendText:@"was "];
-    [mismatchDescription appendText:[HCIsEqualToBool stringForBool:[item boolValue]]];
+    if ([item isKindOfClass:[NSNumber class]])
+        [mismatchDescription appendText:stringForBool([item boolValue])];
+    else
+        [mismatchDescription appendDescriptionOf:item];
 }
 
 @end

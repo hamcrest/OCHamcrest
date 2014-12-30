@@ -39,6 +39,16 @@
     assertDoesNotMatch(@"Not a number", equalToBool(NO), @"STRING");
 }
 
+- (void)testDescribesMismatchOfDifferentNumber
+{
+    assertMismatchDescription(@"was <YES>", equalToBool(NO), @YES);
+}
+
+- (void)testDescribesMismatchOfNonNumber
+{
+    assertMismatchDescriptionPrefix(@"was <NSObject:", equalToBool(NO), [[NSObject alloc] init]);
+}
+
 @end
 
 

@@ -4,6 +4,7 @@ NEXT VERSION
 **Fixes:**
 
 - Fix crash when OCHamcrest tries to describe an OCMockito mock object. _Thanks to: Michael Seghers_
+- Fix crash when equalToBool attempts to match a non-number.
 
 **Features:**
 
