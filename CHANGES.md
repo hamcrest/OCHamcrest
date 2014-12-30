@@ -13,6 +13,8 @@ NEXT VERSION
 - New matcher `everyItem` matches collections if every item satisfies a given matcher.
 - New matcher `throwsException` matches a block if it throws an exception satisfying a given
   matcher.
+- New matchers `isTrue` and `isFalse` match non-zero and zero NSNumbers. Intended to replace
+  `equalToBool`.
 
 **Improvements:**
 

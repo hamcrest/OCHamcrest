@@ -144,6 +144,8 @@ OCHamcrest comes with a library of useful matchers:
   `equalToInt` for an `int`)
   * `greaterThan`, `greaterThanOrEqualTo`, `lessThan`,
   `lessThanOrEqualTo` - match numeric ordering
+  * `isFalse` - match zero
+  * `isTrue` - match non-zero
 
 * Text
 

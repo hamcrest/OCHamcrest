@@ -119,6 +119,11 @@
 		31DDCEC51963ADABADBC576B /* HCDiagnosingMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DDCB570769099D33C22810 /* HCDiagnosingMatcher.m */; };
 		5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
 		5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
+		74153B5F1A535FEA00FEF450 /* IsTrueFalseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */; };
+		74153B601A535FEA00FEF450 /* IsTrueFalseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */; };
+		74153B631A53606100FEF450 /* HCIsTrueFalse.h in Headers */ = {isa = PBXBuildFile; fileRef = 74153B611A53606100FEF450 /* HCIsTrueFalse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74153B651A53606100FEF450 /* HCIsTrueFalse.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B621A53606100FEF450 /* HCIsTrueFalse.m */; };
+		74153B661A53606100FEF450 /* HCIsTrueFalse.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B621A53606100FEF450 /* HCIsTrueFalse.m */; };
 		7458920F1A2AAD2C00BAAC76 /* AssertThatAfterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7458920E1A2AAD2C00BAAC76 /* AssertThatAfterTest.m */; };
 		745892101A2AAD2C00BAAC76 /* AssertThatAfterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7458920E1A2AAD2C00BAAC76 /* AssertThatAfterTest.m */; };
 		746045671A29625E00196267 /* HCEvery.h in Headers */ = {isa = PBXBuildFile; fileRef = 746045651A29625E00196267 /* HCEvery.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -444,6 +449,9 @@
 		31DDCCF46E1766AF4AC97BA5 /* Mismatchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mismatchable.h; sourceTree = "<group>"; };
 		31DDCE62F97F2042F0A8BDAE /* HCDiagnosingMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDiagnosingMatcher.h; sourceTree = "<group>"; };
 		5F2773441436F81000B9683A /* ConformsToProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConformsToProtocolTest.m; sourceTree = "<group>"; };
+		74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTrueFalseTest.m; sourceTree = "<group>"; };
+		74153B611A53606100FEF450 /* HCIsTrueFalse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsTrueFalse.h; sourceTree = "<group>"; };
+		74153B621A53606100FEF450 /* HCIsTrueFalse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsTrueFalse.m; sourceTree = "<group>"; };
 		7458920E1A2AAD2C00BAAC76 /* AssertThatAfterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssertThatAfterTest.m; sourceTree = "<group>"; };
 		746045651A29625E00196267 /* HCEvery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEvery.h; sourceTree = "<group>"; };
 		746045661A29625E00196267 /* HCEvery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEvery.m; sourceTree = "<group>"; };
@@ -755,6 +763,7 @@
 			children = (
 				0876035313440AD8001B439B /* IsCloseToTest.m */,
 				0876035413440AD8001B439B /* IsEqualToNumberTest.m */,
+				74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */,
 				0876035513440AD8001B439B /* NumberAssertTest.m */,
 				0876035613440AD8001B439B /* OrderingComparisonTest.m */,
 			);
@@ -950,6 +959,8 @@
 				BB3331EECFE91DCA05C34EFD /* HCIsCloseTo.m */,
 				BB3330701E28789385EAB1C9 /* HCIsEqualToNumber.h */,
 				BB333DC21DC44C0F76ED3DB6 /* HCIsEqualToNumber.m */,
+				74153B611A53606100FEF450 /* HCIsTrueFalse.h */,
+				74153B621A53606100FEF450 /* HCIsTrueFalse.m */,
 				BB333EEBE8C48A68933572E9 /* HCNumberAssert.h */,
 				BB333A801AD666BCC23ED955 /* HCNumberAssert.m */,
 				BB3337CE41E8621958EAE8BF /* HCOrderingComparison.h */,
@@ -1109,6 +1120,7 @@
 				BB333FEC8B49B249E92B3671 /* HCStringContains.h in Headers */,
 				BB3336E5FCF909801BB0D103 /* HCStringContainsInOrder.h in Headers */,
 				BB3333FFD04D52C9DC48644E /* HCStringEndsWith.h in Headers */,
+				74153B631A53606100FEF450 /* HCIsTrueFalse.h in Headers */,
 				BB333E7F416B46CE6777D695 /* HCStringStartsWith.h in Headers */,
 				BB333DD97E87592CF49128AD /* HCSubstringMatcher.h in Headers */,
 				BB3334E55A7868E28215B693 /* OCHamcrest.h in Headers */,
@@ -1370,6 +1382,7 @@
 				BB333375251766FC537D86BC /* HCAllOf.m in Sources */,
 				BB33343CA2ADA0E7E367E8F9 /* HCAnyOf.m in Sources */,
 				BB33338BB29B93F85C891624 /* HCIsAnything.m in Sources */,
+				74153B661A53606100FEF450 /* HCIsTrueFalse.m in Sources */,
 				BB333C35826116418990B390 /* HCIsNot.m in Sources */,
 				BB333597D5BACF80DB73F49C /* HCIsCloseTo.m in Sources */,
 				BB333C48F0B219D8132548B4 /* HCIsEqualToNumber.m in Sources */,
@@ -1453,6 +1466,7 @@
 				0859832F13459CA400BE7892 /* StringEndsWithTest.m in Sources */,
 				0859833013459CA400BE7892 /* StringStartsWithTest.m in Sources */,
 				088FB0AC136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */,
+				74153B601A535FEA00FEF450 /* IsTrueFalseTest.m in Sources */,
 				74D7A7B61A2B902F00CD6CC0 /* DiagnosingMatcherTest.m in Sources */,
 				0846B6E113EE5F9D00EA68E8 /* DescribedAsTest.m in Sources */,
 				0846B6E313EE5F9D00EA68E8 /* IsTest.m in Sources */,
@@ -1504,6 +1518,7 @@
 				BB3332673485E95D8599222E /* HCAllOf.m in Sources */,
 				BB333D17BEC11419274E2D8F /* HCAnyOf.m in Sources */,
 				BB333A0391F4B076785DEBA9 /* HCIsAnything.m in Sources */,
+				74153B651A53606100FEF450 /* HCIsTrueFalse.m in Sources */,
 				BB333637DDB74BF66C729C62 /* HCIsNot.m in Sources */,
 				BB333BF2FCAE2C05C337CE46 /* HCIsCloseTo.m in Sources */,
 				BB3331E9AEEC3D10110E90ED /* HCIsEqualToNumber.m in Sources */,
@@ -1587,6 +1602,7 @@
 				0876038513440AD8001B439B /* StringEndsWithTest.m in Sources */,
 				0876038613440AD8001B439B /* StringStartsWithTest.m in Sources */,
 				088FB0AB136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */,
+				74153B5F1A535FEA00FEF450 /* IsTrueFalseTest.m in Sources */,
 				74D7A7B51A2B902F00CD6CC0 /* DiagnosingMatcherTest.m in Sources */,
 				0846B6E013EE5F9D00EA68E8 /* DescribedAsTest.m in Sources */,
 				0846B6E213EE5F9D00EA68E8 /* IsTest.m in Sources */,
