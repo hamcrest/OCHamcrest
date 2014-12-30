@@ -84,9 +84,7 @@ FOUNDATION_EXPORT id HC_equalToBool(BOOL value)
 }
 
 @implementation HCIsEqualToBool
-{
-    BOOL _value;
-}
+
 
 + (NSString*) stringForBool:(BOOL)value
 {
@@ -118,13 +116,13 @@ static void HCRequireYesOrNo(BOOL value)
     if (![item isKindOfClass:[NSNumber class]])
         return NO;
 
-    return [item boolValue] == _value;
+    return [item boolValue] == self.value;
 }
 
 - (void)describeTo:(id<HCDescription>)description
 {
     [description appendText:@"a BOOL with value "];
-    [description appendText:[HCIsEqualToBool stringForBool:_value]];
+    [description appendText:[HCIsEqualToBool stringForBool:self.value]];
 }
 
 - (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
