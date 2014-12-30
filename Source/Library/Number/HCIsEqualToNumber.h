@@ -4,13 +4,15 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-FOUNDATION_EXPORT id HC_equalToBool(BOOL value);
+FOUNDATION_EXPORT id HC_equalToBool(BOOL value) __attribute__((deprecated));
 
 /**
  equalToBool(value) -
  Matches if object is equal to @c NSNumber created from a @c BOOL.
 
  @param value  The @c BOOL value from which to create an @c NSNumber.
+
+ @b Deprecated: Use @ref isTrue() or @ref isFalse() instead.
 
  This matcher creates an @c NSNumber object from a @c BOOL @a value and compares the evaluated
  object to it for equality.

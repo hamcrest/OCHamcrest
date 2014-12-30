@@ -29,6 +29,12 @@ NEXT VERSION
   match.
 - Updated project to make it run-path dependent. _Thanks to: csano_
 
+**Deprecated:**
+
+- `equalToBool` deprecated in favor of `isTrue` and `isFalse`. `equalToBool(YES)` had too much
+  potential for symantic error since any non-zero number evaluates to true.
+
+
 
 Version 4.0.1
 -------------
