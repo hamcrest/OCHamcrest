@@ -1,3 +1,10 @@
+Version 4.1.1
+-------------
+_31 Dec 2014_
+
+- Oops! Add the new features to OCHamcrest.h
+
+
 Version 4.1.0
 -------------
 _30 Dec 2014_
@@ -5,7 +12,7 @@ _30 Dec 2014_
 **Fixes:**
 
 - Fix crash when OCHamcrest tries to describe an OCMockito mock object. _Thanks to: Michael Seghers_
-- Fix crash when equalToBool attempts to match a non-number.
+- Fix crash when `equalToBool` attempts to match a non-number.
 
 **Features:**
 

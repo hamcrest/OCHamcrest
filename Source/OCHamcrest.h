@@ -22,6 +22,7 @@
 #import <OCHamcrest/HCIsNil.h>
 #import <OCHamcrest/HCIsSame.h>
 #import <OCHamcrest/HCIsTypeOf.h>
+#import <OCHamcrest/HCThrowsException.h>
 
 /**
  @defgroup collection_matchers Collection Matchers
@@ -30,6 +31,7 @@
 
  @ingroup library
  */
+#import <OCHamcrest/HCEvery.h>
 #import <OCHamcrest/HCHasCount.h>
 #import <OCHamcrest/HCIsCollectionContaining.h>
 #import <OCHamcrest/HCIsCollectionContainingInAnyOrder.h>
@@ -60,6 +62,7 @@
  @ingroup number_matchers
  */
 #import <OCHamcrest/HCIsEqualToNumber.h>
+#import <OCHamcrest/HCIsTrueFalse.h>
 
 /**
  @defgroup text_matchers Text Matchers

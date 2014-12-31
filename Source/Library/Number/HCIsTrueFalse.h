@@ -23,7 +23,7 @@ FOUNDATION_EXPORT id HC_isTrue(void);
  @ingroup primitive_number_matchers
  */
 #ifdef HC_SHORTHAND
-    #define isTrue HC_isTrue
+    #define isTrue() HC_isTrue()
 #endif
 
 
@@ -39,5 +39,5 @@ FOUNDATION_EXPORT id HC_isFalse(void);
  @ingroup primitive_number_matchers
 */
 #ifdef HC_SHORTHAND
-    #define isFalse HC_isFalse
+    #define isFalse() HC_isFalse()
 #endif
