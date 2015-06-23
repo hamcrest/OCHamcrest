@@ -1194,7 +1194,7 @@
 			name = libochamcrestTests;
 			productName = libochamcrestTests;
 			productReference = 081BEE6C1345979F003F846A /* libochamcrestTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		087601E113440806001B439B /* OCHamcrest */ = {
 			isa = PBXNativeTarget;
@@ -1232,7 +1232,7 @@
 			name = OCHamcrestTests;
 			productName = OCHamcrestTests;
 			productReference = 087601F713440807001B439B /* OCHamcrestTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
