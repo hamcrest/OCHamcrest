@@ -240,12 +240,12 @@
 
 - (void)testCanMatchPrimitiveLongLongValues
 {
-    foo.longLongValue = LONG_MIN - 1;
+    foo.longLongValue = LLONG_MIN;
     assertMatches(@"long long should match",
-                  hasProperty(@"longLongValue", equalTo(@(LONG_MIN - 1))),
+                  hasProperty(@"longLongValue", equalTo(@(LLONG_MIN))),
                   foo);
     assertDoesNotMatch(@"long long should not match",
-                       hasProperty(@"longLongValue", equalTo(@LONG_MIN)),
+                       hasProperty(@"longLongValue", equalTo(@(LLONG_MIN + 1))),
                        foo);
 }
 
