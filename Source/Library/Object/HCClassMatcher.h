@@ -8,6 +8,6 @@
 
 @property (readonly, nonatomic, strong) Class theClass;
 
-- (instancetype)initWithType:(Class)type;
+- (instancetype)initWithClass:(Class)aClass;
 
 @end

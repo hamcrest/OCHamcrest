@@ -13,7 +13,7 @@
 
 @implementation HCClassMatcher
 
-- (instancetype)initWithType:(Class)aClass
+- (instancetype)initWithClass:(Class)aClass
 {
     HCRequireNonNilObject(aClass);
 

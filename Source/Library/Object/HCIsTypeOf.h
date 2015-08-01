@@ -6,7 +6,7 @@
 
 @interface HCIsTypeOf : HCClassMatcher
 
-+ (id)isTypeOf:(Class)type;
++ (id)isTypeOf:(Class)aClass;
 
 @end
 
