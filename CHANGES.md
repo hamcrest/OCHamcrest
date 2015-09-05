@@ -1,6 +1,10 @@
 NEXT VERSION
 ------------
 
+**Fixes:**
+
+- Fixed "Incompatible pointer types sending 'Class' to parameter of type 'NSString *'" warning on `instanceOf`.
+
 **Deprecated:**
 
 - Deprecated `containsString`; use `containsSubstring` instead. `containsString` clashes with an NSString method introduced in iOS 8.
@@ -19,8 +23,8 @@ _30 Dec 2014_
 
 **Fixes:**
 
-- Fix crash when OCHamcrest tries to describe an OCMockito mock object. _Thanks to: Michael Seghers_
-- Fix crash when `equalToBool` attempts to match a non-number.
+- Fixed crash when OCHamcrest tries to describe an OCMockito mock object. _Thanks to: Michael Seghers_
+- Fixed crash when `equalToBool` attempts to match a non-number.
 
 **Features:**
 
