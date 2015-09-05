@@ -68,7 +68,6 @@
 - (void)testHasAReadableDescription
 {
     assertDescription(@"every item is a value less than <4>", everyItem(lessThan(@4)));
-
 }
 
 @end

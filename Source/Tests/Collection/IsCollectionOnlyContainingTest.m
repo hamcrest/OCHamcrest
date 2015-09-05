@@ -89,7 +89,6 @@
 {
     assertDescription(@"a collection containing items matching (<1> or <2>)",
                         onlyContains(@1, @2, nil));
-
 }
 
 @end

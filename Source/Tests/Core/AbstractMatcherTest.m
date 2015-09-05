@@ -25,7 +25,6 @@
                                                  inFile:@(fileName)
                                                  atLine:lineNumber
                                         withDescription:message]];
-
 }
 
 - (void)assertMatcherSafeWithNil:(id <HCMatcher>)matcher

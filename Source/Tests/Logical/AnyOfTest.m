@@ -40,8 +40,8 @@
 
     assertMatches(@"didn't pass middle sub-matcher", matcher, @"vlad");
     assertDoesNotMatch(@"didn't fail all sub-matchers", matcher, @"flan");
-
 }
+
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"first matcher", anyOf(@"good", @"bad", nil), @"good");
