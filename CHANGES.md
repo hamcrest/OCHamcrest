@@ -1,3 +1,11 @@
+NEXT VERSION
+------------
+
+**Deprecated:**
+
+- Deprecated `containsString`; use `containsSubstring` instead. `containsString` clashes with an NSString method introduced in iOS 8.
+
+
 Version 4.1.1
 -------------
 _31 Dec 2014_
@@ -40,7 +48,7 @@ _30 Dec 2014_
 **Deprecated:**
 
 - `equalToBool` deprecated in favor of `isTrue` and `isFalse`. `equalToBool(YES)` had too much
-  potential for symantic error since any non-zero number evaluates to true.
+  potential for semantic error since any non-zero number evaluates to true.
 
 
 

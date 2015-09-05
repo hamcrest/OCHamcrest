@@ -29,5 +29,10 @@
 
 id <HCMatcher> HC_containsString(NSString *aString)
 {
+    return HC_containsSubstring(aString);
+}
+
+id <HCMatcher> HC_containsSubstring(NSString *aString)
+{
     return [HCStringContains stringContains:aString];
 }

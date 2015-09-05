@@ -22,7 +22,7 @@ static NSString *EXCERPT = @"EXCERPT";
 - (void)setUp
 {
     [super setUp];
-    matcher = containsString(EXCERPT);
+    matcher = containsSubstring(EXCERPT);
 }
 
 - (void)tearDown
@@ -47,6 +47,20 @@ static NSString *EXCERPT = @"EXCERPT";
 
     assertDoesNotMatch(@"excerpt not in string", matcher, @"whatever");
     assertDoesNotMatch(@"only part of excerpt", matcher, [EXCERPT substringFromIndex:1]);
+}
+
+- (void)testDeprecatedMatcher_EvaluatesToTrueIfArgumentContainsSpecifiedSubstring
+{
+    id <HCMatcher> deprecatedMatcher = containsString(EXCERPT);
+
+    assertMatches(@"excerpt at beginning", deprecatedMatcher, [EXCERPT stringByAppendingString:@"END"]);
+    assertMatches(@"excerpt at end", deprecatedMatcher, [@"START" stringByAppendingString:EXCERPT]);
+    assertMatches(@"excerpt in middle", deprecatedMatcher,
+            [[@"START" stringByAppendingString:EXCERPT] stringByAppendingString:@"END"]);
+    assertMatches(@"excerpt repeated", deprecatedMatcher, [EXCERPT stringByAppendingString:EXCERPT]);
+
+    assertDoesNotMatch(@"excerpt not in string", deprecatedMatcher, @"whatever");
+    assertDoesNotMatch(@"only part of excerpt", deprecatedMatcher, [EXCERPT substringFromIndex:1]);
 }
 
 - (void)testEvaluatesToTrueIfArgumentIsEqualToSubstring
