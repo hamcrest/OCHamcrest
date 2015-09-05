@@ -71,18 +71,16 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
 {
     NSTimeInterval maxTime = 1.0;
     NSTimeInterval succeedTime = 0.2;
-
     __block NSString *futureBar = @"foo";
-
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(succeedTime * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
         futureBar = @"bar";
     });
+    [self raiseAfterFailure];
 
     NSTimeInterval waitTime = [self timeExecutingBlock:^{
         @try
         {
-            [self raiseAfterFailure];
             assertThatAfter(maxTime, futureValueOf(futureBar), equalTo(@"bar"));
         }
         @catch (NSException *exception)
@@ -91,8 +89,8 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
         }
     }];
 
-    STAssertEqualsWithAccuracy(waitTime, succeedTime, TIME_ERROR_MARGIN,
-                            @"Assert should have succeeded in approximately %f seconds", succeedTime);
+    STAssertTrue(waitTime > succeedTime, @"Expect assert to terminate after value is changed, but was %lf", waitTime);
+    STAssertTrue(waitTime < maxTime, @"Expect assert to terminate before timeout, but was %lf", waitTime);
 }
 
 - (NSTimeInterval)timeExecutingBlock:(void (^)())block
