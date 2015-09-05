@@ -1,13 +1,10 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 
-    // Class under test
 #import <OCHamcrest/HCStringDescription.h>
 
-    // Collaborators
 #import <OCHamcrest/HCSelfDescribing.h>
 
-    // Test support
 #import <SenTestingKit/SenTestingKit.h>
 
 

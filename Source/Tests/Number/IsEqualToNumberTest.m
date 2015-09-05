@@ -5,7 +5,6 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsEqualToNumber.h>
 
-    // Test support
 #import "AbstractMatcherTest.h"
 
 

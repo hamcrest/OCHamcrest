@@ -2,11 +2,9 @@
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 //  Contribution by Todd Farrell
 
-    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCConformsToProtocol.h>
 
-    // Test support
 #import "AbstractMatcherTest.h"
 
 

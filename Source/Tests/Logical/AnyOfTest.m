@@ -1,16 +1,13 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 
-    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCAnyOf.h>
 
-    // Collaborators
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCStringEndsWith.h>
 #import <OCHamcrest/HCStringStartsWith.h>
 
-    // Test support
 #import "AbstractMatcherTest.h"
 
 

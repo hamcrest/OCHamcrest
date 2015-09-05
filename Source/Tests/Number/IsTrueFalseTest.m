@@ -5,7 +5,6 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsTrueFalse.h>
 
-    // Test support
 #import "AbstractMatcherTest.h"
 
 

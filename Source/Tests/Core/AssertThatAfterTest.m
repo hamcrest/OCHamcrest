@@ -2,14 +2,11 @@
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 //  Contribution by Sergio Padrino
 
-    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCAssertThat.h>
 
-    // Collaborators
 #import <OCHamcrest/HCIsEqual.h>
 
-    // Test support
 #import <SenTestingKit/SenTestingKit.h>
 
 

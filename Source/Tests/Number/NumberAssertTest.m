@@ -5,11 +5,9 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCNumberAssert.h>
 
-    // Collaborators
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCIsEqualToNumber.h>
 
-    // Test support
 #import <SenTestingKit/SenTestingKit.h>
 
 

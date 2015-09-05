@@ -2,15 +2,12 @@
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 //  Contribution by Justin Shacklette
 
-    // Class under test
 #define HC_SHORTHAND
 #import <OCHamcrest/HCHasProperty.h>
 
-    // Collaborators
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCIsNil.h>
 
-    // Test support
 #import "AbstractMatcherTest.h"
 
 
