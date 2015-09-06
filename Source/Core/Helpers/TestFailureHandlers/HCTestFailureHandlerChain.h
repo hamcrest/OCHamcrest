@@ -11,4 +11,10 @@
 
  @ingroup integration
  */
-FOUNDATION_EXPORT HCTestFailureHandler *HC_testFailureHandlerChain(void);
+
+
+@interface HCTestFailureHandlerChain : NSObject
+
++ (HCTestFailureHandler *)chain;
+
+@end

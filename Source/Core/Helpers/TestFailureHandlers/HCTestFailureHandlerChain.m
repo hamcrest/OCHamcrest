@@ -7,10 +7,13 @@
 #import "HCSenTestFailureHandler.h"
 #import "HCXCTestFailureHandler.h"
 
+static HCTestFailureHandler *chain = nil;
 
-HCTestFailureHandler *HC_testFailureHandlerChain(void)
+
+@implementation HCTestFailureHandlerChain
+
++ (HCTestFailureHandler *)chain
 {
-    static HCTestFailureHandler *chain = nil;
     if (!chain)
     {
         HCTestFailureHandler *genericHandler = [[HCGenericTestFailureHandler alloc] initWithSuccessor:nil];
@@ -20,3 +23,5 @@ HCTestFailureHandler *HC_testFailureHandlerChain(void)
     }
     return chain;
 }
+
+@end
