@@ -94,15 +94,12 @@
 
 - (void)testXCTestCase_ShouldCaptureAssertionFailure
 {
-    // given
     NSString *expected = @"EXPECTED";
     NSString *actual = @"ACTUAL";
     NSString *expectedMessage = @"Expected \"EXPECTED\", but was \"ACTUAL\"";
 
-    // when
     assertThat(actual, equalTo(expected));
 
-    // then
     STAssertEqualObjects(expectedMessage, self.failureDescription, nil);
     [self assertThatResultString:self.failureFile containsExpectedString:@"/AssertThatTest.m"];
     STAssertTrue(self.failureLine > 0, nil);
@@ -126,13 +123,11 @@
 
 - (void)testGenericTestCase_ShouldRaiseExceptionWithLocationAndReason
 {
-    // given
     NSString *expected = @"EXPECTED";
     NSString *actual = @"ACTUAL";
     NSString *expectedMessage = @"Expected \"EXPECTED\", but was \"ACTUAL\"";
     GenericTestCase *testCase = [[GenericTestCase alloc] init];
 
-    // when
     @try
     {
         HC_assertThatWithLocation(testCase, actual, equalTo(expected), "FILENAME", 123);
