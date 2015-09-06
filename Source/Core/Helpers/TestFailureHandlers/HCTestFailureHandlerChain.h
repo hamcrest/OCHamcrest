@@ -7,14 +7,15 @@
 
 
 /**
- Returns chain of test failure handlers.
+ Manage chain-of-responsibility for handling test failures.
 
  @ingroup integration
  */
-
-
 @interface HCTestFailureHandlerChain : NSObject
 
+/**
+ * Returns current chain of test failure handlers.
+ */
 + (HCTestFailureHandler *)chain;
 
 @end
