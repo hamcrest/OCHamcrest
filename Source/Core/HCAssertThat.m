@@ -43,9 +43,14 @@ void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxTime,
                                     HCAssertThatAfterActualBlock actualBlock, id<HCMatcher> matcher,
                                     const char *fileName, int lineNumber)
 {
+    HC_assertWithTimeoutAndLocation(testCase, maxTime, actualBlock, matcher, fileName, lineNumber);
+}
+
+void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout, HCFutureValue actualBlock, id <HCMatcher> matcher, const char *fileName, int lineNumber)
+{
     BOOL match;
     id actual;
-    NSDate *expiryDate = [NSDate dateWithTimeIntervalSinceNow:maxTime];
+    NSDate *expiryDate = [NSDate dateWithTimeIntervalSinceNow:timeout];
     while (1)
     {
         actual = actualBlock();

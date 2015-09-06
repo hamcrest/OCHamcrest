@@ -12,19 +12,19 @@
 
 static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
 
-@interface AssertThatAfterTest : SenTestCase
+@interface AssertWithTimeout : SenTestCase
 @end
 
-@implementation AssertThatAfterTest
+@implementation AssertWithTimeout
 
 - (void)testShouldBeSilentOnSuccessfulMatchWithTimeoutZero
 {
-    assertThatAfter(0, futureValueOf(@"foo"), equalTo(@"foo"));
+    assertWithTimeout(0, thatEventually(@"foo"), equalTo(@"foo"));
 }
 
 - (void)testShouldBeSilentOnSuccessfulMatchWithTimeoutGreaterThanZero
 {
-    assertThatAfter(5, futureValueOf(@"foo"), equalTo(@"foo"));
+    assertWithTimeout(5, thatEventually(@"foo"), equalTo(@"foo"));
 }
 
 - (void)testFailsImmediatelyWithTimeoutZero
@@ -34,7 +34,7 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
         @try
         {
             [self raiseAfterFailure];
-            assertThatAfter(maxTime, futureValueOf(@"foo"), equalTo(@"bar"));
+            assertWithTimeout(maxTime, thatEventually(@"foo"), equalTo(@"bar"));
         }
         @catch (NSException *exception)
         {
@@ -54,7 +54,7 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
         @try
         {
             [self raiseAfterFailure];
-            assertThatAfter(maxTime, futureValueOf(@"foo"), equalTo(@"bar"));
+            assertWithTimeout(maxTime, thatEventually(@"foo"), equalTo(@"bar"));
         }
         @catch (NSException *exception)
         {
@@ -68,6 +68,32 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
 }
 
 - (void)testAssertWithTimeoutGreaterThanZeroShouldSucceedNotImmediatelyButBeforeTimeout
+{
+    NSTimeInterval maxTime = 1.0;
+    NSTimeInterval succeedTime = 0.2;
+    __block NSString *futureBar = @"foo";
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(succeedTime * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+        futureBar = @"bar";
+    });
+    [self raiseAfterFailure];
+
+    NSTimeInterval waitTime = [self timeExecutingBlock:^{
+        @try
+        {
+            assertWithTimeout(maxTime, thatEventually(futureBar), equalTo(@"bar"));
+        }
+        @catch (NSException *exception)
+        {
+            STFail(@"should have succeeded");
+        }
+    }];
+
+    STAssertTrue(waitTime > succeedTime, @"Expect assert to terminate after value is changed, but was %lf", waitTime);
+    STAssertTrue(waitTime < maxTime, @"Expect assert to terminate before timeout, but was %lf", waitTime);
+}
+
+- (void)testDeprecatedAssertThatAfter_WithTimeoutGreaterThanZeroShouldSucceedNotImmediatelyButBeforeTimeout
 {
     NSTimeInterval maxTime = 1.0;
     NSTimeInterval succeedTime = 0.2;
@@ -111,7 +137,7 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
     @try
     {
         [self raiseAfterFailure];
-        assertThatAfter(irrelevantMaxTime, futureValueOf(actual), equalTo(expected));
+        assertWithTimeout(irrelevantMaxTime, thatEventually(actual), equalTo(expected));
     }
     @catch (NSException* exception)
     {

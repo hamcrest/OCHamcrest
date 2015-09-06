@@ -36,12 +36,12 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
 #endif
 
 
-typedef id (^HCAssertThatAfterActualBlock)();
+typedef id (^HCAssertThatAfterActualBlock)() __attribute__((deprecated));
 
 OBJC_EXPORT void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxTime,
                                                 HCAssertThatAfterActualBlock actualBlock,
                                                 id<HCMatcher> matcher,
-                                                const char *fileName, int lineNumber);
+                                                const char *fileName, int lineNumber) __attribute__((deprecated));
 
 #define HC_assertThatAfter(maxTime, actualBlock, matcher)  \
     HC_assertThatAfterWithLocation(self, maxTime, actualBlock, matcher, __FILE__, __LINE__)
@@ -55,6 +55,8 @@ OBJC_EXPORT void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxT
  @param maxTime     Max time (in seconds) in which the matcher has to be satisfied.
  @param actualBlock A block providing the object to evaluate until timeout or the matcher is satisfied.
  @param matcher     The matcher to satisfy as the expected condition.
+
+ @b Deprecated: Use @ref assertWithTimeout instead.
 
  @c assertThatAfter checks several times if the matcher is satisfied before timeout. To evaluate the
  matcher, the @c actualBlock will provide updated values of actual. If the matcher is not satisfied
@@ -70,4 +72,41 @@ OBJC_EXPORT void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxT
 #ifdef HC_SHORTHAND
     #define assertThatAfter HC_assertThatAfter
     #define futureValueOf HC_futureValueOf
+#endif
+
+
+typedef id (^HCFutureValue)();
+
+OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
+        HCFutureValue actualBlock,
+        id <HCMatcher> matcher,
+        const char *fileName, int lineNumber);
+
+#define HC_assertWithTimeout(timeout, actualBlock, matcher)  \
+    HC_assertWithTimeoutAndLocation(self, timeout, actualBlock, matcher, __FILE__, __LINE__)
+
+#define HC_thatEventually(actual) ^{ return actual; }
+
+/**
+ assertWithTimeout(timeout, actualBlock, matcher) -
+ Asserts that a value provided by a block will satisfy matcher within a given time.
+
+ @param timeout     Maximum time to wait for passing behavior, specified in seconds.
+ @param actualBlock A block providing the object to repeatedly evaluate as the actual value.
+ @param matcher     The matcher to satisfy as the expected condition.
+
+ @c assertWithTimeout polls a value provided by a block to asynchronously satisfy the matcher. The
+ block is evaluated repeatedly for an actual value, which is passed to the matcher for evaluation.
+ If the matcher is not satisfied within the timeout, an exception is thrown describing the mismatch.
+
+ An easy way of providing the @c actualBlock is to use the macro <code>thatEventually(actual)</code>.
+
+ In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+ @c HC_assertWithTimeout and HC_thatEventually instead.
+
+ @ingroup integration
+*/
+#ifdef HC_SHORTHAND
+    #define assertWithTimeout HC_assertWithTimeout
+    #define thatEventually HC_thatEventually
 #endif

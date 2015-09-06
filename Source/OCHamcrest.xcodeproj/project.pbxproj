@@ -124,8 +124,8 @@
 		74153B631A53606100FEF450 /* HCIsTrueFalse.h in Headers */ = {isa = PBXBuildFile; fileRef = 74153B611A53606100FEF450 /* HCIsTrueFalse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74153B651A53606100FEF450 /* HCIsTrueFalse.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B621A53606100FEF450 /* HCIsTrueFalse.m */; };
 		74153B661A53606100FEF450 /* HCIsTrueFalse.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B621A53606100FEF450 /* HCIsTrueFalse.m */; };
-		7458920F1A2AAD2C00BAAC76 /* AssertThatAfterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7458920E1A2AAD2C00BAAC76 /* AssertThatAfterTest.m */; };
-		745892101A2AAD2C00BAAC76 /* AssertThatAfterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7458920E1A2AAD2C00BAAC76 /* AssertThatAfterTest.m */; };
+		7458920F1A2AAD2C00BAAC76 /* AssertWithTimeout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7458920E1A2AAD2C00BAAC76 /* AssertWithTimeout.m */; };
+		745892101A2AAD2C00BAAC76 /* AssertWithTimeout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7458920E1A2AAD2C00BAAC76 /* AssertWithTimeout.m */; };
 		746045671A29625E00196267 /* HCEvery.h in Headers */ = {isa = PBXBuildFile; fileRef = 746045651A29625E00196267 /* HCEvery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746045681A29625E00196267 /* HCEvery.h in Headers */ = {isa = PBXBuildFile; fileRef = 746045651A29625E00196267 /* HCEvery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746045691A29625E00196267 /* HCEvery.m in Sources */ = {isa = PBXBuildFile; fileRef = 746045661A29625E00196267 /* HCEvery.m */; };
@@ -452,7 +452,7 @@
 		74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTrueFalseTest.m; sourceTree = "<group>"; };
 		74153B611A53606100FEF450 /* HCIsTrueFalse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsTrueFalse.h; sourceTree = "<group>"; };
 		74153B621A53606100FEF450 /* HCIsTrueFalse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsTrueFalse.m; sourceTree = "<group>"; };
-		7458920E1A2AAD2C00BAAC76 /* AssertThatAfterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssertThatAfterTest.m; sourceTree = "<group>"; };
+		7458920E1A2AAD2C00BAAC76 /* AssertWithTimeout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssertWithTimeout.m; sourceTree = "<group>"; };
 		746045651A29625E00196267 /* HCEvery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEvery.h; sourceTree = "<group>"; };
 		746045661A29625E00196267 /* HCEvery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEvery.m; sourceTree = "<group>"; };
 		7460456B1A2964AF00196267 /* EveryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EveryTest.m; sourceTree = "<group>"; };
@@ -650,7 +650,7 @@
 				082E7C2913FF676E004A22FE /* AbstractMatcherTest.h */,
 				082E7C2A13FF676E004A22FE /* AbstractMatcherTest.m */,
 				082E7C2B13FF676E004A22FE /* AssertThatTest.m */,
-				7458920E1A2AAD2C00BAAC76 /* AssertThatAfterTest.m */,
+				7458920E1A2AAD2C00BAAC76 /* AssertWithTimeout.m */,
 				082E7C2C13FF676E004A22FE /* BaseMatcherTest.m */,
 				74D7A7B41A2B902F00CD6CC0 /* DiagnosingMatcherTest.m */,
 				082E7C2D13FF676E004A22FE /* InvocationMatcherTest.m */,
@@ -1473,7 +1473,7 @@
 				0846B6E513EE5F9D00EA68E8 /* NeverMatch.m in Sources */,
 				0846B6EC13EE5FB400EA68E8 /* AllOfTest.m in Sources */,
 				0846B6EE13EE5FB400EA68E8 /* AnyOfTest.m in Sources */,
-				745892101A2AAD2C00BAAC76 /* AssertThatAfterTest.m in Sources */,
+				745892101A2AAD2C00BAAC76 /* AssertWithTimeout.m in Sources */,
 				0846B6F013EE5FB400EA68E8 /* IsAnythingTest.m in Sources */,
 				747776C81A3F5060000A6E1D /* ThrowsExceptionTest.m in Sources */,
 				0846B6F213EE5FB400EA68E8 /* IsNotTest.m in Sources */,
@@ -1609,7 +1609,7 @@
 				0846B6E413EE5F9D00EA68E8 /* NeverMatch.m in Sources */,
 				0846B6EB13EE5FB400EA68E8 /* AllOfTest.m in Sources */,
 				0846B6ED13EE5FB400EA68E8 /* AnyOfTest.m in Sources */,
-				7458920F1A2AAD2C00BAAC76 /* AssertThatAfterTest.m in Sources */,
+				7458920F1A2AAD2C00BAAC76 /* AssertWithTimeout.m in Sources */,
 				0846B6EF13EE5FB400EA68E8 /* IsAnythingTest.m in Sources */,
 				747776C71A3F5060000A6E1D /* ThrowsExceptionTest.m in Sources */,
 				0846B6F113EE5FB400EA68E8 /* IsNotTest.m in Sources */,
