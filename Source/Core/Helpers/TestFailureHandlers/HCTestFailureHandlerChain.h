@@ -18,4 +18,14 @@
  */
 + (HCTestFailureHandler *)chain;
 
+/**
+ * Adds given test failure handler to head of chain-of-responsibility.
+ */
++ (void)addHandler:(HCTestFailureHandler *)handler;
+
+/**
+ * Resets chain-of-responsibility to default.
+ */
++ (void)reset;
+
 @end

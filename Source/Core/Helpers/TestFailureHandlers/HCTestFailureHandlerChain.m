@@ -7,24 +7,35 @@
 #import "HCSenTestFailureHandler.h"
 #import "HCXCTestFailureHandler.h"
 
-static HCTestFailureHandler *head = nil;
+static HCTestFailureHandler *chainHead = nil;
 
 
 @implementation HCTestFailureHandlerChain
 
 + (HCTestFailureHandler *)chain
 {
-    if (!head)
+    if (!chainHead)
     {
         HCTestFailureHandler *xctestHandler = [[HCXCTestFailureHandler alloc] init];
         HCTestFailureHandler *ocunitHandler = [[HCSenTestFailureHandler alloc] init];
         HCTestFailureHandler *genericHandler = [[HCGenericTestFailureHandler alloc] init];
 
-        head =  xctestHandler;
+        chainHead =  xctestHandler;
         xctestHandler.successor = ocunitHandler;
         ocunitHandler.successor = genericHandler;
     }
-    return head;
+    return chainHead;
+}
+
++ (void)addHandler:(HCTestFailureHandler *)handler
+{
+    handler.successor = [self chain];
+    chainHead = handler;
+}
+
++ (void)reset
+{
+    chainHead = nil;
 }
 
 @end

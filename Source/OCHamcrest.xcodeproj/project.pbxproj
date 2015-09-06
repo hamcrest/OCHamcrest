@@ -119,6 +119,10 @@
 		31DDCEC51963ADABADBC576B /* HCDiagnosingMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DDCB570769099D33C22810 /* HCDiagnosingMatcher.m */; };
 		5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
 		5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
+		609E95B8EB994E0768A22EB5 /* TestFailureHandlerChainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E99ADF272619359F01300 /* TestFailureHandlerChainTests.m */; };
+		609E95D44972588081A34D33 /* .DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = 609E90569EBB99441E2DEF36 /* .DS_Store */; };
+		609E99C4BEBB5A70318577B2 /* TestFailureHandlerChainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E99ADF272619359F01300 /* TestFailureHandlerChainTests.m */; };
+		609E9F301DD13297727210CE /* .DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = 609E90569EBB99441E2DEF36 /* .DS_Store */; };
 		74153B5F1A535FEA00FEF450 /* IsTrueFalseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */; };
 		74153B601A535FEA00FEF450 /* IsTrueFalseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */; };
 		74153B631A53606100FEF450 /* HCIsTrueFalse.h in Headers */ = {isa = PBXBuildFile; fileRef = 74153B611A53606100FEF450 /* HCIsTrueFalse.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -449,6 +453,8 @@
 		31DDCCF46E1766AF4AC97BA5 /* Mismatchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mismatchable.h; sourceTree = "<group>"; };
 		31DDCE62F97F2042F0A8BDAE /* HCDiagnosingMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDiagnosingMatcher.h; sourceTree = "<group>"; };
 		5F2773441436F81000B9683A /* ConformsToProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConformsToProtocolTest.m; sourceTree = "<group>"; };
+		609E90569EBB99441E2DEF36 /* .DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file.DS_Store; path = .DS_Store; sourceTree = "<group>"; };
+		609E99ADF272619359F01300 /* TestFailureHandlerChainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFailureHandlerChainTests.m; sourceTree = "<group>"; };
 		74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTrueFalseTest.m; sourceTree = "<group>"; };
 		74153B611A53606100FEF450 /* HCIsTrueFalse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsTrueFalse.h; sourceTree = "<group>"; };
 		74153B621A53606100FEF450 /* HCIsTrueFalse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsTrueFalse.m; sourceTree = "<group>"; };
@@ -655,6 +661,8 @@
 				74D7A7B41A2B902F00CD6CC0 /* DiagnosingMatcherTest.m */,
 				082E7C2D13FF676E004A22FE /* InvocationMatcherTest.m */,
 				082E7C2E13FF676E004A22FE /* StringDescriptionTest.m */,
+				609E90569EBB99441E2DEF36 /* .DS_Store */,
+				609E99ADF272619359F01300 /* TestFailureHandlerChainTests.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1270,6 +1278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				609E95D44972588081A34D33 /* .DS_Store in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1284,6 +1293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				609E9F301DD13297727210CE /* .DS_Store in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1491,6 +1501,7 @@
 				BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */,
 				0850A44F17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
 				31DDC19066E25E0DB52E3441 /* Mismatchable.m in Sources */,
+				609E95B8EB994E0768A22EB5 /* TestFailureHandlerChainTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1627,6 +1638,7 @@
 				BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */,
 				0850A44E17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
 				31DDCC204A3D141D7AC6FC02 /* Mismatchable.m in Sources */,
+				609E99C4BEBB5A70318577B2 /* TestFailureHandlerChainTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
