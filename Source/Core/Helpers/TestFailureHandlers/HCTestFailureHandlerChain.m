@@ -16,10 +16,12 @@ static HCTestFailureHandler *chain = nil;
 {
     if (!chain)
     {
-        HCTestFailureHandler *genericHandler = [[HCGenericTestFailureHandler alloc] initWithSuccessor:nil];
-        HCTestFailureHandler *ocunitHandler = [[HCSenTestFailureHandler alloc] initWithSuccessor:genericHandler];
-        HCTestFailureHandler *xctestHandler = [[HCXCTestFailureHandler alloc] initWithSuccessor:ocunitHandler];
+        HCTestFailureHandler *xctestHandler = [[HCXCTestFailureHandler alloc] init];
+        HCTestFailureHandler *ocunitHandler = [[HCSenTestFailureHandler alloc] init];
+        HCTestFailureHandler *genericHandler = [[HCGenericTestFailureHandler alloc] init];
         chain =  xctestHandler;
+        xctestHandler.successor = ocunitHandler;
+        ocunitHandler.successor = genericHandler;
     }
     return chain;
 }
