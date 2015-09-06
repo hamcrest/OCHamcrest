@@ -141,8 +141,8 @@
     @catch (NSException* exception)
     {
         NSString *reason = [exception reason];
-        assertThat(reason, containsString(@"FILENAME:123"));
-        assertThat(reason, containsString(expectedMessage));
+        assertThat(reason, containsSubstring(@"FILENAME:123"));
+        assertThat(reason, containsSubstring(expectedMessage));
     }
 }
 
