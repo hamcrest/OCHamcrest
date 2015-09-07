@@ -29,3 +29,13 @@
 + (void)reset;
 
 @end
+
+
+/**
+ Returns chain of test failure handlers.
+
+ @b Deprecated: Use <code>[HCTestFailureHandlerChain chain]</code> instead.
+
+ @ingroup integration
+ */
+FOUNDATION_EXPORT HCTestFailureHandler *HC_testFailureHandlerChain(void) __attribute__((deprecated));

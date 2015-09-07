@@ -39,3 +39,9 @@ static HCTestFailureHandler *chainHead = nil;
 }
 
 @end
+
+
+HCTestFailureHandler *HC_testFailureHandlerChain(void)
+{
+    return [HCTestFailureHandlerChain chain];
+}
