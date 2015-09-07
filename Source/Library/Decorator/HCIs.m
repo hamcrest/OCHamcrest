@@ -7,7 +7,7 @@
 
 
 @interface HCIs ()
-@property (readonly, nonatomic, strong) id <HCMatcher> matcher;
+@property (nonatomic, strong, readonly) id <HCMatcher> matcher;
 @end
 
 @implementation HCIs

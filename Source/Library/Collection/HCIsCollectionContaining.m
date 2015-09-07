@@ -10,7 +10,7 @@
 
 
 @interface HCIsCollectionContaining ()
-@property (readonly, nonatomic, strong) id <HCMatcher> elementMatcher;
+@property (nonatomic, strong, readonly) id <HCMatcher> elementMatcher;
 @end
 
 @implementation HCIsCollectionContaining

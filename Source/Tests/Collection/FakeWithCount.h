@@ -6,7 +6,7 @@
 
 @interface FakeWithCount : NSObject
 
-@property (readonly, nonatomic, assign) NSUInteger count;
+@property (nonatomic, assign, readonly) NSUInteger count;
 
 + (instancetype)fakeWithCount:(NSUInteger)fakeCount;
 - (instancetype)initWithCount:(NSUInteger)fakeCount;

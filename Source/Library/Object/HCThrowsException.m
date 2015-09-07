@@ -16,7 +16,7 @@ static void HCRequireMatcher(id obj)
 
 
 @interface HCThrowsException()
-@property (readonly, nonatomic, strong) id <HCMatcher> exceptionMatcher;
+@property (nonatomic, strong, readonly) id <HCMatcher> exceptionMatcher;
 @end
 
 @implementation HCThrowsException

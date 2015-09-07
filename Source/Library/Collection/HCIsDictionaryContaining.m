@@ -8,8 +8,8 @@
 
 
 @interface HCIsDictionaryContaining ()
-@property (readonly, nonatomic, strong) id <HCMatcher> keyMatcher;
-@property (readonly, nonatomic, strong) id <HCMatcher> valueMatcher;
+@property (nonatomic, strong, readonly) id <HCMatcher> keyMatcher;
+@property (nonatomic, strong, readonly) id <HCMatcher> valueMatcher;
 @end
 
 

@@ -9,7 +9,7 @@
 
 
 @interface HCConformsToProtocol ()
-@property (readonly, nonatomic, strong) Protocol *protocol;
+@property (nonatomic, strong, readonly) Protocol *protocol;
 @end
 
 @implementation HCConformsToProtocol

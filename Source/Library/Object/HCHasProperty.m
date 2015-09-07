@@ -10,8 +10,8 @@
 
 
 @interface HCHasProperty ()
-@property (readonly, nonatomic, copy) NSString *propertyName;
-@property (readonly, nonatomic, strong) id <HCMatcher> valueMatcher;
+@property (nonatomic, copy, readonly) NSString *propertyName;
+@property (nonatomic, strong, readonly) id <HCMatcher> valueMatcher;
 @end
 
 @implementation HCHasProperty

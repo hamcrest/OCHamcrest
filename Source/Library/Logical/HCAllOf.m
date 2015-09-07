@@ -7,7 +7,7 @@
 
 
 @interface HCAllOf ()
-@property (readonly, nonatomic, copy) NSArray *matchers;
+@property (nonatomic, copy, readonly) NSArray *matchers;
 @end
 
 @implementation HCAllOf

@@ -48,7 +48,7 @@
 
 
 @interface ProxyObjectSuchAsMock : NSProxy
-@property (readonly, nonatomic, copy) NSString *descriptionText;
+@property (nonatomic, copy, readonly) NSString *descriptionText;
 @end
 
 @implementation ProxyObjectSuchAsMock

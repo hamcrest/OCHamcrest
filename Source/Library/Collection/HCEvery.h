@@ -6,7 +6,7 @@
 
 @interface HCEvery : HCDiagnosingMatcher
 
-@property (readonly, nonatomic, strong) id <HCMatcher> matcher;
+@property (nonatomic, strong, readonly) id <HCMatcher> matcher;
 
 - (instancetype)initWithMatcher:(id <HCMatcher>)matcher;
 

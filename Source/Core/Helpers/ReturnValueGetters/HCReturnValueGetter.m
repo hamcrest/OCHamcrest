@@ -9,8 +9,8 @@
 @end
 
 @interface HCReturnValueGetter ()
-@property (readonly, nonatomic, assign) char const *handlerType;
-@property (readonly, nonatomic, strong) HCReturnValueGetter *successor;
+@property (nonatomic, assign, readonly) char const *handlerType;
+@property (nonatomic, strong, readonly) HCReturnValueGetter *successor;
 @end
 
 

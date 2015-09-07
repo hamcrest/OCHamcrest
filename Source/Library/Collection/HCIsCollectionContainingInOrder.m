@@ -7,8 +7,8 @@
 
 
 @interface HCMatchSequence : NSObject
-@property (readonly, nonatomic, copy) NSArray *matchers;
-@property (readonly, nonatomic, strong) id <HCDescription, NSObject> mismatchDescription;
+@property (nonatomic, copy, readonly) NSArray *matchers;
+@property (nonatomic, strong, readonly) id <HCDescription, NSObject> mismatchDescription;
 @property (nonatomic, assign) NSUInteger nextMatchIndex;
 @end
 
@@ -74,7 +74,7 @@
 
 
 @interface HCIsCollectionContainingInOrder ()
-@property (readonly, nonatomic, copy) NSArray *matchers;
+@property (nonatomic, copy, readonly) NSArray *matchers;
 @end
 
 @implementation HCIsCollectionContainingInOrder

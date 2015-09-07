@@ -6,7 +6,7 @@
 
 @interface HCIsEqual ()
 
-@property (readonly, nonatomic, strong) id object;
+@property (nonatomic, strong, readonly) id object;
 @end
 
 

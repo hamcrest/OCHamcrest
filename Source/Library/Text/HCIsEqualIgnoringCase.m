@@ -7,7 +7,7 @@
 
 
 @interface HCIsEqualIgnoringCase ()
-@property (readonly, nonatomic, copy) NSString *string;
+@property (nonatomic, copy, readonly) NSString *string;
 @end
 
 @implementation HCIsEqualIgnoringCase

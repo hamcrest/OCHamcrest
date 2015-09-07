@@ -7,8 +7,8 @@
 
 
 @interface HCMatchingInAnyOrder : NSObject
-@property (readonly, nonatomic, copy) NSMutableArray *matchers;
-@property (readonly, nonatomic, strong) id <HCDescription, NSObject> mismatchDescription;
+@property (nonatomic, copy, readonly) NSMutableArray *matchers;
+@property (nonatomic, strong, readonly) id <HCDescription, NSObject> mismatchDescription;
 @end
 
 @implementation HCMatchingInAnyOrder
@@ -58,7 +58,7 @@
 
 
 @interface HCIsCollectionContainingInAnyOrder ()
-@property (readonly, nonatomic, copy) NSArray *matchers;
+@property (nonatomic, copy, readonly) NSArray *matchers;
 @end
 
 @implementation HCIsCollectionContainingInAnyOrder

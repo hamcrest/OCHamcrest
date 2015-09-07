@@ -6,8 +6,8 @@
 
 @interface HCIsCloseTo ()
 
-@property (readonly, nonatomic, assign) double value;
-@property (readonly, nonatomic, assign) double delta;
+@property (nonatomic, assign, readonly) double value;
+@property (nonatomic, assign, readonly) double delta;
 @end
 
 

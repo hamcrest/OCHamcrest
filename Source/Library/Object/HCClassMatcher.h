@@ -6,7 +6,7 @@
 
 @interface HCClassMatcher : HCBaseMatcher
 
-@property (readonly, nonatomic, strong) Class theClass;
+@property (nonatomic, strong, readonly) Class theClass;
 
 - (instancetype)initWithClass:(Class)aClass;
 

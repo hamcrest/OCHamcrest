@@ -28,7 +28,7 @@ FOUNDATION_EXPORT id HC_equalToBool(BOOL value) __attribute__((deprecated));
 
 @interface HCIsEqualToBool : HCBaseMatcher
 
-@property (readonly, nonatomic, assign) BOOL value;
+@property (nonatomic, assign, readonly) BOOL value;
 
 - (instancetype)initWithValue:(BOOL)value;
 

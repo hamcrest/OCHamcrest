@@ -11,10 +11,10 @@
  */
 @interface HCTestFailure : NSObject
 
-@property (readonly, nonatomic, strong) id testCase;
-@property (readonly, nonatomic, copy) NSString *fileName;
-@property (readonly, nonatomic, assign) NSUInteger lineNumber;
-@property (readonly, nonatomic, strong) NSString *reason;
+@property (nonatomic, strong, readonly) id testCase;
+@property (nonatomic, copy, readonly) NSString *fileName;
+@property (nonatomic, assign, readonly) NSUInteger lineNumber;
+@property (nonatomic, strong, readonly) NSString *reason;
 
 - (instancetype)initWithTestCase:(id)testCase
                         fileName:(NSString *)fileName
