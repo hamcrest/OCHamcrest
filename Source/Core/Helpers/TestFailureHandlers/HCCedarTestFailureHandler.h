@@ -7,7 +7,7 @@
 /**
  * Integrate OCHamcrest test failures into Cedar.
  *
- * Instantiate a @c HCCedarTestFailureHandler and add it to the @HCTestFailureHandlerChain before
+ * Instantiate a @c HCCedarTestFailureHandler and add it to the @c HCTestFailureHandlerChain before
  * your Cedar tests.
  */
 @interface HCCedarTestFailureHandler : HCTestFailureHandler

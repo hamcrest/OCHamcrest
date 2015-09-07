@@ -48,10 +48,9 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
  @c assertThatC passes the actual value to the matcher for evaluation. If the matcher is not
  satisfied, an exception is thrown describing the mismatch.
 
- @c assertThatC is designed for use in standalone C functions. It's designed to integrate well with
- unit testing frameworks where tests are standalone functions, not methods. You may also want to
- install a custom test failure handler for better reporting; see HCCedarTestFailureHandler as an
- example.
+ Use @c assertThatC in standalone C functions. It's designed to integrate well with unit testing
+ frameworks where tests are standalone functions, not methods. You may also want to install a custom
+ test failure handler for better reporting; see HCCedarTestFailureHandler as an example.
 
  In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
  @c HC_assertThatC instead.
@@ -136,4 +135,35 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
 #ifdef HC_SHORTHAND
     #define assertWithTimeout HC_assertWithTimeout
     #define thatEventually HC_thatEventually
+#endif
+
+
+#define HC_assertWithTimeoutC(timeout, actualBlock, matcher)  \
+    HC_assertWithTimeoutAndLocation(nil, timeout, actualBlock, matcher, __FILE__, __LINE__)
+
+/**
+ assertWithTimeoutC(timeout, actualBlock, matcher) -
+ Asserts that a value provided by a block will satisfy matcher within a given time, in a standalone function.
+
+ @param timeout     Maximum time to wait for passing behavior, specified in seconds.
+ @param actualBlock A block providing the object to repeatedly evaluate as the actual value.
+ @param matcher     The matcher to satisfy as the expected condition.
+
+ @c assertWithTimeoutC polls a value provided by a block to asynchronously satisfy the matcher. The
+ block is evaluated repeatedly for an actual value, which is passed to the matcher for evaluation.
+ If the matcher is not satisfied within the timeout, an exception is thrown describing the mismatch.
+
+ An easy way of providing the @c actualBlock is to use the macro <code>thatEventually(actual)</code>.
+
+ Use @c assertWithTimeoutC in standalone C functions. It's designed to integrate well with unit
+ testing frameworks where tests are standalone functions, not methods. You may also want to install
+ a custom test failure handler for better reporting; see HCCedarTestFailureHandler as an example.
+
+ In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+ @c HC_assertWithTimeoutC and HC_thatEventually instead.
+
+ @ingroup integration
+*/
+#ifdef HC_SHORTHAND
+    #define assertWithTimeoutC HC_assertWithTimeoutC
 #endif

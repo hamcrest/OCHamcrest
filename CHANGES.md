@@ -5,6 +5,12 @@ NEXT VERSION
 
 - Fixed "Incompatible pointer types sending 'Class' to parameter of type 'NSString *'" warning on `instanceOf`.
 
+**Features:**
+
+- Added assertions designed for use in standalone functions: `assertThatC` and `assertWithTimeoutC`.
+- Added ability to add custom test failure handlers. See HCTestFailureHandlerChain.
+- Added optional test failure handler for Cedar. See HCCedarTestFailureHandler and add to HCTestFailureHandlerChain. Use the new standalone assertions `assertThatC` and `assertWithTimeoutC`.
+
 **Deprecated:**
 
 - Deprecated `containsString`; use `containsSubstring` instead. `containsString` clashes with an NSString method introduced in iOS 8.

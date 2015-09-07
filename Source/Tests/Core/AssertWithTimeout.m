@@ -9,8 +9,15 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-
 static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
+
+static void standaloneAssertWithTimeout(NSTimeInterval timeout,
+        HCFutureValue actualBlock,
+        id <HCMatcher> matcher)
+{
+    assertWithTimeoutC(timeout, actualBlock, matcher);
+}
+
 
 @interface AssertWithTimeout : SenTestCase
 @end
@@ -76,21 +83,25 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
     dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
         futureBar = @"bar";
     });
-    [self raiseAfterFailure];
 
     NSTimeInterval waitTime = [self timeExecutingBlock:^{
-        @try
-        {
-            assertWithTimeout(maxTime, thatEventually(futureBar), equalTo(@"bar"));
-        }
-        @catch (NSException *exception)
-        {
-            STFail(@"should have succeeded");
-        }
+        assertWithTimeout(maxTime, thatEventually(futureBar), equalTo(@"bar"));
     }];
 
     STAssertTrue(waitTime > succeedTime, @"Expect assert to terminate after value is changed, but was %lf", waitTime);
     STAssertTrue(waitTime < maxTime, @"Expect assert to terminate before timeout, but was %lf", waitTime);
+}
+
+- (void)testStandaloneAssertWithTimeoutC_EventuallySatisfied_ShouldSucceed
+{
+    NSTimeInterval succeedTime = 0.2;
+    __block NSString *futureBar = @"foo";
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(succeedTime * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+        futureBar = @"bar";
+    });
+
+    standaloneAssertWithTimeout(1, thatEventually(futureBar), equalTo(@"bar"));
 }
 
 - (void)testDeprecatedAssertThatAfter_WithTimeoutGreaterThanZeroShouldSucceedNotImmediatelyButBeforeTimeout
@@ -127,6 +138,12 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
     return waitTime;
 }
 
+- (void)assertThatResultString:(NSString *)resultString containsExpectedString:(NSString *)expectedString
+{
+    STAssertNotNil(resultString, nil);
+    STAssertTrue([resultString rangeOfString:expectedString].location != NSNotFound, nil);
+}
+
 - (void)testAssertionErrorShouldDescribeExpectedAndActual
 {
     NSString *expected = @"EXPECTED";
@@ -141,7 +158,7 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
     }
     @catch (NSException* exception)
     {
-        STAssertTrue([[exception reason] rangeOfString:expectedMessage].location != NSNotFound, nil);
+        [self assertThatResultString:[exception reason] containsExpectedString:expectedMessage];
         return;
     }
     STFail(@"should have failed");
