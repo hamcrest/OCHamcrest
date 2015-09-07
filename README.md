@@ -86,12 +86,12 @@ XCTest's `XCTAssertEqualObjects` function, we'll use OCHamcrest's `assertThat`
 construct and a predefined matcher:
 
 ```obj-c
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
 
-@interface BiscuitTest : SenTestCase
+@interface BiscuitTest : XCTestCase
 @end
 
 @implementation BiscuitTest
