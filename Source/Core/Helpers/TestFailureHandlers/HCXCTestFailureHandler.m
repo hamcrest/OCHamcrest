@@ -5,7 +5,6 @@
 
 #import "HCTestFailure.h"
 
-
 @interface NSObject (PretendMethodExistsOnNSObjectToAvoidLinkingXCTest)
 
 - (void)recordFailureWithDescription:(NSString *)description

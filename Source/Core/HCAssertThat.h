@@ -22,9 +22,8 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
  @c assertThat passes the actual value to the matcher for evaluation. If the matcher is not
  satisfied, an exception is thrown describing the mismatch.
 
- @c assertThat is designed to integrate well with OCUnit and other unit testing frameworks.
- Unmet assertions are reported as test failures. In Xcode, these failures can be clicked to
- reveal the line of the assertion.
+ @c assertThat is designed to integrate well with XCTest and other unit testing frameworks where
+ tests are methods. Unmet assertions are reported as test failures.
 
  In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
  @c HC_assertThat instead.
@@ -33,6 +32,34 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
  */
 #ifdef HC_SHORTHAND
     #define assertThat HC_assertThat
+#endif
+
+
+#define HC_assertThatC(actual, matcher)  \
+    HC_assertThatWithLocation(nil, actual, matcher, __FILE__, __LINE__)
+
+/**
+ assertThatC(actual, matcher) -
+ Asserts that actual value satisfies matcher, in a standalone function.
+
+ @param actual   The object to evaluate as the actual value.
+ @param matcher  The matcher to satisfy as the expected condition.
+
+ @c assertThatC passes the actual value to the matcher for evaluation. If the matcher is not
+ satisfied, an exception is thrown describing the mismatch.
+
+ @c assertThatC is designed for use in standalone C functions. It's designed to integrate well with
+ unit testing frameworks where tests are standalone functions, not methods. You may also want to
+ install a custom test failure handler for better reporting; see HCCedarTestFailureHandler as an
+ example.
+
+ In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
+ @c HC_assertThatC instead.
+
+ @ingroup integration
+ */
+#ifdef HC_SHORTHAND
+#define assertThatC HC_assertThatC
 #endif
 
 

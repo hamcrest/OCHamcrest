@@ -6,7 +6,6 @@
 #import "HCTestFailure.h"
 #import "NSInvocation+OCHamcrest.h"
 
-
 @interface NSObject (PretendMethodsExistOnNSObjectToAvoidLinkingSenTestingKit)
 
 + (NSException *)failureInFile:(NSString *)filename
