@@ -5,8 +5,7 @@
 
 /*!
  * @brief Returns chain of test failure handlers.
- * @deprecated in version 4.2.0
- * @discussion <em>Deprecated: Use <code>[HCTestFailureReporterChain chain]</code> instead.</em>
+ * @deprecated Version 4.2.0. Use <code>[HCTestFailureReporterChain chain]</code> instead.
  * @see HCTestFailureReporterChain
  */
 FOUNDATION_EXPORT HCTestFailureHandler *HC_testFailureHandlerChain(void) __attribute__((deprecated));
