@@ -11,10 +11,9 @@ FOUNDATION_EXPORT id HC_equalToBool(BOOL value) __attribute__((deprecated));
  * @brief equalToBool(value) -
  * Matches if object is equal to NSNumber created from a BOOL.
  * @param value The BOOL value from which to create an NSNumber.
- * @discussion <em>Deprecated: Use @ref isTrue() or @ref isFalse() instead.</em>
- *
- * This matcher creates an NSNumber object from a BOOL value and compares the evaluated object to it
- * for equality.
+ * @deprecated Version 4.1.0. Use @ref isTrue() or @ref isFalse() instead.
+ * @discussion This matcher creates an NSNumber object from a BOOL value and compares the evaluated
+ * object to it for equality.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
