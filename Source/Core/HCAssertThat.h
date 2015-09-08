@@ -8,7 +8,7 @@
 /*!
  * @header
  * Assertion macros for using matchers in testing frameworks.
- * Unmet assertions are reported to the @ref HCTestFailureHandlerChain.
+ * Unmet assertions are reported to the @ref HCTestFailureReporterChain.
  */
 
 
@@ -25,7 +25,7 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
  * @param actual The object to evaluate as the actual value.
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion assertThat passes the actual value to the matcher for evaluation. If the matcher is
- * not satisfied, it is reported to the @ref HCTestFailureHandlerChain.
+ * not satisfied, it is reported to the @ref HCTestFailureReporterChain.
  *
  * Use assertThat in test case methods. It's designed to integrate with XCTest and other testing
  * frameworks where individual tests are executed as methods.
@@ -48,11 +48,11 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
  * @param actual The object to evaluate as the actual value.
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion assertThatC passes the actual value to the matcher for evaluation. If the matcher is
- * not satisfied, it is reported to the @ref HCTestFailureHandlerChain.
+ * not satisfied, it is reported to the @ref HCTestFailureReporterChain.
  *
  * Use assertThatC in standalone C functions. It's designed to integrate with testing frameworks
  * where individual tests are executed as standalone functions. You may also want to install a
- * custom test failure handler for better reporting; see HCCedarTestFailureHandler as an example.
+ * custom test failure handler for better reporting; see HCCedarTestFailureReporter as an example.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -85,7 +85,7 @@ OBJC_EXPORT void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxT
  *
  * assertThatAfter checks several times if the matcher is satisfied before timeout. To evaluate the
  * matcher, the <em>actualBlock</em> will provide updated values of actual. If the matcher is not
- * satisfied after <em>maxTime</em>, it is reported to the @ref HCTestFailureHandlerChain.
+ * satisfied after <em>maxTime</em>, it is reported to the @ref HCTestFailureReporterChain.
  *
  * An easy way of defining the actualBlock is using the macro <code>futureValueOf(actual)</code>,
  * which also improves readability.
@@ -134,7 +134,7 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
  * @discussion <em>assertWithTimeout</em> polls a value provided by a block to asynchronously
  * satisfy the matcher. The block is evaluated repeatedly for an actual value, which is passed to
  * the matcher for evaluation. If the matcher is not satisfied within the timeout, it is reported to
- * the @ref HCTestFailureHandlerChain.
+ * the @ref HCTestFailureReporterChain.
  *
  * An easy way of providing the <em>actualBlock</em> is to use the macro @ref thatEventually</code>.
  *
@@ -171,14 +171,14 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
  * @discussion assertWithTimeoutC polls a value provided by a block to asynchronously satisfy the
  * matcher. The block is evaluated repeatedly for an actual value, which is passed to the matcher
  * for evaluation. If the matcher is not satisfied within the timeout, it is reported to the
- * @ref HCTestFailureHandlerChain.
+ * @ref HCTestFailureReporterChain.
  *
  * An easy way of providing the <em>actualBlock</em> is to use the macro
  * <code>thatEventually(actual)</code>.
  *
  * Use assertWithTimeoutC in standalone C functions. It's designed to integrate with testing
  * frameworks where individual tests are executed as standalone functions. You may also want to
- * install a custom test failure handler for better reporting; see @ref HCCedarTestFailureHandler
+ * install a custom test failure handler for better reporting; see @ref HCCedarTestFailureReporter
  * as an example.
  *
  * @see thatEventually

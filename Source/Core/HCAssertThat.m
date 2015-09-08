@@ -6,8 +6,8 @@
 #import "HCStringDescription.h"
 #import "HCMatcher.h"
 #import "HCTestFailure.h"
-#import "HCTestFailureHandler.h"
-#import "HCTestFailureHandlerChain.h"
+#import "HCTestFailureReporter.h"
+#import "HCTestFailureReporterChain.h"
 #import <libkern/OSAtomic.h>
 
 
@@ -28,7 +28,7 @@ static void reportMismatch(id testCase, id actual, id <HCMatcher> matcher,
                                                             fileName:[NSString stringWithUTF8String:fileName]
                                                           lineNumber:(NSUInteger)lineNumber
                                                               reason:describeMismatch(matcher, actual)];
-    HCTestFailureHandler *chain = [HCTestFailureHandlerChain chain];
+    HCTestFailureReporter *chain = [HCTestFailureReporterChain chain];
     [chain handleFailure:failure];
 }
 

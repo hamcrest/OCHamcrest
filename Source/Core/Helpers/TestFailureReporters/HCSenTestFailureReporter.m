@@ -1,7 +1,7 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 
-#import "HCSenTestFailureHandler.h"
+#import "HCSenTestFailureReporter.h"
 
 #import "HCTestFailure.h"
 #import "NSInvocation+OCHamcrest.h"
@@ -42,7 +42,7 @@
 @end
 
 
-@implementation HCSenTestFailureHandler
+@implementation HCSenTestFailureReporter
 
 - (BOOL)willHandleFailure:(HCTestFailure *)failure
 {

@@ -3,10 +3,10 @@
 
 #define HC_SHORTHAND
 #import <OCHamcrest/HCAssertThat.h>
-#import <OCHamcrest/HCCedarTestFailureHandler.h>
+#import "HCCedarTestFailureReporter.h"
 
 #import <OCHamcrest/HCIsEqual.h>
-#import <OCHamcrest/HCTestFailureHandlerChain.h>
+#import "HCTestFailureReporterChain.h"
 
 #import <SenTestingKit/SenTestingKit.h>
 
@@ -232,13 +232,13 @@ static void standaloneAssertionOutsideTestCase(id actual, id <HCMatcher> matcher
 - (void)setUp
 {
     [super setUp];
-    HCCedarTestFailureHandler *cedarHandler = [[HCCedarTestFailureHandler alloc] init];
-    [HCTestFailureHandlerChain addHandler:cedarHandler];
+    HCCedarTestFailureReporter *cedarHandler = [[HCCedarTestFailureReporter alloc] init];
+    [HCTestFailureReporterChain addHandler:cedarHandler];
 }
 
 - (void)tearDown
 {
-    [HCTestFailureHandlerChain reset];
+    [HCTestFailureReporterChain reset];
     [super tearDown];
 }
 

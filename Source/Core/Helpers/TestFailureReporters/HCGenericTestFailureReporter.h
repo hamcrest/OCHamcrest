@@ -1,8 +1,8 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 
-#import "HCTestFailureHandler.h"
+#import "HCTestFailureReporter.h"
 
 
-@interface HCGenericTestFailureHandler : HCTestFailureHandler
+@interface HCGenericTestFailureReporter : HCTestFailureReporter
 @end

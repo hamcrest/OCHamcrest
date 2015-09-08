@@ -1,7 +1,7 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 
-#import "HCCedarTestFailureHandler.h"
+#import "HCCedarTestFailureReporter.h"
 #import "HCTestFailure.h"
 
 
@@ -10,7 +10,7 @@
 @end
 
 
-@implementation HCCedarTestFailureHandler
+@implementation HCCedarTestFailureReporter
 
 - (BOOL)willHandleFailure:(HCTestFailure *)failure
 {

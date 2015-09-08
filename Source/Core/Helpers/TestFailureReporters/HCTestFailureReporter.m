@@ -1,15 +1,15 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 
-#import "HCTestFailureHandler.h"
+#import "HCTestFailureReporter.h"
 
-@interface HCTestFailureHandler (SubclassResponsibility)
+@interface HCTestFailureReporter (SubclassResponsibility)
 - (BOOL)willHandleFailure:(HCTestFailure *)failure;
 - (void)executeHandlingOfFailure:(HCTestFailure *)failure;
 @end
 
 
-@implementation HCTestFailureHandler
+@implementation HCTestFailureReporter
 
 - (void)handleFailure:(HCTestFailure *)failure
 {

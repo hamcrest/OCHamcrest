@@ -1,9 +1,10 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 
+#import "HCTestFailureReporterChain.h"
 #import "HCTestFailureHandlerChain.h"
 
-#import "HCTestFailureHandler.h"
+#import "HCTestFailureReporter.h"
 
 #import <SenTestingKit/SenTestingKit.h>
 
@@ -15,15 +16,15 @@
 
 - (void)tearDown
 {
-    [HCTestFailureHandlerChain reset];
+    [HCTestFailureReporterChain reset];
     [super tearDown];
 }
 
 - (void)testDefaultChain_ShouldPointToXCTestHandlerAsHeadOfChain
 {
-    HCTestFailureHandler *handler = [HCTestFailureHandlerChain chain];
+    HCTestFailureReporter *handler = [HCTestFailureReporterChain chain];
 
-    STAssertEqualObjects(NSStringFromClass([handler class]), @"HCXCTestFailureHandler", nil);
+    STAssertEqualObjects(NSStringFromClass([handler class]), @"HCXCTestFailureReporter", nil);
     STAssertNotNil(handler.successor, nil);
 }
 
@@ -31,34 +32,34 @@
 {
     HCTestFailureHandler *handler = HC_testFailureHandlerChain();
 
-    STAssertEqualObjects(NSStringFromClass([handler class]), @"HCXCTestFailureHandler", nil);
+    STAssertEqualObjects(NSStringFromClass([handler class]), @"HCXCTestFailureReporter", nil);
     STAssertNotNil(handler.successor, nil);
 }
 
 - (void)testAddHandler_ShouldSetHeadOfChainToGivenHandler
 {
-    HCTestFailureHandler *newHandler = [[HCTestFailureHandler alloc] init];
+    HCTestFailureReporter *newHandler = [[HCTestFailureReporter alloc] init];
 
-    [HCTestFailureHandlerChain addHandler:newHandler];
+    [HCTestFailureReporterChain addHandler:newHandler];
 
-    STAssertEquals([HCTestFailureHandlerChain chain], newHandler, nil);
+    STAssertEquals([HCTestFailureReporterChain chain], newHandler, nil);
 }
 
 - (void)testAddHandler_ShouldSetHandlerSuccessorToPreviousHeadOfChain
 {
-    HCTestFailureHandler *newHandler = [[HCTestFailureHandler alloc] init];
-    HCTestFailureHandler *oldHead = [HCTestFailureHandlerChain chain];
+    HCTestFailureReporter *newHandler = [[HCTestFailureReporter alloc] init];
+    HCTestFailureReporter *oldHead = [HCTestFailureReporterChain chain];
     
-    [HCTestFailureHandlerChain addHandler:newHandler];
+    [HCTestFailureReporterChain addHandler:newHandler];
     
     STAssertEquals(newHandler.successor, oldHead, nil);
 }
 
 - (void)testAddHandler_ShouldSetHandlerSuccessorEvenIfHeadOfChainHasNotBeenReferenced
 {
-    HCTestFailureHandler *newHandler = [[HCTestFailureHandler alloc] init];
+    HCTestFailureReporter *newHandler = [[HCTestFailureReporter alloc] init];
 
-    [HCTestFailureHandlerChain addHandler:newHandler];
+    [HCTestFailureReporterChain addHandler:newHandler];
 
     STAssertNotNil(newHandler.successor, nil);
 }
