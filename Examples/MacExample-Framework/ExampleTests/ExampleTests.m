@@ -12,13 +12,7 @@
 {
     assertThat(@"xx", is(@"xx"));
     assertThat(@"yy", isNot(@"xx"));
-    assertThat(@"i like cheese", containsString(@"cheese"));
-}
-
-- (void)testUsingNumbers
-{
-    assertThatInt(42, is(@42));
-    assertThatUnsignedShort(6 * 9, isNot(@42U));
+    assertThat(@"i like cheese", containsSubstring(@"cheese"));
 }
 
 @end
