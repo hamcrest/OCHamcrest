@@ -4,9 +4,7 @@
 #import <Foundation/Foundation.h>
 
 
-/**
- Throws an NSException if @a obj is @c nil.
-
- @ingroup helpers
+/*!
+ * @brief Throws an NSException if <em>obj</em> is <code>nil</code>.
 */
 FOUNDATION_EXPORT void HCRequireNonNilObject(id obj);

@@ -4,11 +4,10 @@
 #import "HCTestFailureHandler.h"
 
 
-/**
- * Integrate OCHamcrest test failures into Cedar.
- *
- * Instantiate a @c HCCedarTestFailureHandler and add it to the @c HCTestFailureHandlerChain before
- * your Cedar tests.
+/*!
+ * @brief Integrate OCHamcrest test failures into Cedar.
+ * @discussion Instantiate a HCCedarTestFailureHandler and add it to the
+ * @ref HCTestFailureHandlerChain before your Cedar tests.
  */
 @interface HCCedarTestFailureHandler : HCTestFailureHandler
 @end

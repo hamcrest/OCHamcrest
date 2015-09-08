@@ -6,7 +6,7 @@
 @class HCReturnValueGetter;
 
 
-/**
- Returns chain of return type handlers.
+/*!
+ * @brief Returns chain of return type handlers.
  */
 FOUNDATION_EXPORT HCReturnValueGetter *HCReturnValueGetterChain(void);

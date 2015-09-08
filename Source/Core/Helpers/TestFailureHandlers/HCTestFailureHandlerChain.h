@@ -6,36 +6,35 @@
 @class HCTestFailureHandler;
 
 
-/**
- Manage chain-of-responsibility for handling test failures.
-
- @ingroup integration
+/*!
+ * @brief Manage chain-of-responsibility for reporting test failures.
+ * @discussion This provides a generic way of reporting test failures without knowing about the
+ * underlying test framework. By default, we try XCTest first, then SenTestingKit. If we run out of
+ * options, the final catch-all is to throw an NSException describing the test failure.
  */
 @interface HCTestFailureHandlerChain : NSObject
 
-/**
- * Returns current chain of test failure handlers.
+/*!
+ * @brief Returns current chain of test failure handlers.
  */
 + (HCTestFailureHandler *)chain;
 
-/**
- * Adds given test failure handler to head of chain-of-responsibility.
+/*!
+ * @brief Adds given test failure handler to head of chain-of-responsibility.
  */
 + (void)addHandler:(HCTestFailureHandler *)handler;
 
-/**
- * Resets chain-of-responsibility to default.
+/*!
+ * @brief Resets chain-of-responsibility to default.
  */
 + (void)reset;
 
 @end
 
 
-/**
- Returns chain of test failure handlers.
-
- @b Deprecated: Use <code>[HCTestFailureHandlerChain chain]</code> instead.
-
- @ingroup integration
+/*!
+ @brief Returns chain of test failure handlers.
+ @discussion <em>Deprecated: Use <code>[HCTestFailureHandlerChain chain]</code> instead.</em>
+ @see HCTestFailureHandlerChain
  */
 FOUNDATION_EXPORT HCTestFailureHandler *HC_testFailureHandlerChain(void) __attribute__((deprecated));

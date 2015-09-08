@@ -4,8 +4,8 @@
 #import <Foundation/Foundation.h>
 
 
-/**
- Chain-of-responsibility for handling NSInvocation return types.
+/*!
+ * @brief Chain-of-responsibility for handling NSInvocation return types.
  */
 @interface HCReturnValueGetter : NSObject
 

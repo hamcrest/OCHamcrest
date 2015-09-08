@@ -15,27 +15,22 @@
 
 FOUNDATION_EXPORT id HC_everyItem(id itemMatcher);
 
-/**
- everyItem(itemMatcher) -
- Matches if every element of a collection satisfies the given matcher.
-
- @param itemMatcher  The matcher to apply to every item provided by the examined collection.
-
- This matcher iterates the evaluated collection, confirming that each element satisfies the given
- matcher.
-
- Example:
-
- @par
- @ref everyItem(startsWith(@"Jo"))
-
- will match a collection [@"Jon", @"John", @"Johann"].
-
- (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
- @c HC_everyItem instead.)
-
- @ingroup collection_matchers
- */
 #ifdef HC_SHORTHAND
-    #define everyItem HC_everyItem
+/*!
+ * @brief everyItem(itemMatcher) -
+ * Matches if every element of a collection satisfies the given matcher.
+ * @param itemMatcher The matcher to apply to every item provided by the examined collection.
+ * @discussion This matcher iterates the evaluated collection, confirming that each element
+ * satisfies the given matcher.
+ *
+ * Example:
+ * <ul>
+ *   <li><code>everyItem(startsWith(\@"Jo"))</code></li>
+ * </ul>
+ * will match a collection ["Jon", "John", "Johann"].
+ *
+ * @attribute Name Clash
+ * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym HC_everyItem instead.
+ */
+#define everyItem HC_everyItem
 #endif

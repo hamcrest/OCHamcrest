@@ -13,23 +13,22 @@
 
 FOUNDATION_EXPORT id HC_instanceOf(Class aClass);
 
-/**
- instanceOf(aClass) -
- Matches if object is an instance of, or inherits from, a given class.
-
- @param aClass  The class to compare against as the expected class.
-
- This matcher checks whether the evaluated object is an instance of @a aClass or an instance of
- any class that inherits from @a aClass.
-
- Example:
- @li @ref instanceOf([NSString class])
-
- (In the event of a name clash, don't \#define @c HC_SHORTHAND and use the synonym
- @c HC_instanceOf instead.)
-
- @ingroup object_matchers
- */
 #ifdef HC_SHORTHAND
-    #define instanceOf HC_instanceOf
+/*!
+ * @brief instanceOf(aClass) -
+ * Matches if object is an instance of, or inherits from, a given class.
+ * @param aClass The class to compare against as the expected class.
+ * @discussion This matcher checks whether the evaluated object is an instance of <em>aClass</em> or
+ * an instance of any class that inherits from <em>aClass</em>.
+ *
+ * Example:
+ * <ul>
+ *   <li></code>instanceOf([NSString class])</code></li>
+ * </ul>
+ *
+ * @attribute Name Clash
+ * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * HC_instanceOf instead.
+ */
+#define instanceOf HC_instanceOf
 #endif
