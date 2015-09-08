@@ -14,16 +14,21 @@
 
 - (BOOL)willHandleFailure:(HCTestFailure *)failure
 {
-    return NSClassFromString(@"CDRSpecFailure") != nil;
+    return [self cedarSpecFailureClass] != nil;
 }
 
 - (void)executeHandlingOfFailure:(HCTestFailure *)failure
 {
-    Class specFailureClass = NSClassFromString(@"CDRSpecFailure");
+    Class specFailureClass = [self cedarSpecFailureClass];
     NSException *specFailure = [specFailureClass specFailureWithReason:failure.reason
                                                               fileName:failure.fileName
                                                             lineNumber:failure.lineNumber];
     [specFailure raise];
+}
+
+- (Class)cedarSpecFailureClass
+{
+    return NSClassFromString(@"CDRSpecFailure");
 }
 
 @end

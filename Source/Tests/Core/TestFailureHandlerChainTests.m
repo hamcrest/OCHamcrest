@@ -22,10 +22,10 @@
 
 - (void)testDefaultChain_ShouldPointToXCTestHandlerAsHeadOfChain
 {
-    HCTestFailureReporter *handler = [HCTestFailureReporterChain chain];
+    HCTestFailureReporter *chain = [HCTestFailureReporterChain chain];
 
-    STAssertEqualObjects(NSStringFromClass([handler class]), @"HCXCTestFailureReporter", nil);
-    STAssertNotNil(handler.successor, nil);
+    STAssertEqualObjects(NSStringFromClass([chain class]), @"HCXCTestFailureReporter", nil);
+    STAssertNotNil(chain.successor, nil);
 }
 
 - (void)testDeprecatedFunction_ShouldPointToXCTestHandlerAsHeadOfChain

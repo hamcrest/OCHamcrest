@@ -15,12 +15,12 @@
 @interface HCTestFailureReporterChain : NSObject
 
 /*!
- * @brief Returns current chain of test failure handlers.
+ * @brief Returns current chain of test failure reporters.
  */
 + (HCTestFailureReporter *)chain;
 
 /*!
- * @brief Adds given test failure handler to head of chain-of-responsibility.
+ * @brief Adds given test failure reporter to head of chain-of-responsibility.
  */
 + (void)addHandler:(HCTestFailureReporter *)handler;
 

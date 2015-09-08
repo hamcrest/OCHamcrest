@@ -16,13 +16,13 @@ static HCTestFailureReporter *chainHead = nil;
 {
     if (!chainHead)
     {
-        HCTestFailureReporter *xctestHandler = [[HCXCTestFailureReporter alloc] init];
-        HCTestFailureReporter *ocunitHandler = [[HCSenTestFailureReporter alloc] init];
-        HCTestFailureReporter *genericHandler = [[HCGenericTestFailureReporter alloc] init];
+        HCTestFailureReporter *xctestReporter = [[HCXCTestFailureReporter alloc] init];
+        HCTestFailureReporter *ocunitReporter = [[HCSenTestFailureReporter alloc] init];
+        HCTestFailureReporter *genericReporter = [[HCGenericTestFailureReporter alloc] init];
 
-        chainHead =  xctestHandler;
-        xctestHandler.successor = ocunitHandler;
-        ocunitHandler.successor = genericHandler;
+        chainHead = xctestReporter;
+        xctestReporter.successor = ocunitReporter;
+        ocunitReporter.successor = genericReporter;
     }
     return chainHead;
 }

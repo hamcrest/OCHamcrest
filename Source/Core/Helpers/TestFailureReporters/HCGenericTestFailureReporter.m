@@ -25,7 +25,7 @@
                                                          failure.fileName,
                                                          (unsigned long)failure.lineNumber,
                                                          failure.reason];
-    return [NSException exceptionWithName:@"Hamcrest Error" reason:failureReason userInfo:nil];
+    return [NSException exceptionWithName:@"HCGenericTestFailure" reason:failureReason userInfo:nil];
 }
 
 @end

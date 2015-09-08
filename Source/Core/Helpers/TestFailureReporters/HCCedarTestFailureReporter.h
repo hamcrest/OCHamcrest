@@ -5,9 +5,9 @@
 
 
 /*!
- * @brief Integrate OCHamcrest test failures into Cedar.
- * @discussion Instantiate a HCCedarTestFailureReporter and add it to the
- * @ref HCTestFailureReporterChain before your Cedar tests.
+ * @brief Report test failures to Cedar.
+ * @discussion Instantiate a HCCedarTestFailureReporter and add it to
+ * the @ref HCTestFailureReporterChain before your Cedar tests.
  */
 @interface HCCedarTestFailureReporter : HCTestFailureReporter
 @end
