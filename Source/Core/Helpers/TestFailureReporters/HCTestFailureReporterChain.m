@@ -12,7 +12,7 @@ static HCTestFailureReporter *chainHead = nil;
 
 @implementation HCTestFailureReporterChain
 
-+ (HCTestFailureReporter *)chain
++ (HCTestFailureReporter *)reporterChain
 {
     if (!chainHead)
     {
@@ -27,10 +27,10 @@ static HCTestFailureReporter *chainHead = nil;
     return chainHead;
 }
 
-+ (void)addHandler:(HCTestFailureReporter *)handler
++ (void)addReporter:(HCTestFailureReporter *)reporter
 {
-    handler.successor = [self chain];
-    chainHead = handler;
+    reporter.successor = [self reporterChain];
+    chainHead = reporter;
 }
 
 + (void)reset

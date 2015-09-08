@@ -28,7 +28,7 @@ static void reportMismatch(id testCase, id actual, id <HCMatcher> matcher,
                                                             fileName:[NSString stringWithUTF8String:fileName]
                                                           lineNumber:(NSUInteger)lineNumber
                                                               reason:describeMismatch(matcher, actual)];
-    HCTestFailureReporter *chain = [HCTestFailureReporterChain chain];
+    HCTestFailureReporter *chain = [HCTestFailureReporterChain reporterChain];
     [chain handleFailure:failure];
 }
 

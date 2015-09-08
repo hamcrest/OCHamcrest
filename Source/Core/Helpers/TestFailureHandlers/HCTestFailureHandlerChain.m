@@ -8,5 +8,5 @@
 
 HCTestFailureHandler *HC_testFailureHandlerChain(void)
 {
-    return [HCTestFailureReporterChain chain];
+    return [HCTestFailureReporterChain reporterChain];
 }

@@ -17,12 +17,12 @@
 /*!
  * @brief Returns current chain of test failure reporters.
  */
-+ (HCTestFailureReporter *)chain;
++ (HCTestFailureReporter *)reporterChain;
 
 /*!
  * @brief Adds given test failure reporter to head of chain-of-responsibility.
  */
-+ (void)addHandler:(HCTestFailureReporter *)handler;
++ (void)addReporter:(HCTestFailureReporter *)reporter;
 
 /*!
  * @brief Resets chain-of-responsibility to default.

@@ -233,7 +233,7 @@ static void standaloneAssertionOutsideTestCase(id actual, id <HCMatcher> matcher
 {
     [super setUp];
     HCCedarTestFailureReporter *cedarHandler = [[HCCedarTestFailureReporter alloc] init];
-    [HCTestFailureReporterChain addHandler:cedarHandler];
+    [HCTestFailureReporterChain addReporter:cedarHandler];
 }
 
 - (void)tearDown
