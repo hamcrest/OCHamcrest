@@ -9,7 +9,7 @@ NEXT VERSION
 **Features:**
 
 - Improved readability of asynchronous tests: `assertWithTimeout(1, thatEventually(var), is(@10));`
-- Added assertions designed for use in standalone functions: `assertThatC` and `assertWithTimeoutC`.
+- Added assertion designed for use in standalone functions: `assertThatC`.
 - Added ability to add custom test failure reporter. See HCTestFailureReporterChain.
 
 **Deprecated:**

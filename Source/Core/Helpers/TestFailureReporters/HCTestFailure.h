@@ -15,8 +15,7 @@
  *
  * For unmet OCHamcrest assertions, if the assertion was @ref assertThat or @ref assertWithTimeout,
  * <em>testCase</em> will be the test case instance.
- * If the assertion was @ref assertThatC or @ref assertWithTimeoutC, <em>testCase</em> will be
- * <code>nil</code>.
+ * If the assertion was @ref assertThatC, <em>testCase</em> will be <code>nil</code>.
  */
 @property (nonatomic, strong, readonly) id testCase;
 
