@@ -38,30 +38,6 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
 #endif
 
 
-#define HC_assertThatC(actual, matcher)  \
-    HC_assertThatWithLocation(nil, actual, matcher, __FILE__, __LINE__)
-
-#ifdef HC_SHORTHAND
-/*!
- * @brief assertThatC(actual, matcher) -
- * Asserts that actual value satisfies matcher, in a standalone function.
- * @param actual The object to evaluate as the actual value.
- * @param matcher The matcher to satisfy as the expected condition.
- * @discussion assertThatC passes the actual value to the matcher for evaluation. If the matcher is
- * not satisfied, it is reported to the @ref HCTestFailureReporterChain.
- *
- * Use assertThatC in standalone C functions. It's designed to integrate with testing frameworks
- * where individual tests are executed as standalone functions. You may also want to install a
- * custom test failure handler for better reporting.
- *
- * @attribute Name Clash
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
- * HC_assertThatC instead.
- */
-#define assertThatC HC_assertThatC
-#endif
-
-
 typedef id (^HCAssertThatAfterActualBlock)() __attribute__((deprecated));
 
 OBJC_EXPORT void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxTime,
