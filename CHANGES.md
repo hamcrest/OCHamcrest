@@ -1,5 +1,6 @@
-NEXT VERSION
-------------
+Version 4.2.0
+-------------
+_11 Sep 2015_
 
 **Fixes:**
 
@@ -13,7 +14,8 @@ NEXT VERSION
 
 **Deprecated:**
 
-- Deprecated `containsString`; use `containsSubstring` instead. `containsString` clashes with an NSString method introduced in iOS 8.
+- Deprecated `containsString`; use `containsSubstring` instead. `containsString` clashes with an
+  NSString method introduced in iOS 8.
 - Deprecated `assertThatAfter`/`futureValueOf`. Use `assertWithTimeout`/`thatEventually` instead.
 - Deprecated `HC_testFailureHandlerChain()`; use `[HCTestFailureReporterChain chain]` instead.
 
