@@ -52,7 +52,7 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
  *
  * Use assertThatC in standalone C functions. It's designed to integrate with testing frameworks
  * where individual tests are executed as standalone functions. You may also want to install a
- * custom test failure handler for better reporting; see HCCedarTestFailureReporter as an example.
+ * custom test failure handler for better reporting.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -176,8 +176,7 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
  *
  * Use assertWithTimeoutC in standalone C functions. It's designed to integrate with testing
  * frameworks where individual tests are executed as standalone functions. You may also want to
- * install a custom test failure handler for better reporting; see @ref HCCedarTestFailureReporter
- * as an example.
+ * install a custom test failure handler for better reporting.
  *
  * @see thatEventually
  * @attribute Name Clash

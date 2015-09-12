@@ -3,10 +3,8 @@
 
 #define HC_SHORTHAND
 #import <OCHamcrest/HCAssertThat.h>
-#import "HCCedarTestFailureReporter.h"
 
 #import <OCHamcrest/HCIsEqual.h>
-#import "HCTestFailureReporterChain.h"
 
 #import <SenTestingKit/SenTestingKit.h>
 
@@ -183,129 +181,6 @@
     @catch (NSException* exception)
     {
         [self assertThatResultString:[exception reason] containsExpectedString:@"FILENAME:123"];
-        return;
-    }
-    STFail(@"Expected exception");
-}
-
-@end
-
-
-static int standaloneAssertionLine;
-
-static void standaloneAssertionOutsideTestCase(id actual, id <HCMatcher> matcher)
-{
-    standaloneAssertionLine = __LINE__ + 1;
-    assertThatC(actual, matcher);
-}
-
-@interface CDRSpecFailure : NSException
-@property (nonatomic, copy) NSString *capturedFileName;
-@property (nonatomic, assign) int capturedLineNumber;
-@end
-
-@implementation CDRSpecFailure
-
-+ (id)specFailureWithReason:(NSString *)reason fileName:(NSString *)fileName lineNumber:(int)lineNumber
-{
-    return [[self alloc] initWithReason:reason fileName:fileName lineNumber:lineNumber];
-}
-
-- (id)initWithReason:(NSString *)reason fileName:(NSString *)fileName lineNumber:(int)lineNumber
-{
-    self = [super initWithName:nil reason:reason userInfo:nil];
-    if (self)
-    {
-        _capturedFileName = [fileName copy];
-        _capturedLineNumber = lineNumber;
-    }
-    return self;
-}
-
-@end
-
-@interface CedarTestCaseTest : SenTestCase
-@end
-
-@implementation CedarTestCaseTest
-
-- (void)setUp
-{
-    [super setUp];
-    HCCedarTestFailureReporter *cedarHandler = [[HCCedarTestFailureReporter alloc] init];
-    [HCTestFailureReporterChain addReporter:cedarHandler];
-}
-
-- (void)tearDown
-{
-    [HCTestFailureReporterChain reset];
-    [super tearDown];
-}
-
-- (void)assertThatResultString:(NSString *)resultString containsExpectedString:(NSString *)expectedString
-{
-    STAssertNotNil(resultString, nil);
-    STAssertTrue([resultString rangeOfString:expectedString].location != NSNotFound, nil);
-}
-
-- (void)testCedarTestCase_ShouldRaiseCedarSpecFailure
-{
-    @try
-    {
-        standaloneAssertionOutsideTestCase(@1, equalTo(@0));
-    }
-    @catch (NSException* exception)
-    {
-        STAssertTrue([exception isMemberOfClass:[CDRSpecFailure class]], @"was %@", exception);
-        return;
-    }
-    STFail(@"Expected exception");
-}
-
-- (void)testCedarTestCase_ShouldRaiseCedarSpecFailureWithMismatchDescription
-{
-    NSString *expected = @"EXPECTED";
-    NSString *actual = @"ACTUAL";
-    NSString *expectedMessage = @"Expected \"EXPECTED\", but was \"ACTUAL\"";
-
-    @try
-    {
-        standaloneAssertionOutsideTestCase(actual, equalTo(expected));
-    }
-    @catch (NSException* exception)
-    {
-        CDRSpecFailure *specFailure = (CDRSpecFailure *)exception;
-        [self assertThatResultString:specFailure.reason containsExpectedString:expectedMessage];
-        return;
-    }
-    STFail(@"Expected exception");
-}
-
-- (void)testCedarTestCase_ShouldRaiseCedarSpecFailureWithFileName
-{
-    @try
-    {
-        standaloneAssertionOutsideTestCase(@1, equalTo(@0));
-    }
-    @catch (NSException* exception)
-    {
-        CDRSpecFailure *specFailure = (CDRSpecFailure *)exception;
-        [self assertThatResultString:specFailure.capturedFileName containsExpectedString:@"/AssertThatTest.m"];
-        return;
-    }
-    STFail(@"Expected exception");
-}
-
-- (void)testCedarTestCase_ShouldRaiseCedarSpecFailureWithLineNumber
-{
-    @try
-    {
-        standaloneAssertionOutsideTestCase(@1, equalTo(@0));
-    }
-    @catch (NSException* exception)
-    {
-        CDRSpecFailure *specFailure = (CDRSpecFailure *)exception;
-        STAssertEquals(specFailure.capturedLineNumber, standaloneAssertionLine, nil);
         return;
     }
     STFail(@"Expected exception");

@@ -4,7 +4,6 @@
 #import <OCHamcrest/HCAllOf.h>
 #import <OCHamcrest/HCAnyOf.h>
 #import <OCHamcrest/HCAssertThat.h>
-#import <OCHamcrest/HCCedarTestFailureReporter.h>
 #import <OCHamcrest/HCConformsToProtocol.h>
 #import <OCHamcrest/HCDescribedAs.h>
 #import <OCHamcrest/HCEvery.h>

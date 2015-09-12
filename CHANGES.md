@@ -11,8 +11,6 @@ NEXT VERSION
 - Improved readability of asynchronous tests: `assertWithTimeout(1, thatEventually(var), is(@10));`
 - Added assertions designed for use in standalone functions: `assertThatC` and `assertWithTimeoutC`.
 - Added ability to add custom test failure reporter. See HCTestFailureReporterChain.
-- Added optional test failure reporter for Cedar. See HCCedarTestFailureREporter and add to
-  HCTestFailureReporterChain. Use the new standalone assertions `assertThatC` and `assertWithTimeoutC`.
 
 **Deprecated:**
 

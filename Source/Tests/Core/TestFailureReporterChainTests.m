@@ -1,10 +1,8 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 
-#import "HCTestFailureReporterChain.h"
-#import "HCTestFailureHandlerChain.h"
-
-#import "HCTestFailureReporter.h"
+#import <OCHamcrest/HCTestFailureReporterChain.h>
+#import <OCHamcrest/HCTestFailureHandlerChain.h>
 
 #import <SenTestingKit/SenTestingKit.h>
 

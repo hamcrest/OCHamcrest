@@ -124,10 +124,7 @@
 		5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
 		5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
 		609E95B8EB994E0768A22EB5 /* TestFailureReporterChainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E99ADF272619359F01300 /* TestFailureReporterChainTests.m */; };
-		609E980078E0441BA3114342 /* HCCedarTestFailureReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E998005A80B37689F9422 /* HCCedarTestFailureReporter.m */; };
 		609E99C4BEBB5A70318577B2 /* TestFailureReporterChainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E99ADF272619359F01300 /* TestFailureReporterChainTests.m */; };
-		609E99FC909D22C7450FA8FD /* HCCedarTestFailureReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 609E9895AF0F5A52C64EF73B /* HCCedarTestFailureReporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		609E9D453B81136CF7D968F4 /* HCCedarTestFailureReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E998005A80B37689F9422 /* HCCedarTestFailureReporter.m */; };
 		74153B5F1A535FEA00FEF450 /* IsTrueFalseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */; };
 		74153B601A535FEA00FEF450 /* IsTrueFalseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */; };
 		74153B631A53606100FEF450 /* HCIsTrueFalse.h in Headers */ = {isa = PBXBuildFile; fileRef = 74153B611A53606100FEF450 /* HCIsTrueFalse.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -461,8 +458,6 @@
 		31DDCCF46E1766AF4AC97BA5 /* Mismatchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mismatchable.h; sourceTree = "<group>"; };
 		31DDCE62F97F2042F0A8BDAE /* HCDiagnosingMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDiagnosingMatcher.h; sourceTree = "<group>"; };
 		5F2773441436F81000B9683A /* ConformsToProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConformsToProtocolTest.m; sourceTree = "<group>"; };
-		609E9895AF0F5A52C64EF73B /* HCCedarTestFailureReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCedarTestFailureReporter.h; sourceTree = "<group>"; };
-		609E998005A80B37689F9422 /* HCCedarTestFailureReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCedarTestFailureReporter.m; sourceTree = "<group>"; };
 		609E99ADF272619359F01300 /* TestFailureReporterChainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFailureReporterChainTests.m; sourceTree = "<group>"; };
 		74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTrueFalseTest.m; sourceTree = "<group>"; };
 		74153B611A53606100FEF450 /* HCIsTrueFalse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsTrueFalse.h; sourceTree = "<group>"; };
@@ -868,8 +863,6 @@
 		BB3332B119BE5F32E3F02CE3 /* TestFailureReporters */ = {
 			isa = PBXGroup;
 			children = (
-				609E9895AF0F5A52C64EF73B /* HCCedarTestFailureReporter.h */,
-				609E998005A80B37689F9422 /* HCCedarTestFailureReporter.m */,
 				BB33391EC19272E15C3D2E1A /* HCGenericTestFailureReporter.h */,
 				BB3331E3E2C324F3D4618E9D /* HCGenericTestFailureReporter.m */,
 				BB33339BAC2DACD2306832A8 /* HCSenTestFailureReporter.h */,
@@ -1184,7 +1177,6 @@
 				BB333020F5ED4E3979BA1714 /* NSInvocation+OCHamcrest.h in Headers */,
 				BB3338B40D8EA4F74C514153 /* HCWrapInMatcher.h in Headers */,
 				31DDC972FA9B967EC328D4F3 /* HCDiagnosingMatcher.h in Headers */,
-				609E99FC909D22C7450FA8FD /* HCCedarTestFailureReporter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1467,7 +1459,6 @@
 				BB3338485B4DA85A777544B3 /* HCCollect.m in Sources */,
 				BB33387D94ADA6748B02A289 /* HCInvocationMatcher.m in Sources */,
 				31DDCEC51963ADABADBC576B /* HCDiagnosingMatcher.m in Sources */,
-				609E980078E0441BA3114342 /* HCCedarTestFailureReporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1606,7 +1597,6 @@
 				BB3332D945BB26BEF3E37662 /* HCCollect.m in Sources */,
 				BB33306BE19806EB64EEC358 /* HCInvocationMatcher.m in Sources */,
 				31DDC99BB130EC06BA6BFBEC /* HCDiagnosingMatcher.m in Sources */,
-				609E9D453B81136CF7D968F4 /* HCCedarTestFailureReporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
