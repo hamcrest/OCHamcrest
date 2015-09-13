@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_hasDescription(id match);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief hasDescription(aMatcher) -
+ * @abstract hasDescription(aMatcher) -
  * Matches if object's <code>-description</code> satisfies a given matcher.
  * @param aMatcher The matcher to satisfy, or an expected value for @ref equalTo matching.
  * @discussion This matcher invokes <code>-description</code> on the evaluated object to get its

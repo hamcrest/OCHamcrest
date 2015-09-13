@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_is(id match);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief is(aMatcher) -
+ * @abstract is(aMatcher) -
  * Decorates another matcher, or provides a shortcut to the frequently used <code>is(equalTo(x))</code>.
  * @param aMatcher The matcher to satisfy, or an expected value for @ref equalTo matching.
  * @discussion This matcher compares the evaluated object to the given matcher.

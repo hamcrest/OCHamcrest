@@ -17,7 +17,7 @@ FOUNDATION_EXPORT id HC_hasProperty(NSString *name, id valueMatch);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief hasProperty(name, valueMatcher) -
+ * @abstract hasProperty(name, valueMatcher) -
  * Matches if object has a method of a given name whose return value satisfies a given matcher.
  * @param name The name of a method without arguments that returns an object.
  * @param valueMatcher The matcher to satisfy for the return value, or an expected value for @ref equalTo matching.

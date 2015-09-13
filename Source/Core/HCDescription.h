@@ -5,26 +5,26 @@
 
 
 /*!
- * @brief A description of an @ref HCMatcher.
+ * @abstract A description of an @ref HCMatcher.
  * @discussion An @ref HCMatcher will describe itself to a description which can later be used for reporting.
  */
 @protocol HCDescription <NSObject>
 
 /*!
- * @brief Appends some plain text to the description.
+ * @abstract Appends some plain text to the description.
  * @return <code>self</code>, for chaining.
  */
 - (id<HCDescription>)appendText:(NSString *)text;
 
 /*!
- * @brief Appends description of given value to description.
+ * @abstract Appends description of given value to description.
  * @discussion If the value implements the @ref HCSelfDescribing protocol, then it will be used.
  * @return <code>self</code>, for chaining.
  */
 - (id<HCDescription>)appendDescriptionOf:(id)value;
 
 /*!
- * @brief Appends a list of objects to the description.
+ * @abstract Appends a list of objects to the description.
  * @return <code>self</code>, for chaining.
  */
 - (id<HCDescription>)appendList:(NSArray *)values

@@ -5,7 +5,7 @@
 
 
 /*!
- * @brief Chain-of-responsibility for handling NSInvocation return types.
+ * @abstract Chain-of-responsibility for handling NSInvocation return types.
  */
 @interface HCReturnValueGetter : NSObject
 

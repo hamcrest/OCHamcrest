@@ -22,7 +22,7 @@ FOUNDATION_EXPORT id HC_anything(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief Matches anything.
+ * @abstract Matches anything.
  * @discussion This matcher always evaluates to <code>YES</code>. Specify this in composite matchers
  * when the value of a particular element is unimportant.
  *
@@ -38,7 +38,7 @@ FOUNDATION_EXPORT id HC_anythingWithDescription(NSString *aDescription);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief anythingWithDescription(description) -
+ * @abstract anythingWithDescription(description) -
  * Matches anything.
  * @param description A string used to describe this matcher.
  * @discussion This matcher always evaluates to <code>YES</code>. Specify this in collection

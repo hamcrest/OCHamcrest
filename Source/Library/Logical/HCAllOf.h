@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_allOf(id match, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief allOf(firstMatcher, ...) -
+ * @abstract allOf(firstMatcher, ...) -
  * Matches if all of the given matchers evaluate to <code>YES</code>.
  * @param firstMatcher,... A comma-separated list of matchers ending with <code>nil</code>.
  * @discussion The matchers are evaluated from left to right using short-circuit evaluation, so

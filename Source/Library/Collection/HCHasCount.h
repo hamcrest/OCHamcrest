@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_hasCount(id <HCMatcher> matcher);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief hasCount(aMatcher) -
+ * @abstract hasCount(aMatcher) -
  * Matches if object's <code>-count</code> satisfies a given matcher.
  * @param aMatcher The matcher to satisfy.
  * @discussion This matcher invokes <code>-count</code> on the evaluated object to get the number of
@@ -33,7 +33,7 @@ FOUNDATION_EXPORT id HC_hasCountOf(NSUInteger count);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief hasCountOf(value) -
+ * @abstract hasCountOf(value) -
  * Matches if object's <code>-count</code> equals a given value.
  * @param value NSUInteger value to compare against as the expected value.
  * @discussion This matcher invokes <code>-count</code> on the evaluated object to get the number of

@@ -19,7 +19,7 @@ FOUNDATION_EXPORT id HC_stringContainsInOrder(NSString *substring, ...) NS_REQUI
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief stringContainsInOrder(firstString, ...) -
+ * @abstract stringContainsInOrder(firstString, ...) -
  * Matches if object is a string containing a given list of substrings in relative order.
  * @param firstString,... A comma-separated list of strings ending with <code>nil</code>.
  * @discussion This matcher first checks whether the evaluated object is a string. If so, it checks

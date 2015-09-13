@@ -5,6 +5,6 @@
 
 
 /*!
- * @brief Throws an NSException if <em>obj</em> is <code>nil</code>.
+ * @abstract Throws an NSException if <em>obj</em> is <code>nil</code>.
 */
 FOUNDATION_EXPORT void HCRequireNonNilObject(id obj);

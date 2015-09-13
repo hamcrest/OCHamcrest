@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_equalTo(id object);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief equalTo(anObject) -
+ * @abstract equalTo(anObject) -
  * Matches if object is equal to a given object.
  * @param anObject The object to compare against as the expected value.
  * @discussion This matcher compares the evaluated object to <em>anObject</em> for equality, as

@@ -7,6 +7,6 @@
 
 
 /*!
- * @brief Returns chain of return type handlers.
+ * @abstract Returns chain of return type handlers.
  */
 FOUNDATION_EXPORT HCReturnValueGetter *HCReturnValueGetterChain(void);

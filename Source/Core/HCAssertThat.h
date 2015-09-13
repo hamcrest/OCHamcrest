@@ -20,7 +20,7 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief assertThat(actual, matcher) -
+ * @abstract assertThat(actual, matcher) -
  * Asserts that actual value satisfies matcher.
  * @param actual The object to evaluate as the actual value.
  * @param matcher The matcher to satisfy as the expected condition.
@@ -52,7 +52,7 @@ OBJC_EXPORT void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxT
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief assertThatAfter(maxTime, actualBlock, matcher) -
+ * @abstract assertThatAfter(maxTime, actualBlock, matcher) -
  * Asserts that a value provided by a block will satisfy matcher in less than a given time.
  * @param maxTime Max time (in seconds) in which the matcher has to be satisfied.
  * @param actualBlock A block providing the object to evaluate until timeout or the matcher is satisfied.
@@ -72,7 +72,7 @@ OBJC_EXPORT void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxT
 #define assertThatAfter HC_assertThatAfter
 
 /*!
- * @brief futureValueOf(actual) -
+ * @abstract futureValueOf(actual) -
  * Evaluates actual value at future time.
  * @param actual The object to evaluate as the actual value.
  * @deprecated Version 4.2.0. Use @ref thatEventually instead.
@@ -100,7 +100,7 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief assertWithTimeout(timeout, actualBlock, matcher) -
+ * @abstract assertWithTimeout(timeout, actualBlock, matcher) -
  * Asserts that a value provided by a block will satisfy matcher within a given time.
  * @param timeout Maximum time to wait for passing behavior, specified in seconds.
  * @param actualBlock A block providing the object to repeatedly evaluate as the actual value.
@@ -120,7 +120,7 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
 
 
 /*!
- * @brief thatEventually(actual) -
+ * @abstract thatEventually(actual) -
  * Evaluates actual value at future time.
  * @param actual The object to evaluate as the actual value.
  * @discussion Wraps <em>actual</em> in a block so that it can be repeatedly evaluated by @ref assertWithTimeout.

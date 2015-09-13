@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_hasKey(id keyMatch);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief hasKey(keyMatcher) -
+ * @abstract hasKey(keyMatcher) -
  * Matches if dictionary contains an entry whose key satisfies a given matcher.
  * @param keyMatcher The matcher to satisfy for the key, or an expected value for @ref equalTo matching.
  * @discussion This matcher iterates the evaluated dictionary, searching for any key-value entry

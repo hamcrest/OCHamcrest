@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_containsInAnyOrder(id itemMatch, ...) NS_REQUIRES_NIL_TE
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief containsInAnyOrder(firstMatcher, ...) -
+ * @abstract containsInAnyOrder(firstMatcher, ...) -
  * Matches if collection's elements, in any order, satisfy a given list of matchers.
  * @param firstMatcher,... A comma-separated list of matchers ending with <code>nil</code>.
  * @discussion This matcher iterates the evaluated collection, seeing if each element satisfies any

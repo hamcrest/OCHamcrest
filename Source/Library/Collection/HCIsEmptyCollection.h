@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_isEmpty(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief Matches empty collection.
+ * @abstract Matches empty collection.
  * @discussion This matcher invokes <code>-count</code> on the evaluated object to determine if the
  * number of elements it contains is zero.
  *

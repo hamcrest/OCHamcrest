@@ -15,7 +15,7 @@ FOUNDATION_EXPORT id HC_nilValue(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief Matches if object is <code>nil</code>.
+ * @abstract Matches if object is <code>nil</code>.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -29,7 +29,7 @@ FOUNDATION_EXPORT id HC_notNilValue(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief Matches if object is not <code>nil</code>.
+ * @abstract Matches if object is not <code>nil</code>.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym

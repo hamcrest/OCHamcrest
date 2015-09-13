@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_hasItem(id itemMatch);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief hasItem(aMatcher) -
+ * @abstract hasItem(aMatcher) -
  * Matches if any element of collection satisfies a given matcher.
  * @param aMatcher The matcher to satisfy, or an expected value for @ref equalTo matching.
  * @discussion This matcher iterates the evaluated collection, searching for any element that
@@ -37,7 +37,7 @@ FOUNDATION_EXPORT id HC_hasItems(id itemMatch, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief hasItems(firstMatcher, ...) -
+ * @abstract hasItems(firstMatcher, ...) -
  * Matches if all of the given matchers are satisfied by any elements of the collection.
  * @param firstMatcher,... A comma-separated list of matchers ending with <code>nil</code>.
  * @discussion This matcher iterates the given matchers, searching for any elements in the evaluated

@@ -21,7 +21,7 @@ FOUNDATION_EXPORT id HC_describedAs(NSString *description, id <HCMatcher> matche
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief describedAs(description, matcher, ...) -
+ * @abstract describedAs(description, matcher, ...) -
  * Adds custom failure description to a given matcher.
  * @param description Overrides the matcher's description.
  * @param matcher,... The matcher to satisfy, followed by a comma-separated list of substitution

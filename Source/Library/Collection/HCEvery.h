@@ -17,7 +17,7 @@ FOUNDATION_EXPORT id HC_everyItem(id itemMatcher);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief everyItem(itemMatcher) -
+ * @abstract everyItem(itemMatcher) -
  * Matches if every element of a collection satisfies the given matcher.
  * @param itemMatcher The matcher to apply to every item provided by the examined collection.
  * @discussion This matcher iterates the evaluated collection, confirming that each element

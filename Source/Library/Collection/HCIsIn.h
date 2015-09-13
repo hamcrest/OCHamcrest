@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_isIn(id aCollection);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief isIn(aCollection) -
+ * @abstract isIn(aCollection) -
  * Matches if evaluated object is present in a given collection.
  * @param aCollection The collection to search.
  * @discussion This matcher invokes <code>-containsObject:</code> on <em>aCollection</em> to

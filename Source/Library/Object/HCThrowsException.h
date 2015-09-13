@@ -15,7 +15,7 @@ FOUNDATION_EXPORT id HC_throwsException(id exceptionMatcher);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief throwsException(exceptionMatcher) -
+ * @abstract throwsException(exceptionMatcher) -
  * Matches if object is a block which, when executed, throws an exception satisfying a given matcher.
  * @param exceptionMatcher The matcher to satisfy when passed the exception.
  * @discussion Example:

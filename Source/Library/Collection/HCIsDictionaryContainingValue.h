@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_hasValue(id valueMatch);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief hasValue(valueMatcher) -
+ * @abstract hasValue(valueMatcher) -
  * Matches if dictionary contains an entry whose value satisfies a given matcher.
  * @param valueMatcher The matcher to satisfy for the value, or an expected value for @ref equalTo matching.
  * @discussion This matcher iterates the evaluated dictionary, searching for any key-value entry

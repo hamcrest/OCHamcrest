@@ -23,7 +23,7 @@ FOUNDATION_EXPORT id HC_greaterThan(id expected);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief greaterThan(aNumber) -
+ * @abstract greaterThan(aNumber) -
  * Matches if object is greater than a given number.
  * @param aNumber The NSNumber to compare against.
  * @discussion Example:
@@ -43,7 +43,7 @@ FOUNDATION_EXPORT id HC_greaterThanOrEqualTo(id expected);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief greaterThanOrEqualTo(aNumber) -
+ * @abstract greaterThanOrEqualTo(aNumber) -
  * Matches if object is greater than or equal to a given number.
  * @param aNumber The NSNumber to compare against.
  * @discussion Example:
@@ -63,7 +63,7 @@ FOUNDATION_EXPORT id HC_lessThan(id expected);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief lessThan(aNumber) -
+ * @abstract lessThan(aNumber) -
  * Matches if object is less than a given number.
  * @param aNumber The NSNumber to compare against.
  * @discussion Example:
@@ -83,7 +83,7 @@ FOUNDATION_EXPORT id HC_lessThanOrEqualTo(id expected);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief lessThanOrEqualTo(aNumber) -
+ * @abstract lessThanOrEqualTo(aNumber) -
  * Matches if object is less than or equal to a given number.
  * @param aNumber The NSNumber to compare against.
  * @discussion Example:

@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_isNot(id aMatcher);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief isNot(aMatcher) -
+ * @abstract isNot(aMatcher) -
  * Inverts the given matcher to its logical negation.
  * @param aMatcher The matcher to negate.
  * @discussion This matcher compares the evaluated object to the negation of the given matcher. If

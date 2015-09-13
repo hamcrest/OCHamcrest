@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_contains(id itemMatch, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief contains(firstMatcher, ...) -
+ * @abstract contains(firstMatcher, ...) -
  * Matches if collection's elements satisfy a given list of matchers, in order.
  * @param firstMatcher,... A comma-separated list of matchers ending with <code>nil</code>.
  * @discussion This matcher iterates the evaluated collection and a given list of matchers, seeing

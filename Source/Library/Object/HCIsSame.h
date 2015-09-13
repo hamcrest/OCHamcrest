@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_sameInstance(id object);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief sameInstance(anObject) -
+ * @abstract sameInstance(anObject) -
  * Matches if evaluated object is the same instance as a given object.
  * @param anObject The object to compare against as the expected value.
  * @discussion This matcher compares the address of the evaluated object to determine if it is the

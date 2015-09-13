@@ -15,7 +15,7 @@ FOUNDATION_EXPORT id HC_instanceOf(Class aClass);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief instanceOf(aClass) -
+ * @abstract instanceOf(aClass) -
  * Matches if object is an instance of, or inherits from, a given class.
  * @param aClass The class to compare against as the expected class.
  * @discussion This matcher checks whether the evaluated object is an instance of <em>aClass</em> or

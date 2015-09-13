@@ -15,7 +15,7 @@ FOUNDATION_EXPORT id HC_containsString(NSString *aSubstring) __attribute__((depr
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief containsString(aString) -
+ * @abstract containsString(aString) -
  * Matches if object is a string containing a given string.
  * @param aString The string to search for. This value must not be <code>nil</code>.
  * @discussion <em>Deprecated: Use @ref containsSubstring() instead.</em>
@@ -41,7 +41,7 @@ FOUNDATION_EXPORT id HC_containsSubstring(NSString *aSubstring);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief containsSubstring(aString) -
+ * @abstract containsSubstring(aString) -
  * Matches if object is a string containing a given string.
  * @param aString The string to search for. This value must not be <code>nil</code>.
  * @discussion This matcher first checks whether the evaluated object is a string. If so, it checks

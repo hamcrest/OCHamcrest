@@ -5,7 +5,7 @@
 
 /*!
  * @class HCTestFailureHandler
- * @brief Chain-of-responsibility for handling test failures.
+ * @abstract Chain-of-responsibility for handling test failures.
  * @deprecated Version 4.2.0. Use @ref HCTestFailureReporter instead.
  */
 @compatibility_alias HCTestFailureHandler HCTestFailureReporter;

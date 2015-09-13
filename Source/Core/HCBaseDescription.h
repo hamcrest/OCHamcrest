@@ -6,19 +6,19 @@
 
 
 /*!
- * @brief Base class for all @ref HCDescription implementations.
+ * @abstract Base class for all @ref HCDescription implementations.
  */
 @interface HCBaseDescription : NSObject <HCDescription>
 @end
 
 
 /*!
- * @brief Methods that must be provided by subclasses of HCBaseDescription.
+ * @abstract Methods that must be provided by subclasses of HCBaseDescription.
  */
 @interface HCBaseDescription (SubclassResponsibility)
 
 /*!
- * @brief Appends the given string to the description.
+ * @abstract Appends the given string to the description.
  */
 - (void)append:(NSString *)str;
 

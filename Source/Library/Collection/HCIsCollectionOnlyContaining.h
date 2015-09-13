@@ -15,7 +15,7 @@ FOUNDATION_EXPORT id HC_onlyContains(id itemMatch, ...) NS_REQUIRES_NIL_TERMINAT
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief onlyContains(firstMatcher, ...) -
+ * @abstract onlyContains(firstMatcher, ...) -
  * Matches if each element of collection satisfies any of the given matchers.
  * @param firstMatcher,... A comma-separated list of matchers ending with <code>nil</code>.
  * @discussion This matcher iterates the evaluated collection, confirming whether each element

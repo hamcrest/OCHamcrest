@@ -17,7 +17,7 @@ FOUNDATION_EXPORT id HC_conformsTo(Protocol *aProtocol);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief conformsTo(aProtocol) -
+ * @abstract conformsTo(aProtocol) -
  * Matches if object conforms to a given protocol.
  * @param aProtocol The protocol to compare against as the expected protocol.
  * @discussion This matcher checks whether the evaluated object conforms to <em>aProtocol</em>.

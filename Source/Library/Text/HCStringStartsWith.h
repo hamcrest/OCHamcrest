@@ -15,7 +15,7 @@ FOUNDATION_EXPORT id HC_startsWith(NSString *aSubstring);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief startsWith(aString) -
+ * @abstract startsWith(aString) -
  * Matches if object is a string starting with a given string.
  * @param aString The string to search for. This value must not be <code>nil</code>.
  * @discussion This matcher first checks whether the evaluated object is a string. If so, it checks

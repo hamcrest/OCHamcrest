@@ -19,7 +19,7 @@ FOUNDATION_EXPORT id HC_hasEntry(id keyMatch, id valueMatch);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief hasEntry(keyMatcher, valueMatcher) -
+ * @abstract hasEntry(keyMatcher, valueMatcher) -
  * Matches if dictionary contains key-value entry satisfying a given pair of matchers.
  * @param keyMatcher The matcher to satisfy for the key, or an expected value for @ref equalTo matching.
  * @param valueMatcher The matcher to satisfy for the value, or an expected value for @ref equalTo matching.

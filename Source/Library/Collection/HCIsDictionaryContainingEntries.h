@@ -20,7 +20,7 @@ FOUNDATION_EXPORT id HC_hasEntries(id keysAndValueMatch, ...) NS_REQUIRES_NIL_TE
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief hasEntries(firstKey, valueMatcher, ...) -
+ * @abstract hasEntries(firstKey, valueMatcher, ...) -
  * Matches if dictionary contains entries satisfying a list of alternating keys and their value matchers.
  * @param firstKey A key (not a matcher) to look up.
  * @param valueMatcher,... The matcher to satisfy for the value, or an expected value for @ref equalTo matching.

@@ -15,7 +15,7 @@ FOUNDATION_EXPORT id HC_isA(Class aClass);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief isA(aClass) -
+ * @abstract isA(aClass) -
  * Matches if object is an instance of a given class (but not of a subclass).
  * @param aClass The class to compare against as the expected class.
  * This matcher checks whether the evaluated object is an instance of <em>aClass</em>.

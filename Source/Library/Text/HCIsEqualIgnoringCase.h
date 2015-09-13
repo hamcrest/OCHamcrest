@@ -16,7 +16,7 @@ FOUNDATION_EXPORT id HC_equalToIgnoringCase(NSString *aString);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief equalToIgnoringCase(string) -
+ * @abstract equalToIgnoringCase(string) -
  * Matches if object is a string equal to a given string, ignoring case differences.
  * @param aString The string to compare against as the expected value. This value must not be <code>nil</code>.
  * @discussion This matcher first checks whether the evaluated object is a string. If so, it

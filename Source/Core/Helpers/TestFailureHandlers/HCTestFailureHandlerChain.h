@@ -4,7 +4,7 @@
 #import <OCHamcrest/HCTestFailureHandler.h>
 
 /*!
- * @brief Returns chain of test failure handlers.
+ * @abstract Returns chain of test failure handlers.
  * @deprecated Version 4.2.0. Use <code>[HCTestFailureReporterChain chain]</code> instead.
  * @see HCTestFailureReporterChain
  */

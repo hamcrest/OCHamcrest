@@ -15,7 +15,7 @@ FOUNDATION_EXPORT id HC_isTrue(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief Matches if object is equal to NSNumber with non-zero value.
+ * @abstract Matches if object is equal to NSNumber with non-zero value.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -29,7 +29,7 @@ FOUNDATION_EXPORT id HC_isFalse(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @brief Matches if object is equal to NSNumber with zero value.
+ * @abstract Matches if object is equal to NSNumber with zero value.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
