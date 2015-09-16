@@ -56,7 +56,7 @@
 
 - (void)testMatcherCreationRequiresMatcherArgument
 {
-    STAssertThrows(throwsException([[NSObject alloc] init]), @"Should require matcher argument");
+    XCTAssertThrows(throwsException([[NSObject alloc] init]), @"Should require matcher argument");
 }
 
 - (void)testHasReadableDescription

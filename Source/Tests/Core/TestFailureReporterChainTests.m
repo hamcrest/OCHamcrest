@@ -4,10 +4,10 @@
 #import <OCHamcrest/HCTestFailureReporterChain.h>
 #import <OCHamcrest/HCTestFailureHandlerChain.h>
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 
-@interface TestFailureReporterChainTests : SenTestCase
+@interface TestFailureReporterChainTests : XCTestCase
 @end
 
 @implementation TestFailureReporterChainTests
@@ -22,16 +22,16 @@
 {
     HCTestFailureReporter *chain = [HCTestFailureReporterChain reporterChain];
 
-    STAssertEqualObjects(NSStringFromClass([chain class]), @"HCXCTestFailureReporter", nil);
-    STAssertNotNil(chain.successor, nil);
+    XCTAssertEqualObjects(NSStringFromClass([chain class]), @"HCXCTestFailureReporter");
+    XCTAssertNotNil(chain.successor);
 }
 
 - (void)testDeprecatedFunction_ShouldPointToXCTestHandlerAsHeadOfChain
 {
     HCTestFailureHandler *handler = HC_testFailureHandlerChain();
 
-    STAssertEqualObjects(NSStringFromClass([handler class]), @"HCXCTestFailureReporter", nil);
-    STAssertNotNil(handler.successor, nil);
+    XCTAssertEqualObjects(NSStringFromClass([handler class]), @"HCXCTestFailureReporter");
+    XCTAssertNotNil(handler.successor);
 }
 
 - (void)testAddReporter_ShouldSetHeadOfChainToGivenHandler
@@ -40,7 +40,7 @@
 
     [HCTestFailureReporterChain addReporter:reporter];
 
-    STAssertEquals([HCTestFailureReporterChain reporterChain], reporter, nil);
+    XCTAssertEqual([HCTestFailureReporterChain reporterChain], reporter);
 }
 
 - (void)testAddReporter_ShouldSetHandlerSuccessorToPreviousHeadOfChain
@@ -50,7 +50,7 @@
     
     [HCTestFailureReporterChain addReporter:reporter];
     
-    STAssertEquals(reporter.successor, oldHead, nil);
+    XCTAssertEqual(reporter.successor, oldHead);
 }
 
 - (void)testAddReporter_ShouldSetHandlerSuccessorEvenIfHeadOfChainHasNotBeenReferenced
@@ -59,7 +59,7 @@
 
     [HCTestFailureReporterChain addReporter:reporter];
 
-    STAssertNotNil(reporter.successor, nil);
+    XCTAssertNotNil(reporter.successor);
 }
 
 @end

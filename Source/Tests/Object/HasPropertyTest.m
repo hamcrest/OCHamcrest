@@ -118,7 +118,7 @@
 
 - (void)testMatcherCreationRequiresNonNilPropertyName
 {
-    STAssertThrows(hasProperty(nil, nil), @"Should require non-nil property name");
+    XCTAssertThrows(hasProperty(nil, nil), @"Should require non-nil property name");
 }
 
 - (void)testHasAReadableDescription

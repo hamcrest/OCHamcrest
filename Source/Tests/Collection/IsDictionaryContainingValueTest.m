@@ -64,7 +64,7 @@
 
 - (void)testMatcherCreationRequiresNonNilArgument
 {
-    STAssertThrows(hasValue(nil), @"Should require non-nil argument");
+    XCTAssertThrows(hasValue(nil), @"Should require non-nil argument");
 }
 
 - (void)testHasReadableDescription

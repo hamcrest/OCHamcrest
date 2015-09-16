@@ -1,12 +1,12 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 @protocol HCMatcher;
 
 
-@interface AbstractMatcherTest : SenTestCase
+@interface AbstractMatcherTest : XCTestCase
 
 - (void)assertMatcherSafeWithNil:(id <HCMatcher>)matcher
                 inFile:(const char *)fileName atLine:(int)lineNumber;

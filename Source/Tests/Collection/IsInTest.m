@@ -35,12 +35,12 @@
 {
     id object = [[NSObject alloc] init];
 
-    STAssertThrows(isIn(object), @"object does not have -containsObject: method");
+    XCTAssertThrows(isIn(object), @"object does not have -containsObject: method");
 }
 
 - (void)testMatcherCreationRequiresNonNilArgument
 {
-    STAssertThrows(isIn(nil), @"Should require non-nil argument");
+    XCTAssertThrows(isIn(nil), @"Should require non-nil argument");
 }
 
 - (void)testHasReadableDescription

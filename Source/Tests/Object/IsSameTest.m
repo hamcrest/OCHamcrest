@@ -48,7 +48,7 @@
                              @"SELF MATCHES 'same instance as 0x[0-9a-fA-F]+ \"abc\"'"];
 
     [description appendDescriptionOf:sameInstance(@"abc")];
-    STAssertTrue([expected evaluateWithObject:[description description]], nil);
+    XCTAssertTrue([expected evaluateWithObject:[description description]]);
 }
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
@@ -65,8 +65,8 @@
                              @"SELF MATCHES 'was 0x[0-9a-fA-F]+ \"hi\"'"];
 
     BOOL result = [matcher matches:@"hi" describingMismatchTo:description];
-    STAssertFalse(result, @"Precondition: Matcher should not match item");
-    STAssertTrue([expected evaluateWithObject:[description description]], nil);
+    XCTAssertFalse(result, @"Precondition: Matcher should not match item");
+    XCTAssertTrue([expected evaluateWithObject:[description description]]);
 }
 
 - (void)testMismatchDescriptionWithNilShouldNotIncludeAddress
@@ -82,7 +82,7 @@
                              @"SELF MATCHES 'was 0x[0-9a-fA-F]+ \"hi\"'"];
 
     [matcher describeMismatchOf:@"hi" to:description];
-    STAssertTrue([expected evaluateWithObject:[description description]], nil);
+    XCTAssertTrue([expected evaluateWithObject:[description description]]);
 }
 
 - (void)testDescribeMismatchWithNilShouldNotIncludeAddress

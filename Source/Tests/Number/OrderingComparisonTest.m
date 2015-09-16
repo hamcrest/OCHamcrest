@@ -66,7 +66,7 @@
 - (void)testMatcherCreationRequiresObjectWithCompareMethod
 {
     id object = [[NSObject alloc] init];
-    STAssertThrows(greaterThan(object), @"object does not have -compare: method");
+    XCTAssertThrows(greaterThan(object), @"object does not have -compare: method");
 }
 
 - (void)testHasAReadableDescription

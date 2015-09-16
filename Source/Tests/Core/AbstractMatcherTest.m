@@ -11,20 +11,13 @@
 
 - (void)failWithMessage:(NSString *)message inFile:(char const *)fileName atLine:(int)lineNumber
 {
-    [self failWithException:[NSException failureInFile:@(fileName)
-                                                atLine:lineNumber
-                                       withDescription:message]];
+    [self recordFailureWithDescription:message inFile:@(fileName) atLine:lineNumber expected:YES];
 }
 
 - (void)failEqualityBetweenObject:(id)left andObject:(id)right withMessage:(NSString *)message
                 inFile:(char const *)fileName atLine:(int)lineNumber
 {
-    [self failWithException:
-            [NSException failureInEqualityBetweenObject:left
-                                              andObject:right
-                                                 inFile:@(fileName)
-                                                 atLine:lineNumber
-                                        withDescription:message]];
+    [self recordFailureWithDescription:message inFile:@(fileName) atLine:lineNumber expected:YES];
 }
 
 - (void)assertMatcherSafeWithNil:(id <HCMatcher>)matcher

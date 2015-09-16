@@ -52,12 +52,12 @@
 
 - (void)testMatcherCreationRequiresNonNilArgument
 {
-    STAssertThrows(stringContainsInOrder(nil), @"Should require non-nil argument");
+    XCTAssertThrows(stringContainsInOrder(nil), @"Should require non-nil argument");
 }
 
 - (void)testMatcherCreationRequiresStringArguments
 {
-    STAssertThrows(stringContainsInOrder(@"one", @2, nil), @"Should require strings");
+    XCTAssertThrows(stringContainsInOrder(@"one", @2, nil), @"Should require strings");
 }
 
 - (void)testFailsIfMatchingAgainstNonString

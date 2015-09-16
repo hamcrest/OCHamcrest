@@ -41,13 +41,13 @@
 
 - (void)testDescriptionShouldDescribeMatcher
 {
-    STAssertEqualObjects([matcher description], @"SOME DESCRIPTION", nil);
+    XCTAssertEqualObjects([matcher description], @"SOME DESCRIPTION");
 }
 
 - (void)testShouldSupportImmutableCopying
 {
     BaseMatcherWithDescription *matcherCopy = [matcher copy];
-    STAssertEquals(matcherCopy, matcher, nil);
+    XCTAssertEqual(matcherCopy, matcher);
 }
 
 @end
@@ -82,12 +82,12 @@
 
 - (void)testSubclassShouldBeRequiredToDefineMatchesMethod
 {
-    STAssertThrows([matcher matches:nil], nil);
+    XCTAssertThrows([matcher matches:nil]);
 }
 
 - (void)testSubclassShouldBeRequiredToDefineDescribeToMethod
 {
-    STAssertThrows([matcher describeTo:nil], nil);
+    XCTAssertThrows([matcher describeTo:nil]);
 }
 
 @end

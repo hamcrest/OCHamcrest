@@ -24,7 +24,7 @@
 
 - (void)testMatcherCreationRequiresEvenNumberOfArgs
 {
-    STAssertThrows(hasEntries(@"a", nil), @"Should require pairs of arguments");
+    XCTAssertThrows(hasEntries(@"a", nil), @"Should require pairs of arguments");
 }
 
 - (void)testDoesNotMatchNonDictionary
@@ -73,8 +73,8 @@
 
 - (void)testMatcherCreationRequiresNonNilArguments
 {
-    STAssertThrows(hasEntries(nil, @"value", nil), @"Should require non-nil argument");
-    STAssertThrows(hasEntries(@"key", nil, nil), @"Should require non-nil argument");
+    XCTAssertThrows(hasEntries(nil, @"value", nil), @"Should require non-nil argument");
+    XCTAssertThrows(hasEntries(@"key", nil, nil), @"Should require non-nil argument");
 }
 
 - (void)testHasReadableDescription
