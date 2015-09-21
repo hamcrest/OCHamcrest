@@ -1265,7 +1265,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0640;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = hamcrest.org;
 			};
 			buildConfigurationList = 087601DB13440806001B439B /* Build configuration list for PBXProject "OCHamcrest" */;
@@ -1691,6 +1691,7 @@
 					"-framework",
 					XCTest,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hamcrest.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};
@@ -1711,6 +1712,7 @@
 					"-framework",
 					XCTest,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hamcrest.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};
@@ -1722,6 +1724,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
@@ -1769,6 +1772,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "OCHamcrest-Info.plist";
 				OTHER_CFLAGS = "-fobjc-arc-exceptions";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.${PRODUCT_NAME}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -1788,6 +1792,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "OCHamcrest-Info.plist";
 				OTHER_CFLAGS = "-fobjc-arc-exceptions";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.${PRODUCT_NAME}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -1805,6 +1810,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = org.hamcrest.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -1820,6 +1826,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = org.hamcrest.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};

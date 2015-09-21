@@ -1,3 +1,11 @@
+NEXT VERSION
+------------
+
+**Project changes:**
+
+- Updated project settings to Xcode 7, with tests now run by XCTest.
+
+
 Version 4.2.0
 -------------
 _11 Sep 2015_
