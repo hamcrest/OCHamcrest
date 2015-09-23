@@ -1192,7 +1192,6 @@
 				081BEE5E1345979F003F846A /* Sources */,
 				081BEE5F1345979F003F846A /* Frameworks */,
 				081BEE601345979F003F846A /* Headers */,
-				08627FF81465CE1A00F80D7D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1229,7 +1228,6 @@
 				087601DE13440806001B439B /* Frameworks */,
 				087601DF13440806001B439B /* Headers */,
 				087601E013440806001B439B /* Resources */,
-				08502324166051B8004B3EA5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1314,32 +1312,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08502324166051B8004B3EA5 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = XcodeCoverage/exportenv.sh;
-		};
-		08627FF81465CE1A00F80D7D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = XcodeCoverage/exportenv.sh;
-		};
 		08F1B0D918727611001D28B2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

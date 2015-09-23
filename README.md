@@ -72,7 +72,6 @@ Use the following import:
 If you want to build OCHamcrest yourself, clone the repo, then
 
 ```sh
-$ git submodule update --init
 $ cd Source
 $ ./MakeDistribution.sh
 ```
