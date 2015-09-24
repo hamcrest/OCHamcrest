@@ -148,7 +148,7 @@ OCHamcrest comes with a library of useful matchers:
 
 * Text
 
-  * `containsString` - match part of a string
+  * `containsSubstring` - match part of a string
   * `endsWith` - match the end of a string
   * `equalToIgnoringCase` - match the complete string but ignore case
   * `equalToIgnoringWhitespace` - match the complete string but ignore extra
@@ -220,7 +220,7 @@ assertWithTimeout(5, thatEventually(self.someString), is(@"expected"));
 ```
 
 This repeatedly checks for this string to evaluate to "expected" before timing out
-after 5 seconds. `thatEventually` is a convenience function to create a block.
+after 5 seconds. `thatEventually` is a convenience macro to create a block.
 
 
 Writing custom matchers
