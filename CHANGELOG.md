@@ -3,7 +3,7 @@ NEXT VERSION
 
 **Features:**
 
-- New matcher HCArgumentCaptor matches anything, capturing all matched values.
+- New matcher HCArgumentCaptor matches anything, capturing matched values.
 
 **Project changes:**
 

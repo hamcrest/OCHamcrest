@@ -29,6 +29,6 @@
  * @discussion Returns an array containing all captured values, in the order in which they were
  * captured. <code>nil</code> values are converted to NSNull.
  */
-@property (nonatomic, strong, readonly) NSArray *allValues;
+@property (nonatomic, copy, readonly) NSArray *allValues;
 
 @end
