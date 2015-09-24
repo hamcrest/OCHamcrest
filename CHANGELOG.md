@@ -1,6 +1,10 @@
 NEXT VERSION
 ------------
 
+**Features:**
+
+- New matcher HCArgumentCaptor matches anything, capturing all matched values.
+
 **Project changes:**
 
 - Updated project settings to Xcode 7, with tests now run by XCTest.

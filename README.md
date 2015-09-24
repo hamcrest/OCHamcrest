@@ -135,6 +135,7 @@ OCHamcrest comes with a library of useful matchers:
   * `nilValue`, `notNilValue` - match `nil`, or not `nil`
   * `sameInstance` - match same object
   * `throwsException` - match block that throws an exception
+  * HCArgumentCaptor - match anything, capturing all values
 
 * Number
 

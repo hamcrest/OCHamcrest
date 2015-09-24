@@ -4,6 +4,7 @@
 #import <OCHamcrest/HCAllOf.h>
 #import <OCHamcrest/HCAnyOf.h>
 #import <OCHamcrest/HCAssertThat.h>
+#import "HCArgumentCaptor.h"
 #import <OCHamcrest/HCConformsToProtocol.h>
 #import <OCHamcrest/HCDescribedAs.h>
 #import <OCHamcrest/HCEvery.h>
