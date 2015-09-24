@@ -8,13 +8,13 @@
 
 @implementation HCBaseDescription
 
-- (id<HCDescription>)appendText:(NSString *)text
+- (id <HCDescription>)appendText:(NSString *)text
 {
     [self append:text];
     return self;
 }
 
-- (id<HCDescription>)appendDescriptionOf:(id)value
+- (id <HCDescription>)appendDescriptionOf:(id)value
 {
     if (value == nil)
         [self append:@"nil"];
@@ -28,7 +28,7 @@
     return self;
 }
 
-- (id<HCDescription>)appendObjectDescriptionOf:(id)value
+- (id <HCDescription>)appendObjectDescriptionOf:(id)value
 {
     NSString *description = [value description];
     NSUInteger descriptionLength = description.length;
@@ -48,7 +48,7 @@
     return self;
 }
 
-- (id<HCDescription>)appendList:(NSArray *)values
+- (id <HCDescription>)appendList:(NSArray *)values
                           start:(NSString *)start
                       separator:(NSString *)separator
                             end:(NSString *)end

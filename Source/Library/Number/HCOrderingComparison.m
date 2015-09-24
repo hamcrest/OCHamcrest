@@ -64,7 +64,7 @@
     return self.minCompare <= compare && compare <= self.maxCompare;
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[[[description appendText:@"a value "]
                     appendText:self.comparisonDescription]

@@ -17,6 +17,6 @@
  * @discussion The description may be part of a description of a larger object of which this is just
  * a component, so it should be worded appropriately.
  */
-- (void)describeTo:(id<HCDescription>)description;
+- (void)describeTo:(id <HCDescription>)description;
 
 @end

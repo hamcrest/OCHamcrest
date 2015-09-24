@@ -60,7 +60,7 @@
     [mismatchDescription appendText:@"]"];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[description appendText:@"every item is "] appendDescriptionOf:self.matcher];
 }

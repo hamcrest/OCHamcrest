@@ -19,7 +19,7 @@ FOUNDATION_EXPORT id HC_isTrue(void)
     return [item boolValue];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [description appendText:@"true (non-zero)"];
 }
@@ -43,7 +43,7 @@ FOUNDATION_EXPORT id HC_isFalse(void)
     return ![item boolValue];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [description appendText:@"false (zero)"];
 }

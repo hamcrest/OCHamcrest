@@ -69,7 +69,7 @@ static void HCRequireMatcher(id obj)
     return [item isKindOfClass:blockClass];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[description appendText:@"a block with no arguments, throwing an exception which is "]
             appendDescriptionOf:self.exceptionMatcher];

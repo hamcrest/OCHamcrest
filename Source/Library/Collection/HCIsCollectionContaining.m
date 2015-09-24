@@ -60,7 +60,7 @@
     return NO;
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[description appendText:@"a collection containing "]
                   appendDescriptionOf:self.elementMatcher];

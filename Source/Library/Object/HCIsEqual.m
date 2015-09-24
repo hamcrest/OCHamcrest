@@ -32,7 +32,7 @@
     return [item isEqual:self.object];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     if ([self.object conformsToProtocol:@protocol(HCMatcher)])
     {

@@ -35,7 +35,7 @@
     return [self.collection containsObject:item];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[description appendText:@"one of "]
                   appendList:self.collection start:@"{" separator:@", " end:@"}"];

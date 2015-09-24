@@ -18,7 +18,7 @@
     return item == nil;
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [description appendText:@"nil"];
 }

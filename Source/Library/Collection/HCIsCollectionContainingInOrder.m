@@ -8,14 +8,14 @@
 
 @interface HCMatchSequence : NSObject
 @property (nonatomic, copy, readonly) NSArray *matchers;
-@property (nonatomic, strong, readonly) id <HCDescription, NSObject> mismatchDescription;
+@property (nonatomic, strong, readonly) id <HCDescription> mismatchDescription;
 @property (nonatomic, assign) NSUInteger nextMatchIndex;
 @end
 
 @implementation HCMatchSequence
 
 - (instancetype)initWithMatchers:(NSArray *)itemMatchers
-             mismatchDescription:(id<HCDescription, NSObject>)description
+             mismatchDescription:(id <HCDescription>)description
 {
     self = [super init];
     if (self)
@@ -92,7 +92,7 @@
     return self;
 }
 
-- (BOOL)matches:(id)collection describingMismatchTo:(id<HCDescription, NSObject>)mismatchDescription
+- (BOOL)matches:(id)collection describingMismatchTo:(id <HCDescription>)mismatchDescription
 {
     if (![collection conformsToProtocol:@protocol(NSFastEnumeration)])
     {
@@ -110,7 +110,7 @@
     return [matchSequence isFinished];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[description appendText:@"a collection containing "]
                   appendList:self.matchers start:@"[" separator:@", " end:@"]"];

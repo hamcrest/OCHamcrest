@@ -38,7 +38,7 @@
     return result;
 }
 
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription
 {
     if ([self invocationNotSupportedForItem:item])
         [super describeMismatchOf:item to:mismatchDescription];
@@ -60,7 +60,7 @@
     }
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[[[description appendText:@"an object with "]
             appendText:[self stringFromSelector]]

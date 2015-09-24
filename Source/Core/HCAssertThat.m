@@ -40,7 +40,7 @@ void HC_assertThatWithLocation(id testCase, id actual, id <HCMatcher> matcher,
 }
 
 void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxTime,
-                                    HCAssertThatAfterActualBlock actualBlock, id<HCMatcher> matcher,
+                                    HCAssertThatAfterActualBlock actualBlock, id <HCMatcher> matcher,
                                     const char *fileName, int lineNumber)
 {
     HC_assertWithTimeoutAndLocation(testCase, maxTime, actualBlock, matcher, fileName, lineNumber);

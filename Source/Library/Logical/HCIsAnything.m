@@ -35,7 +35,7 @@
     return YES;
 }
 
-- (void)describeTo:(id<HCDescription>)aDescription
+- (void)describeTo:(id <HCDescription>)aDescription
 {
     [aDescription appendText:description];
 }

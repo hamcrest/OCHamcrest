@@ -9,6 +9,6 @@
 + (id)neverMatch;
 + (NSString *)mismatchDescription;
 - (BOOL)matches:(id)item;
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription;
+- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription;
 
 @end

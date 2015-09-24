@@ -14,20 +14,20 @@
  * @abstract Appends some plain text to the description.
  * @return <code>self</code>, for chaining.
  */
-- (id<HCDescription>)appendText:(NSString *)text;
+- (id <HCDescription>)appendText:(NSString *)text;
 
 /*!
  * @abstract Appends description of given value to description.
  * @discussion If the value implements the @ref HCSelfDescribing protocol, then it will be used.
  * @return <code>self</code>, for chaining.
  */
-- (id<HCDescription>)appendDescriptionOf:(id)value;
+- (id <HCDescription>)appendDescriptionOf:(id)value;
 
 /*!
  * @abstract Appends a list of objects to the description.
  * @return <code>self</code>, for chaining.
  */
-- (id<HCDescription>)appendList:(NSArray *)values
+- (id <HCDescription>)appendList:(NSArray *)values
                           start:(NSString *)start
                       separator:(NSString *)separator
                             end:(NSString *)end;

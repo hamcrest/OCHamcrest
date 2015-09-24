@@ -36,7 +36,7 @@
     return NO;
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[description appendText:@"a dictionary containing key "]
                   appendDescriptionOf:self.keyMatcher];

@@ -11,13 +11,13 @@
     return [self matches:item describingMismatchTo:nil];
 }
 
-- (BOOL)matches:(id)item describingMismatchTo:(id<HCDescription>)mismatchDescription
+- (BOOL)matches:(id)item describingMismatchTo:(id <HCDescription>)mismatchDescription
 {
     HC_ABSTRACT_METHOD;
     return NO;
 }
 
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription
 {
     [self matches:item describingMismatchTo:mismatchDescription];
 }

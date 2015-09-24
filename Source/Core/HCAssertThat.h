@@ -42,7 +42,7 @@ typedef id (^HCAssertThatAfterActualBlock)() __attribute__((deprecated));
 
 OBJC_EXPORT void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxTime,
                                                 HCAssertThatAfterActualBlock actualBlock,
-                                                id<HCMatcher> matcher,
+                                                id <HCMatcher> matcher,
                                                 const char *fileName, int lineNumber) __attribute__((deprecated));
 
 #define HC_assertThatAfter(maxTime, actualBlock, matcher)  \

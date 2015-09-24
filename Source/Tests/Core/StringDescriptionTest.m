@@ -13,7 +13,7 @@
 
 @implementation FakeSelfDescribing
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [description appendText:@"DESCRIPTION"];
 }

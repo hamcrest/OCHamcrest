@@ -25,7 +25,7 @@
     return self;
 }
 
-- (BOOL)matches:(id)item describingMismatchTo:(id<HCDescription>)mismatchDescription
+- (BOOL)matches:(id)item describingMismatchTo:(id <HCDescription>)mismatchDescription
 {
     for (id <HCMatcher> oneMatcher in self.matchers)
     {
@@ -39,7 +39,7 @@
     return YES;
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [description appendList:self.matchers start:@"(" separator:@" and " end:@")"];
 }

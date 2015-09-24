@@ -27,7 +27,7 @@
  * @param mismatchDescription The description to be built or appended to if item does not match.
  * @return <code>YES</code> if item matches, otherwise <code>NO</code>.
  */
-- (BOOL)matches:(id)item describingMismatchTo:(id<HCDescription>)mismatchDescription;
+- (BOOL)matches:(id)item describingMismatchTo:(id <HCDescription>)mismatchDescription;
 
 /*!
  * @abstract Generates a description of why the matcher has not accepted the item.
@@ -38,6 +38,6 @@
  *
  * This method assumes that <code>matches:item</code> is false, but will not check this.
  */
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription;
+- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription;
 
 @end

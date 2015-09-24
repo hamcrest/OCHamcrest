@@ -28,7 +28,7 @@
     return [self.string isEqualToString:item];
 }
 
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription
 {
     [[mismatchDescription appendText:@"mismatched: "] appendText:item];
 }

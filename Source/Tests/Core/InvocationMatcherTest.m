@@ -19,7 +19,7 @@
     return [[Match alloc] initEqualTo:arg];
 }
 
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)description
+- (void)describeMismatchOf:(id)item to:(id <HCDescription>)description
 {
     [description appendText:@"MISMATCH"];
 }

@@ -76,7 +76,7 @@ static NSMutableString *stripSpace(NSString *string)
     return [self.strippedString isEqualToString:stripSpace(item)];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[description appendDescriptionOf:self.originalString]
                   appendText:@" ignoring whitespace"];

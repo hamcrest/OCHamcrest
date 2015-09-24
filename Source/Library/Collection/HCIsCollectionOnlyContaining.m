@@ -14,7 +14,7 @@
     return [[self alloc] initWithMatcher:matcher];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[description appendText:@"a collection containing items matching "]
                   appendDescriptionOf:self.matcher];

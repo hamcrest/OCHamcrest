@@ -39,7 +39,7 @@
     return [item respondsToSelector:@selector(count)];
 }
 
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription
 {
     [mismatchDescription appendText:@"was "];
     if ([self itemHasCount:item])
@@ -51,7 +51,7 @@
     [mismatchDescription appendDescriptionOf:item];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[description appendText:@"a collection with count of "] appendDescriptionOf:self.countMatcher];
 }

@@ -50,7 +50,7 @@
     return YES;
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [description appendList:substrings start:@"a string containing " separator:@", " end:@" in order"];
 }

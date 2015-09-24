@@ -8,13 +8,13 @@
 
 @interface HCMatchingInAnyOrder : NSObject
 @property (nonatomic, copy, readonly) NSMutableArray *matchers;
-@property (nonatomic, strong, readonly) id <HCDescription, NSObject> mismatchDescription;
+@property (nonatomic, strong, readonly) id <HCDescription> mismatchDescription;
 @end
 
 @implementation HCMatchingInAnyOrder
 
 - (instancetype)initWithMatchers:(NSArray *)itemMatchers
-             mismatchDescription:(id<HCDescription, NSObject>)description
+             mismatchDescription:(id <HCDescription>)description
 {
     self = [super init];
     if (self)
@@ -76,7 +76,7 @@
     return self;
 }
 
-- (BOOL)matches:(id)collection describingMismatchTo:(id<HCDescription>)mismatchDescription
+- (BOOL)matches:(id)collection describingMismatchTo:(id <HCDescription>)mismatchDescription
 {
     if (![collection conformsToProtocol:@protocol(NSFastEnumeration)])
     {
@@ -94,7 +94,7 @@
     return [matchSequence isFinishedWith:collection];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[[description appendText:@"a collection over "]
                    appendList:self.matchers start:@"[" separator:@", " end:@"]"]

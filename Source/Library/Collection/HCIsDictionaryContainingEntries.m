@@ -32,7 +32,7 @@
     return self;
 }
 
-- (BOOL)matches:(id)dict describingMismatchTo:(id<HCDescription>)mismatchDescription
+- (BOOL)matches:(id)dict describingMismatchTo:(id <HCDescription>)mismatchDescription
 {
     if (![dict isKindOfClass:[NSDictionary class]])
     {
@@ -69,7 +69,7 @@
     return YES;
 }
 
-- (void)describeKeyValueAtIndex:(NSUInteger)index to:(id<HCDescription>)description
+- (void)describeKeyValueAtIndex:(NSUInteger)index to:(id <HCDescription>)description
 {
     [[[[description appendDescriptionOf:self.keys[index]]
                     appendText:@" = "]
@@ -77,7 +77,7 @@
                     appendText:@"; "];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [description appendText:@"a dictionary containing { "];
     NSUInteger count = [self.keys count];

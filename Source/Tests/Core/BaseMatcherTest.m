@@ -11,7 +11,7 @@
 
 @implementation BaseMatcherWithDescription
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [description appendText:@"SOME DESCRIPTION"];
 }

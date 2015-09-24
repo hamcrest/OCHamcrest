@@ -42,7 +42,7 @@
     return ![item isKindOfClass:[NSNumber class]];
 }
 
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription
 {
     if ([self itemIsNotNumber:item])
         [super describeMismatchOf:item to:mismatchDescription];
@@ -55,7 +55,7 @@
     }
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[[[description appendText:@"a numeric value within "]
                     appendDescriptionOf:@(self.delta)]

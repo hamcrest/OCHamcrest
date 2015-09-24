@@ -28,7 +28,7 @@
     return item == self.object;
 }
 
-- (void)describeMismatchOf:(id)item to:(id<HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription
 {
     [mismatchDescription appendText:@"was "];
     if (item)
@@ -36,7 +36,7 @@
     [mismatchDescription appendDescriptionOf:item];
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[description appendText:[NSString stringWithFormat:@"same instance as %p ", (__bridge void *)self.object]]
                   appendDescriptionOf:self.object];

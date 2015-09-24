@@ -60,7 +60,7 @@
     return match;
 }
 
-- (void)describeTo:(id<HCDescription>)description
+- (void)describeTo:(id <HCDescription>)description
 {
     [[[[description appendText:@"an object with "]
                     appendText:self.propertyName]
