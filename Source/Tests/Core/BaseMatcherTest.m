@@ -41,7 +41,7 @@
 
 - (void)testDescriptionShouldDescribeMatcher
 {
-    XCTAssertEqualObjects([matcher description], @"SOME DESCRIPTION");
+    XCTAssertEqualObjects(matcher.description, @"SOME DESCRIPTION");
 }
 
 - (void)testShouldSupportImmutableCopying

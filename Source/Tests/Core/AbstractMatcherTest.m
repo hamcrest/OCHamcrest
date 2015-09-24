@@ -71,7 +71,7 @@
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     [description appendDescriptionOf:matcher];
-    NSString *actual = [description description];
+    NSString *actual = description.description;
     if (![actual isEqualToString:expected])
     {
         [self failEqualityBetweenObject:actual andObject:expected
@@ -90,7 +90,7 @@
         [self failWithMessage:@"Precondition: Matcher should match item"
                        inFile:fileName atLine:lineNumber];
     }
-    if ([[description description] length] != 0)
+    if (description.description.length != 0)
     {
         [self failWithMessage:@"Expected no mismatch description"
                        inFile:fileName atLine:lineNumber];
@@ -109,7 +109,7 @@
         [self failWithMessage:@"Precondition: Matcher should not match item"
                        inFile:fileName atLine:lineNumber];
     }
-    NSString *actual = [description description];
+    NSString *actual = description.description;
     if (![actual isEqualToString:expected])
     {
         [self failEqualityBetweenObject:actual andObject:expected
@@ -131,7 +131,7 @@
         [self failWithMessage:@"Precondition: Matcher should not match item"
                        inFile:fileName atLine:lineNumber];
     }
-    NSString *actual = [description description];
+    NSString *actual = description.description;
     if (![actual hasPrefix:expectedPrefix])
     {
         [self failEqualityBetweenObject:actual andObject:expectedPrefix
@@ -145,7 +145,7 @@
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     [matcher describeMismatchOf:arg to:description];
-    NSString *actual = [description description];
+    NSString *actual = description.description;
     if (![actual isEqualToString:expected])
     {
         [self failEqualityBetweenObject:actual andObject:expected

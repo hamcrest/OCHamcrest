@@ -18,7 +18,7 @@ static NSString *describeMismatch(id matcher, id actual)
             appendDescriptionOf:matcher]
             appendText:@", but "];
     [matcher describeMismatchOf:actual to:description];
-    return [description description];
+    return description.description;
 }
 
 static void reportMismatch(id testCase, id actual, id <HCMatcher> matcher,

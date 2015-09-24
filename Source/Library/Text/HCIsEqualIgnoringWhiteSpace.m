@@ -8,7 +8,7 @@
 
 static void removeTrailingSpace(NSMutableString *string)
 {
-    NSUInteger length = [string length];
+    NSUInteger length = string.length;
     if (length > 0)
     {
         NSUInteger charIndex = length - 1;
@@ -19,9 +19,9 @@ static void removeTrailingSpace(NSMutableString *string)
 
 static NSMutableString *stripSpace(NSString *string)
 {
-    NSUInteger length = [string length];
+    NSUInteger length = string.length;
     NSMutableString *result = [NSMutableString stringWithCapacity:length];
-    bool lastWasSpace = true;
+    BOOL lastWasSpace = YES;
     for (NSUInteger charIndex = 0; charIndex < length; ++charIndex)
     {
         unichar character = [string characterAtIndex:charIndex];
@@ -29,12 +29,12 @@ static NSMutableString *stripSpace(NSString *string)
         {
             if (!lastWasSpace)
                 [result appendString:@" "];
-            lastWasSpace = true;
+            lastWasSpace = YES;
         }
         else
         {
             [result appendFormat:@"%C", character];
-            lastWasSpace = false;
+            lastWasSpace = NO;
         }
     }
 

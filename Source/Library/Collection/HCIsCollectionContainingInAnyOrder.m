@@ -44,7 +44,7 @@
 
 - (BOOL)isFinishedWith:(NSArray *)collection
 {
-    if ([self.matchers count] == 0)
+    if (self.matchers.count == 0)
         return YES;
 
     [[[[self.mismatchDescription appendText:@"no item matches: "]

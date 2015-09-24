@@ -40,7 +40,7 @@
         return NO;
     }
 
-    NSUInteger count = [self.keys count];
+    NSUInteger count = self.keys.count;
     for (NSUInteger index = 0; index < count; ++index)
     {
         id key = self.keys[index];

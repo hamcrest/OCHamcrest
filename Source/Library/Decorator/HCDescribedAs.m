@@ -15,7 +15,7 @@
     int decimal = 0;
     BOOL readDigit = NO;
 
-    NSUInteger length = [self length];
+    NSUInteger length = self.length;
     NSUInteger index;
     for (index = 0; index < length; ++index)
     {

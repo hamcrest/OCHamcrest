@@ -33,7 +33,7 @@
 
 - (BOOL)isFinished
 {
-    if (self.nextMatchIndex < [self.matchers count])
+    if (self.nextMatchIndex < self.matchers.count)
     {
         [[self.mismatchDescription appendText:@"no item was "]
                               appendDescriptionOf:self.matchers[self.nextMatchIndex]];
@@ -56,7 +56,7 @@
 
 - (BOOL)isNotSurplus:(id)item
 {
-    if ([self.matchers count] <= self.nextMatchIndex)
+    if (self.matchers.count <= self.nextMatchIndex)
     {
         [[self.mismatchDescription appendText:@"not matched: "] appendDescriptionOf:item];
         return NO;
@@ -66,7 +66,7 @@
 
 - (void)describeMismatchOfMatcher:(id <HCMatcher>)matcher item:(id)item
 {
-    [self.mismatchDescription appendText:[NSString stringWithFormat:@"item %zi: ", self.nextMatchIndex]];
+    [self.mismatchDescription appendText:[NSString stringWithFormat:@"item %zi: ", (size_t)self.nextMatchIndex]];
     [matcher describeMismatchOf:item to:self.mismatchDescription];
 }
 

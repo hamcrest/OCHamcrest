@@ -12,7 +12,7 @@
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     [description appendDescriptionOf:selfDescribing];
-    return [description description];
+    return description.description;
 }
 
 + (instancetype)stringDescription

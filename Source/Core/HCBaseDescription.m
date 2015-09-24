@@ -31,7 +31,7 @@
 - (id<HCDescription>)appendObjectDescriptionOf:(id)value
 {
     NSString *description = [value description];
-    NSUInteger descriptionLength = [description length];
+    NSUInteger descriptionLength = description.length;
     if (descriptionLength == 0)
         [self append:[NSString stringWithFormat:@"<%@: %p>", NSStringFromClass([value class]), (__bridge void *)value]];
     else if ([description characterAtIndex:0] == '<'
@@ -70,7 +70,7 @@
 - (void)toCSyntaxString:(NSString *)unformatted
 {
     [self append:@"\""];
-    NSUInteger length = [unformatted length];
+    NSUInteger length = unformatted.length;
     for (NSUInteger index = 0; index < length; ++index)
         [self toCSyntax:[unformatted characterAtIndex:index]];
     [self append:@"\""];
