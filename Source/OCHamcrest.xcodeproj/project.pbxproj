@@ -27,86 +27,86 @@
 		081BEE9613459FB2003F846A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
 		082E7C3113FF676E004A22FE /* MockSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2B13FF676E004A22FE /* MockSenTestCase.m */; };
 		082E7C3213FF676E004A22FE /* MockSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2B13FF676E004A22FE /* MockSenTestCase.m */; };
-		082E7C3313FF676E004A22FE /* BaseMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2C13FF676E004A22FE /* BaseMatcherTest.m */; };
-		082E7C3413FF676E004A22FE /* BaseMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2C13FF676E004A22FE /* BaseMatcherTest.m */; };
-		082E7C3513FF676E004A22FE /* InvocationMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2D13FF676E004A22FE /* InvocationMatcherTest.m */; };
-		082E7C3613FF676E004A22FE /* InvocationMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2D13FF676E004A22FE /* InvocationMatcherTest.m */; };
-		082E7C3713FF676E004A22FE /* StringDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2E13FF676E004A22FE /* StringDescriptionTest.m */; };
-		082E7C3813FF676E004A22FE /* StringDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2E13FF676E004A22FE /* StringDescriptionTest.m */; };
-		0846B6E013EE5F9D00EA68E8 /* DescribedAsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DC13EE5F9D00EA68E8 /* DescribedAsTest.m */; };
-		0846B6E113EE5F9D00EA68E8 /* DescribedAsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DC13EE5F9D00EA68E8 /* DescribedAsTest.m */; };
-		0846B6E213EE5F9D00EA68E8 /* IsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DD13EE5F9D00EA68E8 /* IsTest.m */; };
-		0846B6E313EE5F9D00EA68E8 /* IsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DD13EE5F9D00EA68E8 /* IsTest.m */; };
+		082E7C3313FF676E004A22FE /* HCBaseMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2C13FF676E004A22FE /* HCBaseMatcherTests.m */; };
+		082E7C3413FF676E004A22FE /* HCBaseMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2C13FF676E004A22FE /* HCBaseMatcherTests.m */; };
+		082E7C3513FF676E004A22FE /* HCInvocationMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2D13FF676E004A22FE /* HCInvocationMatcherTests.m */; };
+		082E7C3613FF676E004A22FE /* HCInvocationMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2D13FF676E004A22FE /* HCInvocationMatcherTests.m */; };
+		082E7C3713FF676E004A22FE /* HCStringDescriptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2E13FF676E004A22FE /* HCStringDescriptionTests.m */; };
+		082E7C3813FF676E004A22FE /* HCStringDescriptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2E13FF676E004A22FE /* HCStringDescriptionTests.m */; };
+		0846B6E013EE5F9D00EA68E8 /* HCDescribedAsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DC13EE5F9D00EA68E8 /* HCDescribedAsTests.m */; };
+		0846B6E113EE5F9D00EA68E8 /* HCDescribedAsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DC13EE5F9D00EA68E8 /* HCDescribedAsTests.m */; };
+		0846B6E213EE5F9D00EA68E8 /* HCIsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DD13EE5F9D00EA68E8 /* HCIsTests.m */; };
+		0846B6E313EE5F9D00EA68E8 /* HCIsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DD13EE5F9D00EA68E8 /* HCIsTests.m */; };
 		0846B6E413EE5F9D00EA68E8 /* NeverMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DF13EE5F9D00EA68E8 /* NeverMatch.m */; };
 		0846B6E513EE5F9D00EA68E8 /* NeverMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6DF13EE5F9D00EA68E8 /* NeverMatch.m */; };
-		0846B6EB13EE5FB400EA68E8 /* AllOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E713EE5FB400EA68E8 /* AllOfTest.m */; };
-		0846B6EC13EE5FB400EA68E8 /* AllOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E713EE5FB400EA68E8 /* AllOfTest.m */; };
-		0846B6ED13EE5FB400EA68E8 /* AnyOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E813EE5FB400EA68E8 /* AnyOfTest.m */; };
-		0846B6EE13EE5FB400EA68E8 /* AnyOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E813EE5FB400EA68E8 /* AnyOfTest.m */; };
-		0846B6EF13EE5FB400EA68E8 /* IsAnythingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E913EE5FB400EA68E8 /* IsAnythingTest.m */; };
-		0846B6F013EE5FB400EA68E8 /* IsAnythingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E913EE5FB400EA68E8 /* IsAnythingTest.m */; };
-		0846B6F113EE5FB400EA68E8 /* IsNotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6EA13EE5FB400EA68E8 /* IsNotTest.m */; };
-		0846B6F213EE5FB400EA68E8 /* IsNotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6EA13EE5FB400EA68E8 /* IsNotTest.m */; };
-		0846B6F713EE5FD200EA68E8 /* IsEqualTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F313EE5FD200EA68E8 /* IsEqualTest.m */; };
-		0846B6F813EE5FD200EA68E8 /* IsEqualTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F313EE5FD200EA68E8 /* IsEqualTest.m */; };
-		0846B6F913EE5FD200EA68E8 /* IsInstanceOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F413EE5FD200EA68E8 /* IsInstanceOfTest.m */; };
-		0846B6FA13EE5FD200EA68E8 /* IsInstanceOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F413EE5FD200EA68E8 /* IsInstanceOfTest.m */; };
-		0846B6FB13EE5FD200EA68E8 /* IsNilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F513EE5FD200EA68E8 /* IsNilTest.m */; };
-		0846B6FC13EE5FD200EA68E8 /* IsNilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F513EE5FD200EA68E8 /* IsNilTest.m */; };
-		0846B6FD13EE5FD200EA68E8 /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F613EE5FD200EA68E8 /* IsSameTest.m */; };
-		0846B6FE13EE5FD200EA68E8 /* IsSameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F613EE5FD200EA68E8 /* IsSameTest.m */; };
+		0846B6EB13EE5FB400EA68E8 /* HCAllOfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E713EE5FB400EA68E8 /* HCAllOfTests.m */; };
+		0846B6EC13EE5FB400EA68E8 /* HCAllOfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E713EE5FB400EA68E8 /* HCAllOfTests.m */; };
+		0846B6ED13EE5FB400EA68E8 /* HCAnyOfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E813EE5FB400EA68E8 /* HCAnyOfTests.m */; };
+		0846B6EE13EE5FB400EA68E8 /* HCAnyOfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E813EE5FB400EA68E8 /* HCAnyOfTests.m */; };
+		0846B6EF13EE5FB400EA68E8 /* HCIsAnythingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E913EE5FB400EA68E8 /* HCIsAnythingTests.m */; };
+		0846B6F013EE5FB400EA68E8 /* HCIsAnythingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6E913EE5FB400EA68E8 /* HCIsAnythingTests.m */; };
+		0846B6F113EE5FB400EA68E8 /* HCIsNotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6EA13EE5FB400EA68E8 /* HCIsNotTests.m */; };
+		0846B6F213EE5FB400EA68E8 /* HCIsNotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6EA13EE5FB400EA68E8 /* HCIsNotTests.m */; };
+		0846B6F713EE5FD200EA68E8 /* HCIsEqualTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F313EE5FD200EA68E8 /* HCIsEqualTests.m */; };
+		0846B6F813EE5FD200EA68E8 /* HCIsEqualTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F313EE5FD200EA68E8 /* HCIsEqualTests.m */; };
+		0846B6F913EE5FD200EA68E8 /* HCIsInstanceOfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F413EE5FD200EA68E8 /* HCIsInstanceOfTests.m */; };
+		0846B6FA13EE5FD200EA68E8 /* HCIsInstanceOfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F413EE5FD200EA68E8 /* HCIsInstanceOfTests.m */; };
+		0846B6FB13EE5FD200EA68E8 /* HCIsNilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F513EE5FD200EA68E8 /* HCIsNilTests.m */; };
+		0846B6FC13EE5FD200EA68E8 /* HCIsNilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F513EE5FD200EA68E8 /* HCIsNilTests.m */; };
+		0846B6FD13EE5FD200EA68E8 /* HCIsSameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F613EE5FD200EA68E8 /* HCIsSameTests.m */; };
+		0846B6FE13EE5FD200EA68E8 /* HCIsSameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0846B6F613EE5FD200EA68E8 /* HCIsSameTests.m */; };
 		0850A44E17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */; };
 		0850A44F17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */; };
 		0859831013459CA400BE7892 /* FakeWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033613440AD8001B439B /* FakeWithCount.m */; };
 		0859831113459CA400BE7892 /* FakeWithoutCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033813440AD8001B439B /* FakeWithoutCount.m */; };
-		0859831213459CA400BE7892 /* HasCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033913440AD8001B439B /* HasCountTest.m */; };
-		0859831313459CA400BE7892 /* HasDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035813440AD8001B439B /* HasDescriptionTest.m */; };
-		0859831613459CA400BE7892 /* IsCloseToTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035313440AD8001B439B /* IsCloseToTest.m */; };
-		0859831713459CA400BE7892 /* IsCollectionContainingInAnyOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033A13440AD8001B439B /* IsCollectionContainingInAnyOrderTest.m */; };
-		0859831813459CA400BE7892 /* IsCollectionContainingInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033B13440AD8001B439B /* IsCollectionContainingInOrderTest.m */; };
-		0859831913459CA400BE7892 /* IsCollectionContainingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033C13440AD8001B439B /* IsCollectionContainingTest.m */; };
-		0859831A13459CA400BE7892 /* IsCollectionOnlyContainingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033D13440AD8001B439B /* IsCollectionOnlyContainingTest.m */; };
-		0859831B13459CA400BE7892 /* IsDictionaryContainingEntriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033E13440AD8001B439B /* IsDictionaryContainingEntriesTest.m */; };
-		0859831C13459CA400BE7892 /* IsDictionaryContainingKeyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033F13440AD8001B439B /* IsDictionaryContainingKeyTest.m */; };
-		0859831D13459CA400BE7892 /* IsDictionaryContainingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034013440AD8001B439B /* IsDictionaryContainingTest.m */; };
-		0859831E13459CA400BE7892 /* IsDictionaryContainingValueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034113440AD8001B439B /* IsDictionaryContainingValueTest.m */; };
-		0859831F13459CA400BE7892 /* IsEmptyCollectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034213440AD8001B439B /* IsEmptyCollectionTest.m */; };
-		0859832013459CA400BE7892 /* IsEqualIgnoringCaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035B13440AD8001B439B /* IsEqualIgnoringCaseTest.m */; };
-		0859832113459CA400BE7892 /* IsEqualIgnoringWhiteSpaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035C13440AD8001B439B /* IsEqualIgnoringWhiteSpaceTest.m */; };
-		0859832313459CA400BE7892 /* IsEqualToNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035413440AD8001B439B /* IsEqualToNumberTest.m */; };
-		0859832513459CA400BE7892 /* IsInTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034313440AD8001B439B /* IsInTest.m */; };
-		0859832B13459CA400BE7892 /* NumberAssertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035513440AD8001B439B /* NumberAssertTest.m */; };
-		0859832C13459CA400BE7892 /* OrderingComparisonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035613440AD8001B439B /* OrderingComparisonTest.m */; };
-		0859832D13459CA400BE7892 /* StringContainsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035D13440AD8001B439B /* StringContainsTest.m */; };
-		0859832F13459CA400BE7892 /* StringEndsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035E13440AD8001B439B /* StringEndsWithTest.m */; };
-		0859833013459CA400BE7892 /* StringStartsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035F13440AD8001B439B /* StringStartsWithTest.m */; };
+		0859831213459CA400BE7892 /* HCHasCountTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033913440AD8001B439B /* HCHasCountTests.m */; };
+		0859831313459CA400BE7892 /* HCHasDescriptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035813440AD8001B439B /* HCHasDescriptionTests.m */; };
+		0859831613459CA400BE7892 /* HCIsCloseToTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035313440AD8001B439B /* HCIsCloseToTests.m */; };
+		0859831713459CA400BE7892 /* HCIsCollectionContainingInAnyOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033A13440AD8001B439B /* HCIsCollectionContainingInAnyOrderTests.m */; };
+		0859831813459CA400BE7892 /* HCIsCollectionContainingInOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033B13440AD8001B439B /* HCIsCollectionContainingInOrderTests.m */; };
+		0859831913459CA400BE7892 /* HCIsCollectionContainingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033C13440AD8001B439B /* HCIsCollectionContainingTests.m */; };
+		0859831A13459CA400BE7892 /* HCIsCollectionOnlyContainingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033D13440AD8001B439B /* HCIsCollectionOnlyContainingTests.m */; };
+		0859831B13459CA400BE7892 /* HCIsDictionaryContainingEntriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033E13440AD8001B439B /* HCIsDictionaryContainingEntriesTests.m */; };
+		0859831C13459CA400BE7892 /* HCIsDictionaryContainingKeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033F13440AD8001B439B /* HCIsDictionaryContainingKeyTests.m */; };
+		0859831D13459CA400BE7892 /* HCIsDictionaryContainingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034013440AD8001B439B /* HCIsDictionaryContainingTests.m */; };
+		0859831E13459CA400BE7892 /* HCIsDictionaryContainingValueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034113440AD8001B439B /* HCIsDictionaryContainingValueTests.m */; };
+		0859831F13459CA400BE7892 /* HCIsEmptyCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034213440AD8001B439B /* HCIsEmptyCollectionTests.m */; };
+		0859832013459CA400BE7892 /* HCIsEqualIgnoringCaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035B13440AD8001B439B /* HCIsEqualIgnoringCaseTests.m */; };
+		0859832113459CA400BE7892 /* HCIsEqualIgnoringWhiteSpaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035C13440AD8001B439B /* HCIsEqualIgnoringWhiteSpaceTests.m */; };
+		0859832313459CA400BE7892 /* HCIsEqualToNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035413440AD8001B439B /* HCIsEqualToNumberTests.m */; };
+		0859832513459CA400BE7892 /* HCIsInTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034313440AD8001B439B /* HCIsInTests.m */; };
+		0859832B13459CA400BE7892 /* HCNumberAssertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035513440AD8001B439B /* HCNumberAssertTests.m */; };
+		0859832C13459CA400BE7892 /* HCOrderingComparisonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035613440AD8001B439B /* HCOrderingComparisonTests.m */; };
+		0859832D13459CA400BE7892 /* HCStringContainsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035D13440AD8001B439B /* HCStringContainsTests.m */; };
+		0859832F13459CA400BE7892 /* HCStringEndsWithTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035E13440AD8001B439B /* HCStringEndsWithTests.m */; };
+		0859833013459CA400BE7892 /* HCStringStartsWithTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035F13440AD8001B439B /* HCStringStartsWithTests.m */; };
 		087601FB13440807001B439B /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601E213440806001B439B /* OCHamcrest.framework */; };
 		0876036313440AD8001B439B /* FakeWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033613440AD8001B439B /* FakeWithCount.m */; };
 		0876036413440AD8001B439B /* FakeWithoutCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033813440AD8001B439B /* FakeWithoutCount.m */; };
-		0876036513440AD8001B439B /* HasCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033913440AD8001B439B /* HasCountTest.m */; };
-		0876036613440AD8001B439B /* IsCollectionContainingInAnyOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033A13440AD8001B439B /* IsCollectionContainingInAnyOrderTest.m */; };
-		0876036713440AD8001B439B /* IsCollectionContainingInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033B13440AD8001B439B /* IsCollectionContainingInOrderTest.m */; };
-		0876036813440AD8001B439B /* IsCollectionContainingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033C13440AD8001B439B /* IsCollectionContainingTest.m */; };
-		0876036913440AD8001B439B /* IsCollectionOnlyContainingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033D13440AD8001B439B /* IsCollectionOnlyContainingTest.m */; };
-		0876036A13440AD8001B439B /* IsDictionaryContainingEntriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033E13440AD8001B439B /* IsDictionaryContainingEntriesTest.m */; };
-		0876036B13440AD8001B439B /* IsDictionaryContainingKeyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033F13440AD8001B439B /* IsDictionaryContainingKeyTest.m */; };
-		0876036C13440AD8001B439B /* IsDictionaryContainingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034013440AD8001B439B /* IsDictionaryContainingTest.m */; };
-		0876036D13440AD8001B439B /* IsDictionaryContainingValueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034113440AD8001B439B /* IsDictionaryContainingValueTest.m */; };
-		0876036E13440AD8001B439B /* IsEmptyCollectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034213440AD8001B439B /* IsEmptyCollectionTest.m */; };
-		0876036F13440AD8001B439B /* IsInTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034313440AD8001B439B /* IsInTest.m */; };
-		0876037C13440AD8001B439B /* IsCloseToTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035313440AD8001B439B /* IsCloseToTest.m */; };
-		0876037D13440AD8001B439B /* IsEqualToNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035413440AD8001B439B /* IsEqualToNumberTest.m */; };
-		0876037E13440AD8001B439B /* NumberAssertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035513440AD8001B439B /* NumberAssertTest.m */; };
-		0876037F13440AD8001B439B /* OrderingComparisonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035613440AD8001B439B /* OrderingComparisonTest.m */; };
-		0876038013440AD8001B439B /* HasDescriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035813440AD8001B439B /* HasDescriptionTest.m */; };
-		0876038213440AD8001B439B /* IsEqualIgnoringCaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035B13440AD8001B439B /* IsEqualIgnoringCaseTest.m */; };
-		0876038313440AD8001B439B /* IsEqualIgnoringWhiteSpaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035C13440AD8001B439B /* IsEqualIgnoringWhiteSpaceTest.m */; };
-		0876038413440AD8001B439B /* StringContainsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035D13440AD8001B439B /* StringContainsTest.m */; };
-		0876038513440AD8001B439B /* StringEndsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035E13440AD8001B439B /* StringEndsWithTest.m */; };
-		0876038613440AD8001B439B /* StringStartsWithTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035F13440AD8001B439B /* StringStartsWithTest.m */; };
+		0876036513440AD8001B439B /* HCHasCountTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033913440AD8001B439B /* HCHasCountTests.m */; };
+		0876036613440AD8001B439B /* HCIsCollectionContainingInAnyOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033A13440AD8001B439B /* HCIsCollectionContainingInAnyOrderTests.m */; };
+		0876036713440AD8001B439B /* HCIsCollectionContainingInOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033B13440AD8001B439B /* HCIsCollectionContainingInOrderTests.m */; };
+		0876036813440AD8001B439B /* HCIsCollectionContainingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033C13440AD8001B439B /* HCIsCollectionContainingTests.m */; };
+		0876036913440AD8001B439B /* HCIsCollectionOnlyContainingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033D13440AD8001B439B /* HCIsCollectionOnlyContainingTests.m */; };
+		0876036A13440AD8001B439B /* HCIsDictionaryContainingEntriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033E13440AD8001B439B /* HCIsDictionaryContainingEntriesTests.m */; };
+		0876036B13440AD8001B439B /* HCIsDictionaryContainingKeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876033F13440AD8001B439B /* HCIsDictionaryContainingKeyTests.m */; };
+		0876036C13440AD8001B439B /* HCIsDictionaryContainingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034013440AD8001B439B /* HCIsDictionaryContainingTests.m */; };
+		0876036D13440AD8001B439B /* HCIsDictionaryContainingValueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034113440AD8001B439B /* HCIsDictionaryContainingValueTests.m */; };
+		0876036E13440AD8001B439B /* HCIsEmptyCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034213440AD8001B439B /* HCIsEmptyCollectionTests.m */; };
+		0876036F13440AD8001B439B /* HCIsInTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034313440AD8001B439B /* HCIsInTests.m */; };
+		0876037C13440AD8001B439B /* HCIsCloseToTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035313440AD8001B439B /* HCIsCloseToTests.m */; };
+		0876037D13440AD8001B439B /* HCIsEqualToNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035413440AD8001B439B /* HCIsEqualToNumberTests.m */; };
+		0876037E13440AD8001B439B /* HCNumberAssertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035513440AD8001B439B /* HCNumberAssertTests.m */; };
+		0876037F13440AD8001B439B /* HCOrderingComparisonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035613440AD8001B439B /* HCOrderingComparisonTests.m */; };
+		0876038013440AD8001B439B /* HCHasDescriptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035813440AD8001B439B /* HCHasDescriptionTests.m */; };
+		0876038213440AD8001B439B /* HCIsEqualIgnoringCaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035B13440AD8001B439B /* HCIsEqualIgnoringCaseTests.m */; };
+		0876038313440AD8001B439B /* HCIsEqualIgnoringWhiteSpaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035C13440AD8001B439B /* HCIsEqualIgnoringWhiteSpaceTests.m */; };
+		0876038413440AD8001B439B /* HCStringContainsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035D13440AD8001B439B /* HCStringContainsTests.m */; };
+		0876038513440AD8001B439B /* HCStringEndsWithTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035E13440AD8001B439B /* HCStringEndsWithTests.m */; };
+		0876038613440AD8001B439B /* HCStringStartsWithTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035F13440AD8001B439B /* HCStringStartsWithTests.m */; };
 		0876039213440E28001B439B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
-		088FB0AB136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */; };
-		088FB0AC136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */; };
+		088FB0AB136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */; };
+		088FB0AC136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */; };
 		0EF5915A1B9E84C600BABDED /* HCTestFailureHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF591561B9E84C600BABDED /* HCTestFailureHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EF5915E1B9E84C600BABDED /* HCTestFailureHandlerChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF591581B9E84C600BABDED /* HCTestFailureHandlerChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EF591601B9E84C600BABDED /* HCTestFailureHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF591591B9E84C600BABDED /* HCTestFailureHandlerChain.m */; };
@@ -117,21 +117,21 @@
 		31DDCC204A3D141D7AC6FC02 /* Mismatchable.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DDCC467D6EFFC559012D61 /* Mismatchable.m */; };
 		31DDCDCEAABD4CB0D7580AFE /* HCDiagnosingMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 31DDCE62F97F2042F0A8BDAE /* HCDiagnosingMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31DDCEC51963ADABADBC576B /* HCDiagnosingMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DDCB570769099D33C22810 /* HCDiagnosingMatcher.m */; };
-		5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
-		5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* ConformsToProtocolTest.m */; };
+		5F2773481436FAA600B9683A /* HCConformsToProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* HCConformsToProtocolTests.m */; };
+		5F2773491436FAA700B9683A /* HCConformsToProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* HCConformsToProtocolTests.m */; };
 		609E9068872F708CA4DA4785 /* MatcherTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E91D3F5F10354528F7FF8 /* MatcherTestCase.m */; };
 		609E941591B81120F216AAAF /* InterceptingTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E97D2700DBCFB2161C50A /* InterceptingTestCase.m */; };
 		609E9502808F7E64A3060B23 /* HCArgumentCaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 609E9B6B3B80E4914607E267 /* HCArgumentCaptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		609E95B8EB994E0768A22EB5 /* TestFailureReporterChainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E99ADF272619359F01300 /* TestFailureReporterChainTests.m */; };
+		609E95B8EB994E0768A22EB5 /* HCTestFailureReporterChainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E99ADF272619359F01300 /* HCTestFailureReporterChainTests.m */; };
 		609E95FB6FCE5CDCA1E7A9BF /* HCArgumentCaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E92AABBB75D3F5E47A0E4 /* HCArgumentCaptor.m */; };
 		609E97770916062AC9B0D5BB /* MatcherTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E91D3F5F10354528F7FF8 /* MatcherTestCase.m */; };
-		609E99C4BEBB5A70318577B2 /* TestFailureReporterChainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E99ADF272619359F01300 /* TestFailureReporterChainTests.m */; };
+		609E99C4BEBB5A70318577B2 /* HCTestFailureReporterChainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E99ADF272619359F01300 /* HCTestFailureReporterChainTests.m */; };
 		609E9B41637AEC0C99B77B10 /* InterceptingTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E97D2700DBCFB2161C50A /* InterceptingTestCase.m */; };
 		609E9B9227BDE67289F74F23 /* HCArgumentCaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E92AABBB75D3F5E47A0E4 /* HCArgumentCaptor.m */; };
 		609E9BD70804EB4AD2CF687B /* HCCapturingMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E960725E106DC73EA9D60 /* HCCapturingMatcherTests.m */; };
 		609E9E7A947E1D0029F3233D /* HCCapturingMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E960725E106DC73EA9D60 /* HCCapturingMatcherTests.m */; };
-		74153B5F1A535FEA00FEF450 /* IsTrueFalseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */; };
-		74153B601A535FEA00FEF450 /* IsTrueFalseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */; };
+		74153B5F1A535FEA00FEF450 /* HCIsTrueFalseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* HCIsTrueFalseTests.m */; };
+		74153B601A535FEA00FEF450 /* HCIsTrueFalseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* HCIsTrueFalseTests.m */; };
 		74153B631A53606100FEF450 /* HCIsTrueFalse.h in Headers */ = {isa = PBXBuildFile; fileRef = 74153B611A53606100FEF450 /* HCIsTrueFalse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74153B651A53606100FEF450 /* HCIsTrueFalse.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B621A53606100FEF450 /* HCIsTrueFalse.m */; };
 		74153B661A53606100FEF450 /* HCIsTrueFalse.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B621A53606100FEF450 /* HCIsTrueFalse.m */; };
@@ -141,24 +141,24 @@
 		746045681A29625E00196267 /* HCEvery.h in Headers */ = {isa = PBXBuildFile; fileRef = 746045651A29625E00196267 /* HCEvery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746045691A29625E00196267 /* HCEvery.m in Sources */ = {isa = PBXBuildFile; fileRef = 746045661A29625E00196267 /* HCEvery.m */; };
 		7460456A1A29625E00196267 /* HCEvery.m in Sources */ = {isa = PBXBuildFile; fileRef = 746045661A29625E00196267 /* HCEvery.m */; };
-		7460456C1A2964AF00196267 /* EveryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7460456B1A2964AF00196267 /* EveryTest.m */; };
-		7460456D1A2964AF00196267 /* EveryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7460456B1A2964AF00196267 /* EveryTest.m */; };
-		747776C71A3F5060000A6E1D /* ThrowsExceptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 747776C61A3F5060000A6E1D /* ThrowsExceptionTest.m */; };
-		747776C81A3F5060000A6E1D /* ThrowsExceptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 747776C61A3F5060000A6E1D /* ThrowsExceptionTest.m */; };
+		7460456C1A2964AF00196267 /* HCEveryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7460456B1A2964AF00196267 /* HCEveryTests.m */; };
+		7460456D1A2964AF00196267 /* HCEveryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7460456B1A2964AF00196267 /* HCEveryTests.m */; };
+		747776C71A3F5060000A6E1D /* HCThrowsExceptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 747776C61A3F5060000A6E1D /* HCThrowsExceptionTests.m */; };
+		747776C81A3F5060000A6E1D /* HCThrowsExceptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 747776C61A3F5060000A6E1D /* HCThrowsExceptionTests.m */; };
 		74D7A7B51A2B902F00CD6CC0 /* DiagnosingMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D7A7B41A2B902F00CD6CC0 /* DiagnosingMatcherTest.m */; };
 		74D7A7B61A2B902F00CD6CC0 /* DiagnosingMatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D7A7B41A2B902F00CD6CC0 /* DiagnosingMatcherTest.m */; };
 		74FDDD151A3FF39900177999 /* HCThrowsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FDDD131A3FF39900177999 /* HCThrowsException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74FDDD171A3FF39900177999 /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDDD141A3FF39900177999 /* HCThrowsException.m */; };
 		74FDDD181A3FF39900177999 /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDDD141A3FF39900177999 /* HCThrowsException.m */; };
-		77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
-		77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HasPropertyTest.m */; };
+		77C7B8771429361200DE60CC /* HCHasPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HCHasPropertyTests.m */; };
+		77C7B87A14293D0700DE60CC /* HCHasPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C7B8761429361200DE60CC /* HCHasPropertyTests.m */; };
 		BB33301A68F74D210C803FEA /* HCIsNil.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335CC804D0A774E5F1041 /* HCIsNil.m */; };
 		BB333020F5ED4E3979BA1714 /* NSInvocation+OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3339BE4C0ECEAB7169772A /* NSInvocation+OCHamcrest.h */; };
 		BB33302772CACC61A1B4DB74 /* HCTestFailureReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333528C8E2ED8489ACB161 /* HCTestFailureReporter.m */; };
 		BB333031608DFFD2E76CD745 /* HCDoubleReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333F67A18EA568D7683A58 /* HCDoubleReturnGetter.h */; };
-		BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */; };
+		BB33303F6D1004392A6EF76A /* HCIsTypeOfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33373DA43C990FB5DA0D35 /* HCIsTypeOfTests.m */; };
 		BB3330504048A30E7C190A19 /* HCReturnTypeHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333BD87164C606AE0BE027 /* HCReturnTypeHandlerChain.m */; };
-		BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */; };
+		BB3330581DF04CB5115BCD11 /* HCIsTypeOfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33373DA43C990FB5DA0D35 /* HCIsTypeOfTests.m */; };
 		BB33306BE19806EB64EEC358 /* HCInvocationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3337B908D229FD08452B2D /* HCInvocationMatcher.m */; };
 		BB333083DABBB403F4E3A935 /* HCIsCollectionContainingInAnyOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3332CD4593BA0B619AE30C /* HCIsCollectionContainingInAnyOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB33309748583DA78A7C98ED /* HCCharReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333FED5158848B95B043F1 /* HCCharReturnGetter.m */; };
@@ -402,21 +402,21 @@
 		081BEE621345979F003F846A /* libochamcrest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libochamcrest.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		081BEE6C1345979F003F846A /* libochamcrestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libochamcrestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		082E7C2B13FF676E004A22FE /* MockSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSenTestCase.m; sourceTree = "<group>"; };
-		082E7C2C13FF676E004A22FE /* BaseMatcherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMatcherTest.m; sourceTree = "<group>"; };
-		082E7C2D13FF676E004A22FE /* InvocationMatcherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvocationMatcherTest.m; sourceTree = "<group>"; };
-		082E7C2E13FF676E004A22FE /* StringDescriptionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringDescriptionTest.m; sourceTree = "<group>"; };
-		0846B6DC13EE5F9D00EA68E8 /* DescribedAsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescribedAsTest.m; sourceTree = "<group>"; };
-		0846B6DD13EE5F9D00EA68E8 /* IsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTest.m; sourceTree = "<group>"; };
+		082E7C2C13FF676E004A22FE /* HCBaseMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBaseMatcherTests.m; sourceTree = "<group>"; };
+		082E7C2D13FF676E004A22FE /* HCInvocationMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCInvocationMatcherTests.m; sourceTree = "<group>"; };
+		082E7C2E13FF676E004A22FE /* HCStringDescriptionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringDescriptionTests.m; sourceTree = "<group>"; };
+		0846B6DC13EE5F9D00EA68E8 /* HCDescribedAsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDescribedAsTests.m; sourceTree = "<group>"; };
+		0846B6DD13EE5F9D00EA68E8 /* HCIsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsTests.m; sourceTree = "<group>"; };
 		0846B6DE13EE5F9D00EA68E8 /* NeverMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeverMatch.h; sourceTree = "<group>"; };
 		0846B6DF13EE5F9D00EA68E8 /* NeverMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeverMatch.m; sourceTree = "<group>"; };
-		0846B6E713EE5FB400EA68E8 /* AllOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOfTest.m; sourceTree = "<group>"; };
-		0846B6E813EE5FB400EA68E8 /* AnyOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyOfTest.m; sourceTree = "<group>"; };
-		0846B6E913EE5FB400EA68E8 /* IsAnythingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsAnythingTest.m; sourceTree = "<group>"; };
-		0846B6EA13EE5FB400EA68E8 /* IsNotTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsNotTest.m; sourceTree = "<group>"; };
-		0846B6F313EE5FD200EA68E8 /* IsEqualTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEqualTest.m; sourceTree = "<group>"; };
-		0846B6F413EE5FD200EA68E8 /* IsInstanceOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsInstanceOfTest.m; sourceTree = "<group>"; };
-		0846B6F513EE5FD200EA68E8 /* IsNilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsNilTest.m; sourceTree = "<group>"; };
-		0846B6F613EE5FD200EA68E8 /* IsSameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsSameTest.m; sourceTree = "<group>"; };
+		0846B6E713EE5FB400EA68E8 /* HCAllOfTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAllOfTests.m; sourceTree = "<group>"; };
+		0846B6E813EE5FB400EA68E8 /* HCAnyOfTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAnyOfTests.m; sourceTree = "<group>"; };
+		0846B6E913EE5FB400EA68E8 /* HCIsAnythingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsAnythingTests.m; sourceTree = "<group>"; };
+		0846B6EA13EE5FB400EA68E8 /* HCIsNotTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsNotTests.m; sourceTree = "<group>"; };
+		0846B6F313EE5FD200EA68E8 /* HCIsEqualTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualTests.m; sourceTree = "<group>"; };
+		0846B6F413EE5FD200EA68E8 /* HCIsInstanceOfTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsInstanceOfTests.m; sourceTree = "<group>"; };
+		0846B6F513EE5FD200EA68E8 /* HCIsNilTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsNilTests.m; sourceTree = "<group>"; };
+		0846B6F613EE5FD200EA68E8 /* HCIsSameTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsSameTests.m; sourceTree = "<group>"; };
 		0850A44C17165D2A0019BBE0 /* SomeClassAndSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomeClassAndSubclass.h; sourceTree = "<group>"; };
 		0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomeClassAndSubclass.m; sourceTree = "<group>"; };
 		086C6D4B163C565100307026 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
@@ -427,31 +427,31 @@
 		0876033613440AD8001B439B /* FakeWithCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeWithCount.m; sourceTree = "<group>"; };
 		0876033713440AD8001B439B /* FakeWithoutCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeWithoutCount.h; sourceTree = "<group>"; };
 		0876033813440AD8001B439B /* FakeWithoutCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeWithoutCount.m; sourceTree = "<group>"; };
-		0876033913440AD8001B439B /* HasCountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasCountTest.m; sourceTree = "<group>"; };
-		0876033A13440AD8001B439B /* IsCollectionContainingInAnyOrderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsCollectionContainingInAnyOrderTest.m; sourceTree = "<group>"; };
-		0876033B13440AD8001B439B /* IsCollectionContainingInOrderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsCollectionContainingInOrderTest.m; sourceTree = "<group>"; };
-		0876033C13440AD8001B439B /* IsCollectionContainingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsCollectionContainingTest.m; sourceTree = "<group>"; };
-		0876033D13440AD8001B439B /* IsCollectionOnlyContainingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsCollectionOnlyContainingTest.m; sourceTree = "<group>"; };
-		0876033E13440AD8001B439B /* IsDictionaryContainingEntriesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsDictionaryContainingEntriesTest.m; sourceTree = "<group>"; };
-		0876033F13440AD8001B439B /* IsDictionaryContainingKeyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsDictionaryContainingKeyTest.m; sourceTree = "<group>"; };
-		0876034013440AD8001B439B /* IsDictionaryContainingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsDictionaryContainingTest.m; sourceTree = "<group>"; };
-		0876034113440AD8001B439B /* IsDictionaryContainingValueTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsDictionaryContainingValueTest.m; sourceTree = "<group>"; };
-		0876034213440AD8001B439B /* IsEmptyCollectionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEmptyCollectionTest.m; sourceTree = "<group>"; };
-		0876034313440AD8001B439B /* IsInTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsInTest.m; sourceTree = "<group>"; };
-		0876035313440AD8001B439B /* IsCloseToTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsCloseToTest.m; sourceTree = "<group>"; };
-		0876035413440AD8001B439B /* IsEqualToNumberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEqualToNumberTest.m; sourceTree = "<group>"; };
-		0876035513440AD8001B439B /* NumberAssertTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberAssertTest.m; sourceTree = "<group>"; };
-		0876035613440AD8001B439B /* OrderingComparisonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderingComparisonTest.m; sourceTree = "<group>"; };
-		0876035813440AD8001B439B /* HasDescriptionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasDescriptionTest.m; sourceTree = "<group>"; };
-		0876035B13440AD8001B439B /* IsEqualIgnoringCaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEqualIgnoringCaseTest.m; sourceTree = "<group>"; };
-		0876035C13440AD8001B439B /* IsEqualIgnoringWhiteSpaceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsEqualIgnoringWhiteSpaceTest.m; sourceTree = "<group>"; };
-		0876035D13440AD8001B439B /* StringContainsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringContainsTest.m; sourceTree = "<group>"; };
-		0876035E13440AD8001B439B /* StringEndsWithTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringEndsWithTest.m; sourceTree = "<group>"; };
-		0876035F13440AD8001B439B /* StringStartsWithTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringStartsWithTest.m; sourceTree = "<group>"; };
+		0876033913440AD8001B439B /* HCHasCountTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHasCountTests.m; sourceTree = "<group>"; };
+		0876033A13440AD8001B439B /* HCIsCollectionContainingInAnyOrderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionContainingInAnyOrderTests.m; sourceTree = "<group>"; };
+		0876033B13440AD8001B439B /* HCIsCollectionContainingInOrderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionContainingInOrderTests.m; sourceTree = "<group>"; };
+		0876033C13440AD8001B439B /* HCIsCollectionContainingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionContainingTests.m; sourceTree = "<group>"; };
+		0876033D13440AD8001B439B /* HCIsCollectionOnlyContainingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionOnlyContainingTests.m; sourceTree = "<group>"; };
+		0876033E13440AD8001B439B /* HCIsDictionaryContainingEntriesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContainingEntriesTests.m; sourceTree = "<group>"; };
+		0876033F13440AD8001B439B /* HCIsDictionaryContainingKeyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContainingKeyTests.m; sourceTree = "<group>"; };
+		0876034013440AD8001B439B /* HCIsDictionaryContainingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContainingTests.m; sourceTree = "<group>"; };
+		0876034113440AD8001B439B /* HCIsDictionaryContainingValueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContainingValueTests.m; sourceTree = "<group>"; };
+		0876034213440AD8001B439B /* HCIsEmptyCollectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEmptyCollectionTests.m; sourceTree = "<group>"; };
+		0876034313440AD8001B439B /* HCIsInTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsInTests.m; sourceTree = "<group>"; };
+		0876035313440AD8001B439B /* HCIsCloseToTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCloseToTests.m; sourceTree = "<group>"; };
+		0876035413440AD8001B439B /* HCIsEqualToNumberTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualToNumberTests.m; sourceTree = "<group>"; };
+		0876035513440AD8001B439B /* HCNumberAssertTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCNumberAssertTests.m; sourceTree = "<group>"; };
+		0876035613440AD8001B439B /* HCOrderingComparisonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCOrderingComparisonTests.m; sourceTree = "<group>"; };
+		0876035813440AD8001B439B /* HCHasDescriptionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHasDescriptionTests.m; sourceTree = "<group>"; };
+		0876035B13440AD8001B439B /* HCIsEqualIgnoringCaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualIgnoringCaseTests.m; sourceTree = "<group>"; };
+		0876035C13440AD8001B439B /* HCIsEqualIgnoringWhiteSpaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualIgnoringWhiteSpaceTests.m; sourceTree = "<group>"; };
+		0876035D13440AD8001B439B /* HCStringContainsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringContainsTests.m; sourceTree = "<group>"; };
+		0876035E13440AD8001B439B /* HCStringEndsWithTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringEndsWithTests.m; sourceTree = "<group>"; };
+		0876035F13440AD8001B439B /* HCStringStartsWithTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringStartsWithTests.m; sourceTree = "<group>"; };
 		0876038D13440B80001B439B /* OCHamcrest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OCHamcrest-Info.plist"; sourceTree = "<group>"; };
 		0876039013440BA7001B439B /* OCHamcrest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCHamcrest-Prefix.pch"; sourceTree = "<group>"; };
 		0876039113440BB0001B439B /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringContainsInOrderTest.m; sourceTree = "<group>"; };
+		088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringContainsInOrderTests.m; sourceTree = "<group>"; };
 		08F39BAA1711426200745958 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		0EF591561B9E84C600BABDED /* HCTestFailureHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailureHandler.h; sourceTree = "<group>"; };
 		0EF591581B9E84C600BABDED /* HCTestFailureHandlerChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailureHandlerChain.h; sourceTree = "<group>"; };
@@ -460,27 +460,27 @@
 		31DDCC467D6EFFC559012D61 /* Mismatchable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mismatchable.m; sourceTree = "<group>"; };
 		31DDCCF46E1766AF4AC97BA5 /* Mismatchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mismatchable.h; sourceTree = "<group>"; };
 		31DDCE62F97F2042F0A8BDAE /* HCDiagnosingMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDiagnosingMatcher.h; sourceTree = "<group>"; };
-		5F2773441436F81000B9683A /* ConformsToProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConformsToProtocolTest.m; sourceTree = "<group>"; };
+		5F2773441436F81000B9683A /* HCConformsToProtocolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCConformsToProtocolTests.m; sourceTree = "<group>"; };
 		609E91D3F5F10354528F7FF8 /* MatcherTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatcherTestCase.m; sourceTree = "<group>"; };
 		609E92AABBB75D3F5E47A0E4 /* HCArgumentCaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCArgumentCaptor.m; sourceTree = "<group>"; };
 		609E93C91C2B1DFA3BC3F9A8 /* MatcherTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatcherTestCase.h; sourceTree = "<group>"; };
 		609E95FA7156B2A6FD85D509 /* InterceptingTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterceptingTestCase.h; sourceTree = "<group>"; };
 		609E960725E106DC73EA9D60 /* HCCapturingMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCapturingMatcherTests.m; sourceTree = "<group>"; };
 		609E97D2700DBCFB2161C50A /* InterceptingTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterceptingTestCase.m; sourceTree = "<group>"; };
-		609E99ADF272619359F01300 /* TestFailureReporterChainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFailureReporterChainTests.m; sourceTree = "<group>"; };
+		609E99ADF272619359F01300 /* HCTestFailureReporterChainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureReporterChainTests.m; sourceTree = "<group>"; };
 		609E9B6B3B80E4914607E267 /* HCArgumentCaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCArgumentCaptor.h; sourceTree = "<group>"; };
-		74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTrueFalseTest.m; sourceTree = "<group>"; };
+		74153B5E1A535FEA00FEF450 /* HCIsTrueFalseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsTrueFalseTests.m; sourceTree = "<group>"; };
 		74153B611A53606100FEF450 /* HCIsTrueFalse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsTrueFalse.h; sourceTree = "<group>"; };
 		74153B621A53606100FEF450 /* HCIsTrueFalse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsTrueFalse.m; sourceTree = "<group>"; };
 		7458920E1A2AAD2C00BAAC76 /* AssertWithTimeoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssertWithTimeoutTests.m; sourceTree = "<group>"; };
 		746045651A29625E00196267 /* HCEvery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEvery.h; sourceTree = "<group>"; };
 		746045661A29625E00196267 /* HCEvery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEvery.m; sourceTree = "<group>"; };
-		7460456B1A2964AF00196267 /* EveryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EveryTest.m; sourceTree = "<group>"; };
-		747776C61A3F5060000A6E1D /* ThrowsExceptionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThrowsExceptionTest.m; sourceTree = "<group>"; };
+		7460456B1A2964AF00196267 /* HCEveryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEveryTests.m; sourceTree = "<group>"; };
+		747776C61A3F5060000A6E1D /* HCThrowsExceptionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCThrowsExceptionTests.m; sourceTree = "<group>"; };
 		74D7A7B41A2B902F00CD6CC0 /* DiagnosingMatcherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiagnosingMatcherTest.m; sourceTree = "<group>"; };
 		74FDDD131A3FF39900177999 /* HCThrowsException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCThrowsException.h; sourceTree = "<group>"; };
 		74FDDD141A3FF39900177999 /* HCThrowsException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCThrowsException.m; sourceTree = "<group>"; };
-		77C7B8761429361200DE60CC /* HasPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasPropertyTest.m; sourceTree = "<group>"; };
+		77C7B8761429361200DE60CC /* HCHasPropertyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHasPropertyTests.m; sourceTree = "<group>"; };
 		BB333034CD6A38647E176A9A /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
 		BB33303898210A59268030C8 /* HCDoubleReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDoubleReturnGetter.m; sourceTree = "<group>"; };
 		BB333049BE335209B4207B2A /* HCIsDictionaryContaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContaining.m; sourceTree = "<group>"; };
@@ -549,7 +549,7 @@
 		BB3337085D9BEFA6D52E7EB0 /* HCTestFailureReporterChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureReporterChain.m; sourceTree = "<group>"; };
 		BB33371136854FB7CAF2A5F7 /* HCIsEqualIgnoringCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualIgnoringCase.h; sourceTree = "<group>"; };
 		BB333725B2814AE9CF044B5B /* HCIntReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIntReturnGetter.h; sourceTree = "<group>"; };
-		BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsTypeOfTest.m; sourceTree = "<group>"; };
+		BB33373DA43C990FB5DA0D35 /* HCIsTypeOfTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsTypeOfTests.m; sourceTree = "<group>"; };
 		BB33377384F2BF4EA9694DA7 /* HCIsEqualIgnoringWhiteSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualIgnoringWhiteSpace.m; sourceTree = "<group>"; };
 		BB333785CDF67F8F0284B9CA /* HCBaseDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBaseDescription.m; sourceTree = "<group>"; };
 		BB333792C123FE94F1A3D447 /* HCAssertThat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAssertThat.h; sourceTree = "<group>"; };
@@ -665,13 +665,13 @@
 		082E7C2813FF676E004A22FE /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				082E7C2B13FF676E004A22FE /* MockSenTestCase.m */,
 				7458920E1A2AAD2C00BAAC76 /* AssertWithTimeoutTests.m */,
-				082E7C2C13FF676E004A22FE /* BaseMatcherTest.m */,
 				74D7A7B41A2B902F00CD6CC0 /* DiagnosingMatcherTest.m */,
-				082E7C2D13FF676E004A22FE /* InvocationMatcherTest.m */,
-				082E7C2E13FF676E004A22FE /* StringDescriptionTest.m */,
-				609E99ADF272619359F01300 /* TestFailureReporterChainTests.m */,
+				082E7C2C13FF676E004A22FE /* HCBaseMatcherTests.m */,
+				082E7C2D13FF676E004A22FE /* HCInvocationMatcherTests.m */,
+				082E7C2E13FF676E004A22FE /* HCStringDescriptionTests.m */,
+				609E99ADF272619359F01300 /* HCTestFailureReporterChainTests.m */,
+				082E7C2B13FF676E004A22FE /* MockSenTestCase.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -679,8 +679,8 @@
 		0846B6DB13EE5F9D00EA68E8 /* Decorator */ = {
 			isa = PBXGroup;
 			children = (
-				0846B6DC13EE5F9D00EA68E8 /* DescribedAsTest.m */,
-				0846B6DD13EE5F9D00EA68E8 /* IsTest.m */,
+				0846B6DC13EE5F9D00EA68E8 /* HCDescribedAsTests.m */,
+				0846B6DD13EE5F9D00EA68E8 /* HCIsTests.m */,
 				0846B6DE13EE5F9D00EA68E8 /* NeverMatch.h */,
 				0846B6DF13EE5F9D00EA68E8 /* NeverMatch.m */,
 			);
@@ -690,10 +690,10 @@
 		0846B6E613EE5FB400EA68E8 /* Logical */ = {
 			isa = PBXGroup;
 			children = (
-				0846B6E713EE5FB400EA68E8 /* AllOfTest.m */,
-				0846B6E813EE5FB400EA68E8 /* AnyOfTest.m */,
-				0846B6E913EE5FB400EA68E8 /* IsAnythingTest.m */,
-				0846B6EA13EE5FB400EA68E8 /* IsNotTest.m */,
+				0846B6E713EE5FB400EA68E8 /* HCAllOfTests.m */,
+				0846B6E813EE5FB400EA68E8 /* HCAnyOfTests.m */,
+				0846B6E913EE5FB400EA68E8 /* HCIsAnythingTests.m */,
+				0846B6EA13EE5FB400EA68E8 /* HCIsNotTests.m */,
 			);
 			path = Logical;
 			sourceTree = "<group>";
@@ -757,22 +757,22 @@
 		0876033413440AD8001B439B /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				7460456B1A2964AF00196267 /* EveryTest.m */,
 				0876033513440AD8001B439B /* FakeWithCount.h */,
 				0876033613440AD8001B439B /* FakeWithCount.m */,
 				0876033713440AD8001B439B /* FakeWithoutCount.h */,
 				0876033813440AD8001B439B /* FakeWithoutCount.m */,
-				0876033913440AD8001B439B /* HasCountTest.m */,
-				0876033A13440AD8001B439B /* IsCollectionContainingInAnyOrderTest.m */,
-				0876033B13440AD8001B439B /* IsCollectionContainingInOrderTest.m */,
-				0876033C13440AD8001B439B /* IsCollectionContainingTest.m */,
-				0876033D13440AD8001B439B /* IsCollectionOnlyContainingTest.m */,
-				0876033E13440AD8001B439B /* IsDictionaryContainingEntriesTest.m */,
-				0876033F13440AD8001B439B /* IsDictionaryContainingKeyTest.m */,
-				0876034013440AD8001B439B /* IsDictionaryContainingTest.m */,
-				0876034113440AD8001B439B /* IsDictionaryContainingValueTest.m */,
-				0876034213440AD8001B439B /* IsEmptyCollectionTest.m */,
-				0876034313440AD8001B439B /* IsInTest.m */,
+				7460456B1A2964AF00196267 /* HCEveryTests.m */,
+				0876033913440AD8001B439B /* HCHasCountTests.m */,
+				0876033A13440AD8001B439B /* HCIsCollectionContainingInAnyOrderTests.m */,
+				0876033B13440AD8001B439B /* HCIsCollectionContainingInOrderTests.m */,
+				0876033C13440AD8001B439B /* HCIsCollectionContainingTests.m */,
+				0876033D13440AD8001B439B /* HCIsCollectionOnlyContainingTests.m */,
+				0876033E13440AD8001B439B /* HCIsDictionaryContainingEntriesTests.m */,
+				0876033F13440AD8001B439B /* HCIsDictionaryContainingKeyTests.m */,
+				0876034013440AD8001B439B /* HCIsDictionaryContainingTests.m */,
+				0876034113440AD8001B439B /* HCIsDictionaryContainingValueTests.m */,
+				0876034213440AD8001B439B /* HCIsEmptyCollectionTests.m */,
+				0876034313440AD8001B439B /* HCIsInTests.m */,
 				31DDCCF46E1766AF4AC97BA5 /* Mismatchable.h */,
 				31DDCC467D6EFFC559012D61 /* Mismatchable.m */,
 			);
@@ -782,11 +782,11 @@
 		0876035213440AD8001B439B /* Number */ = {
 			isa = PBXGroup;
 			children = (
-				0876035313440AD8001B439B /* IsCloseToTest.m */,
-				0876035413440AD8001B439B /* IsEqualToNumberTest.m */,
-				74153B5E1A535FEA00FEF450 /* IsTrueFalseTest.m */,
-				0876035513440AD8001B439B /* NumberAssertTest.m */,
-				0876035613440AD8001B439B /* OrderingComparisonTest.m */,
+				0876035313440AD8001B439B /* HCIsCloseToTests.m */,
+				0876035413440AD8001B439B /* HCIsEqualToNumberTests.m */,
+				74153B5E1A535FEA00FEF450 /* HCIsTrueFalseTests.m */,
+				0876035513440AD8001B439B /* HCNumberAssertTests.m */,
+				0876035613440AD8001B439B /* HCOrderingComparisonTests.m */,
 			);
 			path = Number;
 			sourceTree = "<group>";
@@ -795,17 +795,17 @@
 			isa = PBXGroup;
 			children = (
 				609E960725E106DC73EA9D60 /* HCCapturingMatcherTests.m */,
-				5F2773441436F81000B9683A /* ConformsToProtocolTest.m */,
-				0876035813440AD8001B439B /* HasDescriptionTest.m */,
-				77C7B8761429361200DE60CC /* HasPropertyTest.m */,
-				0846B6F313EE5FD200EA68E8 /* IsEqualTest.m */,
-				0846B6F413EE5FD200EA68E8 /* IsInstanceOfTest.m */,
-				0846B6F513EE5FD200EA68E8 /* IsNilTest.m */,
-				0846B6F613EE5FD200EA68E8 /* IsSameTest.m */,
-				BB33373DA43C990FB5DA0D35 /* IsTypeOfTest.m */,
+				5F2773441436F81000B9683A /* HCConformsToProtocolTests.m */,
+				0876035813440AD8001B439B /* HCHasDescriptionTests.m */,
+				77C7B8761429361200DE60CC /* HCHasPropertyTests.m */,
+				0846B6F313EE5FD200EA68E8 /* HCIsEqualTests.m */,
+				0846B6F413EE5FD200EA68E8 /* HCIsInstanceOfTests.m */,
+				0846B6F513EE5FD200EA68E8 /* HCIsNilTests.m */,
+				0846B6F613EE5FD200EA68E8 /* HCIsSameTests.m */,
+				BB33373DA43C990FB5DA0D35 /* HCIsTypeOfTests.m */,
+				747776C61A3F5060000A6E1D /* HCThrowsExceptionTests.m */,
 				0850A44C17165D2A0019BBE0 /* SomeClassAndSubclass.h */,
 				0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */,
-				747776C61A3F5060000A6E1D /* ThrowsExceptionTest.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -813,12 +813,12 @@
 		0876035A13440AD8001B439B /* Text */ = {
 			isa = PBXGroup;
 			children = (
-				0876035B13440AD8001B439B /* IsEqualIgnoringCaseTest.m */,
-				0876035C13440AD8001B439B /* IsEqualIgnoringWhiteSpaceTest.m */,
-				0876035D13440AD8001B439B /* StringContainsTest.m */,
-				088FB0AA136A6DEA00C191E1 /* StringContainsInOrderTest.m */,
-				0876035E13440AD8001B439B /* StringEndsWithTest.m */,
-				0876035F13440AD8001B439B /* StringStartsWithTest.m */,
+				0876035B13440AD8001B439B /* HCIsEqualIgnoringCaseTests.m */,
+				0876035C13440AD8001B439B /* HCIsEqualIgnoringWhiteSpaceTests.m */,
+				0876035D13440AD8001B439B /* HCStringContainsTests.m */,
+				088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */,
+				0876035E13440AD8001B439B /* HCStringEndsWithTests.m */,
+				0876035F13440AD8001B439B /* HCStringStartsWithTests.m */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -1427,54 +1427,54 @@
 			files = (
 				0859831013459CA400BE7892 /* FakeWithCount.m in Sources */,
 				0859831113459CA400BE7892 /* FakeWithoutCount.m in Sources */,
-				0859831213459CA400BE7892 /* HasCountTest.m in Sources */,
-				0859831313459CA400BE7892 /* HasDescriptionTest.m in Sources */,
-				0859831613459CA400BE7892 /* IsCloseToTest.m in Sources */,
-				0859831713459CA400BE7892 /* IsCollectionContainingInAnyOrderTest.m in Sources */,
-				0859831813459CA400BE7892 /* IsCollectionContainingInOrderTest.m in Sources */,
-				0859831913459CA400BE7892 /* IsCollectionContainingTest.m in Sources */,
-				0859831A13459CA400BE7892 /* IsCollectionOnlyContainingTest.m in Sources */,
-				0859831B13459CA400BE7892 /* IsDictionaryContainingEntriesTest.m in Sources */,
-				0859831C13459CA400BE7892 /* IsDictionaryContainingKeyTest.m in Sources */,
-				0859831D13459CA400BE7892 /* IsDictionaryContainingTest.m in Sources */,
-				0859831E13459CA400BE7892 /* IsDictionaryContainingValueTest.m in Sources */,
-				0859831F13459CA400BE7892 /* IsEmptyCollectionTest.m in Sources */,
-				0859832013459CA400BE7892 /* IsEqualIgnoringCaseTest.m in Sources */,
-				0859832113459CA400BE7892 /* IsEqualIgnoringWhiteSpaceTest.m in Sources */,
-				0859832313459CA400BE7892 /* IsEqualToNumberTest.m in Sources */,
-				0859832513459CA400BE7892 /* IsInTest.m in Sources */,
-				0859832B13459CA400BE7892 /* NumberAssertTest.m in Sources */,
-				7460456D1A2964AF00196267 /* EveryTest.m in Sources */,
-				0859832C13459CA400BE7892 /* OrderingComparisonTest.m in Sources */,
-				0859832D13459CA400BE7892 /* StringContainsTest.m in Sources */,
-				0859832F13459CA400BE7892 /* StringEndsWithTest.m in Sources */,
-				0859833013459CA400BE7892 /* StringStartsWithTest.m in Sources */,
-				088FB0AC136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */,
-				74153B601A535FEA00FEF450 /* IsTrueFalseTest.m in Sources */,
+				0859831213459CA400BE7892 /* HCHasCountTests.m in Sources */,
+				0859831313459CA400BE7892 /* HCHasDescriptionTests.m in Sources */,
+				0859831613459CA400BE7892 /* HCIsCloseToTests.m in Sources */,
+				0859831713459CA400BE7892 /* HCIsCollectionContainingInAnyOrderTests.m in Sources */,
+				0859831813459CA400BE7892 /* HCIsCollectionContainingInOrderTests.m in Sources */,
+				0859831913459CA400BE7892 /* HCIsCollectionContainingTests.m in Sources */,
+				0859831A13459CA400BE7892 /* HCIsCollectionOnlyContainingTests.m in Sources */,
+				0859831B13459CA400BE7892 /* HCIsDictionaryContainingEntriesTests.m in Sources */,
+				0859831C13459CA400BE7892 /* HCIsDictionaryContainingKeyTests.m in Sources */,
+				0859831D13459CA400BE7892 /* HCIsDictionaryContainingTests.m in Sources */,
+				0859831E13459CA400BE7892 /* HCIsDictionaryContainingValueTests.m in Sources */,
+				0859831F13459CA400BE7892 /* HCIsEmptyCollectionTests.m in Sources */,
+				0859832013459CA400BE7892 /* HCIsEqualIgnoringCaseTests.m in Sources */,
+				0859832113459CA400BE7892 /* HCIsEqualIgnoringWhiteSpaceTests.m in Sources */,
+				0859832313459CA400BE7892 /* HCIsEqualToNumberTests.m in Sources */,
+				0859832513459CA400BE7892 /* HCIsInTests.m in Sources */,
+				0859832B13459CA400BE7892 /* HCNumberAssertTests.m in Sources */,
+				7460456D1A2964AF00196267 /* HCEveryTests.m in Sources */,
+				0859832C13459CA400BE7892 /* HCOrderingComparisonTests.m in Sources */,
+				0859832D13459CA400BE7892 /* HCStringContainsTests.m in Sources */,
+				0859832F13459CA400BE7892 /* HCStringEndsWithTests.m in Sources */,
+				0859833013459CA400BE7892 /* HCStringStartsWithTests.m in Sources */,
+				088FB0AC136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */,
+				74153B601A535FEA00FEF450 /* HCIsTrueFalseTests.m in Sources */,
 				74D7A7B61A2B902F00CD6CC0 /* DiagnosingMatcherTest.m in Sources */,
-				0846B6E113EE5F9D00EA68E8 /* DescribedAsTest.m in Sources */,
-				0846B6E313EE5F9D00EA68E8 /* IsTest.m in Sources */,
+				0846B6E113EE5F9D00EA68E8 /* HCDescribedAsTests.m in Sources */,
+				0846B6E313EE5F9D00EA68E8 /* HCIsTests.m in Sources */,
 				0846B6E513EE5F9D00EA68E8 /* NeverMatch.m in Sources */,
-				0846B6EC13EE5FB400EA68E8 /* AllOfTest.m in Sources */,
-				0846B6EE13EE5FB400EA68E8 /* AnyOfTest.m in Sources */,
+				0846B6EC13EE5FB400EA68E8 /* HCAllOfTests.m in Sources */,
+				0846B6EE13EE5FB400EA68E8 /* HCAnyOfTests.m in Sources */,
 				745892101A2AAD2C00BAAC76 /* AssertWithTimeoutTests.m in Sources */,
-				0846B6F013EE5FB400EA68E8 /* IsAnythingTest.m in Sources */,
-				747776C81A3F5060000A6E1D /* ThrowsExceptionTest.m in Sources */,
-				0846B6F213EE5FB400EA68E8 /* IsNotTest.m in Sources */,
-				0846B6F813EE5FD200EA68E8 /* IsEqualTest.m in Sources */,
-				0846B6FA13EE5FD200EA68E8 /* IsInstanceOfTest.m in Sources */,
-				0846B6FC13EE5FD200EA68E8 /* IsNilTest.m in Sources */,
-				0846B6FE13EE5FD200EA68E8 /* IsSameTest.m in Sources */,
+				0846B6F013EE5FB400EA68E8 /* HCIsAnythingTests.m in Sources */,
+				747776C81A3F5060000A6E1D /* HCThrowsExceptionTests.m in Sources */,
+				0846B6F213EE5FB400EA68E8 /* HCIsNotTests.m in Sources */,
+				0846B6F813EE5FD200EA68E8 /* HCIsEqualTests.m in Sources */,
+				0846B6FA13EE5FD200EA68E8 /* HCIsInstanceOfTests.m in Sources */,
+				0846B6FC13EE5FD200EA68E8 /* HCIsNilTests.m in Sources */,
+				0846B6FE13EE5FD200EA68E8 /* HCIsSameTests.m in Sources */,
 				082E7C3213FF676E004A22FE /* MockSenTestCase.m in Sources */,
-				082E7C3413FF676E004A22FE /* BaseMatcherTest.m in Sources */,
-				082E7C3613FF676E004A22FE /* InvocationMatcherTest.m in Sources */,
-				082E7C3813FF676E004A22FE /* StringDescriptionTest.m in Sources */,
-				77C7B87A14293D0700DE60CC /* HasPropertyTest.m in Sources */,
-				5F2773491436FAA700B9683A /* ConformsToProtocolTest.m in Sources */,
-				BB3330581DF04CB5115BCD11 /* IsTypeOfTest.m in Sources */,
+				082E7C3413FF676E004A22FE /* HCBaseMatcherTests.m in Sources */,
+				082E7C3613FF676E004A22FE /* HCInvocationMatcherTests.m in Sources */,
+				082E7C3813FF676E004A22FE /* HCStringDescriptionTests.m in Sources */,
+				77C7B87A14293D0700DE60CC /* HCHasPropertyTests.m in Sources */,
+				5F2773491436FAA700B9683A /* HCConformsToProtocolTests.m in Sources */,
+				BB3330581DF04CB5115BCD11 /* HCIsTypeOfTests.m in Sources */,
 				0850A44F17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
 				31DDC19066E25E0DB52E3441 /* Mismatchable.m in Sources */,
-				609E95B8EB994E0768A22EB5 /* TestFailureReporterChainTests.m in Sources */,
+				609E95B8EB994E0768A22EB5 /* HCTestFailureReporterChainTests.m in Sources */,
 				609E9B41637AEC0C99B77B10 /* InterceptingTestCase.m in Sources */,
 				609E9BD70804EB4AD2CF687B /* HCCapturingMatcherTests.m in Sources */,
 				609E9068872F708CA4DA4785 /* MatcherTestCase.m in Sources */,
@@ -1568,54 +1568,54 @@
 			files = (
 				0876036313440AD8001B439B /* FakeWithCount.m in Sources */,
 				0876036413440AD8001B439B /* FakeWithoutCount.m in Sources */,
-				0876036513440AD8001B439B /* HasCountTest.m in Sources */,
-				0876036613440AD8001B439B /* IsCollectionContainingInAnyOrderTest.m in Sources */,
-				0876036713440AD8001B439B /* IsCollectionContainingInOrderTest.m in Sources */,
-				0876036813440AD8001B439B /* IsCollectionContainingTest.m in Sources */,
-				0876036913440AD8001B439B /* IsCollectionOnlyContainingTest.m in Sources */,
-				0876036A13440AD8001B439B /* IsDictionaryContainingEntriesTest.m in Sources */,
-				0876036B13440AD8001B439B /* IsDictionaryContainingKeyTest.m in Sources */,
-				0876036C13440AD8001B439B /* IsDictionaryContainingTest.m in Sources */,
-				0876036D13440AD8001B439B /* IsDictionaryContainingValueTest.m in Sources */,
-				0876036E13440AD8001B439B /* IsEmptyCollectionTest.m in Sources */,
-				0876036F13440AD8001B439B /* IsInTest.m in Sources */,
-				0876037C13440AD8001B439B /* IsCloseToTest.m in Sources */,
-				0876037D13440AD8001B439B /* IsEqualToNumberTest.m in Sources */,
-				0876037E13440AD8001B439B /* NumberAssertTest.m in Sources */,
-				0876037F13440AD8001B439B /* OrderingComparisonTest.m in Sources */,
-				0876038013440AD8001B439B /* HasDescriptionTest.m in Sources */,
-				0876038213440AD8001B439B /* IsEqualIgnoringCaseTest.m in Sources */,
-				7460456C1A2964AF00196267 /* EveryTest.m in Sources */,
-				0876038313440AD8001B439B /* IsEqualIgnoringWhiteSpaceTest.m in Sources */,
-				0876038413440AD8001B439B /* StringContainsTest.m in Sources */,
-				0876038513440AD8001B439B /* StringEndsWithTest.m in Sources */,
-				0876038613440AD8001B439B /* StringStartsWithTest.m in Sources */,
-				088FB0AB136A6DEA00C191E1 /* StringContainsInOrderTest.m in Sources */,
-				74153B5F1A535FEA00FEF450 /* IsTrueFalseTest.m in Sources */,
+				0876036513440AD8001B439B /* HCHasCountTests.m in Sources */,
+				0876036613440AD8001B439B /* HCIsCollectionContainingInAnyOrderTests.m in Sources */,
+				0876036713440AD8001B439B /* HCIsCollectionContainingInOrderTests.m in Sources */,
+				0876036813440AD8001B439B /* HCIsCollectionContainingTests.m in Sources */,
+				0876036913440AD8001B439B /* HCIsCollectionOnlyContainingTests.m in Sources */,
+				0876036A13440AD8001B439B /* HCIsDictionaryContainingEntriesTests.m in Sources */,
+				0876036B13440AD8001B439B /* HCIsDictionaryContainingKeyTests.m in Sources */,
+				0876036C13440AD8001B439B /* HCIsDictionaryContainingTests.m in Sources */,
+				0876036D13440AD8001B439B /* HCIsDictionaryContainingValueTests.m in Sources */,
+				0876036E13440AD8001B439B /* HCIsEmptyCollectionTests.m in Sources */,
+				0876036F13440AD8001B439B /* HCIsInTests.m in Sources */,
+				0876037C13440AD8001B439B /* HCIsCloseToTests.m in Sources */,
+				0876037D13440AD8001B439B /* HCIsEqualToNumberTests.m in Sources */,
+				0876037E13440AD8001B439B /* HCNumberAssertTests.m in Sources */,
+				0876037F13440AD8001B439B /* HCOrderingComparisonTests.m in Sources */,
+				0876038013440AD8001B439B /* HCHasDescriptionTests.m in Sources */,
+				0876038213440AD8001B439B /* HCIsEqualIgnoringCaseTests.m in Sources */,
+				7460456C1A2964AF00196267 /* HCEveryTests.m in Sources */,
+				0876038313440AD8001B439B /* HCIsEqualIgnoringWhiteSpaceTests.m in Sources */,
+				0876038413440AD8001B439B /* HCStringContainsTests.m in Sources */,
+				0876038513440AD8001B439B /* HCStringEndsWithTests.m in Sources */,
+				0876038613440AD8001B439B /* HCStringStartsWithTests.m in Sources */,
+				088FB0AB136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */,
+				74153B5F1A535FEA00FEF450 /* HCIsTrueFalseTests.m in Sources */,
 				74D7A7B51A2B902F00CD6CC0 /* DiagnosingMatcherTest.m in Sources */,
-				0846B6E013EE5F9D00EA68E8 /* DescribedAsTest.m in Sources */,
-				0846B6E213EE5F9D00EA68E8 /* IsTest.m in Sources */,
+				0846B6E013EE5F9D00EA68E8 /* HCDescribedAsTests.m in Sources */,
+				0846B6E213EE5F9D00EA68E8 /* HCIsTests.m in Sources */,
 				0846B6E413EE5F9D00EA68E8 /* NeverMatch.m in Sources */,
-				0846B6EB13EE5FB400EA68E8 /* AllOfTest.m in Sources */,
-				0846B6ED13EE5FB400EA68E8 /* AnyOfTest.m in Sources */,
+				0846B6EB13EE5FB400EA68E8 /* HCAllOfTests.m in Sources */,
+				0846B6ED13EE5FB400EA68E8 /* HCAnyOfTests.m in Sources */,
 				7458920F1A2AAD2C00BAAC76 /* AssertWithTimeoutTests.m in Sources */,
-				0846B6EF13EE5FB400EA68E8 /* IsAnythingTest.m in Sources */,
-				747776C71A3F5060000A6E1D /* ThrowsExceptionTest.m in Sources */,
-				0846B6F113EE5FB400EA68E8 /* IsNotTest.m in Sources */,
-				0846B6F713EE5FD200EA68E8 /* IsEqualTest.m in Sources */,
-				0846B6F913EE5FD200EA68E8 /* IsInstanceOfTest.m in Sources */,
-				0846B6FB13EE5FD200EA68E8 /* IsNilTest.m in Sources */,
-				0846B6FD13EE5FD200EA68E8 /* IsSameTest.m in Sources */,
+				0846B6EF13EE5FB400EA68E8 /* HCIsAnythingTests.m in Sources */,
+				747776C71A3F5060000A6E1D /* HCThrowsExceptionTests.m in Sources */,
+				0846B6F113EE5FB400EA68E8 /* HCIsNotTests.m in Sources */,
+				0846B6F713EE5FD200EA68E8 /* HCIsEqualTests.m in Sources */,
+				0846B6F913EE5FD200EA68E8 /* HCIsInstanceOfTests.m in Sources */,
+				0846B6FB13EE5FD200EA68E8 /* HCIsNilTests.m in Sources */,
+				0846B6FD13EE5FD200EA68E8 /* HCIsSameTests.m in Sources */,
 				082E7C3113FF676E004A22FE /* MockSenTestCase.m in Sources */,
-				082E7C3313FF676E004A22FE /* BaseMatcherTest.m in Sources */,
-				082E7C3513FF676E004A22FE /* InvocationMatcherTest.m in Sources */,
-				082E7C3713FF676E004A22FE /* StringDescriptionTest.m in Sources */,
-				77C7B8771429361200DE60CC /* HasPropertyTest.m in Sources */,
-				5F2773481436FAA600B9683A /* ConformsToProtocolTest.m in Sources */,
-				BB33303F6D1004392A6EF76A /* IsTypeOfTest.m in Sources */,
+				082E7C3313FF676E004A22FE /* HCBaseMatcherTests.m in Sources */,
+				082E7C3513FF676E004A22FE /* HCInvocationMatcherTests.m in Sources */,
+				082E7C3713FF676E004A22FE /* HCStringDescriptionTests.m in Sources */,
+				77C7B8771429361200DE60CC /* HCHasPropertyTests.m in Sources */,
+				5F2773481436FAA600B9683A /* HCConformsToProtocolTests.m in Sources */,
+				BB33303F6D1004392A6EF76A /* HCIsTypeOfTests.m in Sources */,
 				0850A44E17165D2A0019BBE0 /* SomeClassAndSubclass.m in Sources */,
 				31DDCC204A3D141D7AC6FC02 /* Mismatchable.m in Sources */,
-				609E99C4BEBB5A70318577B2 /* TestFailureReporterChainTests.m in Sources */,
+				609E99C4BEBB5A70318577B2 /* HCTestFailureReporterChainTests.m in Sources */,
 				609E941591B81120F216AAAF /* InterceptingTestCase.m in Sources */,
 				609E9E7A947E1D0029F3233D /* HCCapturingMatcherTests.m in Sources */,
 				609E97770916062AC9B0D5BB /* MatcherTestCase.m in Sources */,
