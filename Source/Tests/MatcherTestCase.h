@@ -9,24 +9,32 @@
 @interface MatcherTestCase : XCTestCase
 
 - (void)assertMatcherSafeWithNil:(id <HCMatcher>)matcher
-                inFile:(const char *)fileName atLine:(int)lineNumber;
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
+
 - (void)assertMatcherSafeWithUnknownType:(id <HCMatcher>)matcher
-                inFile:(const char *)fileName atLine:(int)lineNumber;
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
+
 - (void)assertTrue:(BOOL)condition message:(NSString *)message
-                inFile:(const char *)fileName atLine:(int)lineNumber;
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
+
 - (void)assertFalse:(BOOL)condition message:(NSString *)message
-                inFile:(const char *)fileName atLine:(int)lineNumber;
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
+
 - (void)assertMatcher:(id <HCMatcher>)matcher hasTheDescription:(NSString *)expected
-                inFile:(const char *)fileName atLine:(int)lineNumber;
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
+
 - (void)assertMatcher:(id <HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
-                inFile:(const char *)fileName atLine:(int)lineNumber;
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
+
 - (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg yieldsMismatchDescription:(NSString *)expected
-                inFile:(const char *)fileName atLine:(int)lineNumber;
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
+
 - (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg
-            yieldsMismatchDescriptionPrefix:(NSString *)expectedPrefix
-                inFile:(const char *)fileName atLine:(int)lineNumber;
+        yieldsMismatchDescriptionPrefix:(NSString *)expectedPrefix
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
+
 - (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg describesMismatch:(NSString *)expected
-                inFile:(const char *)fileName atLine:(int)lineNumber;
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
 
 @end
 

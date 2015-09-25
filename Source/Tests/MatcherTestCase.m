@@ -9,19 +9,20 @@
 
 @implementation MatcherTestCase
 
-- (void)failWithMessage:(NSString *)message inFile:(char const *)fileName atLine:(int)lineNumber
+- (void)failWithMessage:(NSString *)message
+        inFile:(char const *)fileName atLine:(NSUInteger)lineNumber
 {
     [self recordFailureWithDescription:message inFile:@(fileName) atLine:lineNumber expected:YES];
 }
 
 - (void)failEqualityBetweenObject:(id)left andObject:(id)right withMessage:(NSString *)message
-                inFile:(char const *)fileName atLine:(int)lineNumber
+        inFile:(char const *)fileName atLine:(NSUInteger)lineNumber
 {
     [self recordFailureWithDescription:message inFile:@(fileName) atLine:lineNumber expected:YES];
 }
 
 - (void)assertMatcherSafeWithNil:(id <HCMatcher>)matcher
-                inFile:(const char *)fileName atLine:(int)lineNumber
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     @try
     {
@@ -35,7 +36,7 @@
 }
 
 - (void)assertMatcherSafeWithUnknownType:(id <HCMatcher>)matcher
-                inFile:(const char *)fileName atLine:(int)lineNumber
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     @try
     {
@@ -49,7 +50,7 @@
 }
 
 - (void)assertTrue:(BOOL)condition message:(NSString *)message
-                inFile:(const char *)fileName atLine:(int)lineNumber
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     if (!condition)
     {
@@ -58,7 +59,7 @@
 }
 
 - (void)assertFalse:(BOOL)condition message:(NSString *)message
-                inFile:(const char *)fileName atLine:(int)lineNumber
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     if (condition)
     {
@@ -67,7 +68,7 @@
 }
 
 - (void)assertMatcher:(id <HCMatcher>)matcher hasTheDescription:(NSString *)expected
-                inFile:(const char *)fileName atLine:(int)lineNumber
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     [description appendDescriptionOf:matcher];
@@ -81,7 +82,7 @@
 }
 
 - (void)assertMatcher:(id <HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
-                inFile:(const char *)fileName atLine:(int)lineNumber
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     BOOL result = [matcher matches:arg];
@@ -98,7 +99,7 @@
 }
 
 - (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg yieldsMismatchDescription:(NSString *)expected
-                inFile:(const char *)fileName atLine:(int)lineNumber
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     // Make sure matcher has been called before, like assertThat would have done.
@@ -120,7 +121,7 @@
 
 - (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg
         yieldsMismatchDescriptionPrefix:(NSString *)expectedPrefix
-            inFile:(const char *)fileName atLine:(int)lineNumber
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     // Make sure matcher has been called before, like assertThat would have done.
@@ -141,7 +142,7 @@
 }
 
 - (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg describesMismatch:(NSString *)expected
-                inFile:(const char *)fileName atLine:(int)lineNumber
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     [matcher describeMismatchOf:arg to:description];
