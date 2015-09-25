@@ -3,10 +3,10 @@
 
 #import "HCArgumentCaptor.h"
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface HCCapturingMatcherTests : AbstractMatcherTest
+@interface HCCapturingMatcherTests : MatcherTestCase
 @end
 
 @implementation HCCapturingMatcherTests

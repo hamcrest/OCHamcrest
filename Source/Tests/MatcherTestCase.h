@@ -6,7 +6,7 @@
 @protocol HCMatcher;
 
 
-@interface AbstractMatcherTest : XCTestCase
+@interface MatcherTestCase : XCTestCase
 
 - (void)assertMatcherSafeWithNil:(id <HCMatcher>)matcher
                 inFile:(const char *)fileName atLine:(int)lineNumber;

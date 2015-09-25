@@ -4,12 +4,12 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsEmptyCollection.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 #import "FakeWithCount.h"
 #import "FakeWithoutCount.h"
 
 
-@interface IsEmptyCollectionTest : AbstractMatcherTest
+@interface IsEmptyCollectionTest : MatcherTestCase
 @end
 
 

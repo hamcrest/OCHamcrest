@@ -4,10 +4,10 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsNil.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface IsNilTest : AbstractMatcherTest
+@interface IsNilTest : MatcherTestCase
 @end
 
 @implementation IsNilTest
@@ -55,7 +55,7 @@
 @end
 
 
-@interface NotNilTest : AbstractMatcherTest
+@interface NotNilTest : MatcherTestCase
 @end
 
 @implementation NotNilTest

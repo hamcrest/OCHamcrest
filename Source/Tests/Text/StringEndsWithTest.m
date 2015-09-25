@@ -4,12 +4,12 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCStringEndsWith.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 static NSString *EXCERPT = @"EXCERPT";
 
 
-@interface StringEndsWithTest : AbstractMatcherTest
+@interface StringEndsWithTest : MatcherTestCase
 @end
 
 @implementation StringEndsWithTest

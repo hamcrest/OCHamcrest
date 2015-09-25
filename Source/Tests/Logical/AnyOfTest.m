@@ -8,10 +8,10 @@
 #import <OCHamcrest/HCStringEndsWith.h>
 #import <OCHamcrest/HCStringStartsWith.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface AnyOfTest : AbstractMatcherTest
+@interface AnyOfTest : MatcherTestCase
 @end
 
 @implementation AnyOfTest

@@ -8,10 +8,10 @@
 #import <OCHamcrest/HCIsNot.h>
 #import <OCHamcrest/HCStringDescription.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface IsSameTest : AbstractMatcherTest
+@interface IsSameTest : MatcherTestCase
 @end
 
 @implementation IsSameTest

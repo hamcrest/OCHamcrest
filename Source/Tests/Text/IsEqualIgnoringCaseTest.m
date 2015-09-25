@@ -4,10 +4,10 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsEqualIgnoringCase.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface IsEqualIgnoringCaseTest : AbstractMatcherTest
+@interface IsEqualIgnoringCaseTest : MatcherTestCase
 @end
 
 @implementation IsEqualIgnoringCaseTest

@@ -8,10 +8,10 @@
 #import <OCHamcrest/HCIsAnything.h>
 #import <OCHamcrest/HCIsSame.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface ThrowsExceptionTest : AbstractMatcherTest
+@interface ThrowsExceptionTest : MatcherTestCase
 @end
 
 @implementation ThrowsExceptionTest

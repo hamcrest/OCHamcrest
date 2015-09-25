@@ -8,7 +8,7 @@
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCIsNil.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
 @interface Person : NSObject
@@ -58,7 +58,7 @@
 @end
 
 
-@interface HasPropertyTest : AbstractMatcherTest
+@interface HasPropertyTest : MatcherTestCase
 @end
 
 @implementation HasPropertyTest
@@ -178,7 +178,7 @@
 @end
 
 
-@interface HasPropertyPrimitivesTest : AbstractMatcherTest
+@interface HasPropertyPrimitivesTest : MatcherTestCase
 @end
 
 @implementation HasPropertyPrimitivesTest

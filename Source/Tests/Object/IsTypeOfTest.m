@@ -4,11 +4,11 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsTypeOf.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 #import "SomeClassAndSubclass.h"
 
 
-@interface IsTypeOfTest : AbstractMatcherTest
+@interface IsTypeOfTest : MatcherTestCase
 @end
 
 @implementation IsTypeOfTest

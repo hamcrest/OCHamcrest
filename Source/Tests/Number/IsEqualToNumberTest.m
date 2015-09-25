@@ -4,10 +4,10 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsEqualToNumber.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface IsEqualToBoolTest : AbstractMatcherTest
+@interface IsEqualToBoolTest : MatcherTestCase
 @end
 
 @implementation IsEqualToBoolTest
@@ -50,7 +50,7 @@
 @end
 
 
-@interface IsEqualToCharTest : AbstractMatcherTest
+@interface IsEqualToCharTest : MatcherTestCase
 @end
 
 @implementation IsEqualToCharTest
@@ -78,7 +78,7 @@
 @end
 
 
-@interface IsEqualToDoubleTest : AbstractMatcherTest
+@interface IsEqualToDoubleTest : MatcherTestCase
 @end
 
 @implementation IsEqualToDoubleTest
@@ -106,7 +106,7 @@
 @end
 
 
-@interface IsEqualToFloatTest : AbstractMatcherTest
+@interface IsEqualToFloatTest : MatcherTestCase
 @end
 
 @implementation IsEqualToFloatTest
@@ -134,7 +134,7 @@
 @end
 
 
-@interface IsEqualToIntTest : AbstractMatcherTest
+@interface IsEqualToIntTest : MatcherTestCase
 @end
 
 @implementation IsEqualToIntTest
@@ -162,7 +162,7 @@
 @end
 
 
-@interface IsEqualToLongTest : AbstractMatcherTest
+@interface IsEqualToLongTest : MatcherTestCase
 @end
 
 @implementation IsEqualToLongTest
@@ -190,7 +190,7 @@
 @end
 
 
-@interface IsEqualToLongLongTest : AbstractMatcherTest
+@interface IsEqualToLongLongTest : MatcherTestCase
 @end
 
 @implementation IsEqualToLongLongTest
@@ -218,7 +218,7 @@
 @end
 
 
-@interface IsEqualToShortTest : AbstractMatcherTest
+@interface IsEqualToShortTest : MatcherTestCase
 @end
 
 @implementation IsEqualToShortTest
@@ -246,7 +246,7 @@
 @end
 
 
-@interface IsEqualToUnsignedCharTest : AbstractMatcherTest
+@interface IsEqualToUnsignedCharTest : MatcherTestCase
 @end
 
 @implementation IsEqualToUnsignedCharTest
@@ -274,7 +274,7 @@
 @end
 
 
-@interface IsEqualToUnsignedIntTest : AbstractMatcherTest
+@interface IsEqualToUnsignedIntTest : MatcherTestCase
 @end
 
 @implementation IsEqualToUnsignedIntTest
@@ -302,7 +302,7 @@
 @end
 
 
-@interface IsEqualToUnsignedLongTest : AbstractMatcherTest
+@interface IsEqualToUnsignedLongTest : MatcherTestCase
 @end
 
 @implementation IsEqualToUnsignedLongTest
@@ -330,7 +330,7 @@
 @end
 
 
-@interface IsEqualToUnsignedLongLongTest : AbstractMatcherTest
+@interface IsEqualToUnsignedLongLongTest : MatcherTestCase
 @end
 
 @implementation IsEqualToUnsignedLongLongTest
@@ -358,7 +358,7 @@
 @end
 
 
-@interface IsEqualToUnsignedShortTest : AbstractMatcherTest
+@interface IsEqualToUnsignedShortTest : MatcherTestCase
 @end
 
 @implementation IsEqualToUnsignedShortTest
@@ -386,7 +386,7 @@
 @end
 
 
-@interface IsEqualToIntegerTest : AbstractMatcherTest
+@interface IsEqualToIntegerTest : MatcherTestCase
 @end
 
 @implementation IsEqualToIntegerTest
@@ -414,7 +414,7 @@
 @end
 
 
-@interface IsEqualToUnsignedIntegerTest : AbstractMatcherTest
+@interface IsEqualToUnsignedIntegerTest : MatcherTestCase
 @end
 
 @implementation IsEqualToUnsignedIntegerTest

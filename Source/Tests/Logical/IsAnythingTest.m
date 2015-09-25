@@ -4,10 +4,10 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsAnything.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface IsAnythingTest : AbstractMatcherTest
+@interface IsAnythingTest : MatcherTestCase
 @end
 
 @implementation IsAnythingTest

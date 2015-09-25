@@ -7,11 +7,11 @@
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCHasCount.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 #import "HCIsInstanceOf.h"
 
 
-@interface IsNotTest : AbstractMatcherTest
+@interface IsNotTest : MatcherTestCase
 @end
 
 @implementation IsNotTest

@@ -1,13 +1,13 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 #import <OCHamcrest/HCMatcher.h>
 #import <OCHamcrest/HCStringDescription.h>
 
 
-@implementation AbstractMatcherTest
+@implementation MatcherTestCase
 
 - (void)failWithMessage:(NSString *)message inFile:(char const *)fileName atLine:(int)lineNumber
 {

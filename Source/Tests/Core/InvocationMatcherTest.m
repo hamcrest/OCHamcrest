@@ -6,7 +6,7 @@
 
 #import <OCHamcrest/HCIsEqual.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
 @interface Match : HCIsEqual
@@ -74,7 +74,7 @@
 @end
 
 
-@interface InvocationMatcherTest : AbstractMatcherTest
+@interface InvocationMatcherTest : MatcherTestCase
 @end
 
 @implementation InvocationMatcherTest

@@ -4,10 +4,10 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsEqualIgnoringWhiteSpace.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface IsEqualIgnoringWhiteSpaceTest : AbstractMatcherTest
+@interface IsEqualIgnoringWhiteSpaceTest : MatcherTestCase
 @end
 
 @implementation IsEqualIgnoringWhiteSpaceTest

@@ -7,12 +7,12 @@
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCOrderingComparison.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 #import "FakeWithCount.h"
 #import "FakeWithoutCount.h"
 
 
-@interface HasCountTest : AbstractMatcherTest
+@interface HasCountTest : MatcherTestCase
 @end
 
 @implementation HasCountTest
@@ -71,7 +71,7 @@
 @end
 
 
-@interface HasCountOfTest : AbstractMatcherTest
+@interface HasCountOfTest : MatcherTestCase
 @end
 
 @implementation HasCountOfTest

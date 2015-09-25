@@ -5,7 +5,7 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCConformsToProtocol.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
 @protocol TestProtocol
@@ -23,7 +23,7 @@
 
 @end
 
-@interface ConformsToProtocolTest : AbstractMatcherTest
+@interface ConformsToProtocolTest : MatcherTestCase
 @end
 
 @implementation ConformsToProtocolTest

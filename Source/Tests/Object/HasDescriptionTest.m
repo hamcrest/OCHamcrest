@@ -6,7 +6,7 @@
 
 #import <OCHamcrest/HCIsEqual.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
 static NSString *fakeDescription = @"DESCRIPTION";
@@ -20,7 +20,7 @@ static NSString *fakeDescription = @"DESCRIPTION";
 @end
 
 
-@interface HasDescriptionTest : AbstractMatcherTest
+@interface HasDescriptionTest : MatcherTestCase
 @end
 
 @implementation HasDescriptionTest

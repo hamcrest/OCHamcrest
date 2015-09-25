@@ -4,10 +4,10 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCOrderingComparison.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface OrderingComparisonTest : AbstractMatcherTest
+@interface OrderingComparisonTest : MatcherTestCase
 @end
 
 @implementation OrderingComparisonTest

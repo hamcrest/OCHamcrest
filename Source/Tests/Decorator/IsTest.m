@@ -6,11 +6,11 @@
 
 #import <OCHamcrest/HCIsEqual.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 #import "NeverMatch.h"
 
 
-@interface IsTest : AbstractMatcherTest
+@interface IsTest : MatcherTestCase
 @end
 
 @implementation IsTest

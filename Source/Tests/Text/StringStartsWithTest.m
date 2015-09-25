@@ -4,12 +4,12 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCStringStartsWith.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 static NSString *EXCERPT = @"EXCERPT";
 
 
-@interface StringStartsWithTest : AbstractMatcherTest
+@interface StringStartsWithTest : MatcherTestCase
 @end
 
 @implementation StringStartsWithTest

@@ -6,10 +6,10 @@
 
 #import <OCHamcrest/HCIsEqual.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface IsCollectionContainingInAnyOrderTest : AbstractMatcherTest
+@interface IsCollectionContainingInAnyOrderTest : MatcherTestCase
 @end
 
 @implementation IsCollectionContainingInAnyOrderTest

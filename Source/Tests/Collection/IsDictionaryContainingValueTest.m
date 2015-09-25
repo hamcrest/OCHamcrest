@@ -6,10 +6,10 @@
 
 #import <OCHamcrest/HCIsEqual.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface IsDictionaryContainingValueTest : AbstractMatcherTest
+@interface IsDictionaryContainingValueTest : MatcherTestCase
 @end
 
 @implementation IsDictionaryContainingValueTest

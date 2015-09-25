@@ -4,7 +4,7 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsEqual.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
 @interface FakeArgument : NSObject
@@ -31,7 +31,7 @@
 @end
 
 
-@interface IsEqualTest : AbstractMatcherTest
+@interface IsEqualTest : MatcherTestCase
 @end
 
 @implementation IsEqualTest

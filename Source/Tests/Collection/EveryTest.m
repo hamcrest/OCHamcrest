@@ -7,11 +7,11 @@
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCOrderingComparison.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 #import "Mismatchable.h"
 
 
-@interface EveryTest : AbstractMatcherTest
+@interface EveryTest : MatcherTestCase
 @end
 
 @implementation EveryTest

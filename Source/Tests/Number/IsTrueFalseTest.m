@@ -5,10 +5,10 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsTrueFalse.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface IsTrueTest : AbstractMatcherTest
+@interface IsTrueTest : MatcherTestCase
 @end
 
 @implementation IsTrueTest
@@ -57,7 +57,7 @@
 
 #pragma mark -
 
-@interface IsFalseTest : AbstractMatcherTest
+@interface IsFalseTest : MatcherTestCase
 @end
 
 @implementation IsFalseTest

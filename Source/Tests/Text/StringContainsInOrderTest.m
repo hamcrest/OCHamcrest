@@ -4,10 +4,10 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCStringContainsInOrder.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface StringContainsInOrderTest : AbstractMatcherTest
+@interface StringContainsInOrderTest : MatcherTestCase
 {
     id <HCMatcher> matcher;
 }

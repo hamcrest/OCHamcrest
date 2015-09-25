@@ -4,10 +4,10 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/HCIsIn.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
-@interface IsInTest : AbstractMatcherTest
+@interface IsInTest : MatcherTestCase
 @end
 
 @implementation IsInTest

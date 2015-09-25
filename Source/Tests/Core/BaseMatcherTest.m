@@ -3,7 +3,7 @@
 
 #import <OCHamcrest/HCBaseMatcher.h>
 
-#import "AbstractMatcherTest.h"
+#import "MatcherTestCase.h"
 
 
 @interface BaseMatcherWithDescription : HCBaseMatcher
@@ -19,7 +19,7 @@
 @end
 
 
-@interface BaseMatcherTest : AbstractMatcherTest
+@interface BaseMatcherTest : MatcherTestCase
 @end
 
 @implementation BaseMatcherTest
@@ -60,7 +60,7 @@
 @end
 
 
-@interface IncompleteMatcherTest : AbstractMatcherTest
+@interface IncompleteMatcherTest : MatcherTestCase
 @end
 
 @implementation IncompleteMatcherTest
