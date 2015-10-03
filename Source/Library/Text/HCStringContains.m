@@ -6,9 +6,9 @@
 
 @implementation HCStringContains
 
-+ (instancetype)stringContains:(NSString *)aString
++ (instancetype)stringContains:(NSString *)substring
 {
-    return [[self alloc] initWithSubstring:aString];
+    return [[self alloc] initWithSubstring:substring];
 }
 
 - (BOOL)matches:(id)item
@@ -32,7 +32,7 @@ id <HCMatcher> HC_containsString(NSString *aString)
     return HC_containsSubstring(aString);
 }
 
-id <HCMatcher> HC_containsSubstring(NSString *aString)
+id <HCMatcher> HC_containsSubstring(NSString *substring)
 {
-    return [HCStringContains stringContains:aString];
+    return [HCStringContains stringContains:substring];
 }

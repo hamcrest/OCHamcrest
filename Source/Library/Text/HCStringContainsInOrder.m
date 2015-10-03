@@ -57,12 +57,13 @@
 
 @end
 
-id HC_stringContainsInOrder(NSString *substring, ...)
+
+id HC_stringContainsInOrder(NSString *substrings, ...)
 {
     va_list args;
-    va_start(args, substring);
-    NSArray *substrings = HCCollectItems(substring, args);
+    va_start(args, substrings);
+    NSArray *strings = HCCollectItems(substrings, args);
     va_end(args);
 
-    return [HCStringContainsInOrder containsInOrder:substrings];
+    return [HCStringContainsInOrder containsInOrder:strings];
 }

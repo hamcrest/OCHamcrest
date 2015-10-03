@@ -4,9 +4,12 @@
 #import <OCHamcrest/HCSubstringMatcher.h>
 
 
+/*!
+ * @abstract Tests if string that contains a substring.
+ */
 @interface HCStringContains : HCSubstringMatcher
 
-+ (id)stringContains:(NSString *)aSubstring;
++ (id)stringContains:(NSString *)substring;
 
 @end
 
@@ -16,11 +19,12 @@ FOUNDATION_EXPORT id HC_containsString(NSString *aSubstring) __attribute__((depr
 #ifdef HC_SHORTHAND
 /*!
  * @abstract containsString(aString) -
- * Matches if object is a string containing a given string.
- * @param aString The string to search for. This value must not be <code>nil</code>.
+ * Creates a matcher that matches when the examined object is a string containing the specified
+ * substring.
+ * @param aString The string to search for. (Must not be <code>nil</code>.)
  * @discussion <em>Deprecated: Use @ref containsSubstring() instead.</em>
  *
- * This matcher first checks whether the evaluated object is a string. If so, it checks whether it
+ * This matcher first checks whether the examined object is a string. If so, it checks whether it
  * contains <em>aString</em>.
  *
  * Example:
@@ -37,21 +41,21 @@ FOUNDATION_EXPORT id HC_containsString(NSString *aSubstring) __attribute__((depr
 #endif
 
 
-FOUNDATION_EXPORT id HC_containsSubstring(NSString *aSubstring);
+FOUNDATION_EXPORT id HC_containsSubstring(NSString *substring);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract containsSubstring(aString) -
- * Matches if object is a string containing a given string.
- * @param aString The string to search for. This value must not be <code>nil</code>.
- * @discussion This matcher first checks whether the evaluated object is a string. If so, it checks
- * whether it contains <em>aString</em>.
+ * @abstract containsSubstring(substring) -
+ * Creates a matcher that matches when the examined object is a string containing the specified
+ * string anywhere.
+ * @param substring The string to search for. (Must not be <code>nil</code>.)
+ * @discussion Creates a matcher that matcher invokes <code>-rangeOfString:</code> on the examined
+ * object, passing the specified <em>substring</em> and matching if it is found.
  *
  * Example:
  * <ul>
- *   <li><code>containsSubstring(\@"def")</code></li>
+ *   <li><code>assertThat(\@"myStringOfNote", containsSubstring(\@"ring"))</code></li>
  * </ul>
- * will match "abcdefg".
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym

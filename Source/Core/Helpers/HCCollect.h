@@ -21,6 +21,6 @@ FOUNDATION_EXPORT NSMutableArray *HCCollectMatchers(id item, va_list args);
 
 /*!
  * @abstract Returns an array of wrapped items from a variable-length comma-separated list terminated by <code>nil</code>.
- * @discussion Each item is transformed by passing it to the given <em>wrap</em> function.
+ * @discussion Each item is transformed by passing it to the specified <em>wrap</em> function.
  */
 FOUNDATION_EXPORT NSMutableArray *HCCollectWrappedItems(id item, va_list args, id (*wrap)(id));

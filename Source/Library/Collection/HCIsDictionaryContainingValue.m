@@ -45,8 +45,8 @@
 @end
 
 
-id HC_hasValue(id valueMatch)
+id HC_hasValue(id valueMatcher)
 {
-    HCRequireNonNilObject(valueMatch);
-    return [HCIsDictionaryContainingValue isDictionaryContainingValue:HCWrapInMatcher(valueMatch)];
+    HCRequireNonNilObject(valueMatcher);
+    return [HCIsDictionaryContainingValue isDictionaryContainingValue:HCWrapInMatcher(valueMatcher)];
 }

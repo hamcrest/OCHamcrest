@@ -4,9 +4,15 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+/*!
+ * @abstract Matches true values.
+ */
 @interface HCIsTrue : HCBaseMatcher
 @end
 
+/*!
+ * @abstract Matches false values.
+ */
 @interface HCIsFalse : HCBaseMatcher
 @end
 
@@ -15,7 +21,8 @@ FOUNDATION_EXPORT id HC_isTrue(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract Matches if object is equal to NSNumber with non-zero value.
+ * @abstract Creates a matcher that matches when the examined object is an NSNumber with non-zero
+ * value.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -29,7 +36,7 @@ FOUNDATION_EXPORT id HC_isFalse(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract Matches if object is equal to NSNumber with zero value.
+ * @abstract Creates a matcher that matches when the examined object is an NSNumber with zero value.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym

@@ -17,7 +17,7 @@
 - (id <HCDescription>)appendText:(NSString *)text;
 
 /*!
- * @abstract Appends description of given value to description.
+ * @abstract Appends description of specified value to description.
  * @discussion If the value implements the @ref HCSelfDescribing protocol, then it will be used.
  * @return <code>self</code>, for chaining.
  */

@@ -4,16 +4,16 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+/*!
+ * @abstract Matches anything.
+ */
 @interface HCIsAnything : HCBaseMatcher
-{
-    NSString *description;
-}
 
 + (instancetype)isAnything;
-+ (instancetype)isAnythingWithDescription:(NSString *)aDescription;
++ (instancetype)isAnythingWithDescription:(NSString *)description;
 
 - (instancetype)init;
-- (instancetype)initWithDescription:(NSString *)aDescription;
+- (instancetype)initWithDescription:(NSString *)description;
 
 @end
 
@@ -22,9 +22,8 @@ FOUNDATION_EXPORT id HC_anything(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract Matches anything.
- * @discussion This matcher always evaluates to <code>YES</code>. Specify this in composite matchers
- * when the value of a particular element is unimportant.
+ * @abstract Creates a matcher that always matches, regardless of the examined object.
+ * @discussion Creates a matcher that always evaluates to <code>YES</code>.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -34,15 +33,15 @@ FOUNDATION_EXPORT id HC_anything(void);
 #endif
 
 
-FOUNDATION_EXPORT id HC_anythingWithDescription(NSString *aDescription);
+FOUNDATION_EXPORT id HC_anythingWithDescription(NSString *description);
 
 #ifdef HC_SHORTHAND
 /*!
  * @abstract anythingWithDescription(description) -
- * Matches anything.
- * @param description A string used to describe this matcher.
- * @discussion This matcher always evaluates to <code>YES</code>. Specify this in collection
- * matchers when the value of a particular element in a collection is unimportant.
+ * Creates a matcher that matches anything, regardless of the examined object.
+ * @param description A meaningful string used to describe this matcher.
+ * @discussion Creates a matcher that always evaluates to <code>YES</code>. It describes itself with
+ * the specified <em>description</em>.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym

@@ -4,6 +4,9 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+/*!
+ * @abstract Is the value nil?
+ */
 @interface HCIsNil : HCBaseMatcher
 
 + (id)isNil;
@@ -15,7 +18,11 @@ FOUNDATION_EXPORT id HC_nilValue(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract Matches if object is <code>nil</code>.
+ * @abstract Creates a matcher that matches when the examined object is <code>nil</code>.
+ * @discussion Example:
+ * <ul>
+ *   <li><code>assertThat(myObject, nilValue())</code></li>
+ * </ul>
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -29,7 +36,11 @@ FOUNDATION_EXPORT id HC_notNilValue(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract Matches if object is not <code>nil</code>.
+ * @abstract Creates a matcher that matches when the examined object is not <code>nil</code>.
+ * @discussion Example:
+ * <ul>
+ *   <li><code>assertThat(myObject, notNilValue())</code></li>
+ * </ul>
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym

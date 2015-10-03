@@ -19,16 +19,16 @@
  * @discussion If <code>-matches:</code> was called more than once then this property returns the
  * last captured value.
  *
- * If no value was captured — that is, <code>-matches:</code> was never invoked — this property
- * returns <code>nil</code>. But if <code>nil</code> was captured, this property returns NSNull.
+ * If <code>-matches:</code> was never invoked and so no value was captured, this property returns
+ * <code>nil</code>. But if <code>nil</code> was captured, this property returns NSNull.
  */
-@property (nonatomic, strong, readonly) id value;
+@property (nonatomic, readonly) id value;
 
 /*!
  * @abstract Returns all captured values.
  * @discussion Returns an array containing all captured values, in the order in which they were
  * captured. <code>nil</code> values are converted to NSNull.
  */
-@property (nonatomic, copy, readonly) NSArray *allValues;
+@property (nonatomic, readonly) NSArray *allValues;
 
 @end

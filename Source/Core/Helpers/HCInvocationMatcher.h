@@ -6,7 +6,8 @@
 
 /*!
  * @abstract Supporting class for matching a feature of an object.
- * @discussion Tests whether the result of passing a given invocation to the value satisfies a given matcher.
+ * @discussion Tests whether the result of passing the specified invocation to the value satisfies
+ * the specified matcher.
  */
 @interface HCInvocationMatcher : HCBaseMatcher
 {
@@ -27,7 +28,7 @@
 - (instancetype)initWithInvocation:(NSInvocation *)anInvocation matching:(id <HCMatcher>)aMatcher;
 
 /*!
- * @abstract Invokes stored invocation on given item and returns the result.
+ * @abstract Invokes stored invocation on the specified item and returns the result.
  */
 - (id)invokeOn:(id)item;
 

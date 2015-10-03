@@ -6,9 +6,9 @@
 
 @implementation HCIsTypeOf
 
-+ (instancetype)isTypeOf:(Class)aClass
++ (instancetype)isTypeOf:(Class)expectedClass
 {
-    return [[self alloc] initWithClass:aClass];
+    return [[self alloc] initWithClass:expectedClass];
 }
 
 - (BOOL)matches:(id)item
@@ -24,7 +24,7 @@
 @end
 
 
-id HC_isA(Class aClass)
+id HC_isA(Class expectedClass)
 {
-    return [HCIsTypeOf isTypeOf:aClass];
+    return [HCIsTypeOf isTypeOf:expectedClass];
 }

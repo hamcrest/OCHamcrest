@@ -4,6 +4,11 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+/*!
+ * @abstract Calculates the logical disjunction of multiple matchers.
+ * @discussion Evaluation is shortcut, so subsequent matchers are not called if an earlier matcher
+ * returns <code>NO</code>.
+ */
 @interface HCAnyOf : HCBaseMatcher
 
 + (instancetype)anyOf:(NSArray *)matchers;
@@ -12,15 +17,17 @@
 @end
 
 
-FOUNDATION_EXPORT id HC_anyOf(id match, ...) NS_REQUIRES_NIL_TERMINATION;
+FOUNDATION_EXPORT id HC_anyOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract anyOf(firstMatcher, ...) -
- * Matches if any of the given matchers evaluate to <code>YES</code>.
- * @param firstMatcher,... A comma-separated list of matchers ending with <code>nil</code>.
- * @discussion The matchers are evaluated from left to right using short-circuit evaluation, so
- * evaluation stops as soon as a matcher returns <code>YES</code>.
+ * @abstract anyOf(matchers, ...) -
+ * Creates a matcher that matches when the examined object matches <b>any</b> of the specified matchers.
+ * @param matchers,... A comma-separated list of matchers ending with <code>nil</code>.
+ * @discussion Example:
+ * <ul>
+ *   <li><code>assertThat(\@"myValue", allOf(startsWith(\@"foo"), containsSubstring(\@"Val"), nil))</code></li>
+ * </ul>
  *
  * Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
  * equality.

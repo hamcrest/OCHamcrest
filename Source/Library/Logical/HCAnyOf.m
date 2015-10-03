@@ -41,11 +41,11 @@
 @end
 
 
-id HC_anyOf(id match, ...)
+id HC_anyOf(id matchers, ...)
 {
     va_list args;
-    va_start(args, match);
-    NSArray *matcherList = HCCollectMatchers(match, args);
+    va_start(args, matchers);
+    NSArray *matcherList = HCCollectMatchers(matchers, args);
     va_end(args);
 
     return [HCAnyOf anyOf:matcherList];

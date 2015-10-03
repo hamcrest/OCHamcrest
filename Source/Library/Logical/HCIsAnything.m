@@ -5,15 +5,18 @@
 
 
 @implementation HCIsAnything
+{
+    NSString *_description;
+}
 
 + (instancetype)isAnything
 {
     return [[self alloc] init];
 }
 
-+ (instancetype)isAnythingWithDescription:(NSString *)aDescription
++ (instancetype)isAnythingWithDescription:(NSString *)description
 {
-    return [[self alloc] initWithDescription:aDescription];
+    return [[self alloc] initWithDescription:description];
 }
 
 - (instancetype)init
@@ -22,11 +25,11 @@
     return self;
 }
 
-- (instancetype)initWithDescription:(NSString *)aDescription
+- (instancetype)initWithDescription:(NSString *)description
 {
     self = [super init];
     if (self)
-        description = [aDescription copy];
+        _description = [description copy];
     return self;
 }
 
@@ -37,7 +40,7 @@
 
 - (void)describeTo:(id <HCDescription>)aDescription
 {
-    [aDescription appendText:description];
+    [aDescription appendText:_description];
 }
 
 @end

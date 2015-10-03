@@ -23,11 +23,11 @@
 @end
 
 
-id HC_onlyContains(id itemMatch, ...)
+id HC_onlyContains(id itemMatchers, ...)
 {
     va_list args;
-    va_start(args, itemMatch);
-    NSArray *matchers = HCCollectMatchers(itemMatch, args);
+    va_start(args, itemMatchers);
+    NSArray *matchers = HCCollectMatchers(itemMatchers, args);
     va_end(args);
 
     return [HCIsCollectionOnlyContaining isCollectionOnlyContaining:[HCAnyOf anyOf:matchers]];

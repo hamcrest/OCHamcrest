@@ -4,6 +4,9 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+/*!
+ * @abstract Matches if any entry in a dictionary has a key satisfying the nested matcher.
+ */
 @interface HCIsDictionaryContainingKey : HCBaseMatcher
 
 + (instancetype)isDictionaryContainingKey:(id <HCMatcher>)keyMatcher;
@@ -12,23 +15,24 @@
 @end
 
 
-FOUNDATION_EXPORT id HC_hasKey(id keyMatch);
+FOUNDATION_EXPORT id HC_hasKey(id keyMatcher);
 
 #ifdef HC_SHORTHAND
 /*!
  * @abstract hasKey(keyMatcher) -
- * Matches if dictionary contains an entry whose key satisfies a given matcher.
+ * Creates a matcher that matches when a dictionary contains an entry whose key satisfies the
+ * specified matcher.
  * @param keyMatcher The matcher to satisfy for the key, or an expected value for @ref equalTo matching.
- * @discussion This matcher iterates the evaluated dictionary, searching for any key-value entry
- * whose key satisfies the given matcher. If a matching entry is found, hasKey is satisfied.
+ * @discussion Creates a matcher for dictionaries matching when the examined dictionary contains at
+ * least one key that satisfies the specified matcher.
  *
  * Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
  * equality.
  *
  * Examples:
  * <ul>
- *   <li><code>hasEntry(equalTo(\@"foo"))</code></li>
- *   <li><code>hasEntry(\@"foo")</code></li>
+ *   <li><code>assertThat(myDictionary, hasEntry(equalTo(\@"foo")))</code></li>
+ *   <li><code>assertThat(myDictionary, hasEntry(\@"foo"))</code></li>
  * </ul>
  *
  * @attribute Name Clash

@@ -12,16 +12,16 @@
 
 @implementation HCHasCount
 
-+ (instancetype)hasCount:(id <HCMatcher>)matcher
++ (instancetype)hasCount:(id <HCMatcher>)countMatcher
 {
-    return [[self alloc] initWithCount:matcher];
+    return [[self alloc] initWithCount:countMatcher];
 }
 
-- (instancetype)initWithCount:(id <HCMatcher>)matcher
+- (instancetype)initWithCount:(id <HCMatcher>)countMatcher
 {
     self = [super init];
     if (self)
-        _countMatcher = matcher;
+        _countMatcher = countMatcher;
     return self;
 }
 
@@ -59,9 +59,9 @@
 @end
 
 
-id HC_hasCount(id <HCMatcher> matcher)
+id HC_hasCount(id <HCMatcher> countMatcher)
 {
-    return [HCHasCount hasCount:matcher];
+    return [HCHasCount hasCount:countMatcher];
 }
 
 id HC_hasCountOf(NSUInteger value)

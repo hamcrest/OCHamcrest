@@ -5,32 +5,37 @@
 #import <OCHamcrest/HCDiagnosingMatcher.h>
 
 
+/*!
+ * @abstract Matches objects whose "property" (or simple method) satisfies a nested matcher.
+ */
 @interface HCHasProperty : HCDiagnosingMatcher
 
-+ (instancetype)hasProperty:(NSString *)property value:(id <HCMatcher>)valueMatcher;
-- (instancetype)initWithProperty:(NSString *)property value:(id <HCMatcher>)valueMatcher;
++ (instancetype)hasProperty:(NSString *)propertyName value:(id <HCMatcher>)valueMatcher;
+- (instancetype)initWithProperty:(NSString *)propertyName value:(id <HCMatcher>)valueMatcher;
 
 @end
 
 
-FOUNDATION_EXPORT id HC_hasProperty(NSString *name, id valueMatch);
+FOUNDATION_EXPORT id HC_hasProperty(NSString *propertyName, id valueMatcher);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract hasProperty(name, valueMatcher) -
- * Matches if object has a method of a given name whose return value satisfies a given matcher.
- * @param name The name of a method without arguments that returns an object.
- * @param valueMatcher The matcher to satisfy for the return value, or an expected value for @ref equalTo matching.
- * @discussion This matcher first checks if the evaluated object has a method with a name matching
- * the given name. If so, it invokes the method and sees if the returned value satisfies <em>valueMatcher</em>.
+ * @abstract hasProperty(propertyName, valueMatcher) -
+ * Creates a matcher that matches when the examined object has a method with the specified name
+ * whose return value satisfies the specified matcher.
+ * @param propertyName The name of an instance method without arguments that returns an object.
+ * @param valueMatcher The matcher to satisfy for the return value, or an expected value for
+ * @ref equalTo matching.
+ * @discussion Creates a matcher that matches when the examined object has an instance method with
+ * the specified name, and invoking it returns a value that satisfies <em>valueMatcher</em>.
  *
- * While this matcher is called "hasProperty", it's useful for checking the results of any simple
- * methods, not just properties.
+ * Note: While this matcher factory is called "hasProperty", it applies to the return values of any
+ * instance methods without arguments, not just properties.
  *
  * Examples:
  * <ul>
- *   <li><code>hasProperty(\@"firstName", \@"Joe")</code></li>
- *   <li><code>hasProperty(\@"firstName", startsWith(\@"J"))</code></li>
+ *   <li><code>assertThat(person, hasProperty(\@"firstName", \@"Joe"))</code></li>
+ *   <li><code>assertThat(person, hasProperty(\@"firstName", startsWith(\@"J")))</code></li>
  * </ul>
  *
  * @attribute Name Clash

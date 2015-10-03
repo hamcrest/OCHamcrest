@@ -119,11 +119,11 @@
 @end
 
 
-id HC_contains(id itemMatch, ...)
+id HC_contains(id itemMatchers, ...)
 {
     va_list args;
-    va_start(args, itemMatch);
-    NSArray *matchers = HCCollectMatchers(itemMatch, args);
+    va_start(args, itemMatchers);
+    NSArray *matchers = HCCollectMatchers(itemMatchers, args);
     va_end(args);
 
     return [HCIsCollectionContainingInOrder isCollectionContainingInOrder:matchers];

@@ -104,11 +104,11 @@
 @end
 
 
-id HC_containsInAnyOrder(id itemMatch, ...)
+id HC_containsInAnyOrder(id itemMatchers, ...)
 {
     va_list args;
-    va_start(args, itemMatch);
-    NSArray *matchers = HCCollectMatchers(itemMatch, args);
+    va_start(args, itemMatchers);
+    NSArray *matchers = HCCollectMatchers(itemMatchers, args);
     va_end(args);
 
     return [HCIsCollectionContainingInAnyOrder isCollectionContainingInAnyOrder:matchers];

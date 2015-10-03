@@ -18,7 +18,7 @@
 @interface HCBaseDescription (SubclassResponsibility)
 
 /*!
- * @abstract Appends the given string to the description.
+ * @abstract Appends the specified string to the description.
  */
 - (void)append:(NSString *)str;
 

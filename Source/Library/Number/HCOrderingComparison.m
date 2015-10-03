@@ -75,33 +75,33 @@
 @end
 
 
-id HC_greaterThan(id aValue)
+id HC_greaterThan(id value)
 {
-    return [HCOrderingComparison compare:aValue
+    return [HCOrderingComparison compare:value
                               minCompare:NSOrderedAscending
                               maxCompare:NSOrderedAscending
                    comparisonDescription:@"greater than"];
 }
 
-id HC_greaterThanOrEqualTo(id aValue)
+id HC_greaterThanOrEqualTo(id value)
 {
-    return [HCOrderingComparison compare:aValue
+    return [HCOrderingComparison compare:value
                               minCompare:NSOrderedAscending
                               maxCompare:NSOrderedSame
                    comparisonDescription:@"greater than or equal to"];
 }
 
-id HC_lessThan(id aValue)
+id HC_lessThan(id value)
 {
-    return [HCOrderingComparison compare:aValue
+    return [HCOrderingComparison compare:value
                               minCompare:NSOrderedDescending
                               maxCompare:NSOrderedDescending
                    comparisonDescription:@"less than"];
 }
 
-id HC_lessThanOrEqualTo(id aValue)
+id HC_lessThanOrEqualTo(id value)
 {
-    return [HCOrderingComparison compare:aValue
+    return [HCOrderingComparison compare:value
                               minCompare:NSOrderedSame
                               maxCompare:NSOrderedDescending
                    comparisonDescription:@"less than or equal to"];

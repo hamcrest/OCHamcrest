@@ -27,7 +27,7 @@
 @end
 
 
-id HC_hasDescription(id match)
+id HC_hasDescription(id descriptionMatcher)
 {
-    return [HCHasDescription hasDescription:HCWrapInMatcher(match)];
+    return [HCHasDescription hasDescription:HCWrapInMatcher(descriptionMatcher)];
 }

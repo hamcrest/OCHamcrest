@@ -4,26 +4,36 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+/*!
+ * @abstract Matches if collection size satisfies a nested matcher.
+ */
 @interface HCHasCount : HCBaseMatcher
 
-+ (instancetype)hasCount:(id <HCMatcher>)matcher;
-- (instancetype)initWithCount:(id <HCMatcher>)matcher;
++ (instancetype)hasCount:(id <HCMatcher>)countMatcher;
+- (instancetype)initWithCount:(id <HCMatcher>)countMatcher;
 
 @end
 
 
-FOUNDATION_EXPORT id HC_hasCount(id <HCMatcher> matcher);
+FOUNDATION_EXPORT id HC_hasCount(id <HCMatcher> countMatcher);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract hasCount(aMatcher) -
- * Matches if object's <code>-count</code> satisfies a given matcher.
- * @param aMatcher The matcher to satisfy.
- * @discussion This matcher invokes <code>-count</code> on the evaluated object to get the number of
- * elements it contains, passing the result to <em>aMatcher</em> for evaluation.
+ * @abstract hasCount(countMatcher) -
+ * Creates a matcher that matches when the examined object's <code>-count</code> satisfies the
+ * specified matcher.
+ * @param countMatcher A matcher for the count of an examined collection.
+ * @discussion Creates a matcher that matches any examined object whose <code>-count</code> method
+ * returns a value that satisfies the specified matcher.
+ *
+ * Example:
+ * <ul>
+ *   <li></code>assertThat(\@[\@"foo", \@"bar"], hasCount(equalTo(\@2)))</code></li>
+ * </ul>
  *
  * @attribute Name Clash
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym HC_hasCount instead.
+ * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * HC_hasCount instead.
  */
 #define hasCount HC_hasCount
 #endif
@@ -34,13 +44,20 @@ FOUNDATION_EXPORT id HC_hasCountOf(NSUInteger count);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract hasCountOf(value) -
- * Matches if object's <code>-count</code> equals a given value.
- * @param value NSUInteger value to compare against as the expected value.
- * @discussion This matcher invokes <code>-count</code> on the evaluated object to get the number of
- * elements it contains, comparing the result to value for equality.
+ * Creates a matcher that matches when the examined object's <code>-count</code> equals the
+ * specified value.
+ * @param value NSUInteger value to compare against as the expected count.
+ * @discussion Creates a matcher that matches any examined object whose <code>-count</code> method
+ * returns a value that is equal to the specified <em>value</em>.
+ *
+ * Example:
+ * <ul>
+ *   <li></code>assertThat(\@[\@"foo", \@"bar"], hasCountOf(2))</code></li>
+ * </ul>
  *
  * @attribute Name Clash
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym HC_hasCountOf instead.
+ * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * HC_hasCountOf instead.
  */
 #define hasCountOf HC_hasCountOf
 #endif

@@ -53,7 +53,7 @@ OBJC_EXPORT void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxT
 #ifdef HC_SHORTHAND
 /*!
  * @abstract assertThatAfter(maxTime, actualBlock, matcher) -
- * Asserts that a value provided by a block will satisfy matcher in less than a given time.
+ * Asserts that a value provided by a block will satisfy matcher in less than the specified time.
  * @param maxTime Max time (in seconds) in which the matcher has to be satisfied.
  * @param actualBlock A block providing the object to evaluate until timeout or the matcher is satisfied.
  * @param matcher The matcher to satisfy as the expected condition.
@@ -101,7 +101,7 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
 #ifdef HC_SHORTHAND
 /*!
  * @abstract assertWithTimeout(timeout, actualBlock, matcher) -
- * Asserts that a value provided by a block will satisfy matcher within a given time.
+ * Asserts that a value provided by a block will satisfy matcher within the specified time.
  * @param timeout Maximum time to wait for passing behavior, specified in seconds.
  * @param actualBlock A block providing the object to repeatedly evaluate as the actual value.
  * @param matcher The matcher to satisfy as the expected condition.

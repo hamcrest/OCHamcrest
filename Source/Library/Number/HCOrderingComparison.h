@@ -4,6 +4,9 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+/*!
+ * @abstract Matches values with <code>-compare:</code>.
+ */
 @interface HCOrderingComparison : HCBaseMatcher
 
 + (instancetype)compare:(id)expectedValue
@@ -19,16 +22,20 @@
 @end
 
 
-FOUNDATION_EXPORT id HC_greaterThan(id expected);
+FOUNDATION_EXPORT id HC_greaterThan(id value);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract greaterThan(aNumber) -
- * Matches if object is greater than a given number.
- * @param aNumber The NSNumber to compare against.
- * @discussion Example:
+ * @abstract greaterThan(value) -
+ * Creates a matcher that matches when the examined object is greater than the specified value.
+ * @param value The value which, when passed to the <code>-compare:</code> method of the examined
+ * object, should return NSOrderedAscending.
+ * @discussion Creates a matcher of that matches when the examined object is greater than the
+ * specified value, as reported by the <code>-compare:</code> method of the <b>examined</b> object.
+ *
+ * Example:
  * <ul>
- *   <li><code>greaterThan(\@5)</code></li>
+ *   <li><code>assertThat(@2, greaterThan(\@1))</code></li>
  * </ul>
  *
  * @attribute Name Clash
@@ -39,16 +46,22 @@ FOUNDATION_EXPORT id HC_greaterThan(id expected);
 #endif
 
 
-FOUNDATION_EXPORT id HC_greaterThanOrEqualTo(id expected);
+FOUNDATION_EXPORT id HC_greaterThanOrEqualTo(id value);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract greaterThanOrEqualTo(aNumber) -
- * Matches if object is greater than or equal to a given number.
- * @param aNumber The NSNumber to compare against.
- * @discussion Example:
+ * @abstract greaterThanOrEqualTo(value) -
+ * Creates a matcher that matches when the examined object is greater than or equal to the specified
+ * value.
+ * @param value The value which, when passed to the <code>-compare:</code> method of the examined
+ * object, should return NSOrderedAscending or NSOrderedSame.
+ * @discussion Creates a matcher of that matches when the examined object is greater than or equal
+ * to the specified value, as reported by the <code>-compare:</code> method of the <b>examined</b>
+ * object.
+ *
+ * Example:
  * <ul>
- *   <li><code>greaterThanOrEqualTo(\@5)</code></li>
+ *   <li><code>assertThat(@1, greaterThan(\@1))</code></li>
  * </ul>
  *
  * @attribute Name Clash
@@ -59,16 +72,20 @@ FOUNDATION_EXPORT id HC_greaterThanOrEqualTo(id expected);
 #endif
 
 
-FOUNDATION_EXPORT id HC_lessThan(id expected);
+FOUNDATION_EXPORT id HC_lessThan(id value);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract lessThan(aNumber) -
- * Matches if object is less than a given number.
- * @param aNumber The NSNumber to compare against.
- * @discussion Example:
+ * @abstract lessThan(value) -
+ * Creates a matcher that matches when the examined object is less than the specified value.
+ * @param value The value which, when passed to the <code>-compare:</code> method of the examined
+ * object, should return NSOrderedDescending.
+ * @discussion Creates a matcher of that matches when the examined object is less than the specified
+ * value, as reported by the <code>-compare:</code> method of the <b>examined</b> object.
+ *
+ * Example:
  * <ul>
- *   <li><code>lessThan(\@5)</code></li>
+ *   <li><code>assertThat(@1, lessThan(\@2))</code></li>
  * </ul>
  *
  * @attribute Name Clash
@@ -79,16 +96,21 @@ FOUNDATION_EXPORT id HC_lessThan(id expected);
 #endif
 
 
-FOUNDATION_EXPORT id HC_lessThanOrEqualTo(id expected);
+FOUNDATION_EXPORT id HC_lessThanOrEqualTo(id value);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract lessThanOrEqualTo(aNumber) -
- * Matches if object is less than or equal to a given number.
- * @param aNumber The NSNumber to compare against.
- * @discussion Example:
+ * @abstract lessThanOrEqualTo(value) -
+ * Creates a matcher that matches when the examined object is less than or equal to the specified value.
+ * @param value The value which, when passed to the <code>-compare:</code> method of the examined
+ * object, should return NSOrderedDescending or NSOrderedSame.
+ * @discussion Creates a matcher of that matches when the examined object is less than or equal to
+ * the specified value, as reported by the <code>-compare:</code> method of the <b>examined</b>
+ * object.
+ *
+ * Example:
  * <ul>
- *   <li><code>lessThanOrEqualTo(\@5)</code></li>
+ *   <li><code>assertThat(@1, lessThanOrEqualTo(\@1))</code></li>
  * </ul>
  *
  * @attribute Name Clash

@@ -4,25 +4,30 @@
 #import <OCHamcrest/HCClassMatcher.h>
 
 
+/*!
+ * @abstract Matches objects that are of a given class.
+ */
 @interface HCIsTypeOf : HCClassMatcher
 
-+ (id)isTypeOf:(Class)aClass;
++ (id)isTypeOf:(Class)expectedClass;
 
 @end
 
 
-FOUNDATION_EXPORT id HC_isA(Class aClass);
+FOUNDATION_EXPORT id HC_isA(Class expectedClass);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract isA(aClass) -
- * Matches if object is an instance of a given class (but not of a subclass).
- * @param aClass The class to compare against as the expected class.
- * This matcher checks whether the evaluated object is an instance of <em>aClass</em>.
+ * @abstract isA(expectedClass) -
+ * Creates a matcher that matches when the examined object is an instance of the specified class
+ * (but not of a subclass).
+ * @param expectedClass The class to compare against as the expected class.
+ * @discussion Creates a matcher that matches when the examined object is an instance of
+ * <em>expectedClass</em>, but not of any subclass.
  *
  * Example:
  * <ul>
- *   <li><code>isA([Foo class])</code></li>
+ *   <li><code>assertThat(canoe, isA([Canoe class]))</code></li>
  * </ul>
  *
  * @attribute Name Clash

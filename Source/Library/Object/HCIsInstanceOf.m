@@ -6,9 +6,9 @@
 
 @implementation HCIsInstanceOf
 
-+ (instancetype)isInstanceOf:(Class)aClass
++ (instancetype)isInstanceOf:(Class)expectedClass
 {
-    return [[self alloc] initWithClass:aClass];
+    return [[self alloc] initWithClass:expectedClass];
 }
 
 - (BOOL)matches:(id)item
@@ -24,7 +24,7 @@
 @end
 
 
-id HC_instanceOf(Class aClass)
+id HC_instanceOf(Class expectedClass)
 {
-    return [HCIsInstanceOf isInstanceOf:aClass];
+    return [HCIsInstanceOf isInstanceOf:expectedClass];
 }

@@ -45,8 +45,8 @@
 @end
 
 
-id HC_hasKey(id keyMatch)
+id HC_hasKey(id keyMatcher)
 {
-    HCRequireNonNilObject(keyMatch);
-    return [HCIsDictionaryContainingKey isDictionaryContainingKey:HCWrapInMatcher(keyMatch)];
+    HCRequireNonNilObject(keyMatcher);
+    return [HCIsDictionaryContainingKey isDictionaryContainingKey:HCWrapInMatcher(keyMatcher)];
 }

@@ -8,6 +8,6 @@
 
 @property (nonatomic, copy, readonly) NSString *substring;
 
-- (instancetype)initWithSubstring:(NSString *)aString;
+- (instancetype)initWithSubstring:(NSString *)substring;
 
 @end

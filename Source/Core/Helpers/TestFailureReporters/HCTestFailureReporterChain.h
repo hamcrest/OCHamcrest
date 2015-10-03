@@ -20,7 +20,7 @@
 + (HCTestFailureReporter *)reporterChain;
 
 /*!
- * @abstract Adds given test failure reporter to head of chain-of-responsibility.
+ * @abstract Adds specified test failure reporter to head of chain-of-responsibility.
  */
 + (void)addReporter:(HCTestFailureReporter *)reporter;
 

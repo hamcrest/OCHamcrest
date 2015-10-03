@@ -69,17 +69,17 @@
 @end
 
 
-id HC_hasItem(id itemMatch)
+id HC_hasItem(id itemMatcher)
 {
-    HCRequireNonNilObject(itemMatch);
-    return [HCIsCollectionContaining isCollectionContaining:HCWrapInMatcher(itemMatch)];
+    HCRequireNonNilObject(itemMatcher);
+    return [HCIsCollectionContaining isCollectionContaining:HCWrapInMatcher(itemMatcher)];
 }
 
-id HC_hasItems(id itemMatch, ...)
+id HC_hasItems(id itemMatchers, ...)
 {
     va_list args;
-    va_start(args, itemMatch);
-    NSArray *matchers = HCCollectWrappedItems(itemMatch, args, HC_hasItem);
+    va_start(args, itemMatchers);
+    NSArray *matchers = HCCollectWrappedItems(itemMatchers, args, HC_hasItem);
     va_end(args);
 
     return [HCAllOf allOf:matchers];

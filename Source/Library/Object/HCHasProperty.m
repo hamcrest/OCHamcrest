@@ -16,19 +16,19 @@
 
 @implementation HCHasProperty
 
-+ (instancetype)hasProperty:(NSString *)property value:(id <HCMatcher>)valueMatcher
++ (instancetype)hasProperty:(NSString *)propertyName value:(id <HCMatcher>)valueMatcher
 {
-    return [[self alloc] initWithProperty:property value:valueMatcher];
+    return [[self alloc] initWithProperty:propertyName value:valueMatcher];
 }
 
-- (instancetype)initWithProperty:(NSString *)property value:(id <HCMatcher>)valueMatcher
+- (instancetype)initWithProperty:(NSString *)propertyName value:(id <HCMatcher>)valueMatcher
 {
-    HCRequireNonNilObject(property);
+    HCRequireNonNilObject(propertyName);
 
     self = [super init];
     if (self != nil)
     {
-        _propertyName = [property copy];
+        _propertyName = [propertyName copy];
         _valueMatcher = valueMatcher;
     }
     return self;
@@ -70,7 +70,7 @@
 @end
 
 
-id HC_hasProperty(NSString *name, id valueMatch)
+id HC_hasProperty(NSString *propertyName, id valueMatcher)
 {
-    return [HCHasProperty hasProperty:name value:HCWrapInMatcher(valueMatch)];
+    return [HCHasProperty hasProperty:propertyName value:HCWrapInMatcher(valueMatcher)];
 }

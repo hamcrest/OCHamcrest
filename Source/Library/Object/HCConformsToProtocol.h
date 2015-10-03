@@ -5,6 +5,9 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+/*!
+ * @abstract Matches objects that conform to specified protocol.
+ */
 @interface HCConformsToProtocol : HCBaseMatcher
 
 + (instancetype)conformsTo:(Protocol *)protocol;
@@ -18,13 +21,13 @@ FOUNDATION_EXPORT id HC_conformsTo(Protocol *aProtocol);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract conformsTo(aProtocol) -
- * Matches if object conforms to a given protocol.
+ * Creates a matcher that matches when the examined object conforms to the specified protocol.
  * @param aProtocol The protocol to compare against as the expected protocol.
- * @discussion This matcher checks whether the evaluated object conforms to <em>aProtocol</em>.
+ * @discussion Creates a matcher that matches when the examined object conforms to <em>aProtocol</em>.
  *
  * Example:
  * <ul>
- *   <li><code>conformsTo(\@protocol(NSObject))</code></li>
+ *   <li><code>assertThat(myObject, conformsTo(\@protocol(NSCoding))</code></li>
  * </ul>
  *
  * @attribute Name Clash

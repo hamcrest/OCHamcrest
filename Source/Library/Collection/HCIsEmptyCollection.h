@@ -4,6 +4,9 @@
 #import <OCHamcrest/HCHasCount.h>
 
 
+/*!
+ * @abstract Matches empty collections.
+ */
 @interface HCIsEmptyCollection : HCHasCount
 
 + (instancetype)isEmptyCollection;
@@ -16,9 +19,14 @@ FOUNDATION_EXPORT id HC_isEmpty(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract Matches empty collection.
- * @discussion This matcher invokes <code>-count</code> on the evaluated object to determine if the
- * number of elements it contains is zero.
+ * @abstract Creates a matcher for collections whose <code>-count</code> is zero.
+ * @discussion Creates a matcher that matches any examined object whose <code>-count</code> method
+ * returns an NSNumber value of zero.
+ *
+ * Example:
+ * <ul>
+ *   <li><code>assertThat(\@[], isEmpty())</code></li>
+ * </ul>
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym

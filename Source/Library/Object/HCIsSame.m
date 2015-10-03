@@ -45,7 +45,7 @@
 @end
 
 
-id HC_sameInstance(id object)
+id HC_sameInstance(id expectedInstance)
 {
-    return [HCIsSame isSameAs:object];
+    return [HCIsSame isSameAs:expectedInstance];
 }

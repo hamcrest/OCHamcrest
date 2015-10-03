@@ -85,7 +85,7 @@ static NSMutableString *stripSpace(NSString *string)
 @end
 
 
-id HC_equalToIgnoringWhiteSpace(NSString *aString)
+id HC_equalToIgnoringWhiteSpace(NSString *expectedString)
 {
-    return [HCIsEqualIgnoringWhiteSpace isEqualIgnoringWhiteSpace:aString];
+    return [HCIsEqualIgnoringWhiteSpace isEqualIgnoringWhiteSpace:expectedString];
 }

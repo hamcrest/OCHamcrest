@@ -4,6 +4,9 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+/*!
+ * @abstract Decorates another matcher.
+ */
 @interface HCIs : HCBaseMatcher
 
 + (instancetype)is:(id <HCMatcher>)matcher;
@@ -19,10 +22,10 @@ FOUNDATION_EXPORT id HC_is(id match);
  * @abstract is(aMatcher) -
  * Decorates another matcher, or provides a shortcut to the frequently used <code>is(equalTo(x))</code>.
  * @param aMatcher The matcher to satisfy, or an expected value for @ref equalTo matching.
- * @discussion This matcher compares the evaluated object to the given matcher.
+ * @discussion Creates a matcher that delegates matching to the specified matcher.
  *
- * If <em>aMatcher</em>is a matcher, its behavior is retained, but the test may be more expressive.
- * For example:
+ * If <em>aMatcher</em>is a matcher, its behavior is retained, but the test may be slightly more
+ * expressive. For example:
  * <ul>
  *   <li><code>assertThat(\@(value), equalTo(\@5))</code></li>
  *   <li><code>assertThat(\@(value), is(equalTo(\@5)))</code></li>

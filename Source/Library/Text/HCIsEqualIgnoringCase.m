@@ -44,7 +44,7 @@
 @end
 
 
-id HC_equalToIgnoringCase(NSString *aString)
+id HC_equalToIgnoringCase(NSString *expectedString)
 {
-    return [HCIsEqualIgnoringCase isEqualIgnoringCase:aString];
+    return [HCIsEqualIgnoringCase isEqualIgnoringCase:expectedString];
 }

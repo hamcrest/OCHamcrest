@@ -47,11 +47,11 @@
 @end
 
 
-id HC_allOf(id match, ...)
+id HC_allOf(id matchers, ...)
 {
     va_list args;
-    va_start(args, match);
-    NSArray *matcherList = HCCollectMatchers(match, args);
+    va_start(args, matchers);
+    NSArray *matcherList = HCCollectMatchers(matchers, args);
     va_end(args);
 
     return [HCAllOf allOf:matcherList];

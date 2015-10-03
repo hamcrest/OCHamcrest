@@ -42,7 +42,7 @@
 @end
 
 
-id HC_isNot(id aMatcher)
+id HC_isNot(id matcher)
 {
-    return [HCIsNot isNot:HCWrapInMatcher(aMatcher)];
+    return [HCIsNot isNot:HCWrapInMatcher(matcher)];
 }

@@ -4,28 +4,32 @@
 #import <OCHamcrest/HCSubstringMatcher.h>
 
 
+/*!
+ * @abstract Tests if string ends with a substring.
+ */
 @interface HCStringEndsWith : HCSubstringMatcher
 
-+ (id)stringEndsWith:(NSString *)aSubstring;
++ (id)stringEndsWith:(NSString *)substring;
 
 @end
 
 
-FOUNDATION_EXPORT id HC_endsWith(NSString *aSubstring);
+FOUNDATION_EXPORT id HC_endsWith(NSString *suffix);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract endsWith(aString) -
- * Matches if object is a string ending with a given string.
- * @param aString The string to search for. This value must not be <code>nil</code>.
- * @discussion This matcher first checks whether the evaluated object is a string. If so, it checks
- * if <em>aString</em> matches the ending characters of the evaluated object.
+ * @abstract endsWith(suffix) -
+ * Creates a matcher that matches when the examined object is a string that ends with the specified
+ * string.
+ * @param suffix The substring that the returned matcher will expect at the end of any examined
+ * string. (Must not be <code>nil</code>.)
+ * @discussion Creates a matcher that matcher invokes <code>-hasSuffix:</code> on the examined
+ * object, passing the specified <em>suffix</em>.
  *
  * Example:
  * <ul>
- *   <li><code>endsWith(\@"bar")</code></li>
+ *   <li><code>assertThat(\@"myStringOfNote", endsWith(\@"Note"))</code></li>
  * </ul>
- * will match "foobar".
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym

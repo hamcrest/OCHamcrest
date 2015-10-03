@@ -34,7 +34,12 @@
     if ([self itemIsNotNumber:item])
         return NO;
 
-    return fabs([item doubleValue] - self.value) <= self.delta;
+    return [self actualDelta:item] <= self.delta;
+}
+
+- (double)actualDelta:(id)item
+{
+    return fabs([item doubleValue] - self.value);
 }
 
 - (BOOL)itemIsNotNumber:(id)item
@@ -48,10 +53,9 @@
         [super describeMismatchOf:item to:mismatchDescription];
     else
     {
-        double actualDelta = fabs([item doubleValue] - self.value);
         [[[mismatchDescription appendDescriptionOf:item]
                                appendText:@" differed by "]
-                               appendDescriptionOf:@(actualDelta)];
+                               appendDescriptionOf:@([self actualDelta:item])];
     }
 }
 

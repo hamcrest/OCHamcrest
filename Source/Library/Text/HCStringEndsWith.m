@@ -6,9 +6,9 @@
 
 @implementation HCStringEndsWith
 
-+ (instancetype)stringEndsWith:(NSString *)aString
++ (instancetype)stringEndsWith:(NSString *)substring
 {
-    return [[self alloc] initWithSubstring:aString];
+    return [[self alloc] initWithSubstring:substring];
 }
 
 - (BOOL)matches:(id)item
@@ -27,7 +27,7 @@
 @end
 
 
-id HC_endsWith(NSString *aString)
+id HC_endsWith(NSString *suffix)
 {
-    return [HCStringEndsWith stringEndsWith:aString];
+    return [HCStringEndsWith stringEndsWith:suffix];
 }
