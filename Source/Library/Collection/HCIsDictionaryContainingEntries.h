@@ -10,7 +10,6 @@
  */
 @interface HCIsDictionaryContainingEntries : HCDiagnosingMatcher
 
-
 + (instancetype)isDictionaryContainingKeys:(NSArray *)keys
                              valueMatchers:(NSArray *)valueMatchers;
 
