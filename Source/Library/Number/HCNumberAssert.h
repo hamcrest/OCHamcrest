@@ -18,6 +18,7 @@ FOUNDATION_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,
  * Asserts that BOOL actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The BOOL value to convert to an NSNumber for evaluation.
  * @param matcher The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -39,6 +40,7 @@ FOUNDATION_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
  * Asserts that char actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The char value to convert to an NSNumber for evaluation.
  * @param matcher The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -60,6 +62,7 @@ FOUNDATION_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actua
  * Asserts that double actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The double value to convert to an NSNumber for evaluation.
  * @param matcher The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -81,6 +84,7 @@ FOUNDATION_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
  * Asserts that float actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The float value to convert to an NSNumber for evaluation.
  * @param matcher The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -102,6 +106,7 @@ FOUNDATION_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
  * Asserts that int actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The int value to convert to an NSNumber for evaluation.
  * @param matcher The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -123,6 +128,7 @@ FOUNDATION_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
  * Asserts that long actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The long value to convert to an NSNumber for evaluation.
  * @param matcher The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -144,6 +150,7 @@ FOUNDATION_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long 
  * Asserts that <code>long long</code> actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The long long value to convert to an NSNumber for evaluation.
  * @param matcher The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -165,6 +172,7 @@ FOUNDATION_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
  * Asserts that short actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The short value to convert to an NSNumber for evaluation.
  * @param matcher The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -186,6 +194,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsign
  * Asserts that unsigned char actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The unsigned char value to convert to an NSNumber for evaluation.
  * @param matcher The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -207,6 +216,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigne
  * Asserts that unsigned int actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The unsigned int value to convert to an NSNumber for evaluation.
  * @param matcher  The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -228,6 +238,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsign
  * Asserts that unsigned long actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The unsigned long value to convert to an NSNumber for evaluation.
  * @param matcher The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -249,6 +260,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, un
  * Asserts that unsigned long long actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The unsigned long long value to convert to an NSNumber for evaluation.
  * @param matcher  The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -270,6 +282,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsig
  * Asserts that unsigned short actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The unsigned short value to convert to an NSNumber for evaluation.
  * @param matcher The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -291,6 +304,7 @@ FOUNDATION_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger a
  * Asserts that NSInteger actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The NSInteger value to convert to an NSNumber for evaluation.
  * @param matcher The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
@@ -312,6 +326,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSU
  * Asserts that NSUInteger actual value, converted to an NSNumber, satisfies matcher.
  * @param actual The NSUInteger value to convert to an NSNumber for evaluation.
  * @param matcher The matcher to satisfy as the expected condition.
+ * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
  * @attribute Name Clash
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
