@@ -8,12 +8,9 @@
  * @abstract Tests if string that contains a list of substrings in relative order.
  */
 @interface HCStringContainsInOrder : HCBaseMatcher
-{
-    NSArray *substrings;
-}
 
-+ (instancetype)containsInOrder:(NSArray *)substringList;
-- (instancetype)initWithSubstrings:(NSArray *)substringList;
++ (instancetype)containsInOrder:(NSArray *)substrings;
+- (instancetype)initWithSubstrings:(NSArray *)substrings;
 
 @end
 
