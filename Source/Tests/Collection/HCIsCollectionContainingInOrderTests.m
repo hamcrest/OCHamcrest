@@ -36,7 +36,7 @@
     assertMatches(@"Single item collection", matcher, @[@1]);
 }
 
-- (void)testMatchingMultipleItemSequence
+- (void)testMatchingMultipleItemCollection
 {
     id matcher = contains(equalTo(@1), equalTo(@2), equalTo(@3), nil);
 

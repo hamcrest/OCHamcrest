@@ -107,6 +107,8 @@
 		0876039213440E28001B439B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
 		088FB0AB136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */; };
 		088FB0AC136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */; };
+		0E5ECE6D1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5ECE6B1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E5ECE6E1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */; settings = {ASSET_TAGS = (); }; };
 		0EF5915A1B9E84C600BABDED /* HCTestFailureHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF591561B9E84C600BABDED /* HCTestFailureHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EF5915E1B9E84C600BABDED /* HCTestFailureHandlerChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF591581B9E84C600BABDED /* HCTestFailureHandlerChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EF591601B9E84C600BABDED /* HCTestFailureHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF591591B9E84C600BABDED /* HCTestFailureHandlerChain.m */; };
@@ -120,6 +122,7 @@
 		5F2773481436FAA600B9683A /* HCConformsToProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* HCConformsToProtocolTests.m */; };
 		5F2773491436FAA700B9683A /* HCConformsToProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* HCConformsToProtocolTests.m */; };
 		609E9068872F708CA4DA4785 /* MatcherTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E91D3F5F10354528F7FF8 /* MatcherTestCase.m */; };
+		609E93B6BAA64F7836FB754E /* HCIsCollectionContainingInRelativeOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E99FE80B578287C9DBDFE /* HCIsCollectionContainingInRelativeOrderTests.m */; };
 		609E941591B81120F216AAAF /* InterceptingTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E97D2700DBCFB2161C50A /* InterceptingTestCase.m */; };
 		609E9502808F7E64A3060B23 /* HCArgumentCaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 609E9B6B3B80E4914607E267 /* HCArgumentCaptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		609E95B8EB994E0768A22EB5 /* HCTestFailureReporterChainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E99ADF272619359F01300 /* HCTestFailureReporterChainTests.m */; };
@@ -129,6 +132,7 @@
 		609E9B41637AEC0C99B77B10 /* InterceptingTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E97D2700DBCFB2161C50A /* InterceptingTestCase.m */; };
 		609E9B9227BDE67289F74F23 /* HCArgumentCaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E92AABBB75D3F5E47A0E4 /* HCArgumentCaptor.m */; };
 		609E9BD70804EB4AD2CF687B /* HCCapturingMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E960725E106DC73EA9D60 /* HCCapturingMatcherTests.m */; };
+		609E9DB70E41F094B68A20C3 /* HCIsCollectionContainingInRelativeOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E99FE80B578287C9DBDFE /* HCIsCollectionContainingInRelativeOrderTests.m */; };
 		609E9E7A947E1D0029F3233D /* HCCapturingMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E960725E106DC73EA9D60 /* HCCapturingMatcherTests.m */; };
 		74153B5F1A535FEA00FEF450 /* HCIsTrueFalseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* HCIsTrueFalseTests.m */; };
 		74153B601A535FEA00FEF450 /* HCIsTrueFalseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* HCIsTrueFalseTests.m */; };
@@ -453,6 +457,8 @@
 		0876039113440BB0001B439B /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringContainsInOrderTests.m; sourceTree = "<group>"; };
 		08F39BAA1711426200745958 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
+		0E5ECE6B1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContainingInRelativeOrder.h; sourceTree = "<group>"; };
+		0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionContainingInRelativeOrder.m; sourceTree = "<group>"; };
 		0EF591561B9E84C600BABDED /* HCTestFailureHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailureHandler.h; sourceTree = "<group>"; };
 		0EF591581B9E84C600BABDED /* HCTestFailureHandlerChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailureHandlerChain.h; sourceTree = "<group>"; };
 		0EF591591B9E84C600BABDED /* HCTestFailureHandlerChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureHandlerChain.m; sourceTree = "<group>"; };
@@ -468,6 +474,7 @@
 		609E960725E106DC73EA9D60 /* HCCapturingMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCapturingMatcherTests.m; sourceTree = "<group>"; };
 		609E97D2700DBCFB2161C50A /* InterceptingTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterceptingTestCase.m; sourceTree = "<group>"; };
 		609E99ADF272619359F01300 /* HCTestFailureReporterChainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureReporterChainTests.m; sourceTree = "<group>"; };
+		609E99FE80B578287C9DBDFE /* HCIsCollectionContainingInRelativeOrderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionContainingInRelativeOrderTests.m; sourceTree = "<group>"; };
 		609E9B6B3B80E4914607E267 /* HCArgumentCaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCArgumentCaptor.h; sourceTree = "<group>"; };
 		74153B5E1A535FEA00FEF450 /* HCIsTrueFalseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsTrueFalseTests.m; sourceTree = "<group>"; };
 		74153B611A53606100FEF450 /* HCIsTrueFalse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsTrueFalse.h; sourceTree = "<group>"; };
@@ -765,6 +772,7 @@
 				0876033913440AD8001B439B /* HCHasCountTests.m */,
 				0876033A13440AD8001B439B /* HCIsCollectionContainingInAnyOrderTests.m */,
 				0876033B13440AD8001B439B /* HCIsCollectionContainingInOrderTests.m */,
+				609E99FE80B578287C9DBDFE /* HCIsCollectionContainingInRelativeOrderTests.m */,
 				0876033C13440AD8001B439B /* HCIsCollectionContainingTests.m */,
 				0876033D13440AD8001B439B /* HCIsCollectionOnlyContainingTests.m */,
 				0876033E13440AD8001B439B /* HCIsDictionaryContainingEntriesTests.m */,
@@ -1062,6 +1070,8 @@
 				BB333FE413C7E8FA9C811BF1 /* HCIsCollectionContainingInAnyOrder.m */,
 				BB33312A13BF3686BE841AD7 /* HCIsCollectionContainingInOrder.h */,
 				BB333986B013CA09B71D376B /* HCIsCollectionContainingInOrder.m */,
+				0E5ECE6B1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h */,
+				0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */,
 				BB333BC37F9AB8BFAB79AE16 /* HCIsCollectionOnlyContaining.h */,
 				BB33380693E900C743EDF861 /* HCIsCollectionOnlyContaining.m */,
 				BB333FDE3455183AB9302310 /* HCIsDictionaryContaining.h */,
@@ -1155,6 +1165,7 @@
 				BB3330B6F8137019671EBC0C /* HCIsEqualIgnoringWhiteSpace.h in Headers */,
 				BB333FEC8B49B249E92B3671 /* HCStringContains.h in Headers */,
 				BB3336E5FCF909801BB0D103 /* HCStringContainsInOrder.h in Headers */,
+				0E5ECE6D1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h in Headers */,
 				BB3333FFD04D52C9DC48644E /* HCStringEndsWith.h in Headers */,
 				74153B631A53606100FEF450 /* HCIsTrueFalse.h in Headers */,
 				BB333E7F416B46CE6777D695 /* HCStringStartsWith.h in Headers */,
@@ -1478,6 +1489,7 @@
 				609E9B41637AEC0C99B77B10 /* InterceptingTestCase.m in Sources */,
 				609E9BD70804EB4AD2CF687B /* HCCapturingMatcherTests.m in Sources */,
 				609E9068872F708CA4DA4785 /* MatcherTestCase.m in Sources */,
+				609E93B6BAA64F7836FB754E /* HCIsCollectionContainingInRelativeOrderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1543,6 +1555,7 @@
 				BB333C78E5F9DB528838CA5A /* HCIntReturnGetter.m in Sources */,
 				BB333FD5A85510AE5AA9B519 /* HCLongLongReturnGetter.m in Sources */,
 				BB3333502C76D73346A73631 /* HCLongReturnGetter.m in Sources */,
+				0E5ECE6E1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m in Sources */,
 				BB3338E155E644CFB619CFEF /* HCObjectReturnGetter.m in Sources */,
 				BB3335EAC1E9E47F87D50EDF /* HCReturnValueGetter.m in Sources */,
 				BB3330504048A30E7C190A19 /* HCReturnTypeHandlerChain.m in Sources */,
@@ -1619,6 +1632,7 @@
 				609E941591B81120F216AAAF /* InterceptingTestCase.m in Sources */,
 				609E9E7A947E1D0029F3233D /* HCCapturingMatcherTests.m in Sources */,
 				609E97770916062AC9B0D5BB /* MatcherTestCase.m in Sources */,
+				609E9DB70E41F094B68A20C3 /* HCIsCollectionContainingInRelativeOrderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

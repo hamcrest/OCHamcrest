@@ -3,6 +3,7 @@ NEXT VERSION
 
 **Features:**
 
+- New matcher `containsInRelativeOrder` matches collections containing items in relative order.
 - New matcher HCArgumentCaptor matches anything, capturing matched values.
 
 **Project changes:**

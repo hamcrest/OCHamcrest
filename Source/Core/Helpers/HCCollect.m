@@ -33,3 +33,11 @@ NSMutableArray *HCCollectWrappedItems(id item, va_list args, id (*wrap)(id))
 
     return list;
 }
+
+NSArray *HCWrapIntoMatchers(NSArray *items)
+{
+    NSMutableArray *matchers = [[NSMutableArray alloc] init];
+    for (id item in items)
+        [matchers addObject:HCWrapInMatcher(item)];
+    return [matchers copy];
+}

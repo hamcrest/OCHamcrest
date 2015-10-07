@@ -17,6 +17,7 @@
 #import <OCHamcrest/HCIsCollectionContaining.h>
 #import <OCHamcrest/HCIsCollectionContainingInAnyOrder.h>
 #import <OCHamcrest/HCIsCollectionContainingInOrder.h>
+#import <OCHamcrest/HCIsCollectionContainingInRelativeOrder.h>
 #import <OCHamcrest/HCIsCollectionOnlyContaining.h>
 #import <OCHamcrest/HCIsDictionaryContaining.h>
 #import <OCHamcrest/HCIsDictionaryContainingEntries.h>
