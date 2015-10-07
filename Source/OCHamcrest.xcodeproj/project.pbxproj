@@ -107,6 +107,7 @@
 		0876039213440E28001B439B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
 		088FB0AB136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */; };
 		088FB0AC136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */; };
+		0E498AA61BC4D45200BA28F0 /* HCIsCollectionContainingInRelativeOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */; settings = {ASSET_TAGS = (); }; };
 		0E5ECE6D1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5ECE6B1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E5ECE6E1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */; settings = {ASSET_TAGS = (); }; };
 		0EF5915A1B9E84C600BABDED /* HCTestFailureHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF591561B9E84C600BABDED /* HCTestFailureHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1413,6 +1414,7 @@
 				BB33321509F1659FB29AD59E /* HCIntReturnGetter.m in Sources */,
 				BB333ACAD45079E5160B4B2D /* HCLongLongReturnGetter.m in Sources */,
 				BB3339D8979DFFEBB1AEB26D /* HCLongReturnGetter.m in Sources */,
+				0E498AA61BC4D45200BA28F0 /* HCIsCollectionContainingInRelativeOrder.m in Sources */,
 				BB3337895E6D085546B857EC /* HCObjectReturnGetter.m in Sources */,
 				BB333EA74F069D831202108E /* HCReturnValueGetter.m in Sources */,
 				BB3330B79DF7A5A15B7182E8 /* HCReturnTypeHandlerChain.m in Sources */,
