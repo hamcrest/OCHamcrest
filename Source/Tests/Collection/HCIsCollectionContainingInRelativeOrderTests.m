@@ -129,6 +129,11 @@
                        containsInRelativeOrder(@[@1]), [[NSObject alloc] init]);
 }
 
+- (void)testMatcherCreationRequiresNonEmptyArgument
+{
+    XCTAssertThrows(containsInRelativeOrder(@[]), @"Should require non-empty array");
+}
+
 - (void)testHasAReadableDescription
 {
     id matcher = containsInRelativeOrder(@[@1, @2]);

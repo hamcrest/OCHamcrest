@@ -6,10 +6,16 @@
 #import "HCCollect.h"
 
 
-//private static class MatchSeriesInRelativeOrder<F> {
-//        if (matchers.isEmpty()) {
-//            throw new IllegalArgumentException("Should specify at least one expected element");
-//        }
+static void HCRequireNonEmptyArray(NSArray *array)
+{
+    if (!array.count)
+    {
+        @throw [NSException exceptionWithName:@"EmptyArray"
+                                       reason:@"Must be non-empty array"
+                                     userInfo:nil];
+    }
+}
+
 
 @interface HCMatchSequenceInRelativeOrder : NSObject
 @property (nonatomic, copy, readonly) NSArray *matchers;
@@ -23,6 +29,13 @@
 - (instancetype)initWithMatchers:(NSArray *)itemMatchers
              mismatchDescription:(id <HCDescription>)description
 {
+    if (itemMatchers.count == 0)
+    {
+        @throw [NSException exceptionWithName:@"EmptyArray"
+                                       reason:@"Must be non-empty array"
+                                     userInfo:nil];
+    }
+
     self = [super init];
     if (self)
     {
@@ -77,6 +90,8 @@
 
 - (instancetype)initWithMatchers:(NSArray *)itemMatchers
 {
+    HCRequireNonEmptyArray(itemMatchers);
+
     self = [super init];
     if (self)
         _matchers = [itemMatchers copy];
