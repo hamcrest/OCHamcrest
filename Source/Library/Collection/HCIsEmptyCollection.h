@@ -19,16 +19,13 @@ FOUNDATION_EXPORT id HC_isEmpty(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract Creates a matcher for collections whose <code>-count</code> is zero.
- * @discussion Creates a matcher that matches any examined object whose <code>-count</code> method
- * returns an NSNumber value of zero.
+ * @abstract Creates a matcher that matches any examined object whose <code>-count</code> method
+ * returns an NSNumber of zero.
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(\@[], isEmpty())</code></li>
- * </ul>
+ * <b>Example</b><br />
+ * <pre>assertThat(@[], isEmpty())</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_isEmpty instead.
  */

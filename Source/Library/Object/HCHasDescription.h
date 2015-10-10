@@ -23,20 +23,16 @@ FOUNDATION_EXPORT id HC_hasDescription(id descriptionMatcher);
  * Creates a matcher that matches when the examined object's <code>-description</code> satisfies the
  * specified matcher.
  * @param descriptionMatcher The matcher used to verify the description result, or an expected value
- * for @ref equalTo matching.
- * @discussion Creates a matcher that matches any examined object whose <code>-description</code>
- * method returns a value that satisfies the specified matcher.
+ * for <em>equalTo</em> matching.
+ * @discussion If <em>descriptionMatcher</em> is not a matcher, it is implicitly wrapped in
+ * an <em>equalTo</em> matcher to check for equality.
  *
- * If <em>descriptionMatcher</em> is not a matcher, it is implicitly wrapped in an @ref equalTo matcher to
- * check for equality.
+ * <b>Examples</b><br />
+ * <pre>assertThat(myObject, hasDescription(equalTo(@"foo"))</pre>
  *
- * Examples:
- * <ul>
- *   <li><code>hasDescription(startsWith(\@"foo"))</code></li>
- *   <li><code>hasDescription(\@"bar")</code></li>
- * </ul>
+ * <pre>assertThat(myObject, hasDescription(@"foo"))</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_hasDescription instead.
  */

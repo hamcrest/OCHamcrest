@@ -20,7 +20,7 @@ FOUNDATION_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatBool instead.
  */
@@ -42,7 +42,7 @@ FOUNDATION_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatChar instead.
  */
@@ -64,7 +64,7 @@ FOUNDATION_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actua
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatDouble instead.
  */
@@ -86,7 +86,7 @@ FOUNDATION_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatFloat instead.
  */
@@ -108,7 +108,7 @@ FOUNDATION_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatInt instead.
  */
@@ -130,7 +130,7 @@ FOUNDATION_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatLong instead.
  */
@@ -152,7 +152,7 @@ FOUNDATION_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long 
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatLongLong instead.
  */
@@ -174,7 +174,7 @@ FOUNDATION_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatShort instead.
  */
@@ -196,7 +196,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsign
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatUnsignedChar instead.
  */
@@ -218,7 +218,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigne
  * @param matcher  The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatUnsignedInt instead.
  */
@@ -240,7 +240,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsign
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatUnsignedLong instead.
  */
@@ -262,7 +262,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, un
  * @param matcher  The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatUnsignedLongLong instead.
  */
@@ -284,7 +284,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsig
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatUnsignedShort instead.
  */
@@ -306,7 +306,7 @@ FOUNDATION_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger a
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatInteger instead.
  */
@@ -328,7 +328,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSU
  * @param matcher The matcher to satisfy as the expected condition.
  * @discussion Consider using <code>assertThat(\@(actual), matcher)</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatUnsignedInteger instead.
  */

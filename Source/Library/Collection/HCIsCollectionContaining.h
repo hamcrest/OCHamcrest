@@ -20,22 +20,22 @@ FOUNDATION_EXPORT id HC_hasItem(id itemMatcher);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract hasItem(itemMatcher) -
- * Creates a matcher for collections that matches when any item satisfies the specified matcher.
+ * Creates a matcher for collections that matches when at least one item in the examined collection
+ * satisfies the specified matcher.
  * @param itemMatcher The matcher to apply to collection elements, or an expected value
- * for @ref equalTo matching.
- * @discussion Creates a matcher for collections (anything conforming to NSFastEnumeration) that
- * iterates a single pass over the examined collection. It matches when at least one item in the
- * collection is matched by the specified <em>itemMatcher</em>.
+ * for <em>equalTo</em> matching.
+ * @discussion This matcher works on any collection that conforms to the NSFastEnumeration protocol,
+ * performing a single pass.
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(\@[\@"foo", \@"bar"], hasItem(startsWith(\@"ba")))</code></li>
- * </ul>
+ * If <em>itemMatcher</em> is not a matcher, it is implicitly wrapped in an <em>equalTo</em> matcher
+ * to check for equality.
  *
- * If <em>itemMatcher</em> is not a matcher, it is implicitly wrapped in an @ref equalTo matcher to
- * check for equality.
+ * <b>Example</b><br />
+ * <pre>assertThat(@[@1, @2, @3], hasItem(equalTo(@2)))</pre>
  *
- * @attribute Name Clash
+ * <pre>assertThat(@[@1, @2, @3], hasItem(@2))</pre>
+ *
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_hasItem instead.
  */
@@ -48,22 +48,19 @@ FOUNDATION_EXPORT id HC_hasItems(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATI
 #ifdef HC_SHORTHAND
 /*!
  * @abstract hasItems(itemMatchers, ...) -
- * Creates a matcher for collections that matches when all specified matchers are satisfied by any item.
+ * Creates a matcher for collections that matches when all specified matchers are satisfied by any
+ * item in the examined collection.
  * @param itemMatchers,... A comma-separated list of matchers ending with <code>nil</code>.
- * @discussion Creates a matcher for collections (anything conforming to NSFastEnumeration) that
- * iterates consecutive passes over the examined collection. It matches when each pass over the
- * collection yields at least one item that is matched by the corresponding matcher from the
- * specified list of matchers.
+ * @discussion This matcher works on any collection that conforms to the NSFastEnumeration protocol,
+ * performing one pass for each matcher.
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(\@[\@"foo", \@"bar", \@"baz"], hasItems(endsWith(\@"z"), endsWith(\@"o")))</code></li>
- * </ul>
+ * Any argument that is not a matcher is implicitly wrapped in an <em>equalTo</em> matcher to check
+ * for equality.
  *
- * Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
- * equality.
+ * <b>Example</b><br />
+ * <pre>assertThat(@[@"foo", @"bar", @"baz"], hasItems(endsWith(@"z"), endsWith(@"o")))</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_hasItems instead.
  */

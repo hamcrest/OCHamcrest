@@ -24,22 +24,20 @@ FOUNDATION_EXPORT id HC_hasEntries(id keysAndValueMatch, ...) NS_REQUIRES_NIL_TE
 #ifdef HC_SHORTHAND
 /*!
  * @abstract hasEntries(firstKey, valueMatcher, ...) -
- * Matches if dictionary contains entries satisfying a list of alternating keys and their value
- * matchers.
+ * Creates a matcher for NSDictionaries that matches when the examined dictionary contains entries
+ * satisfying a list of alternating keys and their value matchers.
  * @param firstKey A key (not a matcher) to look up.
  * @param valueMatcher,... The matcher to satisfy for the value, or an expected value
- * for @ref equalTo matching.
+ * for <em>equalTo</em> matching.
  * @discussion Note that the keys must be actual keys, not matchers. Any value argument that is not
- * a matcher is implicitly wrapped in an @ref equalTo matcher to check for equality. The list must
- * end with <code>nil</code>.
+ * a matcher is implicitly wrapped in an <em>equalTo</em> matcher to check for equality.
  *
- * Examples:
- * <ul>
- *   <li><code>assertThat(personDict, hasEntries(\@"firstName", equalTo(\@"Jon"), \@"lastName", equalTo(\@"Reid"), nil))</code></li>
- *   <li><code>assertThat(personDict, hasEntries(\@"firstName", \@"Jon", \@"lastName", \@"Reid", nil))</code></li>
- * </ul>
+ * <b>Examples</b><br />
+ * <pre>assertThat(personDict, hasEntries(@"firstName", equalTo(@"Jon"), @"lastName", equalTo(@"Reid"), nil))</pre>
  *
- * @attribute Name Clash
+ * <pre>assertThat(personDict, hasEntries(@"firstName", @"Jon", @"lastName", @"Reid", nil))</pre>
+ *
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_hasEntry instead.
  */

@@ -16,24 +16,22 @@ FOUNDATION_EXPORT id hc_containsInRelativeOrder(NSArray *itemMatchers);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract Creates a matcher that matches when the examined collection's elements satisfy the
- * specified list of matchers in relative order.
+ * @abstract Creates a matcher for collections that matches when the examined collection contains
+ * items satisfying the specified list of matchers, in the same relative order.
  * @param itemMatchers Array of matchers that must be satisfied by the items provided by the
  * examined collection in the same relative order.
- * @discussion Creates a matcher for collections that matches when a single pass over the examined
- * collection yields a series of items, that satisfy the corresponding matcher in the specified
- * matchers, in the same relative order.
+ * @discussion This matcher works on any collection that conforms to the NSFastEnumeration protocol,
+ * performing a single pass.
  *
- * Any element of <em>itemMatchers</em> that is not a matcher is implicitly wrapped in
- * an @ref equalTo matcher to check for equality.
+ * Any element of <em>itemMatchers</em> that is not a matcher is implicitly wrapped in an
+ * <em>equalTo</em> matcher to check for equality.
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(\@[\@"a", \@"b", \@"b", \@"c", \@"d", \@"e", ], containsInRelativeOrder(equalTo(\@"b"), equalTo(\@"d")))</code></li>
- *   <li><code>assertThat(\@[\@"a", \@"b", \@"b", \@"c", \@"d", \@"e", ], containsInRelativeOrder(@"b", \@"d"))</code></li>
- * </ul>
+ * <b>Examples</b><br />
+ * <pre>assertThat(@[@1, @2, @3, @4, @5], containsInRelativeOrder(equalTo(@2), equalTo(@4)))</pre>
  *
- * @attribute Name Clash
+ * <pre>assertThat(@[@1, @2, @3, @4, @5], containsInRelativeOrder(@2, @4))</pre>
+ *
+ * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * hc_containsInRelativeOrder instead.
  */

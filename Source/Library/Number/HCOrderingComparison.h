@@ -27,18 +27,15 @@ FOUNDATION_EXPORT id HC_greaterThan(id value);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract greaterThan(value) -
- * Creates a matcher that matches when the examined object is greater than the specified value.
+ * Creates a matcher that matches when the examined object is greater than the specified value, as
+ * reported by the <code>-compare:</code> method of the <b>examined</b> object.
  * @param value The value which, when passed to the <code>-compare:</code> method of the examined
  * object, should return NSOrderedAscending.
- * @discussion Creates a matcher of that matches when the examined object is greater than the
- * specified value, as reported by the <code>-compare:</code> method of the <b>examined</b> object.
+ * @discussion
+ * <b>Example</b><br />
+ * <pre>assertThat(@2, greaterThan(@1))</pre>
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(@2, greaterThan(\@1))</code></li>
- * </ul>
- *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_greaterThan instead.
  */
@@ -52,19 +49,14 @@ FOUNDATION_EXPORT id HC_greaterThanOrEqualTo(id value);
 /*!
  * @abstract greaterThanOrEqualTo(value) -
  * Creates a matcher that matches when the examined object is greater than or equal to the specified
- * value.
+ * value, as reported by the <code>-compare:</code> method of the <b>examined</b> object.
  * @param value The value which, when passed to the <code>-compare:</code> method of the examined
  * object, should return NSOrderedAscending or NSOrderedSame.
- * @discussion Creates a matcher of that matches when the examined object is greater than or equal
- * to the specified value, as reported by the <code>-compare:</code> method of the <b>examined</b>
- * object.
+ * @discussion
+ * <b>Example</b><br />
+ * <pre>assertThat(@1, greaterThan(@1))</pre>
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(@1, greaterThan(\@1))</code></li>
- * </ul>
- *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_greaterThanOrEqualTo instead.
  */
@@ -77,18 +69,15 @@ FOUNDATION_EXPORT id HC_lessThan(id value);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract lessThan(value) -
- * Creates a matcher that matches when the examined object is less than the specified value.
+ * Creates a matcher that matches when the examined object is less than the specified value, as
+ * reported by the <code>-compare:</code> method of the <b>examined</b> object.
  * @param value The value which, when passed to the <code>-compare:</code> method of the examined
  * object, should return NSOrderedDescending.
- * @discussion Creates a matcher of that matches when the examined object is less than the specified
- * value, as reported by the <code>-compare:</code> method of the <b>examined</b> object.
+ * @discussion
+ * <b>Example</b><br />
+ * <pre>assertThat(@1, lessThan(@2))</pre>
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(@1, lessThan(\@2))</code></li>
- * </ul>
- *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_lessThan instead.
  */
@@ -101,19 +90,15 @@ FOUNDATION_EXPORT id HC_lessThanOrEqualTo(id value);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract lessThanOrEqualTo(value) -
- * Creates a matcher that matches when the examined object is less than or equal to the specified value.
+ * Creates a matcher that matches when the examined object is less than or equal to the specified
+ * value, as reported by the <code>-compare:</code> method of the <b>examined</b> object.
  * @param value The value which, when passed to the <code>-compare:</code> method of the examined
  * object, should return NSOrderedDescending or NSOrderedSame.
- * @discussion Creates a matcher of that matches when the examined object is less than or equal to
- * the specified value, as reported by the <code>-compare:</code> method of the <b>examined</b>
- * object.
+ * @discussion
+ * <b>Example</b><br />
+ * <pre>assertThat(@1, lessThanOrEqualTo(@1))</pre>
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(@1, lessThanOrEqualTo(\@1))</code></li>
- * </ul>
- *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_lessThanOrEqualTo instead.
  */

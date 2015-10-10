@@ -23,9 +23,8 @@ FOUNDATION_EXPORT id HC_anything(void);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract Creates a matcher that always matches, regardless of the examined object.
- * @discussion Creates a matcher that always evaluates to <code>YES</code>.
- *
- * @attribute Name Clash
+ * @discussion
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_anything instead.
  */
@@ -38,12 +37,11 @@ FOUNDATION_EXPORT id HC_anythingWithDescription(NSString *description);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract anythingWithDescription(description) -
- * Creates a matcher that matches anything, regardless of the examined object.
+ * Creates a matcher that matches anything, regardless of the examined object, but describes itself
+ * with the specified NSString.
  * @param description A meaningful string used to describe this matcher.
- * @discussion Creates a matcher that always evaluates to <code>YES</code>. It describes itself with
- * the specified <em>description</em>.
- *
- * @attribute Name Clash
+ * @discussion
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_anything instead.
  */

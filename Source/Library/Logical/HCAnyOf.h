@@ -24,15 +24,13 @@ FOUNDATION_EXPORT id HC_anyOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
  * @abstract anyOf(matchers, ...) -
  * Creates a matcher that matches when the examined object matches <b>any</b> of the specified matchers.
  * @param matchers,... A comma-separated list of matchers ending with <code>nil</code>.
- * @discussion Example:
- * <ul>
- *   <li><code>assertThat(\@"myValue", allOf(startsWith(\@"foo"), containsSubstring(\@"Val"), nil))</code></li>
- * </ul>
+ * @discussion Any argument that is not a matcher is implicitly wrapped in an <em>equalTo</em>
+ * matcher to check for equality.
  *
- * Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
- * equality.
+ * <b>Example</b><br />
+ * <pre>assertThat(@"myValue", allOf(startsWith(@"foo"), containsSubstring(@"Val"), nil))</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_anyOf instead.
  */

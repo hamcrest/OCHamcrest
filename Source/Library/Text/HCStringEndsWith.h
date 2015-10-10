@@ -23,15 +23,13 @@ FOUNDATION_EXPORT id HC_endsWith(NSString *suffix);
  * string.
  * @param suffix The substring that the returned matcher will expect at the end of any examined
  * string. (Must not be <code>nil</code>.)
- * @discussion Creates a matcher that matcher invokes <code>-hasSuffix:</code> on the examined
- * object, passing the specified <em>suffix</em>.
+ * @discussion The matcher invokes <code>-hasSuffix:</code> on the examined object, passing the
+ * specified <em>suffix</em>.
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(\@"myStringOfNote", endsWith(\@"Note"))</code></li>
- * </ul>
+ * <b>Example</b><br />
+ * <pre>assertThat(@"myStringOfNote", endsWith(@"Note"))</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_endsWith instead.
  */

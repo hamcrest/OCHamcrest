@@ -20,20 +20,16 @@ FOUNDATION_EXPORT id HC_stringContainsInOrder(NSString *substrings, ...) NS_REQU
 #ifdef HC_SHORTHAND
 /*!
  * @abstract stringContainsInOrder(substrings, ...) -
- * Creates matcher that matches when the examined object is a string containing a given list of
- * substrings in relative order.
+ * Creates matcher for NSStrings that matches when the examined string contains all of
+ * the specified substrings, considering the order of their appearance.
  * @param substrings,... A comma-separated list of strings that must be contained within matching
  * strings, ending with <code>nil</code>.
- * @discussion Creates a matcher for NSStrings that matches when the examined string contains all of
- * the specified substrings, considering the order of their appearance.
- *
- * For example:
- * <ul>
- *   <li><code>assertThat(@"myfoobarbaz", stringContainsInOrder(\@"bar", \@"foo", nil))</code></li>
- * </ul>
+ * @discussion
+ * <b>Example</b><br />
+ * <pre>assertThat(@"myfoobarbaz", stringContainsInOrder(@"bar", @"foo", nil))</pre>
  * fails as "foo" occurs before "bar" in the string "myfoobarbaz"
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_stringContainsInOrder instead.
  */

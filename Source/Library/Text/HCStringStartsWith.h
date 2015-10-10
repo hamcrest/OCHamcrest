@@ -23,16 +23,13 @@ FOUNDATION_EXPORT id HC_startsWith(NSString *prefix);
  * specified string.
  * @param prefix The substring that the returned matcher will expect at the start of any examined
  * string. (Must not be <code>nil</code>.)
- * @discussion Creates a matcher that matcher invokes <code>-hasPrefix:</code> on the examined
- * object, passing the specified <em>prefix</em>.
+ * @discussion The matcher invokes <code>-hasPrefix:</code> on the examined object, passing the
+ * specified <em>prefix</em>.
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(\@"myStringOfNote", startsWith(\@"my"))</code></li>
- * </ul>
- * will match "foobar".
+ * <b>Example</b><br />
+ * <pre>assertThat(@"myStringOfNote", startsWith(@"my"))</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_startsWith instead.
  */

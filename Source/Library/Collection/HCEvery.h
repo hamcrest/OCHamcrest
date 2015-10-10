@@ -21,19 +21,18 @@ FOUNDATION_EXPORT id HC_everyItem(id itemMatcher);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract everyItem(itemMatcher) -
- * Creates a matcher for collections that matches when every item satisfies the specified matcher.
+ * Creates a matcher for collections that matches when the examined collection's items are all
+ * matched by the specified matcher.
  * @param itemMatcher The matcher to apply to every item provided by the examined collection.
- * @discussion Creates a matcher for collections (anything conforming to NSFastEnumeration) that
- * iterates a single pass over the examined collection. It matches when all elements in the
- * collection are matched by the specified <em>itemMatcher</em>.
+ * @discussion This matcher works on any collection that conforms to the NSFastEnumeration protocol,
+ * performing a single pass.
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(\@[\@"bar", \@"baz"], everyItem(startsWith(\@"ba")))</code></li>
- * </ul>
+ * <b>Example</b><br />
+ * <pre>assertThat(@[@"bar", @"baz"], everyItem(startsWith(@"ba")))</pre>
  *
- * @attribute Name Clash
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym HC_everyItem instead.
+ * <b>Name Clash</b><br />
+ * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * HC_everyItem instead.
  */
 #define everyItem HC_everyItem
 #endif

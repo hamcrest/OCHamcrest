@@ -13,10 +13,8 @@ FOUNDATION_EXPORT id HC_equalToBool(BOOL value) __attribute__((deprecated));
  * specified BOOL value.
  * @param value The BOOL value from which to create an NSNumber.
  * @deprecated Version 4.1.0. Use @ref isTrue() or @ref isFalse() instead.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>.
- *
- * @attribute Name Clash
+ * @discussion
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToBool instead.
  */
@@ -40,10 +38,9 @@ FOUNDATION_EXPORT id HC_equalToChar(char value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified char value.
  * @param value The char value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToChar instead.
  */
@@ -59,10 +56,9 @@ FOUNDATION_EXPORT id HC_equalToDouble(double value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified double value.
  * @param value The double value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToDouble instead.
  */
@@ -78,10 +74,9 @@ FOUNDATION_EXPORT id HC_equalToFloat(float value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified float value.
  * @param value The float value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToFloat instead.
  */
@@ -97,10 +92,9 @@ FOUNDATION_EXPORT id HC_equalToInt(int value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified int value.
  * @param value The int value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToInt instead.
  */
@@ -116,10 +110,9 @@ FOUNDATION_EXPORT id HC_equalToLong(long value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified long value.
  * @param value The long value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToLong instead.
  */
@@ -135,10 +128,9 @@ FOUNDATION_EXPORT id HC_equalToLongLong(long long value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified long long value.
  * @param value The long long value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToLongLong instead.
  */
@@ -154,10 +146,9 @@ FOUNDATION_EXPORT id HC_equalToShort(short value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified short value.
  * @param value The short value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToShort instead.
  */
@@ -173,10 +164,9 @@ FOUNDATION_EXPORT id HC_equalToUnsignedChar(unsigned char value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified unsigned char value.
  * @param value The unsigned char value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToUnsignedChar instead.
  */
@@ -192,10 +182,9 @@ FOUNDATION_EXPORT id HC_equalToUnsignedInt(unsigned int value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified unsigned int value.
  * @param value  The unsigned int value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToUnsignedInt instead.
  */
@@ -211,10 +200,9 @@ FOUNDATION_EXPORT id HC_equalToUnsignedLong(unsigned long value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified unsigned long value.
  * @param value The unsigned long value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToUnsignedLong instead.
  */
@@ -230,10 +218,9 @@ FOUNDATION_EXPORT id HC_equalToUnsignedLongLong(unsigned long long value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified unsigned long long value.
  * @param value The unsigned long long value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToUnsignedLongLong instead.
  */
@@ -249,10 +236,9 @@ FOUNDATION_EXPORT id HC_equalToUnsignedShort(unsigned short value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified unsigned short value.
  * @param value The unsigned short value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToUnsignedShort instead.
  */
@@ -268,10 +254,9 @@ FOUNDATION_EXPORT id HC_equalToInteger(NSInteger value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified NSInteger value.
  * @param value The NSInteger value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToInteger instead.
  */
@@ -287,10 +272,9 @@ FOUNDATION_EXPORT id HC_equalToUnsignedInteger(NSUInteger value);
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
  * specified NSUInteger value.
  * @param value The NSUInteger value from which to create an NSNumber.
- * @discussion Creates a matcher that matches when the examined object is equal to an NSNumber
- * created from <em>value</em>. Consider using <code>equalTo(\@(value))</code> instead.
+ * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToUnsignedInteger instead.
  */

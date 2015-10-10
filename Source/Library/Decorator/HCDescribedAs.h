@@ -25,17 +25,15 @@ FOUNDATION_EXPORT id HC_describedAs(NSString *description, id <HCMatcher> matche
 #ifdef HC_SHORTHAND
 /*!
  * @abstract describedAs(description, matcher, ...) -
- * Wraps an existing matcher, overriding its description with that specified.
+ * Wraps an existing matcher, overriding its description with that specified. All other functions
+ * are delegated to the decorated matcher, including its mismatch description.
  * @param description The new description for the wrapped matcher.
  * @param matcher,... The matcher to wrap, followed by a comma-separated list of substitution
  * values ending with <code>nil</code>.
- * @discussion Creates a matcher that delegates matching to the specified matcher, but overrides
- * its description. The description may contain substitution placeholders %0, %1, etc. These will be
+ * @discussion The description may contain substitution placeholders %0, %1, etc. These will be
  * replaced by any values that follow the matcher.
  *
- * All other functions are delegated to the decorated matcher, including its mismatch description.
- *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_describedAs instead.
  */

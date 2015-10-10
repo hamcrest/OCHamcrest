@@ -33,7 +33,7 @@ FOUNDATION_EXPORT id HC_containsString(NSString *aSubstring) __attribute__((depr
  * </ul>
  * will match "abcdefg".
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_containsString instead.
  */
@@ -47,17 +47,15 @@ FOUNDATION_EXPORT id HC_containsSubstring(NSString *substring);
 /*!
  * @abstract containsSubstring(substring) -
  * Creates a matcher that matches when the examined object is a string containing the specified
- * string anywhere.
+ * substring anywhere.
  * @param substring The string to search for. (Must not be <code>nil</code>.)
- * @discussion Creates a matcher that matcher invokes <code>-rangeOfString:</code> on the examined
- * object, passing the specified <em>substring</em> and matching if it is found.
+ * @discussion The matcher invokes <code>-rangeOfString:</code> on the examined object, passing the
+ * specified <em>substring</em> and matching if it is found.
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(\@"myStringOfNote", containsSubstring(\@"ring"))</code></li>
- * </ul>
+ * <b>Example</b><br />
+ * <pre>assertThat(@"myStringOfNote", containsSubstring(@"ring"))</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_containsSubstring instead.
  */

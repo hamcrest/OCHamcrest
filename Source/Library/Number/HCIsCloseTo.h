@@ -20,20 +20,16 @@ FOUNDATION_EXPORT id HC_closeTo(double value, double delta);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract closeTo(value, delta) -
- * Creates a matcher that matches when the examined object is a number close to the specified value,
- * within specified delta.
+ * Creates a matcher for NSNumbers that matches when the examined number is close to the specified
+ * value, within the specified delta.
  * @param value The expected value of matching numbers.
  * @param delta The delta within which matches will be allowed.
- * @discussion Creates a matcher that invokes <code>-doubleValue</code> on the examined object to
- * get its value as a double. The result is compared against <em>value</em> to see if the difference
- * is within a positive <em>delta</em>.
+ * @discussion Invokes <code>-doubleValue</code> on the examined number to get its value.
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(@1.03, closeTo(1.0, 0.03)</code></li>
- * </ul>
+ * <b>Example</b><br />
+ * <pre>assertThat(@1.03, closeTo(1.0, 0.03)</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_closeTo instead.
  */

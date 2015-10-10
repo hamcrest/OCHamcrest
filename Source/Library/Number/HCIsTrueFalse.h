@@ -21,10 +21,9 @@ FOUNDATION_EXPORT id HC_isTrue(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract Creates a matcher that matches when the examined object is an NSNumber with non-zero
- * value.
- *
- * @attribute Name Clash
+ * @abstract Creates a matcher that matches when the examined object is an non-zero NSNumber.
+ * @discussion
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_isTrue instead.
  */
@@ -36,9 +35,9 @@ FOUNDATION_EXPORT id HC_isFalse(void);
 
 #ifdef HC_SHORTHAND
 /*!
- * @abstract Creates a matcher that matches when the examined object is an NSNumber with zero value.
- *
- * @attribute Name Clash
+ * @abstract Creates a matcher that matches when the examined object is NSNumber zero.
+ * @discussion
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_isFalse instead.
 */

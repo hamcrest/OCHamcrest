@@ -30,7 +30,7 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
  * Use assertThat in test case methods. It's designed to integrate with XCTest and other testing
  * frameworks where individual tests are executed as methods.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThat instead.
  */
@@ -65,7 +65,7 @@ OBJC_EXPORT void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxT
  * An easy way of defining the actualBlock is using the macro <code>futureValueOf(actual)</code>,
  * which also improves readability.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertThatAfter instead.
 */
@@ -78,7 +78,7 @@ OBJC_EXPORT void HC_assertThatAfterWithLocation(id testCase, NSTimeInterval maxT
  * @deprecated Version 4.2.0. Use @ref thatEventually instead.
  * @discussion Wraps <em>actual</em> in a block so that it can be repeatedly evaluated by @ref assertThatAfter.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_futureValueOf instead.
  */
@@ -112,7 +112,7 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
  *
  * An easy way of providing the <em>actualBlock</em> is to use the macro @ref thatEventually</code>.
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_assertWithTimeout instead.
 */
@@ -124,7 +124,7 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
  * Evaluates actual value at future time.
  * @param actual The object to evaluate as the actual value.
  * @discussion Wraps <em>actual</em> in a block so that it can be repeatedly evaluated by @ref assertWithTimeout.
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_thatEventually instead.
  */

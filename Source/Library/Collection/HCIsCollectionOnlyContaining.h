@@ -19,22 +19,19 @@ FOUNDATION_EXPORT id HC_onlyContains(id itemMatchers, ...) NS_REQUIRES_NIL_TERMI
 #ifdef HC_SHORTHAND
 /*!
  * @abstract onlyContains(itemMatchers, ...) -
- * Creates a matcher that matches when each item of the examined collection satisfies any of the
- * specified matchers.
+ * Creates a matcher for collections that matches when each item of the examined collection
+ * satisfies any of the specified matchers.
  * @param itemMatchers,... A comma-separated list of matchers ending with <code>nil</code>.
- * @discussion Creates a matcher for collections (anything conforming to NSFastEnumeration) that
- * matches when a single pass yields a series of elements, each satisfying <b>any</b> of the
- * specified matchers. Any matcher may match multiple elements.
+ * @discussion This matcher works on any collection that conforms to the NSFastEnumeration protocol,
+ * performing a single pass. Any matcher may match multiple elements.
  *
- * Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
+ * Any argument that is not a matcher is implicitly wrapped in an <em>equalTo</em> matcher to check for
  * equality.
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(\@[\@"Jon", \@"John", \@"Bob"], onlyContains(startsWith(\@"Jo"), startsWith(\@("Bo"), nil))</code></li>
- * </ul>
+ * <b>Example</b><br />
+ * <pre>assertThat(@[@"Jon", @"John", @"Bob"], onlyContains(startsWith(@"Jo"), startsWith(@("Bo"), nil))</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_onlyContains instead.
  */

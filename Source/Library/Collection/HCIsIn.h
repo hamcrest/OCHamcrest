@@ -22,15 +22,13 @@ FOUNDATION_EXPORT id HC_isIn(id aCollection);
  * @abstract isIn(aCollection) -
  * Creates a matcher that matches when the examined object is found within the specified collection.
  * @param aCollection The collection to search.
- * @discussion Creates a matcher that matcher invokes <code>-containsObject:</code>
- * on <em>aCollection</em> to determine if the examined object is an element of the collection.
+ * @discussion Invokes <code>-containsObject:</code> on <em>aCollection</em> to determine if the
+ * examined object is an element of the collection.
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(\@"foo", isIn(\@[@"bar", \@"foo"]))</code></li>
- * </ul>
+ * <b>Example</b><br />
+ * <pre>assertThat(@"foo", isIn(@[@"bar", @"foo"]))</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_isIn instead.
  */

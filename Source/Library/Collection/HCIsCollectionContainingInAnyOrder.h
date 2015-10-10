@@ -20,29 +20,26 @@ FOUNDATION_EXPORT id HC_containsInAnyOrder(id itemMatchers, ...) NS_REQUIRES_NIL
 #ifdef HC_SHORTHAND
 /*!
  * @abstract containsInAnyOrder(itemMatchers, ...) -
- * Creates a matcher that matches when the examined collection's elements, in any order, satisfy the
- * specified list of matchers.
+ * Creates an order-agnostic matcher for collections that matches when each item in the examined
+ * collection satisfies one matcher anywhere in the specified list of matchers.
  * @param itemMatchers,... A comma-separated list of matchers ending with <code>nil</code>.
- * @discussion Creates an order-agnostic matcher for collections (anything conforming to
- * NSFastEnumeration) that matches matches when a single pass over the examined collection yields a
- * series of elements, each satisfying the specified one matcher anywhere in the specified list of
- * matchers. For a positive matcher, the examined collection must be of the same length as the
- * specified list of matchers.
+ * @discussion This matcher works on any collection that conforms to the NSFastEnumeration protocol,
+ * performing a single pass. For a positive match, the examined collection must be of the same
+ * length as the specified list of matchers.
  *
  * Note: Each matcher in the specified list will only be used once during a given examination, so
  * be careful when specifying matchers that may be satisfied by more than one entry in an examined
  * collection.
  *
- * Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
- * equality.
+ * Any argument that is not a matcher is implicitly wrapped in an <em>equalTo</em> matcher to check
+ * for equality.
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(\@[\@"foo", \@"bar"], containsInAnyOrder(equalTo(\@"bar"), equalTo(\@"foo")))</code></li>
- *   <li><code>assertThat(\@[\@"foo", \@"bar"], containsInAnyOrder(\@"bar", \@"foo"))</code></li>
- * </ul>
+ * <b>Examples</b><br />
+ * <pre>assertThat(@[@"foo", @"bar"], containsInAnyOrder(equalTo(@"bar"), equalTo(@"foo")))</pre>
  *
- * @attribute Name Clash
+ * <pre>assertThat(@[@"foo", @"bar"], containsInAnyOrder(@"bar", @"foo"))</pre>
+ *
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_containsInAnyOrder instead.
  */

@@ -23,24 +23,20 @@ FOUNDATION_EXPORT id HC_hasEntry(id keyMatcher, id valueMatcher);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract hasEntry(keyMatcher, valueMatcher) -
- * Creates a matcher that matches when a dictionary contains key-value entry satisfying the
- * specified pair of matchers.
- * @param keyMatcher The matcher to satisfy for the key, or an expected value for @ref equalTo matching.
- * @param valueMatcher The matcher to satisfy for the value, or an expected value for @ref equalTo matching.
- * @discussion Creates a matcher for NSDictionaries matching when the examined dictionary contains
- * at least one entry whose key satisfies the specified <code>keyMatcher</code> <b>and</b> whose
- * value satisfies the specified <code>valueMatcher</code>.
+ * Creates a matcher for NSDictionaries that matches when the examined dictionary contains at least
+ * one entry whose key satisfies the specified <code>keyMatcher</code> <b>and</b> whose value
+ * satisfies the specified <code>valueMatcher</code>.
+ * @param keyMatcher The matcher to satisfy for the key, or an expected value for <em>equalTo</em> matching.
+ * @param valueMatcher The matcher to satisfy for the value, or an expected value for <em>equalTo</em> matching.
+ * @discussion Any argument that is not a matcher is implicitly wrapped in an <em>equalTo</em>
+ * matcher to check for equality.
  *
- * Any argument that is not a matcher is implicitly wrapped in an @ref equalTo matcher to check for
- * equality.
+ * <b>Examples</b><br />
+ * <pre>assertThat(myDictionary, hasEntry(equalTo(@"foo"), equalTo(@"bar")))</pre>
  *
- * Examples:
- * <ul>
- *   <li><code>assertThat(myDictionary, hasEntry(equalTo(\@"foo"), equalTo(\@"bar")))</code></li>
- *   <li><code>assertThat(myDictionary, hasEntry(\@"foo", \@"bar"))</code></li>
- * </ul>
+ * <pre>assertThat(myDictionary, hasEntry(@"foo", @"bar"))</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_hasEntry instead.
  */

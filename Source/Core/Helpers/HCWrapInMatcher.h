@@ -8,6 +8,6 @@
 
 /*!
  * @abstract Wraps argument in a matcher, if necessary.
- * @return The argument as-is if it is already a matcher, otherwise wrapped in an @ref equalTo matcher.
+ * @return The argument as-is if it is already a matcher, otherwise wrapped in an <em>equalTo</em> matcher.
  */
 FOUNDATION_EXPORT id <HCMatcher> HCWrapInMatcher(id matcherOrValue);

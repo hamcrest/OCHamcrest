@@ -22,12 +22,11 @@ FOUNDATION_EXPORT id HC_throwsException(id exceptionMatcher);
  * Creates a matcher that matches when the examined object is a block which, when executed, throws
  * an exception satisfying the specified matcher.
  * @param exceptionMatcher The matcher to satisfy when passed the exception.
- * @discussion Example:
- * <ul>
- *   <li><code>assertThat(^{ [obj somethingBad]; }, throwsException(anything())</code></li>
- * </ul>
+ * @discussion
+ * <b>Example</b><br />
+ * <pre>assertThat(^{ [obj somethingBad]; }, throwsException(anything())</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_throwsException instead.
  */

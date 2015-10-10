@@ -20,18 +20,14 @@ FOUNDATION_EXPORT id HC_equalToIgnoringCase(NSString *expectedString);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract equalToIgnoringCase(expectedString) -
- * Creates a matcher that matches when the examined object is a string equal to the specified
+ * Creates a matcher for NSStrings that matches when the examined string is equal to the specified
  * expected string, ignoring case differences.
  * @param expectedString The expected value of matched strings. (Must not be <code>nil</code>.)
- * @discussion Creates a matcher for NSStrings that matches when the examined string is equal to the
- * specified <em>expectedString</em>, ignoring differences of case.
+ * @discussion
+ * <b>Example</b><br />
+ * <pre>assertThat(@"Foo", equalToIgnoringCase(@"FOO"))</pre>
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(@"Foo", equalToIgnoringCase(\@"FOO"))</code></li>
- * </ul>
- *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_equalToIgnoringCase instead.
  */

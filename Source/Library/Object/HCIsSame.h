@@ -23,15 +23,11 @@ FOUNDATION_EXPORT id HC_sameInstance(id expectedInstance);
  * Creates a matcher that matches only when the examined object is the same instance as the
  * specified target object.
  * @param expectedInstance The expected instance.
- * @discussion Creates a matcher that matches when the examined object is the same instance
- * as <em>expectedInstance</em>.
+ * @discussion
+ * <b>Example</b><br />
+ * <pre>assertThat(delegate, sameInstance(expectedDelegate))</pre>
  *
- * Example:
- * <ul>
- *   <li><code>assertThat(delegate, sameInstance(expectedDelegate))</code></li>
- * </ul>
- *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_sameInstance instead.
  */

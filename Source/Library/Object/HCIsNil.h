@@ -19,12 +19,11 @@ FOUNDATION_EXPORT id HC_nilValue(void);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract Creates a matcher that matches when the examined object is <code>nil</code>.
- * @discussion Example:
- * <ul>
- *   <li><code>assertThat(myObject, nilValue())</code></li>
- * </ul>
+ * @discussion
+ * <b>Example</b><br />
+ * <pre>assertThat(myObject, nilValue())</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_nilValue instead.
  */
@@ -37,12 +36,11 @@ FOUNDATION_EXPORT id HC_notNilValue(void);
 #ifdef HC_SHORTHAND
 /*!
  * @abstract Creates a matcher that matches when the examined object is not <code>nil</code>.
- * @discussion Example:
- * <ul>
- *   <li><code>assertThat(myObject, notNilValue())</code></li>
- * </ul>
+ * @discussion
+ * <b>Example</b><br />
+ * <pre>assertThat(myObject, notNilValue())</pre>
  *
- * @attribute Name Clash
+ * <b>Name Clash</b><br />
  * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
  * HC_notNilValue instead.
  */
