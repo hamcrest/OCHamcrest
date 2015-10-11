@@ -70,7 +70,7 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
         assertWithTimeout(maxTime, thatEventually(futureBar), equalTo(@"bar"));
     }];
 
-    XCTAssertEqualWithAccuracy(waitTime, succeedTime, 0.01, @"Expect assert to terminate after value is changed, but was %lf", waitTime);
+    XCTAssertTrue(waitTime > succeedTime - 0.01, @"Expect assert to terminate after value is changed, but was %lf", waitTime);
     XCTAssertTrue(waitTime < maxTime, @"Expect assert to terminate before timeout, but was %lf", waitTime);
 }
 
