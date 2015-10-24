@@ -1,3 +1,13 @@
+Version 4.3.1
+-------------
+_24 Oct 2015_
+
+**Project changes:**
+
+- Remove debug symbols from Release configuration, which bloated the libraries and kept folks from
+  using the prebuilt iOS framework.
+
+
 Version 4.3.0
 -------------
 _11 Oct 2015_

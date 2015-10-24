@@ -107,9 +107,9 @@
 		0876039213440E28001B439B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
 		088FB0AB136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */; };
 		088FB0AC136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */; };
-		0E498AA61BC4D45200BA28F0 /* HCIsCollectionContainingInRelativeOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */; settings = {ASSET_TAGS = (); }; };
+		0E498AA61BC4D45200BA28F0 /* HCIsCollectionContainingInRelativeOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */; };
 		0E5ECE6D1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5ECE6B1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E5ECE6E1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */; settings = {ASSET_TAGS = (); }; };
+		0E5ECE6E1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */; };
 		0EF5915A1B9E84C600BABDED /* HCTestFailureHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF591561B9E84C600BABDED /* HCTestFailureHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EF5915E1B9E84C600BABDED /* HCTestFailureHandlerChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF591581B9E84C600BABDED /* HCTestFailureHandlerChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EF591601B9E84C600BABDED /* HCTestFailureHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF591591B9E84C600BABDED /* HCTestFailureHandlerChain.m */; };
@@ -1734,7 +1734,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OCHamcrest-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
@@ -1750,9 +1749,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OCHamcrest-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
