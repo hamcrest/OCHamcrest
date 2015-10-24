@@ -27,11 +27,6 @@
 @end
 
 
-id <HCMatcher> HC_containsString(NSString *aString)
-{
-    return HC_containsSubstring(aString);
-}
-
 id <HCMatcher> HC_containsSubstring(NSString *substring)
 {
     return [HCStringContains stringContains:substring];

@@ -1,3 +1,11 @@
+NEXT RELEASE (Compatibility-breaking)
+-------------------------------------
+
+**Deleted:**
+
+- `containsString` matcher (deprecated in v4.2.0)
+
+
 Version 4.3.2
 -------------
 _31 Oct 2015_
