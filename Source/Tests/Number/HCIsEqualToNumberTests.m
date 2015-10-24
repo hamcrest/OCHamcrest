@@ -7,49 +7,6 @@
 #import "MatcherTestCase.h"
 
 
-@interface EqualToBoolTests : MatcherTestCase
-@end
-
-@implementation EqualToBoolTests
-
-- (void)testCopesWithNilsAndUnknownTypes
-{
-    BOOL irrelevant = NO;
-    id matcher = equalToBool(irrelevant);
-
-    assertNilSafe(matcher);
-    assertUnknownTypeSafe(matcher);
-}
-
-- (void)testComparesWithNSNumber
-{
-    assertMatches(@"Large BOOL", equalToBool(YES), [NSNumber numberWithBool:YES]);
-    assertMatches(@"Small BOOL", equalToBool(NO), [NSNumber numberWithBool:NO]);
-}
-
-- (void)testMismatchesDifferentNumber
-{
-    assertDoesNotMatch(@"Different", equalToBool(YES), [NSNumber numberWithBool:NO]);
-}
-
-- (void)testMismatchesNonNumber
-{
-    assertDoesNotMatch(@"Not a number", equalToBool(NO), @"STRING");
-}
-
-- (void)testDescribesMismatchOfDifferentNumber
-{
-    assertMismatchDescription(@"was <YES>", equalToBool(NO), @YES);
-}
-
-- (void)testDescribesMismatchOfNonNumber
-{
-    assertMismatchDescriptionPrefix(@"was <NSObject:", equalToBool(NO), [[NSObject alloc] init]);
-}
-
-@end
-
-
 @interface EqualToCharTests : MatcherTestCase
 @end
 

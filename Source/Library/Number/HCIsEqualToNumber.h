@@ -4,32 +4,6 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-FOUNDATION_EXPORT id HC_equalToBool(BOOL value) __attribute__((deprecated));
-
-#ifdef HC_SHORTHAND
-/*!
- * @abstract equalToBool(value) -
- * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
- * specified BOOL value.
- * @param value The BOOL value from which to create an NSNumber.
- * @deprecated Version 4.1.0. Use @ref isTrue() or @ref isFalse() instead.
- * @discussion
- * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
- * HC_equalToBool instead.
- */
-#define equalToBool HC_equalToBool
-#endif
-
-@interface HCIsEqualToBool : HCBaseMatcher
-
-@property (nonatomic, assign, readonly) BOOL value;
-
-- (instancetype)initWithValue:(BOOL)value;
-
-@end
-
-
 FOUNDATION_EXPORT id HC_equalToChar(char value);
 
 #ifdef HC_SHORTHAND

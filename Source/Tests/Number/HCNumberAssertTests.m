@@ -29,13 +29,6 @@
     XCTAssertEqualObjects(self.testFailure.reason, @"Expected <0>, but was <1>");
 }
 
-- (void)testFailure_withBoolMoreExplicitDescription
-{
-    assertThatBool(YES, equalToBool(NO));
-
-    XCTAssertEqualObjects(self.testFailure.reason, @"Expected a BOOL with value <NO>, but was <YES>");
-}
-
 - (void)testSuccess_withChar
 {
     assertThatChar('A', equalTo(@'A'));

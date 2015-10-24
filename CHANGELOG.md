@@ -3,6 +3,7 @@ NEXT RELEASE (Compatibility-breaking)
 
 **Deleted:**
 
+- `equalToBool` matcher (deprecated in v4.1.0)
 - `containsString` matcher (deprecated in v4.2.0)
 
 
