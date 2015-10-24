@@ -2,7 +2,8 @@
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 
 #import <OCHamcrest/HCTestFailureReporterChain.h>
-#import <OCHamcrest/HCTestFailureHandlerChain.h>
+
+#import <OCHamcrest/HCTestFailureReporter.h>
 
 #import <XCTest/XCTest.h>
 
@@ -24,14 +25,6 @@
 
     XCTAssertEqualObjects(NSStringFromClass([chain class]), @"HCXCTestFailureReporter");
     XCTAssertNotNil(chain.successor);
-}
-
-- (void)testDeprecatedFunction_ShouldPointToXCTestHandlerAsHeadOfChain
-{
-    HCTestFailureHandler *handler = HC_testFailureHandlerChain();
-
-    XCTAssertEqualObjects(NSStringFromClass([handler class]), @"HCXCTestFailureReporter");
-    XCTAssertNotNil(handler.successor);
 }
 
 - (void)testAddReporter_ShouldSetHeadOfChainToGivenHandler

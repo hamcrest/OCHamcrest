@@ -110,10 +110,6 @@
 		0E498AA61BC4D45200BA28F0 /* HCIsCollectionContainingInRelativeOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */; };
 		0E5ECE6D1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5ECE6B1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E5ECE6E1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */; };
-		0EF5915A1B9E84C600BABDED /* HCTestFailureHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF591561B9E84C600BABDED /* HCTestFailureHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EF5915E1B9E84C600BABDED /* HCTestFailureHandlerChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF591581B9E84C600BABDED /* HCTestFailureHandlerChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EF591601B9E84C600BABDED /* HCTestFailureHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF591591B9E84C600BABDED /* HCTestFailureHandlerChain.m */; };
-		0EF591611B9E84C600BABDED /* HCTestFailureHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF591591B9E84C600BABDED /* HCTestFailureHandlerChain.m */; };
 		31DDC19066E25E0DB52E3441 /* Mismatchable.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DDCC467D6EFFC559012D61 /* Mismatchable.m */; };
 		31DDC972FA9B967EC328D4F3 /* HCDiagnosingMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 31DDCE62F97F2042F0A8BDAE /* HCDiagnosingMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31DDC99BB130EC06BA6BFBEC /* HCDiagnosingMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DDCB570769099D33C22810 /* HCDiagnosingMatcher.m */; };
@@ -459,9 +455,6 @@
 		08F39BAA1711426200745958 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		0E5ECE6B1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContainingInRelativeOrder.h; sourceTree = "<group>"; };
 		0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionContainingInRelativeOrder.m; sourceTree = "<group>"; };
-		0EF591561B9E84C600BABDED /* HCTestFailureHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailureHandler.h; sourceTree = "<group>"; };
-		0EF591581B9E84C600BABDED /* HCTestFailureHandlerChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTestFailureHandlerChain.h; sourceTree = "<group>"; };
-		0EF591591B9E84C600BABDED /* HCTestFailureHandlerChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureHandlerChain.m; sourceTree = "<group>"; };
 		31DDCB570769099D33C22810 /* HCDiagnosingMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDiagnosingMatcher.m; sourceTree = "<group>"; };
 		31DDCC467D6EFFC559012D61 /* Mismatchable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mismatchable.m; sourceTree = "<group>"; };
 		31DDCCF46E1766AF4AC97BA5 /* Mismatchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mismatchable.h; sourceTree = "<group>"; };
@@ -841,16 +834,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0EF591551B9E84C600BABDED /* TestFailureHandlers */ = {
-			isa = PBXGroup;
-			children = (
-				0EF591561B9E84C600BABDED /* HCTestFailureHandler.h */,
-				0EF591581B9E84C600BABDED /* HCTestFailureHandlerChain.h */,
-				0EF591591B9E84C600BABDED /* HCTestFailureHandlerChain.m */,
-			);
-			path = TestFailureHandlers;
-			sourceTree = "<group>";
-		};
 		BB333072EBF64C385754421B /* Object */ = {
 			isa = PBXGroup;
 			children = (
@@ -924,7 +907,6 @@
 			isa = PBXGroup;
 			children = (
 				BB333B223BB1036A1090E089 /* ReturnValueGetters */,
-				0EF591551B9E84C600BABDED /* TestFailureHandlers */,
 				BB3332B119BE5F32E3F02CE3 /* TestFailureReporters */,
 				BB333C7DFDB2404398E9E6C5 /* HCCollect.h */,
 				BB3333FD5A8D6F4A718D5D98 /* HCCollect.m */,
@@ -1154,7 +1136,6 @@
 				BB33333C0F1EED12D79C5845 /* HCConformsToProtocol.h in Headers */,
 				BB333C8BC4684992F0A533CE /* HCHasDescription.h in Headers */,
 				BB333788D86B329768056FCB /* HCHasProperty.h in Headers */,
-				0EF5915A1B9E84C600BABDED /* HCTestFailureHandler.h in Headers */,
 				BB3335B708E6AB9321294A1C /* HCIsEqual.h in Headers */,
 				BB333ABCAF8D67405B9C023D /* HCIsInstanceOf.h in Headers */,
 				BB3334B153329F550E1EFEBD /* HCIsNil.h in Headers */,
@@ -1181,7 +1162,6 @@
 				BB3337267CA4ACA9E3EB6896 /* HCCharReturnGetter.h in Headers */,
 				BB3337AB405029A86CDF3FAD /* HCDoubleReturnGetter.h in Headers */,
 				BB333ADE67DDD25C6E6EF058 /* HCFloatReturnGetter.h in Headers */,
-				0EF5915E1B9E84C600BABDED /* HCTestFailureHandlerChain.h in Headers */,
 				BB33370D6F5B9B4978104E4B /* HCIntReturnGetter.h in Headers */,
 				BB333260BA38F45B4864A846 /* HCLongLongReturnGetter.h in Headers */,
 				BB3335C23B645B2E01C1DD95 /* HCLongReturnGetter.h in Headers */,
@@ -1355,7 +1335,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB333A663782157FB25A5E45 /* HCAssertThat.m in Sources */,
-				0EF591611B9E84C600BABDED /* HCTestFailureHandlerChain.m in Sources */,
 				BB333A358C42850FD4C55B3D /* HCBaseDescription.m in Sources */,
 				BB3332839F5E2F874F6BAE41 /* HCBaseMatcher.m in Sources */,
 				BB33392916E29A808728FF91 /* HCStringDescription.m in Sources */,
@@ -1498,7 +1477,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB33329CF0CDD9545D3FFCEC /* HCAssertThat.m in Sources */,
-				0EF591601B9E84C600BABDED /* HCTestFailureHandlerChain.m in Sources */,
 				BB333D94082F074BB61E233C /* HCBaseDescription.m in Sources */,
 				BB333108B4630B94C5328B1A /* HCBaseMatcher.m in Sources */,
 				BB33315FDFFBAC0E1DB10869 /* HCStringDescription.m in Sources */,

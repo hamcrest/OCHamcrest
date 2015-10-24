@@ -5,6 +5,7 @@ NEXT RELEASE (Compatibility-breaking)
 
 - `equalToBool` matcher (deprecated in v4.1.0)
 - `containsString` matcher (deprecated in v4.2.0)
+- `HC_testFailureHandlerChain()` (deprecated in v4.2.0)
 
 
 Version 4.3.2
