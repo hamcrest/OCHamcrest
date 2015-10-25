@@ -37,7 +37,7 @@
 @end
 
 
-id HC_isNot(id matcher)
+id HC_isNot(id value)
 {
-    return [[HCIsNot alloc] initWithMatcher:HCWrapInMatcher(matcher)];
+    return [[HCIsNot alloc] initWithMatcher:HCWrapInMatcher(value)];
 }

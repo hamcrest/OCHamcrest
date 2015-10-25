@@ -30,7 +30,6 @@ FOUNDATION_EXPORT id hc_containsInRelativeOrder(NSArray *itemMatchers);
  *
  * <b>Examples</b><br />
  * <pre>assertThat(@[@1, @2, @3, @4, @5], containsInRelativeOrder(equalTo(@2), equalTo(@4)))</pre>
- *
  * <pre>assertThat(@[@1, @2, @3, @4, @5], containsInRelativeOrder(@2, @4))</pre>
  *
  * <b>Name Clash</b><br />

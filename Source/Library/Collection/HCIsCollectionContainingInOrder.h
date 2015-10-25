@@ -31,7 +31,6 @@ FOUNDATION_EXPORT id HC_contains(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATI
  *
  * <b>Examples</b><br />
  * <pre>assertThat(@[@"foo", @"bar"], contains(equalTo(@"foo"), equalTo(@"bar")))</pre>
- *
  * <pre>assertThat(@[@"foo", @"bar"], contains(@"foo", @"bar"))</pre>
  * </ul>
  *

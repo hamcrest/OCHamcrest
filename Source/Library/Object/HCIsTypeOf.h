@@ -15,9 +15,8 @@ FOUNDATION_EXPORT id HC_isA(Class expectedClass);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract isA(expectedClass) -
- * Creates a matcher that matches when the examined object is an instance of the specified class,
- * but not of any subclass.
+ * @abstract Creates a matcher that matches when the examined object is an instance of the specified
+ * class, but not of any subclass.
  * @param expectedClass The class to compare against as the expected class.
  * @discussion
  * <b>Example</b><br />
@@ -27,5 +26,8 @@ FOUNDATION_EXPORT id HC_isA(Class expectedClass);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_isA instead.
  */
-#define isA HC_isA
+static inline id isA(Class expectedClass)
+{
+    return HC_isA(expectedClass);
+}
 #endif

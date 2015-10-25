@@ -24,7 +24,10 @@ FOUNDATION_EXPORT id HC_nilValue(void);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_nilValue instead.
  */
-#define nilValue() HC_nilValue()
+static inline id nilValue(void)
+{
+    return HC_nilValue();
+}
 #endif
 
 
@@ -41,5 +44,8 @@ FOUNDATION_EXPORT id HC_notNilValue(void);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_notNilValue instead.
  */
-#define notNilValue() HC_notNilValue()
+static inline id notNilValue(void)
+{
+    return HC_notNilValue();
+}
 #endif

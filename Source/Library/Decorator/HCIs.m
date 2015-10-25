@@ -38,7 +38,7 @@
 @end
 
 
-id HC_is(id match)
+id HC_is(id value)
 {
-    return [[HCIs alloc] initWithMatcher:HCWrapInMatcher(match)];
+    return [[HCIs alloc] initWithMatcher:HCWrapInMatcher(value)];
 }

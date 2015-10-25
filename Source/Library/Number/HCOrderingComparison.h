@@ -21,9 +21,8 @@ FOUNDATION_EXPORT id HC_greaterThan(id value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract greaterThan(value) -
- * Creates a matcher that matches when the examined object is greater than the specified value, as
- * reported by the <code>-compare:</code> method of the <b>examined</b> object.
+ * @abstract Creates a matcher that matches when the examined object is greater than the specified
+ * value, as reported by the <code>-compare:</code> method of the <b>examined</b> object.
  * @param value The value which, when passed to the <code>-compare:</code> method of the examined
  * object, should return NSOrderedAscending.
  * @discussion
@@ -34,7 +33,10 @@ FOUNDATION_EXPORT id HC_greaterThan(id value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_greaterThan instead.
  */
-#define greaterThan HC_greaterThan
+static inline id greaterThan(id value)
+{
+    return HC_greaterThan(value);
+}
 #endif
 
 
@@ -42,20 +44,22 @@ FOUNDATION_EXPORT id HC_greaterThanOrEqualTo(id value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract greaterThanOrEqualTo(value) -
- * Creates a matcher that matches when the examined object is greater than or equal to the specified
- * value, as reported by the <code>-compare:</code> method of the <b>examined</b> object.
+ * @abstract Creates a matcher that matches when the examined object is greater than or equal to the
+ * specified value, as reported by the <code>-compare:</code> method of the <b>examined</b> object.
  * @param value The value which, when passed to the <code>-compare:</code> method of the examined
  * object, should return NSOrderedAscending or NSOrderedSame.
  * @discussion
  * <b>Example</b><br />
- * <pre>assertThat(@1, greaterThan(@1))</pre>
+ * <pre>assertThat(@1, greaterThanOrEqualTo(@1))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_greaterThanOrEqualTo instead.
  */
-#define greaterThanOrEqualTo HC_greaterThanOrEqualTo
+static inline id greaterThanOrEqualTo(id value)
+{
+    return HC_greaterThanOrEqualTo(value);
+}
 #endif
 
 
@@ -63,9 +67,8 @@ FOUNDATION_EXPORT id HC_lessThan(id value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract lessThan(value) -
- * Creates a matcher that matches when the examined object is less than the specified value, as
- * reported by the <code>-compare:</code> method of the <b>examined</b> object.
+ * @abstract Creates a matcher that matches when the examined object is less than the specified
+ * value, as reported by the <code>-compare:</code> method of the <b>examined</b> object.
  * @param value The value which, when passed to the <code>-compare:</code> method of the examined
  * object, should return NSOrderedDescending.
  * @discussion
@@ -76,7 +79,10 @@ FOUNDATION_EXPORT id HC_lessThan(id value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_lessThan instead.
  */
-#define lessThan HC_lessThan
+static inline id lessThan(id value)
+{
+    return HC_lessThan(value);
+}
 #endif
 
 
@@ -84,9 +90,8 @@ FOUNDATION_EXPORT id HC_lessThanOrEqualTo(id value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract lessThanOrEqualTo(value) -
- * Creates a matcher that matches when the examined object is less than or equal to the specified
- * value, as reported by the <code>-compare:</code> method of the <b>examined</b> object.
+ * @abstract Creates a matcher that matches when the examined object is less than or equal to the
+ * specified value, as reported by the <code>-compare:</code> method of the <b>examined</b> object.
  * @param value The value which, when passed to the <code>-compare:</code> method of the examined
  * object, should return NSOrderedDescending or NSOrderedSame.
  * @discussion
@@ -97,5 +102,8 @@ FOUNDATION_EXPORT id HC_lessThanOrEqualTo(id value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_lessThanOrEqualTo instead.
  */
-#define lessThanOrEqualTo HC_lessThanOrEqualTo
+static inline id lessThanOrEqualTo(id value)
+{
+    return HC_lessThanOrEqualTo(value);
+}
 #endif

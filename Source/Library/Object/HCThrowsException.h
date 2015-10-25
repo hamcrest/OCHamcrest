@@ -18,9 +18,8 @@ FOUNDATION_EXPORT id HC_throwsException(id exceptionMatcher);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract throwsException(exceptionMatcher) -
- * Creates a matcher that matches when the examined object is a block which, when executed, throws
- * an exception satisfying the specified matcher.
+ * @abstract Creates a matcher that matches when the examined object is a block which, when
+ * executed, throws an exception satisfying the specified matcher.
  * @param exceptionMatcher The matcher to satisfy when passed the exception.
  * @discussion
  * <b>Example</b><br />
@@ -30,5 +29,8 @@ FOUNDATION_EXPORT id HC_throwsException(id exceptionMatcher);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_throwsException instead.
  */
-#define throwsException HC_throwsException
+static inline id throwsException(id exceptionMatcher)
+{
+    return HC_throwsException(exceptionMatcher);
+}
 #endif

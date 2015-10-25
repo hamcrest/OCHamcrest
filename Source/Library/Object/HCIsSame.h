@@ -18,9 +18,8 @@ FOUNDATION_EXPORT id HC_sameInstance(id expectedInstance);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract sameInstance(expectedInstance) -
- * Creates a matcher that matches only when the examined object is the same instance as the
- * specified target object.
+ * @abstract Creates a matcher that matches only when the examined object is the same instance as
+ * the specified target object.
  * @param expectedInstance The expected instance.
  * @discussion
  * <b>Example</b><br />
@@ -30,5 +29,8 @@ FOUNDATION_EXPORT id HC_sameInstance(id expectedInstance);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_sameInstance instead.
  */
-#define sameInstance HC_sameInstance
+static inline id sameInstance(id expectedInstance)
+{
+    return HC_sameInstance(expectedInstance);
+}
 #endif

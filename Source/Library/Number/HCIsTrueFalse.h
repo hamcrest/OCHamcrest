@@ -27,7 +27,10 @@ FOUNDATION_EXPORT id HC_isTrue(void);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_isTrue instead.
  */
-#define isTrue() HC_isTrue()
+static inline id isTrue(void)
+{
+    return HC_isTrue();
+}
 #endif
 
 
@@ -41,5 +44,8 @@ FOUNDATION_EXPORT id HC_isFalse(void);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_isFalse instead.
 */
-#define isFalse() HC_isFalse()
+static inline id isFalse(void)
+{
+    return HC_isFalse();
+}
 #endif

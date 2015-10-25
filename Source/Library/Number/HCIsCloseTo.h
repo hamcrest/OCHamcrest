@@ -18,9 +18,8 @@ FOUNDATION_EXPORT id HC_closeTo(double value, double delta);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract closeTo(value, delta) -
- * Creates a matcher for NSNumbers that matches when the examined number is close to the specified
- * value, within the specified delta.
+ * @abstract Creates a matcher for NSNumbers that matches when the examined number is close to the
+ * specified value, within the specified delta.
  * @param value The expected value of matching numbers.
  * @param delta The delta within which matches will be allowed.
  * @discussion Invokes <code>-doubleValue</code> on the examined number to get its value.
@@ -32,5 +31,8 @@ FOUNDATION_EXPORT id HC_closeTo(double value, double delta);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_closeTo instead.
  */
-#define closeTo HC_closeTo
+static inline id closeTo(double value, double delta)
+{
+    return HC_closeTo(value, delta);
+}
 #endif

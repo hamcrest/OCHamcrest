@@ -35,7 +35,6 @@ FOUNDATION_EXPORT id HC_containsInAnyOrder(id itemMatchers, ...) NS_REQUIRES_NIL
  *
  * <b>Examples</b><br />
  * <pre>assertThat(@[@"foo", @"bar"], containsInAnyOrder(equalTo(@"bar"), equalTo(@"foo")))</pre>
- *
  * <pre>assertThat(@[@"foo", @"bar"], containsInAnyOrder(@"bar", @"foo"))</pre>
  *
  * <b>Name Clash</b><br />

@@ -31,7 +31,6 @@ FOUNDATION_EXPORT id HC_hasEntries(id keysAndValueMatch, ...) NS_REQUIRES_NIL_TE
  *
  * <b>Examples</b><br />
  * <pre>assertThat(personDict, hasEntries(@"firstName", equalTo(@"Jon"), @"lastName", equalTo(@"Reid"), nil))</pre>
- *
  * <pre>assertThat(personDict, hasEntries(@"firstName", @"Jon", @"lastName", @"Reid", nil))</pre>
  *
  * <b>Name Clash</b><br />

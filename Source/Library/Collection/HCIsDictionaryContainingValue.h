@@ -29,7 +29,6 @@ FOUNDATION_EXPORT id HC_hasValue(id valueMatcher);
  *
  * <b>Examples</b><br />
  * <pre>assertThat(myDictionary, hasValue(equalTo(@"bar")))</pre>
- *
  * <pre>assertThat(myDictionary, hasValue(@"bar"))<pre>
  *
  * <b>Name Clash</b><br />

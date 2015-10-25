@@ -18,10 +18,9 @@ FOUNDATION_EXPORT id HC_equalTo(id operand);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract equalTo(operand) -
- * Creates a matcher that matches when the examined object is equal to the specified object, as
- * determined by calling the <code>-isEqual:</code> method on the <b>examined</b> object.
- * @param anObject The object to compare against as the expected value.
+ * @abstract Creates a matcher that matches when the examined object is equal to the specified
+ * object, as determined by calling the <code>-isEqual:</code> method on the <b>examined</b> object.
+ * @param operand The object to compare against as the expected value.
  * @discussion If the specified operand is <code>nil</code>, then the created matcher will match if
  * the examined object itself is <code>nil</code>, or if the examined object's <code>-isEqual:</code>
  * method returns <code>YES</code> when passed a <code>nil</code>.
@@ -30,5 +29,8 @@ FOUNDATION_EXPORT id HC_equalTo(id operand);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalTo instead.
  */
-#define equalTo HC_equalTo
+static inline id equalTo(id operand)
+{
+    return HC_equalTo(operand);
+}
 #endif

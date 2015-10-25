@@ -68,7 +68,7 @@
 @end
 
 
-id HC_everyItem(id itemMatcher)
+id HC_everyItem(id <HCMatcher> itemMatcher)
 {
     return [[HCEvery alloc] initWithMatcher:itemMatcher];
 }

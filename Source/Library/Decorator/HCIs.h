@@ -14,23 +14,23 @@
 @end
 
 
-FOUNDATION_EXPORT id HC_is(id match);
+FOUNDATION_EXPORT id HC_is(id value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract is(aMatcher) -
- * Wraps an existing matcher, or provides a shortcut to the frequently used <code>is(equalTo(x))</code>.
- * @param aMatcher The matcher to satisfy, or an expected value for <em>equalTo</em> matching.
+ * @abstract Wraps an existing matcher, or provides a shortcut to the frequently
+ * used <code>is(equalTo(x))</code>.
+ * @param value The matcher to satisfy, or an expected value for <em>equalTo</em> matching.
  * @discussion
- * If <em>aMatcher</em>is a matcher, its behavior is retained, but the test may be slightly more
+ * If <em>value</em>is a matcher, its behavior is retained, but the test may be slightly more
  * expressive. For example:
  * <ul>
  *   <li><code>assertThat(\@(value), equalTo(\@5))</code></li>
  *   <li><code>assertThat(\@(value), is(equalTo(\@5)))</code></li>
  * </ul>
  *
- * If <em>aMatcher</em>is not a matcher, it is wrapped in an <em>equalTo</em> matcher. This makes
- * the following statements equivalent:
+ * If <em>value</em>is not a matcher, it is wrapped in an <em>equalTo</em> matcher. This makes the
+ * following statements equivalent:
  * <ul>
  *   <li><code>assertThat(cheese, equalTo(smelly))</code></li>
  *   <li><code>assertThat(cheese, is(equalTo(smelly)))</code></li>
@@ -43,5 +43,8 @@ FOUNDATION_EXPORT id HC_is(id match);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_is instead.
  */
-#define is HC_is
+static inline id is(id value)
+{
+    return HC_is(value);
+}
 #endif
