@@ -41,6 +41,14 @@
     assertDoesNotMatch(@"didn't fail middle sub-matcher", matcher, @"goon");
 }
 
+- (void)testAllOfInArray_EvaluatesToTheTheLogicalConjunctionOfManyOtherMatchers
+{
+    id matcher = allOfIn(@[startsWith(@"g"), startsWith(@"go"), endsWith(@"d"), startsWith(@"go"), startsWith(@"goo")]);
+
+    assertMatches(@"didn't pass all sub-matchers", matcher, @"good");
+    assertDoesNotMatch(@"didn't fail middle sub-matcher", matcher, @"goon");
+}
+
 - (void)testProvidesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"both matchers", allOf(@"good", @"good", nil), @"good");

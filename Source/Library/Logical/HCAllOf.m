@@ -42,6 +42,11 @@
 @end
 
 
+id hc_allOfIn(NSArray *matchers)
+{
+    return [[HCAllOf alloc] initWithMatchers:HCWrapIntoMatchers(matchers)];
+}
+
 id HC_allOf(id matchers, ...)
 {
     va_list args;

@@ -16,6 +16,30 @@
 @end
 
 
+FOUNDATION_EXPORT id hc_allOfIn(NSArray *matchers);
+
+#ifndef HC_DISABLE_SHORT_SYNTAX
+/*!
+ * @abstract Creates a matcher that matches when the examined object matches <b>all</b> of the
+ * specified matchers.
+ * @param matchers An array of matchers.
+ * @discussion Any item in <em>matchers</em> that is not a matcher is implicitly wrapped in
+ * an <em>equalTo</em> matcher to check for equality.
+ *
+ * <b>Example</b><br />
+ * <pre>assertThat(@"myValue", allOfIn(@[startsWith(\@"my"), containsSubstring(\@"Val")]))</pre>
+ *
+ * <b>Name Clash</b><br />
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
+ * hc_allOfIn instead.
+ */
+static inline id allOfIn(NSArray *matchers)
+{
+    return hc_allOfIn(matchers);
+}
+#endif
+
+
 FOUNDATION_EXPORT id HC_allOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
