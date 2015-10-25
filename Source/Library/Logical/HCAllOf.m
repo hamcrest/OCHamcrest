@@ -16,7 +16,7 @@
 {
     self = [super init];
     if (self)
-        _matchers = [matchers copy];
+        _matchers = [HCWrapIntoMatchers(matchers) copy];
     return self;
 }
 
@@ -44,15 +44,14 @@
 
 id hc_allOfIn(NSArray *matchers)
 {
-    return [[HCAllOf alloc] initWithMatchers:HCWrapIntoMatchers(matchers)];
+    return [[HCAllOf alloc] initWithMatchers:matchers];
 }
 
 id HC_allOf(id matchers, ...)
 {
     va_list args;
     va_start(args, matchers);
-    NSArray *matcherList = HCCollectMatchers(matchers, args);
+    NSArray *array = HCCollectItems(matchers, args);
     va_end(args);
-
-    return [[HCAllOf alloc] initWithMatchers:matcherList];
+    return hc_allOfIn(array);
 }
