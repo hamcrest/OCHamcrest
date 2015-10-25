@@ -3,9 +3,10 @@ NEXT RELEASE (Compatibility-breaking)
 
 **Deleted:**
 
-- `equalToBool` matcher (deprecated in v4.1.0)
-- `containsString` matcher (deprecated in v4.2.0)
-- `HC_testFailureHandlerChain()` (deprecated in v4.2.0)
+- `equalToBool` matcher
+- `containsString` matcher
+- `assertThatAfter`/`futureValueOf`
+- `HC_testFailureHandlerChain()`
 
 
 Version 4.3.2

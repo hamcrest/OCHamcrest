@@ -74,29 +74,6 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
     XCTAssertTrue(waitTime < maxTime, @"Expect assert to terminate before timeout, but was %lf", waitTime);
 }
 
-- (void)testDeprecatedAssertThatAfter_WithTimeoutGreaterThanZeroShouldSucceedNotImmediatelyButBeforeTimeout
-{
-    NSTimeInterval maxTime = 1.0;
-    NSTimeInterval succeedTime = 0.2;
-    __block NSString *futureBar = @"foo";
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(succeedTime * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
-        futureBar = @"bar";
-    });
-
-    NSTimeInterval waitTime = [self timeExecutingBlock:^{
-        @try {
-            assertThatAfter(maxTime, futureValueOf(futureBar), equalTo(@"bar"));
-        }
-        @catch (NSException *exception) {
-            XCTFail(@"should have succeeded");
-        }
-    }];
-
-    XCTAssertTrue(waitTime > succeedTime, @"Expect assert to terminate after value is changed, but was %lf", waitTime);
-    XCTAssertTrue(waitTime < maxTime, @"Expect assert to terminate before timeout, but was %lf", waitTime);
-}
-
 - (NSTimeInterval)timeExecutingBlock:(void (^)())block
 {
     NSDate *initialDate = [NSDate date];
