@@ -39,5 +39,5 @@ NSArray *HCWrapIntoMatchers(NSArray *items)
     NSMutableArray *matchers = [[NSMutableArray alloc] init];
     for (id item in items)
         [matchers addObject:HCWrapInMatcher(item)];
-    return [matchers copy];
+    return matchers;
 }
