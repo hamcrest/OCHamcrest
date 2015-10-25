@@ -17,7 +17,7 @@
 
 FOUNDATION_EXPORT id HC_sameInstance(id expectedInstance);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract sameInstance(expectedInstance) -
  * Creates a matcher that matches only when the examined object is the same instance as the
@@ -28,7 +28,7 @@ FOUNDATION_EXPORT id HC_sameInstance(id expectedInstance);
  * <pre>assertThat(delegate, sameInstance(expectedDelegate))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_sameInstance instead.
  */
 #define sameInstance HC_sameInstance

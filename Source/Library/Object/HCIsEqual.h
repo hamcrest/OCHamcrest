@@ -17,7 +17,7 @@
 
 FOUNDATION_EXPORT id HC_equalTo(id operand);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalTo(operand) -
  * Creates a matcher that matches when the examined object is equal to the specified object, as
@@ -28,7 +28,7 @@ FOUNDATION_EXPORT id HC_equalTo(id operand);
  * method returns <code>YES</code> when passed a <code>nil</code>.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalTo instead.
  */
 #define equalTo HC_equalTo

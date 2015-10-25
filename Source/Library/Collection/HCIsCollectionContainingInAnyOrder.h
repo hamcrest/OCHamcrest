@@ -17,7 +17,7 @@
 
 FOUNDATION_EXPORT id HC_containsInAnyOrder(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract containsInAnyOrder(itemMatchers, ...) -
  * Creates an order-agnostic matcher for collections that matches when each item in the examined
@@ -40,7 +40,7 @@ FOUNDATION_EXPORT id HC_containsInAnyOrder(id itemMatchers, ...) NS_REQUIRES_NIL
  * <pre>assertThat(@[@"foo", @"bar"], containsInAnyOrder(@"bar", @"foo"))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_containsInAnyOrder instead.
  */
 #define containsInAnyOrder HC_containsInAnyOrder

@@ -21,7 +21,7 @@
 
 FOUNDATION_EXPORT id HC_hasEntries(id keysAndValueMatch, ...) NS_REQUIRES_NIL_TERMINATION;
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract hasEntries(firstKey, valueMatcher, ...) -
  * Creates a matcher for NSDictionaries that matches when the examined dictionary contains entries
@@ -38,7 +38,7 @@ FOUNDATION_EXPORT id HC_hasEntries(id keysAndValueMatch, ...) NS_REQUIRES_NIL_TE
  * <pre>assertThat(personDict, hasEntries(@"firstName", @"Jon", @"lastName", @"Reid", nil))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasEntry instead.
  */
 #define hasEntries HC_hasEntries

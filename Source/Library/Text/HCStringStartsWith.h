@@ -16,7 +16,7 @@
 
 FOUNDATION_EXPORT id HC_startsWith(NSString *prefix);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract startsWith(prefix) -
  * Creates a matcher that matches when the examined object is a string that starts with the
@@ -30,7 +30,7 @@ FOUNDATION_EXPORT id HC_startsWith(NSString *prefix);
  * <pre>assertThat(@"myStringOfNote", startsWith(@"my"))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_startsWith instead.
  */
 #define startsWith HC_startsWith

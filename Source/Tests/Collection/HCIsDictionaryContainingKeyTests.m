@@ -1,7 +1,6 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 
-#define HC_SHORTHAND
 #import <OCHamcrest/HCIsDictionaryContainingKey.h>
 
 #import <OCHamcrest/HCIsEqual.h>

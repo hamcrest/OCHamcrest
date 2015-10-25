@@ -54,5 +54,5 @@ id HC_allOf(id matchers, ...)
     NSArray *matcherList = HCCollectMatchers(matchers, args);
     va_end(args);
 
-    return [HCAllOf allOf:matcherList];
+    return [[HCAllOf alloc] initWithMatchers:matcherList];
 }

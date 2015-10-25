@@ -17,7 +17,7 @@
 
 FOUNDATION_EXPORT id HC_hasKey(id keyMatcher);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract hasKey(keyMatcher) -
  * Creates a matcher for NSDictionaries that matches when the examined dictionary contains at least
@@ -32,7 +32,7 @@ FOUNDATION_EXPORT id HC_hasKey(id keyMatcher);
  * <pre>assertThat(myDictionary, hasEntry(@"foo"))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasKey instead.
  */
 #define hasKey HC_hasKey

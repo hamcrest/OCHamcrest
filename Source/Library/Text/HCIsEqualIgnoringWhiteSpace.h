@@ -17,7 +17,7 @@
 
 FOUNDATION_EXPORT id HC_equalToIgnoringWhiteSpace(NSString *expectedString);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToIgnoringWhiteSpace(expectedString) -
  * Creates a matcher for NSStrings that matches when the examined string is equal to the specified
@@ -33,7 +33,7 @@ FOUNDATION_EXPORT id HC_equalToIgnoringWhiteSpace(NSString *expectedString);
  * <pre>assertThat(@"   my\tfoo  bar ", equalToIgnoringWhiteSpace(@" my  foo bar"))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToIgnoringWhiteSpace instead.
  */
 #define equalToIgnoringWhiteSpace HC_equalToIgnoringWhiteSpace

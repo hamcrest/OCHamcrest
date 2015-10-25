@@ -17,7 +17,7 @@
 
 FOUNDATION_EXPORT id HC_isNot(id matcher);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract isNot(matcher) -
  * Creates a matcher that wraps an existing matcher, but inverts the logic by which it will match.
@@ -31,7 +31,7 @@ FOUNDATION_EXPORT id HC_isNot(id matcher);
  * <pre>assertThat(cheese, isNot(smelly))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_isNot instead.
  */
 #define isNot HC_isNot

@@ -20,7 +20,7 @@
 
 FOUNDATION_EXPORT id HC_hasEntry(id keyMatcher, id valueMatcher);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract hasEntry(keyMatcher, valueMatcher) -
  * Creates a matcher for NSDictionaries that matches when the examined dictionary contains at least
@@ -37,7 +37,7 @@ FOUNDATION_EXPORT id HC_hasEntry(id keyMatcher, id valueMatcher);
  * <pre>assertThat(myDictionary, hasEntry(@"foo", @"bar"))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasEntry instead.
  */
 #define hasEntry HC_hasEntry

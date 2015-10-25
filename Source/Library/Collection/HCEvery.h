@@ -18,7 +18,7 @@
 
 FOUNDATION_EXPORT id HC_everyItem(id itemMatcher);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract everyItem(itemMatcher) -
  * Creates a matcher for collections that matches when the examined collection's items are all
@@ -31,7 +31,7 @@ FOUNDATION_EXPORT id HC_everyItem(id itemMatcher);
  * <pre>assertThat(@[@"bar", @"baz"], everyItem(startsWith(@"ba")))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_everyItem instead.
  */
 #define everyItem HC_everyItem

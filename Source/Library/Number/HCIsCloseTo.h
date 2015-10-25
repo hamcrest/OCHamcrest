@@ -17,7 +17,7 @@
 
 FOUNDATION_EXPORT id HC_closeTo(double value, double delta);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract closeTo(value, delta) -
  * Creates a matcher for NSNumbers that matches when the examined number is close to the specified
@@ -30,7 +30,7 @@ FOUNDATION_EXPORT id HC_closeTo(double value, double delta);
  * <pre>assertThat(@1.03, closeTo(1.0, 0.03)</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_closeTo instead.
  */
 #define closeTo HC_closeTo

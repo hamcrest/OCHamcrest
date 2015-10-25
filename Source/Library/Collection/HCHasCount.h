@@ -9,7 +9,6 @@
  */
 @interface HCHasCount : HCBaseMatcher
 
-+ (instancetype)hasCount:(id <HCMatcher>)countMatcher;
 - (instancetype)initWithCount:(id <HCMatcher>)countMatcher;
 
 @end
@@ -17,7 +16,7 @@
 
 FOUNDATION_EXPORT id HC_hasCount(id <HCMatcher> countMatcher);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract hasCount(countMatcher) -
  * Creates a matcher that matches when the examined object's <code>-count</code> method returns a
@@ -28,7 +27,7 @@ FOUNDATION_EXPORT id HC_hasCount(id <HCMatcher> countMatcher);
  * </code>assertThat(\@[\@"foo", \@"bar"], hasCount(equalTo(\@2)))</code>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasCount instead.
  */
 #define hasCount HC_hasCount
@@ -37,7 +36,7 @@ FOUNDATION_EXPORT id HC_hasCount(id <HCMatcher> countMatcher);
 
 FOUNDATION_EXPORT id HC_hasCountOf(NSUInteger count);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract hasCountOf(value) -
  * Creates a matcher that matches when the examined object's <code>-count</code> method returns a
@@ -48,7 +47,7 @@ FOUNDATION_EXPORT id HC_hasCountOf(NSUInteger count);
  * </code>assertThat(\@[\@"foo", \@"bar"], hasCountOf(2))</code>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasCountOf instead.
  */
 #define hasCountOf HC_hasCountOf

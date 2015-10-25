@@ -17,7 +17,7 @@
 
 FOUNDATION_EXPORT id HC_hasDescription(id descriptionMatcher);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract hasDescription(descriptionMatcher) -
  * Creates a matcher that matches when the examined object's <code>-description</code> satisfies the
@@ -33,7 +33,7 @@ FOUNDATION_EXPORT id HC_hasDescription(id descriptionMatcher);
  * <pre>assertThat(myObject, hasDescription(@"foo"))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasDescription instead.
  */
 #define hasDescription HC_hasDescription

@@ -2,7 +2,6 @@
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 
     // System under test
-#define HC_SHORTHAND
 #import <OCHamcrest/HCIsTrueFalse.h>
 
 #import "MatcherTestCase.h"

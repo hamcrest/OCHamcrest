@@ -18,7 +18,7 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
 #define HC_assertThat(actual, matcher)  \
     HC_assertThatWithLocation(self, actual, matcher, __FILE__, __LINE__)
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract assertThat(actual, matcher) -
  * Asserts that actual value satisfies matcher.
@@ -31,7 +31,7 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
  * frameworks where individual tests are executed as methods.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThat instead.
  */
 #define assertThat HC_assertThat
@@ -50,7 +50,7 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
 
 #define HC_thatEventually(actual) ^{ return actual; }
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract assertWithTimeout(timeout, actualBlock, matcher) -
  * Asserts that a value provided by a block will satisfy matcher within the specified time.
@@ -65,7 +65,7 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
  * An easy way of providing the <em>actualBlock</em> is to use the macro @ref thatEventually</code>.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertWithTimeout instead.
 */
 #define assertWithTimeout HC_assertWithTimeout
@@ -77,7 +77,7 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
  * @param actual The object to evaluate as the actual value.
  * @discussion Wraps <em>actual</em> in a block so that it can be repeatedly evaluated by @ref assertWithTimeout.
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_thatEventually instead.
  */
 #define thatEventually HC_thatEventually

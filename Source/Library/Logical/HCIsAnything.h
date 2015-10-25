@@ -20,12 +20,12 @@
 
 FOUNDATION_EXPORT id HC_anything(void);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract Creates a matcher that always matches, regardless of the examined object.
  * @discussion
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_anything instead.
  */
 #define anything() HC_anything()
@@ -34,7 +34,7 @@ FOUNDATION_EXPORT id HC_anything(void);
 
 FOUNDATION_EXPORT id HC_anythingWithDescription(NSString *description);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract anythingWithDescription(description) -
  * Creates a matcher that matches anything, regardless of the examined object, but describes itself
@@ -42,7 +42,7 @@ FOUNDATION_EXPORT id HC_anythingWithDescription(NSString *description);
  * @param description A meaningful string used to describe this matcher.
  * @discussion
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_anything instead.
  */
 #define anythingWithDescription HC_anythingWithDescription

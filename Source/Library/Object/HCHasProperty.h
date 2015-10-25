@@ -18,7 +18,7 @@
 
 FOUNDATION_EXPORT id HC_hasProperty(NSString *propertyName, id valueMatcher);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract hasProperty(propertyName, valueMatcher) -
  * Creates a matcher that matches when the examined object has an instance method with the specified
@@ -35,8 +35,8 @@ FOUNDATION_EXPORT id HC_hasProperty(NSString *propertyName, id valueMatcher);
  * <pre>assertThat(person, hasProperty(@"firstName", @"Joe"))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasProperty instead.
  */
-    #define hasProperty HC_hasProperty
+#define hasProperty HC_hasProperty
 #endif

@@ -2,7 +2,6 @@
 //  Copyright 2015 hamcrest.org. See LICENSE.txt
 //  Contribution by Justin Shacklette
 
-#define HC_SHORTHAND
 #import <OCHamcrest/HCHasProperty.h>
 
 #import <OCHamcrest/HCIsEqual.h>

@@ -16,7 +16,7 @@
 
 FOUNDATION_EXPORT id HC_throwsException(id exceptionMatcher);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract throwsException(exceptionMatcher) -
  * Creates a matcher that matches when the examined object is a block which, when executed, throws
@@ -27,7 +27,7 @@ FOUNDATION_EXPORT id HC_throwsException(id exceptionMatcher);
  * <pre>assertThat(^{ [obj somethingBad]; }, throwsException(anything())</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_throwsException instead.
  */
 #define throwsException HC_throwsException

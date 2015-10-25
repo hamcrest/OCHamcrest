@@ -19,7 +19,7 @@
 
 FOUNDATION_EXPORT id HC_anyOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract anyOf(matchers, ...) -
  * Creates a matcher that matches when the examined object matches <b>any</b> of the specified matchers.
@@ -31,7 +31,7 @@ FOUNDATION_EXPORT id HC_anyOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
  * <pre>assertThat(@"myValue", allOf(startsWith(@"foo"), containsSubstring(@"Val"), nil))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_anyOf instead.
  */
 #define anyOf HC_anyOf

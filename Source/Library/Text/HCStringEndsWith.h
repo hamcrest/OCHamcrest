@@ -16,7 +16,7 @@
 
 FOUNDATION_EXPORT id HC_endsWith(NSString *suffix);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract endsWith(suffix) -
  * Creates a matcher that matches when the examined object is a string that ends with the specified
@@ -30,7 +30,7 @@ FOUNDATION_EXPORT id HC_endsWith(NSString *suffix);
  * <pre>assertThat(@"myStringOfNote", endsWith(@"Note"))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_endsWith instead.
  */
 #define endsWith HC_endsWith

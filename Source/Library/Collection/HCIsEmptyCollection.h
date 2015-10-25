@@ -17,7 +17,7 @@
 
 FOUNDATION_EXPORT id HC_isEmpty(void);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract Creates a matcher that matches any examined object whose <code>-count</code> method
  * returns an NSNumber of zero.
@@ -26,7 +26,7 @@ FOUNDATION_EXPORT id HC_isEmpty(void);
  * <pre>assertThat(@[], isEmpty())</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_isEmpty instead.
  */
 #define isEmpty() HC_isEmpty()

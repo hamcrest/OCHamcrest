@@ -30,5 +30,5 @@ id HC_onlyContains(id itemMatchers, ...)
     NSArray *matchers = HCCollectMatchers(itemMatchers, args);
     va_end(args);
 
-    return [HCIsCollectionOnlyContaining isCollectionOnlyContaining:[HCAnyOf anyOf:matchers]];
+    return [HCIsCollectionOnlyContaining isCollectionOnlyContaining:[[HCAnyOf alloc] initWithMatchers:matchers]];
 }

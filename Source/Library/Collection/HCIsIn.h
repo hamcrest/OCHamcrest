@@ -17,7 +17,7 @@
 
 FOUNDATION_EXPORT id HC_isIn(id aCollection);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract isIn(aCollection) -
  * Creates a matcher that matches when the examined object is found within the specified collection.
@@ -29,7 +29,7 @@ FOUNDATION_EXPORT id HC_isIn(id aCollection);
  * <pre>assertThat(@"foo", isIn(@[@"bar", @"foo"]))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_isIn instead.
  */
 #define isIn HC_isIn

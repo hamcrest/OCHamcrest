@@ -6,7 +6,7 @@
 
 FOUNDATION_EXPORT id HC_equalToChar(char value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToChar(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -15,7 +15,7 @@ FOUNDATION_EXPORT id HC_equalToChar(char value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToChar instead.
  */
 #define equalToChar HC_equalToChar
@@ -24,7 +24,7 @@ FOUNDATION_EXPORT id HC_equalToChar(char value);
 
 FOUNDATION_EXPORT id HC_equalToDouble(double value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToDouble(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -33,7 +33,7 @@ FOUNDATION_EXPORT id HC_equalToDouble(double value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToDouble instead.
  */
 #define equalToDouble HC_equalToDouble
@@ -42,7 +42,7 @@ FOUNDATION_EXPORT id HC_equalToDouble(double value);
 
 FOUNDATION_EXPORT id HC_equalToFloat(float value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToFloat(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -51,7 +51,7 @@ FOUNDATION_EXPORT id HC_equalToFloat(float value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToFloat instead.
  */
 #define equalToFloat HC_equalToFloat
@@ -60,7 +60,7 @@ FOUNDATION_EXPORT id HC_equalToFloat(float value);
 
 FOUNDATION_EXPORT id HC_equalToInt(int value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToInt(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -69,7 +69,7 @@ FOUNDATION_EXPORT id HC_equalToInt(int value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToInt instead.
  */
 #define equalToInt HC_equalToInt
@@ -78,7 +78,7 @@ FOUNDATION_EXPORT id HC_equalToInt(int value);
 
 FOUNDATION_EXPORT id HC_equalToLong(long value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToLong(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -87,7 +87,7 @@ FOUNDATION_EXPORT id HC_equalToLong(long value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToLong instead.
  */
 #define equalToLong HC_equalToLong
@@ -96,7 +96,7 @@ FOUNDATION_EXPORT id HC_equalToLong(long value);
 
 FOUNDATION_EXPORT id HC_equalToLongLong(long long value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToLongLong(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -105,7 +105,7 @@ FOUNDATION_EXPORT id HC_equalToLongLong(long long value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToLongLong instead.
  */
 #define equalToLongLong HC_equalToLongLong
@@ -114,7 +114,7 @@ FOUNDATION_EXPORT id HC_equalToLongLong(long long value);
 
 FOUNDATION_EXPORT id HC_equalToShort(short value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToShort(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -123,7 +123,7 @@ FOUNDATION_EXPORT id HC_equalToShort(short value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToShort instead.
  */
 #define equalToShort HC_equalToShort
@@ -132,7 +132,7 @@ FOUNDATION_EXPORT id HC_equalToShort(short value);
 
 FOUNDATION_EXPORT id HC_equalToUnsignedChar(unsigned char value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToUnsignedChar(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -141,7 +141,7 @@ FOUNDATION_EXPORT id HC_equalToUnsignedChar(unsigned char value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToUnsignedChar instead.
  */
 #define equalToUnsignedChar HC_equalToUnsignedChar
@@ -150,7 +150,7 @@ FOUNDATION_EXPORT id HC_equalToUnsignedChar(unsigned char value);
 
 FOUNDATION_EXPORT id HC_equalToUnsignedInt(unsigned int value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToUnsignedInt(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -159,7 +159,7 @@ FOUNDATION_EXPORT id HC_equalToUnsignedInt(unsigned int value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToUnsignedInt instead.
  */
 #define equalToUnsignedInt HC_equalToUnsignedInt
@@ -168,7 +168,7 @@ FOUNDATION_EXPORT id HC_equalToUnsignedInt(unsigned int value);
 
 FOUNDATION_EXPORT id HC_equalToUnsignedLong(unsigned long value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToUnsignedLong(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -177,7 +177,7 @@ FOUNDATION_EXPORT id HC_equalToUnsignedLong(unsigned long value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToUnsignedLong instead.
  */
 #define equalToUnsignedLong HC_equalToUnsignedLong
@@ -186,7 +186,7 @@ FOUNDATION_EXPORT id HC_equalToUnsignedLong(unsigned long value);
 
 FOUNDATION_EXPORT id HC_equalToUnsignedLongLong(unsigned long long value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToUnsignedLongLong(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -195,7 +195,7 @@ FOUNDATION_EXPORT id HC_equalToUnsignedLongLong(unsigned long long value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToUnsignedLongLong instead.
  */
 #define equalToUnsignedLongLong HC_equalToUnsignedLongLong
@@ -204,7 +204,7 @@ FOUNDATION_EXPORT id HC_equalToUnsignedLongLong(unsigned long long value);
 
 FOUNDATION_EXPORT id HC_equalToUnsignedShort(unsigned short value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToUnsignedShort(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -213,7 +213,7 @@ FOUNDATION_EXPORT id HC_equalToUnsignedShort(unsigned short value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToUnsignedShort instead.
  */
 #define equalToUnsignedShort HC_equalToUnsignedShort
@@ -222,7 +222,7 @@ FOUNDATION_EXPORT id HC_equalToUnsignedShort(unsigned short value);
 
 FOUNDATION_EXPORT id HC_equalToInteger(NSInteger value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToInteger(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -231,7 +231,7 @@ FOUNDATION_EXPORT id HC_equalToInteger(NSInteger value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToInteger instead.
  */
 #define equalToInteger HC_equalToInteger
@@ -240,7 +240,7 @@ FOUNDATION_EXPORT id HC_equalToInteger(NSInteger value);
 
 FOUNDATION_EXPORT id HC_equalToUnsignedInteger(NSUInteger value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract equalToUnsignedInteger(value) -
  * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
@@ -249,7 +249,7 @@ FOUNDATION_EXPORT id HC_equalToUnsignedInteger(NSUInteger value);
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToUnsignedInteger instead.
  */
 #define equalToUnsignedInteger HC_equalToUnsignedInteger

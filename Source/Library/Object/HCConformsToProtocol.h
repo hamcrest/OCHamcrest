@@ -18,7 +18,7 @@
 
 FOUNDATION_EXPORT id HC_conformsTo(Protocol *aProtocol);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract conformsTo(aProtocol) -
  * Creates a matcher that matches when the examined object conforms to the specified protocol.
@@ -28,7 +28,7 @@ FOUNDATION_EXPORT id HC_conformsTo(Protocol *aProtocol);
  * <pre>assertThat(myObject, conformsTo(@protocol(NSCoding))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_conformsTo instead.
  */
 #define conformsTo HC_conformsTo

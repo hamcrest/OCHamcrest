@@ -24,7 +24,7 @@
 
 FOUNDATION_EXPORT id HC_greaterThan(id value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract greaterThan(value) -
  * Creates a matcher that matches when the examined object is greater than the specified value, as
@@ -36,7 +36,7 @@ FOUNDATION_EXPORT id HC_greaterThan(id value);
  * <pre>assertThat(@2, greaterThan(@1))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_greaterThan instead.
  */
 #define greaterThan HC_greaterThan
@@ -45,7 +45,7 @@ FOUNDATION_EXPORT id HC_greaterThan(id value);
 
 FOUNDATION_EXPORT id HC_greaterThanOrEqualTo(id value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract greaterThanOrEqualTo(value) -
  * Creates a matcher that matches when the examined object is greater than or equal to the specified
@@ -57,7 +57,7 @@ FOUNDATION_EXPORT id HC_greaterThanOrEqualTo(id value);
  * <pre>assertThat(@1, greaterThan(@1))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_greaterThanOrEqualTo instead.
  */
 #define greaterThanOrEqualTo HC_greaterThanOrEqualTo
@@ -66,7 +66,7 @@ FOUNDATION_EXPORT id HC_greaterThanOrEqualTo(id value);
 
 FOUNDATION_EXPORT id HC_lessThan(id value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract lessThan(value) -
  * Creates a matcher that matches when the examined object is less than the specified value, as
@@ -78,7 +78,7 @@ FOUNDATION_EXPORT id HC_lessThan(id value);
  * <pre>assertThat(@1, lessThan(@2))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_lessThan instead.
  */
 #define lessThan HC_lessThan
@@ -87,7 +87,7 @@ FOUNDATION_EXPORT id HC_lessThan(id value);
 
 FOUNDATION_EXPORT id HC_lessThanOrEqualTo(id value);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract lessThanOrEqualTo(value) -
  * Creates a matcher that matches when the examined object is less than or equal to the specified
@@ -99,7 +99,7 @@ FOUNDATION_EXPORT id HC_lessThanOrEqualTo(id value);
  * <pre>assertThat(@1, lessThanOrEqualTo(@1))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_lessThanOrEqualTo instead.
  */
 #define lessThanOrEqualTo HC_lessThanOrEqualTo

@@ -17,7 +17,7 @@
 
 FOUNDATION_EXPORT id HC_hasItem(id itemMatcher);
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract hasItem(itemMatcher) -
  * Creates a matcher for collections that matches when at least one item in the examined collection
@@ -36,7 +36,7 @@ FOUNDATION_EXPORT id HC_hasItem(id itemMatcher);
  * <pre>assertThat(@[@1, @2, @3], hasItem(@2))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasItem instead.
  */
 #define hasItem HC_hasItem
@@ -45,7 +45,7 @@ FOUNDATION_EXPORT id HC_hasItem(id itemMatcher);
 
 FOUNDATION_EXPORT id HC_hasItems(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract hasItems(itemMatchers, ...) -
  * Creates a matcher for collections that matches when all specified matchers are satisfied by any
@@ -61,7 +61,7 @@ FOUNDATION_EXPORT id HC_hasItems(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATI
  * <pre>assertThat(@[@"foo", @"bar", @"baz"], hasItems(endsWith(@"z"), endsWith(@"o")))</pre>
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasItems instead.
  */
 #define hasItems HC_hasItems

@@ -22,7 +22,7 @@
 
 FOUNDATION_EXPORT id HC_describedAs(NSString *description, id <HCMatcher> matcher, ...) NS_REQUIRES_NIL_TERMINATION;
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract describedAs(description, matcher, ...) -
  * Wraps an existing matcher, overriding its description with that specified. All other functions
@@ -34,7 +34,7 @@ FOUNDATION_EXPORT id HC_describedAs(NSString *description, id <HCMatcher> matche
  * replaced by any values that follow the matcher.
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_describedAs instead.
  */
 #define describedAs HC_describedAs

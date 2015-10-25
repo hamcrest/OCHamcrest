@@ -17,7 +17,7 @@
 
 FOUNDATION_EXPORT id HC_stringContainsInOrder(NSString *substrings, ...) NS_REQUIRES_NIL_TERMINATION;
 
-#ifdef HC_SHORTHAND
+#ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
  * @abstract stringContainsInOrder(substrings, ...) -
  * Creates matcher for NSStrings that matches when the examined string contains all of
@@ -30,7 +30,7 @@ FOUNDATION_EXPORT id HC_stringContainsInOrder(NSString *substrings, ...) NS_REQU
  * fails as "foo" occurs before "bar" in the string "myfoobarbaz"
  *
  * <b>Name Clash</b><br />
- * In the event of a name clash, don't <code>#define HC_SHORTHAND</code> and use the synonym
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_stringContainsInOrder instead.
  */
 #define stringContainsInOrder HC_stringContainsInOrder
