@@ -9,7 +9,6 @@
  */
 @interface HCIsDictionaryContainingKey : HCBaseMatcher
 
-+ (instancetype)isDictionaryContainingKey:(id <HCMatcher>)keyMatcher;
 - (instancetype)initWithKeyMatcher:(id <HCMatcher>)keyMatcher;
 
 @end

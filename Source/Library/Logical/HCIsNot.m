@@ -12,12 +12,7 @@
 
 @implementation HCIsNot
 
-+ (instancetype)isNot:(id <HCMatcher>)matcher
-{
-    return [[self alloc] initNot:matcher];
-}
-
-- (instancetype)initNot:(id <HCMatcher>)matcher
+- (instancetype)initWithMatcher:(id <HCMatcher>)matcher
 {
     self = [super init];
     if (self)
@@ -44,5 +39,5 @@
 
 id HC_isNot(id matcher)
 {
-    return [HCIsNot isNot:HCWrapInMatcher(matcher)];
+    return [[HCIsNot alloc] initWithMatcher:HCWrapInMatcher(matcher)];
 }

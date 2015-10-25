@@ -15,12 +15,6 @@
 
 @implementation HCIsDictionaryContaining
 
-+ (instancetype)isDictionaryContainingKey:(id <HCMatcher>)keyMatcher
-                                    value:(id <HCMatcher>)valueMatcher
-{
-    return [[self alloc] initWithKeyMatcher:keyMatcher valueMatcher:valueMatcher];
-}
-
 - (instancetype)initWithKeyMatcher:(id <HCMatcher>)keyMatcher
                       valueMatcher:(id <HCMatcher>)valueMatcher
 {
@@ -58,6 +52,6 @@ id HC_hasEntry(id keyMatcher, id valueMatcher)
 {
     HCRequireNonNilObject(keyMatcher);
     HCRequireNonNilObject(valueMatcher);
-    return [HCIsDictionaryContaining isDictionaryContainingKey:HCWrapInMatcher(keyMatcher)
-                                                         value:HCWrapInMatcher(valueMatcher)];
+    return [[HCIsDictionaryContaining alloc] initWithKeyMatcher:HCWrapInMatcher(keyMatcher)
+                                                   valueMatcher:HCWrapInMatcher(valueMatcher)];
 }

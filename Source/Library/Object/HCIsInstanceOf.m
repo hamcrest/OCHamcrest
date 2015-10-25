@@ -6,11 +6,6 @@
 
 @implementation HCIsInstanceOf
 
-+ (instancetype)isInstanceOf:(Class)expectedClass
-{
-    return [[self alloc] initWithClass:expectedClass];
-}
-
 - (BOOL)matches:(id)item
 {
     return [item isKindOfClass:self.theClass];
@@ -26,5 +21,5 @@
 
 id HC_instanceOf(Class expectedClass)
 {
-    return [HCIsInstanceOf isInstanceOf:expectedClass];
+    return [[HCIsInstanceOf alloc] initWithClass:expectedClass];
 }

@@ -9,7 +9,6 @@
  */
 @interface HCIsEqualIgnoringWhiteSpace : HCBaseMatcher
 
-+ (instancetype)isEqualIgnoringWhiteSpace:(NSString *)string;
 - (instancetype)initWithString:(NSString *)string;
 
 @end

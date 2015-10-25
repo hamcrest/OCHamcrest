@@ -10,11 +10,6 @@
 
 @implementation HCIsIn
 
-+ (instancetype)isInCollection:(id)collection
-{
-    return [[self alloc] initWithCollection:collection];
-}
-
 - (instancetype)initWithCollection:(id)collection
 {
     if (![collection respondsToSelector:@selector(containsObject:)])
@@ -46,5 +41,5 @@
 
 id HC_isIn(id aCollection)
 {
-    return [HCIsIn isInCollection:aCollection];
+    return [[HCIsIn alloc] initWithCollection:aCollection];
 }

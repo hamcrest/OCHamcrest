@@ -11,11 +11,6 @@
 
 @implementation HCIsEqual
 
-+ (instancetype)isEqualTo:(id)expectedValue
-{
-    return [[self alloc] initEqualTo:expectedValue];
-}
-
 - (instancetype)initEqualTo:(id)expectedValue
 {
     self = [super init];
@@ -48,5 +43,5 @@
 
 id HC_equalTo(id operand)
 {
-    return [HCIsEqual isEqualTo:operand];
+    return [[HCIsEqual alloc] initEqualTo:operand];
 }

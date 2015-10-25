@@ -15,12 +15,6 @@
 
 @implementation HCIsCollectionContaining
 
-
-+ (instancetype)isCollectionContaining:(id <HCMatcher>)elementMatcher
-{
-    return [[self alloc] initWithMatcher:elementMatcher];
-}
-
 - (instancetype)initWithMatcher:(id <HCMatcher>)elementMatcher
 {
     self = [super init];
@@ -72,7 +66,7 @@
 id HC_hasItem(id itemMatcher)
 {
     HCRequireNonNilObject(itemMatcher);
-    return [HCIsCollectionContaining isCollectionContaining:HCWrapInMatcher(itemMatcher)];
+    return [[HCIsCollectionContaining alloc] initWithMatcher:HCWrapInMatcher(itemMatcher)];
 }
 
 id HC_hasItems(id itemMatchers, ...)

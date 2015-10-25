@@ -8,9 +8,6 @@
  * @abstract Tests if string ends with a substring.
  */
 @interface HCStringEndsWith : HCSubstringMatcher
-
-+ (id)stringEndsWith:(NSString *)substring;
-
 @end
 
 

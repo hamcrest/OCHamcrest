@@ -12,11 +12,6 @@
 
 @implementation HCAllOf
 
-+ (instancetype)allOf:(NSArray *)matchers
-{
-    return [[self alloc] initWithMatchers:matchers];
-}
-
 - (instancetype)initWithMatchers:(NSArray *)matchers
 {
     self = [super init];

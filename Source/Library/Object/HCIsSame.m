@@ -10,11 +10,6 @@
 
 @implementation HCIsSame
 
-+ (instancetype)isSameAs:(id)object
-{
-    return [[self alloc] initSameAs:object];
-}
-
 - (instancetype)initSameAs:(id)object
 {
     self = [super init];
@@ -47,5 +42,5 @@
 
 id HC_sameInstance(id expectedInstance)
 {
-    return [HCIsSame isSameAs:expectedInstance];
+    return [[HCIsSame alloc] initSameAs:expectedInstance];
 }

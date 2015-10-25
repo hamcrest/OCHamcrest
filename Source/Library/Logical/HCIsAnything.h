@@ -9,11 +9,8 @@
  */
 @interface HCIsAnything : HCBaseMatcher
 
-+ (instancetype)isAnything;
-+ (instancetype)isAnythingWithDescription:(NSString *)description;
-
 - (instancetype)init;
-- (instancetype)initWithDescription:(NSString *)description;
+- (instancetype)initWithDescription:(NSString *)description NS_DESIGNATED_INITIALIZER;
 
 @end
 

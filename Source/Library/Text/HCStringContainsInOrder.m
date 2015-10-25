@@ -26,11 +26,6 @@ static void requireElementsToBeStrings(NSArray *array)
 
 @implementation HCStringContainsInOrder
 
-+ (instancetype)containsInOrder:(NSArray *)substrings
-{
-    return [[self alloc] initWithSubstrings:substrings];
-}
-
 - (instancetype)initWithSubstrings:(NSArray *)substrings
 {
     self = [super init];
@@ -74,5 +69,5 @@ id HC_stringContainsInOrder(NSString *substrings, ...)
     NSArray *strings = HCCollectItems(substrings, args);
     va_end(args);
 
-    return [HCStringContainsInOrder containsInOrder:strings];
+    return [[HCStringContainsInOrder alloc] initWithSubstrings:strings];
 }

@@ -9,7 +9,6 @@
  */
 @interface HCStringContainsInOrder : HCBaseMatcher
 
-+ (instancetype)containsInOrder:(NSArray *)substrings;
 - (instancetype)initWithSubstrings:(NSArray *)substrings;
 
 @end

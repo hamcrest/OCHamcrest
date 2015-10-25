@@ -8,9 +8,6 @@
  * @abstract Tests string starts with a substring.
  */
 @interface HCStringStartsWith : HCSubstringMatcher
-
-+ (id)stringStartsWith:(NSString *)substring;
-
 @end
 
 

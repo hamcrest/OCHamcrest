@@ -11,7 +11,6 @@
  */
 @interface HCAllOf : HCDiagnosingMatcher
 
-+ (instancetype)allOf:(NSArray *)matchers;
 - (instancetype)initWithMatchers:(NSArray *)matchers;
 
 @end

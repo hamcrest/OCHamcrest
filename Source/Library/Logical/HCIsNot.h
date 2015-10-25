@@ -9,8 +9,7 @@
  */
 @interface HCIsNot : HCBaseMatcher
 
-+ (instancetype)isNot:(id <HCMatcher>)matcher;
-- (instancetype)initNot:(id <HCMatcher>)matcher;
+- (instancetype)initWithMatcher:(id <HCMatcher>)matcher;
 
 @end
 

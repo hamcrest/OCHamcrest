@@ -6,11 +6,6 @@
 
 @implementation HCStringContains
 
-+ (instancetype)stringContains:(NSString *)substring
-{
-    return [[self alloc] initWithSubstring:substring];
-}
-
 - (BOOL)matches:(id)item
 {
     if (![item respondsToSelector:@selector(rangeOfString:)])
@@ -29,5 +24,5 @@
 
 id <HCMatcher> HC_containsSubstring(NSString *substring)
 {
-    return [HCStringContains stringContains:substring];
+    return [[HCStringContains alloc] initWithSubstring:substring];
 }

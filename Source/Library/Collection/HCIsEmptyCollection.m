@@ -8,11 +8,6 @@
 
 @implementation HCIsEmptyCollection
 
-+ (instancetype)isEmptyCollection
-{
-    return [[self alloc] init];
-}
-
 - (instancetype)init
 {
     self = [super initWithCount:HC_equalTo(@0)];
@@ -34,5 +29,5 @@
 
 FOUNDATION_EXPORT id HC_isEmpty()
 {
-    return [HCIsEmptyCollection isEmptyCollection];
+    return [[HCIsEmptyCollection alloc] init];
 }

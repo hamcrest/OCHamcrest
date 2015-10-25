@@ -9,11 +9,6 @@
 
 @implementation HCIsCollectionOnlyContaining
 
-+ (instancetype)isCollectionOnlyContaining:(id <HCMatcher>)matcher
-{
-    return [[self alloc] initWithMatcher:matcher];
-}
-
 - (void)describeTo:(id <HCDescription>)description
 {
     [[description appendText:@"a collection containing items matching "]
@@ -30,5 +25,5 @@ id HC_onlyContains(id itemMatchers, ...)
     NSArray *matchers = HCCollectMatchers(itemMatchers, args);
     va_end(args);
 
-    return [HCIsCollectionOnlyContaining isCollectionOnlyContaining:[[HCAnyOf alloc] initWithMatchers:matchers]];
+    return [[HCIsCollectionOnlyContaining alloc] initWithMatcher:[[HCAnyOf alloc] initWithMatchers:matchers]];
 }

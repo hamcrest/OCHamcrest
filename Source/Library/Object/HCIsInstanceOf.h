@@ -8,9 +8,6 @@
  * @abstract Matches objects that are of a given class or any subclass.
  */
 @interface HCIsInstanceOf : HCClassMatcher
-
-+ (id)isInstanceOf:(Class)expectedClass;
-
 @end
 
 

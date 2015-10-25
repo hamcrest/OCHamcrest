@@ -12,11 +12,6 @@
 
 @implementation HCIs
 
-+ (instancetype)is:(id <HCMatcher>)matcher
-{
-    return [[self alloc] initWithMatcher:matcher];
-}
-
 - (instancetype)initWithMatcher:(id <HCMatcher>)matcher
 {
     self = [super init];
@@ -45,5 +40,5 @@
 
 id HC_is(id match)
 {
-    return [HCIs is:HCWrapInMatcher(match)];
+    return [[HCIs alloc] initWithMatcher:HCWrapInMatcher(match)];
 }

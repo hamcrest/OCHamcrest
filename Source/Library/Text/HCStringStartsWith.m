@@ -6,11 +6,6 @@
 
 @implementation HCStringStartsWith
 
-+ (instancetype)stringStartsWith:(NSString *)substring
-{
-    return [[self alloc] initWithSubstring:substring];
-}
-
 - (BOOL)matches:(id)item
 {
     if (![item respondsToSelector:@selector(hasPrefix:)])
@@ -29,5 +24,5 @@
 
 id HC_startsWith(NSString *prefix)
 {
-    return [HCStringStartsWith stringStartsWith:prefix];
+    return [[HCStringStartsWith alloc] initWithSubstring:prefix];
 }

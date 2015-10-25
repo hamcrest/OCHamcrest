@@ -8,9 +8,6 @@
  * @abstract Matches if every item in a collection satisfies any of the nested matchers.
  */
 @interface HCIsCollectionOnlyContaining : HCEvery
-
-+ (instancetype)isCollectionOnlyContaining:(id <HCMatcher>)matcher;
-
 @end
 
 

@@ -9,11 +9,6 @@
 
 @implementation HCHasDescription
 
-+ (instancetype)hasDescription:(id <HCMatcher>)descriptionMatcher
-{
-    return [[self alloc] initWithDescription:descriptionMatcher];
-}
-
 - (instancetype)initWithDescription:(id <HCMatcher>)descriptionMatcher
 {
     NSInvocation *anInvocation = [NSInvocation och_invocationOnObjectOfType:[NSObject class]
@@ -29,5 +24,5 @@
 
 id HC_hasDescription(id descriptionMatcher)
 {
-    return [HCHasDescription hasDescription:HCWrapInMatcher(descriptionMatcher)];
+    return [[HCHasDescription alloc] initWithDescription:HCWrapInMatcher(descriptionMatcher)];
 }

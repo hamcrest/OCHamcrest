@@ -8,9 +8,6 @@
  * @abstract Tests if string that contains a substring.
  */
 @interface HCStringContains : HCSubstringMatcher
-
-+ (id)stringContains:(NSString *)substring;
-
 @end
 
 

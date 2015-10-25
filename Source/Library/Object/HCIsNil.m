@@ -8,11 +8,6 @@
 
 @implementation HCIsNil
 
-+ (instancetype)isNil
-{
-    return [[self alloc] init];
-}
-
 - (BOOL)matches:(id)item
 {
     return item == nil;
@@ -28,10 +23,10 @@
 
 id HC_nilValue()
 {
-    return [HCIsNil isNil];
+    return [[HCIsNil alloc] init];
 }
 
 id HC_notNilValue()
 {
-    return HC_isNot([HCIsNil isNil]);
+    return HC_isNot([[HCIsNil alloc] init]);
 }

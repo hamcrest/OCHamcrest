@@ -8,7 +8,9 @@
  * @abstract Matches if every item in a collection satisfies a list of nested matchers, in order.
  */
 @interface HCIsCollectionContainingInRelativeOrder : HCDiagnosingMatcher
+
 - (instancetype)initWithMatchers:(NSArray *)itemMatchers;
+
 @end
 
 

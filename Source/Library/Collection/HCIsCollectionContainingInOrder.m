@@ -79,11 +79,6 @@
 
 @implementation HCIsCollectionContainingInOrder
 
-+ (instancetype)isCollectionContainingInOrder:(NSArray *)itemMatchers
-{
-    return [[self alloc] initWithMatchers:itemMatchers];
-}
-
 - (instancetype)initWithMatchers:(NSArray *)itemMatchers
 {
     self = [super init];
@@ -126,5 +121,5 @@ id HC_contains(id itemMatchers, ...)
     NSArray *matchers = HCCollectMatchers(itemMatchers, args);
     va_end(args);
 
-    return [HCIsCollectionContainingInOrder isCollectionContainingInOrder:matchers];
+    return [[HCIsCollectionContainingInOrder alloc] initWithMatchers:matchers];
 }

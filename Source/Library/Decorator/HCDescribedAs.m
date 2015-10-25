@@ -47,15 +47,6 @@
 
 @implementation HCDescribedAs
 
-+ (instancetype)describedAs:(NSString *)description
-                 forMatcher:(id <HCMatcher>)matcher
-                 overValues:(NSArray *)templateValues
-{
-    return [[self alloc] initWithDescription:description
-                                  forMatcher:matcher
-                                  overValues:templateValues];
-}
-
 - (instancetype)initWithDescription:(NSString *)description
                          forMatcher:(id <HCMatcher>)matcher
                          overValues:(NSArray *)templateValues
@@ -125,5 +116,7 @@ id HC_describedAs(NSString *description, id <HCMatcher> matcher, ...)
     }
     va_end(args);
 
-    return [HCDescribedAs describedAs:description forMatcher:matcher overValues:valueList];
+    return [[HCDescribedAs alloc] initWithDescription:description
+                                           forMatcher:matcher
+                                           overValues:valueList];
 }

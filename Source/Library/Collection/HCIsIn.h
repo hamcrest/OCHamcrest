@@ -9,7 +9,6 @@
  */
 @interface HCIsIn : HCBaseMatcher
 
-+ (instancetype)isInCollection:(id)collection;
 - (instancetype)initWithCollection:(id)collection;
 
 @end

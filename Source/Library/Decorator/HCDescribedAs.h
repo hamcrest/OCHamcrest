@@ -9,10 +9,6 @@
  */
 @interface HCDescribedAs : HCBaseMatcher
 
-+ (instancetype)describedAs:(NSString *)description
-                 forMatcher:(id <HCMatcher>)matcher
-                 overValues:(NSArray *)templateValues;
-
 - (instancetype)initWithDescription:(NSString *)description
                          forMatcher:(id <HCMatcher>)matcher
                          overValues:(NSArray *)templateValues;

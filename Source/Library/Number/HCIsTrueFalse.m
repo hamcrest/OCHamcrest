@@ -4,11 +4,6 @@
 #import "HCIsTrueFalse.h"
 
 
-FOUNDATION_EXPORT id HC_isTrue(void)
-{
-    return [[HCIsTrue alloc] init];
-}
-
 @implementation HCIsTrue
 
 - (BOOL)matches:(id)item
@@ -26,12 +21,14 @@ FOUNDATION_EXPORT id HC_isTrue(void)
 
 @end
 
-#pragma mark -
 
-FOUNDATION_EXPORT id HC_isFalse(void)
+FOUNDATION_EXPORT id HC_isTrue(void)
 {
-    return [[HCIsFalse alloc] init];
+    return [[HCIsTrue alloc] init];
 }
+
+
+#pragma mark -
 
 @implementation HCIsFalse
 
@@ -49,3 +46,10 @@ FOUNDATION_EXPORT id HC_isFalse(void)
 }
 
 @end
+
+
+FOUNDATION_EXPORT id HC_isFalse(void)
+{
+    return [[HCIsFalse alloc] init];
+}
+

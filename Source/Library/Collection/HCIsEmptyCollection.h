@@ -9,7 +9,6 @@
  */
 @interface HCIsEmptyCollection : HCHasCount
 
-+ (instancetype)isEmptyCollection;
 - (instancetype)init;
 
 @end

@@ -13,11 +13,6 @@
 
 @implementation HCIsCloseTo
 
-+ (id)isCloseTo:(double)value within:(double)delta
-{
-    return [[self alloc] initWithValue:value delta:delta];
-}
-
 - (id)initWithValue:(double)value delta:(double)delta
 {
     self = [super init];
@@ -72,5 +67,5 @@
 
 id HC_closeTo(double value, double delta)
 {
-    return [HCIsCloseTo isCloseTo:value within:delta];
+    return [[HCIsCloseTo alloc] initWithValue:value delta:delta];
 }

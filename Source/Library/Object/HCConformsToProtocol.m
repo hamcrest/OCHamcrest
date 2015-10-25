@@ -14,11 +14,6 @@
 
 @implementation HCConformsToProtocol
 
-+ (instancetype)conformsTo:(Protocol *)protocol
-{
-    return [[self alloc] initWithProtocol:protocol];
-}
-
 - (instancetype)initWithProtocol:(Protocol *)protocol
 {
     HCRequireNonNilObject(protocol);
@@ -45,5 +40,5 @@
 
 id HC_conformsTo(Protocol *aProtocol)
 {
-    return [HCConformsToProtocol conformsTo:aProtocol];
+    return [[HCConformsToProtocol alloc] initWithProtocol:aProtocol];
 }

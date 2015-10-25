@@ -14,12 +14,6 @@
 
 @implementation HCIsDictionaryContainingEntries
 
-+ (instancetype)isDictionaryContainingKeys:(NSArray *)keys
-                             valueMatchers:(NSArray *)valueMatchers
-{
-    return [[self alloc] initWithKeys:keys valueMatchers:valueMatchers];
-}
-
 - (instancetype)initWithKeys:(NSArray *)keys
                valueMatchers:(NSArray *)valueMatchers
 {
@@ -123,6 +117,6 @@ id HC_hasEntries(id keysAndValueMatch, ...)
         key = va_arg(args, id);
     }
 
-    return [HCIsDictionaryContainingEntries isDictionaryContainingKeys:keys
-                                                         valueMatchers:valueMatchers];
+    return [[HCIsDictionaryContainingEntries alloc] initWithKeys:keys
+                                                   valueMatchers:valueMatchers];
 }

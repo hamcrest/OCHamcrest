@@ -8,9 +8,6 @@
  * @abstract Is the value nil?
  */
 @interface HCIsNil : HCBaseMatcher
-
-+ (id)isNil;
-
 @end
 
 

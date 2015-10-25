@@ -9,16 +9,6 @@
     NSString *_description;
 }
 
-+ (instancetype)isAnything
-{
-    return [[self alloc] init];
-}
-
-+ (instancetype)isAnythingWithDescription:(NSString *)description
-{
-    return [[self alloc] initWithDescription:description];
-}
-
 - (instancetype)init
 {
     self = [self initWithDescription:@"ANYTHING"];
@@ -48,10 +38,10 @@
 
 id HC_anything()
 {
-    return [HCIsAnything isAnything];
+    return [[HCIsAnything alloc] init];
 }
 
 id HC_anythingWithDescription(NSString *description)
 {
-    return [HCIsAnything isAnythingWithDescription:description];
+    return [[HCIsAnything alloc] initWithDescription:description];
 }

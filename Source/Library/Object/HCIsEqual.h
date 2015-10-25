@@ -9,7 +9,6 @@
  */
 @interface HCIsEqual : HCBaseMatcher
 
-+ (instancetype)isEqualTo:(id)expectedValue;
 - (instancetype)initEqualTo:(id)expectedValue;
 
 @end

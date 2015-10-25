@@ -12,11 +12,6 @@
 
 @implementation HCAnyOf
 
-+ (instancetype)anyOf:(NSArray *)matchers
-{
-    return [[self alloc] initWithMatchers:matchers];
-}
-
 - (instancetype)initWithMatchers:(NSArray *)matchers
 {
     self = [super init];
@@ -48,5 +43,5 @@ id HC_anyOf(id matchers, ...)
     NSArray *matcherList = HCCollectMatchers(matchers, args);
     va_end(args);
 
-    return [HCAnyOf anyOf:matcherList];
+    return [[HCAnyOf alloc] initWithMatchers:matcherList];
 }
