@@ -9,7 +9,7 @@
  */
 @interface HCHasCount : HCBaseMatcher
 
-- (instancetype)initWithCount:(id <HCMatcher>)countMatcher;
+- (instancetype)initWithMatcher:(id <HCMatcher>)countMatcher;
 
 @end
 

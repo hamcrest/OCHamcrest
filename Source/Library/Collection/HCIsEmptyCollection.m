@@ -10,7 +10,7 @@
 
 - (instancetype)init
 {
-    self = [super initWithCount:HC_equalTo(@0)];
+    self = [super initWithMatcher:HC_equalTo(@0)];
     return self;
 }
 
