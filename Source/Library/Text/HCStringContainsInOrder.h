@@ -25,7 +25,7 @@ FOUNDATION_EXPORT id HC_stringContainsInOrder(NSString *substrings, ...) NS_REQU
  * strings, ending with <code>nil</code>.
  * @discussion
  * <b>Example</b><br />
- * <pre>assertThat(@"myfoobarbaz", stringContainsInOrder(@"bar", @"foo", nil))</pre>
+ * <pre>assertThat(\@"myfoobarbaz", stringContainsInOrder(\@"bar", \@"foo", nil))</pre>
  * fails as "foo" occurs before "bar" in the string "myfoobarbaz"
  *
  * <b>Name Clash</b><br />

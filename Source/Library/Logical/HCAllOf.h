@@ -26,7 +26,7 @@ FOUNDATION_EXPORT id hc_allOfIn(NSArray *matchers);
  * an <em>equalTo</em> matcher to check for equality.
  * @discussion
  * <b>Example</b><br />
- * <pre>assertThat(\@"myValue", allOfIn(@[startsWith(\@"my"), containsSubstring(\@"Val")]))</pre>
+ * <pre>assertThat(\@"myValue", allOfIn(\@[startsWith(\@"my"), containsSubstring(\@"Val")]))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

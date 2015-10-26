@@ -29,8 +29,8 @@ FOUNDATION_EXPORT id hc_containsInRelativeOrder(NSArray *itemMatchers);
  * <em>equalTo</em> matcher to check for equality.
  *
  * <b>Examples</b><br />
- * <pre>assertThat(@[@1, @2, @3, @4, @5], containsInRelativeOrder(equalTo(@2), equalTo(@4)))</pre>
- * <pre>assertThat(@[@1, @2, @3, @4, @5], containsInRelativeOrder(@2, @4))</pre>
+ * <pre>assertThat(\@[\@1, \@2, \@3, \@4, \@5], containsInRelativeOrder(equalTo(\@2), equalTo(\@4)))</pre>
+ * <pre>assertThat(\@[\@1, \@2, \@3, \@4, \@5], containsInRelativeOrder(\@2, \@4))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

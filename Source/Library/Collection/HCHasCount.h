@@ -23,7 +23,7 @@ FOUNDATION_EXPORT id HC_hasCount(id <HCMatcher> countMatcher);
  * @param countMatcher A matcher for the count of an examined collection.
  * @discussion
  * <b>Example</b><br />
- * <pre>assertThat(@[\@"foo", \@"bar"], hasCount(equalTo(@2)))</pre>
+ * <pre>assertThat(\@[\@"foo", \@"bar"], hasCount(equalTo(@2)))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
@@ -45,7 +45,7 @@ FOUNDATION_EXPORT id HC_hasCountOf(NSUInteger count);
  * @param value Value to compare against as the expected count.
  * @discussion
  * <b>Example</b><br />
- * <pre>assertThat(@[\@"foo", \@"bar"], hasCountOf(2))</pre>
+ * <pre>assertThat(\@[\@"foo", \@"bar"], hasCountOf(2))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

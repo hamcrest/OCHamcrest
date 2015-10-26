@@ -28,8 +28,8 @@ FOUNDATION_EXPORT id HC_hasValue(id valueMatcher);
  * for equality.
  *
  * <b>Examples</b><br />
- * <pre>assertThat(myDictionary, hasValue(equalTo(@"bar")))</pre>
- * <pre>assertThat(myDictionary, hasValue(@"bar"))<pre>
+ * <pre>assertThat(myDictionary, hasValue(equalTo(\@"bar")))</pre>
+ * <pre>assertThat(myDictionary, hasValue(\@"bar"))<pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

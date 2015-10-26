@@ -25,7 +25,7 @@ FOUNDATION_EXPORT id HC_closeTo(double value, double delta);
  * @discussion Invokes <code>-doubleValue</code> on the examined number to get its value.
  *
  * <b>Example</b><br />
- * <pre>assertThat(@1.03, closeTo(1.0, 0.03)</pre>
+ * <pre>assertThat(\@1.03, closeTo(1.0, 0.03)</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

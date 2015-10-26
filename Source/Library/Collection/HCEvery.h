@@ -27,7 +27,7 @@ FOUNDATION_EXPORT id HC_everyItem(id <HCMatcher> itemMatcher);
  * performing a single pass.
  *
  * <b>Example</b><br />
- * <pre>assertThat(@[\@"bar", \@"baz"], everyItem(startsWith(\@"ba")))</pre>
+ * <pre>assertThat(\@[\@"bar", \@"baz"], everyItem(startsWith(\@"ba")))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

@@ -27,7 +27,7 @@ FOUNDATION_EXPORT id HC_greaterThan(id value);
  * object, should return NSOrderedAscending.
  * @discussion
  * <b>Example</b><br />
- * <pre>assertThat(@2, greaterThan(@1))</pre>
+ * <pre>assertThat(\@2, greaterThan(\@1))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
@@ -50,7 +50,7 @@ FOUNDATION_EXPORT id HC_greaterThanOrEqualTo(id value);
  * object, should return NSOrderedAscending or NSOrderedSame.
  * @discussion
  * <b>Example</b><br />
- * <pre>assertThat(@1, greaterThanOrEqualTo(@1))</pre>
+ * <pre>assertThat(\@1, greaterThanOrEqualTo(\@1))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
@@ -73,7 +73,7 @@ FOUNDATION_EXPORT id HC_lessThan(id value);
  * object, should return NSOrderedDescending.
  * @discussion
  * <b>Example</b><br />
- * <pre>assertThat(@1, lessThan(@2))</pre>
+ * <pre>assertThat(\@1, lessThan(\@2))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
@@ -96,7 +96,7 @@ FOUNDATION_EXPORT id HC_lessThanOrEqualTo(id value);
  * object, should return NSOrderedDescending or NSOrderedSame.
  * @discussion
  * <b>Example</b><br />
- * <pre>assertThat(@1, lessThanOrEqualTo(@1))</pre>
+ * <pre>assertThat(\@1, lessThanOrEqualTo(\@1))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

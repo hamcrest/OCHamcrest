@@ -25,7 +25,7 @@ FOUNDATION_EXPORT id HC_isIn(id aCollection);
  * examined object is an element of the collection.
  *
  * <b>Example</b><br />
- * <pre>assertThat(\@"foo", isIn(@[\@"bar", \@"foo"]))</pre>
+ * <pre>assertThat(\@"foo", isIn(\@@[\@"bar", \@"foo"]))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

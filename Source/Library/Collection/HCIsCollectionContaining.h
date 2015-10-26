@@ -30,9 +30,9 @@ FOUNDATION_EXPORT id HC_hasItem(id itemMatcher);
  * to check for equality.
  *
  * <b>Example</b><br />
- * <pre>assertThat(@[@1, @2, @3], hasItem(equalTo(@2)))</pre>
+ * <pre>assertThat(\@[\@1, \@2, \@3], hasItem(equalTo(\@2)))</pre>
  *
- * <pre>assertThat(@[@1, @2, @3], hasItem(@2))</pre>
+ * <pre>assertThat(\@[\@1, \@2, \@3], hasItem(\@2))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
@@ -57,7 +57,7 @@ FOUNDATION_EXPORT id HC_hasItems(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATI
  * for equality.
  *
  * <b>Example</b><br />
- * <pre>assertThat(@[@"foo", @"bar", @"baz"], hasItems(endsWith(@"z"), endsWith(@"o")))</pre>
+ * <pre>assertThat(\@[\@"foo", \@"bar", \@"baz"], hasItems(endsWith(\@"z"), endsWith(\@"o")))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

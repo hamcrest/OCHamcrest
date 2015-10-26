@@ -22,7 +22,7 @@ FOUNDATION_EXPORT id HC_isEmpty(void);
  * returns zero.
  *
  * <b>Example</b><br />
- * <pre>assertThat(@[], isEmpty())</pre>
+ * <pre>assertThat(\@[], isEmpty())</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

@@ -30,8 +30,8 @@ FOUNDATION_EXPORT id HC_hasEntries(id keysAndValueMatch, ...) NS_REQUIRES_NIL_TE
  * a matcher is implicitly wrapped in an <em>equalTo</em> matcher to check for equality.
  *
  * <b>Examples</b><br />
- * <pre>assertThat(personDict, hasEntries(@"firstName", equalTo(@"Jon"), @"lastName", equalTo(@"Reid"), nil))</pre>
- * <pre>assertThat(personDict, hasEntries(@"firstName", @"Jon", @"lastName", @"Reid", nil))</pre>
+ * <pre>assertThat(personDict, hasEntries(\@"firstName", equalTo(\@"Jon"), \@"lastName", equalTo(\@"Reid"), nil))</pre>
+ * <pre>assertThat(personDict, hasEntries(\@"firstName", \@"Jon", \@"lastName", \@"Reid", nil))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

@@ -26,7 +26,7 @@ FOUNDATION_EXPORT id HC_onlyContains(id itemMatchers, ...) NS_REQUIRES_NIL_TERMI
  * equality.
  *
  * <b>Example</b><br />
- * <pre>assertThat(@[@"Jon", @"John", @"Bob"], onlyContains(startsWith(@"Jo"), startsWith(@("Bo"), nil))</pre>
+ * <pre>assertThat(\@[\@"Jon", \@"John", \@"Bob"], onlyContains(startsWith(\@"Jo"), startsWith(\@("Bo"), nil))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
