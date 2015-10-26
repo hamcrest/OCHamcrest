@@ -10,17 +10,17 @@ static id passThrough(id value)
     return value;
 }
 
-NSMutableArray *HCCollectItems(id item, va_list args)
+NSArray * HCCollectItems(id item, va_list args)
 {
     return HCCollectWrappedItems(item, args, passThrough);
 }
 
-NSMutableArray *HCCollectMatchers(id item, va_list args)
+NSArray * HCCollectMatchers(id item, va_list args)
 {
     return HCCollectWrappedItems(item, args, HCWrapInMatcher);
 }
 
-NSMutableArray *HCCollectWrappedItems(id item, va_list args, id (*wrap)(id))
+NSArray * HCCollectWrappedItems(id item, va_list args, id (*wrap)(id))
 {
     NSMutableArray *list = [NSMutableArray arrayWithObject:wrap(item)];
 
@@ -34,7 +34,7 @@ NSMutableArray *HCCollectWrappedItems(id item, va_list args, id (*wrap)(id))
     return list;
 }
 
-NSArray *HCWrapIntoMatchers(NSArray *items)
+NSArray * HCWrapIntoMatchers(NSArray *items)
 {
     NSMutableArray *matchers = [[NSMutableArray alloc] init];
     for (id item in items)
