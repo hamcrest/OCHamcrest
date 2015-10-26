@@ -16,7 +16,7 @@
 {
     self = [super init];
     if (self)
-        _matchers = [HCWrapIntoMatchers(matchers) copy];
+        _matchers = [matchers copy];
     return self;
 }
 
@@ -38,7 +38,7 @@
 
 id hc_anyOfIn(NSArray *matchers)
 {
-    return [[HCAnyOf alloc] initWithMatchers:matchers];
+    return [[HCAnyOf alloc] initWithMatchers:HCWrapIntoMatchers(matchers)];
 }
 
 id HC_anyOf(id matchers, ...)
