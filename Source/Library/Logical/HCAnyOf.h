@@ -15,6 +15,27 @@
 
 @end
 
+FOUNDATION_EXPORT id hc_anyOfIn(NSArray *matchers);
+
+#ifndef HC_DISABLE_SHORT_SYNTAX
+/*!
+ * @abstract Creates a matcher that matches when the examined object matches <b>any</b> of the
+ * specified matchers.
+ * @param matchers An array of matchers. Any element that is not a matcher is implicitly wrapped in
+ * an <em>equalTo</em> matcher to check for equality.
+ * @discussion
+ * <b>Example</b><br />
+ * <pre>assertThat(\@"myValue", allOf(\@[startsWith(\@"foo"), containsSubstring(\@"Val")]))</pre>
+ *
+ * <b>Name Clash</b><br />
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
+ * HC_anyOf instead.
+ */
+static inline id anyOfIn(NSArray *matchers)
+{
+    return hc_anyOfIn(matchers);
+}
+#endif
 
 FOUNDATION_EXPORT id HC_anyOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
@@ -27,7 +48,7 @@ FOUNDATION_EXPORT id HC_anyOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
  * matcher to check for equality.
  *
  * <b>Example</b><br />
- * <pre>assertThat(@"myValue", allOf(startsWith(@"foo"), containsSubstring(@"Val"), nil))</pre>
+ * <pre>assertThat(\@"myValue", allOf(startsWith(\@"foo"), containsSubstring(\@"Val"), nil))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

@@ -22,10 +22,9 @@ FOUNDATION_EXPORT id hc_allOfIn(NSArray *matchers);
 /*!
  * @abstract Creates a matcher that matches when the examined object matches <b>all</b> of the
  * specified matchers.
- * @param matchers An array of matchers.
- * @discussion Any item in <em>matchers</em> that is not a matcher is implicitly wrapped in
+ * @param matchers An array of matchers. Any element that is not a matcher is implicitly wrapped in
  * an <em>equalTo</em> matcher to check for equality.
- *
+ * @discussion
  * <b>Example</b><br />
  * <pre>assertThat(\@"myValue", allOfIn(@[startsWith(\@"my"), containsSubstring(\@"Val")]))</pre>
  *

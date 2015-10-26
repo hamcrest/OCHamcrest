@@ -48,6 +48,13 @@
     assertMatches(@"both matchers", anyOf(@"good", @"good", nil), @"good");
 }
 
+- (void)testAnyOfIn_ProvidesConvenientShortcutForMatchingWithEqualTo
+{
+    assertMatches(@"first matcher", anyOfIn(@[@"good", @"bad"]), @"good");
+    assertMatches(@"second matcher", anyOfIn(@[@"bad", @"good"]), @"good");
+    assertMatches(@"both matchers", anyOfIn(@[@"good", @"good"]), @"good");
+}
+
 - (void)testHasAReadableDescription
 {
     assertDescription(@"(\"good\" or \"bad\" or \"ugly\")",

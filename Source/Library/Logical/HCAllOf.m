@@ -53,5 +53,6 @@ id HC_allOf(id matchers, ...)
     va_start(args, matchers);
     NSArray *array = HCCollectItems(matchers, args);
     va_end(args);
+
     return hc_allOfIn(array);
 }
