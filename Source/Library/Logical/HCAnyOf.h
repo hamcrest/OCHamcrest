@@ -15,7 +15,7 @@
 
 @end
 
-FOUNDATION_EXPORT id hc_anyOfIn(NSArray *matchers);
+FOUNDATION_EXPORT id HC_anyOfIn(NSArray *matchers);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -33,7 +33,7 @@ FOUNDATION_EXPORT id hc_anyOfIn(NSArray *matchers);
  */
 static inline id anyOfIn(NSArray *matchers)
 {
-    return hc_anyOfIn(matchers);
+    return HC_anyOfIn(matchers);
 }
 #endif
 

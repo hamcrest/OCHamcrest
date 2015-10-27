@@ -16,7 +16,7 @@
 @end
 
 
-FOUNDATION_EXPORT id hc_allOfIn(NSArray *matchers);
+FOUNDATION_EXPORT id HC_allOfIn(NSArray *matchers);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -30,11 +30,11 @@ FOUNDATION_EXPORT id hc_allOfIn(NSArray *matchers);
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
- * hc_allOfIn instead.
+ * HC_allOfIn instead.
  */
 static inline id allOfIn(NSArray *matchers)
 {
-    return hc_allOfIn(matchers);
+    return HC_allOfIn(matchers);
 }
 #endif
 

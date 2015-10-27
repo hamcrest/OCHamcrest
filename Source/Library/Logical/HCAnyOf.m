@@ -36,7 +36,7 @@
 @end
 
 
-id hc_anyOfIn(NSArray *matchers)
+id HC_anyOfIn(NSArray *matchers)
 {
     return [[HCAnyOf alloc] initWithMatchers:HCWrapIntoMatchers(matchers)];
 }
@@ -48,5 +48,5 @@ id HC_anyOf(id matchers, ...)
     NSArray *array = HCCollectItems(matchers, args);
     va_end(args);
 
-    return hc_anyOfIn(array);
+    return HC_anyOfIn(array);
 }

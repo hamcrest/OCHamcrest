@@ -1,6 +1,8 @@
 NEXT RELEASE (Compatibility-breaking)
 -------------------------------------
 
+- Renamed long syntax for `containsInRelativeOrder` from prefix hc_ to HC_.
+
 **Deleted:**
 
 - `equalToBool` matcher

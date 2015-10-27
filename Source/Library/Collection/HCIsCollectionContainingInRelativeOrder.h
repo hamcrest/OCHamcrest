@@ -14,7 +14,7 @@
 @end
 
 
-FOUNDATION_EXPORT id hc_containsInRelativeOrder(NSArray *itemMatchers);
+FOUNDATION_EXPORT id HC_containsInRelativeOrder(NSArray *itemMatchers);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -34,10 +34,10 @@ FOUNDATION_EXPORT id hc_containsInRelativeOrder(NSArray *itemMatchers);
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
- * hc_containsInRelativeOrder instead.
+ * HC_containsInRelativeOrder instead.
  */
 static inline id containsInRelativeOrder(NSArray *itemMatchers)
 {
-    return hc_containsInRelativeOrder(itemMatchers);
+    return HC_containsInRelativeOrder(itemMatchers);
 }
 #endif

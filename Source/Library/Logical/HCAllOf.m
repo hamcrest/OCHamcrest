@@ -42,7 +42,7 @@
 @end
 
 
-id hc_allOfIn(NSArray *matchers)
+id HC_allOfIn(NSArray *matchers)
 {
     return [[HCAllOf alloc] initWithMatchers:HCWrapIntoMatchers(matchers)];
 }
@@ -54,5 +54,5 @@ id HC_allOf(id matchers, ...)
     NSArray *array = HCCollectItems(matchers, args);
     va_end(args);
 
-    return hc_allOfIn(array);
+    return HC_allOfIn(array);
 }

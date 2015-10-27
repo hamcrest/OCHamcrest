@@ -124,7 +124,7 @@ static void HCRequireNonEmptyArray(NSArray *array)
 @end
 
 
-id hc_containsInRelativeOrder(NSArray *itemMatchers)
+id HC_containsInRelativeOrder(NSArray *itemMatchers)
 {
     NSArray *matchers = HCWrapIntoMatchers(itemMatchers);
     return [[HCIsCollectionContainingInRelativeOrder alloc] initWithMatchers:matchers];

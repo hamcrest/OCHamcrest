@@ -76,5 +76,5 @@ id HC_hasItems(id itemMatchers, ...)
     NSArray *matchers = HCCollectWrappedItems(itemMatchers, args, HC_hasItem);
     va_end(args);
 
-    return hc_allOfIn(matchers);
+    return HC_allOfIn(matchers);
 }
