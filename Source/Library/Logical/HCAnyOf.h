@@ -41,7 +41,7 @@ FOUNDATION_EXPORT id HC_anyOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract anyOf(matchers, ...) -
+ * @abstract A
  * Creates a matcher that matches when the examined object matches <b>any</b> of the specified matchers.
  * @param matchers,... A comma-separated list of matchers ending with <code>nil</code>.
  * @discussion Any argument that is not a matcher is implicitly wrapped in an <em>equalTo</em>
@@ -54,5 +54,5 @@ FOUNDATION_EXPORT id HC_anyOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_anyOf instead.
  */
-#define anyOf HC_anyOf
+#define anyOf(...) HC_anyOf(__VA_ARGS__)
 #endif
