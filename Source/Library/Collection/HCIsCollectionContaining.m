@@ -69,12 +69,20 @@ id HC_hasItem(id itemMatcher)
     return [[HCIsCollectionContaining alloc] initWithMatcher:HCWrapInMatcher(itemMatcher)];
 }
 
+id HC_hasItemsIn(NSArray *itemMatchers)
+{
+    NSMutableArray *matchers = [[NSMutableArray alloc] init];
+    for (id itemMatcher in itemMatchers)
+        [matchers addObject:HC_hasItem(itemMatcher)];
+    return HC_allOfIn(matchers);
+}
+
 id HC_hasItems(id itemMatchers, ...)
 {
     va_list args;
     va_start(args, itemMatchers);
-    NSArray *matchers = HCCollectWrappedItems(itemMatchers, args, HC_hasItem);
+    NSArray *array = HCCollectItems(itemMatchers, args);
     va_end(args);
 
-    return HC_allOfIn(matchers);
+    return HC_hasItemsIn(array);
 }

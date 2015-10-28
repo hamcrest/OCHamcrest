@@ -91,6 +91,16 @@
     assertDoesNotMatch(@"not match list unless it contains all items", matcher5, (@[@5, @3, @2, @4])); // '1' missing
 }
 
+- (void)testHasItems_ProvidesConvenientShortcutForMatchingWIthEqualTo
+{
+    assertMatches(@"list containing all items", hasItems(@1, @2, @3, nil), (@[ @1, @2, @3 ]));
+}
+
+- (void)testHasItemsIn_ProvidesConvenientShortcutForMatchingWIthEqualTo
+{
+    assertMatches(@"list containing all items", hasItemsIn(@[@1, @2, @3]), (@[ @1, @2, @3 ]));
+}
+
 - (void)testReportsMismatchWithAReadableDescriptionForMultipleItems
 {
     id matcher = hasItems(@3, @4, nil);

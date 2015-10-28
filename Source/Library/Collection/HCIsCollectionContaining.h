@@ -42,6 +42,31 @@ FOUNDATION_EXPORT id HC_hasItem(id itemMatcher);
 #endif
 
 
+FOUNDATION_EXPORT id HC_hasItemsIn(NSArray *itemMatchers);
+
+#ifndef HC_DISABLE_SHORT_SYNTAX
+/*!
+ * @abstract Creates a matcher for collections that matches when all specified matchers are
+ * satisfied by any item in the examined collection.
+ * @param itemMatchers An array of matchers. Any element that is not a matcher is implicitly wrapped
+ * in an <em>equalTo</em> matcher to check for equality.
+ * @discussion This matcher works on any collection that conforms to the NSFastEnumeration protocol,
+ * performing one pass for each matcher.
+ *
+ * <b>Example</b><br />
+ * <pre>assertThat(\@[\@"foo", \@"bar", \@"baz"], hasItems(@[endsWith(\@"z"), endsWith(\@"o")]))</pre>
+ *
+ * <b>Name Clash</b><br />
+ * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
+ * HC_hasItems instead.
+ */
+static inline id hasItemsIn(NSArray *itemMatchers)
+{
+    return HC_hasItemsIn(itemMatchers);
+}
+#endif
+
+
 FOUNDATION_EXPORT id HC_hasItems(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
@@ -49,7 +74,7 @@ FOUNDATION_EXPORT id HC_hasItems(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATI
  * @abstract hasItems(itemMatchers, ...) -
  * Creates a matcher for collections that matches when all specified matchers are satisfied by any
  * item in the examined collection.
- * @param itemMatchers,... A comma-separated list of matchers ending with <code>nil</code>.
+ * @param itemMatchers A comma-separated list of matchers ending with <code>nil</code>.
  * @discussion This matcher works on any collection that conforms to the NSFastEnumeration protocol,
  * performing one pass for each matcher.
  *
@@ -57,11 +82,11 @@ FOUNDATION_EXPORT id HC_hasItems(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATI
  * for equality.
  *
  * <b>Example</b><br />
- * <pre>assertThat(\@[\@"foo", \@"bar", \@"baz"], hasItems(endsWith(\@"z"), endsWith(\@"o")))</pre>
+ * <pre>assertThat(\@[\@"foo", \@"bar", \@"baz"], hasItems(endsWith(\@"z"), endsWith(\@"o"), nil))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasItems instead.
  */
-#define hasItems HC_hasItems
+#define hasItems(...) HC_hasItems(__VA_ARGS__)
 #endif

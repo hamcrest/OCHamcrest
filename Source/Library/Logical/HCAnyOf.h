@@ -43,7 +43,7 @@ FOUNDATION_EXPORT id HC_anyOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
 /*!
  * @abstract A
  * Creates a matcher that matches when the examined object matches <b>any</b> of the specified matchers.
- * @param matchers,... A comma-separated list of matchers ending with <code>nil</code>.
+ * @param matchers A comma-separated list of matchers ending with <code>nil</code>.
  * @discussion Any argument that is not a matcher is implicitly wrapped in an <em>equalTo</em>
  * matcher to check for equality.
  *
