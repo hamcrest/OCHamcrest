@@ -71,10 +71,9 @@ FOUNDATION_EXPORT id HC_hasItems(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATI
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract hasItems(itemMatchers, ...) -
- * Creates a matcher for collections that matches when all specified matchers are satisfied by any
- * item in the examined collection.
- * @param itemMatchers A comma-separated list of matchers ending with <code>nil</code>.
+ * @abstract Creates a matcher for collections that matches when all specified matchers are
+ * satisfied by any item in the examined collection.
+ * @param itemMatchers... A comma-separated list of matchers ending with <code>nil</code>.
  * @discussion This matcher works on any collection that conforms to the NSFastEnumeration protocol,
  * performing one pass for each matcher.
  *
@@ -88,5 +87,5 @@ FOUNDATION_EXPORT id HC_hasItems(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATI
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasItems instead.
  */
-#define hasItems(...) HC_hasItems(__VA_ARGS__)
+#define hasItems(itemMatchers...) HC_hasItems(itemMatchers)
 #endif

@@ -43,10 +43,9 @@ FOUNDATION_EXPORT id HC_allOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract allOf(matchers, ...) -
- * Creates a matcher that matches when the examined object matches <b>all</b> of the specified
- * matchers.
- * @param matchers A comma-separated list of matchers ending with <code>nil</code>.
+ * @abstract Creates a matcher that matches when the examined object matches <b>all</b> of the
+ * specified matchers.
+ * @param matchers... A comma-separated list of matchers ending with <code>nil</code>.
  * @discussion Any argument that is not a matcher is implicitly wrapped in an <em>equalTo</em>
  * matcher to check for equality.
  *
@@ -57,5 +56,5 @@ FOUNDATION_EXPORT id HC_allOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_allOf instead.
  */
-#define allOf(...) HC_allOf(__VA_ARGS__)
+#define allOf(matchers...) HC_allOf(matchers)
 #endif
