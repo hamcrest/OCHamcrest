@@ -96,7 +96,7 @@
     assertMatches(@"list containing all items", hasItems(@1, @2, @3, nil), (@[ @1, @2, @3 ]));
 }
 
-- (void)testHasItemsIn_ProvidesConvenientShortcutForMatchingWIthEqualTo
+- (void)testArrayVariant_ProvidesConvenientShortcutForMatchingWIthEqualTo
 {
     assertMatches(@"list containing all items", hasItemsIn(@[@1, @2, @3]), (@[ @1, @2, @3 ]));
 }

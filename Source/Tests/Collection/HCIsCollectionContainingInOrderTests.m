@@ -49,7 +49,7 @@
     assertMatches(@"Values automatically wrapped with equalTo", matcher, (@[@1, @2, @3]));
 }
 
-- (void)testContainsIn_ProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)testArrayVariant_ProvidesConvenientShortcutForMatchingWithEqualTo
 {
     id matcher = containsIn(@[@1, @2, @3]);
 

@@ -48,7 +48,7 @@
     assertMatches(@"both matchers", anyOf(@"good", @"good", nil), @"good");
 }
 
-- (void)testAnyOfIn_ProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)testArrayVariant_ProvidesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"first matcher", anyOfIn(@[@"good", @"bad"]), @"good");
     assertMatches(@"second matcher", anyOfIn(@[@"bad", @"good"]), @"good");

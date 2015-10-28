@@ -31,7 +31,7 @@ FOUNDATION_EXPORT id HC_containsInAnyOrderIn(NSArray *itemMatchers);
  * collection.
  *
  * <b>Examples</b><br />
- * <pre>assertThat(\@[\@"foo", \@"bar"], containsInAnyOrderIn(@[equalTo(\@"bar"), equalTo(\@"foo")]))</pre>
+ * <pre>assertThat(\@[\@"foo", \@"bar"], containsInAnyOrderIn(\@[equalTo(\@"bar"), equalTo(\@"foo")]))</pre>
  * <pre>assertThat(\@[\@"foo", \@"bar"], containsInAnyOrderIn(@[\@"bar", \@"foo"]))</pre>
  *
  * <b>Name Clash</b><br />

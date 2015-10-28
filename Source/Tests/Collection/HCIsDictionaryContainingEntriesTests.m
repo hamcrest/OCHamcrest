@@ -65,7 +65,7 @@
     assertDoesNotMatch(@"no d:3", hasEntries(@"d", @3, nil), dict);
 }
 
-- (void)testHasEntriesIn_ProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)testDictionaryVariant_ProvidesConvenientShortcutForMatchingWithEqualTo
 {
     NSDictionary *dict = @{@"a": @1,
             @"b": @2,

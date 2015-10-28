@@ -22,7 +22,7 @@ FOUNDATION_EXPORT id HC_onlyContainsIn(NSArray *itemMatchers);
  * performing a single pass. Any matcher may match multiple elements.
  *
  * <b>Example</b><br />
- * <pre>assertThat(\@[\@"Jon", \@"John", \@"Bob"], onlyContainsIn(@[startsWith(\@"Jo"), startsWith(\@("Bo")]))</pre>
+ * <pre>assertThat(\@[\@"Jon", \@"John", \@"Bob"], onlyContainsIn(\@[startsWith(\@"Jo"), startsWith(\@("Bo")]))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

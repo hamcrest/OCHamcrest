@@ -26,8 +26,8 @@ FOUNDATION_EXPORT id HC_hasEntriesIn(NSDictionary *valueMatchersForKeys);
  * check for equality.
  * @discussion
  * <b>Examples</b><br />
- * <pre>assertThat(personDict, hasEntriesIn(@{\@"firstName": equalTo(\@"Jon"), \@"lastName": equalTo(\@"Reid")}))</pre>
- * <pre>assertThat(personDict, hasEntriesIn(@{\@"firstName": \@"Jon", \@"lastName": \@"Reid"}))</pre>
+ * <pre>assertThat(personDict, hasEntriesIn(\@{\@"firstName": equalTo(\@"Jon"), \@"lastName": equalTo(\@"Reid")}))</pre>
+ * <pre>assertThat(personDict, hasEntriesIn(\@{\@"firstName": \@"Jon", \@"lastName": \@"Reid"}))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

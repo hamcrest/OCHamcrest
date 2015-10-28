@@ -27,8 +27,8 @@ FOUNDATION_EXPORT id HC_containsIn(NSArray *itemMatchers);
  * length as the specified list of matchers.
  *
  * <b>Examples</b><br />
- * <pre>assertThat(\@[\@"foo", \@"bar"], containsIn(@[equalTo(\@"foo"), equalTo(\@"bar")]))</pre>
- * <pre>assertThat(\@[\@"foo", \@"bar"], containsIn(@[\@"foo", \@"bar"]))</pre>
+ * <pre>assertThat(\@[\@"foo", \@"bar"], containsIn(\@[equalTo(\@"foo"), equalTo(\@"bar")]))</pre>
+ * <pre>assertThat(\@[\@"foo", \@"bar"], containsIn(\@[\@"foo", \@"bar"]))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym

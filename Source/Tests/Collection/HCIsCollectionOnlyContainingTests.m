@@ -72,7 +72,7 @@
                   (@[@1, @"hi", @2, @3]));
 }
 
-- (void)testOnlyContainsIn_ProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)testArrayVariant_ProvidesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"Values automatically wrapped with equal_to",
             onlyContainsIn(@[lessThan(@4), @"hi"]),

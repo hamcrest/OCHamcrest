@@ -54,7 +54,7 @@ FOUNDATION_EXPORT id HC_hasItemsIn(NSArray *itemMatchers);
  * performing one pass for each matcher.
  *
  * <b>Example</b><br />
- * <pre>assertThat(\@[\@"foo", \@"bar", \@"baz"], hasItems(@[endsWith(\@"z"), endsWith(\@"o")]))</pre>
+ * <pre>assertThat(\@[\@"foo", \@"bar", \@"baz"], hasItems(\@[endsWith(\@"z"), endsWith(\@"o")]))</pre>
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
