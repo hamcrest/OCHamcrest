@@ -72,6 +72,13 @@
                   (@[@1, @"hi", @2, @3]));
 }
 
+- (void)testOnlyContainsIn_ProvidesConvenientShortcutForMatchingWithEqualTo
+{
+    assertMatches(@"Values automatically wrapped with equal_to",
+            onlyContainsIn(@[lessThan(@4), @"hi"]),
+            (@[@1, @"hi", @2, @3]));
+}
+
 - (void)testDoesNotMatchCollectionWithMismatchingItem
 {
     assertDoesNotMatch(@"4 is not less than 4",

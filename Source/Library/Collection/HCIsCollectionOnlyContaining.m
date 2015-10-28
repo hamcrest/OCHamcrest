@@ -18,12 +18,17 @@
 @end
 
 
+id HC_onlyContainsIn(NSArray *itemMatchers)
+{
+    return [[HCIsCollectionOnlyContaining alloc] initWithMatcher:HC_anyOfIn(itemMatchers)];
+}
+
 id HC_onlyContains(id itemMatchers, ...)
 {
     va_list args;
     va_start(args, itemMatchers);
-    NSArray *matchers = HCCollectMatchers(itemMatchers, args);
+    NSArray *array = HCCollectItems(itemMatchers, args);
     va_end(args);
 
-    return [[HCIsCollectionOnlyContaining alloc] initWithMatcher:HC_anyOfIn(matchers)];
+    return HC_onlyContainsIn(array);
 }
