@@ -45,10 +45,9 @@ FOUNDATION_EXPORT id HC_allOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
 /*!
  * @abstract Creates a matcher that matches when the examined object matches <b>all</b> of the
  * specified matchers.
- * @param matchers... A comma-separated list of matchers ending with <code>nil</code>.
- * @discussion Any argument that is not a matcher is implicitly wrapped in an <em>equalTo</em>
- * matcher to check for equality.
- *
+ * @param matchers... A comma-separated list of matchers ending with <code>nil</code>. Any argument
+ * that is not a matcher is implicitly wrapped in an <em>equalTo</em> matcher to check for equality.
+ * @discussion
  * <b>Example</b><br />
  * <pre>assertThat(\@"myValue", allOf(startsWith(\@"my"), containsSubstring(\@"Val"), nil))</pre>
  *

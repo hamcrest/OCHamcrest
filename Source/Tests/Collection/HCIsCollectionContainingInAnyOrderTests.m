@@ -61,6 +61,13 @@
     assertMatches(@"Values automatically wrapped with equalTo", matcher, (@[@2, @1]));
 }
 
+- (void)testContainsInAnyOrderIn_ProvidesConvenientShortcutForMatchingWithEqualTo
+{
+    id matcher = containsInAnyOrderIn(@[@1, @2]);
+
+    assertMatches(@"Values automatically wrapped with equalTo", matcher, (@[@2, @1]));
+}
+
 - (void)testDoesNotMatchNil
 {
     id matcher = containsInAnyOrder(@1, nil);

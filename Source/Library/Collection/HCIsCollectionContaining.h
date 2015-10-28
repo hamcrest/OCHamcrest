@@ -58,7 +58,7 @@ FOUNDATION_EXPORT id HC_hasItemsIn(NSArray *itemMatchers);
  *
  * <b>Name Clash</b><br />
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
- * HC_hasItems instead.
+ * HC_hasItemsIn instead.
  */
 static inline id hasItemsIn(NSArray *itemMatchers)
 {
@@ -74,11 +74,10 @@ FOUNDATION_EXPORT id HC_hasItems(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATI
  * @abstract Creates a matcher for collections that matches when all specified matchers are
  * satisfied by any item in the examined collection.
  * @param itemMatchers... A comma-separated list of matchers ending with <code>nil</code>.
- * @discussion This matcher works on any collection that conforms to the NSFastEnumeration protocol,
- * performing one pass for each matcher.
- *
  * Any argument that is not a matcher is implicitly wrapped in an <em>equalTo</em> matcher to check
  * for equality.
+ * @discussion This matcher works on any collection that conforms to the NSFastEnumeration protocol,
+ * performing one pass for each matcher.
  *
  * <b>Example</b><br />
  * <pre>assertThat(\@[\@"foo", \@"bar", \@"baz"], hasItems(endsWith(\@"z"), endsWith(\@"o"), nil))</pre>

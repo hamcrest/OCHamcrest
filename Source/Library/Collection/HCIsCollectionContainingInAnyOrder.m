@@ -99,12 +99,17 @@
 @end
 
 
+id HC_containsInAnyOrderIn(NSArray *itemMatchers)
+{
+    return [[HCIsCollectionContainingInAnyOrder alloc] initWithMatchers:HCWrapIntoMatchers(itemMatchers)];
+}
+
 id HC_containsInAnyOrder(id itemMatchers, ...)
 {
     va_list args;
     va_start(args, itemMatchers);
-    NSArray *matchers = HCCollectMatchers(itemMatchers, args);
+    NSArray *array = HCCollectItems(itemMatchers, args);
     va_end(args);
 
-    return [[HCIsCollectionContainingInAnyOrder alloc] initWithMatchers:matchers];
+    return HC_containsInAnyOrderIn(array);
 }
