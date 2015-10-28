@@ -20,11 +20,10 @@ FOUNDATION_EXPORT id HC_describedAs(NSString *description, id <HCMatcher> matche
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract describedAs(description, matcher, ...) -
- * Wraps an existing matcher, overriding its description with that specified. All other functions
- * are delegated to the decorated matcher, including its mismatch description.
+ * @abstract Wraps an existing matcher, overriding its description with that specified. All other
+ * functions are delegated to the decorated matcher, including its mismatch description.
  * @param description The new description for the wrapped matcher.
- * @param matcher,... The matcher to wrap, followed by a comma-separated list of substitution
+ * @param matcher The matcher to wrap, followed by a comma-separated list of substitution
  * values ending with <code>nil</code>.
  * @discussion The description may contain substitution placeholders %0, %1, etc. These will be
  * replaced by any values that follow the matcher.
@@ -33,5 +32,5 @@ FOUNDATION_EXPORT id HC_describedAs(NSString *description, id <HCMatcher> matche
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_describedAs instead.
  */
-#define describedAs HC_describedAs
+#define describedAs(description, matcher, ...) HC_describedAs(description, matcher, ##__VA_ARGS__)
 #endif
