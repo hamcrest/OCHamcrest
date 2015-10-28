@@ -49,6 +49,13 @@
     assertMatches(@"Values automatically wrapped with equalTo", matcher, (@[@1, @2, @3]));
 }
 
+- (void)testContainsIn_ProvidesConvenientShortcutForMatchingWithEqualTo
+{
+    id matcher = containsIn(@[@1, @2, @3]);
+
+    assertMatches(@"Values automatically wrapped with equalTo", matcher, (@[@1, @2, @3]));
+}
+
 - (void)testDoesNotMatchWithMoreElementsThanExpected
 {
     id matcher = contains(@1, @2, @3, nil);

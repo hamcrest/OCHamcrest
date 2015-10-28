@@ -114,12 +114,17 @@
 @end
 
 
+id HC_containsIn(NSArray *itemMatchers)
+{
+    return [[HCIsCollectionContainingInOrder alloc] initWithMatchers:HCWrapIntoMatchers(itemMatchers)];
+}
+
 id HC_contains(id itemMatchers, ...)
 {
     va_list args;
     va_start(args, itemMatchers);
-    NSArray *matchers = HCCollectMatchers(itemMatchers, args);
+    NSArray *array = HCCollectItems(itemMatchers, args);
     va_end(args);
 
-    return [[HCIsCollectionContainingInOrder alloc] initWithMatchers:matchers];
+    return HC_containsIn(array);
 }
