@@ -88,9 +88,8 @@ FOUNDATION_EXPORT id HC_equalToLong(long value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
- * @abstract equalToLong(value) -
- * Creates a matcher that matches when the examined object is equal to an NSNumber created from the
- * specified long value.
+ * @abstract Creates a matcher that matches when the examined object is equal to an NSNumber created
+ * from the specified long value.
  * @param value The long value from which to create an NSNumber.
  * @discussion Consider using <code>equalTo(\@(value))</code> instead.
  *
@@ -98,7 +97,10 @@ FOUNDATION_EXPORT id HC_equalToLong(long value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToLong instead.
  */
-#define equalToLong HC_equalToLong
+static inline id equalToLong(long value)
+{
+    return HC_equalToLong(value);
+}
 #endif
 
 
@@ -119,8 +121,6 @@ static inline id equalToLongLong(long long value)
 {
     return HC_equalToLongLong(value);
 }
-
-#define equalToLongLong HC_equalToLongLong
 #endif
 
 
