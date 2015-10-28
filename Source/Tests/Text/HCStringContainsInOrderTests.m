@@ -37,6 +37,13 @@
     assertMatches(@"correct order", matcher, @"string one then string two followed by string three");
 }
 
+- (void)testArrayVariant_MatchesIfOrderIsCorrect
+{
+    id <HCMatcher> variantMatcher = stringContainsInOrderIn(@[@"string one", @"string two", @"string three"]);
+
+    assertMatches(@"correct order", variantMatcher, @"string one then string two followed by string three");
+}
+
 - (void)testDoesNotMatchIfOrderIsIncorrect
 {
     assertDoesNotMatch(@"incorrect order", matcher, @"string two then string one followed by string three");
