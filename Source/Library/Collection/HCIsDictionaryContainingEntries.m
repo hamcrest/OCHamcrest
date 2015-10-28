@@ -96,12 +96,23 @@ static void requirePairedObject(id obj)
 }
 
 
-id HC_hasEntries(id keysAndValueMatch, ...)
+id HC_hasEntriesIn(NSDictionary *valueMatchersForKeys)
+{
+    NSArray *keys = valueMatchersForKeys.allKeys;
+    NSMutableArray *valueMatchers = [[NSMutableArray alloc] init];
+    for (id key in keys)
+        [valueMatchers addObject:HCWrapInMatcher(valueMatchersForKeys[key])];
+
+    return [[HCIsDictionaryContainingEntries alloc] initWithKeys:keys
+                                                   valueMatchers:valueMatchers];
+}
+
+id HC_hasEntries(id keysAndValueMatchers, ...)
 {
     va_list args;
-    va_start(args, keysAndValueMatch);
+    va_start(args, keysAndValueMatchers);
 
-    id key = keysAndValueMatch;
+    id key = keysAndValueMatchers;
     id valueMatcher = va_arg(args, id);
     requirePairedObject(valueMatcher);
     NSMutableArray *keys = [NSMutableArray arrayWithObject:key];

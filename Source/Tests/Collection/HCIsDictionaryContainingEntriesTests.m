@@ -65,6 +65,17 @@
     assertDoesNotMatch(@"no d:3", hasEntries(@"d", @3, nil), dict);
 }
 
+- (void)testHasEntriesIn_ProvidesConvenientShortcutForMatchingWithEqualTo
+{
+    NSDictionary *dict = @{@"a": @1,
+            @"b": @2,
+            @"c": @3};
+
+    assertMatches(@"has a & b", hasEntriesIn(@{@"a": @1, @"b": @2}), dict);
+    assertMatches(@"has c & a", hasEntriesIn(@{@"c": @3, @"a": @1}), dict);
+    assertDoesNotMatch(@"no d:3", hasEntriesIn(@{@"d": @3}), dict);
+}
+
 - (void)testShouldNotMatchNil
 {
     assertDoesNotMatch(@"nil", hasEntries(@"a", @1, nil), nil);
