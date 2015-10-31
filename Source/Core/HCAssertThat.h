@@ -34,7 +34,7 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThat instead.
  */
-#define assertThat HC_assertThat
+#define assertThat(actual, matcher) HC_assertThat(actual, matcher)
 #endif
 
 
@@ -68,7 +68,7 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertWithTimeout instead.
 */
-#define assertWithTimeout HC_assertWithTimeout
+#define assertWithTimeout(timeout, actualBlock, matcher) HC_assertWithTimeout(timeout, actualBlock, matcher)
 
 
 /*!
@@ -80,5 +80,5 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_thatEventually instead.
  */
-#define thatEventually HC_thatEventually
+#define thatEventually(actual) HC_thatEventually(actual)
 #endif

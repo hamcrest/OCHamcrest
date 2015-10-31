@@ -24,7 +24,7 @@ FOUNDATION_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatBool instead.
  */
-#define assertThatBool HC_assertThatBool
+#define assertThatBool(actual, matcher) HC_assertThatBool(actual, matcher)
 #endif
 
 
@@ -46,7 +46,7 @@ FOUNDATION_EXPORT void HC_assertThatCharWithLocation(id testCase, char actual,
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatChar instead.
  */
-#define assertThatChar HC_assertThatChar
+#define assertThatChar(actual, matcher) HC_assertThatChar(actual, matcher)
 #endif
 
 
@@ -68,7 +68,7 @@ FOUNDATION_EXPORT void HC_assertThatDoubleWithLocation(id testCase, double actua
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatDouble instead.
  */
-#define assertThatDouble HC_assertThatDouble
+#define assertThatDouble(actual, matcher) HC_assertThatDouble(actual, matcher)
 #endif
 
 
@@ -90,7 +90,7 @@ FOUNDATION_EXPORT void HC_assertThatFloatWithLocation(id testCase, float actual,
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatFloat instead.
  */
-#define assertThatFloat HC_assertThatFloat
+#define assertThatFloat(actual, matcher) HC_assertThatFloat(actual, matcher)
 #endif
 
 
@@ -112,7 +112,7 @@ FOUNDATION_EXPORT void HC_assertThatIntWithLocation(id testCase, int actual,
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatInt instead.
  */
-#define assertThatInt HC_assertThatInt
+#define assertThatInt(actual, matcher) HC_assertThatInt(actual, matcher)
 #endif
 
 
@@ -134,7 +134,7 @@ FOUNDATION_EXPORT void HC_assertThatLongWithLocation(id testCase, long actual,
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatLong instead.
  */
-#define assertThatLong HC_assertThatLong
+#define assertThatLong(actual, matcher) HC_assertThatLong(actual, matcher)
 #endif
 
 
@@ -156,7 +156,7 @@ FOUNDATION_EXPORT void HC_assertThatLongLongWithLocation(id testCase, long long 
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatLongLong instead.
  */
-#define assertThatLongLong HC_assertThatLongLong
+#define assertThatLongLong(actual, matcher) HC_assertThatLongLong(actual, matcher)
 #endif
 
 
@@ -178,7 +178,7 @@ FOUNDATION_EXPORT void HC_assertThatShortWithLocation(id testCase, short actual,
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatShort instead.
  */
-#define assertThatShort HC_assertThatShort
+#define assertThatShort(actual, matcher) HC_assertThatShort(actual, matcher)
 #endif
 
 
@@ -200,7 +200,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedCharWithLocation(id testCase, unsign
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatUnsignedChar instead.
  */
-#define assertThatUnsignedChar HC_assertThatUnsignedChar
+#define assertThatUnsignedChar(actual, matcher) HC_assertThatUnsignedChar(actual, matcher)
 #endif
 
 
@@ -222,7 +222,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedIntWithLocation(id testCase, unsigne
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatUnsignedInt instead.
  */
-#define assertThatUnsignedInt HC_assertThatUnsignedInt
+#define assertThatUnsignedInt(actual, matcher) HC_assertThatUnsignedInt(actual, matcher)
 #endif
 
 
@@ -244,7 +244,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedLongWithLocation(id testCase, unsign
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatUnsignedLong instead.
  */
-#define assertThatUnsignedLong HC_assertThatUnsignedLong
+#define assertThatUnsignedLong(actual, matcher) HC_assertThatUnsignedLong(actual, matcher)
 #endif
 
 
@@ -266,7 +266,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedLongLongWithLocation(id testCase, un
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatUnsignedLongLong instead.
  */
-#define assertThatUnsignedLongLong HC_assertThatUnsignedLongLong
+#define assertThatUnsignedLongLong(actual, matcher) HC_assertThatUnsignedLongLong(actual, matcher)
 #endif
 
 
@@ -288,7 +288,7 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedShortWithLocation(id testCase, unsig
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatUnsignedShort instead.
  */
-#define assertThatUnsignedShort HC_assertThatUnsignedShort
+#define assertThatUnsignedShort(actual, matcher) HC_assertThatUnsignedShort(actual, matcher)
 #endif
 
 
@@ -310,7 +310,7 @@ FOUNDATION_EXPORT void HC_assertThatIntegerWithLocation(id testCase, NSInteger a
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatInteger instead.
  */
-#define assertThatInteger HC_assertThatInteger
+#define assertThatInteger(actual, matcher) HC_assertThatInteger(actual, matcher)
 #endif
 
 
@@ -332,5 +332,5 @@ FOUNDATION_EXPORT void HC_assertThatUnsignedIntegerWithLocation(id testCase, NSU
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_assertThatUnsignedInteger instead.
  */
-#define assertThatUnsignedInteger HC_assertThatUnsignedInteger
+#define assertThatUnsignedInteger(actual, matcher) HC_assertThatUnsignedInteger(actual, matcher)
 #endif
