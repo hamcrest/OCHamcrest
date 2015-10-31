@@ -42,8 +42,6 @@
 #import <OCHamcrest/HCStringEndsWith.h>
 #import <OCHamcrest/HCStringStartsWith.h>
 #import <OCHamcrest/HCTestFailure.h>
-#import <OCHamcrest/HCTestFailureHandler.h>
-#import <OCHamcrest/HCTestFailureHandlerChain.h>
 #import <OCHamcrest/HCTestFailureReporter.h>
 #import <OCHamcrest/HCTestFailureReporterChain.h>
 #import <OCHamcrest/HCThrowsException.h>
