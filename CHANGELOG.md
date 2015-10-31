@@ -1,3 +1,13 @@
+Version 4.3.2
+-------------
+_31 Oct 2015_
+
+**Project changes:**
+
+- Enabling "Symbols hidden by default" in 4.3.1 was overkill, preventing people from using the
+  prebuilt Mac framework.
+
+
 Version 4.3.1
 -------------
 _24 Oct 2015_
