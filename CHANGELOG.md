@@ -1,14 +1,19 @@
 NEXT RELEASE (Compatibility-breaking)
 -------------------------------------
 
-- Renamed long syntax for `containsInRelativeOrder` from prefix hc_ to HC_.
+- Instead of enabling short syntax by defining HC_SHORTHAND, short syntax is now enabled by default.
+  To disable it, #define HC_DISABLE_SHORT_SYNTAX.
+- Matchers which take nil-terminated lists have "In" variants which take a single NSArray, like
+  `allOfIn`. The matcher `hasEntriesIn` is an exception and takes an NSDictionary.
+- Renamed long syntax for `containsInRelativeOrder` from prefix hc_ to HC_ to conform to other
+  matchers.
 
 **Deleted:**
 
-- `equalToBool` matcher
-- `containsString` matcher
-- `assertThatAfter`/`futureValueOf`
-- `HC_testFailureHandlerChain()`
+- `equalToBool` matcher (deprecated in v4.1.0)
+- `containsString` matcher (deprecated in v4.2.0)
+- `assertThatAfter`/`futureValueOf` (deprecated in v4.2.0)
+- `HC_testFailureHandlerChain()` (deprecated in v4.2.0)
 
 
 Version 4.3.2
