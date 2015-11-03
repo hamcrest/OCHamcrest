@@ -1,10 +1,18 @@
-NEXT RELEASE (Compatibility-breaking)
--------------------------------------
+Version 5.0.0
+-------------
+_02 Nov 2015_
+
+**Features:**
 
 - Instead of enabling short syntax by defining HC_SHORTHAND, short syntax is now enabled by default.
   To disable it, #define HC_DISABLE_SHORT_SYNTAX.
 - Matchers which take nil-terminated lists have "In" variants which take a single NSArray, like
   `allOfIn`. The matcher `hasEntriesIn` is an exception and takes an NSDictionary.
+- Improved documentation on all matchers. Documentation is now shown for matchers with fixed numbers
+  of arguments. All matchers provide argument hinting.
+
+**Renamed:**
+
 - Renamed long syntax for `containsInRelativeOrder` from prefix hc_ to HC_ to conform to other
   matchers.
 
