@@ -1,6 +1,4 @@
 #import <XCTest/XCTest.h>
-
-#define HC_SHORTHAND
 #import <OCHamcrestIOS/OCHamcrestIOS.h>  // Specify OCHamcrestIOS for prebuilt framework
 
 @interface ExampleTests : XCTestCase

@@ -1,6 +1,4 @@
 #import <XCTest/XCTest.h>
-
-#define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
 
 @interface ExampleTests : XCTestCase
