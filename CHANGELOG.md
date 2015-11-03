@@ -2,6 +2,8 @@ Version 5.0.0
 -------------
 _02 Nov 2015_
 
+For detailed discussion on v5.0.0, see http://qualitycoding.org/ochamcrest-v5-0-0/
+
 **Features:**
 
 - Instead of enabling short syntax by defining HC_SHORTHAND, short syntax is now enabled by default.
