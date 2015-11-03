@@ -29,7 +29,7 @@ targets:
 
 ```ruby
 target :MyTests, :exclusive => true do
-  pod 'OCHamcrest', '~> 4.0'
+  pod 'OCHamcrest', '~> 5.0'
 end
 ```
 
@@ -104,10 +104,10 @@ method parameter is a matcher for `Biscuit` objects, here a matcher that checks 
 to another using the `-isEqual:` method. The test passes since the `Biscuit` class defines an
 `-isEqual:` method.
 
-OCHamcrest's functions are actually declared with an "HC" package prefix (such as `HC_assertThat`
+OCHamcrest's functions are actually declared with an "HC_" package prefix (such as `HC_assertThat`
 and `HC_equalTo`) to avoid name clashes. To make test writing faster and test code more legible,
-short syntax is provided by default. For example, instead of writing `HC_assertThat`, simply write
-`assertThat`.
+optional short syntax is provided by default. For example, instead of writing `HC_assertThat`,
+simply write `assertThat`.
 
 
 Predefined matchers
@@ -131,8 +131,6 @@ OCHamcrest comes with a library of useful matchers:
 * Number
 
   * `closeTo` - match number close to a given value
-  * equalTo&lt;TypeName&gt; - match number equal to a primitive number (such as
-  `equalToInt` for an `int`)
   * `greaterThan`, `greaterThanOrEqualTo`, `lessThan`,
   `lessThanOrEqualTo` - match numeric ordering
   * `isFalse` - match zero
