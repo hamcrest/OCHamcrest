@@ -35,7 +35,6 @@ end
 
 Use the following import:
 
-    #define HC_SHORTHAND
     #import <OCHamcrest/OCHamcrest.h>
 
 ### Prebuilt Frameworks
@@ -53,7 +52,6 @@ folder". Then specify `-ObjC` in your "Other Linker Flags".
 
 Use the following import:
 
-    #define HC_SHORTHAND
     #import <OCHamcrestIOS/OCHamcrestIOS.h>
 
 #### Mac OS X Development:
@@ -62,7 +60,6 @@ Add a "Copy Files" build phase to copy OCHamcrest.framework to your Products Dir
 
 Use the following import:
 
-    #define HC_SHORTHAND
     #import <OCHamcrest/OCHamcrest.h>
 
 ### Build Your Own
@@ -84,8 +81,6 @@ matcher:
 
 ```obj-c
 #import <XCTest/XCTest.h>
-
-#define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
 
 @interface BiscuitTest : XCTestCase
@@ -111,8 +106,8 @@ to another using the `-isEqual:` method. The test passes since the `Biscuit` cla
 
 OCHamcrest's functions are actually declared with an "HC" package prefix (such as `HC_assertThat`
 and `HC_equalTo`) to avoid name clashes. To make test writing faster and test code more legible,
-shorthand macros are provided if `HC_SHORTHAND` is defined before including the OCHamcrest header.
-For example, instead of writing `HC_assertThat`, simply write `assertThat`.
+short syntax is provided by default. For example, instead of writing `HC_assertThat`, simply write
+`assertThat`.
 
 
 Predefined matchers
@@ -151,32 +146,33 @@ OCHamcrest comes with a library of useful matchers:
   * `equalToIgnoringWhitespace` - match the complete string but ignore extra
   whitespace
   * `startsWith` - match the beginning of a string
-  * `stringContainsInOrder` - match parts of a string, in relative order
+  * `stringContainsInOrder`, `stringContainsInOrderIn` - match parts of a string, in relative order
 
 * Logical
 
-  * `allOf` - "and" together all matchers
-  * `anyOf` - "or" together all matchers
+  * `allOf`, `allOfIn` - "and" together all matchers
+  * `anyOf`, `anyOfIn` - "or" together all matchers
   * `anything` - match anything (useful in composite matchers when you don't
   care about a particular value)
   * `isNot` - negate the matcher
 
 * Collection
 
-  * `contains` - exactly match the entire collection
-  * `containsInAnyOrder` - match the entire collection, but in any order
-  * `containsInRelativeOrder` - match collection containing items in relative order
+  * `contains`, `containsIn` - exactly match the entire collection
+  * `containsInAnyOrder`, `containsInAnyOrderIn` - match the entire collection, but in any order
+  * `containsInRelativeOrder`, `containsInRelativeOrderIn` - match collection containing items in relative order
   * `everyItem` - match if every item in a collection satisfies a given matcher
   * `hasCount` - match number of elements against another matcher
   * `hasCountOf` - match collection with given number of elements
-  * `hasEntries` - match dictionary with list of key-value pairs
+  * `hasEntries` - match dictionary with key-value pairs in a dictionary
+  * `hasEntriesIn` - match dictionary with key-value pairs in a list
   * `hasEntry` - match dictionary containing a key-value pair
   * `hasItem` - match if given item appears in the collection
-  * `hasItems` - match if all given items appear in the collection, in any order
+  * `hasItems`, `hasItemsIn` - match if all given items appear in the collection, in any order
   * `hasKey` - match dictionary with a key
   * `hasValue` - match dictionary with a value
   * `isEmpty` - match empty collection
-  * `onlyContains` - match if collection's items appear in given list
+  * `onlyContains`, `onlyContainsIn` - match if collection's items appear in given list
 
 * Decorator
 
