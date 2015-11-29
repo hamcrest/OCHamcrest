@@ -32,7 +32,7 @@ FOUNDATION_EXPORT id HC_hasCount(id <HCMatcher> countMatcher);
 static inline id hasCount(id <HCMatcher> countMatcher)
 {
     return HC_hasCount(countMatcher);
-};
+}
 #endif
 
 
