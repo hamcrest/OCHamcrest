@@ -37,6 +37,18 @@ Use the following import:
 
     #import <OCHamcrest/OCHamcrest.h>
 
+### Carthage
+
+Add the following to your Cartfile:
+
+```
+github "jonreid/OCMockito" "master"
+```
+
+Then proceed by dragging the the built frameworks from the appropriate
+Carthage/Build/ directory as described above, but with "Copy items into
+destination group's folder" disabled.
+
 ### Prebuilt Frameworks
 
 Prebuilt binaries are available on [GitHub](https://github.com/hamcrest/OCHamcrest/releases/). The
