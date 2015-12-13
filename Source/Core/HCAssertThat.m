@@ -11,23 +11,13 @@
 #import <libkern/OSAtomic.h>
 
 
-static NSString *describeMismatch(id matcher, id actual)
-{
-    HCStringDescription *description = [HCStringDescription stringDescription];
-    [[[description appendText:@"Expected "]
-            appendDescriptionOf:matcher]
-            appendText:@", but "];
-    [matcher describeMismatchOf:actual to:description];
-    return description.description;
-}
-
 static void reportMismatch(id testCase, id actual, id <HCMatcher> matcher,
                            char const *fileName, int lineNumber)
 {
     HCTestFailure *failure = [[HCTestFailure alloc] initWithTestCase:testCase
                                                             fileName:[NSString stringWithUTF8String:fileName]
                                                           lineNumber:(NSUInteger)lineNumber
-                                                              reason:describeMismatch(matcher, actual)];
+                                                              reason:HCDescribeMismatch(matcher, actual)];
     HCTestFailureReporter *chain = [HCTestFailureReporterChain reporterChain];
     [chain handleFailure:failure];
 }
@@ -56,4 +46,14 @@ void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout, HCFutu
 
     if (!match)
         reportMismatch(testCase, actual, matcher, fileName, lineNumber);
+}
+
+NSString *HCDescribeMismatch(id <HCMatcher> matcher, id actual)
+{
+    HCStringDescription *description = [HCStringDescription stringDescription];
+    [[[description appendText:@"Expected "]
+            appendDescriptionOf:matcher]
+            appendText:@", but "];
+    [matcher describeMismatchOf:actual to:description];
+    return description.description;
 }

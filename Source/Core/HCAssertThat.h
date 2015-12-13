@@ -82,3 +82,10 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
  */
 #define thatEventually(actual) HC_thatEventually(actual)
 #endif
+
+
+/*!
+ * @abstract "Expected <matcher description>, but <mismatch description>"
+ * @discussion Helper function to let you describe mismatches the way <tt>assertThat</tt> does.
+ */
+OBJC_EXPORT NSString *HCDescribeMismatch(id <HCMatcher> matcher, id actual);

@@ -1,3 +1,11 @@
+NEXT RELEASE
+------------
+
+**Features:**
+
+- HCDescribeMismatch is a helper function to let you describe mismatches the way `assertThat` does.
+
+
 Version 5.0.0
 -------------
 _02 Nov 2015_
