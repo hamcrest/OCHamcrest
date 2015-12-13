@@ -42,12 +42,11 @@ Use the following import:
 Add the following to your Cartfile:
 
 ```
-github "jonreid/OCMockito" "master"
+github "hamcrest/OCHamcrest" "master"
 ```
 
-Then proceed by dragging the the built frameworks from the appropriate
-Carthage/Build/ directory as described above, but with "Copy items into
-destination group's folder" disabled.
+Then drag the the built framework from the appropriate Carthage/Build directory into your project,
+but with "Copy items into destination group's folder" disabled.
 
 ### Prebuilt Frameworks
 

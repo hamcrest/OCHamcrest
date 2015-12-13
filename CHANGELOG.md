@@ -4,6 +4,7 @@ NEXT RELEASE
 **Features:**
 
 - HCDescribeMismatch is a helper function to let you describe mismatches the way `assertThat` does.
+- Carthage support for Mac, iOS, watchOS and tvOS. _Thanks to: Nikolaj Schumacher
 
 
 Version 5.0.0
