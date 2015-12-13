@@ -40,7 +40,7 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
 
 typedef id (^HCFutureValue)();
 
-OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
+FOUNDATION_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
         HCFutureValue actualBlock,
         id <HCMatcher> matcher,
         const char *fileName, int lineNumber);
@@ -88,4 +88,4 @@ OBJC_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval tim
  * @abstract "Expected <matcher description>, but <mismatch description>"
  * @discussion Helper function to let you describe mismatches the way <tt>assertThat</tt> does.
  */
-OBJC_EXPORT NSString *HCDescribeMismatch(id <HCMatcher> matcher, id actual);
+FOUNDATION_EXPORT NSString *HCDescribeMismatch(id <HCMatcher> matcher, id actual);
