@@ -1,9 +1,7 @@
+#import "IsGivenDayOfWeek.h"
+#import <OCHamcrest/OCHamcrest.h>
 #import <XCTest/XCTest.h>
 
-#define HC_SHORTHAND
-#import <OCHamcrest/OCHamcrest.h>
-
-#import "IsGivenDayOfWeek.h"
 
 @interface ExampleTests : XCTestCase
 @end

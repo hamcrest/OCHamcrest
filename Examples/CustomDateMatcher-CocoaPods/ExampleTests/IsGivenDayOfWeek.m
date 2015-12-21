@@ -3,6 +3,7 @@
 static NSString* const dayAsString[] =
         { @"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday" };
 
+
 @implementation IsGivenDayOfWeek
 
 - (instancetype)initWithDayOfWeek:(NSInteger)dayOfWeek

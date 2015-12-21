@@ -1,5 +1,6 @@
-#import <XCTest/XCTest.h>
 #import <OCHamcrest/OCHamcrest.h>
+#import <XCTest/XCTest.h>
+
 
 @interface ExampleTests : XCTestCase
 @end
