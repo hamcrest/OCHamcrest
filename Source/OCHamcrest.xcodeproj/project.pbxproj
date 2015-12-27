@@ -2729,10 +2729,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = "Tests-Info.plist";
@@ -2752,10 +2749,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				INFOPLIST_FILE = "Tests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -3255,6 +3249,7 @@
 				24C5BFEF1C1777D900C2BAFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24C5BFFB1C17781400C2BAFD /* Build configuration list for PBXNativeTarget "OCHamcrest-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -3263,6 +3258,7 @@
 				24C5BFFD1C17781400C2BAFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24C5C0081C17782500C2BAFD /* Build configuration list for PBXNativeTarget "OCHamcrest-watchOS" */ = {
 			isa = XCConfigurationList;
@@ -3271,6 +3267,7 @@
 				24C5C00A1C17782500C2BAFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
