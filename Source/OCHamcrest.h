@@ -48,5 +48,5 @@
 #import <OCHamcrest/HCBaseDescription.h>
 #import <OCHamcrest/HCCollect.h>
 #import <OCHamcrest/HCRequireNonNilObject.h>
-#import <OCHamcrest/HCStringDescription.h.h>
+#import <OCHamcrest/HCStringDescription.h>
 #import <OCHamcrest/HCWrapInMatcher.h.h>
