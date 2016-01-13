@@ -45,3 +45,8 @@
 #import <OCHamcrest/HCTestFailureReporter.h>
 #import <OCHamcrest/HCTestFailureReporterChain.h>
 #import <OCHamcrest/HCThrowsException.h>
+#import <OCHamcrest/HCBaseDescription.h>
+#import <OCHamcrest/HCCollect.h>
+#import <OCHamcrest/HCRequireNonNilObject.h>
+#import <OCHamcrest/HCStringDescription.h>
+#import <OCHamcrest/HCWrapInMatcher.h>
