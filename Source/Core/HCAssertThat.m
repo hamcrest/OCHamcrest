@@ -28,7 +28,9 @@ void HC_assertThatWithLocation(id testCase, id actual, id <HCMatcher> matcher,
         reportMismatch(testCase, actual, matcher, fileName, lineNumber);
 }
 
-void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout, HCFutureValue actualBlock, id <HCMatcher> matcher, const char *fileName, int lineNumber)
+void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
+        HCFutureValue actualBlock, id <HCMatcher> matcher,
+        const char *fileName, int lineNumber)
 {
     BOOL match;
     id actual;
