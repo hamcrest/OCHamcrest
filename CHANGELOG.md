@@ -1,3 +1,11 @@
+NEXT RELEASE
+------------
+
+**Fixes:**
+
+- Fixed umbrella header for Carthage. _Thanks to: Sylvain Rebaud, Engin Kurutepe_
+
+
 Version 5.1.0
 -------------
 _14 Dec 2015_

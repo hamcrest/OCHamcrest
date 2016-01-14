@@ -45,6 +45,8 @@
 #import <OCHamcrest/HCTestFailureReporter.h>
 #import <OCHamcrest/HCTestFailureReporterChain.h>
 #import <OCHamcrest/HCThrowsException.h>
+
+// Carthage workaround: Include transitive public headers
 #import <OCHamcrest/HCBaseDescription.h>
 #import <OCHamcrest/HCCollect.h>
 #import <OCHamcrest/HCRequireNonNilObject.h>
