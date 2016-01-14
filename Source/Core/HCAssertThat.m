@@ -8,7 +8,6 @@
 #import "HCTestFailure.h"
 #import "HCTestFailureReporter.h"
 #import "HCTestFailureReporterChain.h"
-#import <libkern/OSAtomic.h>
 
 
 static void reportMismatch(id testCase, id actual, id <HCMatcher> matcher,
