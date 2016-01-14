@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
                       they're most commonly used for writing unit tests that are expressive and
                       flexible.
 
-                      OCHamcrest is used for both iOS or OS X development, and is compatible with:
+                      OCHamcrest is compatible with:
       
                       * XCTest
                       * OCUnit (SenTestingKit)

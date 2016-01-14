@@ -9,7 +9,7 @@ What is OCHamcrest?
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 
-OCHamcrest is an iOS and Mac OS X library providing:
+OCHamcrest is an Objective-C library providing:
 
 * a library of "matcher" objects for declaring rules to check whether a given object matches those
   rules.
