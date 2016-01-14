@@ -105,7 +105,7 @@
 {
     id matcher = hasItems(@3, @4, nil);
 
-    assertMismatchDescription(@"a collection containing <4> mismatches were: [was <1>, was <2>, was <3>]",
+    assertMismatchDescription(@"instead of a collection containing <4>, mismatches were: [was <1>, was <2>, was <3>]",
             matcher, (@[@1, @2, @3]));
 }
 

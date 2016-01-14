@@ -5,6 +5,10 @@ NEXT RELEASE
 
 - Fixed umbrella header for Carthage. _Thanks to: Sylvain Rebaud, Engin Kurutepe_
 
+**Features:**
+
+- Improved mismatch descriptions for `allOf`, `allOfIn`.
+
 
 Version 5.1.0
 -------------

@@ -26,7 +26,9 @@
     {
         if (![oneMatcher matches:item])
         {
-            [[mismatchDescription appendDescriptionOf:oneMatcher] appendText:@" "];
+            [[[mismatchDescription appendText:@"instead of "]
+                                   appendDescriptionOf:oneMatcher]
+                                   appendText:@", "];
             [oneMatcher describeMismatchOf:item to:mismatchDescription];
             return NO;
         }

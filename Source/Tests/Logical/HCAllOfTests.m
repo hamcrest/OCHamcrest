@@ -65,14 +65,14 @@
 
 - (void)testMismatchDescriptionDescribesFirstFailingMatch
 {
-    assertMismatchDescription(@"\"good\" was \"bad\"",
+    assertMismatchDescription(@"instead of \"good\", was \"bad\"",
                               allOf(equalTo(@"bad"), equalTo(@"good"), nil),
                               @"bad");
 }
 
 - (void)testDescribeMismatch
 {
-    assertDescribeMismatch(@"\"good\" was \"bad\"",
+    assertDescribeMismatch(@"instead of \"good\", was \"bad\"",
                            allOf(equalTo(@"bad"), equalTo(@"good"), nil),
                            @"bad");
 }
