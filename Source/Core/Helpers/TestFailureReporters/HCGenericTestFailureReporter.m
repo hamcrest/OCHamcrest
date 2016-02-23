@@ -13,7 +13,7 @@
     return YES;
 }
 
-- (void)executeHandlingOfFailure:(HCTestFailure *)failure;
+- (void)executeHandlingOfFailure:(HCTestFailure *)failure
 {
     NSException *exception = [self createExceptionForFailure:failure];
     [exception raise];
