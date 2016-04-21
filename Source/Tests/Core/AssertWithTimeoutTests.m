@@ -10,7 +10,24 @@
 #import <XCTest/XCTest.h>
 #import "InterceptingTestCase.h"
 
+#import <mach/mach.h>
+#import <mach/mach_time.h>
+
 static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
+
+
+static NSTimeInterval machTimeInSeconds(void)
+{
+    static mach_timebase_info_data_t sTimebaseInfo;
+    uint64_t machTime = mach_absolute_time();
+    
+    if (sTimebaseInfo.denom == 0) {
+        (void) mach_timebase_info(&sTimebaseInfo);
+    }
+    
+    NSTimeInterval ratio = (NSTimeInterval)sTimebaseInfo.numer / sTimebaseInfo.denom;
+    return ratio * machTime / NSEC_PER_SEC;
+}
 
 
 @interface AssertWithTimeoutTests : InterceptingTestCase
@@ -75,10 +92,9 @@ static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
 
 - (NSTimeInterval)timeExecutingBlock:(void (^)())block
 {
-    NSDate *initialDate = [NSDate date];
+    NSTimeInterval start = machTimeInSeconds();
     block();
-    NSTimeInterval waitTime = -[initialDate timeIntervalSinceNow];
-    return waitTime;
+    return machTimeInSeconds() - start;
 }
 
 - (void)assertThatResultString:(NSString *)resultString containsExpectedString:(NSString *)expectedString
