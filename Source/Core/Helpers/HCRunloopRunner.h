@@ -6,6 +6,7 @@
 
 /*!
  * @abstract Runs runloop until fulfilled, or timeout is reached.
+ * @discussion Based on http://bou.io/CTTRunLoopRunUntil.html
  */
 @interface HCRunloopRunner : NSObject
 
