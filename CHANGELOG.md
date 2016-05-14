@@ -1,6 +1,10 @@
 NEXT RELEASE
 ------------
 
+**Backwards breaking:**
+
+- Changed HCStringDescription from using instance variable declared in header to hidden property.
+
 **Fixes:**
 
 - Removed semicolons that triggered warnings for `-Wsemicolon-before-method-body`. _Thanks to: Sylvain Defresne_

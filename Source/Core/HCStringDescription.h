@@ -10,9 +10,6 @@
  * @abstract An HCDescription that is stored as a string.
  */
 @interface HCStringDescription : HCBaseDescription
-{
-    NSMutableString *accumulator;
-}
 
 /*!
  * @abstract Returns the description of an HCSelfDescribing object as a string.
