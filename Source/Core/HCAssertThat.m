@@ -35,7 +35,7 @@ void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
         const char *fileName, int lineNumber)
 {
     // run immediately
-    __block id actual = actualBlock();
+    id actual = actualBlock();
     __block BOOL match = [matcher matches:actual];
     
     // if not already matched, pump the runloop until matched
@@ -43,7 +43,7 @@ void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
     {
         HCRunloopObserverBlock pump = ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
             assert(!match); // runloop should have exited if match occurred
-            actual = actualBlock();
+            id actual = actualBlock();
             match = [matcher matches:actual];
             if (match)
                 CFRunLoopStop(CFRunLoopGetCurrent());
