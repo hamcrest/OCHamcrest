@@ -8,16 +8,13 @@
 #import "HCTestFailure.h"
 #import "HCTestFailureReporter.h"
 #import "HCTestFailureReporterChain.h"
-#import <libkern/OSAtomic.h>
 
-typedef void (^HCRunloopObserverBlock)(CFRunLoopObserverRef, CFRunLoopActivity);
-
-@interface HCRunloopObserver : NSObject
+@interface HCRunloopRunner : NSObject
 @end
 
-@implementation HCRunloopObserver
+@implementation HCRunloopRunner
 {
-    CFRunLoopObserverRef observer;
+    CFRunLoopObserverRef _observer;
 }
 
 - (instancetype)initWithFulfillmentBlock:(BOOL (^)())fulfillmentBlock
@@ -25,25 +22,24 @@ typedef void (^HCRunloopObserverBlock)(CFRunLoopObserverRef, CFRunLoopActivity);
     self = [super init];
     if (self)
     {
-        HCRunloopObserverBlock pump = ^(CFRunLoopObserverRef pObserver, CFRunLoopActivity activity) {
+        _observer = CFRunLoopObserverCreateWithHandler(NULL, kCFRunLoopBeforeWaiting, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
             if (fulfillmentBlock())
                 CFRunLoopStop(CFRunLoopGetCurrent());
             else
                 CFRunLoopWakeUp(CFRunLoopGetCurrent());
-        };
-        observer = CFRunLoopObserverCreateWithHandler(NULL, kCFRunLoopBeforeWaiting, YES, 0, pump);
-        CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
+        });
+        CFRunLoopAddObserver(CFRunLoopGetCurrent(), _observer, kCFRunLoopDefaultMode);
     }
     return self;
 }
 
 - (void)dealloc
 {
-    CFRunLoopRemoveObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
-    CFRelease(observer);
+    CFRunLoopRemoveObserver(CFRunLoopGetCurrent(), _observer, kCFRunLoopDefaultMode);
+    CFRelease(_observer);
 }
 
-- (void)runUntilStopOrTimeout:(CFTimeInterval)timeout
+- (void)runUntilFulfilledOrTimeout:(CFTimeInterval)timeout
 {
     CFRunLoopRunInMode(kCFRunLoopDefaultMode, timeout, false);
 }
@@ -76,12 +72,11 @@ void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
 
     if (!match)
     {
-        HCRunloopObserver *runloopObserver = [[HCRunloopObserver alloc] initWithFulfillmentBlock:^BOOL {
-            assert(!match);
+        HCRunloopRunner *runner = [[HCRunloopRunner alloc] initWithFulfillmentBlock:^BOOL {
             match = [matcher matches:actualBlock()];
             return match;
         }];
-        [runloopObserver runUntilStopOrTimeout:timeout];
+        [runner runUntilFulfilledOrTimeout:timeout];
     }
 
     if (!match)
