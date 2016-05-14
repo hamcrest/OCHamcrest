@@ -3,48 +3,12 @@
 
 #import "HCAssertThat.h"
 
+#import "HCRunloopRunner.h"
 #import "HCStringDescription.h"
 #import "HCMatcher.h"
 #import "HCTestFailure.h"
 #import "HCTestFailureReporter.h"
 #import "HCTestFailureReporterChain.h"
-
-@interface HCRunloopRunner : NSObject
-@end
-
-@implementation HCRunloopRunner
-{
-    CFRunLoopObserverRef _observer;
-}
-
-- (instancetype)initWithFulfillmentBlock:(BOOL (^)())fulfillmentBlock
-{
-    self = [super init];
-    if (self)
-    {
-        _observer = CFRunLoopObserverCreateWithHandler(NULL, kCFRunLoopBeforeWaiting, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
-            if (fulfillmentBlock())
-                CFRunLoopStop(CFRunLoopGetCurrent());
-            else
-                CFRunLoopWakeUp(CFRunLoopGetCurrent());
-        });
-        CFRunLoopAddObserver(CFRunLoopGetCurrent(), _observer, kCFRunLoopDefaultMode);
-    }
-    return self;
-}
-
-- (void)dealloc
-{
-    CFRunLoopRemoveObserver(CFRunLoopGetCurrent(), _observer, kCFRunLoopDefaultMode);
-    CFRelease(_observer);
-}
-
-- (void)runUntilFulfilledOrTimeout:(CFTimeInterval)timeout
-{
-    CFRunLoopRunInMode(kCFRunLoopDefaultMode, timeout, false);
-}
-
-@end
 
 static void reportMismatch(id testCase, id actual, id <HCMatcher> matcher,
                            char const *fileName, int lineNumber)
