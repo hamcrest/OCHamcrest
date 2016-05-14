@@ -66,15 +66,13 @@ void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
         HCFutureValue actualBlock, id <HCMatcher> matcher,
         const char *fileName, int lineNumber)
 {
-    id actual = actualBlock();
-    __block BOOL match = [matcher matches:actual];
+    __block BOOL match = [matcher matches:actualBlock()];
 
     if (!match)
     {
         HCRunloopObserver *runloopObserver = [[HCRunloopObserver alloc] initWithPump:^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
             assert(!match);
-            id actualValue = actualBlock();
-            match = [matcher matches:actualValue];
+            match = [matcher matches:actualBlock()];
             if (match)
                 CFRunLoopStop(CFRunLoopGetCurrent());
             else
@@ -84,7 +82,7 @@ void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
     }
 
     if (!match)
-        reportMismatch(testCase, actual, matcher, fileName, lineNumber);
+        reportMismatch(testCase, actualBlock(), matcher, fileName, lineNumber);
 }
 
 NSString *HCDescribeMismatch(id <HCMatcher> matcher, id actual)
