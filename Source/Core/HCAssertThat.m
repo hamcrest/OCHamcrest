@@ -44,11 +44,10 @@ void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
             assert(!match); // runloop should have exited if match occurred
             actual = actualBlock();
             match = [matcher matches:actual];
-            if (match) {
+            if (match)
                 CFRunLoopStop(CFRunLoopGetCurrent());
-            } else {
+            else
                 CFRunLoopWakeUp(CFRunLoopGetCurrent());
-            }
         };
         
         // set up runloop observer and wait stop call or timeout
