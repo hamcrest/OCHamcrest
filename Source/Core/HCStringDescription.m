@@ -6,11 +6,6 @@
 #import "HCSelfDescribing.h"
 
 
-@interface HCStringDescription ()
-@property (nonatomic, strong) NSMutableString *accumulator;
-@end
-
-
 @implementation HCStringDescription
 
 + (NSString *)stringFrom:(id <HCSelfDescribing>)selfDescribing
@@ -29,18 +24,18 @@
 {
     self = [super init];
     if (self)
-        _accumulator = [[NSMutableString alloc] init];
+        accumulator = [[NSMutableString alloc] init];
     return self;
 }
 
 - (NSString *)description
 {
-    return self.accumulator;
+    return accumulator;
 }
 
 - (void)append:(NSString *)str
 {
-    [self.accumulator appendString:str];
+    [accumulator appendString:str];
 }
 
 @end
