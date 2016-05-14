@@ -12,6 +12,38 @@
 
 typedef void (^HCRunloopObserverBlock)(CFRunLoopObserverRef, CFRunLoopActivity);
 
+@interface HCRunloopObserver : NSObject
+@end
+
+@implementation HCRunloopObserver
+{
+    CFRunLoopObserverRef observer;
+}
+
+- (instancetype)initWithPump:(HCRunloopObserverBlock)pump
+{
+    self = [super init];
+    if (self)
+    {
+        observer = CFRunLoopObserverCreateWithHandler(NULL, kCFRunLoopBeforeWaiting, YES, 0, pump);
+        CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    CFRunLoopRemoveObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
+    CFRelease(observer);
+}
+
+- (void)runUntilStoppedOrTimeout:(CFTimeInterval)timeout
+{
+    CFRunLoopRunInMode(kCFRunLoopDefaultMode, timeout, false);
+}
+
+@end
+
 static void reportMismatch(id testCase, id actual, id <HCMatcher> matcher,
                            char const *fileName, int lineNumber)
 {
@@ -34,31 +66,21 @@ void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
         HCFutureValue actualBlock, id <HCMatcher> matcher,
         const char *fileName, int lineNumber)
 {
-    // run immediately
     id actual = actualBlock();
     __block BOOL match = [matcher matches:actual];
-    
-    // if not already matched, pump the runloop until matched
+
     if (!match)
     {
-        HCRunloopObserverBlock pump = ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
-            assert(!match); // runloop should have exited if match occurred
-            id actual = actualBlock();
-            match = [matcher matches:actual];
+        HCRunloopObserver *runloopObserver = [[HCRunloopObserver alloc] initWithPump:^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+            assert(!match);
+            id actualValue = actualBlock();
+            match = [matcher matches:actualValue];
             if (match)
                 CFRunLoopStop(CFRunLoopGetCurrent());
             else
                 CFRunLoopWakeUp(CFRunLoopGetCurrent());
-        };
-        
-        // set up runloop observer and wait stop call or timeout
-        CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(NULL, kCFRunLoopBeforeWaiting, YES, 0, pump);
-        CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
-        CFRunLoopRunInMode(kCFRunLoopDefaultMode, timeout, false);
-        
-        // remove observer
-        CFRunLoopRemoveObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
-        CFRelease(observer);
+        }];
+        [runloopObserver runUntilStoppedOrTimeout:timeout];
     }
 
     if (!match)
