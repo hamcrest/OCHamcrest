@@ -72,7 +72,7 @@ void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
 
     if (!match)
     {
-        HCRunloopRunner *runner = [[HCRunloopRunner alloc] initWithFulfillmentBlock:^BOOL {
+        HCRunloopRunner *runner = [[HCRunloopRunner alloc] initWithFulfillmentBlock:^{
             match = [matcher matches:actualBlock()];
             return match;
         }];
