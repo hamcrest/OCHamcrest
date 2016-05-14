@@ -37,7 +37,7 @@
     return self.userInfo[@"description"];
 }
 
-+ (NSException *)failureInFile:(NSString *)filename atLine:(int)lineNumber withDescription:(NSString *)formatString, ...;
++ (NSException *)failureInFile:(NSString *)filename atLine:(int)lineNumber withDescription:(NSString *)formatString, ...
 {
     return [self exceptionWithName:@"OCHamcrest_SenTestFailure" reason:nil userInfo:@{
             @"filename" : filename,
