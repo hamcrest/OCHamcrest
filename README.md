@@ -185,6 +185,7 @@ OCHamcrest comes with a library of useful matchers:
   * `hasKey` - match dictionary with a key
   * `hasValue` - match dictionary with a value
   * `isEmpty` - match empty collection
+  * `isIn` - match when object is in given collection
   * `onlyContains`, `onlyContainsIn` - match if collection's items appear in given list
 
 * Decorator

@@ -4,6 +4,7 @@ NEXT RELEASE
 **Fixes:**
 
 - Removed semicolons that triggered warnings for `-Wsemicolon-before-method-body`. _Thanks to: Sylvain Defresne_
+- Describe `isIn` matcher in README.
 
 **Features:**
 
