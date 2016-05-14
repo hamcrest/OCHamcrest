@@ -39,7 +39,8 @@ void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
     __block BOOL match = [matcher matches:actual];
     
     // if not already matched, pump the runloop until matched
-    if (!match) {
+    if (!match)
+    {
         HCRunloopObserverBlock pump = ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
             assert(!match); // runloop should have exited if match occurred
             actual = actualBlock();
