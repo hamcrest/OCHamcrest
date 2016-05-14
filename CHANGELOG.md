@@ -1,3 +1,15 @@
+NEXT RELEASE
+------------
+
+**Fixes:**
+
+- Removed semicolons that triggered warnings for `-Wsemicolon-before-method-body`. _Thanks to: Sylvain Defresne_
+
+**Features:**
+
+- Rewrote `assertThatAfter` to use runloop observer instead of while loop comparing dates. The condition is now tested on every pump of the runloop instead of polling after a predefined delay.  _Thanks to: Dan Fleming_
+
+
 Version 5.2.0
 -------------
 _16 Jan 2016_
