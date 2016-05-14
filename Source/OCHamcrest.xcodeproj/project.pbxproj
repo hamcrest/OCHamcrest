@@ -2782,6 +2782,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = NO;
+				WARNING_CFLAGS = "-Wsemicolon-before-method-body";
 			};
 			name = Debug;
 		};
@@ -2799,6 +2800,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				WARNING_CFLAGS = "-Wsemicolon-before-method-body";
 			};
 			name = Release;
 		};
