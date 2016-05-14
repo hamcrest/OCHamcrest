@@ -11,7 +11,6 @@
 @property (nonatomic, strong, readonly) id <HCMatcher> keyMatcher;
 @end
 
-
 @implementation HCIsDictionaryContainingKey
 
 - (instancetype)initWithKeyMatcher:(id <HCMatcher>)keyMatcher

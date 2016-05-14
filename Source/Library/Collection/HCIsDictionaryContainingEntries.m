@@ -11,7 +11,6 @@
 @property (nonatomic, copy, readonly) NSArray *valueMatchers;
 @end
 
-
 @implementation HCIsDictionaryContainingEntries
 
 - (instancetype)initWithKeys:(NSArray *)keys

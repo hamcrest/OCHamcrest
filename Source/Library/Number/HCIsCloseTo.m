@@ -5,11 +5,9 @@
 
 
 @interface HCIsCloseTo ()
-
 @property (nonatomic, assign, readonly) double value;
 @property (nonatomic, assign, readonly) double delta;
 @end
-
 
 @implementation HCIsCloseTo
 

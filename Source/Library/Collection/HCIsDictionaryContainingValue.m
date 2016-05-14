@@ -11,7 +11,6 @@
 @property (nonatomic, strong, readonly) id <HCMatcher> valueMatcher;
 @end
 
-
 @implementation HCIsDictionaryContainingValue
 
 - (instancetype)initWithValueMatcher:(id <HCMatcher>)valueMatcher

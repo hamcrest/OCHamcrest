@@ -44,7 +44,6 @@
 @property (nonatomic, copy, readonly) NSArray *values;
 @end
 
-
 @implementation HCDescribedAs
 
 - (instancetype)initWithDescription:(NSString *)description

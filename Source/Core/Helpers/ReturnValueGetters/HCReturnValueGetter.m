@@ -13,7 +13,6 @@
 @property (nonatomic, strong, readonly) HCReturnValueGetter *successor;
 @end
 
-
 @implementation HCReturnValueGetter
 
 - (instancetype)initWithType:(char const *)handlerType successor:(HCReturnValueGetter *)successor

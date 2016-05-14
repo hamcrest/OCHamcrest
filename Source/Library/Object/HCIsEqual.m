@@ -8,7 +8,6 @@
 @property (nonatomic, strong, readonly) id expectedValue;
 @end
 
-
 @implementation HCIsEqual
 
 - (instancetype)initEqualTo:(id)expectedValue
