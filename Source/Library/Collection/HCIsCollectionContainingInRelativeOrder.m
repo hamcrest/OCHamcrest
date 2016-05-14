@@ -29,13 +29,6 @@ static void HCRequireNonEmptyArray(NSArray *array)
 - (instancetype)initWithMatchers:(NSArray *)itemMatchers
              mismatchDescription:(id <HCDescription>)description
 {
-    if (itemMatchers.count == 0)
-    {
-        @throw [NSException exceptionWithName:@"EmptyArray"
-                                       reason:@"Must be non-empty array"
-                                     userInfo:nil];
-    }
-
     self = [super init];
     if (self)
     {
