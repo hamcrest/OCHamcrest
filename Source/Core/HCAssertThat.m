@@ -20,11 +20,17 @@ typedef void (^HCRunloopObserverBlock)(CFRunLoopObserverRef, CFRunLoopActivity);
     CFRunLoopObserverRef observer;
 }
 
-- (instancetype)initWithPump:(HCRunloopObserverBlock)pump
+- (instancetype)initWithFulfillmentBlock:(BOOL (^)())fulfillmentBlock
 {
     self = [super init];
     if (self)
     {
+        HCRunloopObserverBlock pump = ^(CFRunLoopObserverRef pObserver, CFRunLoopActivity activity) {
+            if (fulfillmentBlock())
+                CFRunLoopStop(CFRunLoopGetCurrent());
+            else
+                CFRunLoopWakeUp(CFRunLoopGetCurrent());
+        };
         observer = CFRunLoopObserverCreateWithHandler(NULL, kCFRunLoopBeforeWaiting, YES, 0, pump);
         CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
     }
@@ -37,7 +43,7 @@ typedef void (^HCRunloopObserverBlock)(CFRunLoopObserverRef, CFRunLoopActivity);
     CFRelease(observer);
 }
 
-- (void)runUntilStoppedOrTimeout:(CFTimeInterval)timeout
+- (void)runUntilStopOrTimeout:(CFTimeInterval)timeout
 {
     CFRunLoopRunInMode(kCFRunLoopDefaultMode, timeout, false);
 }
@@ -70,15 +76,12 @@ void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
 
     if (!match)
     {
-        HCRunloopObserver *runloopObserver = [[HCRunloopObserver alloc] initWithPump:^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        HCRunloopObserver *runloopObserver = [[HCRunloopObserver alloc] initWithFulfillmentBlock:^BOOL {
             assert(!match);
             match = [matcher matches:actualBlock()];
-            if (match)
-                CFRunLoopStop(CFRunLoopGetCurrent());
-            else
-                CFRunLoopWakeUp(CFRunLoopGetCurrent());
+            return match;
         }];
-        [runloopObserver runUntilStoppedOrTimeout:timeout];
+        [runloopObserver runUntilStopOrTimeout:timeout];
     }
 
     if (!match)
