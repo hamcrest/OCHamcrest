@@ -1,3 +1,9 @@
+NEXT RELEASE
+------------
+
+- Updated CocoaPods instructions and examples to CocoaPods 1.0.
+
+
 Version 5.3.0
 -------------
 _22 May 2016_

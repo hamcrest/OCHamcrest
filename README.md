@@ -32,7 +32,8 @@ Most people will want OCHamcrest in their test targets, and not include any pods
 targets:
 
 ```ruby
-target :MyTests, :exclusive => true do
+target 'MyTests' do
+  inherit! :search_paths
   pod 'OCHamcrest', '~> 5.0'
 end
 ```
