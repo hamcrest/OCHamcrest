@@ -6,40 +6,16 @@
 #import "HCRequireNonNilObject.h"
 
 
-static void removeTrailingSpace(NSMutableString *string)
+static NSString *stripSpaces(NSString *string)
 {
-    NSUInteger length = string.length;
-    if (length > 0)
-    {
-        NSUInteger charIndex = length - 1;
-        if (isspace([string characterAtIndex:charIndex]))
-            [string deleteCharactersInRange:NSMakeRange(charIndex, 1)];
-    }
-}
-
-static NSMutableString *stripSpace(NSString *string)
-{
-    NSUInteger length = string.length;
-    NSMutableString *result = [NSMutableString stringWithCapacity:length];
-    BOOL lastWasSpace = YES;
-    for (NSUInteger charIndex = 0; charIndex < length; ++charIndex)
-    {
-        unichar character = [string characterAtIndex:charIndex];
-        if (isspace(character))
-        {
-            if (!lastWasSpace)
-                [result appendString:@" "];
-            lastWasSpace = YES;
-        }
-        else
-        {
-            [result appendFormat:@"%C", character];
-            lastWasSpace = NO;
-        }
-    }
-
-    removeTrailingSpace(result);
-    return result;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\s+"
+                                                                           options:0
+                                                                             error:NULL];
+    NSString *modifiedString = [regex stringByReplacingMatchesInString:string
+                                                               options:0
+                                                                 range:NSMakeRange(0, string.length)
+                                                          withTemplate:@" "];
+    return [modifiedString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
 
 
@@ -58,7 +34,7 @@ static NSMutableString *stripSpace(NSString *string)
     if (self)
     {
         _originalString = [string copy];
-        _strippedString = [stripSpace(string) copy];
+        _strippedString = [stripSpaces(string) copy];
     }
     return self;
 }
@@ -68,7 +44,7 @@ static NSMutableString *stripSpace(NSString *string)
     if (![item isKindOfClass:[NSString class]])
         return NO;
 
-    return [self.strippedString isEqualToString:stripSpace(item)];
+    return [self.strippedString isEqualToString:stripSpaces(item)];
 }
 
 - (void)describeTo:(id <HCDescription>)description
