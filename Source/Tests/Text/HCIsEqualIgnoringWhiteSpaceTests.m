@@ -17,7 +17,7 @@
 - (void)setUp
 {
     [super setUp];
-    matcher = equalToIgnoringWhiteSpace(@"Hello World   how\n are we? ");
+    matcher = equalToIgnoringWhiteSpace(@" Hello World   how\n are we? ");
 }
 
 - (void)tearDown
@@ -64,7 +64,7 @@
 
 - (void)testHasAReadableDescription
 {
-    assertDescription(@"\"Hello World   how\\n are we? \" ignoring whitespace", matcher);
+    assertDescription(@"\" Hello World   how\\n are we? \" ignoring whitespace", matcher);
 }
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
