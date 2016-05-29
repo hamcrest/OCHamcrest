@@ -26,7 +26,7 @@
 #import <OCHamcrest/HCIsEmptyCollection.h>
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCIsEqualIgnoringCase.h>
-#import <OCHamcrest/HCIsEqualIgnoringWhiteSpace.h>
+#import <OCHamcrest/HCIsEqualCompressingWhiteSpace.h>
 #import <OCHamcrest/HCIsEqualToNumber.h>
 #import <OCHamcrest/HCIsIn.h>
 #import <OCHamcrest/HCIsInstanceOf.h>

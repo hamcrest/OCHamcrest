@@ -72,7 +72,7 @@
 		0859831E13459CA400BE7892 /* HCIsDictionaryContainingValueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034113440AD8001B439B /* HCIsDictionaryContainingValueTests.m */; };
 		0859831F13459CA400BE7892 /* HCIsEmptyCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034213440AD8001B439B /* HCIsEmptyCollectionTests.m */; };
 		0859832013459CA400BE7892 /* HCIsEqualIgnoringCaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035B13440AD8001B439B /* HCIsEqualIgnoringCaseTests.m */; };
-		0859832113459CA400BE7892 /* HCIsEqualIgnoringWhiteSpaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035C13440AD8001B439B /* HCIsEqualIgnoringWhiteSpaceTests.m */; };
+		0859832113459CA400BE7892 /* HCIsEqualCompressingWhiteSpaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035C13440AD8001B439B /* HCIsEqualCompressingWhiteSpaceTests.m */; };
 		0859832313459CA400BE7892 /* HCIsEqualToNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035413440AD8001B439B /* HCIsEqualToNumberTests.m */; };
 		0859832513459CA400BE7892 /* HCIsInTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876034313440AD8001B439B /* HCIsInTests.m */; };
 		0859832B13459CA400BE7892 /* HCNumberAssertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035513440AD8001B439B /* HCNumberAssertTests.m */; };
@@ -100,7 +100,7 @@
 		0876037F13440AD8001B439B /* HCOrderingComparisonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035613440AD8001B439B /* HCOrderingComparisonTests.m */; };
 		0876038013440AD8001B439B /* HCHasDescriptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035813440AD8001B439B /* HCHasDescriptionTests.m */; };
 		0876038213440AD8001B439B /* HCIsEqualIgnoringCaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035B13440AD8001B439B /* HCIsEqualIgnoringCaseTests.m */; };
-		0876038313440AD8001B439B /* HCIsEqualIgnoringWhiteSpaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035C13440AD8001B439B /* HCIsEqualIgnoringWhiteSpaceTests.m */; };
+		0876038313440AD8001B439B /* HCIsEqualCompressingWhiteSpaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035C13440AD8001B439B /* HCIsEqualCompressingWhiteSpaceTests.m */; };
 		0876038413440AD8001B439B /* HCStringContainsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035D13440AD8001B439B /* HCStringContainsTests.m */; };
 		0876038513440AD8001B439B /* HCStringEndsWithTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035E13440AD8001B439B /* HCStringEndsWithTests.m */; };
 		0876038613440AD8001B439B /* HCStringStartsWithTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035F13440AD8001B439B /* HCStringStartsWithTests.m */; };
@@ -178,7 +178,7 @@
 		24C5C04C1C17794900C2BAFD /* HCIsTypeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33322097042E108614BDAD /* HCIsTypeOf.m */; };
 		24C5C04D1C17794900C2BAFD /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDDD141A3FF39900177999 /* HCThrowsException.m */; };
 		24C5C04E1C17794900C2BAFD /* HCIsEqualIgnoringCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A9273EFADF46D908BC4 /* HCIsEqualIgnoringCase.m */; };
-		24C5C04F1C17794900C2BAFD /* HCIsEqualIgnoringWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33377384F2BF4EA9694DA7 /* HCIsEqualIgnoringWhiteSpace.m */; };
+		24C5C04F1C17794900C2BAFD /* HCIsEqualCompressingWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33377384F2BF4EA9694DA7 /* HCIsEqualCompressingWhiteSpace.m */; };
 		24C5C0501C17794900C2BAFD /* HCStringContains.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333EA4C4546D46CF8A4044 /* HCStringContains.m */; };
 		24C5C0511C17794900C2BAFD /* HCStringContainsInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3339B2CAF2C82161ED14F8 /* HCStringContainsInOrder.m */; };
 		24C5C0521C17794900C2BAFD /* HCStringEndsWith.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335974ADA5C5408FE0F69 /* HCStringEndsWith.m */; };
@@ -252,7 +252,7 @@
 		24C5C0961C17796600C2BAFD /* HCIsTypeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33322097042E108614BDAD /* HCIsTypeOf.m */; };
 		24C5C0971C17796600C2BAFD /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDDD141A3FF39900177999 /* HCThrowsException.m */; };
 		24C5C0981C17796600C2BAFD /* HCIsEqualIgnoringCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A9273EFADF46D908BC4 /* HCIsEqualIgnoringCase.m */; };
-		24C5C0991C17796600C2BAFD /* HCIsEqualIgnoringWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33377384F2BF4EA9694DA7 /* HCIsEqualIgnoringWhiteSpace.m */; };
+		24C5C0991C17796600C2BAFD /* HCIsEqualCompressingWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33377384F2BF4EA9694DA7 /* HCIsEqualCompressingWhiteSpace.m */; };
 		24C5C09A1C17796600C2BAFD /* HCStringContains.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333EA4C4546D46CF8A4044 /* HCStringContains.m */; };
 		24C5C09B1C17796600C2BAFD /* HCStringContainsInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3339B2CAF2C82161ED14F8 /* HCStringContainsInOrder.m */; };
 		24C5C09C1C17796600C2BAFD /* HCStringEndsWith.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335974ADA5C5408FE0F69 /* HCStringEndsWith.m */; };
@@ -326,7 +326,7 @@
 		24C5C0E01C17797200C2BAFD /* HCIsTypeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33322097042E108614BDAD /* HCIsTypeOf.m */; };
 		24C5C0E11C17797200C2BAFD /* HCThrowsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDDD141A3FF39900177999 /* HCThrowsException.m */; };
 		24C5C0E21C17797200C2BAFD /* HCIsEqualIgnoringCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A9273EFADF46D908BC4 /* HCIsEqualIgnoringCase.m */; };
-		24C5C0E31C17797200C2BAFD /* HCIsEqualIgnoringWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33377384F2BF4EA9694DA7 /* HCIsEqualIgnoringWhiteSpace.m */; };
+		24C5C0E31C17797200C2BAFD /* HCIsEqualCompressingWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33377384F2BF4EA9694DA7 /* HCIsEqualCompressingWhiteSpace.m */; };
 		24C5C0E41C17797200C2BAFD /* HCStringContains.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333EA4C4546D46CF8A4044 /* HCStringContains.m */; };
 		24C5C0E51C17797200C2BAFD /* HCStringContainsInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3339B2CAF2C82161ED14F8 /* HCStringContainsInOrder.m */; };
 		24C5C0E61C17797200C2BAFD /* HCStringEndsWith.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3335974ADA5C5408FE0F69 /* HCStringEndsWith.m */; };
@@ -404,7 +404,7 @@
 		24C5C17E1C177F1F00C2BAFD /* HCIsTypeOf.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33334CF68184328CD67F30 /* HCIsTypeOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C17F1C177F1F00C2BAFD /* HCThrowsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FDDD131A3FF39900177999 /* HCThrowsException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C1801C177F1F00C2BAFD /* HCIsEqualIgnoringCase.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33371136854FB7CAF2A5F7 /* HCIsEqualIgnoringCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24C5C1811C177F1F00C2BAFD /* HCIsEqualIgnoringWhiteSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33338462C2743FF78AA51B /* HCIsEqualIgnoringWhiteSpace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C5C1811C177F1F00C2BAFD /* HCIsEqualCompressingWhiteSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33338462C2743FF78AA51B /* HCIsEqualCompressingWhiteSpace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C1821C177F2000C2BAFD /* HCStringContains.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333144F9FA03AC04F8027D /* HCStringContains.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C1831C177F2000C2BAFD /* HCStringContainsInOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3331C74ACFA7AB0675A7FE /* HCStringContainsInOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C1841C177F2000C2BAFD /* HCStringEndsWith.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3333AF4B760A982CF9F9E3 /* HCStringEndsWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -482,7 +482,7 @@
 		24C5C1CC1C177F5C00C2BAFD /* HCIsTypeOf.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33334CF68184328CD67F30 /* HCIsTypeOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C1CD1C177F5C00C2BAFD /* HCThrowsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FDDD131A3FF39900177999 /* HCThrowsException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C1CE1C177F5C00C2BAFD /* HCIsEqualIgnoringCase.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33371136854FB7CAF2A5F7 /* HCIsEqualIgnoringCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24C5C1CF1C177F5C00C2BAFD /* HCIsEqualIgnoringWhiteSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33338462C2743FF78AA51B /* HCIsEqualIgnoringWhiteSpace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C5C1CF1C177F5C00C2BAFD /* HCIsEqualCompressingWhiteSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33338462C2743FF78AA51B /* HCIsEqualCompressingWhiteSpace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C1D01C177F5C00C2BAFD /* HCStringContains.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333144F9FA03AC04F8027D /* HCStringContains.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C1D11C177F5C00C2BAFD /* HCStringContainsInOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3331C74ACFA7AB0675A7FE /* HCStringContainsInOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C1D21C177F5D00C2BAFD /* HCStringEndsWith.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3333AF4B760A982CF9F9E3 /* HCStringEndsWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -560,7 +560,7 @@
 		24C5C21A1C177F7600C2BAFD /* HCIsTypeOf.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33334CF68184328CD67F30 /* HCIsTypeOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C21B1C177F7600C2BAFD /* HCThrowsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FDDD131A3FF39900177999 /* HCThrowsException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C21C1C177F7600C2BAFD /* HCIsEqualIgnoringCase.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33371136854FB7CAF2A5F7 /* HCIsEqualIgnoringCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24C5C21D1C177F7600C2BAFD /* HCIsEqualIgnoringWhiteSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33338462C2743FF78AA51B /* HCIsEqualIgnoringWhiteSpace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C5C21D1C177F7600C2BAFD /* HCIsEqualCompressingWhiteSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33338462C2743FF78AA51B /* HCIsEqualCompressingWhiteSpace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C21E1C177F7600C2BAFD /* HCStringContains.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333144F9FA03AC04F8027D /* HCStringContains.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C21F1C177F7600C2BAFD /* HCStringContainsInOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3331C74ACFA7AB0675A7FE /* HCStringContainsInOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C5C2201C177F7700C2BAFD /* HCStringEndsWith.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3333AF4B760A982CF9F9E3 /* HCStringEndsWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -629,7 +629,7 @@
 		BB33306BE19806EB64EEC358 /* HCInvocationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3337B908D229FD08452B2D /* HCInvocationMatcher.m */; };
 		BB333083DABBB403F4E3A935 /* HCIsCollectionContainingInAnyOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3332CD4593BA0B619AE30C /* HCIsCollectionContainingInAnyOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB33309748583DA78A7C98ED /* HCCharReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333FED5158848B95B043F1 /* HCCharReturnGetter.m */; };
-		BB3330B6F8137019671EBC0C /* HCIsEqualIgnoringWhiteSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33338462C2743FF78AA51B /* HCIsEqualIgnoringWhiteSpace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB3330B6F8137019671EBC0C /* HCIsEqualCompressingWhiteSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33338462C2743FF78AA51B /* HCIsEqualCompressingWhiteSpace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB3330B79DF7A5A15B7182E8 /* HCReturnTypeHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333BD87164C606AE0BE027 /* HCReturnTypeHandlerChain.m */; };
 		BB3330C8507C35031D255243 /* HCNumberAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333A801AD666BCC23ED955 /* HCNumberAssert.m */; };
 		BB3330D4CB9195C81B32E5AB /* HCSubstringMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33331178EE64329AB6A6DA /* HCSubstringMatcher.m */; };
@@ -781,7 +781,7 @@
 		BB333ABCAF8D67405B9C023D /* HCIsInstanceOf.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33386A5E683DD0DC1AACE2 /* HCIsInstanceOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333ACAD45079E5160B4B2D /* HCLongLongReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33330C459CF68E13DDD1D6 /* HCLongLongReturnGetter.m */; };
 		BB333ADE67DDD25C6E6EF058 /* HCFloatReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333FF31E6FD6CB3A0DC45E /* HCFloatReturnGetter.h */; };
-		BB333AFA559C22D92650E91C /* HCIsEqualIgnoringWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33377384F2BF4EA9694DA7 /* HCIsEqualIgnoringWhiteSpace.m */; };
+		BB333AFA559C22D92650E91C /* HCIsEqualCompressingWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33377384F2BF4EA9694DA7 /* HCIsEqualCompressingWhiteSpace.m */; };
 		BB333B08E01B2E88828DA51C /* HCAnyOf.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333034CD6A38647E176A9A /* HCAnyOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333B4AB9E7656A98D0D172 /* HCUnsignedLongLongReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33347A9E4365F763632850 /* HCUnsignedLongLongReturnGetter.m */; };
 		BB333B4B561F53C31972B9D9 /* HCFloatReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333FF31E6FD6CB3A0DC45E /* HCFloatReturnGetter.h */; };
@@ -832,7 +832,7 @@
 		BB333EECA8B5D2C68CC8EF72 /* NSInvocation+OCHamcrest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33309F9D72ED2CF53532A8 /* NSInvocation+OCHamcrest.m */; };
 		BB333EEEAF4355DA0CCB64D4 /* HCUnsignedCharReturnGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB333BE1D8EFF4596D019A40 /* HCUnsignedCharReturnGetter.h */; };
 		BB333EF9E0C14539AE686528 /* HCCharReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB333FED5158848B95B043F1 /* HCCharReturnGetter.m */; };
-		BB333F22130C3E2815EB3CE4 /* HCIsEqualIgnoringWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33377384F2BF4EA9694DA7 /* HCIsEqualIgnoringWhiteSpace.m */; };
+		BB333F22130C3E2815EB3CE4 /* HCIsEqualCompressingWhiteSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33377384F2BF4EA9694DA7 /* HCIsEqualCompressingWhiteSpace.m */; };
 		BB333F5B324A75A04610D267 /* HCTestFailureReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3337F8ADEA5FCE59018962 /* HCTestFailureReporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB333F7FB7BA3AF26A162752 /* HCStringContainsInOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3339B2CAF2C82161ED14F8 /* HCStringContainsInOrder.m */; };
 		BB333F8CC565D8068C47B3FE /* HCDoubleReturnGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33303898210A59268030C8 /* HCDoubleReturnGetter.m */; };
@@ -909,7 +909,7 @@
 		0876035613440AD8001B439B /* HCOrderingComparisonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCOrderingComparisonTests.m; sourceTree = "<group>"; };
 		0876035813440AD8001B439B /* HCHasDescriptionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHasDescriptionTests.m; sourceTree = "<group>"; };
 		0876035B13440AD8001B439B /* HCIsEqualIgnoringCaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualIgnoringCaseTests.m; sourceTree = "<group>"; };
-		0876035C13440AD8001B439B /* HCIsEqualIgnoringWhiteSpaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualIgnoringWhiteSpaceTests.m; sourceTree = "<group>"; };
+		0876035C13440AD8001B439B /* HCIsEqualCompressingWhiteSpaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualCompressingWhiteSpaceTests.m; sourceTree = "<group>"; };
 		0876035D13440AD8001B439B /* HCStringContainsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringContainsTests.m; sourceTree = "<group>"; };
 		0876035E13440AD8001B439B /* HCStringEndsWithTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringEndsWithTests.m; sourceTree = "<group>"; };
 		0876035F13440AD8001B439B /* HCStringStartsWithTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringStartsWithTests.m; sourceTree = "<group>"; };
@@ -985,7 +985,7 @@
 		BB33333B48A97B0771A3C256 /* HCUnsignedLongReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUnsignedLongReturnGetter.m; sourceTree = "<group>"; };
 		BB33334930C42DF9114F9D34 /* HCIs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIs.m; sourceTree = "<group>"; };
 		BB33334CF68184328CD67F30 /* HCIsTypeOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsTypeOf.h; sourceTree = "<group>"; };
-		BB33338462C2743FF78AA51B /* HCIsEqualIgnoringWhiteSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualIgnoringWhiteSpace.h; sourceTree = "<group>"; };
+		BB33338462C2743FF78AA51B /* HCIsEqualCompressingWhiteSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualCompressingWhiteSpace.h; sourceTree = "<group>"; };
 		BB333393BDEDD21E2CB1A2FF /* HCIsDictionaryContainingKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContainingKey.m; sourceTree = "<group>"; };
 		BB33339BAC2DACD2306832A8 /* HCSenTestFailureReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSenTestFailureReporter.h; sourceTree = "<group>"; };
 		BB3333AF4B760A982CF9F9E3 /* HCStringEndsWith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringEndsWith.h; sourceTree = "<group>"; };
@@ -1021,7 +1021,7 @@
 		BB33371136854FB7CAF2A5F7 /* HCIsEqualIgnoringCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualIgnoringCase.h; sourceTree = "<group>"; };
 		BB333725B2814AE9CF044B5B /* HCIntReturnGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIntReturnGetter.h; sourceTree = "<group>"; };
 		BB33373DA43C990FB5DA0D35 /* HCIsTypeOfTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsTypeOfTests.m; sourceTree = "<group>"; };
-		BB33377384F2BF4EA9694DA7 /* HCIsEqualIgnoringWhiteSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualIgnoringWhiteSpace.m; sourceTree = "<group>"; };
+		BB33377384F2BF4EA9694DA7 /* HCIsEqualCompressingWhiteSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsEqualCompressingWhiteSpace.m; sourceTree = "<group>"; };
 		BB333785CDF67F8F0284B9CA /* HCBaseDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBaseDescription.m; sourceTree = "<group>"; };
 		BB333792C123FE94F1A3D447 /* HCAssertThat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAssertThat.h; sourceTree = "<group>"; };
 		BB3337B908D229FD08452B2D /* HCInvocationMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCInvocationMatcher.m; sourceTree = "<group>"; };
@@ -1308,8 +1308,8 @@
 		0876035A13440AD8001B439B /* Text */ = {
 			isa = PBXGroup;
 			children = (
+				0876035C13440AD8001B439B /* HCIsEqualCompressingWhiteSpaceTests.m */,
 				0876035B13440AD8001B439B /* HCIsEqualIgnoringCaseTests.m */,
-				0876035C13440AD8001B439B /* HCIsEqualIgnoringWhiteSpaceTests.m */,
 				0876035D13440AD8001B439B /* HCStringContainsTests.m */,
 				088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */,
 				0876035E13440AD8001B439B /* HCStringEndsWithTests.m */,
@@ -1517,10 +1517,10 @@
 		BB333EA5543B2EAB4E34B3CF /* Text */ = {
 			isa = PBXGroup;
 			children = (
+				BB33338462C2743FF78AA51B /* HCIsEqualCompressingWhiteSpace.h */,
+				BB33377384F2BF4EA9694DA7 /* HCIsEqualCompressingWhiteSpace.m */,
 				BB33371136854FB7CAF2A5F7 /* HCIsEqualIgnoringCase.h */,
 				BB333A9273EFADF46D908BC4 /* HCIsEqualIgnoringCase.m */,
-				BB33338462C2743FF78AA51B /* HCIsEqualIgnoringWhiteSpace.h */,
-				BB33377384F2BF4EA9694DA7 /* HCIsEqualIgnoringWhiteSpace.m */,
 				BB333144F9FA03AC04F8027D /* HCStringContains.h */,
 				BB333EA4C4546D46CF8A4044 /* HCStringContains.m */,
 				BB3331C74ACFA7AB0675A7FE /* HCStringContainsInOrder.h */,
@@ -1640,7 +1640,7 @@
 				BB333987DAE91CFE7D31B8B4 /* HCIsSame.h in Headers */,
 				BB333E8BB98FF2089077826D /* HCIsTypeOf.h in Headers */,
 				BB333842914F0FF2E8F70FAA /* HCIsEqualIgnoringCase.h in Headers */,
-				BB3330B6F8137019671EBC0C /* HCIsEqualIgnoringWhiteSpace.h in Headers */,
+				BB3330B6F8137019671EBC0C /* HCIsEqualCompressingWhiteSpace.h in Headers */,
 				BB333FEC8B49B249E92B3671 /* HCStringContains.h in Headers */,
 				BB3336E5FCF909801BB0D103 /* HCStringContainsInOrder.h in Headers */,
 				0E5ECE6D1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h in Headers */,
@@ -1759,7 +1759,7 @@
 				24C5C17E1C177F1F00C2BAFD /* HCIsTypeOf.h in Headers */,
 				24C5C17F1C177F1F00C2BAFD /* HCThrowsException.h in Headers */,
 				24C5C1801C177F1F00C2BAFD /* HCIsEqualIgnoringCase.h in Headers */,
-				24C5C1811C177F1F00C2BAFD /* HCIsEqualIgnoringWhiteSpace.h in Headers */,
+				24C5C1811C177F1F00C2BAFD /* HCIsEqualCompressingWhiteSpace.h in Headers */,
 				24C5C1821C177F2000C2BAFD /* HCStringContains.h in Headers */,
 				24C5C1831C177F2000C2BAFD /* HCStringContainsInOrder.h in Headers */,
 				24C5C1841C177F2000C2BAFD /* HCStringEndsWith.h in Headers */,
@@ -1845,7 +1845,7 @@
 				24C5C1CC1C177F5C00C2BAFD /* HCIsTypeOf.h in Headers */,
 				24C5C1CD1C177F5C00C2BAFD /* HCThrowsException.h in Headers */,
 				24C5C1CE1C177F5C00C2BAFD /* HCIsEqualIgnoringCase.h in Headers */,
-				24C5C1CF1C177F5C00C2BAFD /* HCIsEqualIgnoringWhiteSpace.h in Headers */,
+				24C5C1CF1C177F5C00C2BAFD /* HCIsEqualCompressingWhiteSpace.h in Headers */,
 				24C5C1D01C177F5C00C2BAFD /* HCStringContains.h in Headers */,
 				24C5C1D11C177F5C00C2BAFD /* HCStringContainsInOrder.h in Headers */,
 				24C5C1D21C177F5D00C2BAFD /* HCStringEndsWith.h in Headers */,
@@ -1931,7 +1931,7 @@
 				24C5C21A1C177F7600C2BAFD /* HCIsTypeOf.h in Headers */,
 				24C5C21B1C177F7600C2BAFD /* HCThrowsException.h in Headers */,
 				24C5C21C1C177F7600C2BAFD /* HCIsEqualIgnoringCase.h in Headers */,
-				24C5C21D1C177F7600C2BAFD /* HCIsEqualIgnoringWhiteSpace.h in Headers */,
+				24C5C21D1C177F7600C2BAFD /* HCIsEqualCompressingWhiteSpace.h in Headers */,
 				24C5C21E1C177F7600C2BAFD /* HCStringContains.h in Headers */,
 				24C5C21F1C177F7600C2BAFD /* HCStringContainsInOrder.h in Headers */,
 				24C5C2201C177F7700C2BAFD /* HCStringEndsWith.h in Headers */,
@@ -2218,7 +2218,7 @@
 				BB3334612BBBB6871530AB79 /* HCIsSame.m in Sources */,
 				BB3335190594259F5D74CAE1 /* HCIsTypeOf.m in Sources */,
 				BB333210C6DF7BB6238B7747 /* HCIsEqualIgnoringCase.m in Sources */,
-				BB333F22130C3E2815EB3CE4 /* HCIsEqualIgnoringWhiteSpace.m in Sources */,
+				BB333F22130C3E2815EB3CE4 /* HCIsEqualCompressingWhiteSpace.m in Sources */,
 				BB3337947E2E43605545E743 /* HCStringContains.m in Sources */,
 				BB333F7FB7BA3AF26A162752 /* HCStringContainsInOrder.m in Sources */,
 				BB3336AD40784CC4673DB87F /* HCStringEndsWith.m in Sources */,
@@ -2277,7 +2277,7 @@
 				0859831E13459CA400BE7892 /* HCIsDictionaryContainingValueTests.m in Sources */,
 				0859831F13459CA400BE7892 /* HCIsEmptyCollectionTests.m in Sources */,
 				0859832013459CA400BE7892 /* HCIsEqualIgnoringCaseTests.m in Sources */,
-				0859832113459CA400BE7892 /* HCIsEqualIgnoringWhiteSpaceTests.m in Sources */,
+				0859832113459CA400BE7892 /* HCIsEqualCompressingWhiteSpaceTests.m in Sources */,
 				0859832313459CA400BE7892 /* HCIsEqualToNumberTests.m in Sources */,
 				0859832513459CA400BE7892 /* HCIsInTests.m in Sources */,
 				0859832B13459CA400BE7892 /* HCNumberAssertTests.m in Sources */,
@@ -2361,7 +2361,7 @@
 				BB333AB8B39B203DF15C9445 /* HCIsSame.m in Sources */,
 				BB333D81687E3E6481265818 /* HCIsTypeOf.m in Sources */,
 				BB333C6E35F2398771CEA2C3 /* HCIsEqualIgnoringCase.m in Sources */,
-				BB333AFA559C22D92650E91C /* HCIsEqualIgnoringWhiteSpace.m in Sources */,
+				BB333AFA559C22D92650E91C /* HCIsEqualCompressingWhiteSpace.m in Sources */,
 				BB33379F2611DE99B3B43A90 /* HCStringContains.m in Sources */,
 				BB3333B08155109232BEBD15 /* HCStringContainsInOrder.m in Sources */,
 				BB33357C5F1F3BC687DDF54C /* HCStringEndsWith.m in Sources */,
@@ -2425,7 +2425,7 @@
 				0876038013440AD8001B439B /* HCHasDescriptionTests.m in Sources */,
 				0876038213440AD8001B439B /* HCIsEqualIgnoringCaseTests.m in Sources */,
 				7460456C1A2964AF00196267 /* HCEveryTests.m in Sources */,
-				0876038313440AD8001B439B /* HCIsEqualIgnoringWhiteSpaceTests.m in Sources */,
+				0876038313440AD8001B439B /* HCIsEqualCompressingWhiteSpaceTests.m in Sources */,
 				0876038413440AD8001B439B /* HCStringContainsTests.m in Sources */,
 				0876038513440AD8001B439B /* HCStringEndsWithTests.m in Sources */,
 				0876038613440AD8001B439B /* HCStringStartsWithTests.m in Sources */,
@@ -2534,7 +2534,7 @@
 				24C5C04C1C17794900C2BAFD /* HCIsTypeOf.m in Sources */,
 				24C5C04D1C17794900C2BAFD /* HCThrowsException.m in Sources */,
 				24C5C04E1C17794900C2BAFD /* HCIsEqualIgnoringCase.m in Sources */,
-				24C5C04F1C17794900C2BAFD /* HCIsEqualIgnoringWhiteSpace.m in Sources */,
+				24C5C04F1C17794900C2BAFD /* HCIsEqualCompressingWhiteSpace.m in Sources */,
 				24C5C0501C17794900C2BAFD /* HCStringContains.m in Sources */,
 				24C5C0511C17794900C2BAFD /* HCStringContainsInOrder.m in Sources */,
 				24C5C0521C17794900C2BAFD /* HCStringEndsWith.m in Sources */,
@@ -2616,7 +2616,7 @@
 				24C5C0961C17796600C2BAFD /* HCIsTypeOf.m in Sources */,
 				24C5C0971C17796600C2BAFD /* HCThrowsException.m in Sources */,
 				24C5C0981C17796600C2BAFD /* HCIsEqualIgnoringCase.m in Sources */,
-				24C5C0991C17796600C2BAFD /* HCIsEqualIgnoringWhiteSpace.m in Sources */,
+				24C5C0991C17796600C2BAFD /* HCIsEqualCompressingWhiteSpace.m in Sources */,
 				24C5C09A1C17796600C2BAFD /* HCStringContains.m in Sources */,
 				24C5C09B1C17796600C2BAFD /* HCStringContainsInOrder.m in Sources */,
 				24C5C09C1C17796600C2BAFD /* HCStringEndsWith.m in Sources */,
@@ -2698,7 +2698,7 @@
 				24C5C0E01C17797200C2BAFD /* HCIsTypeOf.m in Sources */,
 				24C5C0E11C17797200C2BAFD /* HCThrowsException.m in Sources */,
 				24C5C0E21C17797200C2BAFD /* HCIsEqualIgnoringCase.m in Sources */,
-				24C5C0E31C17797200C2BAFD /* HCIsEqualIgnoringWhiteSpace.m in Sources */,
+				24C5C0E31C17797200C2BAFD /* HCIsEqualCompressingWhiteSpace.m in Sources */,
 				24C5C0E41C17797200C2BAFD /* HCStringContains.m in Sources */,
 				24C5C0E51C17797200C2BAFD /* HCStringContainsInOrder.m in Sources */,
 				24C5C0E61C17797200C2BAFD /* HCStringEndsWith.m in Sources */,

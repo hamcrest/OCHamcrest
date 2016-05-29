@@ -3,6 +3,10 @@ NEXT RELEASE
 
 - Updated CocoaPods instructions and examples to CocoaPods 1.0.
 
+**Deprecated:**
+
+- `equalToIgnoringWhiteSpace` has been renamed to `equalToCompressingWhiteSpace`.
+
 
 Version 5.3.0
 -------------

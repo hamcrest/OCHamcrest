@@ -1,15 +1,15 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2016 hamcrest.org. See LICENSE.txt
 
-#import <OCHamcrest/HCIsEqualIgnoringWhiteSpace.h>
+#import "HCIsEqualCompressingWhiteSpace.h"
 
 #import "MatcherTestCase.h"
 
 
-@interface EqualToIgnoringWhiteSpaceTests : MatcherTestCase
+@interface EqualToCompressingWhiteSpaceTests : MatcherTestCase
 @end
 
-@implementation EqualToIgnoringWhiteSpaceTests
+@implementation EqualToCompressingWhiteSpaceTests
 {
     id <HCMatcher> matcher;
 }
@@ -17,7 +17,7 @@
 - (void)setUp
 {
     [super setUp];
-    matcher = equalToIgnoringWhiteSpace(@" Hello World   how\n are we? ");
+    matcher = equalToCompressingWhiteSpace(@" Hello World   how\n are we? ");
 }
 
 - (void)tearDown
@@ -38,6 +38,14 @@
     assertMatches(@"more whitespace", matcher, @"   Hello World   how are \n\n\twe?");
 }
 
+- (void)testPassesIfWordsAreSameButWhitespaceDiffers_WithDeprecatedMatcher
+{
+    id <HCMatcher> deprecatedMatcher = equalToIgnoringWhiteSpace(@" Hello World   how\n are we? ");
+
+    assertMatches(@"less whitespace", deprecatedMatcher, @"Hello World how are we?");
+    assertMatches(@"more whitespace", deprecatedMatcher, @"   Hello World   how are \n\n\twe?");
+}
+
 - (void)testFailsIfTextOtherThanWhitespaceDiffers
 {
     assertDoesNotMatch(@"wrong word", matcher, @"Hello PLANET how are we?");
@@ -54,7 +62,7 @@
 
 - (void)testMatcherCreationRequiresNonNilArgument
 {
-    XCTAssertThrows(equalToIgnoringWhiteSpace(nil), @"Should require non-nil argument");
+    XCTAssertThrows(equalToCompressingWhiteSpace(nil), @"Should require non-nil argument");
 }
 
 - (void)testFailsIfMatchingAgainstNonString
@@ -69,7 +77,7 @@
 
 - (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
 {
-    assertNoMismatchDescription(equalToIgnoringWhiteSpace(@"foo\nbar"), @"foo bar");
+    assertNoMismatchDescription(equalToCompressingWhiteSpace(@"foo\nbar"), @"foo bar");
 }
 
 - (void)testMismatchDescriptionShowsActualArgument

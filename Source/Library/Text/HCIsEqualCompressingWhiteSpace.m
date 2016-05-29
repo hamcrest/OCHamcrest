@@ -1,7 +1,7 @@
 //  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2016 hamcrest.org. See LICENSE.txt
 
-#import "HCIsEqualIgnoringWhiteSpace.h"
+#import "HCIsEqualCompressingWhiteSpace.h"
 
 #import "HCRequireNonNilObject.h"
 
@@ -43,12 +43,12 @@ static NSMutableString *stripSpace(NSString *string)
 }
 
 
-@interface HCIsEqualIgnoringWhiteSpace ()
+@interface HCIsEqualCompressingWhiteSpace ()
 @property (nonatomic, copy, readonly) NSString *originalString;
 @property (nonatomic, copy, readonly) NSString *strippedString;
 @end
 
-@implementation HCIsEqualIgnoringWhiteSpace
+@implementation HCIsEqualCompressingWhiteSpace
 
 - (instancetype)initWithString:(NSString *)string
 {
@@ -80,7 +80,12 @@ static NSMutableString *stripSpace(NSString *string)
 @end
 
 
+id HC_equalToCompressingWhiteSpace(NSString *expectedString)
+{
+    return [[HCIsEqualCompressingWhiteSpace alloc] initWithString:expectedString];
+}
+
 id HC_equalToIgnoringWhiteSpace(NSString *expectedString)
 {
-    return [[HCIsEqualIgnoringWhiteSpace alloc] initWithString:expectedString];
+    return HC_equalToCompressingWhiteSpace(expectedString);
 }
