@@ -20,7 +20,7 @@
 - (void)assertFalse:(BOOL)condition message:(NSString *)message
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
 
-- (void)assertMatcher:(id <HCMatcher>)matcher hasTheDescription:(NSString *)expected
+- (void)assertMatcher:(id <HCMatcher>)matcher hasDescription:(NSString *)expected
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
 
 - (void)assertMatcher:(id <HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
@@ -51,7 +51,7 @@
     [self assertFalse:[matcher matches:arg] message:aMessage inFile:__FILE__ atLine:__LINE__]
 
 #define assertDescription(expected, matcher)    \
-    [self assertMatcher:matcher hasTheDescription:expected inFile:__FILE__ atLine:__LINE__]
+    [self assertMatcher:matcher hasDescription:expected inFile:__FILE__ atLine:__LINE__]
 
 #define assertNoMismatchDescription(matcher, arg)   \
     [self assertMatcher:matcher hasNoMismatchDescriptionFor:arg inFile:__FILE__ atLine:__LINE__]

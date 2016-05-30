@@ -7,6 +7,14 @@
 #import <OCHamcrest/HCStringDescription.h>
 
 
+static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
+{
+    HCStringDescription *description = [HCStringDescription stringDescription];
+    [matcher describeMismatchOf:arg to:description];
+    return description.description;
+}
+
+
 @implementation MatcherTestCase
 
 - (void)failWithMessage:(NSString *)message
@@ -54,9 +62,8 @@
 {
     if (![matcher matches:arg])
     {
-        HCStringDescription *description = [[HCStringDescription alloc] init];
-        [matcher describeMismatchOf:arg to:description];
-        NSString *message = [NSString stringWithFormat:@"%@ because '%@'", expectation, [description description]];
+        NSString *message = [NSString stringWithFormat:@"%@ because '%@'",
+                                                    expectation, mismatchDescription(matcher, arg)];
         [self failWithMessage:message inFile:fileName atLine:lineNumber];
     }
 }
@@ -70,18 +77,25 @@
     }
 }
 
-- (void)assertMatcher:(id <HCMatcher>)matcher hasTheDescription:(NSString *)expected
+- (void)assertString:(NSString *)str1 equalsString:(NSString *)str2 message:(NSString *)message
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
+{
+    if (![str1 isEqualToString:str2])
+    {
+        [self failEqualityBetweenObject:str1 andObject:str2 withMessage:message
+                                 inFile:fileName atLine:lineNumber];
+    }
+}
+
+- (void)assertMatcher:(id <HCMatcher>)matcher hasDescription:(NSString *)expected
+               inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     [description appendDescriptionOf:matcher];
     NSString *actual = description.description;
-    if (![actual isEqualToString:expected])
-    {
-        [self failEqualityBetweenObject:actual andObject:expected
-                            withMessage:@"Expected description"
-                                 inFile:fileName atLine:lineNumber];
-    }
+    NSString *message = [NSString stringWithFormat:@"Expected description '%@' but got '%@", expected, actual];
+    [self assertString:expected equalsString:actual message:message
+                inFile:fileName atLine:lineNumber];
 }
 
 - (void)assertMatcher:(id <HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
