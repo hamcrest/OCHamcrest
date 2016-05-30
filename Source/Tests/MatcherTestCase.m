@@ -68,13 +68,19 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
     }
 }
 
-- (void)assertFalse:(BOOL)condition message:(NSString *)message
+- (void)assertTrue:(BOOL)condition message:(NSString *)message
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
-    if (condition)
+    if (!condition)
     {
         [self failWithMessage:message inFile:fileName atLine:lineNumber];
     }
+}
+
+- (void)assertFalse:(BOOL)condition message:(NSString *)message
+        inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
+{
+    [self assertTrue:!condition message:message inFile:fileName atLine:lineNumber];
 }
 
 - (void)assertString:(NSString *)str1 equalsString:(NSString *)str2 message:(NSString *)message
@@ -102,12 +108,8 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
-    BOOL result = [matcher matches:arg];
-    if (!result)
-    {
-        [self failWithMessage:@"Precondition: Matcher should match item"
-                       inFile:fileName atLine:lineNumber];
-    }
+    [self assertTrue:[matcher matches:arg] message:@"Precondition: Matcher should match item"
+              inFile:fileName atLine:lineNumber];
     if (description.description.length != 0)
     {
         [self failWithMessage:@"Expected no mismatch description"
@@ -121,19 +123,12 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
     HCStringDescription *description = [HCStringDescription stringDescription];
     // Make sure matcher has been called before, like assertThat would have done.
     [matcher matches:arg];
-    BOOL result = [matcher matches:arg describingMismatchTo:description];
-    if (result)
-    {
-        [self failWithMessage:@"Precondition: Matcher should not match item"
-                       inFile:fileName atLine:lineNumber];
-    }
-    NSString *actual = description.description;
-    if (![actual isEqualToString:expected])
-    {
-        [self failEqualityBetweenObject:actual andObject:expected
-                            withMessage:@"Expected mismatch description"
-                                 inFile:fileName atLine:lineNumber];
-    }
+    [self assertFalse:[matcher matches:arg describingMismatchTo:description]
+              message:@"Precondition: Matcher should not match item"
+               inFile:fileName atLine:lineNumber];
+    [self assertString:description.description equalsString:expected
+               message:@"Expected mismatch description"
+                inFile:fileName atLine:lineNumber];
 }
 
 - (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg
@@ -143,12 +138,9 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
     HCStringDescription *description = [HCStringDescription stringDescription];
     // Make sure matcher has been called before, like assertThat would have done.
     [matcher matches:arg];
-    BOOL result = [matcher matches:arg describingMismatchTo:description];
-    if (result)
-    {
-        [self failWithMessage:@"Precondition: Matcher should not match item"
-                       inFile:fileName atLine:lineNumber];
-    }
+    [self assertFalse:[matcher matches:arg describingMismatchTo:description]
+              message:@"Precondition: Matcher should not match item"
+               inFile:fileName atLine:lineNumber];
     NSString *actual = description.description;
     if (![actual hasPrefix:expectedPrefix])
     {
@@ -163,13 +155,9 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     [matcher describeMismatchOf:arg to:description];
-    NSString *actual = description.description;
-    if (![actual isEqualToString:expected])
-    {
-        [self failEqualityBetweenObject:actual andObject:expected
-                            withMessage:@"Expected mismatch description"
-                                 inFile:fileName atLine:lineNumber];
-    }
+    [self assertString:description.description equalsString:expected
+               message:@"Expected mismatch description"
+                inFile:fileName atLine:lineNumber];
 }
 
 @end
