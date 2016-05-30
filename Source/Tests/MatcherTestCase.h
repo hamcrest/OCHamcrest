@@ -14,7 +14,7 @@
 - (void)assertMatcherSafeWithUnknownType:(id <HCMatcher>)matcher
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
 
-- (void)assertTrue:(BOOL)condition message:(NSString *)message
+- (void)assertMatcher:(id <HCMatcher>)matcher matches:(id)arg message:(NSString *)expectation
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
 
 - (void)assertFalse:(BOOL)condition message:(NSString *)message
@@ -45,7 +45,7 @@
     [self assertMatcherSafeWithUnknownType:matcher inFile:__FILE__ atLine:__LINE__]
 
 #define assertMatches(aMessage, matcher, arg)    \
-    [self assertTrue:[matcher matches:arg] message:aMessage inFile:__FILE__ atLine:__LINE__]
+    [self assertMatcher:matcher matches:arg message:aMessage inFile:__FILE__ atLine:__LINE__]
 
 #define assertDoesNotMatch(aMessage, matcher, arg)    \
     [self assertFalse:[matcher matches:arg] message:aMessage inFile:__FILE__ atLine:__LINE__]

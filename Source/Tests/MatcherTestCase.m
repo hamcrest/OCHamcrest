@@ -49,11 +49,14 @@
     }
 }
 
-- (void)assertTrue:(BOOL)condition message:(NSString *)message
+- (void)assertMatcher:(id <HCMatcher>)matcher matches:(id)arg message:(NSString *)expectation
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
-    if (!condition)
+    if (![matcher matches:arg])
     {
+        HCStringDescription *description = [[HCStringDescription alloc] init];
+        [matcher describeMismatchOf:arg to:description];
+        NSString *message = [NSString stringWithFormat:@"%@ because '%@'", expectation, [description description]];
         [self failWithMessage:message inFile:fileName atLine:lineNumber];
     }
 }
