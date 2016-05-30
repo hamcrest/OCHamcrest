@@ -6,10 +6,10 @@
 #import "MatcherTestCase.h"
 
 
-@interface HCCapturingMatcherTests : MatcherTestCase
+@interface HCArgumentCaptorTests : MatcherTestCase
 @end
 
-@implementation HCCapturingMatcherTests
+@implementation HCArgumentCaptorTests
 {
     HCArgumentCaptor *sut;
 }

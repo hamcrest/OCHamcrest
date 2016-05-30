@@ -592,9 +592,9 @@
 		609E9B41637AEC0C99B77B10 /* InterceptingTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E97D2700DBCFB2161C50A /* InterceptingTestCase.m */; };
 		609E9B9227BDE67289F74F23 /* HCArgumentCaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E92AABBB75D3F5E47A0E4 /* HCArgumentCaptor.m */; };
 		609E9BACF54CA8CF5C8F4825 /* HCRunloopRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = 609E92B06196813A410D4FF4 /* HCRunloopRunner.h */; };
-		609E9BD70804EB4AD2CF687B /* HCCapturingMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E960725E106DC73EA9D60 /* HCCapturingMatcherTests.m */; };
+		609E9BD70804EB4AD2CF687B /* HCArgumentCaptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E960725E106DC73EA9D60 /* HCArgumentCaptorTests.m */; };
 		609E9DB70E41F094B68A20C3 /* HCIsCollectionContainingInRelativeOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E99FE80B578287C9DBDFE /* HCIsCollectionContainingInRelativeOrderTests.m */; };
-		609E9E7A947E1D0029F3233D /* HCCapturingMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E960725E106DC73EA9D60 /* HCCapturingMatcherTests.m */; };
+		609E9E7A947E1D0029F3233D /* HCArgumentCaptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E960725E106DC73EA9D60 /* HCArgumentCaptorTests.m */; };
 		609E9F1238326DBB8D61D4AE /* HCRunloopRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E9BDAE6E9C3466DF16818 /* HCRunloopRunner.m */; };
 		609E9F22CD4AE2C7290741BA /* HCRunloopRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = 609E92B06196813A410D4FF4 /* HCRunloopRunner.h */; };
 		74153B5F1A535FEA00FEF450 /* HCIsTrueFalseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74153B5E1A535FEA00FEF450 /* HCIsTrueFalseTests.m */; };
@@ -934,7 +934,7 @@
 		609E92B06196813A410D4FF4 /* HCRunloopRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRunloopRunner.h; sourceTree = "<group>"; };
 		609E93C91C2B1DFA3BC3F9A8 /* MatcherTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatcherTestCase.h; sourceTree = "<group>"; };
 		609E95FA7156B2A6FD85D509 /* InterceptingTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterceptingTestCase.h; sourceTree = "<group>"; };
-		609E960725E106DC73EA9D60 /* HCCapturingMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCapturingMatcherTests.m; sourceTree = "<group>"; };
+		609E960725E106DC73EA9D60 /* HCArgumentCaptorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCArgumentCaptorTests.m; sourceTree = "<group>"; };
 		609E97D2700DBCFB2161C50A /* InterceptingTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterceptingTestCase.m; sourceTree = "<group>"; };
 		609E99ADF272619359F01300 /* HCTestFailureReporterChainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureReporterChainTests.m; sourceTree = "<group>"; };
 		609E99FE80B578287C9DBDFE /* HCIsCollectionContainingInRelativeOrderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionContainingInRelativeOrderTests.m; sourceTree = "<group>"; };
@@ -1289,7 +1289,7 @@
 		0876035713440AD8001B439B /* Object */ = {
 			isa = PBXGroup;
 			children = (
-				609E960725E106DC73EA9D60 /* HCCapturingMatcherTests.m */,
+				609E960725E106DC73EA9D60 /* HCArgumentCaptorTests.m */,
 				5F2773441436F81000B9683A /* HCConformsToProtocolTests.m */,
 				0876035813440AD8001B439B /* HCHasDescriptionTests.m */,
 				77C7B8761429361200DE60CC /* HCHasPropertyTests.m */,
@@ -2313,7 +2313,7 @@
 				31DDC19066E25E0DB52E3441 /* Mismatchable.m in Sources */,
 				609E95B8EB994E0768A22EB5 /* HCTestFailureReporterChainTests.m in Sources */,
 				609E9B41637AEC0C99B77B10 /* InterceptingTestCase.m in Sources */,
-				609E9BD70804EB4AD2CF687B /* HCCapturingMatcherTests.m in Sources */,
+				609E9BD70804EB4AD2CF687B /* HCArgumentCaptorTests.m in Sources */,
 				609E9068872F708CA4DA4785 /* MatcherTestCase.m in Sources */,
 				609E93B6BAA64F7836FB754E /* HCIsCollectionContainingInRelativeOrderTests.m in Sources */,
 			);
@@ -2456,7 +2456,7 @@
 				31DDCC204A3D141D7AC6FC02 /* Mismatchable.m in Sources */,
 				609E99C4BEBB5A70318577B2 /* HCTestFailureReporterChainTests.m in Sources */,
 				609E941591B81120F216AAAF /* InterceptingTestCase.m in Sources */,
-				609E9E7A947E1D0029F3233D /* HCCapturingMatcherTests.m in Sources */,
+				609E9E7A947E1D0029F3233D /* HCArgumentCaptorTests.m in Sources */,
 				609E97770916062AC9B0D5BB /* MatcherTestCase.m in Sources */,
 				609E9DB70E41F094B68A20C3 /* HCIsCollectionContainingInRelativeOrderTests.m in Sources */,
 			);
