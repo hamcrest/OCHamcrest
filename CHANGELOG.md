@@ -1,6 +1,12 @@
 NEXT RELEASE
 ------------
 
+**Features:**
+
+- Added `captureEnabled` property to HCArgumentCaptor to control whether subsequent matched values are captured.
+
+**Improvements:**
+
 - Updated CocoaPods instructions and examples to CocoaPods 1.0.
 
 **Deprecated:**

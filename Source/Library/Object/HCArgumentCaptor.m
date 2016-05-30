@@ -17,7 +17,10 @@
 {
     self = [super initWithDescription:@"<Capturing argument>"];
     if (self)
+    {
         _values = [[NSMutableArray alloc] init];
+        _captureEnabled = YES;
+    }
     return self;
 }
 
@@ -29,8 +32,11 @@
 
 - (void)capture:(id)item
 {
-    id value = item ?: [NSNull null];
-    [self.values addObject:value];
+    if (self.captureEnabled)
+    {
+        id value = item ?: [NSNull null];
+        [self.values addObject:value];
+    }
 }
 
 - (id)value

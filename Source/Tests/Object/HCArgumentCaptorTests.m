@@ -68,6 +68,30 @@
     XCTAssertEqualObjects(sut.allValues[1], @"BAR");
 }
 
+- (void)testAllValues_TurningOffCaptureEnabled_ShouldNotCaptureSubsequentValues
+{
+    [sut matches:@"FOO"];
+    sut.captureEnabled = NO;
+    [sut matches:@"BAR"];
+    [sut matches:@"BAZ"];
+
+    XCTAssertEqual(sut.allValues.count, 1U);
+    XCTAssertEqualObjects(sut.allValues[0], @"FOO");
+}
+
+- (void)testAllValues_TurningCaptureEnabledBackOn_ShouldCaptureSubsequentValues
+{
+    sut.captureEnabled = NO;
+    [sut matches:@"FOO"];
+    sut.captureEnabled = YES;
+    [sut matches:@"BAR"];
+    [sut matches:@"BAZ"];
+
+    XCTAssertEqual(sut.allValues.count, 2U);
+    XCTAssertEqualObjects(sut.allValues[0], @"BAR");
+    XCTAssertEqualObjects(sut.allValues[1], @"BAZ");
+}
+
 - (void)testAllValues_GivenNil_ShouldCaptureNSNull
 {
     [sut matches:nil];
