@@ -34,11 +34,6 @@ NSArray * HCCollectItems(id item, va_list args)
     return HCCollectWrappedItems(item, args, passThrough);
 }
 
-NSArray * HCCollectMatchers(id item, va_list args)
-{
-    return HCCollectWrappedItems(item, args, HCWrapInMatcher);
-}
-
 NSArray * HCWrapIntoMatchers(NSArray *items)
 {
     NSMutableArray *matchers = [[NSMutableArray alloc] init];

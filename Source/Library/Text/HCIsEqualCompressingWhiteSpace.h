@@ -15,7 +15,6 @@
 
 
 FOUNDATION_EXPORT id HC_equalToCompressingWhiteSpace(NSString *expectedString);
-FOUNDATION_EXPORT id HC_equalToIgnoringWhiteSpace(NSString *expectedString) __attribute__((deprecated));
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!

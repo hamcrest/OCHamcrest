@@ -4,6 +4,7 @@ NEXT RELEASE
 **Deleted:**
 
 - `equalToIgnoringWhiteSpace` matcher (deprecated in v5.4.0)
+- HCCollectMatchers (deprecated in v5.3.0)
 
 **Project changes:**
 
