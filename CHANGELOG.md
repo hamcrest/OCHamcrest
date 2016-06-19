@@ -13,6 +13,7 @@ _03 Jun 2016_
 **Deprecated:**
 
 - `equalToIgnoringWhiteSpace` has been renamed to `equalToCompressingWhiteSpace`.
+- Known issue: warning on this deprecation
 
 
 Version 5.3.0
