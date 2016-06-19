@@ -1,3 +1,11 @@
+NEXT RELEASE
+------------
+
+**Project changes:**
+
+- Increased deployment targets to OS X 10.9, iOS 7.0.
+
+
 Version 5.4.0
 -------------
 _03 Jun 2016_
