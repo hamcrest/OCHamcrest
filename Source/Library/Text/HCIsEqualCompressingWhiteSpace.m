@@ -60,8 +60,3 @@ id HC_equalToCompressingWhiteSpace(NSString *expectedString)
 {
     return [[HCIsEqualCompressingWhiteSpace alloc] initWithString:expectedString];
 }
-
-id HC_equalToIgnoringWhiteSpace(NSString *expectedString)
-{
-    return HC_equalToCompressingWhiteSpace(expectedString);
-}

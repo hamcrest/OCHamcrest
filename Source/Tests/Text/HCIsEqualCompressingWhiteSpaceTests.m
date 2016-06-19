@@ -38,14 +38,6 @@
     assertMatches(@"more whitespace", matcher, @"   Hello World   how are \n\n\twe?");
 }
 
-- (void)testPassesIfWordsAreSameButWhitespaceDiffers_WithDeprecatedMatcher
-{
-    id <HCMatcher> deprecatedMatcher = equalToIgnoringWhiteSpace(@" Hello World   how\n are we? ");
-
-    assertMatches(@"less whitespace", deprecatedMatcher, @"Hello World how are we?");
-    assertMatches(@"more whitespace", deprecatedMatcher, @"   Hello World   how are \n\n\twe?");
-}
-
 - (void)testFailsIfTextOtherThanWhitespaceDiffers
 {
     assertDoesNotMatch(@"wrong word", matcher, @"Hello PLANET how are we?");

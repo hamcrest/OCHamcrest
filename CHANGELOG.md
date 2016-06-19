@@ -1,6 +1,10 @@
 NEXT RELEASE
 ------------
 
+**Deleted:**
+
+- `equalToIgnoringWhiteSpace` matcher (deprecated in v5.4.0)
+
 **Project changes:**
 
 - Increased deployment targets to OS X 10.9, iOS 7.0.

@@ -39,9 +39,4 @@ static inline id equalToCompressingWhiteSpace(NSString *expectedString)
 {
     return HC_equalToCompressingWhiteSpace(expectedString);
 }
-
-static inline id equalToIgnoringWhiteSpace(NSString *expectedString) __attribute__((deprecated))
-{
-    return HC_equalToIgnoringWhiteSpace(expectedString);
-}
 #endif
