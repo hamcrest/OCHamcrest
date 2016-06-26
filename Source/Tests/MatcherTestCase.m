@@ -93,15 +93,21 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
     }
 }
 
+- (void)assertDescription:(HCStringDescription *)description matches:(NSString *)expected
+                   inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
+{
+    NSString *actual = description.description;
+    NSString *message = [NSString stringWithFormat:@"Expected description '%@' but got '%@", expected, actual];
+    [self assertString:expected equalsString:actual message:message
+                inFile:fileName atLine:lineNumber];
+}
+
 - (void)assertMatcher:(id <HCMatcher>)matcher hasDescription:(NSString *)expected
                inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     [description appendDescriptionOf:matcher];
-    NSString *actual = description.description;
-    NSString *message = [NSString stringWithFormat:@"Expected description '%@' but got '%@", expected, actual];
-    [self assertString:expected equalsString:actual message:message
-                inFile:fileName atLine:lineNumber];
+    [self assertDescription:description matches:expected inFile:fileName atLine:lineNumber];
 }
 
 - (void)assertMatcher:(id <HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
@@ -126,9 +132,7 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
     [self assertFalse:[matcher matches:arg describingMismatchTo:description]
               message:@"Precondition: Matcher should not match item"
                inFile:fileName atLine:lineNumber];
-    [self assertString:description.description equalsString:expected
-               message:@"Expected mismatch description"
-                inFile:fileName atLine:lineNumber];
+    [self assertDescription:description matches:expected inFile:fileName atLine:lineNumber];
 }
 
 - (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg
@@ -155,9 +159,7 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     [matcher describeMismatchOf:arg to:description];
-    [self assertString:description.description equalsString:expected
-               message:@"Expected mismatch description"
-                inFile:fileName atLine:lineNumber];
+    [self assertDescription:description matches:expected inFile:fileName atLine:lineNumber];
 }
 
 @end
