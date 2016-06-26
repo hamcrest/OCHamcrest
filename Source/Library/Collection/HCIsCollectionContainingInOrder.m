@@ -59,7 +59,8 @@
     if (self.matchers.count <= self.nextMatchIndex)
     {
         [[self.mismatchDescription
-                appendText:[NSString stringWithFormat:@"exceeded count of %d with item ", self.matchers.count]]
+                appendText:[NSString stringWithFormat:@"exceeded count of %lu with item ",
+                                                                (unsigned long)self.matchers.count]]
                 appendDescriptionOf:item];
         return NO;
     }
@@ -68,7 +69,8 @@
 
 - (void)describeMismatchOfMatcher:(id <HCMatcher>)matcher item:(id)item
 {
-    [self.mismatchDescription appendText:[NSString stringWithFormat:@"item %zi: ", (size_t)self.nextMatchIndex]];
+    [self.mismatchDescription appendText:[NSString stringWithFormat:@"item %lu: ",
+                                                               (unsigned long)self.nextMatchIndex]];
     [matcher describeMismatchOf:item to:self.mismatchDescription];
 }
 
