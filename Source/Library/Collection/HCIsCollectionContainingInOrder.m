@@ -58,7 +58,9 @@
 {
     if (self.matchers.count <= self.nextMatchIndex)
     {
-        [[self.mismatchDescription appendText:@"not matched: "] appendDescriptionOf:item];
+        [[self.mismatchDescription
+                appendText:[NSString stringWithFormat:@"exceeded count of %d with item ", self.matchers.count]]
+                appendDescriptionOf:item];
         return NO;
     }
     return YES;

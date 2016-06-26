@@ -60,7 +60,7 @@
 {
     id matcher = contains(@1, @2, @3, nil);
 
-    assertMismatchDescription(@"not matched: <4>", matcher, (@[@1, @2, @3, @4]));
+    assertMismatchDescription(@"exceeded count of 3 with item <999>", matcher, (@[@1, @2, @3, @999]));
 }
 
 - (void)testDoesNotMatchWithFewerElementsThanExpected
