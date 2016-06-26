@@ -1,6 +1,10 @@
 NEXT RELEASE
 ------------
 
+**Features:**
+
+- Improved mismatch descriptions for `contains`, `containsIn` when actual collection exceeds expected size.
+
 **Deleted:**
 
 - `equalToIgnoringWhiteSpace` matcher (deprecated in v5.4.0)
