@@ -1,5 +1,6 @@
-NEXT RELEASE
-------------
+Version 6.0.0
+-------------
+_04 Aug 2016_
 
 **Features:**
 
