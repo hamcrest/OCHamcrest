@@ -5,8 +5,8 @@ before_install:
 
 script:
   - xctool test -project Source/OCHamcrest.xcodeproj -scheme OCHamcrest -sdk macosx10.9
-  - xctool test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator7.1 -destination "platform=iOS Simulator,name=iPhone 5,OS=7.1"
-  - xctool test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator7.1 -destination "platform=iOS Simulator,name=iPhone 5s,OS=7.1"
+  - xctool test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator8.1 -destination "platform=iOS Simulator,name=iPhone 5,OS=8.1"
+  - xctool test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator8.1 -destination "platform=iOS Simulator,name=iPhone 5s,OS=8.1"
 
 after_success:
   - ./Cocoanetics-Ruby/coveralls.rb --exclude-folder Source/Tests --exclude-folder Examples
