@@ -7,8 +7,8 @@ before_install:
 
 script:
   - set -o pipefail && xcodebuild test -project Source/OCHamcrest.xcodeproj -scheme OCHamcrest -sdk macosx | xcpretty
-  - set -o pipefail && xcodebuild test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator9.3 -destination "platform=iOS Simulator,name=iPhone 5,OS=9.3" | xcpretty
-  - set -o pipefail && xcodebuild test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator9.3 -destination "platform=iOS Simulator,name=iPhone 5s,OS=9.3" | xcpretty
+  - set -o pipefail && xcodebuild test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator10.1 -destination "platform=iOS Simulator,name=iPhone 5,OS=10.1" | xcpretty
+  - set -o pipefail && xcodebuild test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator10.1 -destination "platform=iOS Simulator,name=iPhone 5s,OS=10.1" | xcpretty
   - pod spec lint --quick
 
 after_success:
