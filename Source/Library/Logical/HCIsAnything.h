@@ -10,7 +10,7 @@
 @interface HCIsAnything : HCBaseMatcher
 
 - (instancetype)init;
-- (instancetype)initWithDescription:(NSString *)description;
+- (instancetype)initWithDescription:(NSString *)description NS_DESIGNATED_INITIALIZER;
 
 @end
 

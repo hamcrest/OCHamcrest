@@ -9,7 +9,8 @@
  */
 @interface HCIs : HCBaseMatcher
 
-- (instancetype)initWithMatcher:(id <HCMatcher>)matcher;
+- (instancetype)initWithMatcher:(id <HCMatcher>)matcher NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

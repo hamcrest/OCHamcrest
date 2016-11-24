@@ -9,7 +9,8 @@
  */
 @interface HCIsCloseTo : HCBaseMatcher
 
-- (instancetype)initWithValue:(double)value delta:(double)delta;
+- (instancetype)initWithValue:(double)value delta:(double)delta NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

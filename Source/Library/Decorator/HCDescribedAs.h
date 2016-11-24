@@ -11,7 +11,8 @@
 
 - (instancetype)initWithDescription:(NSString *)description
                          forMatcher:(id <HCMatcher>)matcher
-                         overValues:(NSArray *)templateValues;
+                         overValues:(NSArray *)templateValues NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

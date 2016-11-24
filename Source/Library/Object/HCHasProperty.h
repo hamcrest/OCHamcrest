@@ -10,7 +10,8 @@
  */
 @interface HCHasProperty : HCDiagnosingMatcher
 
-- (instancetype)initWithProperty:(NSString *)propertyName value:(id <HCMatcher>)valueMatcher;
+- (instancetype)initWithProperty:(NSString *)propertyName value:(id <HCMatcher>)valueMatcher NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

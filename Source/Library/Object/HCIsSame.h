@@ -9,7 +9,8 @@
  */
 @interface HCIsSame : HCBaseMatcher
 
-- (instancetype)initSameAs:(id)object;
+- (instancetype)initSameAs:(id)object NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

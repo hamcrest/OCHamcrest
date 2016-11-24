@@ -8,6 +8,7 @@
 
 @property (nonatomic, strong, readonly) Class theClass;
 
-- (instancetype)initWithClass:(Class)aClass;
+- (instancetype)initWithClass:(Class)aClass NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end

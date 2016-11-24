@@ -9,7 +9,8 @@
  */
 @interface HCThrowsException : HCDiagnosingMatcher
 
-- (id)initWithExceptionMatcher:(id)exceptionMatcher;
+- (id)initWithExceptionMatcher:(id)exceptionMatcher NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

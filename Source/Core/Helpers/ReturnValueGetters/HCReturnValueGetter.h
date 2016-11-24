@@ -9,7 +9,8 @@
  */
 @interface HCReturnValueGetter : NSObject
 
-- (instancetype)initWithType:(char const *)handlerType successor:(HCReturnValueGetter *)successor;
+- (instancetype)initWithType:(char const *)handlerType successor:(HCReturnValueGetter *)successor NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 - (id)returnValueOfType:(char const *)type fromInvocation:(NSInvocation *)invocation;
 
 @end

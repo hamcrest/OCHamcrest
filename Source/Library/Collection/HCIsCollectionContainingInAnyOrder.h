@@ -9,7 +9,8 @@
  */
 @interface HCIsCollectionContainingInAnyOrder : HCDiagnosingMatcher
 
-- (instancetype)initWithMatchers:(NSArray *)itemMatchers;
+- (instancetype)initWithMatchers:(NSArray *)itemMatchers NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

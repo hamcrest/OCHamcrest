@@ -9,7 +9,8 @@
  */
 @interface HCHasCount : HCBaseMatcher
 
-- (instancetype)initWithMatcher:(id <HCMatcher>)countMatcher;
+- (instancetype)initWithMatcher:(id <HCMatcher>)countMatcher NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

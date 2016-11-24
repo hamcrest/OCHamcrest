@@ -9,7 +9,8 @@
  */
 @interface HCIsIn : HCBaseMatcher
 
-- (instancetype)initWithCollection:(id)collection;
+- (instancetype)initWithCollection:(id)collection NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

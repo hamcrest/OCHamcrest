@@ -9,7 +9,8 @@
  */
 @interface HCHasDescription : HCInvocationMatcher
 
-- (instancetype)initWithDescription:(id <HCMatcher>)descriptionMatcher;
+- (instancetype)initWithDescription:(id <HCMatcher>)descriptionMatcher NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithInvocation:(NSInvocation *)anInvocation matching:(id <HCMatcher>)aMatcher NS_UNAVAILABLE;
 
 @end
 

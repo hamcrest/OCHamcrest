@@ -10,7 +10,8 @@
  */
 @interface HCConformsToProtocol : HCBaseMatcher
 
-- (instancetype)initWithProtocol:(Protocol *)protocol;
+- (instancetype)initWithProtocol:(Protocol *)protocol NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

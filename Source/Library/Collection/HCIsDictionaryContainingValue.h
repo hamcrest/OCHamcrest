@@ -9,7 +9,8 @@
  */
 @interface HCIsDictionaryContainingValue : HCBaseMatcher
 
-- (instancetype)initWithValueMatcher:(id <HCMatcher>)valueMatcher;
+- (instancetype)initWithValueMatcher:(id <HCMatcher>)valueMatcher NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

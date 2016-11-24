@@ -9,7 +9,8 @@
  */
 @interface HCStringContainsInOrder : HCBaseMatcher
 
-- (instancetype)initWithSubstrings:(NSArray *)substrings;
+- (instancetype)initWithSubstrings:(NSArray *)substrings NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

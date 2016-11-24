@@ -9,7 +9,8 @@
  */
 @interface HCIsDictionaryContainingKey : HCBaseMatcher
 
-- (instancetype)initWithKeyMatcher:(id <HCMatcher>)keyMatcher;
+- (instancetype)initWithKeyMatcher:(id <HCMatcher>)keyMatcher NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

@@ -9,7 +9,8 @@
  */
 @interface HCIsEqualCompressingWhiteSpace : HCBaseMatcher
 
-- (instancetype)initWithString:(NSString *)string;
+- (instancetype)initWithString:(NSString *)string NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

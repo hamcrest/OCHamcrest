@@ -9,7 +9,8 @@
  */
 @interface HCIsEqual : HCBaseMatcher
 
-- (instancetype)initEqualTo:(id)expectedValue;
+- (instancetype)initEqualTo:(id)expectedValue NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

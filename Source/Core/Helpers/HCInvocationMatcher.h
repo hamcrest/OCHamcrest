@@ -25,7 +25,8 @@
 /*!
  * @abstract Initializes a newly allocated HCInvocationMatcher with an invocation and a matcher.
  */
-- (instancetype)initWithInvocation:(NSInvocation *)anInvocation matching:(id <HCMatcher>)aMatcher;
+- (instancetype)initWithInvocation:(NSInvocation *)anInvocation matching:(id <HCMatcher>)aMatcher NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 /*!
  * @abstract Invokes stored invocation on the specified item and returns the result.

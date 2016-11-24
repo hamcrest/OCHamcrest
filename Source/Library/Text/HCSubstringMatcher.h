@@ -8,6 +8,7 @@
 
 @property (nonatomic, copy, readonly) NSString *substring;
 
-- (instancetype)initWithSubstring:(NSString *)substring;
+- (instancetype)initWithSubstring:(NSString *)substring NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end

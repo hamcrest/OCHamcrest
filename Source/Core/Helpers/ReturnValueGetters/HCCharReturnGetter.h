@@ -6,6 +6,7 @@
 
 @interface HCCharReturnGetter : HCReturnValueGetter
 
-- (instancetype)initWithSuccessor:(HCReturnValueGetter *)successor;
+- (instancetype)initWithSuccessor:(HCReturnValueGetter *)successor NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithType:(char const *)handlerType successor:(HCReturnValueGetter *)successor NS_UNAVAILABLE;
 
 @end

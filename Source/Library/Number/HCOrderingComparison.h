@@ -12,7 +12,8 @@
 - (instancetype)initComparing:(id)expectedValue
                    minCompare:(NSComparisonResult)min
                    maxCompare:(NSComparisonResult)max
-        comparisonDescription:(NSString *)comparisonDescription;
+        comparisonDescription:(NSString *)comparisonDescription NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

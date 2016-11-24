@@ -29,6 +29,6 @@
 /*!
  * @abstract Initializes a newly allocated HCStringDescription that is initially empty.
  */
-- (instancetype)init;
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
 
 @end

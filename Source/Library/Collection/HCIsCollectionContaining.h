@@ -9,7 +9,8 @@
  */
 @interface HCIsCollectionContaining : HCDiagnosingMatcher
 
-- (instancetype)initWithMatcher:(id <HCMatcher>)elementMatcher;
+- (instancetype)initWithMatcher:(id <HCMatcher>)elementMatcher NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 
