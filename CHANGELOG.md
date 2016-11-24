@@ -1,3 +1,11 @@
+NEXT RELEASE
+------------
+
+**Features:**
+
+- Adopt latest Objective-C annotations for designated initializers, unavailable initializers, typed arrays, nullability.
+
+
 Version 6.0.0
 -------------
 _04 Aug 2016_
