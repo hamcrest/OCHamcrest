@@ -7,12 +7,12 @@
 
 
 @interface HCAllOf ()
-@property (nonatomic, copy, readonly) NSArray *matchers;
+@property (nonatomic, copy, readonly) NSArray<id <HCMatcher>> *matchers;
 @end
 
 @implementation HCAllOf
 
-- (instancetype)initWithMatchers:(NSArray *)matchers
+- (instancetype)initWithMatchers:(NSArray<id <HCMatcher>> *)matchers
 {
     self = [super init];
     if (self)

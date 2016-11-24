@@ -9,13 +9,13 @@
  */
 @interface HCStringContainsInOrder : HCBaseMatcher
 
-- (instancetype)initWithSubstrings:(NSArray *)substrings NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSubstrings:(NSArray<NSString *> *)substrings NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
 
 
-FOUNDATION_EXPORT id HC_stringContainsInOrderIn(NSArray *substrings);
+FOUNDATION_EXPORT id HC_stringContainsInOrderIn(NSArray<NSString *> *substrings);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -31,7 +31,7 @@ FOUNDATION_EXPORT id HC_stringContainsInOrderIn(NSArray *substrings);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_stringContainsInOrderIn instead.
  */
-static inline id stringContainsInOrderIn(NSArray *substrings)
+static inline id stringContainsInOrderIn(NSArray<NSString *> *substrings)
 {
     return HC_stringContainsInOrderIn(substrings);
 }

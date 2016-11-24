@@ -11,7 +11,7 @@
 @interface HCIsDictionaryContainingEntries : HCDiagnosingMatcher
 
 - (instancetype)initWithKeys:(NSArray *)keys
-               valueMatchers:(NSArray *)valueMatchers NS_DESIGNATED_INITIALIZER;
+               valueMatchers:(NSArray<id <HCMatcher>> *)valueMatchers NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

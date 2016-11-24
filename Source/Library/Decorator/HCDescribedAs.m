@@ -72,7 +72,7 @@
 
 - (void)describeTo:(id <HCDescription>)description
 {
-    NSArray *components = [self.descriptionTemplate componentsSeparatedByString:@"%"];
+    NSArray<NSString *> *components = [self.descriptionTemplate componentsSeparatedByString:@"%"];
     BOOL firstComponent = YES;
     for (NSString *component in components)
     {

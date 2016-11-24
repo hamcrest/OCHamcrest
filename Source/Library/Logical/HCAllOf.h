@@ -11,13 +11,13 @@
  */
 @interface HCAllOf : HCDiagnosingMatcher
 
-- (instancetype)initWithMatchers:(NSArray *)matchers NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithMatchers:(NSArray<id <HCMatcher>> *)matchers NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
 
 
-FOUNDATION_EXPORT id HC_allOfIn(NSArray *matchers);
+FOUNDATION_EXPORT id HC_allOfIn(NSArray<id <HCMatcher>> *matchers);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!

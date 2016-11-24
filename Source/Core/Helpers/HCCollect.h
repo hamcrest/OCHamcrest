@@ -5,6 +5,8 @@
 
 #import <stdarg.h>
 
+@protocol HCMatcher;
+
 
 /*!
  * @abstract Returns an array of values from a variable-length comma-separated list terminated
@@ -17,4 +19,4 @@ FOUNDATION_EXPORT NSArray * HCCollectItems(id item, va_list args);
  * @discussion Each item is wrapped in HCWrapInMatcher to transform non-matcher items into equality
  * matchers.
  */
-FOUNDATION_EXPORT NSArray * HCWrapIntoMatchers(NSArray *items);
+FOUNDATION_EXPORT NSArray<id <HCMatcher>> * HCWrapIntoMatchers(NSArray *items);

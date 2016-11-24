@@ -11,7 +11,7 @@
  */
 @interface HCAnyOf : HCBaseMatcher
 
-- (instancetype)initWithMatchers:(NSArray *)matchers NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithMatchers:(NSArray<id <HCMatcher>> *)matchers NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

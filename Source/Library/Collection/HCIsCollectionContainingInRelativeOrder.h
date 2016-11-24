@@ -9,7 +9,7 @@
  */
 @interface HCIsCollectionContainingInRelativeOrder : HCDiagnosingMatcher
 
-- (instancetype)initWithMatchers:(NSArray *)itemMatchers NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithMatchers:(NSArray<id <HCMatcher>> *)itemMatchers NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
