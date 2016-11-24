@@ -10,12 +10,12 @@
 
 @interface HCReturnValueGetter ()
 @property (nonatomic, assign, readonly) char const *handlerType;
-@property (nonatomic, strong, readonly) HCReturnValueGetter *successor;
+@property (nullable, nonatomic, strong, readonly) HCReturnValueGetter *successor;
 @end
 
 @implementation HCReturnValueGetter
 
-- (instancetype)initWithType:(char const *)handlerType successor:(HCReturnValueGetter *)successor
+- (instancetype)initWithType:(char const *)handlerType successor:(nullable HCReturnValueGetter *)successor
 {
     self = [super init];
     if (self)

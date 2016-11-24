@@ -31,7 +31,7 @@ static void HCRequireMatcher(id obj)
     return self;
 }
 
-- (BOOL)matches:(id)item describingMismatchTo:(id <HCDescription>)mismatchDescription
+- (BOOL)matches:(nullable id)item describingMismatchTo:(id <HCDescription>)mismatchDescription
 {
     if (![self isBlock:item])
     {

@@ -6,7 +6,7 @@
 
 @implementation HCObjectReturnGetter
 
-- (instancetype)initWithSuccessor:(HCReturnValueGetter *)successor
+- (instancetype)initWithSuccessor:(nullable HCReturnValueGetter *)successor
 {
     self = [super initWithType:@encode(id) successor:successor];
     return self;

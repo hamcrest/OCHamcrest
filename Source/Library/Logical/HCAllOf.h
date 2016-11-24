@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCDiagnosingMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Calculates the logical conjunction of multiple matchers.
  * @discussion Evaluation is shortcut, so subsequent matchers are not called if an earlier matcher
@@ -58,3 +60,5 @@ FOUNDATION_EXPORT id HC_allOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
  */
 #define allOf(matchers...) HC_allOf(matchers)
 #endif
+
+NS_ASSUME_NONNULL_END

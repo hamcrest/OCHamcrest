@@ -6,6 +6,8 @@
 #import "HCDescription.h"   // Convenience header
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract The ability of an object to describe itself.
  */
@@ -20,3 +22,5 @@
 - (void)describeTo:(id <HCDescription>)description;
 
 @end
+
+NS_ASSUME_NONNULL_END

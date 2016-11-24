@@ -20,7 +20,7 @@
     return self;
 }
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     if (![self itemHasCount:item])
         return NO;
@@ -34,7 +34,7 @@
     return [item respondsToSelector:@selector(count)];
 }
 
-- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(nullable id)item to:(nullable id <HCDescription>)mismatchDescription
 {
     [mismatchDescription appendText:@"was "];
     if ([self itemHasCount:item])

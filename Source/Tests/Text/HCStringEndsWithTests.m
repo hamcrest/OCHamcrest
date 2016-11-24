@@ -53,7 +53,10 @@ static NSString *EXCERPT = @"EXCERPT";
 
 - (void)testMatcherCreationRequiresNonNilArgument
 {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
     XCTAssertThrows(endsWith(nil), @"Should require non-nil argument");
+#pragma clang diagnostic pop
 }
 
 - (void)testFailsIfMatchingAgainstNonString

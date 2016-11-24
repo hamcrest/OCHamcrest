@@ -24,7 +24,7 @@
     return self;
 }
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     [self capture:item];
     return [super matches:item];

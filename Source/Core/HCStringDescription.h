@@ -6,6 +6,8 @@
 @protocol HCSelfDescribing;
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract An HCDescription that is stored as a string.
  */
@@ -32,3 +34,5 @@
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
 
 @end
+
+NS_ASSUME_NONNULL_END

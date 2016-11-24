@@ -6,7 +6,7 @@
 
 @implementation HCIsTypeOf
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     return [item isMemberOfClass:self.theClass];
 }

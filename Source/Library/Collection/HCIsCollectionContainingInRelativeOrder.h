@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCDiagnosingMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches if every item in a collection satisfies a list of nested matchers, in order.
  */
@@ -42,3 +44,5 @@ static inline id containsInRelativeOrder(NSArray *itemMatchers)
     return HC_containsInRelativeOrder(itemMatchers);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

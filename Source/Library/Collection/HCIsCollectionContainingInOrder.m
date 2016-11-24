@@ -26,7 +26,7 @@
     return self;
 }
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     return [self isNotSurplus:item] && [self isMatched:item];
 }

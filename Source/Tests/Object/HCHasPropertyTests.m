@@ -117,7 +117,10 @@
 
 - (void)testMatcherCreationRequiresNonNilPropertyName
 {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
     XCTAssertThrows(hasProperty(nil, nil), @"Should require non-nil property name");
+#pragma clang diagnostic pop
 }
 
 - (void)testHasAReadableDescription

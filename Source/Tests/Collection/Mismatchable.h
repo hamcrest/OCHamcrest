@@ -4,8 +4,12 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-@interface Mismatchable : HCBaseMatcher
+@NS_ASSUME_NONNULL_BEGIN
+
+interface Mismatchable : HCBaseMatcher
 
 + (instancetype)mismatchable:(NSString *)string;
 
 @end
+
+NS_ASSUME_NONNULL_END

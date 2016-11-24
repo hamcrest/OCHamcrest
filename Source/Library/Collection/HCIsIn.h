@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches if examined object is contained within the nested collection.
  */
@@ -37,3 +39,5 @@ static inline id isIn(id aCollection)
     return HC_isIn(aCollection);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

@@ -4,6 +4,8 @@
 #import <Foundation/Foundation.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract A description of an HCMatcher.
  * @discussion An HCMatcher will describe itself to a description which can later be used for reporting.
@@ -21,7 +23,7 @@
  * @discussion If the value implements the HCSelfDescribing protocol, then it will be used.
  * @return <code>self</code>, for chaining.
  */
-- (id <HCDescription>)appendDescriptionOf:(id)value;
+- (id <HCDescription>)appendDescriptionOf:(nullable id)value;
 
 /*!
  * @abstract Appends a list of objects to the description.
@@ -33,3 +35,5 @@
                             end:(NSString *)end;
 
 @end
+
+NS_ASSUME_NONNULL_END

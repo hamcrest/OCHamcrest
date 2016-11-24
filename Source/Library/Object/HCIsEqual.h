@@ -4,18 +4,20 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Is the value equal to another value, as tested by the <code>-isEqual:</code> method?
  */
 @interface HCIsEqual : HCBaseMatcher
 
-- (instancetype)initEqualTo:(id)expectedValue NS_DESIGNATED_INITIALIZER;
+- (instancetype)initEqualTo:(nullable id)expectedValue NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
 
 
-FOUNDATION_EXPORT id HC_equalTo(id operand);
+FOUNDATION_EXPORT id HC_equalTo(_Nullable id operand);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -30,8 +32,10 @@ FOUNDATION_EXPORT id HC_equalTo(id operand);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalTo instead.
  */
-static inline id equalTo(id operand)
+static inline id equalTo(_Nullable id operand)
 {
     return HC_equalTo(operand);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

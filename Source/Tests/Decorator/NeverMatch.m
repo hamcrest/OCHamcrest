@@ -16,12 +16,12 @@
     return @"NEVERMATCH";
 }
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     return NO;
 }
 
-- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(nullable id)item to:(nullable id <HCDescription>)mismatchDescription
 {
     [mismatchDescription appendText:[NeverMatch mismatchDescription]];
 }

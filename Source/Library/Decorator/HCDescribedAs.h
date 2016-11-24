@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Provides a custom description to another matcher.
  */
@@ -35,3 +37,5 @@ FOUNDATION_EXPORT id HC_describedAs(NSString *description, id <HCMatcher> matche
  */
 #define describedAs(description, matcher, ...) HC_describedAs(description, matcher, ##__VA_ARGS__)
 #endif
+
+NS_ASSUME_NONNULL_END

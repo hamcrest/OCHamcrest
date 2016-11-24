@@ -37,7 +37,7 @@ static void requireElementsToBeStrings(NSArray *array)
     return self;
 }
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     if (![item isKindOfClass:[NSString class]])
         return NO;

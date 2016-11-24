@@ -24,7 +24,7 @@
     return self;
 }
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     return [item conformsToProtocol:self.protocol];
 }

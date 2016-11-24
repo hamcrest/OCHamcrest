@@ -4,6 +4,8 @@
 #import <Foundation/Foundation.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  @abstract Test failure location and reason.
  */
@@ -36,3 +38,5 @@
                           reason:(NSString *)reason;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -23,12 +23,12 @@
     return self;
 }
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     return [self.string isEqualToString:item];
 }
 
-- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(nullable id)item to:(nullable id <HCDescription>)mismatchDescription
 {
     [[mismatchDescription appendText:@"mismatched: "] appendText:item];
 }

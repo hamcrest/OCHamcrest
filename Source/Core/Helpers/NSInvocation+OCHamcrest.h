@@ -4,6 +4,8 @@
 #import <Foundation/Foundation.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSInvocation (OCHamcrest)
 
 + (NSInvocation *)och_invocationWithTarget:(id)target selector:(SEL)selector;
@@ -11,3 +13,5 @@
 - (id)och_invoke;
 
 @end
+
+NS_ASSUME_NONNULL_END

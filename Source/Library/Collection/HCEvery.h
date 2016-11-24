@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCDiagnosingMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches if every item in a collection satisfies a nested matcher.
  */
@@ -39,3 +41,5 @@ static inline id everyItem(id <HCMatcher> itemMatcher)
     return HC_everyItem(itemMatcher);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

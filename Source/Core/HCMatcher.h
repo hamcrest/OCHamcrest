@@ -4,6 +4,8 @@
 #import "HCSelfDescribing.h"
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract A matcher over acceptable values.
  * @discussion A matcher is able to describe itself to give feedback when it fails.
@@ -19,7 +21,7 @@
  * @param item  The object against which the matcher is evaluated.
  * @return <code>YES</code> if item matches, otherwise <code>NO</code>.
  */
-- (BOOL)matches:(id)item;
+- (BOOL)matches:(nullable id)item;
 
 /*!
  * @abstract Evaluates the matcher for argument item.
@@ -27,7 +29,7 @@
  * @param mismatchDescription The description to be built or appended to if item does not match.
  * @return <code>YES</code> if item matches, otherwise <code>NO</code>.
  */
-- (BOOL)matches:(id)item describingMismatchTo:(id <HCDescription>)mismatchDescription;
+- (BOOL)matches:(nullable id)item describingMismatchTo:(nullable id <HCDescription>)mismatchDescription;
 
 /*!
  * @abstract Generates a description of why the matcher has not accepted the item.
@@ -38,6 +40,8 @@
  *
  * This method assumes that <code>matches:item</code> is false, but will not check this.
  */
-- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription;
+- (void)describeMismatchOf:(nullable id)item to:(nullable id <HCDescription>)mismatchDescription;
 
 @end
+
+NS_ASSUME_NONNULL_END

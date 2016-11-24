@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCHasCount.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches empty collections.
  */
@@ -33,3 +35,5 @@ static inline id isEmpty(void)
     return HC_isEmpty();
 }
 #endif
+
+NS_ASSUME_NONNULL_END

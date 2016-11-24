@@ -4,6 +4,7 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 #import "MatcherTestCase.h"
+#import <OCHamcrest/HCStringDescription.h>
 
 
 @interface BaseMatcherWithDescription : HCBaseMatcher
@@ -87,7 +88,7 @@
 
 - (void)testSubclassShouldBeRequiredToDefineDescribeToMethod
 {
-    XCTAssertThrows([matcher describeTo:nil]);
+    XCTAssertThrows([matcher describeTo:[[HCStringDescription alloc] init]]);
 }
 
 @end

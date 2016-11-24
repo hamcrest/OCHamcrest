@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCDiagnosingMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches if dictionary contains entries that satisfy the list of keys and value
  * matchers.
@@ -62,3 +64,5 @@ FOUNDATION_EXPORT id HC_hasEntries(id keysAndValueMatchers, ...) NS_REQUIRES_NIL
  */
 #define hasEntries(keysAndValueMatchers...) HC_hasEntries(keysAndValueMatchers)
 #endif
+
+NS_ASSUME_NONNULL_END

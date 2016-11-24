@@ -5,6 +5,8 @@
 
 @protocol HCMatcher;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @header
  * Assertion macros for using matchers in testing frameworks.
@@ -38,7 +40,7 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCM
 #endif
 
 
-typedef id (^HCFutureValue)();
+typedef _Nonnull id (^HCFutureValue)();
 
 FOUNDATION_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
         HCFutureValue actualBlock, id <HCMatcher> matcher,
@@ -90,3 +92,5 @@ FOUNDATION_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterv
  * @discussion Helper function to let you describe mismatches the way <tt>assertThat</tt> does.
  */
 FOUNDATION_EXPORT NSString *HCDescribeMismatch(id <HCMatcher> matcher, id actual);
+
+NS_ASSUME_NONNULL_END

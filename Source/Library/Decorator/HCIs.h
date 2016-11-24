@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Decorates another matcher.
  */
@@ -15,7 +17,7 @@
 @end
 
 
-FOUNDATION_EXPORT id HC_is(id value);
+FOUNDATION_EXPORT id HC_is(_Nullable id value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -44,8 +46,10 @@ FOUNDATION_EXPORT id HC_is(id value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_is instead.
  */
-static inline id is(id value)
+static inline id is(_Nullable id value)
 {
     return HC_is(value);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

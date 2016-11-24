@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCClassMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches objects that are of a given class or any subclass.
  */
@@ -31,3 +33,5 @@ static inline id instanceOf(Class expectedClass)
     return HC_instanceOf(expectedClass);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

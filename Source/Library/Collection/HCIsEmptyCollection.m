@@ -14,7 +14,7 @@
     return self;
 }
 
-- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(nullable id)item to:(nullable id <HCDescription>)mismatchDescription
 {
     [[mismatchDescription appendText:@"was "] appendDescriptionOf:item];
 }

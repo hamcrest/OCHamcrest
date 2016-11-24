@@ -6,7 +6,7 @@
 
 @implementation HCStringEndsWith
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     if (![item respondsToSelector:@selector(hasSuffix:)])
         return NO;

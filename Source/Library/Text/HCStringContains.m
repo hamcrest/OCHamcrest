@@ -6,7 +6,7 @@
 
 @implementation HCStringContains
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     if (![item respondsToSelector:@selector(rangeOfString:)])
         return NO;

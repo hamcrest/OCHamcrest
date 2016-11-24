@@ -5,6 +5,8 @@
 #import <OCHamcrest/HCDiagnosingMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches objects whose "property" (or simple method) satisfies a nested matcher.
  */
@@ -16,7 +18,7 @@
 @end
 
 
-FOUNDATION_EXPORT id HC_hasProperty(NSString *propertyName, id valueMatcher);
+FOUNDATION_EXPORT id HC_hasProperty(NSString *propertyName, _Nullable id valueMatcher);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -36,8 +38,10 @@ FOUNDATION_EXPORT id HC_hasProperty(NSString *propertyName, id valueMatcher);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasProperty instead.
  */
-static inline id hasProperty(NSString *propertyName, id valueMatcher)
+static inline id hasProperty(NSString *propertyName, _Nullable id valueMatcher)
 {
     return HC_hasProperty(propertyName, valueMatcher);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

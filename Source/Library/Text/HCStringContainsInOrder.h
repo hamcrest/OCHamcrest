@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Tests if string that contains a list of substrings in relative order.
  */
@@ -56,3 +58,5 @@ FOUNDATION_EXPORT id HC_stringContainsInOrder(NSString *substrings, ...) NS_REQU
  */
 #define stringContainsInOrder(substrings...) HC_stringContainsInOrder(substrings)
 #endif
+
+NS_ASSUME_NONNULL_END

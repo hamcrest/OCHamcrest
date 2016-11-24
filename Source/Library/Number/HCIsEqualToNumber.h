@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 FOUNDATION_EXPORT id HC_equalToChar(char value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
@@ -283,3 +285,5 @@ static inline id equalToUnsignedInteger(NSUInteger value)
     return HC_equalToUnsignedInteger(value);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

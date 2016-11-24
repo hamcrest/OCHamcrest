@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches if any entry in a dictionary has a key satisfying the nested matcher.
  */
@@ -38,3 +40,5 @@ static inline id hasKey(id keyMatcher)
     return HC_hasKey(keyMatcher);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

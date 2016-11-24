@@ -49,8 +49,11 @@
 
 - (void)testMatcherCreationRequiresNonNilArguments
 {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
     XCTAssertThrows(hasEntry(nil, @"value"), @"Should require non-nil argument");
     XCTAssertThrows(hasEntry(@"key", nil), @"Should require non-nil argument");
+#pragma clang diagnostic pop
 }
 
 - (void)testHasReadableDescription

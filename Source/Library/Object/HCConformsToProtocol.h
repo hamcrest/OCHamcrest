@@ -5,6 +5,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches objects that conform to specified protocol.
  */
@@ -36,3 +38,5 @@ static inline id conformsTo(Protocol *aProtocol)
     return HC_conformsTo(aProtocol);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

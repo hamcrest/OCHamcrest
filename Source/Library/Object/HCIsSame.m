@@ -10,7 +10,7 @@
 
 @implementation HCIsSame
 
-- (instancetype)initSameAs:(id)object
+- (instancetype)initSameAs:(nullable id)object
 {
     self = [super init];
     if (self)
@@ -18,12 +18,12 @@
     return self;
 }
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     return item == self.object;
 }
 
-- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(nullable id)item to:(nullable id <HCDescription>)mismatchDescription
 {
     [mismatchDescription appendText:@"was "];
     if (item)
@@ -40,7 +40,7 @@
 @end
 
 
-id HC_sameInstance(id expectedInstance)
+id HC_sameInstance(_Nullable id expectedInstance)
 {
     return [[HCIsSame alloc] initSameAs:expectedInstance];
 }

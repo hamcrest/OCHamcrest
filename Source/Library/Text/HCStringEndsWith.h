@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCSubstringMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Tests if string ends with a substring.
  */
@@ -34,3 +36,5 @@ static inline id endsWith(NSString *suffix)
     return HC_endsWith(suffix);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

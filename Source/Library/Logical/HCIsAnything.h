@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches anything.
  */
@@ -49,3 +51,5 @@ static inline id anythingWithDescription(NSString *description)
     return HC_anythingWithDescription(description);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

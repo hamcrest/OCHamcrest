@@ -20,7 +20,7 @@
     return self;
 }
 
-- (BOOL)matches:(id)item describingMismatchTo:(id <HCDescription>)mismatchDescription
+- (BOOL)matches:(nullable id)item describingMismatchTo:(id <HCDescription>)mismatchDescription
 {
     for (id <HCMatcher> oneMatcher in self.matchers)
     {

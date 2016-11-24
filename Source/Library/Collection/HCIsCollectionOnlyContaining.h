@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCEvery.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches if every item in a collection satisfies any of the nested matchers.
  */
@@ -56,3 +58,5 @@ FOUNDATION_EXPORT id HC_onlyContains(id itemMatchers, ...) NS_REQUIRES_NIL_TERMI
  */
 #define onlyContains(itemMatchers...) HC_onlyContains(itemMatchers)
 #endif
+
+NS_ASSUME_NONNULL_END

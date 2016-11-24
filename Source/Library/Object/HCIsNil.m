@@ -8,7 +8,7 @@
 
 @implementation HCIsNil
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     return item == nil;
 }

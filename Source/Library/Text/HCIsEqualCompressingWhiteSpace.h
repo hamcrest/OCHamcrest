@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Tests if a string is equal to another string, when whitespace differences are (mostly) ignored.
  */
@@ -40,3 +42,5 @@ static inline id equalToCompressingWhiteSpace(NSString *expectedString)
     return HC_equalToCompressingWhiteSpace(expectedString);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

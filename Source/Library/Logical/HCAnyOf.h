@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Calculates the logical disjunction of multiple matchers.
  * @discussion Evaluation is shortcut, so subsequent matchers are not called if an earlier matcher
@@ -56,3 +58,5 @@ FOUNDATION_EXPORT id HC_anyOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
  */
 #define anyOf(matchers...) HC_anyOf(matchers)
 #endif
+
+NS_ASSUME_NONNULL_END

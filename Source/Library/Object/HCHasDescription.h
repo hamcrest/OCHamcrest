@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCInvocationMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches objects whose description satisfies a nested matcher.
  */
@@ -39,3 +41,5 @@ static inline id hasDescription(id descriptionMatcher)
     return HC_hasDescription(descriptionMatcher);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

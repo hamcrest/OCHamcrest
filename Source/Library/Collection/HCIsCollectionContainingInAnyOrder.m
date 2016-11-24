@@ -25,7 +25,7 @@
     return self;
 }
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     NSUInteger index = 0;
     for (id <HCMatcher> matcher in self.matchers)

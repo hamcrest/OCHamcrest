@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Tests if a string is equal to another string, regardless of the case.
  */
@@ -35,3 +37,5 @@ static inline id equalToIgnoringCase(NSString *expectedString)
     return HC_equalToIgnoringCase(expectedString);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

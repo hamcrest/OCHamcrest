@@ -6,6 +6,8 @@
 @class HCTestFailureReporter;
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Manage chain-of-responsibility for reporting test failures.
  * @discussion This provides a generic way of reporting test failures without knowing about the
@@ -30,3 +32,5 @@
 + (void)reset;
 
 @end
+
+NS_ASSUME_NONNULL_END

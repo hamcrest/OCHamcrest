@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Supporting class for matching a feature of an object.
  * @discussion Tests whether the result of passing the specified invocation to the value satisfies
@@ -39,3 +41,5 @@
 - (NSString *)stringFromSelector;
 
 @end
+
+NS_ASSUME_NONNULL_END

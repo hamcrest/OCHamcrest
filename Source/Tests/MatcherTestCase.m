@@ -57,7 +57,7 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
     }
 }
 
-- (void)assertMatcher:(id <HCMatcher>)matcher matches:(id)arg message:(NSString *)expectation
+- (void)assertMatcher:(id <HCMatcher>)matcher matches:(nullable id)arg message:(NSString *)expectation
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     if (![matcher matches:arg])
@@ -110,7 +110,7 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
     [self assertDescription:description matches:expected inFile:fileName atLine:lineNumber];
 }
 
-- (void)assertMatcher:(id <HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
+- (void)assertMatcher:(id <HCMatcher>)matcher hasNoMismatchDescriptionFor:(nullable id)arg
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
@@ -123,7 +123,7 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
     }
 }
 
-- (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg yieldsMismatchDescription:(NSString *)expected
+- (void)assertMatcher:(id <HCMatcher>)matcher matching:(nullable id)arg yieldsMismatchDescription:(NSString *)expected
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
@@ -135,7 +135,7 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
     [self assertDescription:description matches:expected inFile:fileName atLine:lineNumber];
 }
 
-- (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg
+- (void)assertMatcher:(id <HCMatcher>)matcher matching:(nullable id)arg
         yieldsMismatchDescriptionPrefix:(NSString *)expectedPrefix
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
@@ -154,7 +154,7 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
     }
 }
 
-- (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg describesMismatch:(NSString *)expected
+- (void)assertMatcher:(id <HCMatcher>)matcher matching:(nullable id)arg describesMismatch:(NSString *)expected
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
 {
     HCStringDescription *description = [HCStringDescription stringDescription];

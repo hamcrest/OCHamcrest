@@ -6,7 +6,7 @@
 
 @implementation HCStringStartsWith
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     if (![item respondsToSelector:@selector(hasPrefix:)])
         return NO;

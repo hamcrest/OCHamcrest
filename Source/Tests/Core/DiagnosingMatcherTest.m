@@ -12,7 +12,7 @@
 @implementation IncompleteDiagnosingMatcher
 
 // Let's say we mistakenly implemented -matches: instead of -matches:describingMismatchTo:
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     return YES;
 }

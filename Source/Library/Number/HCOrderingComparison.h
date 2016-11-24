@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches values with <code>-compare:</code>.
  */
@@ -108,3 +110,5 @@ static inline id lessThanOrEqualTo(id value)
     return HC_lessThanOrEqualTo(value);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

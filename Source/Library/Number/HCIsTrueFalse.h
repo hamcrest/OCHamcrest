@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches true values.
  */
@@ -49,3 +51,5 @@ static inline id isFalse(void)
     return HC_isFalse();
 }
 #endif
+
+NS_ASSUME_NONNULL_END

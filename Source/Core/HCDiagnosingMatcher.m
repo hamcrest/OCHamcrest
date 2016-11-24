@@ -6,18 +6,18 @@
 
 @implementation HCDiagnosingMatcher
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     return [self matches:item describingMismatchTo:nil];
 }
 
-- (BOOL)matches:(id)item describingMismatchTo:(id <HCDescription>)mismatchDescription
+- (BOOL)matches:(nullable id)item describingMismatchTo:(id <HCDescription>)mismatchDescription
 {
     HC_ABSTRACT_METHOD;
     return NO;
 }
 
-- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(nullable id)item to:(nullable id <HCDescription>)mismatchDescription
 {
     [self matches:item describingMismatchTo:mismatchDescription];
 }

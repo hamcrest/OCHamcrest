@@ -7,6 +7,8 @@
 #define HC_ABSTRACT_METHOD [self subclassResponsibility:_cmd]
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Base class for all HCMatcher implementations.
  * @discussion Simple matchers can just subclass HCBaseMatcher and implement <code>-matches:</code>
@@ -19,3 +21,5 @@
 - (void)subclassResponsibility:(SEL)command;
 
 @end
+
+NS_ASSUME_NONNULL_END

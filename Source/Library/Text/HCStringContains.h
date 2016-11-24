@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCSubstringMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Tests if string that contains a substring.
  */
@@ -33,3 +35,5 @@ static inline id containsSubstring(NSString *substring)
     return HC_containsSubstring(substring);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

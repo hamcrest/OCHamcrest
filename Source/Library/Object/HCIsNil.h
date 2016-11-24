@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Is the value nil?
  */
@@ -49,3 +51,5 @@ static inline id notNilValue(void)
     return HC_notNilValue();
 }
 #endif
+
+NS_ASSUME_NONNULL_END

@@ -6,7 +6,7 @@
 
 @implementation HCUnsignedShortReturnGetter
 
-- (instancetype)initWithSuccessor:(HCReturnValueGetter *)successor
+- (instancetype)initWithSuccessor:(nullable HCReturnValueGetter *)successor
 {
     self = [super initWithType:@encode(unsigned short) successor:successor];
     return self;

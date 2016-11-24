@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCDiagnosingMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Does executing a block throw an exception which satisfies a nested matcher?
  */
@@ -35,3 +37,5 @@ static inline id throwsException(id exceptionMatcher)
     return HC_throwsException(exceptionMatcher);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

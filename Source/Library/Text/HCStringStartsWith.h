@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCSubstringMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Tests string starts with a substring.
  */
@@ -34,3 +36,5 @@ static inline id startsWith(NSString *prefix)
     return HC_startsWith(prefix);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

@@ -6,7 +6,7 @@
 
 @implementation HCIsTrue
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     if (![item isKindOfClass:[NSNumber class]])
         return NO;
@@ -32,7 +32,7 @@ FOUNDATION_EXPORT id HC_isTrue(void)
 
 @implementation HCIsFalse
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     if (![item isKindOfClass:[NSNumber class]])
         return NO;

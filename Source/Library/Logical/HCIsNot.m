@@ -20,7 +20,7 @@
     return self;
 }
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     return ![self.matcher matches:item];
 }
@@ -30,14 +30,14 @@
     [[description appendText:@"not "] appendDescriptionOf:self.matcher];
 }
 
-- (void)describeMismatchOf:(id)item to:(id <HCDescription>)mismatchDescription
+- (void)describeMismatchOf:(nullable id)item to:(nullable id <HCDescription>)mismatchDescription
 {
     [self.matcher describeMismatchOf:item to:mismatchDescription];
 }
 @end
 
 
-id HC_isNot(id value)
+id HC_isNot(_Nullable id value)
 {
     return [[HCIsNot alloc] initWithMatcher:HCWrapInMatcher(value)];
 }

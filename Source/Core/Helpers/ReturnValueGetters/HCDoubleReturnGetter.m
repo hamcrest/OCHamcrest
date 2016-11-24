@@ -6,7 +6,7 @@
 
 @implementation HCDoubleReturnGetter
 
-- (instancetype)initWithSuccessor:(HCReturnValueGetter *)successor
+- (instancetype)initWithSuccessor:(nullable HCReturnValueGetter *)successor
 {
     self = [super initWithType:@encode(double) successor:successor];
     return self;

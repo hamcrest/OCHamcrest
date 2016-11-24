@@ -61,7 +61,10 @@
 
 - (void)testMatcherCreationRequiresNonNilArgument
 {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
     XCTAssertThrows(everyItem(nil), @"Should require non-nil argument");
+#pragma clang diagnostic pop
 }
 
 - (void)testHasAReadableDescription

@@ -6,7 +6,7 @@
 
 @implementation HCIsInstanceOf
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     return [item isKindOfClass:self.theClass];
 }

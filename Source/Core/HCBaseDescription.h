@@ -5,6 +5,8 @@
 #import <OCHamcrest/HCDescription.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Base class for all HCDescription implementations.
  */
@@ -23,3 +25,5 @@
 - (void)append:(NSString *)str;
 
 @end
+
+NS_ASSUME_NONNULL_END

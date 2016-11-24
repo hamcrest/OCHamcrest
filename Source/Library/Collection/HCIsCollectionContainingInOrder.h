@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCDiagnosingMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches if every item in a collection satisfies a list of nested matchers, in order.
  */
@@ -65,3 +67,5 @@ FOUNDATION_EXPORT id HC_contains(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATI
  */
 #define contains(itemMatchers...) HC_contains(itemMatchers)
 #endif
+
+NS_ASSUME_NONNULL_END

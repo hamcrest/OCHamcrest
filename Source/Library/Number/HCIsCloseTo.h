@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matchers numbers close to a value, within a delta range.
  */
@@ -37,3 +39,5 @@ static inline id closeTo(double value, double delta)
     return HC_closeTo(value, delta);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

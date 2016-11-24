@@ -20,7 +20,7 @@
     return self;
 }
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     for (id <HCMatcher> oneMatcher in self.matchers)
         if ([oneMatcher matches:item])

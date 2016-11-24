@@ -5,12 +5,12 @@
 
 
 @interface HCIsEqual ()
-@property (nonatomic, strong, readonly) id expectedValue;
+@property (nullable, nonatomic, strong, readonly) id expectedValue;
 @end
 
 @implementation HCIsEqual
 
-- (instancetype)initEqualTo:(id)expectedValue
+- (instancetype)initEqualTo:(nullable id)expectedValue
 {
     self = [super init];
     if (self)
@@ -18,7 +18,7 @@
     return self;
 }
 
-- (BOOL)matches:(id)item
+- (BOOL)matches:(nullable id)item
 {
     if (item == nil)
         return self.expectedValue == nil;
@@ -40,7 +40,7 @@
 @end
 
 
-id HC_equalTo(id operand)
+id HC_equalTo(_Nullable id operand)
 {
     return [[HCIsEqual alloc] initEqualTo:operand];
 }

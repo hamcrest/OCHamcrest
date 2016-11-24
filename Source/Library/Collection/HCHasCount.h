@@ -4,6 +4,8 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  * @abstract Matches if collection size satisfies a nested matcher.
  */
@@ -57,3 +59,5 @@ static inline id hasCountOf(NSUInteger value)
     return HC_hasCountOf(value);
 }
 #endif
+
+NS_ASSUME_NONNULL_END

@@ -6,6 +6,8 @@
 @protocol HCMatcher;
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MatcherTestCase : XCTestCase
 
 - (void)assertMatcherSafeWithNil:(id <HCMatcher>)matcher
@@ -14,7 +16,7 @@
 - (void)assertMatcherSafeWithUnknownType:(id <HCMatcher>)matcher
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
 
-- (void)assertMatcher:(id <HCMatcher>)matcher matches:(id)arg message:(NSString *)expectation
+- (void)assertMatcher:(id <HCMatcher>)matcher matches:(nullable id)arg message:(NSString *)expectation
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
 
 - (void)assertFalse:(BOOL)condition message:(NSString *)message
@@ -23,17 +25,17 @@
 - (void)assertMatcher:(id <HCMatcher>)matcher hasDescription:(NSString *)expected
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
 
-- (void)assertMatcher:(id <HCMatcher>)matcher hasNoMismatchDescriptionFor:(id)arg
+- (void)assertMatcher:(id <HCMatcher>)matcher hasNoMismatchDescriptionFor:(nullable id)arg
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
 
-- (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg yieldsMismatchDescription:(NSString *)expected
+- (void)assertMatcher:(id <HCMatcher>)matcher matching:(nullable id)arg yieldsMismatchDescription:(NSString *)expected
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
 
-- (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg
+- (void)assertMatcher:(id <HCMatcher>)matcher matching:(nullable id)arg
         yieldsMismatchDescriptionPrefix:(NSString *)expectedPrefix
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
 
-- (void)assertMatcher:(id <HCMatcher>)matcher matching:(id)arg describesMismatch:(NSString *)expected
+- (void)assertMatcher:(id <HCMatcher>)matcher matching:(nullable id)arg describesMismatch:(NSString *)expected
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber;
 
 @end
@@ -64,3 +66,5 @@
 
 #define assertDescribeMismatch(expected, matcher, arg)  \
     [self assertMatcher:matcher matching:arg describesMismatch:expected inFile:__FILE__ atLine:__LINE__]
+
+NS_ASSUME_NONNULL_END
