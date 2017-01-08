@@ -1,6 +1,6 @@
 //
 // Created by Jon Reid on 9/15/15.
-// Copyright (c) 2016 hamcrest.org. All rights reserved.
+// Copyright (c) 2017 hamcrest.org. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
