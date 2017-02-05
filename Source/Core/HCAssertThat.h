@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 
-FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, id actual, id <HCMatcher> matcher,
+FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, _Nullable id actual, id <HCMatcher> matcher,
                                                  const char *fileName, int lineNumber);
 
 #define HC_assertThat(actual, matcher)  \
