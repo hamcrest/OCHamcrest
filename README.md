@@ -19,75 +19,6 @@ Matchers are useful for a variety of purposes, such as UI validation. But they'r
 for writing unit tests that are expressive and flexible.
 
 
-How do I add OCHamcrest to my project?
---------------------------------------
-
-The Examples folder shows projects using OCHamcrest either through CocoaPods or through the prebuilt
-frameworks, for iOS and Mac OS X development.
-
-### CocoaPods
-
-If you want to add OCHamcrest using Cocoapods then add the following dependency to your Podfile.
-Most people will want OCHamcrest in their test targets, and not include any pods from their main
-targets:
-
-```ruby
-target 'MyTests' do
-  inherit! :search_paths
-  pod 'OCHamcrest', '~> 6.0'
-end
-```
-
-Use the following import:
-
-    #import <OCHamcrest/OCHamcrest.h>
-
-### Carthage
-
-Add the following to your Cartfile:
-
-```
-github "hamcrest/OCHamcrest" ~> 6.0
-```
-
-Then drag the the built framework from the appropriate Carthage/Build directory into your project,
-but with "Copy items into destination group's folder" disabled.
-
-### Prebuilt Frameworks
-
-Prebuilt binaries are available on [GitHub](https://github.com/hamcrest/OCHamcrest/releases/). The
-binaries are packaged as frameworks:
-
-* __OCHamcrestIOS.framework__ for iOS development
-* __OCHamcrest.framework__ for Mac OS X development
-
-Drag the appropriate framework into your project, specifying "Copy items into destination group's
-folder". Then specify `-ObjC` in your "Other Linker Flags".
-
-#### iOS Development:
-
-Use the following import:
-
-    #import <OCHamcrestIOS/OCHamcrestIOS.h>
-
-#### Mac OS X Development:
-
-Add a "Copy Files" build phase to copy OCHamcrest.framework to your Products Directory.
-
-Use the following import:
-
-    #import <OCHamcrest/OCHamcrest.h>
-
-### Build Your Own
-
-If you want to build OCHamcrest yourself, clone the repo, then
-
-```sh
-$ cd Source
-$ ./MakeDistribution.sh
-```
-
-
 My first OCHamcrest test
 ------------------------
 
@@ -243,3 +174,72 @@ What about Swift?
 -----------------
 
 Try the [native Swift implementation of Hamcrest](https://github.com/nschum/SwiftHamcrest).
+
+
+How do I add OCHamcrest to my project?
+--------------------------------------
+
+The Examples folder shows projects using OCHamcrest either through CocoaPods or through the prebuilt
+frameworks, for iOS and Mac OS X development.
+
+### CocoaPods
+
+If you want to add OCHamcrest using Cocoapods then add the following dependency to your Podfile.
+Most people will want OCHamcrest in their test targets, and not include any pods from their main
+targets:
+
+```ruby
+target 'MyTests' do
+  inherit! :search_paths
+  pod 'OCHamcrest', '~> 6.0'
+end
+```
+
+Use the following import:
+
+    #import <OCHamcrest/OCHamcrest.h>
+
+### Carthage
+
+Add the following to your Cartfile:
+
+```
+github "hamcrest/OCHamcrest" ~> 6.0
+```
+
+Then drag the the built framework from the appropriate Carthage/Build directory into your project,
+but with "Copy items into destination group's folder" disabled.
+
+### Prebuilt Frameworks
+
+Prebuilt binaries are available on [GitHub](https://github.com/hamcrest/OCHamcrest/releases/). The
+binaries are packaged as frameworks:
+
+* __OCHamcrestIOS.framework__ for iOS development
+* __OCHamcrest.framework__ for Mac OS X development
+
+Drag the appropriate framework into your project, specifying "Copy items into destination group's
+folder". Then specify `-ObjC` in your "Other Linker Flags".
+
+#### iOS Development:
+
+Use the following import:
+
+    #import <OCHamcrestIOS/OCHamcrestIOS.h>
+
+#### Mac OS X Development:
+
+Add a "Copy Files" build phase to copy OCHamcrest.framework to your Products Directory.
+
+Use the following import:
+
+    #import <OCHamcrest/OCHamcrest.h>
+
+### Build Your Own
+
+If you want to build OCHamcrest yourself, clone the repo, then
+
+```sh
+$ cd Source
+$ ./MakeDistribution.sh
+```
