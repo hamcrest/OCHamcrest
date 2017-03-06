@@ -6,8 +6,11 @@
 #import "HCIsEqual.h"
 
 
-id <HCMatcher> HCWrapInMatcher(_Nullable id matcherOrValue)
+_Nullable id <HCMatcher> HCWrapInMatcher(_Nullable id matcherOrValue)
 {
+    if (!matcherOrValue)
+        return nil;
+
     if ([matcherOrValue conformsToProtocol:@protocol(HCMatcher)])
         return matcherOrValue;
     return HC_equalTo(matcherOrValue);

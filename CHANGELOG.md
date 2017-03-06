@@ -1,3 +1,12 @@
+Version 6.1.1
+-------------
+_06 Mar 2017_
+
+**Fixes:**
+
+- Fixed nullability mistake: HCWrapInMatcher(nil) should return nil.
+
+
 Version 6.1.0
 -------------
 _17 Feb 2017_
