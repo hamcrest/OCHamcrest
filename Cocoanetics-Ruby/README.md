@@ -3,7 +3,7 @@ Cocoanetics Ruby
 
 Collection of my Ruby Scripts
 
-###Coveralls.rb 
+### Coveralls.rb 
 
 This script finds all **.gcda** files unterneath the current user's DerivedData folder. Since you get a fresh VM every time Travis-CI builds those should be the ones that you also want to submit.
 
