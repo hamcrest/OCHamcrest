@@ -12,10 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
  * the specified matcher.
  */
 @interface HCInvocationMatcher : HCBaseMatcher
-{
-    NSInvocation *_invocation;
-    id <HCMatcher> _subMatcher;
-}
+
 
 /*!
  * @abstract Determines whether a mismatch will be described in short form.

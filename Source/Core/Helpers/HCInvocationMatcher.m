@@ -4,6 +4,11 @@
 #import "HCInvocationMatcher.h"
 
 
+@interface HCInvocationMatcher ()
+@property (nonatomic, strong) NSInvocation *invocation;
+@property (nonatomic, strong) id <HCMatcher> subMatcher;
+@end
+
 @implementation HCInvocationMatcher
 
 - (instancetype)initWithInvocation:(NSInvocation *)anInvocation matching:(id <HCMatcher>)aMatcher
@@ -22,19 +27,19 @@
     if ([self invocationNotSupportedForItem:item])
         return NO;
 
-    return [_subMatcher matches:[self invokeOn:item]];
+    return [self.subMatcher matches:[self invokeOn:item]];
 }
 
 - (BOOL)invocationNotSupportedForItem:(id)item
 {
-    return ![item respondsToSelector:[_invocation selector]];
+    return ![item respondsToSelector:self.invocation.selector];
 }
 
 - (id)invokeOn:(id)item
 {
     __unsafe_unretained id result = nil;
-    [_invocation invokeWithTarget:item];
-    [_invocation getReturnValue:&result];
+    [self.invocation invokeWithTarget:item];
+    [self.invocation getReturnValue:&result];
     return result;
 }
 
@@ -45,7 +50,7 @@
     else
     {
         [self describeLongMismatchDescriptionOf:item to:mismatchDescription];
-        [_subMatcher describeMismatchOf:[self invokeOn:item] to:mismatchDescription];
+        [self.subMatcher describeMismatchOf:[self invokeOn:item] to:mismatchDescription];
     }
 }
 
@@ -65,12 +70,12 @@
     [[[[description appendText:@"an object with "]
             appendText:[self stringFromSelector]]
             appendText:@" "]
-            appendDescriptionOf:_subMatcher];
+            appendDescriptionOf:self.subMatcher];
 }
 
 - (NSString *)stringFromSelector
 {
-    return NSStringFromSelector([_invocation selector]);
+    return NSStringFromSelector(self.invocation.selector);
 }
 
 @end
