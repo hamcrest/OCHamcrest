@@ -2808,7 +2808,10 @@
 				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
-				WARNING_CFLAGS = "-Wsemicolon-before-method-body";
+				WARNING_CFLAGS = (
+					"-Wobjc-interface-ivars",
+					"-Wsemicolon-before-method-body",
+				);
 			};
 			name = Debug;
 		};
@@ -2830,7 +2833,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				WARNING_CFLAGS = "-Wsemicolon-before-method-body";
+				WARNING_CFLAGS = (
+					"-Wobjc-interface-ivars",
+					"-Wsemicolon-before-method-body",
+				);
 			};
 			name = Release;
 		};
