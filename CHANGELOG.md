@@ -1,3 +1,14 @@
+NEXT RELEASE
+------------
+
+**Fixes:**
+
+- Remove exposed instance variables that triggered warnings for `-Wobjc-interface-ivars`.
+
+I doubt that it affects anyone, but converting public ivars to private properties does have the
+potential to break backwards compatibility. Please notify me if you have any subclasses that complain.
+
+
 Version 6.1.1
 -------------
 _06 Mar 2017_
