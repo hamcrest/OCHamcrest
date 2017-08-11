@@ -6,7 +6,11 @@ NEXT RELEASE
 - Remove exposed instance variables that triggered warnings for `-Wobjc-interface-ivars`.
 
 I doubt that it affects anyone, but converting public ivars to private properties does have the
-potential to break backwards compatibility. Please notify me if you have any subclasses that complain.
+potential to break backwards compatibility. Please notify me if you have any code that complains.
+
+**Project changes:**
+
+- Increase macOS deployment target to 10.10. (iOS was already at 8.0.)
 
 
 Version 6.1.1
