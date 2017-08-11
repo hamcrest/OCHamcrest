@@ -2732,6 +2732,7 @@
 /* Begin XCBuildConfiguration section */
 		081BEE7F1345979F003F846A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DSTROOT = /tmp/libochamcrest.dst;
@@ -2743,6 +2744,7 @@
 		};
 		081BEE801345979F003F846A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DSTROOT = /tmp/libochamcrest.dst;
@@ -2754,6 +2756,7 @@
 		};
 		081BEE821345979F003F846A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
@@ -2771,6 +2774,7 @@
 		};
 		081BEE831345979F003F846A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
@@ -2808,15 +2812,12 @@
 				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
-				WARNING_CFLAGS = (
-					"-Wobjc-interface-ivars",
-					"-Wsemicolon-before-method-body",
-				);
 			};
 			name = Debug;
 		};
 		0876020813440807001B439B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -2833,15 +2834,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				WARNING_CFLAGS = (
-					"-Wobjc-interface-ivars",
-					"-Wsemicolon-before-method-body",
-				);
 			};
 			name = Release;
 		};
 		0876020A13440807001B439B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2860,6 +2858,7 @@
 		};
 		0876020B13440807001B439B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2878,6 +2877,7 @@
 		};
 		0876020D13440807001B439B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2892,6 +2892,7 @@
 		};
 		0876020E13440807001B439B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2906,6 +2907,7 @@
 		};
 		08F1B0D6187275F2001D28B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -2913,6 +2915,7 @@
 		};
 		08F1B0D7187275F2001D28B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -2920,6 +2923,7 @@
 		};
 		24C5BFEE1C1777D900C2BAFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -2954,6 +2958,7 @@
 		};
 		24C5BFEF1C1777D900C2BAFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -2985,6 +2990,7 @@
 		};
 		24C5BFFC1C17781400C2BAFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -3019,6 +3025,7 @@
 		};
 		24C5BFFD1C17781400C2BAFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -3050,6 +3057,7 @@
 		};
 		24C5C0091C17782500C2BAFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -3085,6 +3093,7 @@
 		};
 		24C5C00A1C17782500C2BAFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

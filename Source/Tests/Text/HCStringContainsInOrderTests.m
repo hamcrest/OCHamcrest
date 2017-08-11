@@ -7,12 +7,12 @@
 
 
 @interface StringContainsInOrderTests : MatcherTestCase
-{
-    id <HCMatcher> matcher;
-}
 @end
 
 @implementation StringContainsInOrderTests
+{
+    id <HCMatcher> matcher;
+}
 
 - (void)setUp
 {
