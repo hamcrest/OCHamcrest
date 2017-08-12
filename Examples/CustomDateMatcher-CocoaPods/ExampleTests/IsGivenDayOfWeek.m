@@ -1,7 +1,7 @@
 #import "IsGivenDayOfWeek.h"
 
 static NSString* const dayAsString[] =
-        { @"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday" };
+        { @"ZERO", @"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday" };
 
 
 @implementation IsGivenDayOfWeek
@@ -17,16 +17,17 @@ static NSString* const dayAsString[] =
 // Test whether item matches.
 - (BOOL)matches:(id)item
 {
-    if (![item respondsToSelector:@selector(dayOfWeek)])
+    if (![item isKindOfClass:[NSDate class]])
         return NO;
 
-    return [item dayOfWeek] == self.dayOfWeek;
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    return [gregorianCalendar component:NSCalendarUnitWeekday fromDate:item] == self.dayOfWeek;
 }
 
 // Describe the matcher.
 - (void)describeTo:(id <HCDescription>)description
 {
-    [[description appendText:@"calendar date falling on "] appendText:dayAsString[self.dayOfWeek]];
+    [[description appendText:@"date falling on "] appendText:dayAsString[self.dayOfWeek]];
 }
 
 @end
@@ -34,5 +35,5 @@ static NSString* const dayAsString[] =
 
 id onASaturday()
 {
-    return [[IsGivenDayOfWeek alloc] initWithDayOfWeek:6];
+    return [[IsGivenDayOfWeek alloc] initWithDayOfWeek:7];
 }

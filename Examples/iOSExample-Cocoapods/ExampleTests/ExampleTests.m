@@ -1,5 +1,5 @@
-#import <OCHamcrest/OCHamcrest.h>  // Specify OCHamcrest when using Cocoapods
-#import <XCTest/XCTest.h>
+#import <OCHamcrest/OCHamcrest.h> // Specify OCHamcrest when using Cocoapods
+@import XCTest;
 
 
 @interface ExampleTests : XCTestCase

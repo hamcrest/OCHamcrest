@@ -1,6 +1,6 @@
 #import "IsGivenDayOfWeek.h"
 #import <OCHamcrest/OCHamcrest.h>
-#import <XCTest/XCTest.h>
+@import XCTest;
 
 
 @interface ExampleTests : XCTestCase
@@ -11,14 +11,26 @@
 - (void)testDateIsOnASaturday
 {
     // Example of a successful match.
-    NSCalendarDate* date = [NSCalendarDate dateWithString:@"26 Apr 2008" calendarFormat:@"%d %b %Y"];
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    dateComponents.day = 26;
+    dateComponents.month = 4;
+    dateComponents.year = 2008;
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDate *date = [gregorianCalendar dateFromComponents:dateComponents];
+
     assertThat(date, is(onASaturday()));
 }
 
 - (void)testFailsWithMismatchedDate
 {
     // Example of what happens with date that doesn't match.
-    NSCalendarDate* date = [NSCalendarDate dateWithString:@"06 Apr 2008" calendarFormat:@"%d %b %Y"];
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    dateComponents.day = 6;
+    dateComponents.month = 4;
+    dateComponents.year = 2008;
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDate *date = [gregorianCalendar dateFromComponents:dateComponents];
+
     assertThat(date, is(onASaturday()));
 }
 
