@@ -191,7 +191,7 @@ targets:
 ```ruby
 target 'MyTests' do
   inherit! :search_paths
-  pod 'OCHamcrest', '~> 6.0'
+  pod 'OCHamcrest', '~> 7.0'
 end
 ```
 
@@ -204,7 +204,7 @@ Use the following import:
 Add the following to your Cartfile:
 
 ```
-github "hamcrest/OCHamcrest" ~> 6.0
+github "hamcrest/OCHamcrest" ~> 7.0
 ```
 
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
