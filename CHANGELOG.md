@@ -2,6 +2,8 @@ Version 7.0.0
 -------------
 _11 Aug 2017_
 
+OCHamcrest now requires projects to use the "Enable Modules" Xcode setting.
+
 **Fixes:**
 
 - Remove exposed instance variables that triggered warnings for `-Wobjc-interface-ivars`.
