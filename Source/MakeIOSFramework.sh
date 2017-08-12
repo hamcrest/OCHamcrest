@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # First build the OS X framework to get its folder structure.
 xcodebuild -configuration Release -target OCHamcrest -sdk macosx
 
