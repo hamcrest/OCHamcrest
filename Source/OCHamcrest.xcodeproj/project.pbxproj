@@ -21,10 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		081BEE631345979F003F846A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
-		081BEE6E1345979F003F846A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
 		081BEE721345979F003F846A /* libochamcrest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 081BEE621345979F003F846A /* libochamcrest.a */; };
-		081BEE9613459FB2003F846A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
 		082E7C3113FF676E004A22FE /* MockSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2B13FF676E004A22FE /* MockSenTestCase.m */; };
 		082E7C3213FF676E004A22FE /* MockSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2B13FF676E004A22FE /* MockSenTestCase.m */; };
 		082E7C3313FF676E004A22FE /* HCBaseMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2C13FF676E004A22FE /* HCBaseMatcherTests.m */; };
@@ -104,7 +101,6 @@
 		0876038413440AD8001B439B /* HCStringContainsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035D13440AD8001B439B /* HCStringContainsTests.m */; };
 		0876038513440AD8001B439B /* HCStringEndsWithTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035E13440AD8001B439B /* HCStringEndsWithTests.m */; };
 		0876038613440AD8001B439B /* HCStringStartsWithTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0876035F13440AD8001B439B /* HCStringStartsWithTests.m */; };
-		0876039213440E28001B439B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087601EA13440807001B439B /* Foundation.framework */; };
 		088FB0AB136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */; };
 		088FB0AC136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */; };
 		0E498AA61BC4D45200BA28F0 /* HCIsCollectionContainingInRelativeOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */; };
@@ -888,7 +884,6 @@
 		0850A44C17165D2A0019BBE0 /* SomeClassAndSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomeClassAndSubclass.h; sourceTree = "<group>"; };
 		0850A44D17165D2A0019BBE0 /* SomeClassAndSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomeClassAndSubclass.m; sourceTree = "<group>"; };
 		087601E213440806001B439B /* OCHamcrest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCHamcrest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		087601EA13440807001B439B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		087601F713440807001B439B /* OCHamcrestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCHamcrestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0876033513440AD8001B439B /* FakeWithCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeWithCount.h; sourceTree = "<group>"; };
 		0876033613440AD8001B439B /* FakeWithCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeWithCount.m; sourceTree = "<group>"; };
@@ -1103,7 +1098,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				081BEE631345979F003F846A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1111,7 +1105,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				081BEE6E1345979F003F846A /* Foundation.framework in Frameworks */,
 				081BEE721345979F003F846A /* libochamcrest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1120,7 +1113,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0876039213440E28001B439B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1128,7 +1120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				081BEE9613459FB2003F846A /* Foundation.framework in Frameworks */,
 				087601FB13440807001B439B /* OCHamcrest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1203,7 +1194,6 @@
 				BB333E40286A981A2343E031 /* Library */,
 				0876032F13440AD8001B439B /* UnitTests */,
 				0876038C13440B64001B439B /* Supporting Files */,
-				087601E413440806001B439B /* Frameworks */,
 				087601E313440806001B439B /* Products */,
 			);
 			indentWidth = 4;
@@ -1223,14 +1213,6 @@
 				24C5C0031C17782500C2BAFD /* OCHamcrest.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		087601E413440806001B439B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				087601EA13440807001B439B /* Foundation.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		0876032F13440AD8001B439B /* UnitTests */ = {
@@ -2795,6 +2777,7 @@
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
@@ -2820,6 +2803,7 @@
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
