@@ -1,7 +1,7 @@
 //  OCHamcrest by Jon Reid, https://qualitycoding.org/
 //  Copyright 2017 hamcrest.org. See LICENSE.txt
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 #import <OCHamcrest/HCMatcher.h>
 
 #define HC_ABSTRACT_METHOD [self subclassResponsibility:_cmd]
