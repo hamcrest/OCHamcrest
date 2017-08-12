@@ -1,4 +1,4 @@
-//  OCHamcrest by Jon Reid, http://qualitycoding.org/about/
+//  OCHamcrest by Jon Reid, https://qualitycoding.org/
 //  Copyright 2017 hamcrest.org. See LICENSE.txt
 
 #import "HCClassMatcher.h"

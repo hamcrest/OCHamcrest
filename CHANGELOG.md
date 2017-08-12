@@ -112,7 +112,7 @@ Version 5.0.0
 -------------
 _02 Nov 2015_
 
-For detailed discussion on v5.0.0, see http://qualitycoding.org/ochamcrest-v5-0-0/
+For detailed discussion on v5.0.0, see https://qualitycoding.org/ochamcrest-v5-0-0/
 
 **Features:**
 
