@@ -1,8 +1,6 @@
-Version 7.0.0
+Version 7.0.1
 -------------
-_11 Aug 2017_
-
-OCHamcrest now requires projects to use the "Enable Modules" Xcode setting.
+_12 Aug 2017_
 
 **Fixes:**
 
@@ -15,6 +13,7 @@ potential to break backwards compatibility. Please notify me if you have any cod
 
 - Increase macOS deployment target to 10.10. (iOS was already at 8.0.)
 
+(Version 7.0.0 mistakenly required projects to Enable Modules and had out-of-date documentation.)
 
 Version 6.1.1
 -------------
