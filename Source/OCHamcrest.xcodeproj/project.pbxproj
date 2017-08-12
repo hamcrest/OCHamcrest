@@ -6,20 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		08F1B0D5187275F2001D28B2 /* OCLint */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 08F1B0D8187275F2001D28B2 /* Build configuration list for PBXAggregateTarget "OCLint" */;
-			buildPhases = (
-				08F1B0D918727611001D28B2 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = OCLint;
-			productName = OCLint;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		081BEE721345979F003F846A /* libochamcrest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 081BEE621345979F003F846A /* libochamcrest.a */; };
 		082E7C3113FF676E004A22FE /* MockSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2B13FF676E004A22FE /* MockSenTestCase.m */; };
@@ -2090,7 +2076,6 @@
 				087601F613440807001B439B /* OCHamcrestTests */,
 				081BEE611345979F003F846A /* libochamcrest */,
 				081BEE6B1345979F003F846A /* libochamcrestTests */,
-				08F1B0D5187275F2001D28B2 /* OCLint */,
 				24C5BFE81C1777D900C2BAFD /* OCHamcrest-iOS */,
 				24C5BFF51C17781400C2BAFD /* OCHamcrest-tvOS */,
 				24C5C0021C17782500C2BAFD /* OCHamcrest-watchOS */,
@@ -2142,22 +2127,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		08F1B0D918727611001D28B2 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/zsh;
-			shellScript = "source ~/.zshrc\ncd ${SRCROOT}\n\"${XCTOOL_HOME}/xctool.sh\" -project OCHamcrest.xcodeproj -scheme OCHamcrest clean > /dev/null\n\"${XCTOOL_HOME}/xctool.sh\" -project OCHamcrest.xcodeproj -scheme OCHamcrest -reporter json-compilation-database:compile_commands.json build\n\"${OCLINT_HOME}/bin/oclint-json-compilation-database\" -- -rc=LONG_LINE=120 -rc=SHORT_VARIABLE_NAME=0 | sed 's/\\(.*\\.\\m\\{1,2\\}:[0-9]*:[0-9]*:\\)/\\1 warning:/'\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		081BEE5E1345979F003F846A /* Sources */ = {
@@ -2881,22 +2850,6 @@
 			};
 			name = Release;
 		};
-		08F1B0D6187275F2001D28B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		08F1B0D7187275F2001D28B2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		24C5BFEE1C1777D900C2BAFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
@@ -3144,15 +3097,6 @@
 			buildConfigurations = (
 				0876020D13440807001B439B /* Debug */,
 				0876020E13440807001B439B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		08F1B0D8187275F2001D28B2 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				08F1B0D6187275F2001D28B2 /* Debug */,
-				08F1B0D7187275F2001D28B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
