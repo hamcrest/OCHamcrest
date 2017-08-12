@@ -7,7 +7,7 @@
 #import <OCHamcrest/HCTestFailure.h>
 #import <objc/runtime.h>
 
-#import <XCTest/XCTest.h>
+@import XCTest;
 
 
 @interface NSException (OCHamcrest_SenTestFailure)

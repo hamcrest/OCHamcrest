@@ -3,7 +3,7 @@
 
 #import <OCHamcrest/HCWrapInMatcher.h>
 
-#import <XCTest/XCTest.h>
+@import XCTest;
 
 
 @interface HCWrapInMatcherTests : XCTestCase

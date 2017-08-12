@@ -3,7 +3,7 @@
 // Copyright (c) 2017 hamcrest.org. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+@import XCTest;
 
 #import "HCTestFailure.h"   // Convenience import
 

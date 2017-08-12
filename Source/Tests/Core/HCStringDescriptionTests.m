@@ -5,7 +5,7 @@
 
 #import <OCHamcrest/HCSelfDescribing.h>
 
-#import <XCTest/XCTest.h>
+@import XCTest;
 
 
 @interface FakeSelfDescribing : NSObject <HCSelfDescribing>

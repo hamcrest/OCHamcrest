@@ -5,7 +5,7 @@
 
 #import <OCHamcrest/HCTestFailureReporter.h>
 
-#import <XCTest/XCTest.h>
+@import XCTest;
 
 
 @interface HCTestFailureReporterChainTests : XCTestCase

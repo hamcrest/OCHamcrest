@@ -7,10 +7,8 @@
 
 #import <OCHamcrest/HCIsEqual.h>
 
-#import <XCTest/XCTest.h>
 #import "InterceptingTestCase.h"
 
-#import <mach/mach.h>
 #import <mach/mach_time.h>
 
 static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
