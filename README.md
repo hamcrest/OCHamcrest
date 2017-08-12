@@ -27,7 +27,7 @@ We'll start by writing a very simple Xcode unit test, but instead of using XCTes
 matcher:
 
 ```obj-c
-#import <XCTest/XCTest.h>
+@import XCTest;
 #import <OCHamcrest/OCHamcrest.h>
 
 @interface BiscuitTest : XCTestCase
