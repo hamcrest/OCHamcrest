@@ -6,7 +6,7 @@
     CFRunLoopObserverRef _observer;
 }
 
-- (instancetype)initWithFulfillmentBlock:(BOOL (^)())fulfillmentBlock
+- (instancetype)initWithFulfillmentBlock:(BOOL (^)(void))fulfillmentBlock
 {
     self = [super init];
     if (self)

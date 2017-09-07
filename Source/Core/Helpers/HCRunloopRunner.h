@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface HCRunloopRunner : NSObject
 
-- (instancetype)initWithFulfillmentBlock:(BOOL (^)())fulfillmentBlock NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFulfillmentBlock:(BOOL (^)(void))fulfillmentBlock NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
 - (void)runUntilFulfilledOrTimeout:(CFTimeInterval)timeout;
 

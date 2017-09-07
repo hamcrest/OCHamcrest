@@ -88,7 +88,7 @@ static NSTimeInterval machTimeInSeconds(void)
     XCTAssertTrue(waitTime < maxTime, @"Expect assert to terminate before timeout, but was %lf", waitTime);
 }
 
-- (NSTimeInterval)timeExecutingBlock:(void (^)())block
+- (NSTimeInterval)timeExecutingBlock:(void (^)(void))block
 {
     NSTimeInterval start = machTimeInSeconds();
     block();

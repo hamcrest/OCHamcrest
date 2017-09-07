@@ -40,7 +40,7 @@ FOUNDATION_EXPORT void HC_assertThatWithLocation(id testCase, _Nullable id actua
 #endif
 
 
-typedef _Nonnull id (^HCFutureValue)();
+typedef _Nonnull id (^HCFutureValue)(void);
 
 FOUNDATION_EXPORT void HC_assertWithTimeoutAndLocation(id testCase, NSTimeInterval timeout,
         HCFutureValue actualBlock, id <HCMatcher> matcher,
