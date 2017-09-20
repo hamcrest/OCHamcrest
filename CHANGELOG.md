@@ -1,3 +1,12 @@
+Version 7.0.2
+-------------
+_19 Sep 2017_
+
+**Fixes:**
+
+- Fixed new warnings from Xcode 9.
+
+
 Version 7.0.1
 -------------
 _12 Aug 2017_
@@ -14,6 +23,7 @@ potential to break backwards compatibility. Please notify me if you have any cod
 - Increase macOS deployment target to 10.10. (iOS was already at 8.0.)
 
 (Version 7.0.0 mistakenly required projects to Enable Modules and had out-of-date documentation.)
+
 
 Version 6.1.1
 -------------
