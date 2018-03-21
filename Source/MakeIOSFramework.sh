@@ -48,3 +48,8 @@ ln -s Versions/Current/OCHamcrestIOS "${IOS_FRAMEWORK}/OCHamcrestIOS"
 # Update the name in the plist file.
 NAME_EXPRESSION="s/OCHamcrest/OCHamcrestIOS/g;"
 perl -pi -e "${NAME_EXPRESSION}" "${IOS_FRAMEWORK}/Resources/Info.plist"
+
+# Update the module variables.
+perl -pi -e "s/OCHamcrestVersionNumber/OCHamcrestIOSVersionNumber/" "${IOS_FRAMEWORK}/Headers/OCHamcrestIOS.h"
+perl -pi -e "s/OCHamcrestVersionString/OCHamcrestIOSVersionString/" "${IOS_FRAMEWORK}/Headers/OCHamcrestIOS.h"
+perl -pi -e "s/OCHamcrest/OCHamcrestIOS/" "${IOS_FRAMEWORK}/Modules/module.modulemap"

@@ -1,3 +1,9 @@
+NEXT RELEASE
+------------
+
+- Made OCHamcrest/OCHamcrestIOS into modules, so you can @import them.
+
+
 Version 7.0.2
 -------------
 _19 Sep 2017_
