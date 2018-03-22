@@ -217,7 +217,7 @@ binaries are packaged as frameworks:
 * __OCHamcrest.framework__ for Mac OS X development
 
 Drag the appropriate framework into your project, specifying "Copy items into destination group's
-folder". Then specify `-ObjC` in your "Other Linker Flags".
+folder". If you encounter any linker problems, specify `-ObjC` in your "Other Linker Flags".
 
 #### iOS Development:
 
