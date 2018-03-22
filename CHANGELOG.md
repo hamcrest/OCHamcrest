@@ -1,7 +1,13 @@
 NEXT RELEASE
 ------------
 
+**Features:**
+
 - Made OCHamcrest/OCHamcrestIOS into modules, so you can @import them.
+
+**Fixes:**
+
+- Fixed crash with HCArgumentCaptor capturing blocks.
 
 
 Version 7.0.2

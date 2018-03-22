@@ -35,7 +35,7 @@
     if (self.captureEnabled)
     {
         id value = item ?: [NSNull null];
-        [self.values addObject:value];
+        [self.values addObject:[value copy]];
     }
 }
 

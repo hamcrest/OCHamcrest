@@ -29,7 +29,7 @@
 - (void)testMatcher_ShouldAlwaysEvaluateToTrue
 {
     assertMatches(@"nil", sut, nil);
-    assertMatches(@"unknown object", sut, [[NSObject alloc] init]);
+    assertMatches(@"some object", sut, @123);
 }
 
 - (void)testMatcher_ShouldHaveReadableDescription
@@ -43,6 +43,15 @@
     [sut matches:@"BAR"];
 
     XCTAssertEqualObjects(sut.value, @"BAR");
+}
+
+- (void)testValue_ShouldBeCopyIfItCanBeCopied
+{
+    NSMutableString *original = [@"FOO" mutableCopy];
+    
+    [sut matches:original];
+    
+    XCTAssertFalse(sut.value == original);
 }
 
 - (void)testValue_WithNothingCaptured_ShouldReturnNil
