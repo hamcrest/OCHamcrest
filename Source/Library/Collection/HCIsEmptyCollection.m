@@ -27,7 +27,7 @@
 @end
 
 
-FOUNDATION_EXPORT id HC_isEmpty()
+FOUNDATION_EXPORT id HC_isEmpty(void)
 {
     return [[HCIsEmptyCollection alloc] init];
 }
