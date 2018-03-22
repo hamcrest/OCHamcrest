@@ -1,5 +1,5 @@
 //  OCHamcrest by Jon Reid, https://qualitycoding.org/
-//  Copyright 2017 hamcrest.org. See LICENSE.txt
+//  Copyright 2018 hamcrest.org. See LICENSE.txt
 
 #import <OCHamcrest/HCAssertThat.h>
 
@@ -160,7 +160,7 @@ static BOOL doNotHandleFailure(id self, SEL _cmd, HCTestFailure *failure)
 {
     if (!self.interceptFailure)
         [super recordFailureWithDescription:description inFile:filePath atLine:lineNumber expected:expected];
-    else        
+    else
     {
         self.failureCount += 1;
         self.failureDescription = description;

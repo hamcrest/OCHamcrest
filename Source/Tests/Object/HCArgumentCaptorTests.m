@@ -1,5 +1,5 @@
-//  OCMockito by Jon Reid, https://qualitycoding.org/
-//  Copyright 2017 Jonathan M. Reid. See LICENSE.txt
+//  OCHamcrest by Jon Reid, https://qualitycoding.org/
+//  Copyright 2018 hamcrest.org. See LICENSE.txt
 
 #import "HCArgumentCaptor.h"
 
