@@ -1,4 +1,4 @@
-#import <OCHamcrestIOS/OCHamcrestIOS.h> // Specify OCHamcrestIOS for prebuilt framework
+@import OCHamcrestIOS; // Specify OCHamcrestIOS for prebuilt framework
 @import XCTest;
 
 

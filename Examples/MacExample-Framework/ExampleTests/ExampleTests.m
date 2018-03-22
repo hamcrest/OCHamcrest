@@ -1,4 +1,4 @@
-#import <OCHamcrest/OCHamcrest.h>
+@import OCHamcrest;
 @import XCTest;
 
 
