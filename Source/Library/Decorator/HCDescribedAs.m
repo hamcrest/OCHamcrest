@@ -95,7 +95,7 @@
     if (index < 0)
         [[description appendText:@"%"] appendText:component];
     else
-        [[description appendDescriptionOf:self.values[index]] appendText:remainder];
+        [[description appendDescriptionOf:self.values[(NSUInteger)index]] appendText:remainder];
 }
 
 @end
