@@ -1,5 +1,6 @@
-NEXT RELEASE
-------------
+Version 7.1.0
+-------------
+_21 Mar 2018_
 
 **Features:**
 
