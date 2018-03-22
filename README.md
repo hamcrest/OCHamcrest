@@ -9,7 +9,7 @@ What is OCHamcrest?
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 
-OCHamcrest is an Objective-C library providing:
+OCHamcrest is an Objective-C module providing:
 
 * a library of "matcher" objects for declaring rules to check whether a given object matches those
   rules.
@@ -27,8 +27,8 @@ We'll start by writing a very simple Xcode unit test, but instead of using XCTes
 matcher:
 
 ```obj-c
+@import OCHamcrest;
 @import XCTest;
-#import <OCHamcrest/OCHamcrest.h>
 
 @interface BiscuitTest : XCTestCase
 @end
@@ -197,15 +197,13 @@ end
 
 Use the following import:
 
-    #import <OCHamcrest/OCHamcrest.h>
+    @import OCHamcrest;
 
 ### Carthage
 
 Add the following to your Cartfile:
 
-```
-github "hamcrest/OCHamcrest" ~> 7.0
-```
+    github "hamcrest/OCHamcrest" ~> 7.0
 
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
 but with "Copy items into destination group's folder" disabled.
@@ -225,7 +223,7 @@ folder". Then specify `-ObjC` in your "Other Linker Flags".
 
 Use the following import:
 
-    #import <OCHamcrestIOS/OCHamcrestIOS.h>
+    @import OCHamcrestIOS;
 
 #### Mac OS X Development:
 
@@ -233,7 +231,7 @@ Add a "Copy Files" build phase to copy OCHamcrest.framework to your Products Dir
 
 Use the following import:
 
-    #import <OCHamcrest/OCHamcrest.h>
+    @import OCHamcrest;
 
 ### Build Your Own
 
