@@ -180,7 +180,7 @@ How do I add OCHamcrest to my project?
 --------------------------------------
 
 The Examples folder shows projects using OCHamcrest either through CocoaPods or through the prebuilt
-frameworks, for iOS and Mac OS X development.
+frameworks, for iOS and macOS development.
 
 ### CocoaPods
 
@@ -214,7 +214,7 @@ Prebuilt binaries are available on [GitHub](https://github.com/hamcrest/OCHamcre
 binaries are packaged as frameworks:
 
 * __OCHamcrestIOS.framework__ for iOS development
-* __OCHamcrest.framework__ for Mac OS X development
+* __OCHamcrest.framework__ for macOS development
 
 Drag the appropriate framework into your project, specifying "Copy items into destination group's
 folder".
@@ -225,7 +225,7 @@ Use the following import:
 
     @import OCHamcrestIOS;
 
-#### Mac OS X Development:
+#### macOS Development:
 
 Add a "Copy Files" build phase to copy OCHamcrest.framework to your Products Directory.
 
