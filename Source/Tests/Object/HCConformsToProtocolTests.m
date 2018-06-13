@@ -15,7 +15,7 @@
 
 @implementation TestClass
 
-+ (instancetype)testClass
++ (instancetype)test_class
 {
     return [[TestClass alloc] init];
 }
@@ -27,7 +27,7 @@
 
 @implementation ConformsToTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = conformsTo(@protocol(TestProtocol));
 
@@ -35,9 +35,9 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testEvaluatesToTrueIfArgumentConformsToASpecificProtocol
+- (void)test_matches_ifArgumentConformsToASpecificProtocol
 {
-    TestClass *instance = [TestClass testClass];
+    TestClass *instance = [TestClass test_class];
 
     assertMatches(@"conforms to protocol", conformsTo(@protocol(TestProtocol)), instance);
 
@@ -45,7 +45,7 @@
     assertDoesNotMatch(@"nil", conformsTo(@protocol(TestProtocol)), nil);
 }
 
-- (void)testMatcherCreationRequiresNonNilArgument
+- (void)test_matcherCreation_requiresNonNilArgument
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -53,22 +53,22 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"an object that conforms to TestProtocol", conformsTo(@protocol(TestProtocol)));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(conformsTo(@protocol(NSObject)), @"hi");
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", conformsTo(@protocol(TestProtocol)), @"bad");
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", conformsTo(@protocol(TestProtocol)), @"bad");
 }

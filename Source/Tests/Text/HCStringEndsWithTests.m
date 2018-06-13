@@ -28,13 +28,13 @@ static NSString *EXCERPT = @"EXCERPT";
     [super tearDown];
 }
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     assertNilSafe(matcher);
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testEvaluatesToTrueIfArgumentContainsSpecifiedSubstring
+- (void)test_matches_ifArgumentContainsSpecifiedSubstring
 {
     assertDoesNotMatch(@"excerpt at beginning", matcher, [EXCERPT stringByAppendingString:@"END"]);
     assertMatches(@"excerpt at end", matcher, [@"START" stringByAppendingString:EXCERPT]);
@@ -46,12 +46,12 @@ static NSString *EXCERPT = @"EXCERPT";
     assertDoesNotMatch(@"only part of excerpt", matcher, [EXCERPT substringFromIndex:1]);
 }
 
-- (void)testEvaluatesToTrueIfArgumentIsEqualToSubstring
+- (void)test_matches_ifArgumentIsEqualToSubstring
 {
     assertMatches(@"excerpt is entire string", matcher, EXCERPT);
 }
 
-- (void)testMatcherCreationRequiresNonNilArgument
+- (void)test_matcherCreation_requiresNonNilArgument
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -59,27 +59,27 @@ static NSString *EXCERPT = @"EXCERPT";
 #pragma clang diagnostic pop
 }
 
-- (void)testFailsIfMatchingAgainstNonString
+- (void)test_doesNotMatch_ifMatchingAgainstNonString
 {
     assertDoesNotMatch(@"non-string", matcher, @3);
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"a string ending with \"EXCERPT\"", matcher);
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(matcher, EXCERPT);
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", matcher, @"bad");
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", matcher, @"bad");
 }

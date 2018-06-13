@@ -35,7 +35,7 @@
 
 @implementation EqualToTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = equalTo(@"irrelevant");
 
@@ -43,13 +43,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesObjectsUsingIsEqualMethod
+- (void)test_comparesObjectsUsingIsEqualMethod
 {
     assertMatches(@"equal strings", equalTo(@"hi"), @"hi");
     assertDoesNotMatch(@"unequal strings", equalTo(@"hi"), @"bye");
 }
 
-- (void)testCanCompareNilValues
+- (void)test_canCompareNilValues
 {
     assertMatches(@"nil equals nil", equalTo(nil), nil);
 
@@ -57,18 +57,18 @@
     assertDoesNotMatch(@"nil in equalTo", equalTo(nil), @"hi");
 }
 
-- (void)testHonorsIsEqualImplementationEvenWithNilValues
+- (void)test_honorsIsEqualImplementationEvenWithNilValues
 {
     assertMatches(@"always equal", equalTo(nil), [[AlwaysEqual alloc] init]);
     assertDoesNotMatch(@"never equal", equalTo(nil), [[NeverEqual alloc] init]);
 }
 
-- (void)testIncludesTheResultOfCallingDescriptionOnItsArgumentInTheDescription
+- (void)test_includesTheResultOfCallingDescriptionOnItsArgumentInTheDescription
 {
     assertDescription(@"<ARGUMENT DESCRIPTION>", equalTo([[FakeArgument alloc] init]));
 }
 
-- (void)testReturnsAnObviousDescriptionIfCreatedWithANestedMatcherByMistake
+- (void)test_returnsAnObviousDescriptionIfCreatedWithANestedMatcherByMistake
 {
     id innerMatcher = equalTo(@"NestedMatcher");
     assertDescription(([@[@"<", [innerMatcher description], @">"]
@@ -76,22 +76,22 @@
                       equalTo(innerMatcher));
 }
 
-- (void)testReturnsGoodDescriptionIfCreatedWithNilReference
+- (void)test_returnsGoodDescriptionIfCreatedWithNilReference
 {
     assertDescription(@"nil", equalTo(nil));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(equalTo(@"hi"), @"hi");
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", equalTo(@"good"), @"bad");
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", equalTo(@"good"), @"bad");
 }

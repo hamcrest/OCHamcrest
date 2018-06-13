@@ -26,18 +26,18 @@
     [super tearDown];
 }
 
-- (void)testMatcher_ShouldAlwaysEvaluateToTrue
+- (void)test_matcher_shouldAlwaysEvaluateToTrue
 {
     assertMatches(@"nil", sut, nil);
     assertMatches(@"some object", sut, @123);
 }
 
-- (void)testMatcher_ShouldHaveReadableDescription
+- (void)test_matcher_shouldHaveReadableDescription
 {
     assertDescription(@"<Capturing argument>", sut);
 }
 
-- (void)testValue_ShouldBeLastCapturedValue
+- (void)test_value_shouldBeLastCapturedValue
 {
     [sut matches:@"FOO"];
     [sut matches:@"BAR"];
@@ -45,7 +45,7 @@
     XCTAssertEqualObjects(sut.value, @"BAR");
 }
 
-- (void)testValue_ShouldBeCopyIfItCanBeCopied
+- (void)test_value_shouldBeCopyIfItCanBeCopied
 {
     NSMutableString *original = [@"FOO" mutableCopy];
     
@@ -54,12 +54,12 @@
     XCTAssertFalse(sut.value == original);
 }
 
-- (void)testValue_WithNothingCaptured_ShouldReturnNil
+- (void)test_value_withNothingCaptured_shouldReturnNil
 {
     XCTAssertNil(sut.value);
 }
 
-- (void)testValue_GivenNil_ShouldReturnNSNull
+- (void)test_value_givenNil_shouldReturnNSNull
 {
     [sut matches:@"FOO"];
     [sut matches:nil];
@@ -67,7 +67,7 @@
     XCTAssertEqualObjects(sut.value, [NSNull null]);
 }
 
-- (void)testAllValues_ShouldCaptureValuesInOrder
+- (void)test_allValues_shouldCaptureValuesInOrder
 {
     [sut matches:@"FOO"];
     [sut matches:@"BAR"];
@@ -77,7 +77,7 @@
     XCTAssertEqualObjects(sut.allValues[1], @"BAR");
 }
 
-- (void)testAllValues_TurningOffCaptureEnabled_ShouldNotCaptureSubsequentValues
+- (void)test_allValues_turningOffCaptureEnabled_shouldNotCaptureSubsequentValues
 {
     [sut matches:@"FOO"];
     sut.captureEnabled = NO;
@@ -88,7 +88,7 @@
     XCTAssertEqualObjects(sut.allValues[0], @"FOO");
 }
 
-- (void)testAllValues_TurningCaptureEnabledBackOn_ShouldCaptureSubsequentValues
+- (void)test_allValues_turningCaptureEnabledBackOn_shouldCaptureSubsequentValues
 {
     sut.captureEnabled = NO;
     [sut matches:@"FOO"];
@@ -101,14 +101,14 @@
     XCTAssertEqualObjects(sut.allValues[1], @"BAZ");
 }
 
-- (void)testAllValues_GivenNil_ShouldCaptureNSNull
+- (void)test_allValues_givenNil_shouldCaptureNSNull
 {
     [sut matches:nil];
 
     XCTAssertEqualObjects(sut.allValues[0], [NSNull null]);
 }
 
-- (void)testAllValues_ShouldReturnImmutableArray
+- (void)test_allValues_shouldReturnImmutableArray
 {
     [sut matches:@"FOO"];
 

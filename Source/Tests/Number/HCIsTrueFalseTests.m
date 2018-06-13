@@ -12,7 +12,7 @@
 
 @implementation IsTrueTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = isTrue();
 
@@ -20,34 +20,34 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testNonZero_ShouldMatch
+- (void)test_matches_nonZero
 {
     assertMatches(@"boolean YES", isTrue(), @YES);
     assertMatches(@"non-zero", isTrue(), @123);
 }
 
-- (void)testZero_ShouldNotMatch
+- (void)test_doesNotMatch_zero
 {
     assertDoesNotMatch(@"boolean NO", isTrue(), @NO);
     assertDoesNotMatch(@"zero is false", isTrue(), @0);
 }
 
-- (void)testNonNumber_ShouldNotMatch
+- (void)test_doesNotMatch_nonNumber
 {
     assertDoesNotMatch(@"non-number", isTrue(), [[NSObject alloc] init]);
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"true (non-zero)", isTrue());
 }
 
-- (void)testDescribesMismatchOfDifferentNumber
+- (void)test_describesMismatch_ofDifferentNumber
 {
     assertMismatchDescription(@"was <0>", isTrue(), @0);
 }
 
-- (void)testDescribesMismatchOfNonNumber
+- (void)test_describesMismatch_ofNonNumber
 {
     assertMismatchDescriptionPrefix(@"was <NSObject:", isTrue(), [[NSObject alloc] init]);
 }
@@ -61,7 +61,7 @@
 
 @implementation IsFalseTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = isFalse();
 
@@ -69,29 +69,29 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testZero_ShouldMatch
+- (void)test_matches_zero
 {
     assertMatches(@"boolean NO", isFalse(), @NO);
     assertMatches(@"zero is false", isFalse(), @0);
 }
 
-- (void)testNonZero_ShouldNotMatch
+- (void)test_doesNotMatch_nonZero
 {
     assertDoesNotMatch(@"boolean YES", isFalse(), @YES);
     assertDoesNotMatch(@"non-zero is true", isFalse(), @123);
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"false (zero)", isFalse());
 }
 
-- (void)testDescribesMismatchOfDifferentNumber
+- (void)test_describesMismatch_ofDifferentNumber
 {
     assertMismatchDescription(@"was <123>", isFalse(), @123);
 }
 
-- (void)testDescribesMismatchOfNonNumber
+- (void)test_describesMismatch_ofNonNumber
 {
     assertMismatchDescriptionPrefix(@"was <NSObject:", isFalse(), [[NSObject alloc] init]);
 }

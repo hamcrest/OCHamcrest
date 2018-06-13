@@ -11,7 +11,7 @@
 
 @implementation IsAnythingTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = anything();
 
@@ -19,25 +19,25 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testAlwaysEvaluatesToTrue
+- (void)test_alwaysEvaluatesToTrue
 {
     assertMatches(@"nil", anything(), nil);
     assertMatches(@"object", anything(), [[NSObject alloc] init]);
     assertMatches(@"string", anything(), @"hi");
 }
 
-- (void)testHasUsefulDefaultDescription
+- (void)test_hasUsefulDefaultDescription
 {
     assertDescription(@"ANYTHING", anything());
 }
 
-- (void)testCanOverrideDescription
+- (void)test_canOverrideDescription
 {
     NSString *description = @"DESCRIPTION";
     assertDescription(description, anythingWithDescription(description));
 }
 
-- (void)testMatchAlwaysSucceedsSoShouldNotGenerateMismatchDescription
+- (void)test_matchAlwaysSucceedsSoShouldNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(anything(), @"hi");
 }

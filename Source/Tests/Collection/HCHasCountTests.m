@@ -16,7 +16,7 @@
 
 @implementation HasCountTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = hasCount(equalTo(@42));
 
@@ -24,7 +24,7 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testConvertsCountToNSNumberAndPassesToNestedMatcher
+- (void)test_convertsCountToNSNumberAndPassesToNestedMatcher
 {
     FakeWithCount *fakeWithCount = [FakeWithCount fakeWithCount:5];
 
@@ -32,36 +32,36 @@
     assertDoesNotMatch(@"different number", hasCount(equalTo(@6)), fakeWithCount);
 }
 
-- (void)testHasReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"a collection with count of a value greater than <5>",
                       hasCount(greaterThan(@(5))));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(hasCountOf(2), ([NSSet setWithObjects:@1, @2, nil]));
 }
 
-- (void)testMismatchDescriptionForItemWithWrongCount
+- (void)test_mismatchDescription_forItemWithWrongCount
 {
     assertMismatchDescription(@"was count of <42> with <FakeWithCount>",
                               hasCount(equalTo(@1)), [FakeWithCount fakeWithCount:42]);
 }
 
-- (void)testMismatchDescriptionForItemWithoutCount
+- (void)test_mismatchDescription_forItemWithoutCount
 {
     assertMismatchDescription(@"was <FakeWithoutCount>",
                               hasCount(equalTo(@1)), [FakeWithoutCount fake]);
 }
 
-- (void)testDescribesMismatchForItemWithWrongCount
+- (void)test_describesMismatch_forItemWithWrongCount
 {
     assertDescribeMismatch(@"was count of <42> with <FakeWithCount>",
                            hasCount(equalTo(@1)), [FakeWithCount fakeWithCount:42]);
 }
 
-- (void)testDescribesMismatchForItemWithoutCount
+- (void)test_describesMismatch_forItemWithoutCount
 {
     assertDescribeMismatch(@"was <FakeWithoutCount>",
                            hasCount(equalTo(@1)), [FakeWithoutCount fake]);
@@ -75,7 +75,7 @@
 
 @implementation HasCountOfTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = hasCountOf(42);
 
@@ -83,7 +83,7 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testHasCountOfIsShortcutForEqualToUnsignedInteger
+- (void)test_hasCountOf_isShortcutForEqualToUnsignedInteger
 {
     FakeWithCount *fakeWithCount = [FakeWithCount fakeWithCount:5];
 
@@ -91,29 +91,29 @@
     assertDoesNotMatch(@"different number", hasCountOf(6), fakeWithCount);
 }
 
-- (void)testHasReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"a collection with count of <5>", hasCountOf(5));
 }
 
-- (void)testMismatchDescriptionForItemWithWrongCount
+- (void)test_mismatchDescription_forItemWithWrongCount
 {
     assertMismatchDescription(@"was count of <42> with <FakeWithCount>",
                               hasCountOf(1), [FakeWithCount fakeWithCount:42]);
 }
 
-- (void)testMismatchDescriptionForItemWithoutCount
+- (void)test_mismatchDescription_forItemWithoutCount
 {
     assertMismatchDescription(@"was <FakeWithoutCount>", hasCountOf(1), [FakeWithoutCount fake]);
 }
 
-- (void)testDescribesMismatchForItemWithWrongCount
+- (void)test_describesMismatch_forItemWithWrongCount
 {
     assertDescribeMismatch(@"was count of <42> with <FakeWithCount>",
                            hasCountOf(1), [FakeWithCount fakeWithCount:42]);
 }
 
-- (void)testDescribesMismatchForItemWithoutCount
+- (void)test_describesMismatch_forItemWithoutCount
 {
     assertDescribeMismatch(@"was <FakeWithoutCount>", hasCountOf(1), [FakeWithoutCount fake]);
 }

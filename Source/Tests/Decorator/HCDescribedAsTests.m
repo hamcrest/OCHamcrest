@@ -14,7 +14,7 @@
 
 @implementation DescribedAsTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = describedAs(@"irrelevant", anything(), nil);
 
@@ -22,14 +22,14 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testOverridesDescriptionOfOtherMatcherWithThatPassedToInitializer
+- (void)test_overridesDescriptionOfOtherMatcherWithThatPassedToInitializer
 {
     id matcher = describedAs(@"my description", anything(), nil);
 
     assertDescription(@"my description", matcher);
 }
 
-- (void)testAppendsValuesToDescription
+- (void)test_appendsValuesToDescription
 {
     id matcher = describedAs(@"value 1 = %0, value 2 = %1",
                             anything(),
@@ -40,7 +40,7 @@
     assertDescription(@"value 1 = <33>, value 2 = <97>", matcher);
 }
 
-- (void)testHandlesSubstitutionAtBeginning
+- (void)test_handlesSubstitutionAtBeginning
 {
     id matcher = describedAs(@"%0ok",
                             anything(),
@@ -50,7 +50,7 @@
     assertDescription(@"<33>ok", matcher);
 }
 
-- (void)testHandlesSubstitutionAtEnd
+- (void)test_handlesSubstitutionAtEnd
 {
     id matcher = describedAs(@"ok%0",
                             anything(),
@@ -60,14 +60,14 @@
     assertDescription(@"ok<33>", matcher);
 }
 
-- (void)testDoesNotProcessPercentFollowedByNonDigit
+- (void)test_doesNotProcessPercentFollowedByNonDigit
 {
     id matcher = describedAs(@"With 33% remaining", anything(), nil);
 
     assertDescription(@"With 33% remaining", matcher);
 }
 
-- (void)testDelegatesMatchingToNestedMatcher
+- (void)test_delegatesMatchingToNestedMatcher
 {
     id matcher = describedAs(@"m1 description", equalTo(@"hi"), nil);
 
@@ -75,19 +75,19 @@
     assertDoesNotMatch(@"should not match", matcher, @"oi");
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(describedAs(@"irrelevant", anything(), nil), @"hi");
 }
 
-- (void)testDelegatesMismatchDescriptionToNestedMatcher
+- (void)test_delegatesMismatchDescriptionToNestedMatcher
 {
     id matcher = describedAs(@"irrelevant", equalTo(@2), nil);
 
     assertMismatchDescription(@"was <1>", matcher, @1);
 }
 
-- (void)testDelegatesDescribeMismatchToNestedMatcher
+- (void)test_delegatesDescribeMismatchToNestedMatcher
 {
     id matcher = describedAs(@"irrelevant", equalTo(@2), nil);
 

@@ -14,7 +14,7 @@
 
 @implementation IsEmptyTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = isEmpty();
 
@@ -22,37 +22,37 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testShouldNotMatchNonCollection
+- (void)test_doesNotMatch_nonCollection
 {
     assertDoesNotMatch(@"Non collection", isEmpty(), [[NSObject alloc] init]);
 }
 
-- (void)testMatchesEmptyCollection
+- (void)test_matches_emptyCollection
 {
     assertMatches(@"empty", isEmpty(), [FakeWithCount fakeWithCount:0]);
 }
 
-- (void)testDoesNotMatchesNonEmptyCollection
+- (void)test_doesNotMatchesNonEmptyCollection
 {
     assertDoesNotMatch(@"non-empty", isEmpty(), [FakeWithCount fakeWithCount:1]);
 }
 
-- (void)testDoesNotMatchItemWithoutCount
+- (void)test_doesNotMatch_itemWithoutCount
 {
     assertDoesNotMatch(@"no count", isEmpty(), [FakeWithoutCount fake]);
 }
 
-- (void)testHasReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"empty collection", isEmpty());
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", isEmpty(), @"bad");
 }
 
-- (void)testDescribesMismatch
+- (void)test_describesMismatch
 {
     assertDescribeMismatch(@"was <FakeWithCount>", isEmpty(), [FakeWithCount fakeWithCount:1]);
 }

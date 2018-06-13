@@ -26,37 +26,37 @@
     [super tearDown];
 }
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     assertNilSafe(matcher);
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testMatchesIfOrderIsCorrect
+- (void)test_matches_ifOrderIsCorrect
 {
     assertMatches(@"correct order", matcher, @"string one then string two followed by string three");
 }
 
-- (void)testArrayVariant_MatchesIfOrderIsCorrect
+- (void)test_arrayVariant_matchesIfOrderIsCorrect
 {
     id <HCMatcher> variantMatcher = stringContainsInOrderIn(@[@"string one", @"string two", @"string three"]);
 
     assertMatches(@"correct order", variantMatcher, @"string one then string two followed by string three");
 }
 
-- (void)testDoesNotMatchIfOrderIsIncorrect
+- (void)test_doesNotMatch_ifOrderIsIncorrect
 {
     assertDoesNotMatch(@"incorrect order", matcher, @"string two then string one followed by string three");
 }
 
-- (void)testDoesNotMatchIfExpectedSubstringsAreMissing
+- (void)test_doesNotMatch_ifExpectedSubstringsAreMissing
 {
     assertDoesNotMatch(@"missing string one", matcher, @"string two then string three");
     assertDoesNotMatch(@"missing string two", matcher, @"string one then string three");
     assertDoesNotMatch(@"missing string three", matcher, @"string one then string two");
 }
 
-- (void)testMatcherCreationRequiresNonNilArgument
+- (void)test_matcherCreation_requiresNonNilArgument
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -64,33 +64,33 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testMatcherCreationRequiresStringArguments
+- (void)test_matcherCreation_requiresStringArguments
 {
     XCTAssertThrows(stringContainsInOrder(@"one", @2, nil), @"Should require strings");
 }
 
-- (void)testFailsIfMatchingAgainstNonString
+- (void)test_doesNotMatch_ifMatchingAgainstNonString
 {
     assertDoesNotMatch(@"non-string", matcher, @3);
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"a string containing \"string one\", \"string two\", \"string three\" in order",
                       matcher);
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(matcher, @"string one then string two followed by string three");
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", matcher, @"bad");
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", matcher, @"bad");
 }

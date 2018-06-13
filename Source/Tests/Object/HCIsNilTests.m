@@ -11,7 +11,7 @@
 
 @implementation NilValueTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = nilValue();
 
@@ -19,34 +19,34 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testEvaluatesToTrueIfArgumentIsNil
+- (void)test_matches_ifArgumentIsNil
 {
     assertMatches(@"nil", nilValue(), nil);
 }
 
-- (void)testEvaluatesToFalseIfArgumentIsNotNil
+- (void)test_doesNotMatch_ifArgumentIsNotNil
 {
     id ANY_NON_NULL_ARGUMENT = [[NSObject alloc] init];
 
     assertDoesNotMatch(@"not nil", nilValue(), ANY_NON_NULL_ARGUMENT);
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"nil", nilValue());
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(nilValue(), nil);
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", nilValue(), @"bad");
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", nilValue(), @"bad");
 }
@@ -59,7 +59,7 @@
 
 @implementation NotNilValueTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = notNilValue();
 
@@ -67,34 +67,34 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testEvaluatesToTrueIfArgumentIsNotNil
+- (void)test_matches_ifArgumentIsNotNil
 {
     id ANY_NON_NULL_ARGUMENT = [[NSObject alloc] init];
 
     assertMatches(@"not nil", notNilValue(), ANY_NON_NULL_ARGUMENT);
 }
 
-- (void)testEvaluatesToFalseIfArgumentIsNil
+- (void)test_doesNotMatch_ifArgumentIsNil
 {
     assertDoesNotMatch(@"nil", notNilValue(), nil);
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"not nil", notNilValue());
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(notNilValue(), @"hi");
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was nil", notNilValue(), nil);
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was nil", notNilValue(), nil);
 }

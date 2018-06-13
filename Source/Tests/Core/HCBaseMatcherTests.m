@@ -40,12 +40,12 @@
     [super tearDown];
 }
 
-- (void)testDescriptionShouldDescribeMatcher
+- (void)test_description_shouldDescribeMatcher
 {
     XCTAssertEqualObjects(matcher.description, @"SOME DESCRIPTION");
 }
 
-- (void)testShouldSupportImmutableCopying
+- (void)test_shouldSupportImmutableCopying
 {
     BaseMatcherWithDescription *matcherCopy = [matcher copy];
     XCTAssertEqual(matcherCopy, matcher);
@@ -81,12 +81,12 @@
     [super tearDown];
 }
 
-- (void)testSubclassShouldBeRequiredToDefineMatchesMethod
+- (void)test_subclassShouldBeRequiredToDefineMatchesMethod
 {
     XCTAssertThrows([matcher matches:nil]);
 }
 
-- (void)testSubclassShouldBeRequiredToDefineDescribeToMethod
+- (void)test_subclassShouldBeRequiredToDefineDescribeToMethod
 {
     XCTAssertThrows([matcher describeTo:[[HCStringDescription alloc] init]]);
 }

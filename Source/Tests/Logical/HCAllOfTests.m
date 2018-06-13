@@ -15,7 +15,7 @@
 
 @implementation AllOfTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = allOf(equalTo(@"irrelevant"), equalTo(@"irrelevant"), nil);
 
@@ -23,7 +23,7 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testEvaluatesToTheTheLogicalConjunctionOfTwoOtherMatchers
+- (void)test_evaluatesToTheTheLogicalConjunctionOfTwoOtherMatchers
 {
     id matcher = allOf(startsWith(@"goo"), endsWith(@"ood"), nil);
 
@@ -33,7 +33,7 @@
     assertDoesNotMatch(@"didn't fail both sub-matchers", matcher, @"fred");
 }
 
-- (void)testEvaluatesToTheTheLogicalConjunctionOfManyOtherMatchers
+- (void)test_evaluatesToTheTheLogicalConjunctionOfManyOtherMatchers
 {
     id matcher = allOf(startsWith(@"g"), startsWith(@"go"), endsWith(@"d"), startsWith(@"go"), startsWith(@"goo"), nil);
 
@@ -41,36 +41,36 @@
     assertDoesNotMatch(@"didn't fail middle sub-matcher", matcher, @"goon");
 }
 
-- (void)testProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)test_providesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"both matchers", allOf(@"good", @"good", nil), @"good");
 }
 
-- (void)testArrayVariant_ProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)test_arrayVariant_providesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"both matchers", allOfIn(@[@"good", @"good"]), @"good");
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"(\"good\" and \"bad\" and \"ugly\")",
                       allOf(equalTo(@"good"), equalTo(@"bad"), equalTo(@"ugly"), nil));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(allOf(equalTo(@"good"), equalTo(@"good"), nil),
                                 @"good");
 }
 
-- (void)testMismatchDescriptionDescribesFirstFailingMatch
+- (void)test_mismatchDescription_describesFirstFailingMatch
 {
     assertMismatchDescription(@"instead of \"good\", was \"bad\"",
                               allOf(equalTo(@"bad"), equalTo(@"good"), nil),
                               @"bad");
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"instead of \"good\", was \"bad\"",
                            allOf(equalTo(@"bad"), equalTo(@"good"), nil),

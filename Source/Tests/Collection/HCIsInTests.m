@@ -12,7 +12,7 @@
 @implementation IsInTests
 
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = isIn(@[@1, @2, @3]);
 
@@ -20,7 +20,7 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testReturnsTrueIfArgumentIsInCollection
+- (void)test_matches_ifArgumentIsInCollection
 {
     id matcher = isIn(@[@1, @2, @3]);
 
@@ -30,14 +30,14 @@
     assertDoesNotMatch(@"no 4", matcher, @4);
 }
 
-- (void)testMatcherCreationRequiresObjectWithContainsObjectMethod
+- (void)test_matcherCreation_requiresObjectWithContainsObjectMethod
 {
     id object = [[NSObject alloc] init];
 
     XCTAssertThrows(isIn(object), @"object does not have -containsObject: method");
 }
 
-- (void)testMatcherCreationRequiresNonNilArgument
+- (void)test_matcherCreation_requiresNonNilArgument
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -45,19 +45,19 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testHasReadableDescription
+- (void)test_hasReadableDescription
 {
     id matcher = isIn(@[@1, @2, @3]);
 
     assertDescription(@"one of {<1>, <2>, <3>}", matcher);
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", isIn(@[@1]), @"bad");
 }
 
-- (void)testDescribesMismatch
+- (void)test_describesMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", isIn(@[@1]), @"bad");
 }

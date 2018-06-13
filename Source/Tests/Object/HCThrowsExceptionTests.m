@@ -15,7 +15,7 @@
 
 @implementation ThrowsExceptionTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = throwsException(anything());
 
@@ -23,14 +23,14 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testDoesNotMatchBlockNotThrowingException
+- (void)test_doesNotMatch_blockNotThrowingException
 {
     id matcher = throwsException(anything());
 
     assertDoesNotMatch(@"does not throw", matcher, ^{});
 }
 
-- (void)testMatchesBlockThrowingExceptionSatisfyingMatcher
+- (void)test_matches_blockThrowingExceptionSatisfyingMatcher
 {
     NSException *exception = [NSException exceptionWithName:@"" reason:@"" userInfo:nil];
     id matcher = throwsException(sameInstance(exception));
@@ -38,7 +38,7 @@
     assertMatches(@"throws matching exception", matcher, ^{ @throw exception; });
 }
 
-- (void)testDoesNotMatchBlockThrowingExceptionNotSatisfyingMatcher
+- (void)test_doesNotMatch_blockThrowingExceptionNotSatisfyingMatcher
 {
     id matcher = throwsException(hasProperty(@"name", @"FOO"));
 
@@ -46,25 +46,25 @@
             ^{ @throw [NSException exceptionWithName:@"BAR" reason:@"" userInfo:nil]; });
 }
 
-- (void)testDoesNotMatchNonBlock
+- (void)test_doesNotMatch_nonBlock
 {
     id matcher = throwsException(anything());
 
     assertDoesNotMatch(@"not a block", matcher, [[NSObject alloc] init]);
 }
 
-- (void)testMatcherCreationRequiresMatcherArgument
+- (void)test_matcherCreation_requiresMatcherArgument
 {
     XCTAssertThrows(throwsException([[NSObject alloc] init]), @"Should require matcher argument");
 }
 
-- (void)testHasReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"a block with no arguments, throwing an exception which is an object with name \"FOO\"",
             throwsException(hasProperty(@"name", @"FOO")));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     id matcher = throwsException(anything());
 
@@ -72,21 +72,21 @@
             ^{ @throw [NSException exceptionWithName:@"" reason:@"" userInfo:nil]; });
 }
 
-- (void)testMismatchDescription_OnNonBlock_ShouldSayNeedABlock
+- (void)test_mismatchDescription_OnNonBlock_shouldSayNeedABlock
 {
     id matcher = throwsException(anything());
 
     assertMismatchDescription(@"was non-block nil", matcher, nil);
 }
 
-- (void)testMismatchDescription_OnBlockNotThrowingException_ShouldSayNoThrow
+- (void)test_mismatchDescription_OnBlockNotThrowingException_shouldSayNoThrow
 {
     id matcher = throwsException(anything());
 
     assertMismatchDescription(@"no exception thrown", matcher, ^{});
 }
 
-- (void)testMismatchDescription_OnBlockThrowingExceptionNotSatisfyingMatcher
+- (void)test_mismatchDescription_OnBlockThrowingExceptionNotSatisfyingMatcher
 {
     id matcher = throwsException(hasProperty(@"name", @"FOO"));
 

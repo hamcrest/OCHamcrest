@@ -26,25 +26,25 @@
     [super tearDown];
 }
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     assertNilSafe(matcher);
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testPassesIfWordsAreSameButWhitespaceDiffers
+- (void)test_matches_ifWordsAreSameButWhitespaceDiffers
 {
     assertMatches(@"less whitespace", matcher, @"Hello World how are we?");
     assertMatches(@"more whitespace", matcher, @"   Hello World   how are \n\n\twe?");
 }
 
-- (void)testFailsIfTextOtherThanWhitespaceDiffers
+- (void)test_doesNotMatch_ifTextOtherThanWhitespaceDiffers
 {
     assertDoesNotMatch(@"wrong word", matcher, @"Hello PLANET how are we?");
     assertDoesNotMatch(@"incomplete", matcher, @"Hello World how are we");
 }
 
-- (void)testFailsIfWhitespaceIsAddedOrRemovedInMidWord
+- (void)test_doesNotMatch_ifWhitespaceIsAddedOrRemovedInMiddleOfWord
 {
     assertDoesNotMatch(@"need whitespace between Hello and World",
                        matcher, @"HelloWorld how are we?");
@@ -52,7 +52,7 @@
                        matcher, @"Hello Wo rld how are we?");
 }
 
-- (void)testMatcherCreationRequiresNonNilArgument
+- (void)test_matcherCreation_requiresNonNilArgument
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -60,27 +60,27 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testFailsIfMatchingAgainstNonString
+- (void)test_doesNotMatch_ifMatchingAgainstNonString
 {
     assertDoesNotMatch(@"non-string", matcher, @3);
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"\" Hello World   how\\n are we? \" ignoring whitespace", matcher);
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(equalToCompressingWhiteSpace(@"foo\nbar"), @"foo bar");
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", matcher, @"bad");
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", matcher, @"bad");
 }

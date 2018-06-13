@@ -11,7 +11,7 @@
 
 @implementation HCOrderingComparisonTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = greaterThan(@1);
 
@@ -19,56 +19,56 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesObjectsForGreaterThan
+- (void)test_comparesObjects_forGreaterThan
 {
     assertMatches(@"match", greaterThan(@1), @2);
     assertDoesNotMatch(@"no match", greaterThan(@1), @1);
 }
 
-- (void)testComparesObjectsForLessThan
+- (void)test_comparesObjects_forLessThan
 {
     assertMatches(@"match", lessThan(@1), @0);
     assertDoesNotMatch(@"no match", lessThan(@1), @1);
 }
 
-- (void)testComparesObjectsForGreaterThanOrEqualTo
+- (void)test_comparesObjects_forGreaterThanOrEqualTo
 {
     assertMatches(@"match", greaterThanOrEqualTo(@1), @2);
     assertMatches(@"match", greaterThanOrEqualTo(@1), @1);
     assertDoesNotMatch(@"no match", greaterThanOrEqualTo(@1), @0);
 }
 
-- (void)testComparesObjectsForLessThanOrEqualTo
+- (void)test_comparesObjects_forLessThanOrEqualTo
 {
     assertMatches(@"match", lessThanOrEqualTo(@1), @0);
     assertMatches(@"match", lessThanOrEqualTo(@1), @1);
     assertDoesNotMatch(@"no match", lessThanOrEqualTo(@1), @2);
 }
 
-- (void)testDoesNotMatchNil
+- (void)test_doesNotMatch_nil
 {
     assertDoesNotMatch(@"nil argument", greaterThan(@1), nil);
 }
 
-- (void)testSupportsDifferentTypesOfComparableObjects
+- (void)test_supportsDifferentTypesOfComparableObjects
 {
     assertMatches(@"strings", greaterThan(@"bb"), @"cc");
     assertMatches(@"dates", lessThan([NSDate date]), [NSDate distantPast]);
 }
 
-- (void)testDoesNotMatchObjectThatDoesNotCompare
+- (void)test_doesNotMatch_objectThatDoesNotCompare
 {
     assertDoesNotMatch(@"can't compare", lessThan(@1), [NSDate date]);
     assertDoesNotMatch(@"can't compare", greaterThan(@1), [NSDate date]);
 }
 
-- (void)testMatcherCreationRequiresObjectWithCompareMethod
+- (void)test_matcherCreation_requiresObjectWithCompareMethod
 {
     id object = [[NSObject alloc] init];
     XCTAssertThrows(greaterThan(object), @"object does not have -compare: method");
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     id one = @1;
 
@@ -78,7 +78,7 @@
     assertDescription(@"a value less than or equal to <1>", lessThanOrEqualTo(one));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     id one = @1;
 
@@ -88,7 +88,7 @@
     assertNoMismatchDescription(lessThanOrEqualTo(one), @1);
 }
 
-- (void)testMismatchDescription
+- (void)test_mismatchDescription
 {
     id one = @1;
 
@@ -98,7 +98,7 @@
     assertMismatchDescription(@"was <2>", lessThanOrEqualTo(one), @2);
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     id one = @1;
 

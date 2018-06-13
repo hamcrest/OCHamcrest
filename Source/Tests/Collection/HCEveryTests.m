@@ -15,7 +15,7 @@
 
 @implementation EveryItemTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = everyItem(equalTo(@"irrelevant"));
 
@@ -23,43 +23,43 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testDoesNotMatchEmptyCollection
+- (void)test_doesNotMatch_emptyCollection
 {
     id matcher = everyItem(equalTo(@"irrelevant"));
 
     assertMismatchDescription(@"was empty", matcher, @[]);
 }
 
-- (void)testReportAllElementsThatDoNotMatch
+- (void)test_reportAllElementsThatDoNotMatch
 {
     id matcher = everyItem([Mismatchable mismatchable:@"a"]);
 
     assertMismatchDescription(@"mismatches were: [mismatched: b, mismatched: c]", matcher, (@[@"b", @"a", @"c"]));
 }
 
-- (void)testDoesNotMatchNonCollection
+- (void)test_doesNotMatch_nonCollection
 {
     id matcher = everyItem(equalTo(@"irrelevant"));
 
     assertMismatchDescription(@"was non-collection nil", matcher, nil);
 }
 
-- (void)testMatchesSingletonCollection
+- (void)test_matches_singletonCollection
 {
     assertMatches(@"singleton collection", everyItem(equalTo(@1)), [NSSet setWithObject:@1]);
 }
 
-- (void)testMatchesAllItemsWithOneMatcher
+- (void)test_matches_allItemsWithOneMatcher
 {
     assertMatches(@"one matcher", everyItem(lessThan(@4)), (@[@1, @2, @3]));
 }
 
-- (void)testDoesNotMatchCollectionWithMismatchingItem
+- (void)test_doesNotMatch_collectionWithMismatchingItem
 {
     assertDoesNotMatch(@"4 is not less than 4", everyItem(lessThan(@4)), (@[@2, @3, @4]));
 }
 
-- (void)testMatcherCreationRequiresNonNilArgument
+- (void)test_matcherCreation_requiresNonNilArgument
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -67,7 +67,7 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"every item is a value less than <4>", everyItem(lessThan(@4)));
 }

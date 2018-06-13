@@ -11,7 +11,7 @@
 
 @implementation HCWrapInMatcherTests
 
-- (void)testWrapInMatcher_WithNil_ShouldReturnNil
+- (void)test_wrapInMatcher_withNil_shouldReturnNil
 {
     XCTAssertNil(HCWrapInMatcher(nil));
 }

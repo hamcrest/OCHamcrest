@@ -80,7 +80,7 @@
     [super tearDown];
 }
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = hasProperty(@"irrelevant", @"irrelevant");
 
@@ -88,34 +88,34 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testCanMatchStringPropertyValues
+- (void)test_canMatchStringPropertyValues
 {
     assertMatches(@"equal string property values", hasProperty(@"name", @"Joe"), joe);
     assertDoesNotMatch(@"unequal string property values", hasProperty(@"name", @"Bob"), joe);
     assertDoesNotMatch(@"unequal string property values", hasProperty(@"name", nil), joe);
 }
 
-- (void)testCanMatchStringPropertyValuesWithMatchers
+- (void)test_canMatchStringPropertyValuesWithMatchers
 {
     assertMatches(@"equal string property values", hasProperty(@"name", equalTo(@"Joe")), joe);
     assertDoesNotMatch(@"unequal string property values", hasProperty(@"name", equalTo(@"Bob")), joe);
     assertDoesNotMatch(@"unequal string property values", hasProperty(@"name", nilValue()), joe);
 }
 
-- (void)testCanMatchNumberPropertyValues
+- (void)test_canMatchNumberPropertyValues
 {
     assertMatches(@"equal int property values", hasProperty(@"shoeSize", equalTo(@13)), joe);
     assertDoesNotMatch(@"unequal int property values", hasProperty(@"shoeSize", equalTo(@3)), joe);
     assertDoesNotMatch(@"unequal int property values", hasProperty(@"shoeSize", equalTo(@-3)), joe);
 }
 
-- (void)testNilPropertyValues
+- (void)test_nilPropertyValues
 {
     assertMatches(@"equal nil property values", hasProperty(@"name", nilValue()), nobody);
     assertDoesNotMatch(@"unequal nil property values", hasProperty(@"name", @"Bob"), nobody);
 }
 
-- (void)testMatcherCreationRequiresNonNilPropertyName
+- (void)test_matcherCreation_requiresNonNilPropertyName
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -123,17 +123,17 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"an object with name \"Joe\"", hasProperty(@"name", @"Joe"));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(hasProperty(@"name", @"Joe"), joe);
 }
 
-- (void)testMismatchDescription_OnObjectWithoutProperty_ShouldSayNoProperty
+- (void)test_mismatchDescription_onObjectWithoutProperty_shouldSayNoProperty
 {
     id matcher = hasProperty(@"name", @"Joe");
     NotAPerson *noProperty = [[NotAPerson alloc] init];
@@ -141,14 +141,14 @@
     assertMismatchDescription(@"no name on <NotAPerson>", matcher, noProperty);
 }
 
-- (void)testMismatchDescription_OnObjectWithProperty_ShouldShowActualValue
+- (void)test_mismatchDescription_onObjectWithProperty_shouldShowActualValue
 {
     id matcher = hasProperty(@"name", @"Bob");
 
     assertMismatchDescription(@"name was \"Joe\" on <Person>", matcher, joe);
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     id matcher = hasProperty(@"name", @"Bob");
 
@@ -200,35 +200,35 @@
     [super tearDown];
 }
 
-- (void)testCanMatchPrimitiveBoolValues
+- (void)test_canMatchPrimitiveBoolValues
 {
     foo.boolValue = YES;
     assertMatches(@"BOOL should match", hasProperty(@"boolValue", equalTo(@YES)), foo);
     assertDoesNotMatch(@"BOOL should not match", hasProperty(@"boolValue", equalTo(@NO)), foo);
 }
 
-- (void)testCanMatchPrimitiveCharValues
+- (void)test_canMatchPrimitiveCharValues
 {
     foo.charValue = 'a';
     assertMatches(@"char should match", hasProperty(@"charValue", equalTo(@'a')), foo);
     assertDoesNotMatch(@"char should not match", hasProperty(@"charValue", equalTo(@'b')), foo);
 }
 
-- (void)testCanMatchPrimitiveIntValues
+- (void)test_canMatchPrimitiveIntValues
 {
     foo.intValue = INT_MIN;
     assertMatches(@"int should match", hasProperty(@"intValue", equalTo(@INT_MIN)), foo);
     assertDoesNotMatch(@"int should not match", hasProperty(@"intValue", equalTo(@-2)), foo);
 }
 
-- (void)testCanMatchPrimitiveShortValues
+- (void)test_canMatchPrimitiveShortValues
 {
     foo.shortValue = -2;
     assertMatches(@"short should match", hasProperty(@"shortValue", equalTo(@-2)), foo);
     assertDoesNotMatch(@"short should not match", hasProperty(@"shortValue", equalTo(@-1)), foo);
 }
 
-- (void)testCanMatchPrimitiveLongValues
+- (void)test_canMatchPrimitiveLongValues
 {
     foo.longValue = LONG_MIN;
     assertMatches(@"long should match", hasProperty(@"longValue", equalTo(@LONG_MIN)), foo);
@@ -237,7 +237,7 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveLongLongValues
+- (void)test_canMatchPrimitiveLongLongValues
 {
     foo.longLongValue = LLONG_MIN;
     assertMatches(@"long long should match",
@@ -248,7 +248,7 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveUnsignedCharValues
+- (void)test_canMatchPrimitiveUnsignedCharValues
 {
     foo.unsignedCharValue = 'b';
     assertMatches(@"unsigned char should match",
@@ -259,7 +259,7 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveUnsignedIntValues
+- (void)test_canMatchPrimitiveUnsignedIntValues
 {
     foo.unsignedIntValue = UINT_MAX;
     assertMatches(@"unsigned int should match",
@@ -270,7 +270,7 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveUnsignedShortValues
+- (void)test_canMatchPrimitiveUnsignedShortValues
 {
     foo.unsignedShortValue = 2;
     assertMatches(@"unsigned short should match",
@@ -281,7 +281,7 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveUnsignedLongValues
+- (void)test_canMatchPrimitiveUnsignedLongValues
 {
     foo.unsignedLongValue = ULONG_MAX;
     assertMatches(@"unsigned long should match",
@@ -292,7 +292,7 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveUnsignedLongLongValues
+- (void)test_canMatchPrimitiveUnsignedLongLongValues
 {
     foo.unsignedLongLongValue = ULLONG_MAX;
     assertMatches(@"unsigned long long should match",
@@ -303,14 +303,14 @@
                        foo);
 }
 
-- (void)testCanMatchPrimitiveFloatValues
+- (void)test_canMatchPrimitiveFloatValues
 {
     foo.floatValue = 1.2f;
     assertMatches(@"float should match", hasProperty(@"floatValue", equalTo(@1.2f)), foo);
     assertDoesNotMatch(@"float should not match", hasProperty(@"floatValue", equalTo(@1.3f)), foo);
 }
 
-- (void)testCanMatchPrimitiveDoubleValues
+- (void)test_canMatchPrimitiveDoubleValues
 {
     foo.doubleValue = DBL_MAX;
     assertMatches(@"double should match", hasProperty(@"doubleValue", equalTo(@DBL_MAX)), foo);

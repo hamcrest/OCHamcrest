@@ -14,7 +14,7 @@
 
 @implementation HasEntryTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = hasEntry(@"irrelevant", @"irrelevant");
 
@@ -22,7 +22,7 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testMatchesDictionaryContainingMatchingKeyAndValue
+- (void)test_matches_dictionaryContainingMatchingKeyAndValue
 {
     NSDictionary *dict = @{@"a": @1,
                            @"b": @2};
@@ -32,7 +32,7 @@
     assertDoesNotMatch(@"no c:3", hasEntry(equalTo(@"c"), equalTo(@3)), dict);
 }
 
-- (void)testProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)test_providesConvenientShortcutForMatchingWithEqualTo
 {
     NSDictionary *dict = @{@"a": @1,
                            @"b": @2};
@@ -42,12 +42,12 @@
     assertDoesNotMatch(@"no c:3", hasEntry(@"c", @3), dict);
 }
 
-- (void)testShouldNotMatchNil
+- (void)test_doesNotMatch_nil
 {
     assertDoesNotMatch(@"nil", hasEntry(anything(), anything()), nil);
 }
 
-- (void)testMatcherCreationRequiresNonNilArguments
+- (void)test_matcherCreation_requiresNonNilArguments
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -56,23 +56,23 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testHasReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"a dictionary containing { \"a\" = <1>; }", hasEntry(@"a", @1));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     NSDictionary *dict = @{@"a": @1};
     assertNoMismatchDescription(hasEntry(@"a", @1), dict);
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", hasEntry(@"a", @1), @"bad");
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", hasEntry(@"a", @1), @"bad");
 }

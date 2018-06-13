@@ -13,7 +13,7 @@
 
 @implementation HasValueTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = hasValue(@"irrelevant");
 
@@ -21,14 +21,14 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testMatchesSingletonDictionaryContainingValue
+- (void)test_matches_singletonDictionaryContainingValue
 {
     NSDictionary *dict = @{@"a": @1};
 
     assertMatches(@"same single value", hasValue(equalTo(@1)), dict);
 }
 
-- (void)testMatchesDictionaryContainingValue
+- (void)test_matches_dictionaryContainingValue
 {
     NSDictionary *dict = @{@"a": @1,
                            @"b": @2,
@@ -38,7 +38,7 @@
     assertMatches(@"Matches 3", hasValue(equalTo(@3)), dict);
 }
 
-- (void)testProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)test_providesConvenientShortcutForMatchingWithEqualTo
 {
     NSDictionary *dict = @{@"a": @1,
                            @"b": @2,
@@ -47,12 +47,12 @@
     assertMatches(@"Matches 3", hasValue(@3), dict);
 }
 
-- (void)testDoesNotMatchEmptyDictionary
+- (void)test_doesNotMatch_emptyDictionary
 {
     assertDoesNotMatch(@"Empty dictionary", hasValue(@"Foo"), @{});
 }
 
-- (void)testDoesNotMatchDictionaryMissingValue
+- (void)test_doesNotMatch_dictionaryMissingValue
 {
     NSDictionary *dict = @{@"a": @1,
                            @"b": @2,
@@ -61,7 +61,7 @@
     assertDoesNotMatch(@"no matching value", hasValue(@4), dict);
 }
 
-- (void)testMatcherCreationRequiresNonNilArgument
+- (void)test_matcherCreation_requiresNonNilArgument
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -69,23 +69,23 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testHasReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"a dictionary containing value <1>", hasValue(@1));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     NSDictionary *dict = @{@"a": @1};
     assertNoMismatchDescription(hasValue(@1), dict);
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", hasValue(@1), @"bad");
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", hasValue(@1), @"bad");
 }

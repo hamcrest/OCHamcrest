@@ -13,7 +13,7 @@
 
 @implementation HasKeyTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = hasKey(@"irrelevant");
 
@@ -21,14 +21,14 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testMatchesSingletonDictionaryContainingKey
+- (void)test_matches_singletonDictionaryContainingKey
 {
     NSDictionary *dict = @{@"a": @1};
 
     assertMatches(@"Matches single key", hasKey(equalTo(@"a")), dict);
 }
 
-- (void)testMatchesDictionaryContainingKey
+- (void)test_matches_dictionaryContainingKey
 {
     NSDictionary *dict = @{@"a": @1,
                            @"b": @2,
@@ -38,7 +38,7 @@
     assertMatches(@"Matches c", hasKey(equalTo(@"c")), dict);
 }
 
-- (void)testProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)test_providesConvenientShortcutForMatchingWithEqualTo
 {
     NSDictionary *dict = @{@"a": @1,
                            @"b": @2,
@@ -47,12 +47,12 @@
     assertMatches(@"Matches c", hasKey(@"c"), dict);
 }
 
-- (void)testDoesNotMatchEmptyDictionary
+- (void)test_doesNotMatch_emptyDictionary
 {
     assertDoesNotMatch(@"empty", hasKey(@"Foo"), @{});
 }
 
-- (void)testDoesNotMatchDictionaryMissingKey
+- (void)test_doesNotMatch_dictionaryMissingKey
 {
     NSDictionary *dict = @{@"a": @1,
                            @"b": @2,
@@ -61,7 +61,7 @@
     assertDoesNotMatch(@"no matching key", hasKey(@"d"), dict);
 }
 
-- (void)testMatcherCreationRequiresNonNilArgument
+- (void)test_matcherCreation_requiresNonNilArgument
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -69,23 +69,23 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testHasReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"a dictionary containing key \"a\"", hasKey(@"a"));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     NSDictionary *dict = @{@"a": @1};
     assertNoMismatchDescription(hasKey(@"a"), dict);
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", hasKey(@"a"), @"bad");
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", hasKey(@"a"), @"bad");
 }

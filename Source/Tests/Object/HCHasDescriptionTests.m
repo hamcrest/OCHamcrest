@@ -24,7 +24,7 @@ static NSString *fakeDescription = @"DESCRIPTION";
 
 @implementation HasDescriptionTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = hasDescription(equalTo(@"irrelevant"));
 
@@ -32,42 +32,42 @@ static NSString *fakeDescription = @"DESCRIPTION";
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testPassesResultOfDescriptionToNestedMatcher
+- (void)test_passesResultOfDescriptionToNestedMatcher
 {
     FakeWithDescription* fake = [FakeWithDescription fake];
     assertMatches(@"equal", hasDescription(equalTo(fakeDescription)), fake);
     assertDoesNotMatch(@"unequal", hasDescription(equalTo(@"foo")), fake);
 }
 
-- (void)testProvidesConvenientShortcutForDescriptionEqualTo
+- (void)test_providesConvenientShortcutForDescriptionEqualTo
 {
     FakeWithDescription* fake = [FakeWithDescription fake];
     assertMatches(@"equal", hasDescription(fakeDescription), fake);
     assertDoesNotMatch(@"unequal", hasDescription(@"foo"), fake);
 }
 
-- (void)testMismatchDoesNotRepeatTheDescription
+- (void)test_mismatchDoesNotRepeatTheDescription
 {
     FakeWithDescription* fake = [FakeWithDescription fake];
     assertMismatchDescription(@"was \"DESCRIPTION\"", hasDescription(@"foo"), fake);
 }
 
-- (void)testHasReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"an object with description \"foo\"", hasDescription(@"foo"));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(hasDescription(@"DESCRIPTION"), [FakeWithDescription fake]);
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", hasDescription(@"foo"), @"bad");
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", hasDescription(@"foo"), @"bad");
 }

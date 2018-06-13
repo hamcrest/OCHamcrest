@@ -14,7 +14,7 @@
 
 @implementation IsTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = is(@"irrelevant");
 
@@ -22,7 +22,7 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testDelegatesMatchingToNestedMatcher
+- (void)test_delegatesMatchingToNestedMatcher
 {
     assertMatches(@"should match", is(equalTo(@"A")), @"A");
     assertMatches(@"should match", is(equalTo(@"B")), @"B");
@@ -30,12 +30,12 @@
     assertDoesNotMatch(@"should not match", is(equalTo(@"B")), @"A");
 }
 
-- (void)testDescriptionShouldPassThrough
+- (void)test_descriptionShouldPassThrough
 {
     assertDescription(@"\"A\"", is(equalTo(@"A")));
 }
 
-- (void)testProvidesConvenientShortcutForIsEqualTo
+- (void)test_providesConvenientShortcutForIsEqualTo
 {
     assertMatches(@"should match", is(@"A"), @"A");
     assertMatches(@"should match", is(@"B"), @"B");
@@ -44,19 +44,19 @@
     assertDescription(@"\"A\"", is(@"A"));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(is(@"A"), @"A");
 }
 
-- (void)testDelegatesMismatchDescriptionToNestedMatcher
+- (void)test_delegatesMismatchDescriptionToNestedMatcher
 {
     assertMismatchDescription([NeverMatch mismatchDescription],
                               is([NeverMatch neverMatch]),
                               @"hi");
 }
 
-- (void)testDelegatesDescribeMismatchToNestedMatcher
+- (void)test_delegatesDescribeMismatchToNestedMatcher
 {
     assertDescribeMismatch([NeverMatch mismatchDescription],
                            is([NeverMatch neverMatch]),

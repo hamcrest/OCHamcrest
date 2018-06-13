@@ -19,7 +19,7 @@
     [super tearDown];
 }
 
-- (void)testDefaultChain_ShouldPointToXCTestHandlerAsHeadOfChain
+- (void)test_defaultChain_shouldPointToXCTestHandlerAsHeadOfChain
 {
     HCTestFailureReporter *chain = [HCTestFailureReporterChain reporterChain];
 
@@ -27,7 +27,7 @@
     XCTAssertNotNil(chain.successor);
 }
 
-- (void)testAddReporter_ShouldSetHeadOfChainToGivenHandler
+- (void)test_addReporter_shouldSetHeadOfChainToGivenHandler
 {
     HCTestFailureReporter *reporter = [[HCTestFailureReporter alloc] init];
 
@@ -36,7 +36,7 @@
     XCTAssertEqual([HCTestFailureReporterChain reporterChain], reporter);
 }
 
-- (void)testAddReporter_ShouldSetHandlerSuccessorToPreviousHeadOfChain
+- (void)test_addReporter_shouldSetHandlerSuccessorToPreviousHeadOfChain
 {
     HCTestFailureReporter *reporter = [[HCTestFailureReporter alloc] init];
     HCTestFailureReporter *oldHead = [HCTestFailureReporterChain reporterChain];
@@ -46,7 +46,7 @@
     XCTAssertEqual(reporter.successor, oldHead);
 }
 
-- (void)testAddReporter_ShouldSetHandlerSuccessorEvenIfHeadOfChainHasNotBeenReferenced
+- (void)test_addReporter_shouldSetHandlerSuccessorEvenIfHeadOfChainHasNotBeenReferenced
 {
     HCTestFailureReporter *reporter = [[HCTestFailureReporter alloc] init];
 

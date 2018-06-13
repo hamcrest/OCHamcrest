@@ -26,13 +26,13 @@
     [super tearDown];
 }
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     assertNilSafe(matcher);
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testIgnoresCaseOfCharsInString
+- (void)test_matches_ignoringCaseOfCharsInString
 {
     assertMatches(@"all upper", matcher, @"HELLO");
     assertMatches(@"all lower", matcher, @"hello");
@@ -41,13 +41,13 @@
     assertDoesNotMatch(@"no match", matcher, @"bye");
 }
 
-- (void)testFailsIfAdditionalWhitespaceIsPresent
+- (void)test_doesNotMatch_ifAdditionalWhitespaceIsPresent
 {
     assertDoesNotMatch(@"whitespace suffix", matcher, @"heLLo ");
     assertDoesNotMatch(@"whitespace prefix", matcher, @" heLLo");
 }
 
-- (void)testMatcherCreationRequiresNonNilArgument
+- (void)test_matcherCreation_requiresNonNilArgument
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -55,27 +55,27 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testFailsIfMatchingAgainstNonString
+- (void)test_doesNotMatch_ifMatchingAgainstNonString
 {
     assertDoesNotMatch(@"non-string", matcher, @3);
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"\"heLLo\" ignoring case", matcher);
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(matcher, @"hello");
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"bad\"", matcher, @"bad");
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was \"bad\"", matcher, @"bad");
 }

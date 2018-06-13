@@ -15,7 +15,7 @@
 
 @implementation IsNotTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = isNot(@"irrelevant");
 
@@ -23,7 +23,7 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testEvaluatesToTheTheLogicalNegationOfAnotherMatcher
+- (void)test_evaluatesToTheTheLogicalNegationOfAnotherMatcher
 {
     id matcher = isNot(equalTo(@"A"));
 
@@ -31,7 +31,7 @@
     assertDoesNotMatch(@"invert match", matcher, @"A");
 }
 
-- (void)testProvidesConvenientShortcutForNotEqualTo
+- (void)test_providesConvenientShortcutForNotEqualTo
 {
     id matcher = isNot(@"A");
 
@@ -39,30 +39,30 @@
     assertDoesNotMatch(@"invert match", matcher, @"A");
 }
 
-- (void)testUsesDescriptionOfNegatedMatcherWithPrefix
+- (void)test_usesDescriptionOfNegatedMatcherWithPrefix
 {
     assertDescription(@"not an instance of NSString", isNot(instanceOf([NSString class])));
     assertDescription(@"not \"A\"", isNot(@"A"));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(isNot(@"A"), @"B");
 }
 
-- (void)testMismatchDescriptionShowsActualArgument
+- (void)test_mismatchDescription_showsActualArgument
 {
     assertMismatchDescription(@"was \"A\"", isNot(@"A"), @"A");
 }
 
-- (void)testMismatchDescriptionShowsActualSubMatcherDescription
+- (void)test_mismatchDescription_showsActualSubMatcherDescription
 {
     NSArray *item = @[@"A", @"B"];
     NSString *expected = [NSString stringWithFormat:@"was count of <2> with <%@>", item];
     assertMismatchDescription(expected, isNot(hasCountOf(item.count)), item);
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was \"A\"", isNot(@"A"), @"A");
 }

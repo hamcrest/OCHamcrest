@@ -15,7 +15,7 @@
 
 @implementation AnyOfTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = anyOf(equalTo(@"irrelevant"), nil);
 
@@ -23,7 +23,7 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testEvaluatesToTheTheLogicalDisjunctionOfTwoOtherMatchers
+- (void)test_evaluatesToTheTheLogicalDisjunctionOfTwoOtherMatchers
 {
     id matcher = anyOf(startsWith(@"goo"), endsWith(@"ood"), nil);
 
@@ -33,7 +33,7 @@
     assertDoesNotMatch(@"didn't fail both sub-matchers", matcher, @"flan");
 }
 
-- (void)testEvaluatesToTheTheLogicalDisjunctionOfManyOtherMatchers
+- (void)test_evaluatesToTheTheLogicalDisjunctionOfManyOtherMatchers
 {
     id matcher = anyOf(startsWith(@"g"), startsWith(@"go"), endsWith(@"d"), startsWith(@"go"), startsWith(@"goo"), nil);
 
@@ -41,47 +41,47 @@
     assertDoesNotMatch(@"didn't fail all sub-matchers", matcher, @"flan");
 }
 
-- (void)testProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)test_providesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"first matcher", anyOf(@"good", @"bad", nil), @"good");
     assertMatches(@"second matcher", anyOf(@"bad", @"good", nil), @"good");
     assertMatches(@"both matchers", anyOf(@"good", @"good", nil), @"good");
 }
 
-- (void)testArrayVariant_ProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)test_arrayVariant_providesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"first matcher", anyOfIn(@[@"good", @"bad"]), @"good");
     assertMatches(@"second matcher", anyOfIn(@[@"bad", @"good"]), @"good");
     assertMatches(@"both matchers", anyOfIn(@[@"good", @"good"]), @"good");
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"(\"good\" or \"bad\" or \"ugly\")",
                       anyOf(equalTo(@"good"), equalTo(@"bad"), equalTo(@"ugly"), nil));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(anyOf(equalTo(@"good"), equalTo(@"good"), nil),
                                 @"good");
 }
 
-- (void)testMismatchDescriptionDescribesFirstFailingMatch
+- (void)test_mismatchDescription_describesFirstFailingMatch
 {
     assertMismatchDescription(@"was \"ugly\"",
                               anyOf(equalTo(@"bad"), equalTo(@"good"), nil),
                               @"ugly");
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was \"ugly\"",
                            anyOf(equalTo(@"bad"), equalTo(@"good"), nil),
                            @"ugly");
 }
 
-- (void)testMatcherCreationRequiresNonNilArgument
+- (void)test_matcherCreation_requiresNonNilArgument
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"

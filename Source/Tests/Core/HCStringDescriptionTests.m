@@ -96,63 +96,63 @@
     [super tearDown];
 }
 
-- (void)testDescribesNil
+- (void)test_describesNil
 {
     [description appendDescriptionOf:nil];
 
     XCTAssertEqualObjects(description.description, @"nil");
 }
 
-- (void)testLetsSelfDescribingObjectDescribeItself
+- (void)test_letsSelfDescribingObjectDescribeItself
 {
     [description appendDescriptionOf:[[FakeSelfDescribing alloc] init]];
 
     XCTAssertEqualObjects(description.description, @"DESCRIPTION");
 }
 
-- (void)testDescribesStringInQuotes
+- (void)test_describesStringInQuotes
 {
     [description appendDescriptionOf:@"FOO"];
 
     XCTAssertEqualObjects(description.description, @"\"FOO\"");
 }
 
-- (void)testDescriptionOfStringWithQuotesShouldExpandToCSyntax
+- (void)test_descriptionOfStringWithQuotesShouldExpandToCSyntax
 {
     [description appendDescriptionOf:@"a\"b"];
 
     XCTAssertEqualObjects(description.description, @"\"a\\\"b\"");
 }
 
-- (void)testDescriptionOfStringWithNewlineShouldExpandToCSyntax
+- (void)test_descriptionOfStringWithNewlineShouldExpandToCSyntax
 {
     [description appendDescriptionOf:@"a\nb"];
 
     XCTAssertEqualObjects(description.description, @"\"a\\nb\"");
 }
 
-- (void)testDescriptionOfStringWithCarriageReturnShouldExpandToCSyntax
+- (void)test_descriptionOfStringWithCarriageReturnShouldExpandToCSyntax
 {
     [description appendDescriptionOf:@"a\rb"];
 
     XCTAssertEqualObjects(description.description, @"\"a\\rb\"");
 }
 
-- (void)testDescriptionOfStringWithTabShouldExpandToCSyntax
+- (void)test_descriptionOfStringWithTabShouldExpandToCSyntax
 {
     [description appendDescriptionOf:@"a\tb"];
 
     XCTAssertEqualObjects(description.description, @"\"a\\tb\"");
 }
 
-- (void)testWrapsNonSelfDescribingObjectInAngleBrackets
+- (void)test_wrapsNonSelfDescribingObjectInAngleBrackets
 {
     [description appendDescriptionOf:@42];
 
     XCTAssertEqualObjects(description.description, @"<42>");
 }
 
-- (void)testShouldNotAddAngleBracketsIfObjectDescriptionAlreadyHasThem
+- (void)test_shouldNotAddAngleBracketsIfObjectDescriptionAlreadyHasThem
 {
     [description appendDescriptionOf:[[NSObject alloc] init]];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
@@ -160,7 +160,7 @@
     XCTAssertTrue([expected evaluateWithObject:description.description]);
 }
 
-- (void)testWrapsNonSelfDescribingObjectInAngleBracketsIfItDoesNotEndInClosingBracket
+- (void)test_wrapsNonSelfDescribingObjectInAngleBracketsIfItDoesNotEndInClosingBracket
 {
     ObjectDescriptionWithLessThan *lessThanDescription = [[ObjectDescriptionWithLessThan alloc] init];
     [description appendDescriptionOf:lessThanDescription];
@@ -168,7 +168,7 @@
     XCTAssertEqualObjects(description.description, @"<< is less than>");
 }
 
-- (void)testCanDescribeObjectWithNilDescription
+- (void)test_canDescribeObjectWithNilDescription
 {
     [description appendDescriptionOf:[[ObjectWithNilDescription alloc] init]];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
@@ -176,7 +176,7 @@
     XCTAssertTrue([expected evaluateWithObject:description.description]);
 }
 
-- (void)testAppendListWithEmptyListShouldHaveStartAndEndOnly
+- (void)test_appendListWithEmptyListShouldHaveStartAndEndOnly
 {
     [description appendList:@[]
                       start:@"["
@@ -186,7 +186,7 @@
     XCTAssertEqualObjects(description.description, @"[]");
 }
 
-- (void)testAppendListWithOneItemShouldHaveStartItemAndEnd
+- (void)test_appendListWithOneItemShouldHaveStartItemAndEnd
 {
     [description appendList:@[@"a"]
                       start:@"["
@@ -196,7 +196,7 @@
     XCTAssertEqualObjects(description.description, @"[\"a\"]");
 }
 
-- (void)testAppendListWithTwoItemsShouldHaveItemsWithSeparator
+- (void)test_appendListWithTwoItemsShouldHaveItemsWithSeparator
 {
     [description appendList:@[@"a", @"b"]
                       start:@"["
@@ -206,7 +206,7 @@
     XCTAssertEqualObjects(description.description, @"[\"a\",\"b\"]");
 }
 
-- (void)testAbleToDescribeProxyObject
+- (void)test_ableToDescribeProxyObject
 {
     id proxy = [[ProxyObjectSuchAsMock alloc] initWithDescription:@"DESCRIPTION"];
 

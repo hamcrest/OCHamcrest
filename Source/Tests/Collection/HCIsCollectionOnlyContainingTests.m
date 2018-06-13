@@ -15,7 +15,7 @@
 
 @implementation OnlyContainsTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = onlyContains(equalTo(@"irrelevant"), nil);
 
@@ -23,70 +23,70 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testDoesNotMatchEmptyCollection
+- (void)test_doesNotMatch_emptyCollection
 {
     id matcher = onlyContains(equalTo(@"irrelevant"), nil);
 
     assertMismatchDescription(@"was empty", matcher, @[]);
 }
 
-- (void)testReportAllElementsThatDoNotMatch
+- (void)test_reportAllElementsThatDoNotMatch
 {
     id matcher = onlyContains([Mismatchable mismatchable:@"a"], nil);
 
     assertMismatchDescription(@"mismatches were: [was \"b\", was \"c\"]", matcher, (@[@"b", @"a", @"c"]));
 }
 
-- (void)testDoesNotMatchNonCollection
+- (void)test_doesNotMatch_nonCollection
 {
     id matcher = onlyContains(equalTo(@"irrelevant"), nil);
 
     assertMismatchDescription(@"was non-collection nil", matcher, nil);
 }
 
-- (void)testMatchesSingletonCollection
+- (void)test_matches_singletonCollection
 {
     assertMatches(@"singleton collection",
                   onlyContains(equalTo(@1), nil),
                   [NSSet setWithObject:@1]);
 }
 
-- (void)testMatchesAllItemsWithOneMatcher
+- (void)test_matches_allItemsWithOneMatcher
 {
     assertMatches(@"one matcher",
                   onlyContains(lessThan(@4), nil),
                   (@[@1, @2, @3]));
 }
 
-- (void)testMatchesAllItemsWithMultipleMatchers
+- (void)test_matches_allItemsWithMultipleMatchers
 {
     assertMatches(@"multiple matcher",
                   onlyContains(lessThan(@4), equalTo(@"hi"), nil),
                   (@[@1, @"hi", @2, @3]));
 }
 
-- (void)testProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)test_providesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"Values automatically wrapped with equal_to",
                   onlyContains(lessThan(@4), @"hi", nil),
                   (@[@1, @"hi", @2, @3]));
 }
 
-- (void)testArrayVariant_ProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)test_arrayVariant_providesConvenientShortcutForMatchingWithEqualTo
 {
     assertMatches(@"Values automatically wrapped with equal_to",
             onlyContainsIn(@[lessThan(@4), @"hi"]),
             (@[@1, @"hi", @2, @3]));
 }
 
-- (void)testDoesNotMatchCollectionWithMismatchingItem
+- (void)test_doesNotMatch_collectionWithMismatchingItem
 {
     assertDoesNotMatch(@"4 is not less than 4",
                        onlyContains(lessThan(@4), nil),
                        (@[@2, @3, @4]));
 }
 
-- (void)testMatcherCreationRequiresNonNilArgument
+- (void)test_matcherCreation_requiresNonNilArgument
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -94,7 +94,7 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"a collection containing items matching (<1> or <2>)",
                         onlyContains(@1, @2, nil));

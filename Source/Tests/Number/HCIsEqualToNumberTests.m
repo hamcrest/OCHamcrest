@@ -11,7 +11,7 @@
 
 @implementation EqualToCharTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     char irrelevant = 0;
     id matcher = equalToChar(irrelevant);
@@ -20,13 +20,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large char", equalToChar(CHAR_MAX), [NSNumber numberWithChar:CHAR_MAX]);
     assertMatches(@"Small char", equalToChar(CHAR_MIN), [NSNumber numberWithChar:CHAR_MIN]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToChar(CHAR_MAX), [NSNumber numberWithChar:CHAR_MIN]);
 }
@@ -39,7 +39,7 @@
 
 @implementation EqualToDoubleTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     double irrelevant = 0;
     id matcher = equalToDouble(irrelevant);
@@ -48,13 +48,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large double", equalToDouble(DBL_MAX), [NSNumber numberWithDouble:DBL_MAX]);
     assertMatches(@"Small double", equalToDouble(DBL_MIN), [NSNumber numberWithDouble:DBL_MIN]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToDouble(DBL_MAX), [NSNumber numberWithDouble:DBL_MIN]);
 }
@@ -67,7 +67,7 @@
 
 @implementation EqualToFloatTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     float irrelevant = 0;
     id matcher = equalToFloat(irrelevant);
@@ -76,13 +76,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large float", equalToFloat(FLT_MAX), [NSNumber numberWithFloat:FLT_MAX]);
     assertMatches(@"Small float", equalToFloat(FLT_MIN), [NSNumber numberWithFloat:FLT_MIN]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToFloat(FLT_MAX), [NSNumber numberWithFloat:FLT_MIN]);
 }
@@ -95,7 +95,7 @@
 
 @implementation EqualToIntTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     int irrelevant = 0;
     id matcher = equalToInt(irrelevant);
@@ -104,13 +104,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large int", equalToInt(INT_MAX), [NSNumber numberWithInt:INT_MAX]);
     assertMatches(@"Small int", equalToInt(INT_MIN), [NSNumber numberWithInt:INT_MIN]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToInt(INT_MAX), [NSNumber numberWithInt:INT_MIN]);
 }
@@ -123,7 +123,7 @@
 
 @implementation EqualToLongTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     long irrelevant = 0;
     id matcher = equalToLong(irrelevant);
@@ -132,13 +132,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large long", equalToLong(LONG_MAX), [NSNumber numberWithLong:LONG_MAX]);
     assertMatches(@"Small long", equalToLong(LONG_MIN), [NSNumber numberWithLong:LONG_MIN]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToLong(LONG_MAX), [NSNumber numberWithLong:LONG_MIN]);
 }
@@ -151,7 +151,7 @@
 
 @implementation EqualToLongLongTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     long long irrelevant = 0;
     id matcher = equalToLongLong(irrelevant);
@@ -160,13 +160,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large long long", equalToLongLong(LLONG_MAX), [NSNumber numberWithLongLong:LLONG_MAX]);
     assertMatches(@"Small long long", equalToLongLong(LLONG_MIN), [NSNumber numberWithLongLong:LLONG_MIN]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToLongLong(LLONG_MAX), [NSNumber numberWithLongLong:LLONG_MIN]);
 }
@@ -179,7 +179,7 @@
 
 @implementation EqualToShortTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     short irrelevant = 0;
     id matcher = equalToShort(irrelevant);
@@ -188,13 +188,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large short", equalToShort(SHRT_MAX), [NSNumber numberWithShort:SHRT_MAX]);
     assertMatches(@"Small short", equalToShort(SHRT_MIN), [NSNumber numberWithShort:SHRT_MIN]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToShort(SHRT_MAX), [NSNumber numberWithShort:SHRT_MIN]);
 }
@@ -207,7 +207,7 @@
 
 @implementation EqualToUnsignedCharTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     unsigned char irrelevant = 0;
     id matcher = equalToUnsignedChar(irrelevant);
@@ -216,13 +216,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large unsigned char", equalToUnsignedChar(UCHAR_MAX), [NSNumber numberWithUnsignedChar:UCHAR_MAX]);
     assertMatches(@"Small unsigned char", equalToUnsignedChar(0), [NSNumber numberWithUnsignedChar:0]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToUnsignedChar(CHAR_MAX), [NSNumber numberWithUnsignedChar:0]);
 }
@@ -235,7 +235,7 @@
 
 @implementation EqualToUnsignedIntTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     unsigned int irrelevant = 0;
     id matcher = equalToUnsignedInt(irrelevant);
@@ -244,13 +244,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large unsigned int", equalToUnsignedInt(UINT_MAX), [NSNumber numberWithUnsignedInt:UINT_MAX]);
     assertMatches(@"Small unsigned int", equalToUnsignedInt(0), [NSNumber numberWithUnsignedInt:0]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToUnsignedInt(INT_MAX), [NSNumber numberWithUnsignedInt:0]);
 }
@@ -263,7 +263,7 @@
 
 @implementation EqualToUnsignedLongTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     unsigned long irrelevant = 0;
     id matcher = equalToUnsignedLong(irrelevant);
@@ -272,13 +272,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large unsigned long", equalToUnsignedLong(ULONG_MAX), [NSNumber numberWithUnsignedLong:ULONG_MAX]);
     assertMatches(@"Small unsigned long", equalToUnsignedLong(0), [NSNumber numberWithUnsignedLong:0]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToUnsignedLong(LONG_MAX), [NSNumber numberWithUnsignedLong:0]);
 }
@@ -291,7 +291,7 @@
 
 @implementation EqualToUnsignedLongLongTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     unsigned long long irrelevant = 0;
     id matcher = equalToUnsignedLongLong(irrelevant);
@@ -300,13 +300,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large unsigned long long", equalToUnsignedLongLong(ULLONG_MAX), [NSNumber numberWithUnsignedLongLong:ULLONG_MAX]);
     assertMatches(@"Small unsigned long long", equalToUnsignedLongLong(0), [NSNumber numberWithUnsignedLongLong:0]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToUnsignedLongLong(ULLONG_MAX), [NSNumber numberWithUnsignedLongLong:0]);
 }
@@ -319,7 +319,7 @@
 
 @implementation EqualToUnsignedShortTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     unsigned short irrelevant = 0;
     id matcher = equalToUnsignedShort(irrelevant);
@@ -328,13 +328,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large unsigned short", equalToUnsignedShort(USHRT_MAX), [NSNumber numberWithUnsignedShort:USHRT_MAX]);
     assertMatches(@"Small unsigned short", equalToUnsignedShort(0), [NSNumber numberWithUnsignedShort:0]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToUnsignedShort(USHRT_MAX), [NSNumber numberWithUnsignedShort:0]);
 }
@@ -347,7 +347,7 @@
 
 @implementation EqualToIntegerTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     NSInteger irrelevant = 0;
     id matcher = equalToInteger(irrelevant);
@@ -356,13 +356,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large NSInteger", equalToInteger(INT_MAX), [NSNumber numberWithInteger:INT_MAX]);
     assertMatches(@"Small NSInteger", equalToInteger(INT_MIN), [NSNumber numberWithInteger:INT_MIN]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToInteger(INT_MAX), [NSNumber numberWithInteger:INT_MIN]);
 }
@@ -375,7 +375,7 @@
 
 @implementation EqualToUnsignedIntegerTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     NSUInteger irrelevant = 0;
     id matcher = equalToUnsignedInteger(irrelevant);
@@ -384,13 +384,13 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testComparesWithNSNumber
+- (void)test_matches_equalNSNumber
 {
     assertMatches(@"Large NSUInteger", equalToUnsignedInteger(UINT_MAX), [NSNumber numberWithUnsignedInteger:UINT_MAX]);
     assertMatches(@"Small NSUInteger", equalToUnsignedInteger(0), [NSNumber numberWithUnsignedInteger:0]);
 }
 
-- (void)testMismatchesDifferentNumber
+- (void)test_doesNotMatch_differentNumber
 {
     assertDoesNotMatch(@"Different", equalToUnsignedInteger(INT_MAX), [NSNumber numberWithUnsignedInteger:0]);
 }

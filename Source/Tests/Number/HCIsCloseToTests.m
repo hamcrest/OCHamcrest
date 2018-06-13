@@ -11,7 +11,7 @@
 
 @implementation CloseToTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     double irrelevant = 0.1;
     id matcher = closeTo(irrelevant, irrelevant);
@@ -20,7 +20,7 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testEvaluatesToTrueIfArgumentIsEqualToADoubleValueWithinSomeError
+- (void)test_matches_ifArgumentIsEqualToADoubleValueWithinSomeError
 {
     id matcher = closeTo(1.0, 0.5);
 
@@ -32,7 +32,7 @@
     assertDoesNotMatch(@"too big", matcher, @1.6);
 }
 
-- (void)testFailsIfMatchingAgainstNonNumber
+- (void)test_doesNotMatch_nonNumber
 {
     id matcher = closeTo(1.0, 0.5);
 
@@ -40,34 +40,34 @@
     assertDoesNotMatch(@"not a number", matcher, nil);
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"a numeric value within <0.5> of <1>", closeTo(1.0, 0.5));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(closeTo(1.0, 0.5), (@1.0));
 }
 
-- (void)testMismatchDescriptionShowsActualDeltaIfArgumentIsNumeric
+- (void)test_mismatchDescription_showsActualDeltaIfArgumentIsNumeric
 {
     assertMismatchDescription(@"<1.7> differed by <0.7>",
                               (closeTo(1.0, 0.5)), @1.7);
 }
 
-- (void)testMismatchDescriptionShowsActualArgumentIfNotNumeric
+- (void)test_mismatchDescription_showsActualArgumentIfNotNumeric
 {
     assertMismatchDescription(@"was \"bad\"", (closeTo(1.0, 0.5)), @"bad");
 }
 
-- (void)testDescribeMismatchShowsActualDeltaIfArgumentIsNumeric
+- (void)test_describeMismatch_showsActualDeltaIfArgumentIsNumeric
 {
     assertDescribeMismatch(@"<1.7> differed by <0.7>",
                            (closeTo(1.0, 0.5)), @1.7);
 }
 
-- (void)testDescribeMismatchShowsActualArgumentIfNotNumeric
+- (void)test_describeMismatch_showsActualArgumentIfNotNumeric
 {
     assertDescribeMismatch(@"was \"bad\"", (closeTo(1.0, 0.5)), @"bad");
 }

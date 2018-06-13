@@ -15,7 +15,7 @@
 
 @implementation SameInstanceTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = sameInstance(@"irrelevant");
 
@@ -23,7 +23,7 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testEvaluatesToTrueIfArgumentIsReferenceToASpecifiedObject
+- (void)test_matches_ifArgumentIsReferenceToSpecifiedObject
 {
     id o1 = [[NSObject alloc] init];
     id o2 = [[NSObject alloc] init];
@@ -32,7 +32,7 @@
     assertThat(o2, isNot(sameInstance(o1)));
 }
 
-- (void)testDoesNotMatchEqualObjects
+- (void)test_doesNotMatch_equalObjects
 {
     NSString *string1 = @"foobar";
     NSString *string2 = [@"foo" stringByAppendingString:@"bar"];
@@ -40,7 +40,7 @@
     assertDoesNotMatch(@"not the same object", sameInstance(string1), string2);
 }
 
-- (void)testDescriptionIncludesMemoryAddress
+- (void)test_descriptionIncludesMemoryAddress
 {
     HCStringDescription *description = [HCStringDescription stringDescription];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
@@ -50,13 +50,13 @@
     XCTAssertTrue([expected evaluateWithObject:description.description]);
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     id o1 = [[NSObject alloc] init];
     assertNoMismatchDescription(sameInstance(o1), o1);
 }
 
-- (void)testMismatchDescriptionShowsActualArgumentAddress
+- (void)test_mismatchDescription_showsActualArgumentAddress
 {
     id matcher = sameInstance(@"foo");
     HCStringDescription *description = [HCStringDescription stringDescription];
@@ -68,12 +68,12 @@
     XCTAssertTrue([expected evaluateWithObject:description.description]);
 }
 
-- (void)testMismatchDescriptionWithNilShouldNotIncludeAddress
+- (void)test_mismatchDescription_withNilShouldNotIncludeAddress
 {
     assertMismatchDescription(@"was nil", sameInstance(@"foo"), nil);
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     id matcher = sameInstance(@"foo");
     HCStringDescription *description = [HCStringDescription stringDescription];
@@ -84,7 +84,7 @@
     XCTAssertTrue([expected evaluateWithObject:description.description]);
 }
 
-- (void)testDescribeMismatchWithNilShouldNotIncludeAddress
+- (void)test_describeMismatch_withNilShouldNotIncludeAddress
 {
     assertDescribeMismatch(@"was nil", sameInstance(@"foo"), nil);
 }

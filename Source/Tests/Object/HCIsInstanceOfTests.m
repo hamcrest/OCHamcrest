@@ -12,7 +12,7 @@
 
 @implementation InstanceOfTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = instanceOf([SomeClass class]);
 
@@ -20,29 +20,29 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testEvaluatesToTrueIfArgumentIsInstanceOfGivenClass
+- (void)test_matches_ifArgumentIsInstanceOfGivenClass
 {
     SomeClass *obj = [[SomeClass alloc] init];
     assertMatches(@"same class", instanceOf([SomeClass class]), obj);
 }
 
-- (void)testEvaluatesToTrueIfArgumentIsSubclassOfGivenClass
+- (void)test_matches_ifArgumentIsSubclassOfGivenClass
 {
     SomeSubclass *sub = [[SomeSubclass alloc] init];
     assertMatches(@"subclass", instanceOf([SomeClass class]), sub);
 }
 
-- (void)testEvaluatesToFalseIfArgumentIsInstanceOfDifferentClass
+- (void)test_doesNotMatch_ifArgumentIsInstanceOfDifferentClass
 {
     assertDoesNotMatch(@"different class", instanceOf([SomeClass class]), @"hi");
 }
 
-- (void)testEvaluatesToFalseIfArgumentIsNil
+- (void)test_doesNotMatch_ifArgumentIsNil
 {
     assertDoesNotMatch(@"nil", instanceOf([NSNumber class]), nil);
 }
 
-- (void)testMatcherCreationRequiresNonNilArgument
+- (void)test_matcherCreation_requiresNonNilArgument
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -50,28 +50,28 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testHasAReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"an instance of SomeClass", instanceOf([SomeClass class]));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     assertNoMismatchDescription(instanceOf([SomeClass class]), [[SomeClass alloc] init]);
 }
 
-- (void)testMismatchDescriptionShowsClassOfActualArgument
+- (void)test_mismatchDescription_showsClassOfActualArgument
 {
     assertMismatchDescription(@"was SomeClass instance <SOME_CLASS>",
                               instanceOf([NSValue class]), [[SomeClass alloc] init]);
 }
 
-- (void)testMismatchDescriptionHandlesNilArgument
+- (void)test_mismatchDescription_handlesNilArgument
 {
     assertMismatchDescription(@"was nil", instanceOf([NSValue class]), nil);
 }
 
-- (void)testDescribeMismatch
+- (void)test_describeMismatch
 {
     assertDescribeMismatch(@"was SomeClass instance <SOME_CLASS>",
                            instanceOf([NSValue class]), [[SomeClass alloc] init]);

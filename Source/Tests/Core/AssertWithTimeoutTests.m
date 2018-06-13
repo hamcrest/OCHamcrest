@@ -34,21 +34,21 @@ static NSTimeInterval machTimeInSeconds(void)
 
 @implementation AssertWithTimeoutTests
 
-- (void)testShouldBeSilentOnSuccessfulMatchWithTimeoutZero
+- (void)test_shouldBeSilentOnSuccessfulMatch_withTimeoutZero
 {
     assertWithTimeout(0, thatEventually(@"foo"), equalTo(@"foo"));
 
     XCTAssertNil(self.testFailure);
 }
 
-- (void)testShouldBeSilentOnSuccessfulMatchWithTimeoutGreaterThanZero
+- (void)test_shouldBeSilentOnSuccessfulMatch_withTimeoutGreaterThanZero
 {
     assertWithTimeout(5, thatEventually(@"foo"), equalTo(@"foo"));
 
     XCTAssertNil(self.testFailure);
 }
 
-- (void)testFailsImmediatelyWithTimeoutZero
+- (void)test_failsImmediately_withTimeoutZero
 {
     NSTimeInterval maxTime = 0;
     NSTimeInterval waitTime = [self timeExecutingBlock:^{
@@ -59,7 +59,7 @@ static NSTimeInterval machTimeInSeconds(void)
             @"Assert should have failed immediately");
 }
 
-- (void)testFailsAfterTimeoutGreaterThanZero
+- (void)test_fails_afterTimeoutGreaterThanZero
 {
     NSTimeInterval maxTime = 0.2;
     NSTimeInterval waitTime = [self timeExecutingBlock:^{
@@ -70,7 +70,7 @@ static NSTimeInterval machTimeInSeconds(void)
             @"Assert should have failed after %f seconds", maxTime);
 }
 
-- (void)testAssertWithTimeoutGreaterThanZeroShouldSucceedNotImmediatelyButBeforeTimeout
+- (void)test_assertWithTimeoutGreaterThanZero_shouldSucceedNotImmediatelyButBeforeTimeout
 {
     NSTimeInterval maxTime = 1.0;
     NSTimeInterval succeedTime = 0.2;
@@ -101,7 +101,7 @@ static NSTimeInterval machTimeInSeconds(void)
     XCTAssertTrue([resultString rangeOfString:expectedString].location != NSNotFound);
 }
 
-- (void)testAssertionErrorShouldDescribeExpectedAndActual
+- (void)test_assertionError_shouldDescribeExpectedAndActual
 {
     NSString *expected = @"EXPECTED";
     NSString *actual = @"ACTUAL";

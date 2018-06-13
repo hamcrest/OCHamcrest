@@ -99,36 +99,36 @@
     [super tearDown];
 }
 
-- (void)testMatchesFeature
+- (void)test_matches_feature
 {
     assertMatches(@"invoke on Thingy", resultMatcher, [Thingy thingyWithResult:@"bar"]);
     assertDescription(@"an object with result \"bar\"", resultMatcher);
 }
 
-- (void)testMismatchWithDefaultLongDescription
+- (void)test_mismatch_withDefaultLongDescription
 {
     assertMismatchDescription(@"<Thingy> result MISMATCH", resultMatcher,
                               [Thingy thingyWithResult:@"foo"]);
 }
 
-- (void)testMismatchWithShortDescription
+- (void)test_mismatch_withShortDescription
 {
     [resultMatcher setShortMismatchDescription:YES];
     assertMismatchDescription(@"MISMATCH", resultMatcher,
                               [Thingy thingyWithResult:@"foo"]);
 }
 
-- (void)testDoesNotMatchNil
+- (void)test_doesNotMatch_nil
 {
     assertMismatchDescription(@"was nil", resultMatcher, nil);
 }
 
-- (void)testDoesNotMatchObjectWithoutMethod
+- (void)test_doesNotMatch_objectWithoutMethod
 {
     assertDoesNotMatch(@"was <ShouldNotMatch>", resultMatcher, [[ShouldNotMatch alloc] init]);
 }
 
-- (void)testObjectWithoutMethodShortDescriptionIsSameAsLongForm
+- (void)test_objectWithoutMethodShortDescription_isSameAsLongForm
 {
     [resultMatcher setShortMismatchDescription:YES];
     assertDoesNotMatch(@"was <ShouldNotMatch>", resultMatcher, [[ShouldNotMatch alloc] init]);

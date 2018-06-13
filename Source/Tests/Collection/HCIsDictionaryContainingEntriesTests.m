@@ -13,7 +13,7 @@
 
 @implementation HasEntriesTests
 
-- (void)testCopesWithNilsAndUnknownTypes
+- (void)test_copesWithNilsAndUnknownTypes
 {
     id matcher = hasEntries(@"irrelevant", @"irrelevant", nil);
 
@@ -21,18 +21,18 @@
     assertUnknownTypeSafe(matcher);
 }
 
-- (void)testMatcherCreationRequiresEvenNumberOfArgs
+- (void)test_matcherCreation_requiresEvenNumberOfArgs
 {
     XCTAssertThrows(hasEntries(@"a", nil), @"Should require pairs of arguments");
 }
 
-- (void)testDoesNotMatchNonDictionary
+- (void)test_doesNotMatch_nonDictionary
 {
     id object = [[NSObject alloc] init];
     assertDoesNotMatch(@"not dictionary", hasEntries(@"a", equalTo(@1), nil), object);
 }
 
-- (void)testMatchesDictionaryContainingSingleKeyWithMatchingValue
+- (void)test_matches_dictionaryContainingSingleKeyWithMatchingValue
 {
     NSDictionary *dict = @{@"a": @1,
                            @"b": @2};
@@ -43,7 +43,7 @@
     assertDoesNotMatch(@"no c:2", hasEntries(@"c", equalTo(@2), nil), dict);
 }
 
-- (void)testMatchesDictionaryContainingMultipleKeysWithMatchingValues
+- (void)test_matches_dictionaryContainingMultipleKeysWithMatchingValues
 {
     NSDictionary *dict = @{@"a": @1,
                            @"b": @2,
@@ -54,7 +54,7 @@
     assertDoesNotMatch(@"no d:3", hasEntries(@"d", equalTo(@3), nil), dict);
 }
 
-- (void)testProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)test_providesConvenientShortcutForMatchingWithEqualTo
 {
     NSDictionary *dict = @{@"a": @1,
                            @"b": @2,
@@ -65,7 +65,7 @@
     assertDoesNotMatch(@"no d:3", hasEntries(@"d", @3, nil), dict);
 }
 
-- (void)testDictionaryVariant_ProvidesConvenientShortcutForMatchingWithEqualTo
+- (void)test_dictionaryVariant_providesConvenientShortcutForMatchingWithEqualTo
 {
     NSDictionary *dict = @{@"a": @1,
             @"b": @2,
@@ -76,12 +76,12 @@
     assertDoesNotMatch(@"no d:3", hasEntriesIn(@{@"d": @3}), dict);
 }
 
-- (void)testShouldNotMatchNil
+- (void)test_doesNotMatch_nil
 {
     assertDoesNotMatch(@"nil", hasEntries(@"a", @1, nil), nil);
 }
 
-- (void)testMatcherCreationRequiresNonNilArguments
+- (void)test_matcherCreation_requiresNonNilArguments
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
@@ -90,49 +90,49 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testHasReadableDescription
+- (void)test_hasReadableDescription
 {
     assertDescription(@"a dictionary containing { \"a\" = <1>; \"b\" = <2>; }",
                       hasEntries(@"a", @1, @"b", @2, nil));
 }
 
-- (void)testSuccessfulMatchDoesNotGenerateMismatchDescription
+- (void)test_successfulMatchDoesNotGenerateMismatchDescription
 {
     NSDictionary *dict = @{@"a": @1};
     assertNoMismatchDescription(hasEntries(@"a", @1, nil), dict);
 }
 
-- (void)testMismatchDescriptionOfNonDictionaryShowsActualArgument
+- (void)test_mismatchDescription_ofNonDictionary_showsActualArgument
 {
     assertMismatchDescription(@"was non-dictionary \"bad\"", hasEntries(@"a", @1, nil), @"bad");
 }
 
-- (void)testMismatchDescriptionOfDictionaryWithoutKey
+- (void)test_mismatchDescription_ofDictionaryWithoutKey
 {
     NSDictionary *dict = @{@"a": @1, @"c": @3};
     assertMismatchDescription(@"no \"b\" key in <{\n    a = 1;\n    c = 3;\n}>",
                               hasEntries(@"a", @1, @"b", @2, nil), dict);
 }
 
-- (void)testMismatchDescriptionOfDictionaryWithNonMatchingValue
+- (void)test_mismatchDescription_ofDictionaryWithNonMatchingValue
 {
     NSDictionary *dict = @{@"a": @2};
     assertMismatchDescription(@"value for \"a\" was <2>", hasEntries(@"a", @1, nil), dict);
 }
 
-- (void)testDescribeMismatchOfNonDictionaryShowsActualArgument
+- (void)test_describeMismatch_ofNonDictionaryShowsActualArgument
 {
     assertDescribeMismatch(@"was non-dictionary \"bad\"", hasEntries(@"a", @1, nil), @"bad");
 }
 
-- (void)testDescribeMismatchOfDictionaryWithoutKey
+- (void)test_describeMismatch_ofDictionaryWithoutKey
 {
     NSDictionary *dict = @{@"a": @1, @"c": @3};
     assertDescribeMismatch(@"no \"b\" key in <{\n    a = 1;\n    c = 3;\n}>",
                            hasEntries(@"a", @1, @"b", @2, nil), dict);
 }
 
-- (void)testDescribeMismatchOfDictionaryWithNonMatchingValue
+- (void)test_describeMismatch_ofDictionaryWithNonMatchingValue
 {
     NSDictionary *dict = @{@"a": @2};
     assertDescribeMismatch(@"value for \"a\" was <2>", hasEntries(@"a", @1, nil), dict);
