@@ -1,3 +1,11 @@
+NEXT RELEASE
+------------
+
+**Fixes:**
+
+- Fixed crash with HCArgumentCaptor capturing objects that don't conform to NSCopyable.
+
+
 Version 7.1.0
 -------------
 _21 Mar 2018_
