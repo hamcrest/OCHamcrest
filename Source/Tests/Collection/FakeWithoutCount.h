@@ -8,7 +8,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FakeWithoutCount : NSObject
 
-+ (id)fake;
++ (instancetype)fake;
 
 @end
 
