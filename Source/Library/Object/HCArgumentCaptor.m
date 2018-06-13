@@ -35,7 +35,9 @@
     if (self.captureEnabled)
     {
         id value = item ?: [NSNull null];
-        [self.values addObject:[value copy]];
+        if ([value conformsToProtocol:@protocol(NSCopying)])
+            value = [value copy];
+        [self.values addObject:value];
     }
 }
 

@@ -54,6 +54,15 @@
     XCTAssertFalse(sut.value == original);
 }
 
+- (void)test_value_shouldBeOriginalIfItCannotBeCopied
+{
+    id original = [[NSObject alloc] init];
+
+    [sut matches:original];
+
+    XCTAssertTrue(sut.value == original);
+}
+
 - (void)test_value_withNothingCaptured_shouldReturnNil
 {
     XCTAssertNil(sut.value);
