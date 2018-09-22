@@ -192,6 +192,7 @@ targets:
 ```ruby
 target 'MyTests' do
   inherit! :search_paths
+  use_frameworks!
   pod 'OCHamcrest', '~> 7.0'
 end
 ```
