@@ -13,7 +13,7 @@ _21 Mar 2018_
 
 **Features:**
 
-- Made OCHamcrest/OCHamcrestIOS into modules, so you can @import them. CocoaPods users should specify `use_frameworks!`
+- Made OCHamcrest/OCHamcrestIOS into modules, so you can `@import` them. CocoaPods users should specify `use_frameworks!`
 
 **Fixes:**
 
