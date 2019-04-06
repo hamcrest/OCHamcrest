@@ -2185,6 +2185,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 087601D613440806001B439B;
@@ -2803,7 +2804,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				DSTROOT = /tmp/libochamcrest.dst;
 				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				PRODUCT_NAME = ochamcrest;
@@ -2815,7 +2815,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				DSTROOT = /tmp/libochamcrest.dst;
 				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				PRODUCT_NAME = ochamcrest;
@@ -2827,7 +2826,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				INFOPLIST_FILE = "Tests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
@@ -2841,7 +2839,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				INFOPLIST_FILE = "Tests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
@@ -2899,7 +2896,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2918,7 +2914,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2937,7 +2932,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
@@ -2952,7 +2946,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
