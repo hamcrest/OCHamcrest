@@ -3,7 +3,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "HCDescription.h"   // Convenience header
+#import <OCHamcrest/HCDescription.h>  // Convenience header
 
 
 NS_ASSUME_NONNULL_BEGIN
