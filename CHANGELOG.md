@@ -1,3 +1,12 @@
+Version 7.1.2
+-------------
+_23 Sep 2019_
+
+**Fixes:**
+
+- Fix warning about double-quoted includes in public headers.
+
+
 Version 7.1.1
 -------------
 _15 Jun 2018_
