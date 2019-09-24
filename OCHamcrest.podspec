@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
                       * OCMockito
                   DESC
   s.homepage    = 'https://github.com/hamcrest/OCHamcrest'
-  s.license     = 'BSD'
+  s.license     = { :type => 'BSD' }
   s.author      = { 'Jon Reid' => 'jon@qualitycoding.org' }
   s.social_media_url = 'https://twitter.com/qcoding'
 
