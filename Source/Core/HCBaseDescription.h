@@ -1,5 +1,5 @@
 //  OCHamcrest by Jon Reid, https://qualitycoding.org/
-//  Copyright 2019 hamcrest.org. See LICENSE.txt
+//  Copyright 2020 hamcrest. See LICENSE.txt
 
 #import <Foundation/Foundation.h>
 #import <OCHamcrest/HCDescription.h>
