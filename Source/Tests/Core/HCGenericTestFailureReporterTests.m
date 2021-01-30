@@ -17,10 +17,10 @@
 @end
 
 
-@interface GenericTestCaseTest : XCTestCase
+@interface HCGenericTestFailureReporterTests : XCTestCase
 @end
 
-@implementation GenericTestCaseTest
+@implementation HCGenericTestFailureReporterTests
 {
     GenericTestCase *testCase;
 }

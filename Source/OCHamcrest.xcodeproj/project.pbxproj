@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		081BEE721345979F003F846A /* libochamcrest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 081BEE621345979F003F846A /* libochamcrest.a */; };
-		082E7C3113FF676E004A22FE /* MockSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2B13FF676E004A22FE /* MockSenTestCase.m */; };
-		082E7C3213FF676E004A22FE /* MockSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2B13FF676E004A22FE /* MockSenTestCase.m */; };
+		082E7C3113FF676E004A22FE /* HCGenericTestFailureReporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2B13FF676E004A22FE /* HCGenericTestFailureReporterTests.m */; };
+		082E7C3213FF676E004A22FE /* HCGenericTestFailureReporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2B13FF676E004A22FE /* HCGenericTestFailureReporterTests.m */; };
 		082E7C3313FF676E004A22FE /* HCBaseMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2C13FF676E004A22FE /* HCBaseMatcherTests.m */; };
 		082E7C3413FF676E004A22FE /* HCBaseMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2C13FF676E004A22FE /* HCBaseMatcherTests.m */; };
 		082E7C3513FF676E004A22FE /* HCInvocationMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E7C2D13FF676E004A22FE /* HCInvocationMatcherTests.m */; };
@@ -915,7 +915,7 @@
 /* Begin PBXFileReference section */
 		081BEE621345979F003F846A /* libochamcrest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libochamcrest.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		081BEE6C1345979F003F846A /* libochamcrestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libochamcrestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		082E7C2B13FF676E004A22FE /* MockSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSenTestCase.m; sourceTree = "<group>"; };
+		082E7C2B13FF676E004A22FE /* HCGenericTestFailureReporterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCGenericTestFailureReporterTests.m; sourceTree = "<group>"; };
 		082E7C2C13FF676E004A22FE /* HCBaseMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBaseMatcherTests.m; sourceTree = "<group>"; };
 		082E7C2D13FF676E004A22FE /* HCInvocationMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCInvocationMatcherTests.m; sourceTree = "<group>"; };
 		082E7C2E13FF676E004A22FE /* HCStringDescriptionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringDescriptionTests.m; sourceTree = "<group>"; };
@@ -1205,13 +1205,13 @@
 				7458920E1A2AAD2C00BAAC76 /* AssertWithTimeoutTests.m */,
 				74D7A7B41A2B902F00CD6CC0 /* DiagnosingMatcherTest.m */,
 				082E7C2C13FF676E004A22FE /* HCBaseMatcherTests.m */,
+				082E7C2B13FF676E004A22FE /* HCGenericTestFailureReporterTests.m */,
 				082E7C2D13FF676E004A22FE /* HCInvocationMatcherTests.m */,
 				4878844D25C5E6FC005680D9 /* HCSenTestFailureReporterTests.m */,
 				082E7C2E13FF676E004A22FE /* HCStringDescriptionTests.m */,
 				609E99ADF272619359F01300 /* HCTestFailureReporterChainTests.m */,
 				482FE2D21E6DDC2B00AC0009 /* HCWrapInMatcherTests.m */,
 				4878845E25C5E814005680D9 /* HCXCTestFailureReporterTests.m */,
-				082E7C2B13FF676E004A22FE /* MockSenTestCase.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -2387,7 +2387,7 @@
 				0846B6FA13EE5FD200EA68E8 /* HCIsInstanceOfTests.m in Sources */,
 				0846B6FC13EE5FD200EA68E8 /* HCIsNilTests.m in Sources */,
 				0846B6FE13EE5FD200EA68E8 /* HCIsSameTests.m in Sources */,
-				082E7C3213FF676E004A22FE /* MockSenTestCase.m in Sources */,
+				082E7C3213FF676E004A22FE /* HCGenericTestFailureReporterTests.m in Sources */,
 				082E7C3413FF676E004A22FE /* HCBaseMatcherTests.m in Sources */,
 				082E7C3613FF676E004A22FE /* HCInvocationMatcherTests.m in Sources */,
 				082E7C3813FF676E004A22FE /* HCStringDescriptionTests.m in Sources */,
@@ -2533,7 +2533,7 @@
 				0846B6F913EE5FD200EA68E8 /* HCIsInstanceOfTests.m in Sources */,
 				0846B6FB13EE5FD200EA68E8 /* HCIsNilTests.m in Sources */,
 				0846B6FD13EE5FD200EA68E8 /* HCIsSameTests.m in Sources */,
-				082E7C3113FF676E004A22FE /* MockSenTestCase.m in Sources */,
+				082E7C3113FF676E004A22FE /* HCGenericTestFailureReporterTests.m in Sources */,
 				082E7C3313FF676E004A22FE /* HCBaseMatcherTests.m in Sources */,
 				082E7C3513FF676E004A22FE /* HCInvocationMatcherTests.m in Sources */,
 				082E7C3713FF676E004A22FE /* HCStringDescriptionTests.m in Sources */,
