@@ -616,6 +616,8 @@
 		486C646A206225D700A1BFDE /* HCStringStartsWith.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3336FA0B545673BD3630E2 /* HCStringStartsWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		486C646B206225D900A1BFDE /* HCSubstringMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3338B60F3A83AE527E91A7 /* HCSubstringMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		486C646C2062274100A1BFDE /* OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB33356A6185FA4F1B6E240F /* OCHamcrest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4878844E25C5E6FD005680D9 /* HCSenTestFailureReporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4878844D25C5E6FC005680D9 /* HCSenTestFailureReporterTests.m */; };
+		4878844F25C5E6FD005680D9 /* HCSenTestFailureReporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4878844D25C5E6FC005680D9 /* HCSenTestFailureReporterTests.m */; };
 		5F2773481436FAA600B9683A /* HCConformsToProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* HCConformsToProtocolTests.m */; };
 		5F2773491436FAA700B9683A /* HCConformsToProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* HCConformsToProtocolTests.m */; };
 		609E9068872F708CA4DA4785 /* MatcherTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E91D3F5F10354528F7FF8 /* MatcherTestCase.m */; };
@@ -971,6 +973,7 @@
 		31DDCCF46E1766AF4AC97BA5 /* Mismatchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mismatchable.h; sourceTree = "<group>"; };
 		31DDCE62F97F2042F0A8BDAE /* HCDiagnosingMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDiagnosingMatcher.h; sourceTree = "<group>"; };
 		482FE2D21E6DDC2B00AC0009 /* HCWrapInMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCWrapInMatcherTests.m; sourceTree = "<group>"; };
+		4878844D25C5E6FC005680D9 /* HCSenTestFailureReporterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSenTestFailureReporterTests.m; sourceTree = "<group>"; };
 		5F2773441436F81000B9683A /* HCConformsToProtocolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCConformsToProtocolTests.m; sourceTree = "<group>"; };
 		609E91D3F5F10354528F7FF8 /* MatcherTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatcherTestCase.m; sourceTree = "<group>"; };
 		609E92AABBB75D3F5E47A0E4 /* HCArgumentCaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCArgumentCaptor.m; sourceTree = "<group>"; };
@@ -1200,6 +1203,7 @@
 				74D7A7B41A2B902F00CD6CC0 /* DiagnosingMatcherTest.m */,
 				082E7C2C13FF676E004A22FE /* HCBaseMatcherTests.m */,
 				082E7C2D13FF676E004A22FE /* HCInvocationMatcherTests.m */,
+				4878844D25C5E6FC005680D9 /* HCSenTestFailureReporterTests.m */,
 				082E7C2E13FF676E004A22FE /* HCStringDescriptionTests.m */,
 				609E99ADF272619359F01300 /* HCTestFailureReporterChainTests.m */,
 				482FE2D21E6DDC2B00AC0009 /* HCWrapInMatcherTests.m */,
@@ -2353,6 +2357,7 @@
 				0859832013459CA400BE7892 /* HCIsEqualIgnoringCaseTests.m in Sources */,
 				0859832113459CA400BE7892 /* HCIsEqualCompressingWhiteSpaceTests.m in Sources */,
 				0859832313459CA400BE7892 /* HCIsEqualToNumberTests.m in Sources */,
+				4878844F25C5E6FD005680D9 /* HCSenTestFailureReporterTests.m in Sources */,
 				0859832513459CA400BE7892 /* HCIsInTests.m in Sources */,
 				0859832B13459CA400BE7892 /* HCNumberAssertTests.m in Sources */,
 				7460456D1A2964AF00196267 /* HCEveryTests.m in Sources */,
@@ -2497,6 +2502,7 @@
 				0876037D13440AD8001B439B /* HCIsEqualToNumberTests.m in Sources */,
 				0876037E13440AD8001B439B /* HCNumberAssertTests.m in Sources */,
 				0876037F13440AD8001B439B /* HCOrderingComparisonTests.m in Sources */,
+				4878844E25C5E6FD005680D9 /* HCSenTestFailureReporterTests.m in Sources */,
 				0876038013440AD8001B439B /* HCHasDescriptionTests.m in Sources */,
 				0876038213440AD8001B439B /* HCIsEqualIgnoringCaseTests.m in Sources */,
 				7460456C1A2964AF00196267 /* HCEveryTests.m in Sources */,
