@@ -76,14 +76,14 @@ static BOOL doNotHandleFailure(id self, SEL _cmd, HCTestFailure *failure)
     doNotHandleFailureSelector = NSSelectorFromString(@"doNotHandleFailure:");
     [self addDoNotHandleFailureMethodTo:XCTestIssueFailureReporterClass];
     [self addDoNotHandleFailureMethodTo:XCTestFailureReporterClass];
-    [self swizzleXCTestIssueFailureReporter];
-    [self swizzleXCTestFailureReporter];
+    [self swizzleFailureReporter:XCTestIssueFailureReporterClass];
+    [self swizzleFailureReporter:XCTestFailureReporterClass];
 }
 
 - (void)tearDown
 {
-    [self swizzleXCTestIssueFailureReporter];
-    [self swizzleXCTestFailureReporter];
+    [self swizzleFailureReporter:XCTestIssueFailureReporterClass];
+    [self swizzleFailureReporter:XCTestFailureReporterClass];
     [super tearDown];
 }
 
@@ -100,17 +100,10 @@ static BOOL doNotHandleFailure(id self, SEL _cmd, HCTestFailure *failure)
     }
 }
 
-- (void)swizzleXCTestIssueFailureReporter
+- (void)swizzleFailureReporter:(Class)testReporterClass
 {
-    Method originalMethod = class_getInstanceMethod(XCTestIssueFailureReporterClass, NSSelectorFromString(@"willHandleFailure:"));
-    Method swizzledMethod = class_getInstanceMethod(XCTestIssueFailureReporterClass, doNotHandleFailureSelector);
-    method_exchangeImplementations(originalMethod, swizzledMethod);
-}
-
-- (void)swizzleXCTestFailureReporter
-{
-    Method originalMethod = class_getInstanceMethod(XCTestFailureReporterClass, NSSelectorFromString(@"willHandleFailure:"));
-    Method swizzledMethod = class_getInstanceMethod(XCTestFailureReporterClass, doNotHandleFailureSelector);
+    Method originalMethod = class_getInstanceMethod(testReporterClass, NSSelectorFromString(@"willHandleFailure:"));
+    Method swizzledMethod = class_getInstanceMethod(testReporterClass, doNotHandleFailureSelector);
     method_exchangeImplementations(originalMethod, swizzledMethod);
 }
 
