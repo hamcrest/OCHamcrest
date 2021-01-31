@@ -3,6 +3,7 @@ NEXT RELEASE
 
 **Features:**
 
+- Mac binary now supports Apple Silicon.
 - Report mismatches using XCTIssue if using Xcode 12 or higher.
 - Added Cartfile.project for Carthage caching.  _Thanks to: René Pirringer_
 
