@@ -74,7 +74,8 @@ static BOOL doNotHandleFailure(id self, SEL _cmd, HCTestFailure *failure)
     XCTestIssueFailureReporterClass = NSClassFromString(@"HCXCTestIssueFailureReporter");
     XCTestFailureReporterClass = NSClassFromString(@"HCXCTestFailureReporter");
     doNotHandleFailureSelector = NSSelectorFromString(@"doNotHandleFailure:");
-    [self addDoNotHandleFailureMethodToXCTestFailureReporters];
+    [self addDoNotHandleFailureMethodTo:XCTestIssueFailureReporterClass];
+    [self addDoNotHandleFailureMethodTo:XCTestFailureReporterClass];
     [self swizzleXCTestIssueFailureReporter];
     [self swizzleXCTestFailureReporter];
 }
@@ -86,21 +87,12 @@ static BOOL doNotHandleFailure(id self, SEL _cmd, HCTestFailure *failure)
     [super tearDown];
 }
 
-- (void)addDoNotHandleFailureMethodToXCTestFailureReporters
+- (void)addDoNotHandleFailureMethodTo:(Class)testReporterClass
 {
-    if (![XCTestIssueFailureReporterClass instancesRespondToSelector:doNotHandleFailureSelector])
+    if (![testReporterClass instancesRespondToSelector:doNotHandleFailureSelector])
     {
         BOOL success = class_addMethod(
-                XCTestIssueFailureReporterClass,
-                doNotHandleFailureSelector,
-                (IMP)doNotHandleFailure,
-                "c@:@");
-        XCTAssertTrue(success);
-    }
-    if (![XCTestFailureReporterClass instancesRespondToSelector:doNotHandleFailureSelector])
-    {
-        BOOL success = class_addMethod(
-                XCTestFailureReporterClass,
+                testReporterClass,
                 doNotHandleFailureSelector,
                 (IMP)doNotHandleFailure,
                 "c@:@");
