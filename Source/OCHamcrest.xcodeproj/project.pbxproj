@@ -620,6 +620,18 @@
 		4878844F25C5E6FD005680D9 /* HCSenTestFailureReporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4878844D25C5E6FC005680D9 /* HCSenTestFailureReporterTests.m */; };
 		4878845F25C5E814005680D9 /* HCXCTestFailureReporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4878845E25C5E814005680D9 /* HCXCTestFailureReporterTests.m */; };
 		4878846025C5E814005680D9 /* HCXCTestFailureReporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4878845E25C5E814005680D9 /* HCXCTestFailureReporterTests.m */; };
+		48E0BED625C64617008C3A68 /* HCXCTestIssueFailureReporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E0BED525C64617008C3A68 /* HCXCTestIssueFailureReporterTests.m */; };
+		48E0BED725C64617008C3A68 /* HCXCTestIssueFailureReporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E0BED525C64617008C3A68 /* HCXCTestIssueFailureReporterTests.m */; };
+		48E0BEE825C64644008C3A68 /* HCXCTestIssueFailureReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 48E0BEE625C64643008C3A68 /* HCXCTestIssueFailureReporter.h */; };
+		48E0BEE925C64644008C3A68 /* HCXCTestIssueFailureReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 48E0BEE625C64643008C3A68 /* HCXCTestIssueFailureReporter.h */; };
+		48E0BEEA25C64644008C3A68 /* HCXCTestIssueFailureReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 48E0BEE625C64643008C3A68 /* HCXCTestIssueFailureReporter.h */; };
+		48E0BEEB25C64644008C3A68 /* HCXCTestIssueFailureReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 48E0BEE625C64643008C3A68 /* HCXCTestIssueFailureReporter.h */; };
+		48E0BEEC25C64644008C3A68 /* HCXCTestIssueFailureReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 48E0BEE625C64643008C3A68 /* HCXCTestIssueFailureReporter.h */; };
+		48E0BEED25C64644008C3A68 /* HCXCTestIssueFailureReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E0BEE725C64643008C3A68 /* HCXCTestIssueFailureReporter.m */; };
+		48E0BEEE25C64644008C3A68 /* HCXCTestIssueFailureReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E0BEE725C64643008C3A68 /* HCXCTestIssueFailureReporter.m */; };
+		48E0BEEF25C64644008C3A68 /* HCXCTestIssueFailureReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E0BEE725C64643008C3A68 /* HCXCTestIssueFailureReporter.m */; };
+		48E0BEF025C64644008C3A68 /* HCXCTestIssueFailureReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E0BEE725C64643008C3A68 /* HCXCTestIssueFailureReporter.m */; };
+		48E0BEF125C64644008C3A68 /* HCXCTestIssueFailureReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E0BEE725C64643008C3A68 /* HCXCTestIssueFailureReporter.m */; };
 		5F2773481436FAA600B9683A /* HCConformsToProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* HCConformsToProtocolTests.m */; };
 		5F2773491436FAA700B9683A /* HCConformsToProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2773441436F81000B9683A /* HCConformsToProtocolTests.m */; };
 		609E9068872F708CA4DA4785 /* MatcherTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E91D3F5F10354528F7FF8 /* MatcherTestCase.m */; };
@@ -977,6 +989,9 @@
 		482FE2D21E6DDC2B00AC0009 /* HCWrapInMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCWrapInMatcherTests.m; sourceTree = "<group>"; };
 		4878844D25C5E6FC005680D9 /* HCSenTestFailureReporterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSenTestFailureReporterTests.m; sourceTree = "<group>"; };
 		4878845E25C5E814005680D9 /* HCXCTestFailureReporterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCXCTestFailureReporterTests.m; sourceTree = "<group>"; };
+		48E0BED525C64617008C3A68 /* HCXCTestIssueFailureReporterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCXCTestIssueFailureReporterTests.m; sourceTree = "<group>"; };
+		48E0BEE625C64643008C3A68 /* HCXCTestIssueFailureReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCXCTestIssueFailureReporter.h; sourceTree = "<group>"; };
+		48E0BEE725C64643008C3A68 /* HCXCTestIssueFailureReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCXCTestIssueFailureReporter.m; sourceTree = "<group>"; };
 		5F2773441436F81000B9683A /* HCConformsToProtocolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCConformsToProtocolTests.m; sourceTree = "<group>"; };
 		609E91D3F5F10354528F7FF8 /* MatcherTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatcherTestCase.m; sourceTree = "<group>"; };
 		609E92AABBB75D3F5E47A0E4 /* HCArgumentCaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCArgumentCaptor.m; sourceTree = "<group>"; };
@@ -1212,6 +1227,7 @@
 				609E99ADF272619359F01300 /* HCTestFailureReporterChainTests.m */,
 				482FE2D21E6DDC2B00AC0009 /* HCWrapInMatcherTests.m */,
 				4878845E25C5E814005680D9 /* HCXCTestFailureReporterTests.m */,
+				48E0BED525C64617008C3A68 /* HCXCTestIssueFailureReporterTests.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1411,6 +1427,8 @@
 				BB3337085D9BEFA6D52E7EB0 /* HCTestFailureReporterChain.m */,
 				BB33394F75CEE379A525320B /* HCXCTestFailureReporter.h */,
 				BB333ABD683BCE8C8E9028C5 /* HCXCTestFailureReporter.m */,
+				48E0BEE625C64643008C3A68 /* HCXCTestIssueFailureReporter.h */,
+				48E0BEE725C64643008C3A68 /* HCXCTestIssueFailureReporter.m */,
 			);
 			path = TestFailureReporters;
 			sourceTree = "<group>";
@@ -1659,6 +1677,7 @@
 				486C6463206225AF00A1BFDE /* HCIsTypeOf.h in Headers */,
 				486C6464206225BB00A1BFDE /* HCThrowsException.h in Headers */,
 				486C6465206225C700A1BFDE /* HCIsEqualCompressingWhiteSpace.h in Headers */,
+				48E0BEE925C64644008C3A68 /* HCXCTestIssueFailureReporter.h in Headers */,
 				486C6466206225CA00A1BFDE /* HCIsEqualIgnoringCase.h in Headers */,
 				486C6467206225CD00A1BFDE /* HCStringContains.h in Headers */,
 				486C6468206225D100A1BFDE /* HCStringContainsInOrder.h in Headers */,
@@ -1745,6 +1764,7 @@
 				BB3333FFD04D52C9DC48644E /* HCStringEndsWith.h in Headers */,
 				74153B631A53606100FEF450 /* HCIsTrueFalse.h in Headers */,
 				BB333E7F416B46CE6777D695 /* HCStringStartsWith.h in Headers */,
+				48E0BEE825C64644008C3A68 /* HCXCTestIssueFailureReporter.h in Headers */,
 				BB333DD97E87592CF49128AD /* HCSubstringMatcher.h in Headers */,
 				BB3334E55A7868E28215B693 /* OCHamcrest.h in Headers */,
 				BB333EA439826DB6B82DDE54 /* HCGenericTestFailureReporter.h in Headers */,
@@ -1831,6 +1851,7 @@
 				24C5C1641C177F1C00C2BAFD /* HCIsDictionaryContaining.h in Headers */,
 				24C5C1651C177F1C00C2BAFD /* HCIsDictionaryContainingEntries.h in Headers */,
 				24C5C1661C177F1D00C2BAFD /* HCIsDictionaryContainingKey.h in Headers */,
+				48E0BEEA25C64644008C3A68 /* HCXCTestIssueFailureReporter.h in Headers */,
 				24C5C1671C177F1D00C2BAFD /* HCIsDictionaryContainingValue.h in Headers */,
 				24C5C1681C177F1D00C2BAFD /* HCIsEmptyCollection.h in Headers */,
 				24C5C1691C177F1D00C2BAFD /* HCIsIn.h in Headers */,
@@ -1917,6 +1938,7 @@
 				24C5C1B21C177F5900C2BAFD /* HCIsDictionaryContaining.h in Headers */,
 				24C5C1B31C177F5900C2BAFD /* HCIsDictionaryContainingEntries.h in Headers */,
 				24C5C1B41C177F5900C2BAFD /* HCIsDictionaryContainingKey.h in Headers */,
+				48E0BEEB25C64644008C3A68 /* HCXCTestIssueFailureReporter.h in Headers */,
 				24C5C1B51C177F5900C2BAFD /* HCIsDictionaryContainingValue.h in Headers */,
 				24C5C1B61C177F5A00C2BAFD /* HCIsEmptyCollection.h in Headers */,
 				24C5C1B71C177F5A00C2BAFD /* HCIsIn.h in Headers */,
@@ -2003,6 +2025,7 @@
 				24C5C2001C177F7300C2BAFD /* HCIsDictionaryContaining.h in Headers */,
 				24C5C2011C177F7300C2BAFD /* HCIsDictionaryContainingEntries.h in Headers */,
 				24C5C2021C177F7300C2BAFD /* HCIsDictionaryContainingKey.h in Headers */,
+				48E0BEEC25C64644008C3A68 /* HCXCTestIssueFailureReporter.h in Headers */,
 				24C5C2031C177F7400C2BAFD /* HCIsDictionaryContainingValue.h in Headers */,
 				24C5C2041C177F7400C2BAFD /* HCIsEmptyCollection.h in Headers */,
 				24C5C2051C177F7400C2BAFD /* HCIsIn.h in Headers */,
@@ -2289,6 +2312,7 @@
 				BB3330C8507C35031D255243 /* HCNumberAssert.m in Sources */,
 				BB3331D1B77DB4D834A7FDF5 /* HCOrderingComparison.m in Sources */,
 				BB33327669EF4A7B5889DBAD /* HCClassMatcher.m in Sources */,
+				48E0BEEE25C64644008C3A68 /* HCXCTestIssueFailureReporter.m in Sources */,
 				BB333FFD6EAB7828C98E11EE /* HCConformsToProtocol.m in Sources */,
 				BB333D632775553288FEA2FE /* HCHasDescription.m in Sources */,
 				BB33379125D73946A16F7B0D /* HCHasProperty.m in Sources */,
@@ -2373,6 +2397,7 @@
 				088FB0AC136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */,
 				74153B601A535FEA00FEF450 /* HCIsTrueFalseTests.m in Sources */,
 				74D7A7B61A2B902F00CD6CC0 /* DiagnosingMatcherTest.m in Sources */,
+				48E0BED725C64617008C3A68 /* HCXCTestIssueFailureReporterTests.m in Sources */,
 				0846B6E113EE5F9D00EA68E8 /* HCDescribedAsTests.m in Sources */,
 				0846B6E313EE5F9D00EA68E8 /* HCIsTests.m in Sources */,
 				482FE2D41E6DDC2B00AC0009 /* HCWrapInMatcherTests.m in Sources */,
@@ -2435,6 +2460,7 @@
 				BB333E932D2D03A14B886055 /* HCNumberAssert.m in Sources */,
 				BB333C23AD2D7D8BF49032C1 /* HCOrderingComparison.m in Sources */,
 				BB333D6CD37B858BD8F989F1 /* HCClassMatcher.m in Sources */,
+				48E0BEED25C64644008C3A68 /* HCXCTestIssueFailureReporter.m in Sources */,
 				BB3333AADA8EEF37F45AF012 /* HCConformsToProtocol.m in Sources */,
 				BB3337466031638452E372CC /* HCHasDescription.m in Sources */,
 				BB3334311D89D9395F45A48D /* HCHasProperty.m in Sources */,
@@ -2519,6 +2545,7 @@
 				088FB0AB136A6DEA00C191E1 /* HCStringContainsInOrderTests.m in Sources */,
 				74153B5F1A535FEA00FEF450 /* HCIsTrueFalseTests.m in Sources */,
 				74D7A7B51A2B902F00CD6CC0 /* DiagnosingMatcherTest.m in Sources */,
+				48E0BED625C64617008C3A68 /* HCXCTestIssueFailureReporterTests.m in Sources */,
 				0846B6E013EE5F9D00EA68E8 /* HCDescribedAsTests.m in Sources */,
 				0846B6E213EE5F9D00EA68E8 /* HCIsTests.m in Sources */,
 				482FE2D31E6DDC2B00AC0009 /* HCWrapInMatcherTests.m in Sources */,
@@ -2581,6 +2608,7 @@
 				24C5C0231C17794900C2BAFD /* HCTestFailureReporter.m in Sources */,
 				24C5C0241C17794900C2BAFD /* HCTestFailureReporterChain.m in Sources */,
 				24C5C0251C17794900C2BAFD /* HCXCTestFailureReporter.m in Sources */,
+				48E0BEEF25C64644008C3A68 /* HCXCTestIssueFailureReporter.m in Sources */,
 				24C5C0261C17794900C2BAFD /* HCCollect.m in Sources */,
 				24C5C0271C17794900C2BAFD /* HCInvocationMatcher.m in Sources */,
 				24C5C0281C17794900C2BAFD /* HCRequireNonNilObject.m in Sources */,
@@ -2663,6 +2691,7 @@
 				24C5C06D1C17796500C2BAFD /* HCTestFailureReporter.m in Sources */,
 				24C5C06E1C17796600C2BAFD /* HCTestFailureReporterChain.m in Sources */,
 				24C5C06F1C17796600C2BAFD /* HCXCTestFailureReporter.m in Sources */,
+				48E0BEF025C64644008C3A68 /* HCXCTestIssueFailureReporter.m in Sources */,
 				24C5C0701C17796600C2BAFD /* HCCollect.m in Sources */,
 				24C5C0711C17796600C2BAFD /* HCInvocationMatcher.m in Sources */,
 				24C5C0721C17796600C2BAFD /* HCRequireNonNilObject.m in Sources */,
@@ -2745,6 +2774,7 @@
 				24C5C0B71C17797200C2BAFD /* HCTestFailureReporter.m in Sources */,
 				24C5C0B81C17797200C2BAFD /* HCTestFailureReporterChain.m in Sources */,
 				24C5C0B91C17797200C2BAFD /* HCXCTestFailureReporter.m in Sources */,
+				48E0BEF125C64644008C3A68 /* HCXCTestIssueFailureReporter.m in Sources */,
 				24C5C0BA1C17797200C2BAFD /* HCCollect.m in Sources */,
 				24C5C0BB1C17797200C2BAFD /* HCInvocationMatcher.m in Sources */,
 				24C5C0BC1C17797200C2BAFD /* HCRequireNonNilObject.m in Sources */,

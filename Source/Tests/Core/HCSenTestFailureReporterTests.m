@@ -49,7 +49,7 @@
 @end
 
 
-// Used to swizzle HCXCTestFailureReporter to not handle failure, so it will fall through to HCSenTestFailureReporter.
+// Used to swizzle XCTest failure reporters to not handle failure, so it will fall through to HCSenTestFailureReporter.
 static BOOL doNotHandleFailure(id self, SEL _cmd, HCTestFailure *failure)
 {
     return NO;
@@ -63,6 +63,7 @@ static BOOL doNotHandleFailure(id self, SEL _cmd, HCTestFailure *failure)
 
 @implementation HCSenTestFailureReporterTests
 {
+    Class XCTestIssueFailureReporterClass;
     Class XCTestFailureReporterClass;
     SEL doNotHandleFailureSelector;
 }
@@ -70,20 +71,32 @@ static BOOL doNotHandleFailure(id self, SEL _cmd, HCTestFailure *failure)
 - (void)setUp
 {
     [super setUp];
+    XCTestIssueFailureReporterClass = NSClassFromString(@"HCXCTestIssueFailureReporter");
     XCTestFailureReporterClass = NSClassFromString(@"HCXCTestFailureReporter");
     doNotHandleFailureSelector = NSSelectorFromString(@"doNotHandleFailure:");
-    [self addDoNotHandleFailureMethodToXCTestFailureReporter];
+    [self addDoNotHandleFailureMethodToXCTestFailureReporters];
+    [self swizzleXCTestIssueFailureReporter];
     [self swizzleXCTestFailureReporter];
 }
 
 - (void)tearDown
 {
+    [self swizzleXCTestIssueFailureReporter];
     [self swizzleXCTestFailureReporter];
     [super tearDown];
 }
 
-- (void)addDoNotHandleFailureMethodToXCTestFailureReporter
+- (void)addDoNotHandleFailureMethodToXCTestFailureReporters
 {
+    if (![XCTestIssueFailureReporterClass instancesRespondToSelector:doNotHandleFailureSelector])
+    {
+        BOOL success = class_addMethod(
+                XCTestIssueFailureReporterClass,
+                doNotHandleFailureSelector,
+                (IMP)doNotHandleFailure,
+                "c@:@");
+        XCTAssertTrue(success);
+    }
     if (![XCTestFailureReporterClass instancesRespondToSelector:doNotHandleFailureSelector])
     {
         BOOL success = class_addMethod(
@@ -93,6 +106,13 @@ static BOOL doNotHandleFailure(id self, SEL _cmd, HCTestFailure *failure)
                 "c@:@");
         XCTAssertTrue(success);
     }
+}
+
+- (void)swizzleXCTestIssueFailureReporter
+{
+    Method originalMethod = class_getInstanceMethod(XCTestIssueFailureReporterClass, NSSelectorFromString(@"willHandleFailure:"));
+    Method swizzledMethod = class_getInstanceMethod(XCTestIssueFailureReporterClass, doNotHandleFailureSelector);
+    method_exchangeImplementations(originalMethod, swizzledMethod);
 }
 
 - (void)swizzleXCTestFailureReporter

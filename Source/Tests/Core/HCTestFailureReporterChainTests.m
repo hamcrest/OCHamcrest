@@ -19,11 +19,11 @@
     [super tearDown];
 }
 
-- (void)test_defaultChain_shouldPointToXCTestHandlerAsHeadOfChain
+- (void)test_defaultChain_shouldPointToXCTestIssueHandlerAsHeadOfChain
 {
     HCTestFailureReporter *chain = [HCTestFailureReporterChain reporterChain];
 
-    XCTAssertEqualObjects(NSStringFromClass([chain class]), @"HCXCTestFailureReporter");
+    XCTAssertEqualObjects(NSStringFromClass([chain class]), @"HCXCTestIssueFailureReporter");
     XCTAssertNotNil(chain.successor);
 }
 

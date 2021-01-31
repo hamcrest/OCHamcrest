@@ -6,6 +6,7 @@
 #import "HCGenericTestFailureReporter.h"
 #import "HCSenTestFailureReporter.h"
 #import "HCXCTestFailureReporter.h"
+#import "HCXCTestIssueFailureReporter.h"
 
 static HCTestFailureReporter *chainHead = nil;
 
@@ -16,11 +17,13 @@ static HCTestFailureReporter *chainHead = nil;
 {
     if (!chainHead)
     {
+        HCTestFailureReporter *xctestIssueReporter = [[HCXCTestIssueFailureReporter alloc] init];
         HCTestFailureReporter *xctestReporter = [[HCXCTestFailureReporter alloc] init];
         HCTestFailureReporter *ocunitReporter = [[HCSenTestFailureReporter alloc] init];
         HCTestFailureReporter *genericReporter = [[HCGenericTestFailureReporter alloc] init];
 
-        chainHead = xctestReporter;
+        chainHead = xctestIssueReporter;
+        xctestIssueReporter.successor = xctestReporter;
         xctestReporter.successor = ocunitReporter;
         ocunitReporter.successor = genericReporter;
     }
