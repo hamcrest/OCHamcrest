@@ -48,7 +48,7 @@
              detailedDescription:nil
                sourceCodeContext:sourceCodeContext
                  associatedError:nil
-                     attachments:[[NSArray alloc] init]];
+                     attachments:[NSArray array]];
     
     [failure.testCase recordIssue:issue];
 }
