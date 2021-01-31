@@ -1,3 +1,11 @@
+NEXT RELEASE
+------------
+
+**Features:**
+
+- Report mismatches using XCTIssue if available in XCTest.
+
+
 Version 7.1.2
 -------------
 _23 Sep 2019_
