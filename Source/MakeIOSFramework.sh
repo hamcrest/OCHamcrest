@@ -36,11 +36,14 @@ find "${IOS_FRAMEWORK}" -name '*.h' -print0 | xargs -0 perl -pi -e "${IMPORT_EXP
 rm "${IOS_FRAMEWORK}/OCHamcrest" "${IOS_FRAMEWORK}/Versions/Current/OCHamcrest"
 
 # Create a new library that is a fat library containing both static libraries.
+# Extract only x86 from simulator build because it now conflicts with device build ARM64.
 DEVICE_LIB="build/Release-iphoneos/libochamcrest.a"
 SIMULATOR_LIB="build/Release-iphonesimulator/libochamcrest.a"
+SIMULATOR_LIB_THIN="build/Release-iphonesimulator/libochamcrest-thin.a"
 OUTPUT_LIB="${IOS_FRAMEWORK}/Versions/Current/OCHamcrestIOS"
+lipo -extract x86_64 -output "${SIMULATOR_LIB_THIN}" "${SIMULATOR_LIB}"
 
-lipo -create "${DEVICE_LIB}" "${SIMULATOR_LIB}" -o "${OUTPUT_LIB}"
+lipo -create "${DEVICE_LIB}" "${SIMULATOR_LIB_THIN}" -o "${OUTPUT_LIB}"
 
 # Add a symlink, as required by the framework.
 ln -s Versions/Current/OCHamcrestIOS "${IOS_FRAMEWORK}/OCHamcrestIOS"
