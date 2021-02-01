@@ -2939,12 +2939,12 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 7.1.2;
+				CURRENT_PROJECT_VERSION = 7.2.0;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "OCHamcrest-Info.plist";
-				MARKETING_VERSION = 7.1.2;
+				MARKETING_VERSION = 7.2.0;
 				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.${PRODUCT_NAME}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2959,12 +2959,12 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 7.1.2;
+				CURRENT_PROJECT_VERSION = 7.2.0;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "OCHamcrest-Info.plist";
-				MARKETING_VERSION = 7.1.2;
+				MARKETING_VERSION = 7.2.0;
 				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.${PRODUCT_NAME}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3027,6 +3027,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 7.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.OCHamcrest.OCHamcrest-iOS";
 				PRODUCT_NAME = OCHamcrest;
 				SDKROOT = iphoneos;
@@ -3059,6 +3060,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 7.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.OCHamcrest.OCHamcrest-iOS";
 				PRODUCT_NAME = OCHamcrest;
 				SDKROOT = iphoneos;
@@ -3094,6 +3096,7 @@
 				INFOPLIST_FILE = "OCHamcrest-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 7.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.OCHamcrest.OCHamcrest-tvOS";
 				PRODUCT_NAME = OCHamcrest;
 				SDKROOT = appletvos;
@@ -3125,6 +3128,7 @@
 				INFOPLIST_FILE = "OCHamcrest-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 7.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.OCHamcrest.OCHamcrest-tvOS";
 				PRODUCT_NAME = OCHamcrest;
 				SDKROOT = appletvos;
@@ -3162,6 +3166,7 @@
 				INFOPLIST_FILE = "OCHamcrest-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 7.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.OCHamcrest.OCHamcrest-watchOS";
 				PRODUCT_NAME = OCHamcrest;
 				SDKROOT = watchos;
@@ -3194,6 +3199,7 @@
 				INFOPLIST_FILE = "OCHamcrest-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 7.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.OCHamcrest.OCHamcrest-watchOS";
 				PRODUCT_NAME = OCHamcrest;
 				SDKROOT = watchos;

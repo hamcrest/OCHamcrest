@@ -1,5 +1,6 @@
-NEXT RELEASE
-------------
+Version 7.2.0
+-------------
+_31 Jan 2021_
 
 **Features:**
 
