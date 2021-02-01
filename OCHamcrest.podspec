@@ -29,9 +29,10 @@ Pod::Spec.new do |s|
   s.author      = { 'Jon Reid' => 'jon@qualitycoding.org' }
   s.social_media_url = 'https://twitter.com/qcoding'
 
-  s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
+  s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
+  s.watchos.deployment_target = '2.0'
   s.source = { :git => 'https://github.com/hamcrest/OCHamcrest.git', :tag => 'v7.2.0' }
   s.source_files = 'Source/OCHamcrest.h', 'Source/Core/**/*.{h,m}', 'Source/Library/**/*.{h,m}'
   s.private_header_files = 'Source/Core/Helpers/HCRunloopRunner.h', 'Source/Core/Helpers/NSInvocation+OCHamcrest.h', 'Source/Core/Helpers/ReturnValueGetters/*.h', 'Source/Core/Helpers/TestFailureReporters/HCGenericTestFailureReporter.h', 'Source/Core/Helpers/TestFailureReporters/HCSenTestFailureReporter.h', 'Source/Core/Helpers/TestFailureReporters/HCXCTestFailureReporter.h'
