@@ -192,7 +192,7 @@ targets:
 target 'MyTests' do
   inherit! :search_paths
   use_frameworks!
-  pod 'OCHamcrest', '~> 7.0'
+  pod 'OCHamcrest', '~> 7.2'
 end
 ```
 
@@ -204,7 +204,7 @@ Use the following import:
 
 Add the following to your Cartfile:
 
-    github "hamcrest/OCHamcrest" ~> 7.0
+    github "hamcrest/OCHamcrest" ~> 7.2
 
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
 but with "Copy items into destination group's folder" disabled.
