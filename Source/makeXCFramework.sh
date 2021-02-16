@@ -12,7 +12,7 @@ WATCH_SIMULATOR_ARCHIVE_PATH="./build/archives/watch_sim.xcarchive"
 
 # Archive platform specific frameworks
 
-xcodebuild archive -scheme ${FRAMEWORK_NAME} -archivePath ${MACOS_ARCHIVE_PATH} SKIP_INSTALL=NO
+xcodebuild archive -scheme ${FRAMEWORK_NAME} -archivePath ${MACOS_ARCHIVE_PATH} -sdk macosx SKIP_INSTALL=NO
 xcodebuild archive -scheme ${FRAMEWORK_NAME}-iOS -archivePath ${IOS_ARCHIVE_PATH} -sdk iphoneos SKIP_INSTALL=NO
 xcodebuild archive -scheme ${FRAMEWORK_NAME}-iOS -archivePath ${IOS_SIMULATOR_ARCHIVE_PATH} -sdk iphonesimulator SKIP_INSTALL=NO
 xcodebuild archive -scheme ${FRAMEWORK_NAME}-tvOS -archivePath ${TV_ARCHIVE_PATH} -sdk appletvos SKIP_INSTALL=NO
