@@ -1,3 +1,19 @@
+NEXT RELEASE
+------------
+
+- Packaged pre-built binary as single XCFramework containing 7 architectures:
+    * macOS
+    * iOS device
+    * iOS simulator
+    * tvOS device
+    * tvOS simulator
+    * watchOS device
+    * watchOS simulator
+  This means iOS projects that use the pre-built binary should import OCHamcrest instead of
+  OCHamcrestIOS. And if your macOS project has a Copy Files build phase to copy the OCHamcrest
+  framework, you can remove that phase.
+
+
 Version 7.2.0
 -------------
 _31 Jan 2021_
