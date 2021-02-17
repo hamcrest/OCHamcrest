@@ -12,6 +12,7 @@ _16 Feb 2021_
     * watchOS simulator
   iOS projects that use the pre-built binary should now import OCHamcrest instead of OCHamcrestIOS.
   macOS projects should remove the Copy Files build phase used to copy the OCHamcrest framework.
+  _Thanks to: Mateusz Szklarek_
 
 
 Version 7.2.0
