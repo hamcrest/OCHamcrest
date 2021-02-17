@@ -1,4 +1,4 @@
-@import OCHamcrestIOS; // Specify OCHamcrestIOS for prebuilt framework
+@import OCHamcrest;
 @import XCTest;
 
 

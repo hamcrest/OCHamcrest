@@ -1,4 +1,4 @@
-@import OCHamcrest; // Specify OCHamcrest when using Cocoapods
+@import OCHamcrest;
 @import XCTest;
 
 
