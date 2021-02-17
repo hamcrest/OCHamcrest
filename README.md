@@ -192,47 +192,32 @@ targets:
 target 'MyTests' do
   inherit! :search_paths
   use_frameworks!
-  pod 'OCHamcrest', '~> 7.2'
+  pod 'OCHamcrest', '~> 8.0'
 end
 ```
-
-Use the following import:
-
-    @import OCHamcrest;
 
 ### Carthage
 
 Add the following to your Cartfile:
 
-    github "hamcrest/OCHamcrest" ~> 7.2
+    github "hamcrest/OCHamcrest" ~> 8.0
 
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
 but with "Copy items into destination group's folder" disabled.
 
 ### Prebuilt Frameworks
 
-Prebuilt binaries are available on [GitHub](https://github.com/hamcrest/OCHamcrest/releases/). The
-binaries are packaged as frameworks:
+A prebuilt binary is available on [GitHub](https://github.com/hamcrest/OCHamcrest/releases/). The
+binary is packaged as OCHamcrest.xcframework, containing these architectures:
+  * macOS
+  * iOS device
+  * iOS simulator
+  * tvOS device
+  * tvOS simulator
+  * watchOS device
+  * watchOS simulator
 
-* __OCHamcrestIOS.framework__ for iOS development
-* __OCHamcrest.framework__ for macOS development
-
-Drag the appropriate framework into your project, specifying "Copy items into destination group's
-folder". Then specify `-ObjC` in your "Other Linker Flags".
-
-#### iOS Development:
-
-Use the following import:
-
-    @import OCHamcrestIOS;
-
-#### macOS Development:
-
-Add a "Copy Files" build phase to copy OCHamcrest.framework to your Products Directory.
-
-Use the following import:
-
-    @import OCHamcrest;
+Drag the XCFramework into your project.
 
 ### Build Your Own
 
