@@ -1,6 +1,6 @@
 Version 8.0.0
 -------------
-_16 Feb 2021_
+_18 Feb 2021_
 
 - Packaged pre-built binary as single XCFramework containing 7 architectures:
     * macOS
