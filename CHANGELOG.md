@@ -1,6 +1,6 @@
 Version 8.0.0
 -------------
-_18 Feb 2021_
+_19 Feb 2021_
 
 - Packaged pre-built binary as single XCFramework containing 7 architectures:
     * macOS
@@ -16,6 +16,11 @@ _18 Feb 2021_
   - macOS projects should remove OCHamcrest from the Copy Files build phase.
 
   _Thanks to: Mateusz Szklarek_
+
+- Simplified project settings. In particular:
+    * Removed iOS Static Library target.
+    * Removed iOS-specific test target.
+    * Simplified Product Bundle Identifiers.
 
 
 Version 7.2.0
