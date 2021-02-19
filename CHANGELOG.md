@@ -13,7 +13,7 @@ _18 Feb 2021_
   
   Note:
   - iOS projects that use the pre-built binary should now import OCHamcrest instead of OCHamcrestIOS.
-  - macOS projects should remove the Copy Files build phase used to copy the OCHamcrest framework.
+  - macOS projects should remove OCHamcrest from the Copy Files build phase.
 
   _Thanks to: Mateusz Szklarek_
 
