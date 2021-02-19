@@ -2374,6 +2374,7 @@
 				MARKETING_VERSION = 8.0.0;
 				PRODUCT_NAME = OCHamcrest;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -2463,7 +2464,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
@@ -2496,7 +2496,6 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
-				VALIDATE_PRODUCT = YES;
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
@@ -2531,7 +2530,6 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
