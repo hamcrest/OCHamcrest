@@ -14,6 +14,7 @@ _19 Feb 2021_
   Note:
   - iOS projects that use the pre-built binary should now import OCHamcrest instead of OCHamcrestIOS.
   - macOS projects should remove OCHamcrest from the Copy Files build phase.
+  - For Carthage builds, specify --use-xcframeworks
 
   _Thanks to: Mateusz Szklarek_
 
