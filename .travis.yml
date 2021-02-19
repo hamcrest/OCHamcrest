@@ -7,7 +7,8 @@ before_install:
 script:
   - set -o pipefail;
   - xcodebuild test -project Source/OCHamcrest.xcodeproj -scheme OCHamcrest -sdk macosx | xcpretty
-  - xcodebuild test -project Source/OCHamcrest.xcodeproj -scheme libochamcrest -sdk iphonesimulator -destination "platform=iOS Simulator,OS=latest,name=iPhone 8" | xcpretty
+  - xcodebuild build -project Source/OCHamcrest.xcodeproj -scheme OCHamcrest-iOS -sdk iphonesimulator -destination "platform=iOS Simulator,OS=latest,name=iPhone 8" | xcpretty
+  - xcodebuild build -project Source/OCHamcrest.xcodeproj -scheme OCHamcrest-tvOS -sdk iphonesimulator -destination "platform=tvOS Simulator,OS=latest,name=Apple TV" | xcpretty
   - pod spec lint --quick
 
 after_success:
