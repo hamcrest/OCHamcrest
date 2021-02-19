@@ -2339,6 +2339,7 @@
 				INFOPLIST_FILE = "OCHamcrest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MARKETING_VERSION = 8.0.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2370,6 +2371,7 @@
 				INFOPLIST_FILE = "OCHamcrest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MARKETING_VERSION = 8.0.0;
 				PRODUCT_NAME = OCHamcrest;
@@ -2443,7 +2445,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.OCHamcrest.OCHamcrest-iOS";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2458,7 +2459,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.OCHamcrest.OCHamcrest-iOS";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2473,7 +2473,6 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.OCHamcrest.OCHamcrest-tvOS";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -2488,7 +2487,6 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.OCHamcrest.OCHamcrest-tvOS";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -2504,7 +2502,6 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.OCHamcrest.OCHamcrest-watchOS";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2520,7 +2517,6 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hamcrest.OCHamcrest.OCHamcrest-watchOS";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
