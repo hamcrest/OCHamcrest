@@ -3,7 +3,7 @@
 What is OCHamcrest?
 -------------------
 
-[![Build Status](https://travis-ci.org/hamcrest/OCHamcrest.svg?branch=main)](https://travis-ci.org/hamcrest/OCHamcrest)
+[![Build Status](https://github.com/hamcrest/OCHamcrest/actions/workflows/build.yml/badge.svg)](https://github.com/hamcrest/OCHamcrest/actions/workflows/build.yml)
 [![Coverage Status](https://coveralls.io/repos/hamcrest/OCHamcrest/badge.svg?branch=main)](https://coveralls.io/r/hamcrest/OCHamcrest?branch=main)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Cocoapods Version](https://cocoapod-badges.herokuapp.com/v/OCHamcrest/badge.png)](https://cocoapods.org/pods/OCHamcrest)
