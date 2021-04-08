@@ -2391,7 +2391,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -2404,7 +2403,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
