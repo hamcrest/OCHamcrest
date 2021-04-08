@@ -20,20 +20,21 @@ jobs:
       - name: Show current version of Xcode
         run: xcodebuild -version
       - name: Build
-        run: set -o pipefail && xcodebuild build -project $project -scheme '${{ matrix.run-config['scheme'] }}' -sdk '${{ matrix.run-config['sdk'] }}' -destination '${{ matrix.run-config['destination'] }}' | xcpretty
+        run: set -o pipefail && xcodebuild build -project '${{ env.project }}' -scheme '${{ matrix.run-config['scheme'] }}' -sdk '${{ matrix.run-config['sdk'] }}' -destination '${{ matrix.run-config['destination'] }}' | xcpretty
 
   test:
     name: Build, test, report coverage
     runs-on: macos-latest
     env:
       scheme: OCHamcrest
+      sdk: macosx
     steps:
       - name: Check out project
         uses: actions/checkout@v2
       - name: Show current version of Xcode
         run: xcodebuild -version
       - name: Build & test
-        run: set -o pipefail && xcodebuild test -project $project -scheme $scheme -sdk macosx | xcpretty
+        run: set -o pipefail && xcodebuild test -project '${{ env.project }}' -scheme '${{ env.scheme }}' -sdk '${{ env.sdk }}' | xcpretty
       - name: Install gems
         run: |
           bundle config path vendor/bundle
