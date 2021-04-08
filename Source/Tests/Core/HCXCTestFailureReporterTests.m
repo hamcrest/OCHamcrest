@@ -21,6 +21,9 @@
 
 @implementation HCXCTestFailureReporterTests
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
+
 - (void)recordFailureWithDescription:(NSString *)description
                               inFile:(NSString *)filePath
                               atLine:(NSUInteger)lineNumber
@@ -37,6 +40,8 @@
         self.failureExpected = expected;
     }
 }
+
+#pragma clang diagnostic pop
 
 - (void)testXCTestCase_WithMatch_ShouldNotRecordFailure
 {

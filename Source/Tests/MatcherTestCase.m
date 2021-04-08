@@ -17,6 +17,9 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
 
 @implementation MatcherTestCase
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 - (void)failWithMessage:(NSString *)message
         inFile:(char const *)fileName atLine:(NSUInteger)lineNumber
 {
@@ -28,6 +31,8 @@ static NSString *mismatchDescription(id <HCMatcher> matcher, id arg)
 {
     [self recordFailureWithDescription:message inFile:@(fileName) atLine:lineNumber expected:YES];
 }
+
+#pragma clang diagnostic pop
 
 - (void)assertMatcherSafeWithNil:(id <HCMatcher>)matcher
         inFile:(const char *)fileName atLine:(NSUInteger)lineNumber
