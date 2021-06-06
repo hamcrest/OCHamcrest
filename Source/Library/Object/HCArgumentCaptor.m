@@ -36,7 +36,7 @@
     {
         id value = item ?: [NSNull null];
         if ([value conformsToProtocol:@protocol(NSCopying)])
-            value = [value copy];
+            value = [value copyWithZone:nil];
         [self.values addObject:value];
     }
 }
