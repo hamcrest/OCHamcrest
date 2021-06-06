@@ -1,3 +1,9 @@
+NEXT RELEASE
+------------
+
+- Fix HCArgumentCaptor issue capturing objects that don't implement -copy.  _Thanks to: kmcbride_
+
+
 Version 8.0.0
 -------------
 _19 Feb 2021_
