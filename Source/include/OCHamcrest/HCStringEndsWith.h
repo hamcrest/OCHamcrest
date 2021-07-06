@@ -1,0 +1,1 @@
+../../Library/Text/HCStringEndsWith.h

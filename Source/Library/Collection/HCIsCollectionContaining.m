@@ -3,7 +3,7 @@
 
 #import "HCIsCollectionContaining.h"
 
-#import "HCAllOf.h"
+#import <OCHamcrest/HCAllOf.h>
 #import "HCCollect.h"
 #import "HCRequireNonNilObject.h"
 #import "HCWrapInMatcher.h"
