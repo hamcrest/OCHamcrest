@@ -3,7 +3,7 @@
 
 #import "HCHasCount.h"
 
-#import "HCIsEqual.h"
+#import <OCHamcrest/HCIsEqual.h>
 
 
 @interface HCHasCount ()

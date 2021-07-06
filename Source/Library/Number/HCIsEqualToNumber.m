@@ -3,7 +3,7 @@
 
 #import "HCIsEqualToNumber.h"
 
-#import "HCIsEqual.h"
+#import <OCHamcrest/HCIsEqual.h>
 
 
 FOUNDATION_EXPORT id HC_equalToChar(char value)

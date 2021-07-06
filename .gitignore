@@ -8,3 +8,5 @@ build/
 project.xcworkspace/
 xcuserdata/
 compile_commands.json
+.swiftpm
+.build

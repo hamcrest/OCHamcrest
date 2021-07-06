@@ -3,7 +3,7 @@
 
 #import "HCNumberAssert.h"
 
-#import "HCAssertThat.h"
+#import <OCHamcrest/HCAssertThat.h>
 
 
 FOUNDATION_EXPORT void HC_assertThatBoolWithLocation(id testCase, BOOL actual,

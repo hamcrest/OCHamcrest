@@ -3,7 +3,7 @@
 
 #import "HCIsEmptyCollection.h"
 
-#import "HCIsEqual.h"
+#import <OCHamcrest/HCIsEqual.h>
 
 
 @implementation HCIsEmptyCollection

@@ -1,0 +1,1 @@
+../../Core/Helpers/TestFailureReporters/HCTestFailureReporter.h

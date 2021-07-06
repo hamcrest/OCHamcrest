@@ -3,7 +3,7 @@
 
 #import "HCWrapInMatcher.h"
 
-#import "HCIsEqual.h"
+#import <OCHamcrest/HCIsEqual.h>
 
 
 _Nullable id <HCMatcher> HCWrapInMatcher(_Nullable id matcherOrValue)

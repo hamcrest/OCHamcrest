@@ -3,7 +3,7 @@
 
 #import "HCIsNil.h"
 
-#import "HCIsNot.h"
+#import <OCHamcrest/HCIsNot.h>
 
 
 @implementation HCIsNil

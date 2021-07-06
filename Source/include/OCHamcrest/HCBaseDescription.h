@@ -1,0 +1,1 @@
+../../Core/HCBaseDescription.h
