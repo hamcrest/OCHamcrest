@@ -3,7 +3,7 @@
 
 #import "HCIsCollectionOnlyContaining.h"
 
-#import "HCAnyOf.h"
+#import <OCHamcrest/HCAnyOf.h>
 #import "HCCollect.h"
 
 
