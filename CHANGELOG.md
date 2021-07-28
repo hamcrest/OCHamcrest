@@ -1,7 +1,9 @@
 NEXT RELEASE
 ------------
 
-- Fix HCArgumentCaptor issue capturing objects that don't implement -copy.  _Thanks to: kmcbride_
+- Fix HCArgumentCaptor issue capturing objects that don't implement -copy. _Thanks to: kmcbride_
+- Add support for Swift Package Manager. _Thanks to: nrudnyk_
+- Add Mac Catalyst to XCFramework-supported architectures in build script `makeXCFramework.sh`
 
 
 Version 8.0.0
@@ -262,7 +264,7 @@ _11 Sep 2015_
 
 **Fixes:**
 
-- Fixed "Incompatible pointer types sending 'Class' to parameter of type 'NSString *'" warning on
+- Fixed "Incompatible pointer types sending 'Class' to parameter of type 'NSString \*'" warning on
   `instanceOf`.
 
 **Features:**
