@@ -10,3 +10,4 @@ xcuserdata/
 compile_commands.json
 .swiftpm
 .build
+Examples/MacExample-SwiftPackageManager/Package.resolved
