@@ -1,4 +1,5 @@
 target 'ExampleTests' do
   inherit! :search_paths
+  use_frameworks!
   pod 'OCHamcrest', '~> 8.0'
 end
