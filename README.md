@@ -179,8 +179,36 @@ Try the [native Swift implementation of Hamcrest](https://github.com/nschum/Swif
 How do I add OCHamcrest to my project?
 --------------------------------------
 
-The Examples folder shows projects using OCHamcrest either through CocoaPods or through the prebuilt
-frameworks, for iOS and macOS development.
+The [Examples](https://github.com/hamcrest/OCHamcrest/tree/main/Examples) folder shows projects
+ready to use OCHamcrest via Swift Package Manager, CocoaPods, or through the prebuilt framework,
+for iOS and macOS development.
+
+### Swift Package Manager
+
+Include an OCHamcrest package in your Package.swift manifest's array of `dependencies`:
+
+```swift
+dependencies: [
+    .package(
+        name: "OCHamcrest",
+        url: "https://github.com/hamcrest/OCHamcrest",
+        .branch("main")
+    ),
+]
+```
+
+Then add OCHamcrest to the dependencies of your `.testTarget`:
+
+```swift
+.testTarget(
+    name: "ExampleTests",
+    dependencies: [
+        "Example",
+        "OCHamcrest",
+    ]
+)
+
+```
 
 ### CocoaPods
 
