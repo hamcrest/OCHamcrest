@@ -205,11 +205,12 @@ Add the following to your Cartfile:
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
 but with "Copy items into destination group's folder" disabled.
 
-### Prebuilt Frameworks
+### Prebuilt Framework
 
 A prebuilt binary is available on [GitHub](https://github.com/hamcrest/OCHamcrest/releases/). The
 binary is packaged as OCHamcrest.xcframework, containing these architectures:
   * macOS
+  * Mac Catalyst
   * iOS device
   * iOS simulator
   * tvOS device
