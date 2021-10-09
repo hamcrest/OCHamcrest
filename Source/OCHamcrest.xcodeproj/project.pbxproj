@@ -751,7 +751,6 @@
 		0876038D13440B80001B439B /* OCHamcrest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OCHamcrest-Info.plist"; sourceTree = "<group>"; };
 		0876039113440BB0001B439B /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringContainsInOrderTests.m; sourceTree = "<group>"; };
-		08F39BAA1711426200745958 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XcodeWarnings.xcconfig; sourceTree = "<group>"; };
 		0E5ECE6B1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContainingInRelativeOrder.h; sourceTree = "<group>"; };
 		0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionContainingInRelativeOrder.m; sourceTree = "<group>"; };
@@ -1018,7 +1017,6 @@
 		087601D613440806001B439B = {
 			isa = PBXGroup;
 			children = (
-				08F39BAA1711426200745958 /* CHANGELOG.md */,
 				BB33356A6185FA4F1B6E240F /* OCHamcrest.h */,
 				BB3336D16B2F9F646F4DE5A9 /* Core */,
 				BB333E40286A981A2343E031 /* Library */,
