@@ -1,9 +1,15 @@
-NEXT RELEASE
-------------
+Version 9.0.0
+-------------
+_09 Oct 2021_
 
-- Fix HCArgumentCaptor issue capturing objects that don't implement -copy. _Thanks to: kmcbride_
+**Features:**
+
 - Add support for Swift Package Manager. _Thanks to: nrudnyk_
 - Add Mac Catalyst to XCFramework-supported architectures in build script `makeXCFramework.sh`
+
+**Fixes:**
+
+- Fix HCArgumentCaptor issue capturing objects that don't implement -copy. _Thanks to: kmcbride_
 
 
 Version 8.0.0
