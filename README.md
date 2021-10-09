@@ -192,7 +192,7 @@ dependencies: [
     .package(
         name: "OCHamcrest",
         url: "https://github.com/hamcrest/OCHamcrest",
-        .branch("main")
+        .upToNextMajor(from: "9.0.0")
     ),
 ]
 ```
@@ -220,7 +220,7 @@ targets:
 target 'MyTests' do
   inherit! :search_paths
   use_frameworks!
-  pod 'OCHamcrest', '~> 8.0'
+  pod 'OCHamcrest', '~> 9.0'
 end
 ```
 
@@ -228,7 +228,7 @@ end
 
 Add the following to your Cartfile:
 
-    github "hamcrest/OCHamcrest" ~> 8.0
+    github "hamcrest/OCHamcrest" ~> 9.0
 
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
 but with "Copy items into destination group's folder" disabled.

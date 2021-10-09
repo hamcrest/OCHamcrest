@@ -14,7 +14,7 @@ let package = Package(
         .package(
             name: "OCHamcrest",
             url: "https://github.com/hamcrest/OCHamcrest",
-            .branch("main")
+            .upToNextMajor(from: "9.0.0")
         ),
     ],
     targets: [
