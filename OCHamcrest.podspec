@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = 'OCHamcrest'
-  s.version     = '8.0.0'
+  s.version     = '9.0.0'
   s.summary     = 'Hamcrest for Objective-C: Powerful, combinable, extensible matchers for verification.'
   s.description = <<-DESC
                       OCHamcrest is:
