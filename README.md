@@ -203,7 +203,19 @@ dependencies: [
 
 Then add OCHamcrest to the dependencies of your `.testTarget`:
 
-snippet: swiftpm-use-dependencies
+<!-- snippet: swiftpm-use-dependencies -->
+<a id='snippet-swiftpm-use-dependencies'></a>
+```swift
+.testTarget(
+    name: "ExampleTests",
+    dependencies: [
+        "Example",
+        "OCHamcrest",
+    ]
+),
+```
+<sup><a href='/Examples/MacExample-SwiftPackageManager/Package.swift#L28-L36' title='Snippet source file'>snippet source</a> | <a href='#snippet-swiftpm-use-dependencies' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
 
 ### CocoaPods
 
