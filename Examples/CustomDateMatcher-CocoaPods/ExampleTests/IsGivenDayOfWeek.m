@@ -33,7 +33,7 @@ static NSString* const dayAsString[] =
 @end
 
 
-id onASaturday()
+id onASaturday(void)
 {
     return [[IsGivenDayOfWeek alloc] initWithDayOfWeek:7];
 }

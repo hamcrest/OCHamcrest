@@ -12,4 +12,4 @@
 
 
 // Factory function to generate Saturday matcher.
-FOUNDATION_EXPORT id onASaturday();
+FOUNDATION_EXPORT id onASaturday(void);
