@@ -203,16 +203,7 @@ dependencies: [
 
 Then add OCHamcrest to the dependencies of your `.testTarget`:
 
-```swift
-.testTarget(
-    name: "ExampleTests",
-    dependencies: [
-        "Example",
-        "OCHamcrest",
-    ]
-)
-
-```
+snippet: swiftpm-use-dependencies
 
 ### CocoaPods
 

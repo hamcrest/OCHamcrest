@@ -25,6 +25,7 @@ let package = Package(
             dependencies: [],
             publicHeadersPath: "./"
         ),
+        // begin-snippet: swiftpm-use-dependencies
         .testTarget(
             name: "ExampleTests",
             dependencies: [
@@ -32,5 +33,6 @@ let package = Package(
                 "OCHamcrest",
             ]
         ),
+        // end-snippet
     ]
 )
