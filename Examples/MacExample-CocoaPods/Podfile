@@ -1,5 +1,7 @@
+# begin-snippet: podfile
 target 'ExampleTests' do
   inherit! :search_paths
   use_frameworks!
   pod 'OCHamcrest', '~> 9.0'
 end
+# end-snippet
