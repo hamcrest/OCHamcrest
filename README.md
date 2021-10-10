@@ -187,15 +187,7 @@ for iOS and macOS development.
 
 Include an OCHamcrest package in your Package.swift manifest's array of `dependencies`:
 
-```swift
-dependencies: [
-    .package(
-        name: "OCHamcrest",
-        url: "https://github.com/hamcrest/OCHamcrest",
-        .upToNextMajor(from: "9.0.0")
-    ),
-]
-```
+snippet: swiftpm-declare-dependencies
 
 Then add OCHamcrest to the dependencies of your `.testTarget`:
 

@@ -10,6 +10,7 @@ let package = Package(
             name: "Example",
             targets: ["Example"]),
     ],
+    // begin-snippet: swiftpm-declare-dependencies
     dependencies: [
         .package(
             name: "OCHamcrest",
@@ -17,6 +18,7 @@ let package = Package(
             .upToNextMajor(from: "9.0.0")
         ),
     ],
+    // end-snippet
     targets: [
         .target(
             name: "Example",
