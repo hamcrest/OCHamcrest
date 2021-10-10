@@ -223,7 +223,13 @@ If you want to add OCHamcrest using Cocoapods then add the following dependency 
 Most people will want OCHamcrest in their test targets, and not include any pods from their main
 targets:
 
-snippet: podfile
+```ruby
+target 'MyTests' do
+  inherit! :search_paths
+  use_frameworks!
+  pod 'OCHamcrest', '~> 9.0'
+end
+```
 
 ### Carthage
 
