@@ -9,7 +9,7 @@ jobs:
       - name: Run MarkdownSnippets
         run: |
           dotnet tool install --global MarkdownSnippets.Tool
-          mdsnippets ${GITHUB_WORKSPACE} -u "https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift"
+          mdsnippets ${GITHUB_WORKSPACE}
 
         shell: bash
       - name: Push changes
