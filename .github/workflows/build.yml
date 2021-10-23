@@ -34,7 +34,7 @@ jobs:
       - name: Show current version of Xcode
         run: xcodebuild -version
       - name: Build & test
-        run: xcodebuild test -project '${{ env.project }}' -scheme '${{ env.scheme }}' -sdk '${{ env.sdk }}' -resultBundlePath TestResults
+        run: set -o pipefail && xcodebuild test -project '${{ env.project }}' -scheme '${{ env.scheme }}' -sdk '${{ env.sdk }}' -resultBundlePath TestResults | xcpretty
       - name: Test report
         uses: kishikawakatsumi/xcresulttool@v1.0.3
         with:
