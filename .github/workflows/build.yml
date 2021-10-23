@@ -35,6 +35,11 @@ jobs:
         run: xcodebuild -version
       - name: Build & test
         run: set -o pipefail && xcodebuild test -project '${{ env.project }}' -scheme '${{ env.scheme }}' -sdk '${{ env.sdk }}' -resultBundlePath TestResults | xcpretty
+      - name: Test report
+        uses: kishikawakatsumi/xcresulttool@v1.0.3
+        with:
+          path: TestResults.xcresult
+        if: success() || failure()
       - name: Install gems
         run: |
           bundle config path vendor/bundle
