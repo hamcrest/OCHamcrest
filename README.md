@@ -180,8 +180,7 @@ How do I add OCHamcrest to my project?
 --------------------------------------
 
 The [Examples](https://github.com/hamcrest/OCHamcrest/tree/main/Examples) folder shows projects
-ready to use OCHamcrest via Swift Package Manager, CocoaPods, or through the prebuilt framework,
-for iOS and macOS development.
+ready to use OCHamcrest via Swift Package Manager, CocoaPods, or through the prebuilt framework.
 
 ### Swift Package Manager
 
