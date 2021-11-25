@@ -192,13 +192,12 @@ Include an OCHamcrest package in your Package.swift manifest's array of `depende
 ```swift
 dependencies: [
     .package(
-        name: "OCHamcrest",
         url: "https://github.com/hamcrest/OCHamcrest",
         .upToNextMajor(from: "9.0.0")
     ),
 ],
 ```
-<sup><a href='/Examples/MacExample-SwiftPackageManager/Package.swift#L13-L21' title='Snippet source file'>snippet source</a> | <a href='#snippet-swiftpm-declare-dependencies' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/Examples/MacExample-SwiftPackageManager/Package.swift#L13-L20' title='Snippet source file'>snippet source</a> | <a href='#snippet-swiftpm-declare-dependencies' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Then add OCHamcrest to the dependencies of your `.testTarget`:
@@ -214,7 +213,7 @@ Then add OCHamcrest to the dependencies of your `.testTarget`:
     ]
 ),
 ```
-<sup><a href='/Examples/MacExample-SwiftPackageManager/Package.swift#L28-L36' title='Snippet source file'>snippet source</a> | <a href='#snippet-swiftpm-use-dependencies' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/Examples/MacExample-SwiftPackageManager/Package.swift#L27-L35' title='Snippet source file'>snippet source</a> | <a href='#snippet-swiftpm-use-dependencies' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ### CocoaPods
