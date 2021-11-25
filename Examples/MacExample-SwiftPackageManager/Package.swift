@@ -13,7 +13,6 @@ let package = Package(
     // begin-snippet: swiftpm-declare-dependencies
     dependencies: [
         .package(
-            name: "OCHamcrest",
             url: "https://github.com/hamcrest/OCHamcrest",
             .upToNextMajor(from: "9.0.0")
         ),
