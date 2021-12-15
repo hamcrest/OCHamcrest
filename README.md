@@ -1,7 +1,6 @@
 ![ochamcrest](http://hamcrest.org/images/logo.jpg)
 
-What is OCHamcrest?
--------------------
+# What is OCHamcrest?
 
 [![Build Status](https://github.com/hamcrest/OCHamcrest/actions/workflows/build.yml/badge.svg)](https://github.com/hamcrest/OCHamcrest/actions/workflows/build.yml)
 [![Coverage Status](https://coveralls.io/repos/hamcrest/OCHamcrest/badge.svg)](https://coveralls.io/r/hamcrest/OCHamcrest)
@@ -28,8 +27,8 @@ for writing unit tests that are expressive and flexible.
     * [Prebuilt Framework](#prebuilt-framework)
     * [Build Your Own](#build-your-own)<!-- endToc -->
 
-My first OCHamcrest test
-------------------------
+
+## My first OCHamcrest test
 
 We'll start by writing a very simple Xcode unit test, but instead of using XCTest's
 `XCTAssertEqualObjects` function, we'll use OCHamcrest's `assertThat` construct and a predefined
@@ -66,8 +65,7 @@ optional short syntax is provided by default. For example, instead of writing `H
 simply write `assertThat`.
 
 
-Predefined matchers
--------------------
+## Predefined matchers
 
 OCHamcrest comes with a library of useful matchers:
 
@@ -140,8 +138,7 @@ example, `only_contains(endsWith(@"."))` will match any collection where every
 item is a string ending with period.
 
 
-Syntactic sugar
----------------
+## Syntactic sugar
 
 OCHamcrest strives to make your tests as readable as possible. For example, the `is` matcher is a
 wrapper that doesn't add any extra behavior to the underlying matcher. The following assertions are
@@ -157,8 +154,7 @@ The last form is allowed since `is` wraps non-matcher arguments with `equalTo`. 
 take matchers as arguments provide similar shortcuts, wrapping non-matcher arguments in `equalTo`.
 
 
-How can I assert on an asynchronous call?
------------------------------------------
+## How can I assert on an asynchronous call?
 
 `assertWithTimeout` will keep evaluating an expression until the matcher is satisfied or a timeout
 is reached. For example,
@@ -171,22 +167,19 @@ This repeatedly checks for this string to evaluate to "expected" before timing o
 `thatEventually` is a convenience macro to create a block.
 
 
-Writing custom matchers
------------------------
+## Writing custom matchers
 
 OCHamcrest comes bundled with lots of useful matchers, but you'll probably find that you need to
 create your own from time to time to fit your testing needs. See the
 ["Writing Custom Matchers" guide for more information](https://github.com/hamcrest/OCHamcrest/wiki/Writing-Custom-Matchers).
 
 
-What about Swift?
------------------
+## What about Swift?
 
 Try the [native Swift implementation of Hamcrest](https://github.com/nschum/SwiftHamcrest).
 
 
-How do I add OCHamcrest to my project?
---------------------------------------
+## How do I add OCHamcrest to my project?
 
 The [Examples](https://github.com/hamcrest/OCHamcrest/tree/main/Examples) folder shows projects
 ready to use OCHamcrest via Swift Package Manager, CocoaPods, or through the prebuilt framework.
