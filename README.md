@@ -150,8 +150,7 @@ another matcher, so matchers can be composed for greater flexibility. For
 example, `only_contains(endsWith(@"."))` will match any collection where every
 item is a string ending with period.
 
-
-## Syntactic Sugar
+### Syntactic Sugar
 
 OCHamcrest strives to make your tests as readable as possible. For example, the `is` matcher is a
 wrapper that doesn't add any extra behavior to the underlying matcher. The following assertions are
@@ -167,7 +166,9 @@ The last form is allowed since `is` wraps non-matcher arguments with `equalTo`. 
 take matchers as arguments provide similar shortcuts, wrapping non-matcher arguments in `equalTo`.
 
 
-## How Can I Assert on an Asynchronous Call?
+## Common Questions
+
+### How Can I Assert on an Asynchronous Call?
 
 `assertWithTimeout` will keep evaluating an expression until the matcher is satisfied or a timeout
 is reached. For example,
@@ -179,15 +180,13 @@ assertWithTimeout(5, thatEventually(self.someString), is(@"expected"));
 This repeatedly checks for this string to evaluate to "expected" before timing out after 5 seconds.
 `thatEventually` is a convenience macro to create a block.
 
-
-## Writing Custom Matchers
+### Can I Add Custom Matchers?
 
 OCHamcrest comes bundled with lots of useful matchers, but you'll probably find that you need to
 create your own from time to time to fit your testing needs. See the
 ["Writing Custom Matchers" guide for more information](https://github.com/hamcrest/OCHamcrest/wiki/Writing-Custom-Matchers).
 
-
-## What About Swift?
+### What About Swift?
 
 Try the [native Swift implementation of Hamcrest](https://github.com/nschum/SwiftHamcrest).
 
