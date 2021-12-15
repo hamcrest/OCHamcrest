@@ -76,7 +76,7 @@ simply write `assertThat`.
 
 OCHamcrest comes with a library of useful matchers:
 
-* Object
+### Object
 
   * `conformsTo` - match object that conforms to protocol
   * `equalTo` - match equal object
@@ -89,7 +89,7 @@ OCHamcrest comes with a library of useful matchers:
   * `throwsException` - match block that throws an exception
   * HCArgumentCaptor - match anything, capturing all values
 
-* Number
+### Number
 
   * `closeTo` - match number close to a given value
   * `greaterThan`, `greaterThanOrEqualTo`, `lessThan`,
@@ -97,7 +97,7 @@ OCHamcrest comes with a library of useful matchers:
   * `isFalse` - match zero
   * `isTrue` - match non-zero
 
-* Text
+### Text
 
   * `containsSubstring` - match part of a string
   * `endsWith` - match the end of a string
@@ -107,7 +107,7 @@ OCHamcrest comes with a library of useful matchers:
   * `startsWith` - match the beginning of a string
   * `stringContainsInOrder`, `stringContainsInOrderIn` - match parts of a string, in relative order
 
-* Logical
+### Logical
 
   * `allOf`, `allOfIn` - "and" together all matchers
   * `anyOf`, `anyOfIn` - "or" together all matchers
@@ -115,7 +115,7 @@ OCHamcrest comes with a library of useful matchers:
   care about a particular value)
   * `isNot` - negate the matcher
 
-* Collection
+### Collection
 
   * `contains`, `containsIn` - exactly match the entire collection
   * `containsInAnyOrder`, `containsInAnyOrderIn` - match the entire collection, but in any order
@@ -134,7 +134,7 @@ OCHamcrest comes with a library of useful matchers:
   * `isIn` - match when object is in given collection
   * `onlyContains`, `onlyContainsIn` - match if collection's items appear in given list
 
-* Decorator
+### Decorator
 
   * `describedAs` - give the matcher a custom failure description
   * `is` - decorator to improve readability - see "Syntactic sugar" below
