@@ -23,6 +23,12 @@ for writing unit tests that are expressive and flexible.
 
   * [My First OCHamcrest Test](#my-first-ochamcrest-test)
   * [Predefined Matchers](#predefined-matchers)
+    * [Object](#object)
+    * [Number](#number)
+    * [Text](#text)
+    * [Logical](#logical)
+    * [Collection](#collection)
+    * [Decorator](#decorator)
   * [Syntactic Sugar](#syntactic-sugar)
   * [How Can I Assert on an Asynchronous Call?](#how-can-i-assert-on-an-asynchronous-call)
   * [Writing Custom Matchers](#writing-custom-matchers)
