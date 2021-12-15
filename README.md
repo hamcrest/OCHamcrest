@@ -19,6 +19,7 @@ OCHamcrest is an Objective-C module providing:
 Matchers are useful for a variety of purposes, such as UI validation. But they're most commonly used
 for writing unit tests that are expressive and flexible.
 
+toc
 
 My first OCHamcrest test
 ------------------------
