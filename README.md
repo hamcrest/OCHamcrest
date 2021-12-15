@@ -21,6 +21,13 @@ for writing unit tests that are expressive and flexible.
 <!-- toc -->
 ## Contents
 
+  * [My first OCHamcrest test](#my-first-ochamcrest-test)
+  * [Predefined matchers](#predefined-matchers)
+  * [Syntactic sugar](#syntactic-sugar)
+  * [How can I assert on an asynchronous call?](#how-can-i-assert-on-an-asynchronous-call)
+  * [Writing custom matchers](#writing-custom-matchers)
+  * [What about Swift?](#what-about-swift)
+  * [How do I add OCHamcrest to my project?](#how-do-i-add-ochamcrest-to-my-project)
     * [Swift Package Manager](#swift-package-manager)
     * [CocoaPods](#cocoapods)
     * [Carthage](#carthage)
