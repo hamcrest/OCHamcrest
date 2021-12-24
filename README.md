@@ -15,8 +15,8 @@ OCHamcrest is an Objective-C module providing:
   rules.
 * a framework for writing your own matchers.
 
-Matchers are useful for a variety of purposes, such as UI validation. But they're most commonly used
-for writing unit tests that are expressive and flexible.
+Matchers can be combined to create flexible expressions of intent in tests.
+They can also be used for other purposes, such as user input validation.
 
 <!-- toc -->
 ## Contents
