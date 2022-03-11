@@ -1,3 +1,11 @@
+NEXT RELEASE
+------------
+
+**Fixes:**
+
+- Fix M1-only crash for SenTestingKit failures.
+
+
 Version 9.0.0
 -------------
 _09 Oct 2021_
