@@ -1,6 +1,6 @@
-//  OCHamcrest by Jon Reid, https://qualitycoding.org
-//  Copyright 2022 hamcrest. See LICENSE.txt
-//  Contribution by Todd Farrell
+// OCHamcrest by Jon Reid, https://qualitycoding.org
+// Copyright 2022 hamcrest. See LICENSE.txt
+// Contribution by Todd Farrell
 //
 
 #import "HCConformsToProtocol.h"

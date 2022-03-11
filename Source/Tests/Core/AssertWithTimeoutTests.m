@@ -1,6 +1,6 @@
-//  OCHamcrest by Jon Reid, https://qualitycoding.org
-//  Copyright 2022 hamcrest. See LICENSE.txt
-//  Contribution by Sergio Padrino
+// OCHamcrest by Jon Reid, https://qualitycoding.org
+// Copyright 2022 hamcrest. See LICENSE.txt
+// Contribution by Sergio Padrino
 
 
 #import <OCHamcrest/HCAssertThat.h>
