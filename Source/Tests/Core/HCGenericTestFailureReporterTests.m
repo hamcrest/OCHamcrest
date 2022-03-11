@@ -38,7 +38,7 @@
     XCTAssertTrue([resultString rangeOfString:expectedString].location != NSNotFound);
 }
 
-- (void)testGenericTestCase_ShouldRaiseExceptionWithReasonContainingMismatchDescription
+- (void)test_genericTestCase_exceptionReasonContainsMismatchDescription
 {
     NSString *expected = @"EXPECTED";
     NSString *actual = @"ACTUAL";
@@ -56,7 +56,7 @@
     XCTFail(@"Expected exception");
 }
 
-- (void)testGenericTestCase_ShouldRaiseExceptionWithReasonContainingLocation
+- (void)test_genericTestCase_exceptionReasonContainsLocation
 {
     @try
     {

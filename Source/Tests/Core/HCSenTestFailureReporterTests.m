@@ -116,14 +116,14 @@ static BOOL doNotHandleFailure(id self, SEL _cmd, HCTestFailure *failure)
     self.failureLine = [exception.userInfo[@"lineNumber"] unsignedIntegerValue];
 }
 
-- (void)testSuccessfulMatch_ShouldBeSilent
+- (void)test_satisfiedMatcher_isSilent
 {
     assertThat(@"foo", equalTo(@"foo"));
 
     XCTAssertNil(self.failureDescription);
 }
 
-- (void)testOCUnitAssertionError_ShouldDescribeExpectedAndActual
+- (void)test_OCUnit_shouldDescribeExpectedAndActual
 {
     NSString *expected = @"EXPECTED";
     NSString *actual = @"ACTUAL";
@@ -134,7 +134,7 @@ static BOOL doNotHandleFailure(id self, SEL _cmd, HCTestFailure *failure)
     XCTAssertEqualObjects(self.failureDescription, expectedMessage);
 }
 
-- (void)testOCUnitAssertionError_ShouldCorrectlyDescribeStringsWithPercentSymbols
+- (void)test_OCUnit_shouldDescribeStringsWithPercentSymbols
 {
     NSString *expected = @"%s";
     NSString *actual = @"%d";

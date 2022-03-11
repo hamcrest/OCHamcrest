@@ -118,28 +118,28 @@
     XCTAssertEqualObjects(description.description, @"\"FOO\"");
 }
 
-- (void)test_descriptionOfStringWithQuotesShouldExpandToCSyntax
+- (void)test_descriptionOfStringWithQuotes_shouldExpandToCSyntax
 {
     [description appendDescriptionOf:@"a\"b"];
 
     XCTAssertEqualObjects(description.description, @"\"a\\\"b\"");
 }
 
-- (void)test_descriptionOfStringWithNewlineShouldExpandToCSyntax
+- (void)test_descriptionOfStringWithNewline_shouldExpandToCSyntax
 {
     [description appendDescriptionOf:@"a\nb"];
 
     XCTAssertEqualObjects(description.description, @"\"a\\nb\"");
 }
 
-- (void)test_descriptionOfStringWithCarriageReturnShouldExpandToCSyntax
+- (void)test_descriptionOfStringWithCarriageReturn_shouldExpandToCSyntax
 {
     [description appendDescriptionOf:@"a\rb"];
 
     XCTAssertEqualObjects(description.description, @"\"a\\rb\"");
 }
 
-- (void)test_descriptionOfStringWithTabShouldExpandToCSyntax
+- (void)test_descriptionOfStringWithTab_shouldExpandToCSyntax
 {
     [description appendDescriptionOf:@"a\tb"];
 
@@ -153,7 +153,7 @@
     XCTAssertEqualObjects(description.description, @"<42>");
 }
 
-- (void)test_shouldNotAddAngleBracketsIfObjectDescriptionAlreadyHasThem
+- (void)test_shouldNotAddAngleBrackets_ifObjectDescriptionAlreadyHasThem
 {
     [description appendDescriptionOf:[[NSObject alloc] init]];
     NSPredicate *expected = [NSPredicate predicateWithFormat:
@@ -161,7 +161,7 @@
     XCTAssertTrue([expected evaluateWithObject:description.description]);
 }
 
-- (void)test_wrapsNonSelfDescribingObjectInAngleBracketsIfItDoesNotEndInClosingBracket
+- (void)test_wrapsNonSelfDescribingObjectInAngleBrackets_ifItDoesNotEndInClosingBracket
 {
     ObjectDescriptionWithLessThan *lessThanDescription = [[ObjectDescriptionWithLessThan alloc] init];
     [description appendDescriptionOf:lessThanDescription];
@@ -177,7 +177,7 @@
     XCTAssertTrue([expected evaluateWithObject:description.description]);
 }
 
-- (void)test_appendListWithEmptyListShouldHaveStartAndEndOnly
+- (void)test_appendListWithEmptyList_shouldHaveStartAndEndOnly
 {
     [description appendList:@[]
                       start:@"["
@@ -187,7 +187,7 @@
     XCTAssertEqualObjects(description.description, @"[]");
 }
 
-- (void)test_appendListWithOneItemShouldHaveStartItemAndEnd
+- (void)test_appendListWithOneItem_shouldHaveStartItemAndEnd
 {
     [description appendList:@[@"a"]
                       start:@"["
@@ -197,7 +197,7 @@
     XCTAssertEqualObjects(description.description, @"[\"a\"]");
 }
 
-- (void)test_appendListWithTwoItemsShouldHaveItemsWithSeparator
+- (void)test_appendListWithTwoItems_shouldHaveItemsWithSeparator
 {
     [description appendList:@[@"a", @"b"]
                       start:@"["

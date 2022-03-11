@@ -26,7 +26,7 @@
 
 @implementation IncompleteDiagnosingMatcherTest
 
-- (void)test_subclassShouldBeRequiredToDefineMatchesDescribingMismatchToMethod
+- (void)test_requireSubclassToDefineMatchesDescribingMismatchTo
 {
     id matcher = [[IncompleteDiagnosingMatcher alloc] init];
 

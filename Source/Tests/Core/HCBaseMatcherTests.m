@@ -82,12 +82,12 @@
     [super tearDown];
 }
 
-- (void)test_subclassShouldBeRequiredToDefineMatchesMethod
+- (void)test_requireSubclassToDefineMatches
 {
     XCTAssertThrows([matcher matches:nil]);
 }
 
-- (void)test_subclassShouldBeRequiredToDefineDescribeToMethod
+- (void)test_requireSubclassToDefineDescribeTo
 {
     XCTAssertThrows([matcher describeTo:[[HCStringDescription alloc] init]]);
 }

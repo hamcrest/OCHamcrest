@@ -44,7 +44,7 @@
 
 #pragma clang diagnostic pop
 
-- (void)testXCTestCase_WithMatch_ShouldNotRecordFailure
+- (void)test_XCTestCase_withMatch_shouldNotRecordFailure
 {
     self.interceptFailure = YES;
     assertThat(@0, equalTo(@0));
@@ -53,7 +53,7 @@
     XCTAssertEqual(self.failureCount, 0U);
 }
 
-- (void)testXCTestCase_WithMismatch_ShouldRecordFailure
+- (void)test_XCTestCase_withMismatch_shouldRecordFailure
 {
     self.interceptFailure = YES;
     assertThat(@1, equalTo(@0));
@@ -62,7 +62,7 @@
     XCTAssertEqual(self.failureCount, 1U);
 }
 
-- (void)testXCTestCase_WithMismatch_ShouldRecordFailureWithMismatchDescription
+- (void)test_XCTestCase_withMismatch_shouldRecordFailureWithMismatchDescription
 {
     NSString *expected = @"EXPECTED";
     NSString *actual = @"ACTUAL";
@@ -75,7 +75,7 @@
     XCTAssertEqualObjects(expectedMessage, self.failureDescription);
 }
 
-- (void)testXCTestCase_WithMismatch_ShouldRecordFailureWithCurrentFileName
+- (void)test_XCTestCase_withMismatch_shouldRecordFailureWithCurrentFileName
 {
     self.interceptFailure = YES;
     assertThat(@1, equalTo(@0));
@@ -86,7 +86,7 @@
             self.failureFile);
 }
 
-- (void)testXCTestCase_WithMismatch_ShouldRecordFailureWithCurrentLineNumber
+- (void)test_XCTestCase_withMismatch_shouldRecordFailureWithCurrentLineNumber
 {
     self.interceptFailure = YES;
     NSUInteger assertLine = __LINE__ + 1;
@@ -96,7 +96,7 @@
     XCTAssertEqual(self.failureLine, assertLine);
 }
 
-- (void)testXCTestCase_WithMismatch_ShouldRecordFailureAsExpectedMeaningAnAssertionFailure
+- (void)test_XCTestCase_withMismatch_shouldRecordFailureAsExpectedMeaningAnAssertionFailure
 {
     self.interceptFailure = YES;
     assertThat(@1, equalTo(@0));
