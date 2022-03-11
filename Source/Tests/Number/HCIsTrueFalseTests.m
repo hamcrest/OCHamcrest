@@ -1,7 +1,6 @@
 // OCHamcrest by Jon Reid, https://qualitycoding.org
 // Copyright 2022 hamcrest. See LICENSE.txt
 
-    // System under test
 #import <OCHamcrest/HCIsTrueFalse.h>
 
 #import "MatcherTestCase.h"
