@@ -1,5 +1,5 @@
 // OCHamcrest by Jon Reid, https://qualitycoding.org
-// Copyright 2022 hamcrest. See LICENSE.txt
+// Copyright 2022 hamcrest.org. See LICENSE.txt
 
 #import "HCAllOf.h"
 
