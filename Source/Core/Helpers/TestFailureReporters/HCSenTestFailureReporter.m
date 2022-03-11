@@ -18,8 +18,6 @@
 @end
 
 
-static NSString *och_preventM1AutoreleaseBug = nil;
-
 @interface NSInvocation (OCHamcrest_SenTestingKit)
 @end
 
@@ -33,7 +31,7 @@ static NSString *och_preventM1AutoreleaseBug = nil;
     // Mask % symbols in the string so they aren't treated as placeholders.
     NSString *massagedDescription = [description stringByReplacingOccurrencesOfString:@"%"
                                                                            withString:@"%%"];
-    och_preventM1AutoreleaseBug = massagedDescription;
+    CFRetain((CFTypeRef) massagedDescription); // Avoid M1 zombie crash
 
     NSInvocation *invocation = [NSInvocation och_invocationWithTarget:[NSException class]
                                                              selector:@selector(failureInFile:atLine:withDescription:)];
