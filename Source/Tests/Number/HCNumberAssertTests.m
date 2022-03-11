@@ -1,5 +1,6 @@
 // OCHamcrest by Jon Reid, https://qualitycoding.org
-// Copyright 2022 hamcrest.org. See LICENSE.txt
+// Copyright 2022 hamcrest.org. https://github.com/hamcrest/OCHamcrest/blob/main/LICENSE.txt
+// SPDX-License-Identifier: BSD-2-Clause
 
 #import <OCHamcrest/HCNumberAssert.h>
 
