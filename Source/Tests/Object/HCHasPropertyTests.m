@@ -1,5 +1,5 @@
 //  OCHamcrest by Jon Reid, https://qualitycoding.org
-//  Copyright 2021 hamcrest. See LICENSE.txt
+//  Copyright 2022 hamcrest. See LICENSE.txt
 //  Contribution by Justin Shacklette
 
 #import <OCHamcrest/HCHasProperty.h>
