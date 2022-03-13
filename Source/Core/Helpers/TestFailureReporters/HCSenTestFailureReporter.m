@@ -31,13 +31,13 @@
     // Mask % symbols in the string so they aren't treated as placeholders.
     NSString *massagedDescription = [description stringByReplacingOccurrencesOfString:@"%"
                                                                            withString:@"%%"];
-    CFRetain((CFTypeRef) massagedDescription); // Avoid M1 zombie crash
 
     NSInvocation *invocation = [NSInvocation och_invocationWithTarget:[NSException class]
                                                              selector:@selector(failureInFile:atLine:withDescription:)];
     [invocation setArgument:&fileName atIndex:2];
     [invocation setArgument:&lineNumber atIndex:3];
     [invocation setArgument:&massagedDescription atIndex:4];
+    [invocation retainArguments];
     return invocation;
 }
 
