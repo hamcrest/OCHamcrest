@@ -71,10 +71,10 @@ jobs:
 
   podspec:
     needs: [ build, test ]
-      name: Pod Spec Lint
-      runs-on: macos-latest
-      steps:
-        - name: Check out project
-          uses: actions/checkout@v3
-        - name: Lint the pod spec
-          run: pod spec lint --quick
+    name: Pod Spec Lint
+    runs-on: macos-latest
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v3
+      - name: Lint the pod spec
+        run: pod spec lint --quick
