@@ -52,6 +52,7 @@ jobs:
           COVERAGE_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   buildSwiftPackage:
+    needs: [ build, test ]
     name: Build Swift package
     runs-on: macos-latest
     steps:
@@ -60,6 +61,7 @@ jobs:
       run: cd Source; swift build -v
 
   buildCarthage:
+    needs: [ build, test ]
     name: Build Carthage
     runs-on: macos-latest
     steps:
@@ -68,6 +70,7 @@ jobs:
       run: carthage build --configuration Release --no-skip-current --use-xcframeworks
 
   podspec:
+    needs: [ build, test ]
       name: Pod Spec Lint
       runs-on: macos-latest
       steps:
