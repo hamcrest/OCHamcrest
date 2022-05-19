@@ -25,7 +25,7 @@ jobs:
       - name: Show current version of Xcode
         run: xcodebuild -version
       - name: Build
-        run: set -o pipefail && xcodebuild build -project '${{ env.project }}' -scheme '${{ matrix.run-config['scheme'] }}' -sdk '${{ matrix.run-config['sdk'] }}' -destination '${{ matrix.run-config['destination'] }}' | xcpretty
+        run: xcodebuild build -project '${{ env.project }}' -scheme '${{ matrix.run-config['scheme'] }}' -sdk '${{ matrix.run-config['sdk'] }}' -destination '${{ matrix.run-config['destination'] }}' | xcpretty && exit ${PIPESTATUS[0]}
 
   test:
     name: Build, test, report coverage
@@ -39,7 +39,7 @@ jobs:
       - name: Show current version of Xcode
         run: xcodebuild -version
       - name: Build & test
-        run: set -o pipefail && xcodebuild test -project '${{ env.project }}' -scheme '${{ env.scheme }}' -sdk '${{ env.sdk }}' | xcpretty
+        run: xcodebuild test -project '${{ env.project }}' -scheme '${{ env.scheme }}' -sdk '${{ env.sdk }}' | xcpretty && exit ${PIPESTATUS[0]}
       - name: Install gems
         run: |
           bundle config path vendor/bundle
@@ -77,7 +77,7 @@ jobs:
   podspec:
     needs: [ build, test ]
     name: Pod Spec Lint
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Check out project
         uses: actions/checkout@v3
