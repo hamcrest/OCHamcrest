@@ -3,17 +3,14 @@
 // SPDX-License-Identifier: BSD-2-Clause
 // Contribution by Sergio Padrino
 
-
-#import <OCHamcrest/HCAssertThat.h>
-
-#import <OCHamcrest/HCIsEqual.h>
-
 #import "InterceptingTestCase.h"
 
+#import <OCHamcrest/HCAssertThat.h>
+#import <OCHamcrest/HCIsEqual.h>
 #import <mach/mach_time.h>
 
-static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
 
+static NSTimeInterval const TIME_ERROR_MARGIN = 0.1f;
 
 static NSTimeInterval machTimeInSeconds(void)
 {
@@ -31,7 +28,6 @@ static NSTimeInterval machTimeInSeconds(void)
 
 @interface AssertWithTimeoutTests : InterceptingTestCase
 @end
-
 
 @implementation AssertWithTimeoutTests
 
