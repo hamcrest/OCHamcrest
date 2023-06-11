@@ -65,14 +65,14 @@ jobs:
     - name: Build
       run: cd Source; swift build -v
 
-  buildCarthage:
-    needs: [ build, test ]
-    name: Build Carthage
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Build
-      run: carthage build --configuration Release --no-skip-current --use-xcframeworks
+#  buildCarthage:
+#    needs: [ build, test ]
+#    name: Build Carthage
+#    runs-on: macos-latest
+#    steps:
+#    - uses: actions/checkout@v3
+#    - name: Build
+#      run: carthage build --configuration Release --no-skip-current --use-xcframeworks
 
   podspec:
     needs: [ build, test ]
@@ -85,7 +85,7 @@ jobs:
         run: pod spec lint --quick
 
   auto-merge:
-    needs: [ buildSwiftPackage, buildCarthage, podspec ]
+    needs: [ buildSwiftPackage, podspec ]
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
