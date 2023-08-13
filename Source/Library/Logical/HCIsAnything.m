@@ -37,7 +37,7 @@
 @end
 
 
-id HC_anything()
+id HC_anything(void)
 {
     return [[HCIsAnything alloc] init];
 }

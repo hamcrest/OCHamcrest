@@ -22,12 +22,12 @@
 @end
 
 
-id HC_nilValue()
+id HC_nilValue(void)
 {
     return [[HCIsNil alloc] init];
 }
 
-id HC_notNilValue()
+id HC_notNilValue(void)
 {
     return HC_isNot([[HCIsNil alloc] init]);
 }
