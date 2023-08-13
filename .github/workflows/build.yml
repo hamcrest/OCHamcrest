@@ -10,6 +10,23 @@ env:
   project: Source/OCHamcrest.xcodeproj
 
 jobs:
+  buildCarthage:
+#    needs: [ build, test ]
+    name: Build Carthage
+    runs-on: macos-13
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Xcode version
+      uses: maxim-lobanov/setup-xcode@v1.5.1
+      with:
+        xcode-version: '14.3'
+    - name: Show current version of Xcode
+      run: xcodebuild -version
+    - name: Show current version of Carthage
+      run: carthage version
+    - name: Build
+      run: carthage build --configuration Release --no-skip-current --use-xcframeworks
+
   build:
     name: Build without tests
     runs-on: macos-13
@@ -29,7 +46,7 @@ jobs:
 
   test:
     name: Build, test, report coverage
-    runs-on: macos-latest
+    runs-on: macos-13
     env:
       scheme: OCHamcrest
       sdk: macosx
@@ -65,23 +82,10 @@ jobs:
     - name: Build
       run: cd Source; swift build -v
 
-#  buildCarthage:
-#    needs: [ build, test ]
-#    name: Build Carthage
-#    runs-on: macos-13
-#    steps:
-#    - uses: actions/checkout@v3
-#    - name: Show current version of Xcode
-#      run: xcodebuild -version
-#    - name: Show current version of Carthage
-#      run: carthage version
-#    - name: Build
-#      run: carthage build --configuration Release --no-skip-current --use-xcframeworks
-
   podspec:
     needs: [ build, test ]
     name: Pod Spec Lint
-    runs-on: macos-latest
+    runs-on: macos-13
     steps:
       - name: Check out project
         uses: actions/checkout@v3
