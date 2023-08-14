@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.homepage    = 'https://github.com/hamcrest/OCHamcrest'
   s.license     = { :type => 'BSD' }
   s.author      = { 'Jon Reid' => 'jon@qualitycoding.org' }
-  s.social_media_url = 'https://twitter.com/qcoding'
+  s.social_media_url = 'https://iosdev.space/home'
 
   s.osx.deployment_target = '10.13'
   s.ios.deployment_target = '12.0'
