@@ -1,3 +1,16 @@
+Version 9.0.2
+-------------
+_13 Aug 2022_
+
+**Fixes:**
+
+- Fixes Carthage build to work with OCMockito.
+
+**Other:**
+
+- Restores "year of first publication" in copyright notices 
+
+
 Version 9.0.1
 -------------
 _13 Mar 2022_
