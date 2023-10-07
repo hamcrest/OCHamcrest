@@ -1,3 +1,12 @@
+NEXT RELEASE
+-------------
+
+**Project changes:**
+
+- Increased deployment targets to iOS 13.0, tvOS 13.0, watchOS 4.0.
+
+
+
 Version 9.0.2
 -------------
 _01 Oct 2022_
