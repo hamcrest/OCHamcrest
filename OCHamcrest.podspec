@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = 'OCHamcrest'
-  s.version     = '9.0.2'
+  s.version     = '9.0.3'
   s.summary     = 'Hamcrest for Objective-C: Powerful, combinable, extensible matchers for verification.'
   s.description = <<-DESC
                       OCHamcrest is:
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.tvos.deployment_target = '13.0'
   s.watchos.deployment_target = '4.0'
-  s.source = { :git => 'https://github.com/hamcrest/OCHamcrest.git', :tag => 'v9.0.2' }
+  s.source = { :git => 'https://github.com/hamcrest/OCHamcrest.git', :tag => 'v9.0.3' }
   s.source_files = 'Source/OCHamcrest.h', 'Source/Core/**/*.{h,m}', 'Source/Library/**/*.{h,m}'
   s.private_header_files = 'Source/Core/Helpers/HCRunloopRunner.h', 'Source/Core/Helpers/NSInvocation+OCHamcrest.h', 'Source/Core/Helpers/ReturnValueGetters/*.h', 'Source/Core/Helpers/TestFailureReporters/HCGenericTestFailureReporter.h', 'Source/Core/Helpers/TestFailureReporters/HCSenTestFailureReporter.h', 'Source/Core/Helpers/TestFailureReporters/HCXCTestFailureReporter.h'
   s.requires_arc = true
