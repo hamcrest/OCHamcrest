@@ -4,7 +4,7 @@ _07 Oct 2022_
 
 **Project changes:**
 
-- Increased deployment targets to iOS 13.0, tvOS 13.0, watchOS 4.0.
+- Increased deployment targets to macOS 11.0, watchOS 4.0.
 
 
 
