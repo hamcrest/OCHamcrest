@@ -40,7 +40,8 @@ They can also be used for other purposes, such as user input validation.
     * [CocoaPods](#cocoapods)
     * [Carthage](#carthage)
     * [Prebuilt Framework](#prebuilt-framework)
-    * [Build Your Own](#build-your-own)<!-- endToc -->
+    * [Build Your Own](#build-your-own)
+  * [Author](#author)<!-- endToc -->
 
 
 ## My First OCHamcrest Test
