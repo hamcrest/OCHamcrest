@@ -70,8 +70,6 @@ jobs:
     steps:
     - name: Check out project
       uses: actions/checkout@v4
-    - name: Set up Xcode version
-      run: sudo xcode-select -s /Applications/Xcode_14.3.app/Contents/Developer
     - name: Build
       run: cd Source; swift build -v
 
@@ -82,8 +80,6 @@ jobs:
     steps:
     - name: Check out project
       uses: actions/checkout@v4
-    - name: Set up Xcode version
-      run: sudo xcode-select -s /Applications/Xcode_14.3.app/Contents/Developer
     - name: Show current version of Xcode
       run: xcodebuild -version
     - name: Show current version of Carthage
