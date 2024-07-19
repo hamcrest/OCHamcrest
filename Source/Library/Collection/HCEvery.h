@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_everyItem(id <HCMatcher> itemMatcher);
+FOUNDATION_EXPORT id HC_everyItem(id <HCMatcher> itemMatcher);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -37,7 +37,7 @@ FOUNDATION_EXPORT id<HCMatcher> HC_everyItem(id <HCMatcher> itemMatcher);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_everyItem instead.
  */
-static inline id<HCMatcher> everyItem(id <HCMatcher> itemMatcher)
+static inline id everyItem(id <HCMatcher> itemMatcher)
 {
     return HC_everyItem(itemMatcher);
 }

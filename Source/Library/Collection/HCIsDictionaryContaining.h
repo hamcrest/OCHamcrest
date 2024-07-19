@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcher, id valueMatcher);
+FOUNDATION_EXPORT id HC_hasEntry(id keyMatcher, id valueMatcher);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -39,7 +39,7 @@ FOUNDATION_EXPORT id<HCMatcher> HC_hasEntry(id keyMatcher, id valueMatcher);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasEntry instead.
  */
-static inline id<HCMatcher> hasEntry(id keyMatcher, id valueMatcher)
+static inline id hasEntry(id keyMatcher, id valueMatcher)
 {
     return HC_hasEntry(keyMatcher, valueMatcher);
 }

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_containsInAnyOrderIn(NSArray *itemMatchers);
+FOUNDATION_EXPORT id HC_containsInAnyOrderIn(NSArray *itemMatchers);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -42,14 +42,14 @@ FOUNDATION_EXPORT id<HCMatcher> HC_containsInAnyOrderIn(NSArray *itemMatchers);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_containsInAnyOrderIn instead.
  */
-static inline id<HCMatcher> containsInAnyOrderIn(NSArray *itemMatchers)
+static inline id containsInAnyOrderIn(NSArray *itemMatchers)
 {
     return HC_containsInAnyOrderIn(itemMatchers);
 }
 #endif
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_containsInAnyOrder(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATION;
+FOUNDATION_EXPORT id HC_containsInAnyOrder(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_sameInstance(_Nullable id expectedInstance);
+FOUNDATION_EXPORT id HC_sameInstance(_Nullable id expectedInstance);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -33,7 +33,7 @@ FOUNDATION_EXPORT id<HCMatcher> HC_sameInstance(_Nullable id expectedInstance);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_sameInstance instead.
  */
-static inline id<HCMatcher> sameInstance(_Nullable id expectedInstance)
+static inline id sameInstance(_Nullable id expectedInstance)
 {
     return HC_sameInstance(expectedInstance);
 }

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_hasItem(id itemMatcher);
+FOUNDATION_EXPORT id HC_hasItem(id itemMatcher);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -46,7 +46,7 @@ FOUNDATION_EXPORT id<HCMatcher> HC_hasItem(id itemMatcher);
 #endif
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_hasItemsIn(NSArray *itemMatchers);
+FOUNDATION_EXPORT id HC_hasItemsIn(NSArray *itemMatchers);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -64,14 +64,14 @@ FOUNDATION_EXPORT id<HCMatcher> HC_hasItemsIn(NSArray *itemMatchers);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasItemsIn instead.
  */
-static inline id<HCMatcher> hasItemsIn(NSArray *itemMatchers)
+static inline id hasItemsIn(NSArray *itemMatchers)
 {
     return HC_hasItemsIn(itemMatchers);
 }
 #endif
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_hasItems(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATION;
+FOUNDATION_EXPORT id HC_hasItems(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!

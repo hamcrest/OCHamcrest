@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_isNot(_Nullable id value);
+FOUNDATION_EXPORT id HC_isNot(_Nullable id value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -36,7 +36,7 @@ FOUNDATION_EXPORT id<HCMatcher> HC_isNot(_Nullable id value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_isNot instead.
  */
-static inline id<HCMatcher> isNot(_Nullable id value)
+static inline id isNot(_Nullable id value)
 {
     return HC_isNot(value);
 }

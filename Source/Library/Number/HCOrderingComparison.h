@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_greaterThan(id value);
+FOUNDATION_EXPORT id HC_greaterThan(id value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -37,14 +37,14 @@ FOUNDATION_EXPORT id<HCMatcher> HC_greaterThan(id value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_greaterThan instead.
  */
-static inline id<HCMatcher> greaterThan(id value)
+static inline id greaterThan(id value)
 {
     return HC_greaterThan(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id value);
+FOUNDATION_EXPORT id HC_greaterThanOrEqualTo(id value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -60,14 +60,14 @@ FOUNDATION_EXPORT id<HCMatcher> HC_greaterThanOrEqualTo(id value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_greaterThanOrEqualTo instead.
  */
-static inline id<HCMatcher> greaterThanOrEqualTo(id value)
+static inline id greaterThanOrEqualTo(id value)
 {
     return HC_greaterThanOrEqualTo(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_lessThan(id value);
+FOUNDATION_EXPORT id HC_lessThan(id value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -83,14 +83,14 @@ FOUNDATION_EXPORT id<HCMatcher> HC_lessThan(id value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_lessThan instead.
  */
-static inline id<HCMatcher> lessThan(id value)
+static inline id lessThan(id value)
 {
     return HC_lessThan(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_lessThanOrEqualTo(id value);
+FOUNDATION_EXPORT id HC_lessThanOrEqualTo(id value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -106,7 +106,7 @@ FOUNDATION_EXPORT id<HCMatcher> HC_lessThanOrEqualTo(id value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_lessThanOrEqualTo instead.
  */
-static inline id<HCMatcher> lessThanOrEqualTo(id value)
+static inline id lessThanOrEqualTo(id value)
 {
     return HC_lessThanOrEqualTo(value);
 }

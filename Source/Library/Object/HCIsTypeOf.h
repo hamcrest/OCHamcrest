@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_isA(Class expectedClass);
+FOUNDATION_EXPORT id HC_isA(Class expectedClass);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -29,7 +29,7 @@ FOUNDATION_EXPORT id<HCMatcher> HC_isA(Class expectedClass);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_isA instead.
  */
-static inline id<HCMatcher> isA(Class expectedClass)
+static inline id isA(Class expectedClass)
 {
     return HC_isA(expectedClass);
 }

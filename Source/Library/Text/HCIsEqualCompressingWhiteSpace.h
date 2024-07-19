@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_equalToCompressingWhiteSpace(NSString *expectedString);
+FOUNDATION_EXPORT id HC_equalToCompressingWhiteSpace(NSString *expectedString);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -38,7 +38,7 @@ FOUNDATION_EXPORT id<HCMatcher> HC_equalToCompressingWhiteSpace(NSString *expect
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToCompressingWhiteSpace instead.
  */
-static inline id<HCMatcher> equalToCompressingWhiteSpace(NSString *expectedString)
+static inline id equalToCompressingWhiteSpace(NSString *expectedString)
 {
     return HC_equalToCompressingWhiteSpace(expectedString);
 }

@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HCIsCollectionOnlyContaining : HCEvery
 @end
 
-FOUNDATION_EXPORT id<HCMatcher> HC_onlyContainsIn(NSArray *itemMatchers);
+FOUNDATION_EXPORT id HC_onlyContainsIn(NSArray *itemMatchers);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -31,14 +31,14 @@ FOUNDATION_EXPORT id<HCMatcher> HC_onlyContainsIn(NSArray *itemMatchers);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_onlyContainsIn instead.
  */
-static inline id<HCMatcher> onlyContainsIn(NSArray *itemMatchers)
+static inline id onlyContainsIn(NSArray *itemMatchers)
 {
     return HC_onlyContainsIn(itemMatchers);
 }
 #endif
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_onlyContains(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATION;
+FOUNDATION_EXPORT id HC_onlyContains(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!

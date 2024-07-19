@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_throwsException(id exceptionMatcher);
+FOUNDATION_EXPORT id HC_throwsException(id exceptionMatcher);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -33,7 +33,7 @@ FOUNDATION_EXPORT id<HCMatcher> HC_throwsException(id exceptionMatcher);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_throwsException instead.
  */
-static inline id<HCMatcher> throwsException(id exceptionMatcher)
+static inline id throwsException(id exceptionMatcher)
 {
     return HC_throwsException(exceptionMatcher);
 }

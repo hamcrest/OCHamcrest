@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_isEmpty(void);
+FOUNDATION_EXPORT id HC_isEmpty(void);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -31,7 +31,7 @@ FOUNDATION_EXPORT id<HCMatcher> HC_isEmpty(void);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_isEmpty instead.
  */
-static inline id<HCMatcher> isEmpty(void)
+static inline id isEmpty(void)
 {
     return HC_isEmpty();
 }

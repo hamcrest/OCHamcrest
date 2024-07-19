@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_stringContainsInOrderIn(NSArray<NSString *> *substrings);
+FOUNDATION_EXPORT id HC_stringContainsInOrderIn(NSArray<NSString *> *substrings);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -34,14 +34,14 @@ FOUNDATION_EXPORT id<HCMatcher> HC_stringContainsInOrderIn(NSArray<NSString *> *
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_stringContainsInOrderIn instead.
  */
-static inline id<HCMatcher> stringContainsInOrderIn(NSArray<NSString *> *substrings)
+static inline id stringContainsInOrderIn(NSArray<NSString *> *substrings)
 {
     return HC_stringContainsInOrderIn(substrings);
 }
 #endif
 
 
-FOUNDATION_EXPORT id<HCMatcher> HC_stringContainsInOrder(NSString *substrings, ...) NS_REQUIRES_NIL_TERMINATION;
+FOUNDATION_EXPORT id HC_stringContainsInOrder(NSString *substrings, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
