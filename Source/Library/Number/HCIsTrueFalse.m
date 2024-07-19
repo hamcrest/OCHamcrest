@@ -23,7 +23,7 @@
 @end
 
 
-FOUNDATION_EXPORT id HC_isTrue(void)
+FOUNDATION_EXPORT id<HCMatcher> HC_isTrue(void)
 {
     return [[HCIsTrue alloc] init];
 }
@@ -49,7 +49,7 @@ FOUNDATION_EXPORT id HC_isTrue(void)
 @end
 
 
-FOUNDATION_EXPORT id HC_isFalse(void)
+FOUNDATION_EXPORT id<HCMatcher> HC_isFalse(void)
 {
     return [[HCIsFalse alloc] init];
 }

@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-FOUNDATION_EXPORT id HC_hasEntriesIn(NSDictionary *valueMatchersForKeys);
+FOUNDATION_EXPORT id<HCMatcher> HC_hasEntriesIn(NSDictionary *valueMatchersForKeys);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -37,13 +37,13 @@ FOUNDATION_EXPORT id HC_hasEntriesIn(NSDictionary *valueMatchersForKeys);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasEntryIn instead.
  */
-static inline id hasEntriesIn(NSDictionary *valueMatchersForKeys)
+static inline id<HCMatcher> hasEntriesIn(NSDictionary *valueMatchersForKeys)
 {
     return HC_hasEntriesIn(valueMatchersForKeys);
 }
 #endif
 
-FOUNDATION_EXPORT id HC_hasEntries(id keysAndValueMatchers, ...) NS_REQUIRES_NIL_TERMINATION;
+FOUNDATION_EXPORT id<HCMatcher> HC_hasEntries(id keysAndValueMatchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!

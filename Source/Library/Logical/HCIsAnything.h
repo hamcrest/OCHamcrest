@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_anything(void);
+FOUNDATION_EXPORT id<HCMatcher> HC_anything(void);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -28,14 +28,14 @@ FOUNDATION_EXPORT id HC_anything(void);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_anything instead.
  */
-static inline id anything(void)
+static inline id<HCMatcher> anything(void)
 {
     return HC_anything();
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_anythingWithDescription(NSString *description);
+FOUNDATION_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *description);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -47,7 +47,7 @@ FOUNDATION_EXPORT id HC_anythingWithDescription(NSString *description);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_anything instead.
  */
-static inline id anythingWithDescription(NSString *description)
+static inline id<HCMatcher> anythingWithDescription(NSString *description)
 {
     return HC_anythingWithDescription(description);
 }

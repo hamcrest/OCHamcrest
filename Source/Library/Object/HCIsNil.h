@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_nilValue(void);
+FOUNDATION_EXPORT id<HCMatcher> HC_nilValue(void);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -27,14 +27,14 @@ FOUNDATION_EXPORT id HC_nilValue(void);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_nilValue instead.
  */
-static inline id nilValue(void)
+static inline id<HCMatcher> nilValue(void)
 {
     return HC_nilValue();
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_notNilValue(void);
+FOUNDATION_EXPORT id<HCMatcher> HC_notNilValue(void);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -47,7 +47,7 @@ FOUNDATION_EXPORT id HC_notNilValue(void);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_notNilValue instead.
  */
-static inline id notNilValue(void)
+static inline id<HCMatcher> notNilValue(void)
 {
     return HC_notNilValue();
 }

@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_conformsTo(Protocol *aProtocol);
+FOUNDATION_EXPORT id<HCMatcher> HC_conformsTo(Protocol *aProtocol);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -34,7 +34,7 @@ FOUNDATION_EXPORT id HC_conformsTo(Protocol *aProtocol);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_conformsTo instead.
  */
-static inline id conformsTo(Protocol *aProtocol)
+static inline id<HCMatcher> conformsTo(Protocol *aProtocol)
 {
     return HC_conformsTo(aProtocol);
 }

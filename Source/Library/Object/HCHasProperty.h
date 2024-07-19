@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_hasProperty(NSString *propertyName, _Nullable id valueMatcher);
+FOUNDATION_EXPORT id<HCMatcher> HC_hasProperty(NSString *propertyName, _Nullable id valueMatcher);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -39,7 +39,7 @@ FOUNDATION_EXPORT id HC_hasProperty(NSString *propertyName, _Nullable id valueMa
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasProperty instead.
  */
-static inline id hasProperty(NSString *propertyName, _Nullable id valueMatcher)
+static inline id<HCMatcher> hasProperty(NSString *propertyName, _Nullable id valueMatcher)
 {
     return HC_hasProperty(propertyName, valueMatcher);
 }

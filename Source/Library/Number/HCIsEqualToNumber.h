@@ -7,7 +7,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXPORT id HC_equalToChar(char value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToChar(char value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -20,14 +20,14 @@ FOUNDATION_EXPORT id HC_equalToChar(char value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToChar instead.
  */
-static inline id equalToChar(char value)
+static inline id<HCMatcher> equalToChar(char value)
 {
     return HC_equalToChar(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_equalToDouble(double value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToDouble(double value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -40,14 +40,14 @@ FOUNDATION_EXPORT id HC_equalToDouble(double value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToDouble instead.
  */
-static inline id equalToDouble(double value)
+static inline id<HCMatcher> equalToDouble(double value)
 {
     return HC_equalToDouble(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_equalToFloat(float value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToFloat(float value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -60,14 +60,14 @@ FOUNDATION_EXPORT id HC_equalToFloat(float value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToFloat instead.
  */
-static inline id equalToFloat(float value)
+static inline id<HCMatcher> equalToFloat(float value)
 {
     return HC_equalToFloat(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_equalToInt(int value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToInt(int value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -80,14 +80,14 @@ FOUNDATION_EXPORT id HC_equalToInt(int value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToInt instead.
  */
-static inline id equalToInt(int value)
+static inline id<HCMatcher> equalToInt(int value)
 {
     return HC_equalToInt(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_equalToLong(long value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToLong(long value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -100,14 +100,14 @@ FOUNDATION_EXPORT id HC_equalToLong(long value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToLong instead.
  */
-static inline id equalToLong(long value)
+static inline id<HCMatcher> equalToLong(long value)
 {
     return HC_equalToLong(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_equalToLongLong(long long value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToLongLong(long long value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -120,14 +120,14 @@ FOUNDATION_EXPORT id HC_equalToLongLong(long long value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToLongLong instead.
  */
-static inline id equalToLongLong(long long value)
+static inline id<HCMatcher> equalToLongLong(long long value)
 {
     return HC_equalToLongLong(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_equalToShort(short value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToShort(short value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -140,14 +140,14 @@ FOUNDATION_EXPORT id HC_equalToShort(short value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToShort instead.
  */
-static inline id equalToShort(short value)
+static inline id<HCMatcher> equalToShort(short value)
 {
     return HC_equalToShort(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_equalToUnsignedChar(unsigned char value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToUnsignedChar(unsigned char value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -161,14 +161,14 @@ FOUNDATION_EXPORT id HC_equalToUnsignedChar(unsigned char value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToUnsignedChar instead.
  */
-static inline id equalToUnsignedChar(unsigned char value)
+static inline id<HCMatcher> equalToUnsignedChar(unsigned char value)
 {
     return HC_equalToUnsignedChar(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_equalToUnsignedInt(unsigned int value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToUnsignedInt(unsigned int value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -181,14 +181,14 @@ FOUNDATION_EXPORT id HC_equalToUnsignedInt(unsigned int value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToUnsignedInt instead.
  */
-static inline id equalToUnsignedInt(unsigned int value)
+static inline id<HCMatcher> equalToUnsignedInt(unsigned int value)
 {
     return HC_equalToUnsignedInt(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_equalToUnsignedLong(unsigned long value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToUnsignedLong(unsigned long value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -201,14 +201,14 @@ FOUNDATION_EXPORT id HC_equalToUnsignedLong(unsigned long value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToUnsignedLong instead.
  */
-static inline id equalToUnsignedLong(unsigned long value)
+static inline id<HCMatcher> equalToUnsignedLong(unsigned long value)
 {
     return HC_equalToUnsignedLong(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_equalToUnsignedLongLong(unsigned long long value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -221,14 +221,14 @@ FOUNDATION_EXPORT id HC_equalToUnsignedLongLong(unsigned long long value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToUnsignedLongLong instead.
  */
-static inline id equalToUnsignedLongLong(unsigned long long value)
+static inline id<HCMatcher> equalToUnsignedLongLong(unsigned long long value)
 {
     return HC_equalToUnsignedLongLong(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_equalToUnsignedShort(unsigned short value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -241,14 +241,14 @@ FOUNDATION_EXPORT id HC_equalToUnsignedShort(unsigned short value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToUnsignedShort instead.
  */
-static inline id equalToUnsignedShort(unsigned short value)
+static inline id<HCMatcher> equalToUnsignedShort(unsigned short value)
 {
     return HC_equalToUnsignedShort(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_equalToInteger(NSInteger value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToInteger(NSInteger value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -261,14 +261,14 @@ FOUNDATION_EXPORT id HC_equalToInteger(NSInteger value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToInteger instead.
  */
-static inline id equalToInteger(NSInteger value)
+static inline id<HCMatcher> equalToInteger(NSInteger value)
 {
     return HC_equalToInteger(value);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_equalToUnsignedInteger(NSUInteger value);
+FOUNDATION_EXPORT id<HCMatcher> HC_equalToUnsignedInteger(NSUInteger value);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -281,7 +281,7 @@ FOUNDATION_EXPORT id HC_equalToUnsignedInteger(NSUInteger value);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_equalToUnsignedInteger instead.
  */
-static inline id equalToUnsignedInteger(NSUInteger value)
+static inline id<HCMatcher> equalToUnsignedInteger(NSUInteger value)
 {
     return HC_equalToUnsignedInteger(value);
 }

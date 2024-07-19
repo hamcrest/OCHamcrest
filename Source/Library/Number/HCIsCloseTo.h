@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_closeTo(double value, double delta);
+FOUNDATION_EXPORT id<HCMatcher> HC_closeTo(double value, double delta);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -35,7 +35,7 @@ FOUNDATION_EXPORT id HC_closeTo(double value, double delta);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_closeTo instead.
  */
-static inline id closeTo(double value, double delta)
+static inline id<HCMatcher> closeTo(double value, double delta)
 {
     return HC_closeTo(value, delta);
 }

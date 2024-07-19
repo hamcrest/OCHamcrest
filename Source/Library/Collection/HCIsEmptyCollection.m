@@ -28,7 +28,7 @@
 @end
 
 
-FOUNDATION_EXPORT id HC_isEmpty(void)
+FOUNDATION_EXPORT id<HCMatcher> HC_isEmpty(void)
 {
     return [[HCIsEmptyCollection alloc] init];
 }

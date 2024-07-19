@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_hasKey(id keyMatcher);
+FOUNDATION_EXPORT id<HCMatcher> HC_hasKey(id keyMatcher);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -36,7 +36,7 @@ FOUNDATION_EXPORT id HC_hasKey(id keyMatcher);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasKey instead.
  */
-static inline id hasKey(id keyMatcher)
+static inline id<HCMatcher> hasKey(id keyMatcher)
 {
     return HC_hasKey(keyMatcher);
 }

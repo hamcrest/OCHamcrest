@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_hasDescription(id descriptionMatcher);
+FOUNDATION_EXPORT id<HCMatcher> HC_hasDescription(id descriptionMatcher);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -37,7 +37,7 @@ FOUNDATION_EXPORT id HC_hasDescription(id descriptionMatcher);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasDescription instead.
  */
-static inline id hasDescription(id descriptionMatcher)
+static inline id<HCMatcher> hasDescription(id descriptionMatcher)
 {
     return HC_hasDescription(descriptionMatcher);
 }

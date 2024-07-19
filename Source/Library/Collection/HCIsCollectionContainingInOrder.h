@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_containsIn(NSArray *itemMatchers);
+FOUNDATION_EXPORT id<HCMatcher> HC_containsIn(NSArray *itemMatchers);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -38,14 +38,14 @@ FOUNDATION_EXPORT id HC_containsIn(NSArray *itemMatchers);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_containsIn instead.)
  */
-static inline id containsIn(NSArray *itemMatchers)
+static inline id<HCMatcher> containsIn(NSArray *itemMatchers)
 {
     return HC_containsIn(itemMatchers);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_contains(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATION;
+FOUNDATION_EXPORT id<HCMatcher> HC_contains(id itemMatchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!

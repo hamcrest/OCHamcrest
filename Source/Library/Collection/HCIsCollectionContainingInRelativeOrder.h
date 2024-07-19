@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_containsInRelativeOrder(NSArray *itemMatchers);
+FOUNDATION_EXPORT id<HCMatcher> HC_containsInRelativeOrder(NSArray *itemMatchers);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -40,7 +40,7 @@ FOUNDATION_EXPORT id HC_containsInRelativeOrder(NSArray *itemMatchers);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_containsInRelativeOrder instead.
  */
-static inline id containsInRelativeOrder(NSArray *itemMatchers)
+static inline id<HCMatcher> containsInRelativeOrder(NSArray *itemMatchers)
 {
     return HC_containsInRelativeOrder(itemMatchers);
 }

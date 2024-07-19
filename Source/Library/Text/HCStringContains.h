@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_containsSubstring(NSString *substring);
+FOUNDATION_EXPORT id<HCMatcher> HC_containsSubstring(NSString *substring);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -31,7 +31,7 @@ FOUNDATION_EXPORT id HC_containsSubstring(NSString *substring);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_containsSubstring instead.
  */
-static inline id containsSubstring(NSString *substring)
+static inline id<HCMatcher> containsSubstring(NSString *substring)
 {
     return HC_containsSubstring(substring);
 }

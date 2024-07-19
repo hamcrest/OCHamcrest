@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_allOfIn(NSArray<id <HCMatcher>> *matchers);
+FOUNDATION_EXPORT id<HCMatcher> HC_allOfIn(NSArray<id <HCMatcher>> *matchers);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -36,14 +36,14 @@ FOUNDATION_EXPORT id HC_allOfIn(NSArray<id <HCMatcher>> *matchers);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_allOfIn instead.
  */
-static inline id allOfIn(NSArray *matchers)
+static inline id<HCMatcher> allOfIn(NSArray *matchers)
 {
     return HC_allOfIn(matchers);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_allOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
+FOUNDATION_EXPORT id<HCMatcher> HC_allOf(id matchers, ...) NS_REQUIRES_NIL_TERMINATION;
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!

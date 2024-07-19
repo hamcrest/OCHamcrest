@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_isIn(id aCollection);
+FOUNDATION_EXPORT id<HCMatcher> HC_isIn(id aCollection);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -35,7 +35,7 @@ FOUNDATION_EXPORT id HC_isIn(id aCollection);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_isIn instead.
  */
-static inline id isIn(id aCollection)
+static inline id<HCMatcher> isIn(id aCollection)
 {
     return HC_isIn(aCollection);
 }

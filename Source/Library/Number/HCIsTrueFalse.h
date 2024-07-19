@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_isTrue(void);
+FOUNDATION_EXPORT id<HCMatcher> HC_isTrue(void);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -30,14 +30,14 @@ FOUNDATION_EXPORT id HC_isTrue(void);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_isTrue instead.
  */
-static inline id isTrue(void)
+static inline id<HCMatcher> isTrue(void)
 {
     return HC_isTrue();
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_isFalse(void);
+FOUNDATION_EXPORT id<HCMatcher> HC_isFalse(void);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -47,7 +47,7 @@ FOUNDATION_EXPORT id HC_isFalse(void);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_isFalse instead.
 */
-static inline id isFalse(void)
+static inline id<HCMatcher> isFalse(void)
 {
     return HC_isFalse();
 }

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-FOUNDATION_EXPORT id HC_hasCount(id <HCMatcher> countMatcher);
+FOUNDATION_EXPORT id<HCMatcher> HC_hasCount(id <HCMatcher> countMatcher);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -33,14 +33,14 @@ FOUNDATION_EXPORT id HC_hasCount(id <HCMatcher> countMatcher);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasCount instead.
  */
-static inline id hasCount(id <HCMatcher> countMatcher)
+static inline id<HCMatcher> hasCount(id <HCMatcher> countMatcher)
 {
     return HC_hasCount(countMatcher);
 }
 #endif
 
 
-FOUNDATION_EXPORT id HC_hasCountOf(NSUInteger count);
+FOUNDATION_EXPORT id<HCMatcher> HC_hasCountOf(NSUInteger count);
 
 #ifndef HC_DISABLE_SHORT_SYNTAX
 /*!
@@ -55,7 +55,7 @@ FOUNDATION_EXPORT id HC_hasCountOf(NSUInteger count);
  * In the event of a name clash, <code>#define HC_DISABLE_SHORT_SYNTAX</code> and use the synonym
  * HC_hasCountOf instead.
  */
-static inline id hasCountOf(NSUInteger value)
+static inline id<HCMatcher> hasCountOf(NSUInteger value)
 {
     return HC_hasCountOf(value);
 }
