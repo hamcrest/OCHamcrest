@@ -2,18 +2,11 @@ OCHamcrest:
   project: Source/OCHamcrest.xcodeproj
   sdks:
   - macosx
-OCHamcrest-iOS:
-  project: Source/OCHamcrest.xcodeproj
-  sdks:
   - iphonesimulator
   - iphoneos
-OCHamcrest-tvOS:
-  project: Source/OCHamcrest.xcodeproj
-  sdks:
   - appletvos
   - appletvsimulator
-OCHamcrest-watchOS:
-  project: Source/OCHamcrest.xcodeproj
-  sdks:
   - watchsimulator
   - watchos
+  - xros
+  - xrsimulator
