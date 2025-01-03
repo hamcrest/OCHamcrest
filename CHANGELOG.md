@@ -1,3 +1,11 @@
+NEXT VERSION
+------------
+
+**Project changes:**
+
+- Make framework multibinary and add arm64e and arm64_32 architectures. _Thanks to: jesse-sheridan-apple_
+
+
 Version 9.0.3
 -------------
 _07 Oct 2022_
@@ -5,7 +13,6 @@ _07 Oct 2022_
 **Project changes:**
 
 - Increased deployment targets to macOS 11.0, watchOS 4.0.
-
 
 
 Version 9.0.2
