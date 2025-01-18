@@ -25,6 +25,7 @@ let package = Package(
                 "MakeDistribution.sh",
                 "makeXCFramework.sh",
                 "OCHamcrest-Info.plist",
+                "XcodeTargets.xcconfig",
                 "XcodeWarnings.xcconfig",
             ],
             publicHeadersPath: "include",
