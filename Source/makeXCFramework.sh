@@ -1,4 +1,10 @@
 #!/bin/bash
+# Use this script to create a XCFramework bundle that includes the frameworks necessary to build
+# for multiple platforms (iOS, macOS, visionOS, tvOS, watchOS), including Simulator builds. Please
+# beware that the script will fail when creating archvives for xros/xrsimulator on computers running
+# macOS on Intel architecture due to the `-destination generic/platform=visionOS ...` is missing on
+# that architecture.
+
 FRAMEWORK_NAME="OCHamcrest"
 
 MACOS_ARCHIVE_PATH="./build/archives/macos.xcarchive"
