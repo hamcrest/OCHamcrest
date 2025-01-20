@@ -3,7 +3,8 @@ NEXT VERSION
 
 **Project changes:**
 
-- Make framework multibinary and add arm64e and arm64_32 architectures. _Thanks to: jesse-sheridan-apple_
+- Make framework multibinary and add arm64e and arm64_32 architectures. _Thanks to: Jesse Sheridan_
+- Rework project into single multiplatform target and add visionOS. _Thanks to: Jens Nerup_
 
 
 Version 9.0.3
