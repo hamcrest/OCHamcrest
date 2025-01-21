@@ -265,6 +265,8 @@ binary is packaged as OCHamcrest.xcframework, containing these architectures:
   * iOS simulator
   * tvOS device
   * tvOS simulator
+  * visionOS device
+  * visionOS simulator
   * watchOS device
   * watchOS simulator
 
