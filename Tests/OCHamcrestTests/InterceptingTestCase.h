@@ -3,8 +3,8 @@
 // SPDX-License-Identifier: BSD-2-Clause
 
 @import XCTest;
-
-#import "HCTestFailure.h"   // Convenience import
+#import <OCHamcrest/HCTestFailureReporter.h>
+#import <OCHamcrest/HCTestFailure.h>
 
 
 NS_ASSUME_NONNULL_BEGIN

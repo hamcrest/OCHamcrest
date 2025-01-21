@@ -5,7 +5,7 @@
 #import <OCHamcrest/HCNumberAssert.h>
 
 #import <OCHamcrest/HCIsEqual.h>
-#import "HCTestFailure.h"
+#import <OCHamcrest/HCTestFailure.h>
 #import "InterceptingTestCase.h"
 
 

@@ -6,9 +6,9 @@
 
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCHasCount.h>
+#import <OCHamcrest/HCIsInstanceOf.h>
 
 #import "MatcherTestCase.h"
-#import "HCIsInstanceOf.h"
 
 
 @interface IsNotTests : MatcherTestCase
