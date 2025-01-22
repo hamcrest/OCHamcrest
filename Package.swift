@@ -20,8 +20,6 @@ let package = Package(
             name: "OCHamcrest",
             path: "Source",
             exclude: [
-                "Tests",
-                "Tests-Info.plist",
                 "MakeDistribution.sh",
                 "makeXCFramework.sh",
                 "OCHamcrest-Info.plist",
@@ -35,5 +33,17 @@ let package = Package(
                 CSetting.headerSearchPath("./Core/Helpers/TestFailureReporters"),
             ]
         ),
+        .testTarget(
+            name: "OCHamcrestTests",
+            dependencies: [
+                .target(name: "OCHamcrest")
+            ],
+            exclude: [
+                "Resources/Tests-Info.plist",
+            ],
+            cSettings: [
+                .headerSearchPath("."),
+            ]
+        )
     ]
 )

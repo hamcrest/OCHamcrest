@@ -4,8 +4,9 @@
 
 #import "InterceptingTestCase.h"
 
-#import "HCTestFailureReporter.h"
-#import "HCTestFailureReporterChain.h"
+#import <OCHamcrest/HCTestFailureReporter.h>
+#import <OCHamcrest/HCTestFailureReporterChain.h>
+
 
 
 @interface InterceptingTestFailureReporter : HCTestFailureReporter

@@ -62,12 +62,12 @@ jobs:
 
   buildSwiftPackage:
     needs: [ build, test ]
-    name: Build Swift package
+    name: Build & Test Swift package
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Build
-      run: cd Source; swift build -v
+    - name: Build & test
+      run: swift test | xcbeautify
 
   buildCarthage:
     needs: [ build, test ]
