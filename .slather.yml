@@ -3,4 +3,4 @@ coverage_service: coveralls
 xcodeproj: ./Source/OCHamcrest.xcodeproj
 scheme: OCHamcrest
 ignore:
-  - Source/Tests/OCHamcrest/*
+  - Tests/*
