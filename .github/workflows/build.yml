@@ -67,7 +67,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      run: swift test
+      run: swift test | xcbeautify
 
   buildCarthage:
     needs: [ build, test ]
