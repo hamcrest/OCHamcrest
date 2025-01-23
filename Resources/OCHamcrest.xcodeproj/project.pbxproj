@@ -372,7 +372,7 @@
 		BB333522A78D6A7D1A8414B3 /* HCIsIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsIn.m; sourceTree = "<group>"; };
 		BB333528C8E2ED8489ACB161 /* HCTestFailureReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureReporter.m; sourceTree = "<group>"; };
 		BB33355AD08369793188986F /* HCObjectReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCObjectReturnGetter.m; sourceTree = "<group>"; };
-		BB33356A6185FA4F1B6E240F /* OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCHamcrest.h; path = ../Source/OCHamcrest.h; sourceTree = "<group>"; };
+		BB33356A6185FA4F1B6E240F /* OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCHamcrest.h; path = ../Sources/OCHamcrest/OCHamcrest.h; sourceTree = "<group>"; };
 		BB33359133039118AE88E2A8 /* HCIsNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNil.h; sourceTree = "<group>"; };
 		BB333594FB0AC2DAC3B73077 /* HCIsSame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsSame.m; sourceTree = "<group>"; };
 		BB3335974ADA5C5408FE0F69 /* HCStringEndsWith.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringEndsWith.m; sourceTree = "<group>"; };
@@ -716,7 +716,7 @@
 				BB33378F4CD8AE4C7EFC1CF0 /* Helpers */,
 			);
 			name = Core;
-			path = ../Source/Core;
+			path = ../Sources/OCHamcrest/Core;
 			sourceTree = "<group>";
 		};
 		BB33378F4CD8AE4C7EFC1CF0 /* Helpers */ = {
@@ -833,7 +833,7 @@
 				BB333EA5543B2EAB4E34B3CF /* Text */,
 			);
 			name = Library;
-			path = ../Source/Library;
+			path = ../Sources/OCHamcrest/Library;
 			sourceTree = "<group>";
 		};
 		BB333EA5543B2EAB4E34B3CF /* Text */ = {

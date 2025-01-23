@@ -18,12 +18,10 @@ let package = Package(
     targets: [
         .target(
             name: "OCHamcrest",
-            path: "Source",
-            publicHeadersPath: "include",
             cSettings: [
-                CSetting.headerSearchPath("./Core/Helpers"),
-                CSetting.headerSearchPath("./Core/Helpers/ReturnValueGetters"),
-                CSetting.headerSearchPath("./Core/Helpers/TestFailureReporters"),
+                .headerSearchPath("./Core/Helpers"),
+                .headerSearchPath("./Core/Helpers/ReturnValueGetters"),
+                .headerSearchPath("./Core/Helpers/TestFailureReporters"),
             ]
         ),
         .testTarget(
