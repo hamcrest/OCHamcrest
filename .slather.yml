@@ -1,6 +1,6 @@
 ci_service: github
 coverage_service: coveralls
-xcodeproj: ./Source/OCHamcrest.xcodeproj
+xcodeproj: ./Resources/OCHamcrest.xcodeproj
 scheme: OCHamcrest
 ignore:
   - Tests/*
