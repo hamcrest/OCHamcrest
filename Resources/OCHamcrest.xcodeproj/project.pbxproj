@@ -281,7 +281,7 @@
 		0876035E13440AD8001B439B /* HCStringEndsWithTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringEndsWithTests.m; sourceTree = "<group>"; };
 		0876035F13440AD8001B439B /* HCStringStartsWithTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringStartsWithTests.m; sourceTree = "<group>"; };
 		0876038D13440B80001B439B /* OCHamcrest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OCHamcrest-Info.plist"; sourceTree = "<group>"; };
-		0876039113440BB0001B439B /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Tests-Info.plist"; path = "../Tests/OCHamcrestTests/Resources/Tests-Info.plist"; sourceTree = "<group>"; };
+		0876039113440BB0001B439B /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringContainsInOrderTests.m; sourceTree = "<group>"; };
 		0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XcodeWarnings.xcconfig; sourceTree = "<group>"; };
 		0E5ECE6B1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContainingInRelativeOrder.h; sourceTree = "<group>"; };
@@ -372,7 +372,7 @@
 		BB333522A78D6A7D1A8414B3 /* HCIsIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsIn.m; sourceTree = "<group>"; };
 		BB333528C8E2ED8489ACB161 /* HCTestFailureReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureReporter.m; sourceTree = "<group>"; };
 		BB33355AD08369793188986F /* HCObjectReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCObjectReturnGetter.m; sourceTree = "<group>"; };
-		BB33356A6185FA4F1B6E240F /* OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHamcrest.h; sourceTree = "<group>"; };
+		BB33356A6185FA4F1B6E240F /* OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCHamcrest.h; path = ../Source/OCHamcrest.h; sourceTree = "<group>"; };
 		BB33359133039118AE88E2A8 /* HCIsNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNil.h; sourceTree = "<group>"; };
 		BB333594FB0AC2DAC3B73077 /* HCIsSame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsSame.m; sourceTree = "<group>"; };
 		BB3335974ADA5C5408FE0F69 /* HCStringEndsWith.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringEndsWith.m; sourceTree = "<group>"; };
@@ -715,7 +715,8 @@
 				BB333D43717AD7243D63A4AB /* HCStringDescription.m */,
 				BB33378F4CD8AE4C7EFC1CF0 /* Helpers */,
 			);
-			path = Core;
+			name = Core;
+			path = ../Source/Core;
 			sourceTree = "<group>";
 		};
 		BB33378F4CD8AE4C7EFC1CF0 /* Helpers */ = {
@@ -831,7 +832,8 @@
 				BB333072EBF64C385754421B /* Object */,
 				BB333EA5543B2EAB4E34B3CF /* Text */,
 			);
-			path = Library;
+			name = Library;
+			path = ../Source/Library;
 			sourceTree = "<group>";
 		};
 		BB333EA5543B2EAB4E34B3CF /* Text */ = {
@@ -1336,7 +1338,7 @@
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				INFOPLIST_FILE = "$(SRCROOT)/../Tests/OCHamcrestTests/Resources/Tests-Info.plist";
+				INFOPLIST_FILE = "Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -1347,7 +1349,7 @@
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				INFOPLIST_FILE = "$(SRCROOT)/../Tests/OCHamcrestTests/Resources/Tests-Info.plist";
+				INFOPLIST_FILE = "Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};

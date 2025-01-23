@@ -19,13 +19,6 @@ let package = Package(
         .target(
             name: "OCHamcrest",
             path: "Source",
-            exclude: [
-                "MakeDistribution.sh",
-                "makeXCFramework.sh",
-                "OCHamcrest-Info.plist",
-                "XcodeTargets.xcconfig",
-                "XcodeWarnings.xcconfig",
-            ],
             publicHeadersPath: "include",
             cSettings: [
                 CSetting.headerSearchPath("./Core/Helpers"),
@@ -37,9 +30,6 @@ let package = Package(
             name: "OCHamcrestTests",
             dependencies: [
                 .target(name: "OCHamcrest")
-            ],
-            exclude: [
-                "Resources/Tests-Info.plist",
             ],
             cSettings: [
                 .headerSearchPath("."),
