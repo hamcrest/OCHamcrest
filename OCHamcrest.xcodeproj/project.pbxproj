@@ -280,10 +280,10 @@
 		0876035D13440AD8001B439B /* HCStringContainsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringContainsTests.m; sourceTree = "<group>"; };
 		0876035E13440AD8001B439B /* HCStringEndsWithTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringEndsWithTests.m; sourceTree = "<group>"; };
 		0876035F13440AD8001B439B /* HCStringStartsWithTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringStartsWithTests.m; sourceTree = "<group>"; };
-		0876038D13440B80001B439B /* OCHamcrest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OCHamcrest-Info.plist"; sourceTree = "<group>"; };
-		0876039113440BB0001B439B /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		0876038D13440B80001B439B /* OCHamcrest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "OCHamcrest-Info.plist"; path = "Resources/OCHamcrest-Info.plist"; sourceTree = "<group>"; };
+		0876039113440BB0001B439B /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Tests-Info.plist"; path = "Resources/Tests-Info.plist"; sourceTree = "<group>"; };
 		088FB0AA136A6DEA00C191E1 /* HCStringContainsInOrderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringContainsInOrderTests.m; sourceTree = "<group>"; };
-		0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XcodeWarnings.xcconfig; sourceTree = "<group>"; };
+		0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = XcodeWarnings.xcconfig; path = Resources/XcodeWarnings.xcconfig; sourceTree = "<group>"; };
 		0E5ECE6B1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContainingInRelativeOrder.h; sourceTree = "<group>"; };
 		0E5ECE6C1BC20C3300C15D2A /* HCIsCollectionContainingInRelativeOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsCollectionContainingInRelativeOrder.m; sourceTree = "<group>"; };
 		31DDCB570769099D33C22810 /* HCDiagnosingMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDiagnosingMatcher.m; sourceTree = "<group>"; };
@@ -320,7 +320,7 @@
 		74FDDD131A3FF39900177999 /* HCThrowsException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCThrowsException.h; sourceTree = "<group>"; };
 		74FDDD141A3FF39900177999 /* HCThrowsException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCThrowsException.m; sourceTree = "<group>"; };
 		77C7B8761429361200DE60CC /* HCHasPropertyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHasPropertyTests.m; sourceTree = "<group>"; };
-		B4E6AC952D2696DB0011C8E2 /* XcodeTargets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XcodeTargets.xcconfig; sourceTree = "<group>"; };
+		B4E6AC952D2696DB0011C8E2 /* XcodeTargets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = XcodeTargets.xcconfig; path = Resources/XcodeTargets.xcconfig; sourceTree = "<group>"; };
 		BB333034CD6A38647E176A9A /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
 		BB33303898210A59268030C8 /* HCDoubleReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDoubleReturnGetter.m; sourceTree = "<group>"; };
 		BB333049BE335209B4207B2A /* HCIsDictionaryContaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsDictionaryContaining.m; sourceTree = "<group>"; };
@@ -372,7 +372,7 @@
 		BB333522A78D6A7D1A8414B3 /* HCIsIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsIn.m; sourceTree = "<group>"; };
 		BB333528C8E2ED8489ACB161 /* HCTestFailureReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTestFailureReporter.m; sourceTree = "<group>"; };
 		BB33355AD08369793188986F /* HCObjectReturnGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCObjectReturnGetter.m; sourceTree = "<group>"; };
-		BB33356A6185FA4F1B6E240F /* OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCHamcrest.h; path = ../Sources/OCHamcrest/OCHamcrest.h; sourceTree = "<group>"; };
+		BB33356A6185FA4F1B6E240F /* OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCHamcrest.h; path = Sources/OCHamcrest/OCHamcrest.h; sourceTree = "<group>"; };
 		BB33359133039118AE88E2A8 /* HCIsNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNil.h; sourceTree = "<group>"; };
 		BB333594FB0AC2DAC3B73077 /* HCIsSame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCIsSame.m; sourceTree = "<group>"; };
 		BB3335974ADA5C5408FE0F69 /* HCStringEndsWith.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCStringEndsWith.m; sourceTree = "<group>"; };
@@ -563,7 +563,7 @@
 				609E91D3F5F10354528F7FF8 /* MatcherTestCase.m */,
 			);
 			name = UnitTests;
-			path = ../Tests/OCHamcrestTests;
+			path = Tests/OCHamcrestTests;
 			sourceTree = "<group>";
 		};
 		0876033413440AD8001B439B /* Collection */ = {
@@ -716,7 +716,7 @@
 				BB33378F4CD8AE4C7EFC1CF0 /* Helpers */,
 			);
 			name = Core;
-			path = ../Sources/OCHamcrest/Core;
+			path = Sources/OCHamcrest/Core;
 			sourceTree = "<group>";
 		};
 		BB33378F4CD8AE4C7EFC1CF0 /* Helpers */ = {
@@ -833,7 +833,7 @@
 				BB333EA5543B2EAB4E34B3CF /* Text */,
 			);
 			name = Library;
-			path = ../Sources/OCHamcrest/Library;
+			path = Sources/OCHamcrest/Library;
 			sourceTree = "<group>";
 		};
 		BB333EA5543B2EAB4E34B3CF /* Text */ = {
@@ -1305,6 +1305,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SOURCE_ROOT)/Resources/OCHamcrest-Info.plist";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = YES;
@@ -1325,6 +1326,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SOURCE_ROOT)/Resources/OCHamcrest-Info.plist";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = YES;
@@ -1338,7 +1340,7 @@
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				INFOPLIST_FILE = "Tests-Info.plist";
+				INFOPLIST_FILE = "$(SOURCE_ROOT)/Resources/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -1349,7 +1351,7 @@
 			baseConfigurationReference = 0E49BBDB1C47498C00418A3C /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				INFOPLIST_FILE = "Tests-Info.plist";
+				INFOPLIST_FILE = "$(SOURCE_ROOT)/Resources/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
