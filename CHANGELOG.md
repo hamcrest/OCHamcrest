@@ -5,7 +5,7 @@ NEXT VERSION
 
 - Make framework multibinary and add arm64e and arm64_32 architectures. _Thanks to: Jesse Sheridan_
 - Rework project into single multiplatform target and add visionOS. _Thanks to: Jens Nerup_
-- Move tests so they work in SPM. _Thanks to: Jens Nerup_
+- Reorganize files into standard Swift Package Manager arrangement. _Thanks to: Jens Nerup_
 
 
 Version 9.0.3
