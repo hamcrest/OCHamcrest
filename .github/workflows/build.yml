@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  project: Source/OCHamcrest.xcodeproj
+  project: OCHamcrest.xcodeproj
 
 jobs:
   build:

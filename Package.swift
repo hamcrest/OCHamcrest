@@ -18,28 +18,16 @@ let package = Package(
     targets: [
         .target(
             name: "OCHamcrest",
-            path: "Source",
-            exclude: [
-                "MakeDistribution.sh",
-                "makeXCFramework.sh",
-                "OCHamcrest-Info.plist",
-                "XcodeTargets.xcconfig",
-                "XcodeWarnings.xcconfig",
-            ],
-            publicHeadersPath: "include",
             cSettings: [
-                CSetting.headerSearchPath("./Core/Helpers"),
-                CSetting.headerSearchPath("./Core/Helpers/ReturnValueGetters"),
-                CSetting.headerSearchPath("./Core/Helpers/TestFailureReporters"),
+                .headerSearchPath("./Core/Helpers"),
+                .headerSearchPath("./Core/Helpers/ReturnValueGetters"),
+                .headerSearchPath("./Core/Helpers/TestFailureReporters"),
             ]
         ),
         .testTarget(
             name: "OCHamcrestTests",
             dependencies: [
                 .target(name: "OCHamcrest")
-            ],
-            exclude: [
-                "Resources/Tests-Info.plist",
             ],
             cSettings: [
                 .headerSearchPath("."),

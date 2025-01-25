@@ -1,5 +1,5 @@
 OCHamcrest:
-  project: Source/OCHamcrest.xcodeproj
+  project: OCHamcrest.xcodeproj
   sdks:
   - macosx
   - iphonesimulator
