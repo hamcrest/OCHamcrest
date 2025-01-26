@@ -209,7 +209,7 @@ Include an OCHamcrest package in your Package.swift manifest's array of `depende
 dependencies: [
     .package(
         url: "https://github.com/hamcrest/OCHamcrest",
-        .upToNextMajor(from: "9.1.0")
+        .upToNextMajor(from: "9.0.0")
     ),
 ],
 ```
