@@ -1,5 +1,6 @@
-NEXT VERSION
-------------
+Version 9.1.0
+-------------
+_26 Jan 2025_
 
 **Project changes:**
 
