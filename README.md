@@ -277,7 +277,7 @@ Drag the XCFramework into your project.
 If you want to build OCHamcrest yourself, clone the repo, then
 
 ```sh
-$ cd Source
+$ cd Resources
 $ ./MakeDistribution.sh
 ```
 
