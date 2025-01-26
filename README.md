@@ -209,7 +209,7 @@ Include an OCHamcrest package in your Package.swift manifest's array of `depende
 dependencies: [
     .package(
         url: "https://github.com/hamcrest/OCHamcrest",
-        .upToNextMajor(from: "9.0.0")
+        .upToNextMajor(from: "9.1.0")
     ),
 ],
 ```
@@ -242,7 +242,7 @@ targets:
 target 'MyTests' do
   inherit! :search_paths
   use_frameworks!
-  pod 'OCHamcrest', '~> 9.0'
+  pod 'OCHamcrest', '~> 9.1'
 end
 ```
 
@@ -250,7 +250,7 @@ end
 
 Add the following to your Cartfile:
 
-    github "hamcrest/OCHamcrest" ~> 9.0
+    github "hamcrest/OCHamcrest" ~> 9.1
 
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
 but with "Copy items into destination group's folder" disabled.
