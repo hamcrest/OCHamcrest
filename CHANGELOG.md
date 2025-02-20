@@ -1,3 +1,10 @@
+NEXT RELEASE
+------------
+
+**Project changes:**
+- Fix makeXCFramework so Mac framework contains all architectures. _Thanks to: Jens Nerup_
+
+
 Version 9.1.0
 -------------
 _26 Jan 2025_
