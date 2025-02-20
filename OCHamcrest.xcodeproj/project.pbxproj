@@ -1307,7 +1307,6 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SOURCE_ROOT)/Resources/OCHamcrest-Info.plist";
 				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 				WRAPPER_EXTENSION = framework;
@@ -1328,7 +1327,6 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SOURCE_ROOT)/Resources/OCHamcrest-Info.plist";
 				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 				WRAPPER_EXTENSION = framework;
