@@ -43,7 +43,13 @@ jobs:
       - name: Show current version of Xcode
         run: xcodebuild -version
       - name: Build & test
-        run: set -o pipefail && xcodebuild test -project '${{ env.project }}' -scheme '${{ env.scheme }}' -sdk '${{ env.sdk }}' CODE_SIGNING_ALLOWED='NO' | xcbeautify
+        run: set -o pipefail && xcodebuild test -project '${{ env.project }}' -scheme '${{ env.scheme }}' -sdk '${{ env.sdk }}' CODE_SIGNING_ALLOWED='NO' -resultBundlePath TestResults | xcbeautify
+
+      - uses: kishikawakatsumi/xcresulttool@v1
+        with:
+          path: TestResults.xcresult
+        if: success() || failure()
+
       - name: Install gems
         run: |
           bundle config path vendor/bundle
