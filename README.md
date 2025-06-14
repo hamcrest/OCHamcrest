@@ -39,7 +39,7 @@ They can also be used for other purposes, such as user input validation.
     * [Carthage](#carthage)
     * [Prebuilt Framework](#prebuilt-framework)
     * [Build Your Own](#build-your-own)
-  * [Author](#author)<!-- endToc -->
+  * [About the Author](#about-the-author)<!-- endToc -->
 
 
 ## My First OCHamcrest Test
